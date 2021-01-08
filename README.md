@@ -1,7 +1,7 @@
 # Weather34 AuroraMKII
  MKII version of the Weather34 Aurora Release
 
-# Smart layout for OEM screens/Tablets/Devices/Smart TV/Desktop
+# Website template for Weather Station Hardware Smart layout for OEM screens/Tablets/Devices/Smart TV/Desktop
 
 
 <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610119887/auroraMKII_hitvqh.png" width="800px">
