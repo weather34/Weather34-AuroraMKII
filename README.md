@@ -39,7 +39,7 @@ Weather Display
 
 WeatherCat
 
-or any other non meteobridge software or API 
+or any other non meteobridge software or API(not listed above)
 
 
  
