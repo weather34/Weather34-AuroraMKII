@@ -1,0 +1,27 @@
+*
+* @preserve CanvasJS HTML5 & JavaScript Charts - v2.3.1 GA - https://canvasjs.com/ 
+* Copyright 2018 fenopix
+*
+*  --------------------- License Information --------------------
+* CanvasJS is a commercial product which requires purchase of license. Without a commercial license you can use it for evaluation purposes for upto 30 days. Please refer to the following link for further details.
+*     https://canvasjs.com/license/
+*
+*
+*---------------------Free for Non-Commercial Use--------------------
+* 
+*For non-commercial purposes you can use the software for free under Creative Commons Attribution-NonCommercial 3.0 License. 
+*A credit Link is added to the bottom right of the chart which should be preserved. Refer to the following link for further details on the same.
+*    http://creativecommons.org/licenses/by-nc/3.0/deed.en_US
+*
+*
+
+Weather34 MB SMART VERSION 2019
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. http://creativecommons.org/licenses/by-nc-nd/4.0/
+
+Copyright (c) 2016-2019 by Brian Underdown (https://weather34.com) 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Template”), to deal in the Template without restriction, including without limitation the rights to, can use, can not copy, can modify for personal use,can use and publish for personal use ,can not distribute template,can not distribute any design or code, can not sublicense, and can not sell copies of the Template, and subject to the following conditions: 
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Template. 
+
+THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE TEMPLATE OR THE USE OR OTHER DEALINGS IN THE TEMPLATE. 

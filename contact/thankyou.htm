@@ -1,0 +1,211 @@
+<!--
+ PLEASE REPLACE THIS WITH YOUR OWN THANK YOU PAGE/MESSAGE
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Thank You</title>
+        <style type="text/css">
+body{font-family:Verdana,Arial,Helvetica,sans-serif;font-size:14px;color:#fff;background-color:#07090a;
+width:500px;border:1px solid rgb(60, 63, 63);border-radius:4px;padding:5px;
+margin:0 auto;margin-top:25px;height:200px;border-bottom:30px solid rgb(60, 63, 63);}
+a:link, a:visited, a:active{color:rgb(87, 169, 172);text-decoration:none;}
+a:hover{text-decoration: underline;}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.svg-box {
+    display:inline-block;
+    position: relative;
+    width:150px;
+}
+
+.green-stroke {
+    stroke:#7CB342;
+}
+
+.red-stroke {
+    stroke: #FF6245;
+}
+
+.yellow-stroke {
+    stroke: #FFC107;
+}
+
+
+.circular circle.path {
+    stroke-dasharray: 330;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    opacity: 0.4;
+    animation: 0.7s draw-circle ease-out;
+}
+
+/*------- Checkmark ---------*/
+.checkmark{
+	stroke-width: 6.25;
+    stroke-linecap: round;
+	position:absolute;
+    top: 56px;
+    left: 49px;
+    width: 52px;
+    height: 40px;
+}
+
+.checkmark path {
+    animation: 1s draw-check ease-out;
+}
+
+@keyframes draw-circle {
+    0% {
+        stroke-dasharray: 0,330;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    80% {
+        stroke-dasharray: 330,330;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0.4;
+    }
+}
+
+@keyframes draw-check {
+    0% {
+        stroke-dasharray: 49,80;
+        stroke-dashoffset: 48;
+        opacity: 0;
+    }
+
+    50% {
+        stroke-dasharray: 49,80;
+        stroke-dashoffset: 48;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dasharray: 130,80;
+        stroke-dashoffset: 48;
+    }
+}
+
+/*---------- Cross ----------*/
+
+.cross {
+    stroke-width:6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 54px;
+    left: 54px;
+    width: 40px;
+    height: 40px;
+}
+
+.cross .first-line {
+    animation: 0.7s draw-first-line ease-out;
+}
+
+.cross .second-line {
+    animation: 0.7s draw-second-line ease-out;
+}
+
+@keyframes draw-first-line {
+    0% {
+        stroke-dasharray: 0,56;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 0,56;
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dasharray: 56,330;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-second-line {
+    0% {
+        stroke-dasharray: 0,55;
+        stroke-dashoffset: 1;
+    }
+
+    50% {
+        stroke-dasharray: 0,55;
+        stroke-dashoffset: 1;
+    }
+
+    100% {
+        stroke-dasharray: 55,0;
+        stroke-dashoffset: 70;
+    }
+}
+
+.alert-sign {
+    stroke-width:6.25;
+    stroke-linecap: round;
+    position: absolute;
+    top: 40px;
+    left: 68px;
+    width: 15px;
+    height: 70px;
+    animation: 0.5s alert-sign-bounce cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.alert-sign .dot {
+    stroke:none;
+    fill: #FFC107;
+}
+
+@keyframes alert-sign-bounce {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+</style>
+	</head>
+	<body>
+	<div>
+		<div class="svg-box">
+			<svg class="circular green-stroke">
+				<circle class="path" cx="75" cy="75" r="50" fill="none" stroke-width="5" stroke-miterlimit="10"/>
+			</svg>
+			<svg class="checkmark green-stroke">
+				<g transform="matrix(0.79961,8.65821e-32,8.39584e-32,0.79961,-489.57,-205.679)">
+					<path class="checkmark__check" fill="none" d="M616.306,283.025L634.087,300.805L673.361,261.53"/>
+				</g>
+			</svg>
+		</div>
+<p>Thank you. Your email was sent to the Weather Station owner.</p><br>
+<p>
+
+
+</p>
+
+</div>
