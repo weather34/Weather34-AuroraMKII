@@ -12,12 +12,18 @@ Supports
 Meteobridge NANOSD or Meteobridge Pro
 TP-Link(type) or Raspberry PI3-4
 
-# Requires Davis Vantage product range
+# Requires Davis Vantage product range including Airlink 
 
- <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610120029/products_mt5sj2.png" width="566px">
+<img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610120029/products_mt5sj2.png" width="566px">
  
+# Does not support 
+Ecowitt / Ambient or similar branded hardware 
+
+
  
 # This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. http://creativecommons.org/licenses/by-nc-nd/4.0/
+
+https://weather34.com/homeweatherstation/
  
 
 
