@@ -7,7 +7,11 @@
 <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610119887/auroraMKII_hitvqh.png" width="800px">
 
 
-# Requires Meteobridge NANOSD or Meteobridge Pro/TP-Link(type)/RPI
+# Requires Meteobridge Software 
+Supports
+Meteobridge NANOSD or Meteobridge Pro
+TP-Link(type) or Raspberry PI3-4
+
 # Requires Davis Vantage product range
 
  <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610120029/products_mt5sj2.png" width="566px">
