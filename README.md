@@ -7,17 +7,31 @@
 <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610119887/auroraMKII_hitvqh.png" width="800px">
 
 
-# Requires Meteobridge Software 
+# 100% Requires Meteobridge Software 
 Supports
 Meteobridge NANOSD or Meteobridge Pro
 TP-Link(type) or Raspberry PI3-4
 
-# Requires Davis Vantage product range including Airlink 
+# 100% Supported Davis Vantage product range including Airlink 
 
 <img src="https://res.cloudinary.com/brian-underdown/image/upload/v1610120029/products_mt5sj2.png" width="566px">
+
+# Supports Air Quality via
+Meteobridge
+Purple Air API
+Luftdaten DIY Air Quality devices network API 
  
-# Does not support 
-Ecowitt / Ambient or similar branded hardware 
+# Does not fully support 
+Ecowitt / Ambient or similar branded hardware where multiple sensors are in use
+Weatherflow devices unsupported SKY/Tempest (limited support for Lightning when used with Air)
+
+
+# 100% Does not support the following Software
+Weewx
+Cumulus/MX
+Weather Display
+WeatherCat
+or any other non meteobridge software or API 
 
 
  
