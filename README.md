@@ -10,6 +10,7 @@
 # 100% Requires Meteobridge Software 
 Supports
 Meteobridge NANOSD or Meteobridge Pro
+
 TP-Link(type) or Raspberry PI3-4
 
 # 100% Supported Davis Vantage product range including Airlink 
@@ -18,19 +19,26 @@ TP-Link(type) or Raspberry PI3-4
 
 # Supports Air Quality via
 Meteobridge
+
 Purple Air API
+
 Luftdaten DIY Air Quality devices network API 
  
 # Does not fully support 
 Ecowitt / Ambient or similar branded hardware where multiple sensors are in use
+
 Weatherflow devices unsupported SKY/Tempest (limited support for Lightning when used with Air)
 
 
 # 100% Does not support the following Software
 Weewx
+
 Cumulus/MX
+
 Weather Display
+
 WeatherCat
+
 or any other non meteobridge software or API 
 
 
