@@ -1058,7 +1058,7 @@ else if($wuskydayTempHigh>27){echo '<red>'.number_format($wuskydayTempHigh,0).'<
 else if($wuskydayTempHigh>19){echo '<orange>'.number_format($wuskydayTempHigh,0).'</orange>';}
 else if($wuskydayTempHigh>12.7){echo '<yellow>'.number_format($wuskydayTempHigh,0).'</yellow>';}
 else if( $wuskydayTempHigh>=7){echo '<green>'.number_format($wuskydayTempHigh,0).'</green>';}}
-echo '°</wutemp3day>';
+echo '<grey>°</grey></wutemp3day>';
 
 echo '<div class="button-dial-top-smallwu"></div>';
 

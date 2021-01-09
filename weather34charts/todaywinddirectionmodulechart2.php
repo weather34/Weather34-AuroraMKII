@@ -75,7 +75,7 @@ return theD;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[2] >-150)	
+				
 					//dataPoints1.push({label: rowData[1],y:parseFloat(rowData[11])});
 					dataPoints1.push({label:rowData[1],y:parseFloat(rowData[11]),color:WEATHER34CHARTCOLORS(parseFloat(rowData[11]))});
 					
@@ -90,7 +90,7 @@ return theD;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[2] >-150)	
+				
 					//dataPoints2.push({label: rowData[1],y:parseFloat(rowData[11])});
 					dataPoints2.push({y:WEATHER34DIRECTION(parseFloat(rowData[11]))});
 					//parseFloat(rowData[13])});

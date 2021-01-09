@@ -74,7 +74,7 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[2] >-150)					
+								
 					dataPoints1.push({label: rowData[1],y:parseFloat(rowData[2]*<?php echo $conv ;?>),color:WEATHER34CHARTCOLORS(parseFloat(rowData[2]))});
 			}
 		}
@@ -86,7 +86,7 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[2] >-150)	
+				
 					//dataPoints2.push({label: rowData[1],y:parseFloat(rowData[15])});
 					dataPoints2.push({label: rowData[1],y:parseFloat(rowData[9]*<?php echo $conv ;?>),color:WEATHER34CHARTCOLORS(parseFloat(rowData[9]))});
 				
