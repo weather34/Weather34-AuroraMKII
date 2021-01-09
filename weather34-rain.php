@@ -129,9 +129,14 @@ echo $weather34_rain_icon;?>
 </div></div>
 
 <?php //weather34 clean notifications 
+//purple air 
+$json  = file_get_contents("jsondata/purpleair.txt");
+$array = json_decode( $json, true );for ( $i = 0; $i < sizeof( $array['results'] ); $i++ ) {$array['results'][ $i ]['Stats'] = json_decode( $array['results'][ $i ]['Stats'], true );}
+$weather34pm25a    = $array['results'][0]['pm2_5_cf_1'];
+$weather34pm25b    = $array['results'][1]['pm2_5_cf_1'];
+$aqiweather["aqindex"]      = number_format(pm25_to_aqi(($weather34pm25a + $weather34pm25b ) / 2), 1);
 
 if ($notifications=='yes') {
-
 //offline
 if(file_exists($livedata)&&time()- filemtime($livedata)>300){echo "
   <div class='weather34alert' id='weather34message'> 
@@ -141,6 +146,41 @@ if(file_exists($livedata)&&time()- filemtime($livedata)>300){echo "
   <weather34-alertvalue><red>Offline</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
 
+//purple air quality +150 high 
+else if ($purpleairhardware=='yes' && $aqiweather["aqindex"] >=150){echo "
+  <div class='weather34alert' id='weather34message'> 
+  <div class='weather34-notification'> 
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertmessage>Air Quality Poor $aqinotify150</weather34-alertmessage> <br>
+  <weather34-alertvalue><red>".$aqiweather["aqindex"]."</red><weather34-alertunit>AQI</weather34-alertunit>
+  </weather34-alertvalue></div></div>";}
+
+//purple air quality +100 high 
+else if ($purpleairhardware=='yes' && $aqiweather["aqindex"]>=100){echo "
+  <div class='weather34alert' id='weather34message'> 
+  <div class='weather34-notification'> 
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertmessage>Air Quality Poor $aqinotify100</weather34-alertmessage> <br>
+  <weather34-alertvalue><orange>".$aqiweather["aqindex"]."</orange><weather34-alertunit>AQI</weather34-alertunit>
+  </weather34-alertvalue></div></div>";}
+
+  //davis air quality +150 high 
+else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquality-davispm25"]),1)>=150){echo "
+  <div class='weather34alert' id='weather34message'> 
+  <div class='weather34-notification'> 
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertmessage>Air Quality Poor $aqinotify150</weather34-alertmessage> <br>
+  <weather34-alertvalue><red>".number_format(pm25_to_aqi($weather["airquality-davispm25"]),1)."</red><weather34-alertunit>AQI</weather34-alertunit>
+  </weather34-alertvalue></div></div>";}
+
+//davis air quality +100 high 
+else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquality-davispm25"]),1)>=100){echo "
+  <div class='weather34alert' id='weather34message'> 
+  <div class='weather34-notification'> 
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertmessage>Air Quality Poor $aqinotify100</weather34-alertmessage> <br>
+  <weather34-alertvalue><orange>".number_format(pm25_to_aqi($weather["airquality-davispm25"]),1)."</orange><weather34-alertunit>AQI</weather34-alertunit>
+  </weather34-alertvalue></div></div>";}
 
       //temperature rising rapidly 15 minute
       else if ($weather["temp_units"]=='C' && $weather["temp_trend"]>5 ){echo "
@@ -399,7 +439,10 @@ else if ($weather["temp_units"]=='C' && $weather["dewpoint"]>=68 && $weather["de
     <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Dewpoint High $heatindexwu2</weather34-alertmessage> <br>
     <weather34-alertvalue><red>".$weather['dewpoint']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
-    </weather34-alertvalue></div></div>";}}
+    </weather34-alertvalue></div></div>";}
+
+
+}
     //add more if required
 ?>
 <script> //fire the weather34 notification
