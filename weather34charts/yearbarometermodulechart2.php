@@ -20,10 +20,11 @@
 	$int = 5;	
 	if ($tempunit == 'F') {$int= 0.75;}		
 
-	if ($weather["barometer_units"] == 'inHg') {$unit= 'inHg';}
-	else if ($weather["barometer_units"] == 'hPa') {$unit= 'hPa';}
-	else if ($weather["barometer_units"] == 'mb') {$unit= 'mb';}
-	else if ($weather["barometer_units"]=='mmHG') {$unit= 'mmHG';}
+	
+	if ($weather["barometer_units"] == 'inHg') {$pressureunit= 'inHg';}
+	else if ($weather["barometer_units"] == 'hPa') {$pressureunit= 'hPa';}
+	else if ($weather["barometer_units"] == 'mb') {$pressureunit='mb';}
+	if ($position8=='barometer-modmmHG.php') {$pressureunit= 'mmHG';}
 	
 	
 	
