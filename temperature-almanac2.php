@@ -50,3 +50,10 @@ echo $weather["tempamin"]."&deg;<smalltempunit2>".$weather["temp_units"];
 ?><smalltempunit2></div></div>
 
 </div>
+
+
+<div class="canvascredit">
+<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >CSS/SVG/PHP scripts were developed by weather34.com. 
+<br>Data Charts compiled with CanvasJs.com 
+<br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version. 
+<br>* © 2015-2021 Weather34 Aurora MKII</a></div>

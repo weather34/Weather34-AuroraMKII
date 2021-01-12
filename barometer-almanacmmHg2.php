@@ -58,3 +58,8 @@ echo "<div class=almanacareas>".$weather["thb0seapressamax"]."<smalltempunit2>".
 echo "<valuetextheading1>Record Min <deepblue>".$weather["thb0seapressamintime"]."</deepblue></valuetextheading1><br>";
 echo "<div class=almanacareas>".$weather["thb0seapressamin"]."<smalltempunit2>".$weather["barometer_units"] ;
 ?><smalltempunit2></div></div></div>
+<div class="canvascredit">
+<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >CSS/SVG/PHP scripts were developed by weather34.com. 
+<br>Data Charts compiled with CanvasJs.com 
+<br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version. 
+<br>* © 2015-2021 Weather34 Aurora MKII</a></div>

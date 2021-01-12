@@ -11,7 +11,7 @@ else if ($baromdiff<-20){$scale=0.75*32;}
 else if ($baromdiff<-15){$scale=0.75*25;}
 else if ($baromdiff<-10){$scale=0.75*18;}
 else if ($baromdiff<-5){$scale=0.75*19;}
-else if ($baromdiff<-4){$scale=0.75*21;}
+else if ($baromdiff<-4){$scale=0.75*22;}
 else if ($baromdiff==0){$scale=0.75*28;}
 else if ($baromdiff<0){$scale=0.75*25;}
 else if ($baromdiff>=30){$scale=0.75*30;}

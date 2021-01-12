@@ -125,7 +125,9 @@ background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscal
 
 a{color:#aaa;text-decoration:none;font-size:1em;color:#aaa;}
 .weather34darkbrowser{position:relative;background:0;width:97%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px}
-.weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:rgba(97,106,114,.3);height:20px;box-sizing:border-box}
+.weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;
+left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:rgba(97,106,114,.3);height:20px;box-sizing:border-box;
+text-transform:capitalize}
 .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,0);padding:5px;font-family:Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#aaa;align-items:center;justify-content:center;margin-bottom:10px;top:0}
 .actualups{position:relative;left:35px;background:rgba(74,99,111,0);padding:5px;font-family:Arial,Helvetica,sans-serif;width:140px;height:.8em;font-size:.8rem;align-items:center;justify-content:center;top:-30px;margin-bottom:-10px}
 actualt34{display:none}
@@ -249,7 +251,7 @@ pm25{font-size:8px;color:#aaa;vertical-align: text-top;}
 
 </style>
 <script src="js/jquery.js"></script>
-<div class="weather34darkbrowser" url="Purple Air Quality Sensor Data"></div>
+<div class="weather34darkbrowser" url="<?php echo $purpleairqualitylocation?> Purple Air Quality Sensor Data"></div>
 <main class="grid2">
 
 <article>  
@@ -340,8 +342,9 @@ PM10 particles these can get deep into your lungs causing respiratory problems,l
 VOC (Air Pollutant)<br>
 <span style="font-size:2em;font-family: weathertext2;">
 <?php //voc
-if($aqiweather["voc"] >=201){ echo "<red>".$aqiweather["voc"]."</red>";}
-else if($aqiweather["voc"] >=101){ echo "<yellow>".$aqiweather["voc"]."</yellow>";}
+if($aqiweather["voc"] >=5000){ echo "<purple>".$aqiweather["voc"]."</purple>";}
+else if($aqiweather["voc"] >=2000){ echo "<red>".$aqiweather["voc"]."</red>";}
+else if($aqiweather["voc"] >=1500){ echo "<yellow>".$aqiweather["voc"]."</yellow>";}
 else if($aqiweather["voc"] >0){ echo "<green>".$aqiweather["voc"]."</green>";}
 else if($aqiweather["voc"] ==''){echo "<orange>N/A</orange>";}
 echo "<pm25>  </pm25>";?></span>
@@ -352,8 +355,8 @@ Exposure to VOCs can cause eye,nose and throat irritation,as well as upper respi
 
 <article>
 <a href="https://www2.purpleair.com/" target="_blank" data-title="Purple Air" >
-<img src="images/PurpleAir.svg" width="50px"  data-title="Purple Air PA-II Sensor" style="margin-top:3px;"></a><br>
-<?php echo $aqiweather["positioned"] ?> Station:<?php echo $aqiweather["label"] ?>  
+<img src="images/PurpleAir.svg" width="50px"  data-title="Purple Air PA-II Sensor" style="margin-top:0px;"></a>
+<br><?php echo $aqiweather["label"] ?>  
 <br>Data Updated:<blue><?php echo $aqiweather["time"] ?></blue>
 <br>API courtesy of *<a href='https://www2.purpleair.com/community/faq#!hc-access-the-json' data-title="Purple Air API Info">Purple Air</a>
 </article>

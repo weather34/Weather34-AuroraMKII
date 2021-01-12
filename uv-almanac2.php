@@ -10,8 +10,6 @@
 <iframe  class="charttempmodule" src="weather34charts/todaysolarmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
 </div>
 
-
-
 <div class="almanacxuv"><div class="almanac-content">
 <?php  //month max
 echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["uvmmaxtime"]."</deepblue></valuetextheading1><br>";   
@@ -35,7 +33,6 @@ echo "<div class=almanacareas>".$weather["uvydmax"]."<smalltempunit2>UVI";
 echo "<valuetextheading1>Record Max <deepblue> </deepblue></valuetextheading1><br>";
 echo "<div class=almanacareas>N/A<smalltempunit2>UVI";
 ?><smalltempunit2></div></div>
-
 
 <br><br>
 <div class="almanacxsol"><div class="almanac-content">
@@ -64,4 +61,4 @@ echo "<div class=almanacareas>N/A<smalltempunit2>Wm/2";
 </div>
 
 
-
+<div class="canvascredit3"><a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com"> Data Charts compiled with CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) <br>Non-Commercial-Version.</a></div>
