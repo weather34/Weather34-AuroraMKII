@@ -225,21 +225,22 @@ else if (anytoC($weather["temp"])>=-40 ){echo "<icon-minus10>".$weather["temp"].
 else if (anytoC($weather["temp"])>=-50 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -40 -22 -4 14 <blue>32</blue> 41 50";}
 }
 //C
+//C
 if ($weather["temp_units"]=='C'){
-if (anytoC($weather["temp"])>=38 ){echo "0 5 10 15 20 25 30 35 <icon-41-45>".$weather["temp"]."</icon-41-45>";}
-else if (anytoC($weather["temp"])>=35 ){echo "0 5 10 15 20 25 30 34 <icon-36-40>".$weather["temp"]."</icon-36-40>";}
-else if (anytoC($weather["temp"])>=30 ){echo "0 5 10 15 20 25 28 <icon-31-35>".$weather["temp"]."</icon-31-35>";}
-else if (anytoC($weather["temp"])>=25 ){echo "0 5 10 15 18 20 <icon-26-30>".$weather["temp"]."</icon-26-30> 30";}
-else if (anytoC($weather["temp"])>=20 ){echo "0 5 10 12 15 <icon-21-25>".$weather["temp"]."</icon-21-25> 25 30";}
-else if (anytoC($weather["temp"])>=15 ){echo "0 5 10 12 <icon-16-20>".$weather["temp"]."</icon-16-20> 20 25 30";}
-else if (anytoC($weather["temp"])>=10 ){echo "0 5 7 <icon-11-15>".$weather["temp"]."</icon-11-15> 15 20 25 30";}
-else if (anytoC($weather["temp"])>=6 ){echo "0 5 <icon-6-10>".$weather["temp"]."</icon-6-10> 10 12 15 20 25";}
-else if (anytoC($weather["temp"])>=0 ){echo "<icon-0-5>".$weather["temp"]."</icon-0-5> 6 10 12 15 20 25";}
-else if (anytoC($weather["temp"])>=-10 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> <blue>0</blue> 5 10 12 15 18 20 25";}
-else if (anytoC($weather["temp"])>=-20 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -10 <blue>0</blue> 10 12 15 18 20";}
-else if (anytoC($weather["temp"])>=-30 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -20 -10 <blue>0</blue> 10 12 15 18";}
-else if (anytoC($weather["temp"])>=-40 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -30 -20 -10 <blue>0</blue> 10 15 18";}
-else if (anytoC($weather["temp"])>=-50 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -40 -30 -20 -10 <blue>0</blue> 10 12";}
+  if (anytoC($weather["temp"])>=38 ){echo "0 5 10 15 20 25 30 35 <icon-41-45>".$weather["temp"]."</icon-41-45>";}
+  else if (anytoC($weather["temp"])>=35 ){echo "0 5 10 15 20 25 30 34 <icon-36-40>".$weather["temp"]."</icon-36-40>";}
+  else if (anytoC($weather["temp"])>=30 ){echo "0 5 10 15 20 25 28 <icon-31-35>".$weather["temp"]."</icon-31-35>";}
+  else if (anytoC($weather["temp"])>=25 ){echo "0 5 10 15 18 20 <icon-26-30>".$weather["temp"]."</icon-26-30> 30";}
+  else if (anytoC($weather["temp"])>=20 ){echo "0 5 10 12 15 <icon-21-25>".$weather["temp"]."</icon-21-25> 25 30";}
+  else if (anytoC($weather["temp"])>=15 ){echo "0 5 10 12 <icon-16-20>".$weather["temp"]."</icon-16-20> 20 25 30";}
+  else if (anytoC($weather["temp"])>=10 ){echo "0 5 7 <icon-11-15>".$weather["temp"]."</icon-11-15> 15 20 25 30";}
+  else if (anytoC($weather["temp"])>=6 ){echo "0 5 <icon-6-10>".$weather["temp"]."</icon-6-10> 10 12 15 20 25 30";}
+  else if (anytoC($weather["temp"])>=0 ){echo "<icon-0-5>".$weather["temp"]."</icon-0-5> 6 10 12 15 20 25 30";}
+  else if (anytoC($weather["temp"])>=-10 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> <blue>0</blue> 5 10 12 15 18 20 25";}
+  else if (anytoC($weather["temp"])>=-20 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -10 <blue>0</blue> 10 12 15 18 20";}
+  else if (anytoC($weather["temp"])>=-30 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -20 -10 <blue>0</blue> 10 12 15 18";}
+  else if (anytoC($weather["temp"])>=-40 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -30 -20 -10 <blue>0</blue> 10 15 18";}
+  else if (anytoC($weather["temp"])>=-50 ){echo "<icon-minus10>".$weather["temp"]."</icon-minus10> -40 -30 -20 -10 <blue>0</blue> 10 12";}
 }
 echo "<smalltempunit2>&deg;".$weather["temp_units"];
 ?></smalltempunit2>
