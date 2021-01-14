@@ -483,7 +483,7 @@ html{overflow-x:visible}
 bottomtoolbarspace{margin-left:20px}
 .twentyfourhourtrend{margin-left:-105px;margin-top:-83px}
 li555{min-width:320px;max-width:320px;padding:0;height:310px;margin-top:0;margin-bottom:5px;margin-left:-2px}
-.almanac-word,.almanacchartxsol,.almanacchartxuv,.almanacouterboxrain,.almanacouterboxuv,.desktoplink4,.sunriset-set,.wuaheadforetop,chartpage,monthchart,theword,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2{display:none}
+.almanac-word,.almanacchartxsol,.almanacchartxuv,.almanacouterboxrain,.almanacouterboxuv,.desktoplink4,.sunriset-set,.wuaheadforetop,chartpage,monthchart,theword,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2,.footericons{display:none}
 .almanacouterboxrain{display:flex;position:relative;width:325px;max-width:350px;height:480px;margin-left:0;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;width:325px;max-width:350px;height:450px;margin-left:0;margin-top:80px}
 .almanacx{top:25px;margin-left:-10px;width:100px}
