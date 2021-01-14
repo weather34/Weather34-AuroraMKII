@@ -145,7 +145,8 @@ elseif ($weather["humidity"]>=0 ){echo 'var(--temp31-35)';}?>;">
 
 <div class="weather-tempicon-identity">    
 <?php //humidity id
-if($weather["humidity"]<40){ echo "<icon-26-30>".$weather34_humidity_icon."</icon-26-30>";}
-else if($weather["humidity"]<=60){ echo "<icon-6-10>".$weather34_humidity_icon."</icon-6-10>";}
-else if($weather["humidity"]<=70){ echo "<icon-11-15>".$weather34_humidity_icon."</icon-11-15>";}
-else if($weather["humidity"]<=100){ echo "<blue>".$weather34_humidity_icon."</blue>";} ?></div>
+if ($weather["humidity"]>=70){ echo "<blue>".$weather34_humidity_icon."</blue>";}
+else if ($weather["humidity"]>=60){ echo "<yellow>".$weather34_humidity_icon."</yellow>";}
+else if ($weather["humidity"]>=40){ echo "<green>".$weather34_humidity_icon."</green>";}
+else if ($weather["humidity"]>=0){ echo "<red>".$weather34_humidity_icon."</red>";}
+?></div>

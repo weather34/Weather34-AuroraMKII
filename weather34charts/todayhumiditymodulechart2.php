@@ -1,14 +1,14 @@
 <?php
 	
 	####################################################################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
 	# https://weather34.com/homeweatherstation/index.html 											   # 
 	# 	                                                                                               #
 	# 	built on CanvasJs  	                                                                           #
 	#   canvasJs.js is protected by CREATIVE COMMONS LICENCE BY-NC 3.0  	                           #
 	# 	free for non commercial use and credit must be left in tact . 	                               #
 	# 	                                                                                               #
-	# 	Release: July 2019						  	                                                   #
+	# 	Release December 2020					  	                                                   #
 	# 	                                                                                               #
 	#   https://www.weather34.com 	                                                                   #
 	####################################################################################################
@@ -56,7 +56,7 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				
+				if ( rowData[2] >-150)
 					//dataPoints1.push({label: rowData[1],y:parseFloat(rowData[17])});
 					dataPoints1.push({label: rowData[1],y:parseFloat(rowData[17]),color:WEATHER34CHARTCOLORS(parseFloat(rowData[17]))});
 			}
@@ -69,7 +69,7 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				
+				if ( rowData[2] >-150)
 					dataPoints2.push({label: rowData[1],y:parseFloat(rowData[17])});
 				
 			}
