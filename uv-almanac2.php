@@ -1,6 +1,8 @@
 <?php include('livedata.php');?>
-<link href="console-dark.css?version=<?php echo filemtime('../console/console-dark.css') ?>" rel="stylesheet prefetch">
+<link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
 <theword>UVINDEX | Solar Radiation</theword>
+<extrainfoiconuv><?php echo $uvicon?></extrainfoiconuv>
+<extrainfoiconsolar><?php echo $solarpanelicon?></extrainfoiconsolar>
 <div class="almanacouterboxuv">
 <div class="almanacchartxuv" >
 <iframe  class="charttempmodule" src="weather34charts/todayuvmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
@@ -30,8 +32,8 @@ echo "<div class=almanacareas>".$weather["uvydmax"]."<smalltempunit2>UVI";
 
 <div class="almanac4xuv"><div class="almanac-content">
 <?php  //min Year
-echo "<valuetextheading1>Record Max <deepblue> </deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>N/A<smalltempunit2>UVI";
+echo "<valuetextheading1>Record Max <deepblue>".$weather["uvamaxtime"]."</deepblue></valuetextheading1><br>";
+echo "<div class=almanacareas>".$weather["uvamax"]."<smalltempunit2>UVI";
 ?><smalltempunit2></div></div>
 
 <br><br>
@@ -55,8 +57,8 @@ echo "<div class=almanacareas>".$weather["solarydmax"]."<smalltempunit2>Wm/2";
 
 <div class="almanac4xsol"><div class="almanac-content"> 
 <?php  //All time
-echo "<valuetextheading1>Record Max <deepblue> </deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>N/A<smalltempunit2>Wm/2";
+echo "<valuetextheading1>Record Max <deepblue>".$weather["solaramaxtime"]."</deepblue></valuetextheading1><br>";
+echo "<div class=almanacareas>".$weather["solaramax"]."<smalltempunit2>Wm/2";
 ?><smalltempunit2></div></div>
 </div>
 

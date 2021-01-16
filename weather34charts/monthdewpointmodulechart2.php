@@ -1,14 +1,14 @@
 <?php
 	
 	####################################################################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
 	# https://weather34.com/homeweatherstation/index.html 											   # 
 	# 	                                                                                               #
 	# 	built on CanvasJs  	                                                                           #
 	#   canvasJs.js is protected by CREATIVE COMMONS LICENCE BY-NC 3.0  	                           #
 	# 	free for non commercial use and credit must be left in tact . 	                               #
 	# 	                                                                                               #
-	# 	Release: July 2019						  	                                                   #
+	# 	Release December 2020					  	                                                   #
 	# 	                                                                                               #
 	#   https://www.weather34.com 	                                                                   #
 	####################################################################################################
@@ -194,6 +194,7 @@ return thecolor;}
 			lineColor:"rgba(255, 255, 255,.5)",					
 			name:"Lo Dewpoint",
 			markerType: "none",
+			markerSize:0,
 			dataPoints: dataPoints2,
 			yValueFormatString:"##.##° <?php echo $tempunit;?>",
 		}

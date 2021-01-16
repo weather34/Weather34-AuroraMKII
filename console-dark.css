@@ -382,7 +382,7 @@ wuwindgust{margin-left:20px}
 .weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-dark);font-weight:500;font-size:12px;line-height:1;padding-left:5px;float:none;text-align:left;width:170px;justify-content:left;height:14px;padding-bottom:10px;cursor:pointer;font-family:headingtext;padding-bottom:10px;margin-bottom:0;margin-top:-10px;margin-left:10px}
 bottomtoolbarspace{margin-left:65px}
 aurora{font-size:1em;font-family:weathertext2;margin-left:50px;opacity:.1}
-theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;opacity:.1;line-height:3}
+theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;opacity:.9;line-height:3}
 .weather34-webcam,.weather34-webcam-large{border:5px solid hsla(217,15%,17%,.5);border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;width:275px;height:135px;box-shadow:var(--button-shadow);margin-top:0}
 .weather34-webcam-large{width:90%;height:99%}
 .modulecaptioncam{display:flex;position:relative;left:165px;top:-3px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);font-family:Headingtext;width:11em;height:10px;font-size:10px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
@@ -401,12 +401,12 @@ theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext
 .weather-pressureicon-identity{height:1.1rem;margin-top:0;line-height:1;padding-bottom:2px}
 .almanacareas{display:-webkit-box;display:flex;width:7.5rem;height:3rem;color:var(--body-text-dark);overflow:hidden;font-family:weathertext2;line-height:1;border:1px solid hsla(206,12%,27%,.3);font-size:20px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:30px;background:var(--button-bg-color);border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
 .almanacouterbox,.almanacouterboxrain,.almanacouterboxuv{padding:5px;-webkit-border-radius:10px;border-radius:10px;border:6px solid #242a32;width:650px;height:270px;margin-left:-210px;margin-top:-80px;border-radius:10px;background-image:var(--grid-lines);background-size:5px 5px;box-shadow:var(--button-shadow)}
-theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;opacity:.1;line-height:3}
-.almanac2x,.almanac2xsol,.almanac2xuv,.almanac3x,.almanac3xsol,.almanac3xuv,.almanac4x,.almanac4xsol,.almanac4xuv,.almanac5x,.almanac6x,.almanacchartx,.almanacchartxsol,.almanacchartxuv,.almanacx,.almanacxsol,.almanacxuv{position:absolute;width:180px;float:none;padding:0;margin-bottom:50px}
+theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;opacity:.9;line-height:3}
+.almanac2x,.almanac2xsol,.almanac2xuv,.almanac3x,.almanac3xsol,.almanac3xuv,.almanac4x,.almanac4xsol,.almanac4xuv,.almanac5x,.almanac6x,.almanacchartx,.almanacchartxsol,.almanacchartxuv,.almanacchartxx,.almanacx,.almanacxsol,.almanacxuv{position:absolute;width:180px;float:none;padding:0;margin-bottom:50px}
 .almanacouterboxrain{display:flex;position:relative;width:auto;max-width:680px;height:270px;margin-left:10px;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;max-width:135vh;height:360px;margin-left:10px;margin-top:30px}
 .almanacx{top:10px;margin-left:-10px;width:100px}
-.almanacchartx{top:25px;margin-left:285px}
+.almanacchartx,.almanacchartxx{top:25px;margin-left:285px}
 .almanacchartxuv{top:25px;margin-left:285px}
 .almanacchartxsol{margin-top:145px;margin-left:285px}
 .almanac2x{margin-top:80px;width:2.5em}
@@ -432,7 +432,7 @@ monthchart{position:absolute;display:flex;font-size:11px;top:5px;margin-left:35p
 theword{font-size:1.25em}
 .almanacouterboxrain{display:flex;position:relative;margin-left:0;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;margin-left:0;margin-top:50px}
-.almanacchartxuv{top:-25px;margin-left:285px}
+.almanacchartxuv{top:-15px;margin-left:285px}
 .almanacchartxsol{margin-top:145px;margin-left:285px}
 .grid-container-forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,2fr));grid-template-rows:repeat(4,1fr);grid-column-gap:0;grid-row-gap:3px;width:100%;background:0}
 li555{min-width:630px;max-width:630px;padding:0;height:160px;margin-top:0;margin-bottom:5px}
@@ -452,13 +452,14 @@ li{align-items:center;display:flex;justify-content:center;min-width:310px;max-wi
 .nav,.nav-bottom{position:relative;max-width:1024px;margin-top:-35px}
 .weather34-tablet{padding:0;max-height:955px;border-bottom:35px solid #3d464d}
 .clock{position:absolute;margin-top:-200px}
+extrainfoiconuv{position:absolute;margin-top:12px;margin-left:40px;color:var(--orange)}
 }
 @media screen and (max-width:760px){
 .almanacouterboxrain{display:flex;position:relative;width:auto;max-width:680px;height:50vh;margin-left:10px;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;max-width:120vh;height:370px;margin-left:10px;margin-top:80px}
 .almanacx{top:10px;margin-left:-10px;width:100px}
-.almanacchartx{margin-top:-10px;margin-left:285px}
-.almanacchartxuv{margin-top:-25px;margin-left:285px}
+.almanacchartx,.almanacchartxx{margin-top:-10px;margin-left:285px}
+.almanacchartxuv{margin-top:-20px;margin-left:285px}
 .almanacchartxsol{margin-top:145px;margin-left:285px}
 .almanac2x{margin-top:80px;width:2.5em}
 .almanac3x{margin-top:-80px;margin-left:140px;width:2em}
@@ -473,6 +474,7 @@ li{align-items:center;display:flex;justify-content:center;min-width:310px;max-wi
 .almanac2xuv{margin-top:70px}
 .almanac3xuv{margin-top:-70px;margin-left:135px}
 .almanac4xuv{margin-top:70px}
+extrainfoiconuv{position:absolute;margin-top:12px;margin-left:40px;color:var(--orange)}
 }
 @media screen and (max-width:640px){
 html{overflow-x:visible}
@@ -483,11 +485,12 @@ html{overflow-x:visible}
 bottomtoolbarspace{margin-left:20px}
 .twentyfourhourtrend{margin-left:-105px;margin-top:-83px}
 li555{min-width:320px;max-width:320px;padding:0;height:310px;margin-top:0;margin-bottom:5px;margin-left:-2px}
-.almanac-word,.almanacchartxsol,.almanacchartxuv,.almanacouterboxrain,.almanacouterboxuv,.desktoplink4,.sunriset-set,.wuaheadforetop,chartpage,monthchart,theword,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2,.footericons{display:none}
+.almanac-word,.almanacchartxsol,.almanacchartxuv,.almanacouterboxrain,.almanacouterboxuv,.desktoplink4,.footericons,.sunriset-set,.wuaheadforetop,chartpage,extrainfoicon,extrainfoiconsolar,extrainfoiconuv,monthchart,theword,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2{display:none}
 .almanacouterboxrain{display:flex;position:relative;width:325px;max-width:350px;height:480px;margin-left:0;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;width:325px;max-width:350px;height:450px;margin-left:0;margin-top:80px}
 .almanacx{top:25px;margin-left:-10px;width:100px}
 .almanacchartx{top:280px;margin-left:0}
+.almanacchartxx{margin-top:200px;margin-left:0}
 .almanac2x{margin-top:80px;width:2.5em}
 .almanac3x{margin-top:-80px;margin-left:140px;width:2em}
 .almanac4x{margin-top:80px;width:2em}
@@ -663,9 +666,13 @@ a:hover{filter:brightness(110%);-webkit-filter:brightness(110%)}
 .thegrad{background:#8aa2cc;background:-moz-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:-webkit-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:linear-gradient(to right,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8aa2cc', endColorstr='#bf6e4e', GradientType=1)}
 winddirectionvalueword{font-size:.9em}
 .aqiid-brand a,.aqiid-brand2 a{position:relative;left:145px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;max-width:200px;line-height:1.2;top:40px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
-.extrainfo a,.extrainfo2 a,.extrainfo3 a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
+.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
 .extrainfo3 a{margin-left:175px;margin-top:-12px}
+.extrainfo4 a{margin-left:46px;margin-top:46px}
+extrainfoicon{position:absolute;margin-top:20px;margin-left:80px;color:var(--blue)}
+extrainfoiconsolar{position:absolute;margin-top:20px;margin-left:400px;color:var(--yellow)}
+extrainfoiconuv{position:absolute;margin-top:12px;margin-left:70px;color:var(--orange)}
 winddirectionvalueword{font-size:.9em}
 icontext{position:relative;top:-8px;font-family:weathertext2;font-size:.8em;right:1px;color:var(--body-text-dark)}
 .button-dial-toprain{border:0;box-shadow:none;background-image:none}

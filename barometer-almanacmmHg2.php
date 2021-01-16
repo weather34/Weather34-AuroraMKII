@@ -17,6 +17,7 @@ $weather["barometer_min"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
 ?>
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
 <theword>Barometric Pressure</theword>
+<extrainfoicon><?php echo $weather34_pressure_icon;?></extrainfoicon>
 <div class="almanacouterboxrain">
 <br><br>
 <div class="almanacchartx">

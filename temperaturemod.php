@@ -111,8 +111,8 @@ else if ($meteobridgeapi[24]>=-10 ){echo 'var(--temp-5-10)';}
 else if ($meteobridgeapi[24]>=-50 ){echo 'var(--deepcold)';}
 ?>">   
 <?php ;}?>
-
 <?php 
+if ($meteobridgeapi[42]='-'){$meteobridgeapi[42]="0";}
 //heat index 28+
 if ($meteobridgeapi[42]>=28){;?>
 <div class="windgauge">

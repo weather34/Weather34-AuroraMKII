@@ -21,8 +21,8 @@ echo "<div class=tempmodulehome0-5c>".$weather["uvydmax"]."<smalltempunit2>UVI";
 
 <div class="almanac4"><div class="almanac-content">
 <?php  //min Year
-echo "<valuetextheading1>All Time Max<deepblue></deepblue></valuetextheading1><br>";
-echo "<div class=tempmodulehome0-5c>N/A<smalltempunit2>";
+echo "<valuetextheading1>All Time Max <deepblue>".$weather["uvamaxtime"]."</deepblue></valuetextheading1><br>";
+echo "<div class=tempmodulehome0-5c>".$weather["uvamax"]."<smalltempunit2>";
 ?><smalltempunit2></div></div>
 
 <div class="weather-tempicon-identity" style="margin-top:65px;height:1.77em;margin-left:125px">  

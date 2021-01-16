@@ -1,6 +1,7 @@
 <?php include('livedata.php');?> 
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
 <theword>Temperature </theword>
+<extrainfoicon><?php echo $weather34_temp_icon;?></extrainfoicon>
 <div class="almanacouterboxrain">
 <br><br>
 <div class="almanacchartx">

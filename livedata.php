@@ -95,10 +95,12 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather['wind_speed_avgday']=$meteobridgeapi[158];
 	$weather['wind_direction_avgmonth']=$meteobridgeapi[191];
 	$weather['wind_direction_avgday']=$meteobridgeapi[188];
-	$weather['winddir_avg5min']    = number_format($meteobridgeapi[11],0);
-	//$weather['wind_speed_avg30']=$meteobridgeapi[158];
-	//$weather['tempyearavg']=$meteobridgeapi[184];
-	//$weather['windspeedyearavg']=$meteobridgeapi[185];
+	$weather['winddir_avg5min']    = number_format($meteobridgeapi[11],0);	
+
+	//new January 2021 
+    $weather["wind_direction_ydayavg"]=number_format($meteobridgeapi[171],1);
+	$weather['wind_speed_ydavg']=$meteobridgeapi[123];    
+	$weather['wind_direction_avgyear']=$meteobridgeapi[122];
 
 	//bft day max/avg
 	$weather["bft-daymax"]=$meteobridgeapi[189];
@@ -287,8 +289,6 @@ $windchillmintime2=date('jS M',strtotime($originalDatechill));
 
 //windchill
 $weather["windchilldmin"]=$meteobridgeapi[185];
-
-
 $weather["windchillmmin"]=$meteobridgeapi[42];
 $weather["windchillmmintime"]=$meteobridgeapi[43];
 $originalDatechill2=$meteobridgeapi[43];
@@ -405,8 +405,9 @@ $windchillmmintime=date("jS ", strtotime($originalDatechill2));
     $solarymaxtime = date('jS M', strtotime($solaroriginalDate4));	
 	$solaroriginalDate6 = $meteobridgeapi[106];
 	$solardmaxtime = date("H:i", strtotime($solaroriginalDate6));	
-	$solaroriginalDate7 = $meteobridgeapi[176];
-    $solaramaxtime = date("H:i", strtotime($solaroriginalDate7));	
+	$solaroriginalDate7 = $meteobridgeapi[177];
+	$solaramaxtime = date("jS M Y", strtotime($solaroriginalDate7));	
+	
 	
 	$weather["solarydmax"]		    = number_format($meteobridgeapi[107],0, '.', ''); // max yesterday
 	$weather["solarydmaxtime"]		= $solarydmaxtime; //seconds	
@@ -416,7 +417,7 @@ $windchillmmintime=date("jS ", strtotime($originalDatechill2));
 	$weather["solarymaxtime"]		= $solarymaxtime; //seconds	
 	$weather["solardmax"]		    = number_format($meteobridgeapi[105],0, '.', ''); //max today
 	$weather["solardmaxtime"]		= $solardmaxtime; //seconds	
-	$weather["solaramax"]		    = number_format($meteobridgeapi[175],0, '.', ''); // max all time
+	$weather["solaramax"]		    = number_format($meteobridgeapi[176],0, '.', ''); // max all time
 	$weather["solaramaxtime"]		= $solaramaxtime; //date	
 	
 	//alamanac uv	
@@ -428,8 +429,8 @@ $windchillmmintime=date("jS ", strtotime($originalDatechill2));
     $uvymaxtime = date('jS M', strtotime($uvoriginalDate4));	
 	$uvoriginalDate6 = $meteobridgeapi[113];
 	$uvdmaxtime = date('H:i', strtotime($uvoriginalDate6));		
-	$uvoriginalDate7 = $meteobridgeapi[153];
-    $uvamaxtime = date('H:i', strtotime($uvoriginalDate7));	
+	$uvoriginalDate7 = $meteobridgeapi[179];
+    $uvamaxtime = date('jS M Y', strtotime($uvoriginalDate7));	
 	
 	$weather["uvydmax"]		    = number_format($meteobridgeapi[114],1); // max yesterday
 	$weather["uvydmaxtime"]		= $uvydmaxtime; //seconds	
@@ -439,7 +440,7 @@ $windchillmmintime=date("jS ", strtotime($originalDatechill2));
 	$weather["uvymaxtime"]		= $uvymaxtime; //seconds	
 	$weather["uvdmax"]		    = number_format($meteobridgeapi[58],1); // max today
 	$weather["uvdmaxtime"]		= $uvdmaxtime; //seconds		
-	$weather["uvamax"]		    = number_format($meteobridgeapi[152],1); //alltime max 
+	$weather["uvamax"]		    = number_format($meteobridgeapi[178],1); //alltime max 
 	$weather["uvamaxtime"]		= $uvamaxtime; //date	
 		
 	//trends will update 15 minutes after a reboot or power failure
@@ -695,9 +696,6 @@ $weather['cloudbasetemp']= round((9/5)*$meteobridgeapi[2],1) +(32);
 $cloudtempf= ($weather['cloudbasetemp']) -5.4 *($weathercloudbaseheight)/1000;
 $cloudtempc=0.55555556*($cloudtempf - 32);
 
-//battery
-$weather['indoorbattery']=$meteobridgeapi[171];	
-$weather['outdoorbattery']=$meteobridgeapi[172];
 $weather['airquality']= $meteobridge[175];
 //davis air quality
 $weather["airquality-davispm1"]=$meteobridgeapi[180];
