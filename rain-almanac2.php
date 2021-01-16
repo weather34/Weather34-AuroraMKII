@@ -2,6 +2,9 @@
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
 <theword>Rainfall </theword>
 <extrainfoicon><?php echo $weather34_rain_icon;?></extrainfoicon>
+<div class="canvascredit">
+<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" ><br>Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>
+
 <div class="almanacouterboxrain">
 <br><br>
 <div class="almanacchartx">
@@ -43,8 +46,3 @@ echo "<div class=almanacareas>".$weather['rainlastyear']."<smalltempunit2>".$wea
 echo "<valuetextheading1>Recorded since <deepblue>".$mbyear."</deepblue></valuetextheading1><br>";
 echo "<div class=tempconverter1><div class=almanacareas>".$weather["rainalltime"]."<smalltempunit2>".$weather["rain_units"];
 ?><smalltempunit2></div></div></div></div>
-<div class="canvascredit">
-<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >CSS/SVG/PHP scripts were developed by weather34.com. 
-<br>Data Charts compiled with CanvasJs.com 
-<br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version. 
-<br>* © 2015-2021 Weather34 Aurora MKII</a></div>

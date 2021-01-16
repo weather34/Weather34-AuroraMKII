@@ -61,6 +61,3 @@ echo "<valuetextheading1>Record Max <deepblue>".$weather["solaramaxtime"]."</dee
 echo "<div class=almanacareas>".$weather["solaramax"]."<smalltempunit2>Wm/2";
 ?><smalltempunit2></div></div>
 </div>
-
-
-<div class="canvascredit3"><a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com"> Data Charts compiled with CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) <br>Non-Commercial-Version.</a></div>

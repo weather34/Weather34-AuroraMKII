@@ -2,6 +2,9 @@
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
 <theword>Wind Direction </theword>
 <extrainfoicon><?php echo $weather34compassicon;?></extrainfoicon>
+<div class="canvascredit">
+<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" ><br>Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>
+
 
 <div class="almanacouterboxrain">
 <div class="almanacchartxx">
@@ -61,9 +64,3 @@ else if( $weather["wind_direction_avgyear"]<=281.25){echo "West";}else if( $weat
 else if( $weather["wind_direction_avgyear"]<=348.75){echo "NNW";}else if( $weather["wind_direction_avgyear"]<=360){echo "North";}
 echo "<smalltempunit2 style='padding-left:5px;font-size:13px;color:var(--blue);'> ".number_format($weather["wind_direction_avgyear"],0)."&deg;";
 ?><smalltempunit2></div></div>
-
-<div class="canvascredit2" >
-<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >CSS/SVG/PHP scripts were developed by weather34.com. 
-<br>Data Charts compiled with CanvasJs.com 
-<br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version. 
-<br>* © 2015-2021 Weather34 Aurora MKII</a></div>

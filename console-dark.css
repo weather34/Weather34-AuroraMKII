@@ -110,10 +110,10 @@ steady{font-size:11px;text-shadow:none;color:var(--body-text-dark)}
 .rainratetextheading{color:#aeb6bf;font-family:weathertext2;font-size:.6em;margin-top:2px}
 .rainratetextheading ratevalue{color:#3d8b96}
 .rainrateextra{position:absolute;margin-top:110px;margin-left:149px}
-.rainratebar,.sunratebar{display:-webkit-box;display:flex;width:7.5rem;overflow:hidden;font-family:weathertext2;background-image:var(--grid-linesindicators);background-size:5px 1px;border:0;border-top-left-radius:2px;border-bottom-left-radius:2px;-webkit-border-top-left-radius:2px;-webkit-border-bottom-left-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-bottomleft:2px}
+.rainratebar,.sunratebar{display:-webkit-box;display:flex;width:7.5rem;overflow:hidden;font-family:weathertext2;background:hsla(206,19%,39%,.7);background-size:5px 1px;border:0;border-top-left-radius:2px;border-bottom-left-radius:2px;-webkit-border-top-left-radius:2px;-webkit-border-bottom-left-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-bottomleft:2px;margin-top:2px}
 .rainratebar,.weather34ratebar{height:7px;color:#aeb6bf}
 .weather34ratebar{background-color:hsla(186,100%,34%,.6)}
-.sunratebar,.weather34sunratebar{height:7px;opacity:.9}
+.sunratebar,.weather34sunratebar{height:7px;opacity:1}
 .rainconverter{display:-webkit-box;display:flex;position:absolute;font-size:12px}
 smallrainunit{font-size:.7em}
 smallrainunit4{position:relative;font-size:7px;vertical-align:top;top:2px;font-family:weathertext2}
@@ -423,10 +423,9 @@ theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext
 .almanac3xuv{margin-top:-70px;margin-left:135px}
 .almanac4xuv{margin-top:70px}
 monthchart{position:absolute;display:flex;font-size:11px;top:5px;margin-left:35px;width:182px;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);padding:3px;border-radius:5px;line-height:1}
-.canvascreditlink{color:#aaa;font-size:7.5px;font-family:weathertext2}
-.canvascredit,.canvascredit2,.canvascredit3{font-size:8px;position:absolute;display:flex;font-family:weathertext2;margin-left:0;margin-top:125px;width:250px;justify-content:center;align-items:center;border:1px solid hsla(210,7%,11%,.8);padding:3px;border-radius:5px;background:hsla(204,31%,21%,.229)}
-.canvascredit2{margin-top:210px;margin-left:-130px}
-.canvascredit3{margin-top:150px;margin-left:-90px;width:200px}
+.canvascreditlink{color:#aaa;font-size:8px;font-family:weathertext2;z-index:100}
+.canvascredit,.canvascredituv{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:380px;top:380px;width:220px;height:25px;line-height:.9;background:hsla(214,16%,17%,.4);border-radius:3px;opacity:.7;z-index:100;padding-bottom:2px}
+.canvascredituv{display:none}
 @media screen and (max-width:960px){
 .nav-bottom .weather34-acplug,.nav-bottom .weather34-battery,.showicon,.sunriset-set,.version,aurora,chartpage{display:none}
 theword{font-size:1.25em}
@@ -478,8 +477,7 @@ extrainfoiconuv{position:absolute;margin-top:12px;margin-left:40px;color:var(--o
 }
 @media screen and (max-width:640px){
 html{overflow-x:visible}
-.canvascredit,.canvascredit2,.canvascredit3{margin-top:340px;margin-left:0;padding-left:15px}
-.canvascredit2{margin-top:410px;margin-left:-140px}
+.canvascredit,.canvascredituv{display:none}
 .weather34-open-menu button{position:relative;top:-4px;left:3px}
 .weather-icon-identity-wind{margin-left:170px}
 bottomtoolbarspace{margin-left:20px}
@@ -668,7 +666,7 @@ winddirectionvalueword{font-size:.9em}
 .aqiid-brand a,.aqiid-brand2 a{position:relative;left:145px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;max-width:200px;line-height:1.2;top:40px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 .extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
-.extrainfo3 a{margin-left:175px;margin-top:-12px}
+.extrainfo3 a{margin-left:175px;margin-top:-15px}
 .extrainfo4 a{margin-left:46px;margin-top:46px}
 extrainfoicon{position:absolute;margin-top:20px;margin-left:80px;color:var(--blue)}
 extrainfoiconsolar{position:absolute;margin-top:20px;margin-left:400px;color:var(--yellow)}
