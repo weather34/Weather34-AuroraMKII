@@ -113,7 +113,7 @@ steady{font-size:11px;text-shadow:none;color:var(--body-text-dark)}
 .rainratebar,.sunratebar{display:-webkit-box;display:flex;width:7.5rem;overflow:hidden;font-family:weathertext2;background:hsla(206,19%,39%,.7);background-size:5px 1px;border:0;border-top-left-radius:2px;border-bottom-left-radius:2px;-webkit-border-top-left-radius:2px;-webkit-border-bottom-left-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-bottomleft:2px;margin-top:2px}
 .rainratebar,.weather34ratebar{height:7px;color:#aeb6bf}
 .weather34ratebar{background-color:hsla(186,100%,34%,.6)}
-.sunratebar,.weather34sunratebar{height:7px;opacity:1}
+.sunratebar,.weather34sunratebar{height:7px;}
 .rainconverter{display:-webkit-box;display:flex;position:absolute;font-size:12px}
 smallrainunit{font-size:.7em}
 smallrainunit4{position:relative;font-size:7px;vertical-align:top;top:2px;font-family:weathertext2}
