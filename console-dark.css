@@ -113,7 +113,7 @@ steady{font-size:11px;text-shadow:none;color:var(--body-text-dark)}
 .rainratebar,.sunratebar{display:-webkit-box;display:flex;width:7.5rem;overflow:hidden;font-family:weathertext2;background:hsla(206,19%,39%,.7);background-size:5px 1px;border:0;border-top-left-radius:2px;border-bottom-left-radius:2px;-webkit-border-top-left-radius:2px;-webkit-border-bottom-left-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-bottomleft:2px;margin-top:2px}
 .rainratebar,.weather34ratebar{height:7px;color:#aeb6bf}
 .weather34ratebar{background-color:hsla(186,100%,34%,.6)}
-.sunratebar,.weather34sunratebar{height:7px;}
+.sunratebar,.weather34sunratebar{height:7px}
 .rainconverter{display:-webkit-box;display:flex;position:absolute;font-size:12px}
 smallrainunit{font-size:.7em}
 smallrainunit4{position:relative;font-size:7px;vertical-align:top;top:2px;font-family:weathertext2}
@@ -382,7 +382,6 @@ wuwindgust{margin-left:20px}
 .weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-dark);font-weight:500;font-size:12px;line-height:1;padding-left:5px;float:none;text-align:left;width:170px;justify-content:left;height:14px;padding-bottom:10px;cursor:pointer;font-family:headingtext;padding-bottom:10px;margin-bottom:0;margin-top:-10px;margin-left:10px}
 bottomtoolbarspace{margin-left:65px}
 aurora{font-size:1em;font-family:weathertext2;margin-left:50px;opacity:.1}
-theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;opacity:.9;line-height:3}
 .weather34-webcam,.weather34-webcam-large{border:5px solid hsla(217,15%,17%,.5);border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;width:275px;height:135px;box-shadow:var(--button-shadow);margin-top:0}
 .weather34-webcam-large{width:90%;height:99%}
 .modulecaptioncam{display:flex;position:relative;left:165px;top:-3px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);font-family:Headingtext;width:11em;height:10px;font-size:10px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
@@ -401,7 +400,7 @@ theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext
 .weather-pressureicon-identity{height:1.1rem;margin-top:0;line-height:1;padding-bottom:2px}
 .almanacareas{display:-webkit-box;display:flex;width:7.5rem;height:3rem;color:var(--body-text-dark);overflow:hidden;font-family:weathertext2;line-height:1;border:1px solid hsla(206,12%,27%,.3);font-size:20px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:30px;background:var(--button-bg-color);border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
 .almanacouterbox,.almanacouterboxrain,.almanacouterboxuv{padding:5px;-webkit-border-radius:10px;border-radius:10px;border:6px solid #242a32;width:650px;height:270px;margin-left:-210px;margin-top:-80px;border-radius:10px;background-image:var(--grid-lines);background-size:5px 5px;box-shadow:var(--button-shadow)}
-theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;opacity:.9;line-height:3}
+theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext2;line-height:1;background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;padding:3px;background-image:var(--grid-lines);background-size:2px 2px;max-width:400px;margin-top:20px}
 .almanac2x,.almanac2xsol,.almanac2xuv,.almanac3x,.almanac3xsol,.almanac3xuv,.almanac4x,.almanac4xsol,.almanac4xuv,.almanac5x,.almanac6x,.almanacchartx,.almanacchartxsol,.almanacchartxuv,.almanacchartxx,.almanacx,.almanacxsol,.almanacxuv{position:absolute;width:180px;float:none;padding:0;margin-bottom:50px}
 .almanacouterboxrain{display:flex;position:relative;width:auto;max-width:680px;height:270px;margin-left:10px;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;max-width:135vh;height:360px;margin-left:10px;margin-top:30px}
@@ -423,8 +422,8 @@ theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext
 .almanac3xuv{margin-top:-70px;margin-left:135px}
 .almanac4xuv{margin-top:70px}
 monthchart{position:absolute;display:flex;font-size:11px;top:5px;margin-left:35px;width:182px;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);padding:3px;border-radius:5px;line-height:1}
-.canvascreditlink{color:#aaa;font-size:8px;font-family:weathertext2;z-index:100}
-.canvascredit,.canvascredituv{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:380px;top:380px;width:220px;height:25px;line-height:.9;background:hsla(214,16%,17%,.4);border-radius:3px;opacity:.7;z-index:100;padding-bottom:2px}
+.canvascreditlink{font-size:8px;font-family:weathertext2;z-index:100}
+.canvascredit a,.canvascredituv a{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:80px;top:380px;width:250px;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;line-height:1.5;background-image:var(--grid-lines);background-size:2px 2px;justify-content:center;align-items:center;vertical-align:middle;height:30px}
 .canvascredituv{display:none}
 @media screen and (max-width:960px){
 .nav-bottom .weather34-acplug,.nav-bottom .weather34-battery,.showicon,.sunriset-set,.version,aurora,chartpage{display:none}
