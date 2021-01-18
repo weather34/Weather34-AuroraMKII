@@ -34,10 +34,13 @@
 function WEATHER34CHARTCOLORS(weather34value) {
 if (weather34value>=0 && weather34value<=35) {thecolor='#d35f50';}
 else if (weather34value>35 && weather34value<=40) {thecolor='#ec5732';}
-else if (weather34value>40 && weather34value<70){thecolor=' #e6a141';}   
-else if (weather34value>=70 && weather34value<=100){thecolor='#00adbd';}  
+else if (weather34value>40 && weather34value<60){thecolor=' hsl(75, 62%, 43%)';} 
+else if (weather34value>=60 && weather34value<70){thecolor=' #e6a141';} 
+else if (weather34value>=70 && weather34value<=90){thecolor='#00adbd';}  
+else if (weather34value>90 && weather34value<=100){thecolor=' hsla(185, 100%, 37%, .7)';}  
 else {thecolor='hsl(35, 77%, 58%)';}
 return thecolor;}
+
 		// today hum
         $(document).ready(function () {
 		var dataPoints1 = [];
