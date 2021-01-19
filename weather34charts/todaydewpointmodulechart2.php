@@ -187,7 +187,7 @@ return thecolor;}
 			legendMarkerType: "circle",
 			lineThickness: 1,
 			markerType: "circle",
-			name:"Temperature",
+			name:"Dewpoint",
 			dataPoints: dataPoints1,
 			yValueFormatString: "#0.# °",
 			
