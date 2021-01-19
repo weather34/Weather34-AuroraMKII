@@ -172,6 +172,7 @@ background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-g
 .weather34weekdays{position:relative;text-transform:uppercase;font-size:.8rem;display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;list-style:none;left:-36px;top:-10px;margin-bottom:-5px}
 .weather34weekdays todayorange{color:#fff;background:var(--orange);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
 grey{color:#ccc}
+green1{color:hsl(75, 62%, 43%)}
 
 
 </style>
@@ -274,13 +275,11 @@ if($brand=='yes'){?>
 if ($davisairquality=='yes' && $purpleairhardware=='yes'){echo '<img src="aqi/Airlink34.svg" style="width:100px;margin-top:10px;"><img src="images/PurpleAir.svg" style="width:100px;margin-top:10px;">';}
 else if ($davisairquality=='yes'){echo '<img src="aqi/Airlink34.svg" style="width:100px;margin-top:10px;">';}
 else if ($purpleairhardware=='yes'){echo '<img src="images/PurpleAir.svg" style="width:100px;margin-top:10px;">';}
-else if ($luftdatenhardware=='yes'){echo '<img src="images/weather34-nova.svg" style="width:60px;margin-top:10px;">';}
-else 
-echo "<br>Status " ." : ";
+else if ($luftdatenhardware=='yes'){echo '<img src="images/weather34-nova.svg" style="width:60px;margin-top:5px;margin-bottom:-10px">';}
 $weather34updatefile=$livedata;
 if(file_exists($livedata)&&time()- filemtime($livedata)>300){echo "<center style='font-size:1.5em;'><br> Station Data is <red>Offline</red>
   ".$warmalertnotif."</center>";}
-else echo "<center style='font-size:1.5em;'><br> Station Data is <yellow1>Online</yellow></center>" ?>
+else echo "<center style='font-size:1.5em;'><br> Station Data is <green1>Online</green1></center>" ?>
 </div>
 <br><br>
 </article>
