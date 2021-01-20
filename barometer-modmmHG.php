@@ -90,29 +90,28 @@ else if ($baromdiff<0 ){echo 'var(--blue)';}
 <div class="rainrateextra2" style="width:500px">
 <valuetextheading5>
 <?php // weather34 simple css scale 
+echo "720 <barometerspacinghpa>800</barometerspacinghpa>";
+echo "<smalltempunit2>&nbsp;".$weather["barometer_units"]."</smalltempunit2>";
 
-if ($weather["barometer"]>=765 ){echo "685 749 764 <greyb>".$weather["barometer"]."</greyb> mmHG";}
-else if ($weather["barometer"]>=749 ){echo "685 700 736 <greyb>".$weather["barometer"]."</greyb> mmHG";}
-else if ($weather["barometer"]>=685 ){echo "<greyb>".$weather["barometer"]."</greyb> 700 749 765 mmHG";}
-    
-
-    if ($weather["barometer_units"]=='inHg'){
-        if ($weather["barometer"]>=30.41 ){echo "29.5 1010 30.1 30.2 <greyb>".$weather["barometer"]."</greyb> ";}
-        else if ($weather["barometer"]>=30.12 ){echo "29.5 29.8 30.1 <greyb>".$weather["barometer"]."</greyb> 30.4";}
-        else if ($weather["barometer"]>=29.82 ){echo "29.5 29.8 <greyb>".$weather["barometer"]."</greyb> 30.2 ";}
-        else if ($weather["barometer"]>=29.53 ){echo "29.5 <greyb>".$weather["barometer"]."</greyb> 29.9 30.2 ";}
-        else if ($weather["barometer"]>=29.2 ){echo "28.6 28.9 <greyb>".$weather["barometer"]."</greyb> 29.5 29.8";}
-        else if ($weather["barometer"]>=28.9 ){echo "28.0 28.3 28.6 <greyb>".$weather["barometer"]."</greyb> 29.2 29.5";}
-        else if ($weather["barometer"]>=28.6 ){echo "28.0 28.3 <greyb>".$weather["barometer"]."</greyb> 28.9 29.5 ";}
-        else if ($weather["barometer"]>=28.3 ){echo "28.0 <greyb>".$weather["barometer"]."</greyb> 28.9 29.2 29.5";}
-        else if ($weather["barometer"]>=28.05 ){echo "27 <greyb>".$weather["barometer"]."</greyb> 28.6 28.9 29.2 29.5";}
-            echo "<smalltempunit2>&nbsp;".$weather["barometer_units"]."</smalltempunit2>";
-            }
-	
 ?></smalltempunit2>
+<style>
+.weather34sunratebar2::before{
+position:absolute;
+content:"<?php echo $weather["barometer"]?>";
+font-size:9px;
+padding-left:<?php 
+if ( $meteobridgeapi[10]<960){echo $meteobridgeapi[10]*0.02;}
+else if ( $meteobridgeapi[10]<980){echo $meteobridgeapi[10]*0.025;}
+else if ( $meteobridgeapi[10]<1010){echo $meteobridgeapi[10]*0.045;}
+else if ( $meteobridgeapi[10]<1030){echo $meteobridgeapi[10]*0.065;}
+else echo $meteobridgeapi[10]*0.070;?>px;
+top:0px;
+color:var(--barometerbar2);
+}	
+</style>
 </valuetextheading5>
 <div class=sunratebar>
-<div class="weather34sunratebar" 
+<div class="weather34sunratebar2" 
 style=
 "width:<?php if ( $meteobridgeapi[10]<1010){echo $meteobridgeapi[10]*0.055;}else echo $meteobridgeapi[10]*0.075;?>px;background:var(--barometerbar);">
 </div></div></div>

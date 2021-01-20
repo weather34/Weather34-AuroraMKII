@@ -132,42 +132,45 @@ else if ($baromdiff<0 ){echo 'var(--blue)';}
 <valuetextheading5>
 <?php // weather34 simple css scale 
 //hpa mb
-if ($weather["barometer_units"]=='hPa' || $weather["barometer_units"]=='mb'){
-if ($weather["barometer"]>=1030 ){echo "1000 1010 1020 1025 <greyb>".$weather["barometer"]."</greyb> ";}
-else if ($weather["barometer"]>=1020 ){echo "1000 1010 1020 <greyb>".$weather["barometer"]."</greyb> 1035 ";}
-else if ($weather["barometer"]>=1010 ){echo "1000 1010 <greyb>".$weather["barometer"]."</greyb> 1025 ";}
-else if ($weather["barometer"]>=1000 ){echo "1000 <greyb>".$weather["barometer"]."</greyb> 1015 1025 ";}
-else if ($weather["barometer"]>=990 ){echo "970 980 <greyb>".$weather["barometer"]."</greyb> 1000 1010";}
-else if ($weather["barometer"]>=980 ){echo "950 960 970 <greyb>".$weather["barometer"]."</greyb> 990 1000";}
-else if ($weather["barometer"]>=970 ){echo "950 960 <greyb>".$weather["barometer"]."</greyb> 980 1000 ";}
-else if ($weather["barometer"]>=960 ){echo "950 <greyb>".$weather["barometer"]."</greyb> 980 990 1000";}
-else if ($weather["barometer"]>=950 ){echo "940 <greyb>".$weather["barometer"]."</greyb> 970 980 990 1000";}
+if ($weather["barometer_units"]=='hPa' || $weather["barometer_units"]=='mb')
+{
+echo "950 <barometerspacinghpa>1050</barometerspacinghpa>";
 echo "<smalltempunit2>&nbsp;".$weather["barometer_units"]."</smalltempunit2>";
 }
-
+//inHg
 if ($weather["barometer_units"]=='inHg'){
-if ($weather["barometer"]>=30.41 ){echo "29.5 1010 30.1 30.2 <greyb>".$weather["barometer"]."</greyb> ";}
-else if ($weather["barometer"]>=30.12 ){echo "29.5 29.8 30.1 <greyb>".$weather["barometer"]."</greyb> 30.4";}
-else if ($weather["barometer"]>=29.82 ){echo "29.5 29.8 <greyb>".$weather["barometer"]."</greyb> 30.2 ";}
-else if ($weather["barometer"]>=29.53 ){echo "29.5 <greyb>".$weather["barometer"]."</greyb> 29.9 30.2 ";}
-else if ($weather["barometer"]>=29.2 ){echo "28.6 28.9 <greyb>".$weather["barometer"]."</greyb> 29.5 29.8";}
-else if ($weather["barometer"]>=28.9 ){echo "28.0 28.3 28.6 <greyb>".$weather["barometer"]."</greyb> 29.2 29.5";}
-else if ($weather["barometer"]>=28.6 ){echo "28.0 28.3 <greyb>".$weather["barometer"]."</greyb> 28.9 29.5 ";}
-else if ($weather["barometer"]>=28.3 ){echo "28.0 <greyb>".$weather["barometer"]."</greyb> 28.9 29.2 29.5";}
-else if ($weather["barometer"]>=28.05 ){echo "27 <greyb>".$weather["barometer"]."</greyb> 28.6 28.9 29.2 29.5";}
-	echo "<smalltempunit2>&nbsp;".$weather["barometer_units"]."</smalltempunit2>";
+	echo "28 <barometerspacinginhg>31</barometerspacinginhg>";
+echo "<smalltempunit2>&nbsp;".$weather["barometer_units"]."</smalltempunit2>";
 	}
 ?></smalltempunit2>
+<style>
+.weather34sunratebar1::before{
+position:absolute;
+content:"<?php echo $weather["barometer"]?>";
+font-size:9px;
+padding-left:<?php 
+if ( $meteobridgeapi[10]<960){echo $meteobridgeapi[10]*0.02;}
+else if ( $meteobridgeapi[10]<980){echo $meteobridgeapi[10]*0.025;}
+else if ( $meteobridgeapi[10]<1010){echo $meteobridgeapi[10]*0.045;}
+else if ( $meteobridgeapi[10]<1030){echo $meteobridgeapi[10]*0.065;}
+else echo $meteobridgeapi[10]*0.070;?>px;
+top:0px;
+color:var(--barometerbar2);
+}	
+</style>
 </valuetextheading5>
 <div class=sunratebar>
-<div class="weather34sunratebar" 
+<div class="weather34sunratebar1" 
 style=
-"width:<?php if ( $meteobridgeapi[10]<1010){echo $meteobridgeapi[10]*0.055;}else echo $meteobridgeapi[10]*0.075;?>px;background:var(--barometerbar);">
+"width:<?php 
+if ( $meteobridgeapi[10]<960){echo $meteobridgeapi[10]*0.015;}
+else if ( $meteobridgeapi[10]<980){echo $meteobridgeapi[10]*0.035;}
+else if ( $meteobridgeapi[10]<1010){echo $meteobridgeapi[10]*0.055;}
+else if ( $meteobridgeapi[10]<1030){echo $meteobridgeapi[10]*0.075;}
+else if ( $meteobridgeapi[10]<1045){echo $meteobridgeapi[10]*0.095;}
+else echo $meteobridgeapi[10]*0.12;?>px;background:var(--barometerbar);">
 </div></div></div>
-
 <div class=extrainfo><a href='barometer-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
-
-
 <div class="weather-tempicon-identity">    
 <?php //id
 echo "<icon-zero>".$weather34_pressure_icon."</icon-zero>";?></div>
