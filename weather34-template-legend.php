@@ -89,6 +89,7 @@ actualt34{display:none}
 
 .hardwareimage{position:relative;display:flex;margin:0 auto;margin-top:-30px;margin-left:120px}
 .hardwareimagenano{position:relative;display:flex;margin:0 auto;margin-top:0px;margin-left:155px}
+.hardwareimagerpi{position:relative;display:flex;margin:0 auto;margin-top:-10px;margin-left:135px}
 .ups{position:relative;display:flex;margin:0 auto;margin-top:5px;margin-left:0}
 .stationhardware{position:absolute;display:flex;margin-left:127px;margin-top:0px}
 .stationhardware2{position:absolute;display:flex;margin-left:145px;margin-top:-30px}
@@ -206,6 +207,8 @@ return $weather34nanotimeago;}?>
 if($mbplatform=='Nano' OR $mbplatform=='NanoSD'){echo '<img src="images/nano.svg" width="50px" class="hardwareimagenano" alt="Meteobridge NANOSD" title="Meteobridge NANOSD">';}
 else if($mbplatform=='Pro Red' OR $mbplatform=='Pro Black'){echo '<img src="images/MeteobridgePRO.svg" width="80px" class="hardwareimagenano" alt="Meteobridge Pro" title="Meteobridge Pro">';}
 else if($mbplatform=='TPlink'){echo '<img src="images/TPLINK.svg" width="80px" class="hardwareimagenano" alt="Meteobridge TP-Link" title="Meteobridge TP-Link">';}
+else if($mbplatform=='RPI'){echo '<img src="images/weather34-mb-rpi.svg" width="100px" class="hardwareimagerpi" alt="Meteobridge RPI" title="Meteobridge RPI">';}
+ 
     ?>      
     <br><br><br>
  </span></div>  

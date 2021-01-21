@@ -1700,6 +1700,7 @@ Do you have a uv sensor </div>
                                                                     <option>Pro Red</option>
                                                                     <option>Pro Black</option>
                                                                     <option>TPlink</option>
+                                                                    <option>RPI</option>
                                                                 </select>
                                                                 <br><br>
 
@@ -1749,7 +1750,7 @@ Do you have a uv sensor </div>
 <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"> </svg>
 
 <input name="installed" type="text" id="installed" value="<?php echo $installed; ?>" class="choose">
-<br> <span style="color:#777;">* Important Please enter like this  example must be numerical Year-Month-Date : 2015-07-02 </span>
+<br> <span style="color:#777;">* Important Please enter like this must be numerical Year-Month-Date : 2015-07-02 </span>
 
 <br><br>
 
