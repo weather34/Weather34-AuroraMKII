@@ -1,6 +1,6 @@
 <?php 
   #######################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE    #	                         
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE    #	                         
 	# https://weather34.com/homeweatherstation/index.html #											                        
 	# 	                                                  #                                             
 	# 	Release: March 2020                 			        #	  	                                               
@@ -138,7 +138,7 @@ include_once('livedata.php');include_once('updater-almanac.php');?>
    } 
 ?>
 
-<a href="weather34-mooninfo.php" data-lity data-title="Luna Info">
+<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">
 <?php echo $weather34moonicon?></a>
 
 <a href="weather34-meteor.php" data-lity data-title="Meteor Showers">
