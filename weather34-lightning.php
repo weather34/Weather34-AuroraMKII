@@ -46,24 +46,25 @@ echo "</strikeicon>";?>
 <div class="indoortempa-mod2lightning" > 
 <valuetextheadingindoor>
 <?php // weather34 simple css MONTHLY lightning  scale 
-if ($weather["lightningmonth"]>=6000 ){echo "0 100 200 500 700 1k <red>6k</red>+ ";}
-else if ($weather["lightningmonth"]>=5000 ){echo "0 100 200 500 700 1k <red>6k</red>+ ";}
-else if ($weather["lightningmonth"]>=4000 ){echo "0 100 200 500 700 1k <red>4k</red>+ ";}
-else if ($weather["lightningmonth"]>=3000 ){echo "0 100 200 500 700 1k<red>3k</red>+ ";}
-else if ($weather["lightningmonth"]>=2000 ){echo "0 100 200 500 700 1k <red>2k</red>+ ";}
-else if ($weather["lightningmonth"]>=1000 ){echo "0 100 200 400 600 800 <red>1k</red>+ ";}
-else if ($weather["lightningmonth"]>=900 ){echo "0 100 200 400 600 <orange>900</orange> 1k+ ";}
-else if ($weather["lightningmonth"]>=800 ){echo "0 100 200 400 <orange>800</orange> 900 1k+";}
-else if ($weather["lightningmonth"]>=700 ){echo "0 100 200 400 <orange>700</orange> 800 1k+";}
-else if ($weather["lightningmonth"]>=600 ){echo "0 100 200 300 <orange>600</orange> 700 1k+ ";}
-else if ($weather["lightningmonth"]>=500 ){echo "0 100 200 300 <orange>500</orange> 600 1k+ ";}
-else if ($weather["lightningmonth"]>=400){echo "0 100 200 300 <orange>400</orange> 500 1k+ ";}
-else if ($weather["lightningmonth"]>=300){echo "0 100 200 <orange>300</orange> 400 500 1k+ ";}
-else if ($weather["lightningmonth"]>=200 ){echo "0 100 <orange>200</orange> 300 400 500 1k+ ";}
-else if ($weather["lightningmonth"]>=100 ){echo "0 <orange>100</orange> 200 300 400 500 1k+ ";}
-else if ($weather["lightningmonth"]>=0 ){echo "<green>0</green> 100 200 300 400 500 1k+ ";}
-echo date('M');if ($weather["lightningmonth"]<100){echo "(<yellow>".$weather["lightningmonth"]."</yellow>)";}
-else echo "(<orange>".$weather["lightningmonth"]."</orange>)";
+if ($weather["lightningmonth"]>=6000 ){echo "0 100 200 500 1k 2k 4k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=6000 ){echo "0 100 200 500 700 2k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=5000 ){echo "0 100 200 500 700 2k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=4000 ){echo "0 100 200 500 700 2k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=3000 ){echo "0 100 200 500 700 1k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=2000 ){echo "0 100 200 500 700 1k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=1500 ){echo "0 100 200 400 500 1k <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=1000 ){echo "0 100 200 400 500 900 <red>".$weather["lightningmonth"]."</red>";}
+else if ($weather["lightningmonth"]>=900 ){echo "0 100 200 400 500 <orange>".$weather["lightningmonth"]."</orange>";}
+else if ($weather["lightningmonth"]>=800 ){echo "0 100 200 400 <orange>".$weather["lightningmonth"]."</orange> 900 ";}
+else if ($weather["lightningmonth"]>=700 ){echo "0 100 200 400 <orange>".$weather["lightningmonth"]."</orange> 800 ";}
+else if ($weather["lightningmonth"]>=600 ){echo "0 100 200 300 <orange>".$weather["lightningmonth"]."</orange> 700 ";}
+else if ($weather["lightningmonth"]>=500 ){echo "0 100 200 300 400 <orange>".$weather["lightningmonth"]."</orange> 600 ";}
+else if ($weather["lightningmonth"]>=400){echo "0 100 200 300 <orange>".$weather["lightningmonth"]."</orange> 500 600";}
+else if ($weather["lightningmonth"]>=300){echo "0 100 200 <orange>".$weather["lightningmonth"]."</orange> 400 500 600";}
+else if ($weather["lightningmonth"]>=200 ){echo "0 100 150 <orange>".$weather["lightningmonth"]."</orange> 300 400 500";}
+else if ($weather["lightningmonth"]>=100 ){echo "0 50 <orange>".$weather["lightningmonth"]."</orange> 200 300 400 500 ";}
+else if ($weather["lightningmonth"]>=0 ){echo "<orange>".$weather["lightningmonth"]."</orange> 100 200 300 400 500 ";}
+echo " <smalltempunit2>[<deepblue>". date('F')."</deepblue>]</smalltempunit2>";
 ?>
 </valuetextheadingindoor>
 <div class=sunratebar>
@@ -83,32 +84,31 @@ else if ($weather["lightningmonth"]<50000){echo $weather["lightningmonth"]*0.18;
 background:
 <?php 
 if ($weather["lightningmonth"]>=1000 ){echo '#d35f50';}
-else if ($weather["lightningmonth"]>=100 ){echo '#d87040';}
-else if ($weather["lightningmonth"]>0 ){echo '#9bbc2f';}
+else if ($weather["lightningmonth"]>=0 ){echo '#d87040';}
 ?>;">
 </div></div></div>
 
 <div class="indoortempa-mod3lightning" > 
 <valuetextheadingindoor>
 <?php // weather34 simple css Year lightning  scale 
-if ($weather["lightningyear"]>=6000 ){echo "0 100 200 500 700 1k <red>6k</red>+ ";}
-else if ($weather["lightningyear"]>=5000 ){echo "0 100 200 500 700 1k <red>6k</red>+ ";}
-else if ($weather["lightningyear"]>=4000 ){echo "0 100 200 500 700 1k <red>4k</red>+ ";}
-else if ($weather["lightningyear"]>=3000 ){echo "0 100 200 500 700 1k<red>3k</red>+ ";}
-else if ($weather["lightningyear"]>=2000 ){echo "0 100 200 500 700 1k <red>2k</red>+ ";}
-else if ($weather["lightningyear"]>=1000 ){echo "0 100 200 400 600 800 <red>1k</red>+ ";}
-else if ($weather["lightningyear"]>=900 ){echo "0 100 200 400 600 <orange>900</orange> 1k+ ";}
-else if ($weather["lightningyear"]>=800 ){echo "0 100 200 400 <orange>800</orange> 900 1k+";}
-else if ($weather["lightningyear"]>=700 ){echo "0 100 200 400 <orange>700</orange> 800 1k+";}
-else if ($weather["lightningyear"]>=600 ){echo "0 100 200 300 <orange>600</orange> 700 1k+ ";}
-else if ($weather["lightningyear"]>=500 ){echo "0 100 200 300 <orange>500</orange> 600 1k+ ";}
-else if ($weather["lightningyear"]>=400){echo "0 100 200 300 <orange>400</orange> 500 1k+ ";}
-else if ($weather["lightningyear"]>=300){echo "0 100 200 <orange>300</orange> 400 500 1k+ ";}
-else if ($weather["lightningyear"]>=200 ){echo "0 100 <orange>200</orange> 300 400 500 1k+ ";}
-else if ($weather["lightningyear"]>=100 ){echo "0 <orange>100</orange> 200 300 400 500 1k+ ";}
-else if ($weather["lightningyear"]>=0 ){echo "<green>0</green> 100 200 300 400 500 1k+ ";}
-echo date('Y');if ($weather["lightningyear"]<100){echo "(<yellow>".$weather["lightningyear"]."</yellow>)";}
-else echo "(<orange>".$weather["lightningyear"]."</orange>)";
+if ($weather["lightningyear"]>=6000 ){echo "0 100 200 1k 2k 3k 4k <red>".$weather["lightningyear"]."</red>";}
+else if ($weather["lightningyear"]>=6000 ){echo "0 100 500 1k 2k 3k 4k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=5000 ){echo "0 100 500 1k 2k 3k 4k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=4000 ){echo "0 100 500 1k 2k 3k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=3000 ){echo "0 100 200 500 700 1k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=2000 ){echo "0 100 200 500 700 1k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=1000 ){echo "0 100 200 400 600 800 <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=900 ){echo "0 100 200 400 600 <orange>".$weather["lightningyear"]."</orange>";}
+else if ($weather["lightningyear"]>=800 ){echo "0 100 200 400 <orange>".$weather["lightningyear"]."</orange>";}
+else if ($weather["lightningyear"]>=700 ){echo "0 100 200 400 <orange>".$weather["lightningyear"]."</orange>";}
+else if ($weather["lightningyear"]>=600 ){echo "0 100 200 300 <orange>".$weather["lightningyear"]."</orange>";}
+else if ($weather["lightningyear"]>=500 ){echo "0 100 200 300 <orange>".$weather["lightningyear"]."</orange>";}
+else if ($weather["lightningyear"]>=400){echo "0 50 100 200 300 <orange>".$weather["lightningyear"]."</orange>";}
+else if ($weather["lightningyear"]>=300){echo "0 50 100 200 <orange>".$weather["lightningyear"]."</orange> 400 500 ";}
+else if ($weather["lightningyear"]>=200 ){echo "0 50 100 <orange>".$weather["lightningyear"]."</orange> 300 400 500 ";}
+else if ($weather["lightningyear"]>=100 ){echo "0 50 <orange>".$weather["lightningyear"]."</orange> 200 300 400 500 ";}
+else if ($weather["lightningyear"]>=0 ){echo "<orange>".$weather["lightningyear"]."</orange> 100 200 300 400 500 1k+ ";}
+echo " <smalltempunit2>Total [<deepblue>".date('Y')."</deepblue>]</smalltempunit2>";
 ?>
 </valuetextheadingindoor>
 <div class=sunratebar>
@@ -127,8 +127,8 @@ else if ($weather["lightningyear"]<=50000){echo $weather["lightningyear"]*0.18;}
 background:
 <?php 
 if ($weather["lightningyear"]>=1000 ){echo '#d35f50';}
-else if ($weather["lightningyear"]>=100 ){echo '#d87040';}
-else if ($weather["lightningyear"]>0 ){echo '#9bbc2f';}
+else if ($weather["lightningyear"]>=0 ){echo '#d87040';}
+
 ?>;">
 </div></div></div>
 
