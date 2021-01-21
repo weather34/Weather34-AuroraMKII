@@ -24,13 +24,13 @@ $aqiweather["voc"]=$array['results'][1]['Voc'];
 <div class="indoordesc5">VOC</div>
 <div class="button button-dial-small">      
 <div class="button-dial-top-small"></div>
-<div class="button-dial-label-small">   
+<div class="button-dial-label-small">    
 <?php //voc
-if($aqiweather["voc"] >=400){ echo "<red>".$aqiweather["voc"]."</red>";}
-else if($aqiweather["voc"] >=201){ echo "<orange>".$aqiweather["voc"]."</orange>";}
-else if($aqiweather["voc"] >=101){ echo "<yellow>".$aqiweather["voc"]."</yellow>";}
+if($aqiweather["voc"] >=5000){ echo "<red>".$aqiweather["voc"]."</red>";}
+else if($aqiweather["voc"] >=2000){ echo "<orange>".$aqiweather["voc"]."</orange>";}
+else if($aqiweather["voc"] >=1500){ echo "<yellow>".$aqiweather["voc"]."</yellow>";}
 else if($aqiweather["voc"] >0){ echo "<green>".$aqiweather["voc"]."</green>";}
-else { echo "<orange>N/A</orange>";}
+else if($aqiweather["voc"] ==''){echo "<orange>N/A</orange>";}
 echo "  <pm25>  </pm25>";?>
 
 
@@ -42,10 +42,15 @@ echo "<indoorpm2 style='margin-left:-3px'>VOC</indoorpm2>";?>
 <div class="indoortempa-mod2aqi" > 
 <valuetextheadingindoor>
 <?php // weather34 simple css indoor temp scale 
-if ($aqiweather["voc"]>=400 ){echo "0 50 100 200 <red>".number_format($aqiweather["voc"],1)."</red> ";}
-else if ($aqiweather["voc"]>=201 ){echo "0 50 100 <orange>".number_format($aqiweather["voc"],1)."</orange> ";}
-else if ($aqiweather["voc"]>=101){echo "0 50 <yellow>".number_format($aqiweather["voc"],1)."</yellow> 200 250 300+ ";}
-else if ($aqiweather["voc"]>0 ){echo "<green>".number_format($aqiweather["voc"],1)."</green> 90 ";}
+if ($aqiweather["voc"]>=5000 ){echo "0 1000 2000 3000 4000 <red>".round($aqiweather["voc"],1)."</red> ";}
+else if ($aqiweather["voc"]>=2000 ){echo "0 100 500 1000 1500 <orange>".round($aqiweather["voc"],1)."</orange> ";}
+else if ($aqiweather["voc"]>=1500){echo "0 100 500 1000 1200 <yellow>".round($aqiweather["voc"],1)."</yellow> ";}
+else if ($aqiweather["voc"]>1000 ){echo "0 200 500 700 800 <green>".round($aqiweather["voc"],0)."</green> ";}
+else if ($aqiweather["voc"]>500 ){echo "0 200 500 <green>".number_format($aqiweather["voc"],1)."</green> 1000 1500";}
+else if ($aqiweather["voc"]>300 ){echo "0 200 <green>".number_format($aqiweather["voc"],1)."</green> 500 1000 1500";}
+else if ($aqiweather["voc"]>200 ){echo "0 50 <green>".number_format($aqiweather["voc"],1)."</green> 200 300 400 ";}
+else if ($aqiweather["voc"]>100 ){echo "0 50 <green>".number_format($aqiweather["voc"],1)."</green> 200 300 400 ";}
+else if ($aqiweather["voc"]>0 ){echo "<green>".number_format($aqiweather["voc"],1)."</green> 100 200 300 400 ";}
 else echo "<orange>Not Avalaible</orange>";
 
 
@@ -54,12 +59,12 @@ else echo "<orange>Not Avalaible</orange>";
 <div class=sunratebar>
 <div class="weather34sunratebar" 
 style="width:
-<?php echo $aqiweather["voc"]*0.20;?>px;
+<?php echo $aqiweather["voc"]*0.090;?>px;
 background:
 <?php 
-if ($aqiweather["voc"] >=400 ){echo '#d35f50';}
-elseif ($aqiweather["voc"]>201){echo ' #d87040';}
-elseif ($aqiweather["voc"]>101){echo '#e6a241';}
+if ($aqiweather["voc"] >=5000 ){echo '#d35f50';}
+elseif ($aqiweather["voc"]>2000){echo ' #d87040';}
+elseif ($aqiweather["voc"]>1500){echo '#e6a241';}
 elseif ($aqiweather["voc"]>0 ){echo '#9bbc2f';}
 ?>;"> 
 </div></div></div>
@@ -68,10 +73,10 @@ elseif ($aqiweather["voc"]>0 ){echo '#9bbc2f';}
 <?php 
 //air description
 echo '';
-if ($aqiweather["voc"] >=500){echo "Unhealthy";}
-else if ($aqiweather["voc"] >=500){echo "Becoming Unhealthy";}
-else if ($aqiweather["voc"] >=101){echo "Moderate Risk";}
-else if ($aqiweather["voc"] >0){echo "Good No Risk";}
+if ($aqiweather["voc"] >=5000){echo "Warning Unhealthy ";}
+else if ($aqiweather["voc"] >=2000){echo "Unhealthy Situation";}
+else if ($aqiweather["voc"] >=1500){echo "Moderate Risk";}
+else if ($aqiweather["voc"] >0){echo "No Risk";}
 
 ?></div>
 <div class=aqiid-brand><a href='weather34-aqi-info.php' data-lity data-title="Purple Air VOC"><?php echo  $aqilinks?>&nbsp; Extra Info</a></div></div>

@@ -100,7 +100,7 @@ wuwindgust{margin-left:8px}
 .rainratebar,.sunratebar{display:-webkit-box;display:flex;width:7.5rem;overflow:hidden;background:#dee3f0;border-width:thin;font-family:weathertext2;border-radius:0;border-top-left-radius:2px;border-bottom-left-radius:2px;-webkit-border-top-left-radius:2px;-webkit-border-bottom-left-radius:2px;-moz-border-radius-topleft:2px;-moz-border-radius-bottomleft:2px}
 .rainratebar,.weather34ratebar{height:7px}
 .weather34ratebar{background-color:#009cad}
-.sunratebar,.weather34sunratebar{height:7px}
+.sunratebar,.weather34sunratebar{height:8px}
 smallrainrateunit{color:#222;font-family:headingtext;font-size:.45rem;vertical-align:text-top}
 .heatcircle,.heatcircle2,.heatcircle3,.heatcircle4,.heatcircle5,.heatcircledir,.heatcirclerain,.heatcirclerain1,.windgauge{position:absolute;width:120px;max-width:120px;float:left;padding:0;text-shadow:var(--text-shadow)}
 .heatcircle{margin-top:-95px;margin-left:55px}
