@@ -306,12 +306,14 @@ $windchillmmintime=date("jS ", strtotime($originalDatechill2));
 	$originalDate10 = $meteobridgeapi[99];
     $windymaxtime =  date('jS M', strtotime($originalDate10));   
 	$windymaxtime2 =  date('jS M', strtotime($originalDate10)); 	
-	$originalDate11 = $meteobridgeapi[33];
-    $winddmaxtime =  date('H:i', strtotime($originalDate11));		
+
+	$originalDate11 = $meteobridgeapi[31];
+	$winddmaxtime =  date('H:i', strtotime($originalDate11));			
 	$originalavgDate = $meteobridgeapi[31];
-    $windavgdmaxtime = date("H:i", strtotime($originalavgDate));	
+	$windavgdmaxtime = date("H:i", strtotime($originalavgDate));	
 	$originalDate8a = $meteobridgeapi[134];
-    $windamaxtime = date('jS M Y', strtotime($originalDate8a));	
+	$windamaxtime = date('jS M Y', strtotime($originalDate8a));	
+	
 	$weather["windamax"]		    = $meteobridgeapi[133]; //wind max yesterday
 	$weather["windamaxtime"]		= $windamaxtime; //seconds			
 	$weather["windavgdmaxtime"]		= $windavgdmaxtime; //seconds		
@@ -323,6 +325,7 @@ $windchillmmintime=date("jS ", strtotime($originalDatechill2));
 	$weather["windymax"]		    = $meteobridgeapi[98]; //wind max year
 	$weather["windymaxtime"]		= $windymaxtime; //seconds
 	$weather["windymaxtime2"]		= $windymaxtime2; //seconds
+
 	$weather["winddmax"]		    = $meteobridgeapi[32]; //wind max 
 	$weather["winddmaxtime"]		= $winddmaxtime ; //seconds
 	
