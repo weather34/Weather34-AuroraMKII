@@ -18,15 +18,15 @@ else if($weather["humidity_min"]>=40){ echo "<icon-6-10>".$weather["humidity_min
 else if($weather["humidity_min"]>=0){ echo "<icon-31-35>".$weather["humidity_min"]."</icon-31-35>";}
 echo "% ";echo $maxclock." ".$weather["humidity_mintime"];?></div>
 
-<div class="button button-dial">
-<div class="button-dial-top"></div>
+<div class="button button-dial" >
+<div class="button-dial-top" ></div>
 <realfeel>
 <?php  
 //humidity saturation
 if ($weather["humidity"]>=90){ echo "High Saturation ";echo $humidityhighalert;}else if ($weather["humidity"]>=70){echo "&nbsp; Saturation";}else if ($weather["humidity"]>=40){echo "Mild Saturation";}else if ($weather["humidity"]<40){echo "Low Saturation ";echo $humiditylowalert;}
 ?>
 </realfeel>
-<div class="button-dial-label">
+<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">
 <?php 
 if($weather["humidity"]>=70){ echo "<blue>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></blue>";}
 else if($weather["humidity"]>=60){ echo "<icon-11-15>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-11-15>";}

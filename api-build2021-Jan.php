@@ -27,8 +27,8 @@ mm
 [th0temp-dmaxtime:--] 
 [th0temp-dmin:--] 
 [th0temp-dmintime:--] 
-[wind0avgwind-dmax:--] 
-[wind0avgwind-dmaxtime:--] 
+[wind0wind-dmax:--] *not used 
+[wind0wind-dmaxtime:--] 
 [wind0wind-dmax:--] 
 [wind0wind-ydavg] 
 [thb0seapress-dmax:--] 

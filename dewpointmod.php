@@ -37,7 +37,7 @@ echo "&deg; ";echo $maxclock." ".$weather["dewmintime"];
 <div class="button button-dial">
 <div class="button-dial-top"></div>
 <realfeel>Dewpoint</realfeel>
-<div class="button-dial-label">           
+<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">      
 <?php //dewpoint display
 if(anytoC($weather["dewpoint"])<-10){ echo "<icon-minus10>".$weather["dewpoint"]."&deg;</icon-minus10 >";}
 else if(anytoC($weather["dewpoint"])<0){ echo "<icon-minus10>".$weather["dewpoint"]."&deg;</icon-minus10>";}
@@ -127,8 +127,7 @@ if($weather["temp_units"]=='C'){echo "<volumet>40C <br>35 <br>30 <br>25 <br>20 <
 if($weather["temp_units"]=='F'){echo "<volumet>104F <br>95 <br>86 <br>77 <br>68 <br>59 <br>50 <br>41</volumet>";}
   ?>
 <div id="weather34rainwater2" style="height:<?php //height 
-if ($cloudtempc<='0'){echo 0.05;}else echo $cloudtempc/9.5;?>
-em;opacity:0.7;background:
+if ($cloudtempc<='0'){echo 0.05;}else echo $cloudtempc/9.5;?>em;opacity:0.7;background:
 <?php // color
 if($weather["temp_units"]=='F'){
   if ($cloudtempf>=100 ){echo 'var(--purple)';}

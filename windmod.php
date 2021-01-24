@@ -10,8 +10,7 @@ echo $max1.' Average Today ';
 if($meteobridgeapi[158]>=13.88 ){echo "<red>" .number_format($weather['wind_speed_avgday'],$numberformat)."</red>&nbsp;<smalltempunit2> ".$windunit;}
 else if($meteobridgeapi[158]>=12.5 ){echo "<orange>" .number_format($weather['wind_speed_avgday'],$numberformat)."</orange>&nbsp;<smalltempunit2>".$windunit;}
 else if($meteobridgeapi[158]>=2.77 ){echo "<yellow>" .number_format($weather['wind_speed_avgday'],$numberformat)."</yellow>&nbsp;<smalltempunit2>".$windunit;}
-else if($meteobridgeapi[158]>=1.3 ){echo "<green>" .number_format($weather['wind_speed_avgday'],$numberformat)."</green>&nbsp;<smalltempunit2>".$windunit;}
-else if($meteobridgeapi[158]>=0 ){echo "<blue>" .number_format($weather['wind_speed_avgday'],$numberformat)."</blue>&nbsp;<smalltempunit2>".$windunit;}
+else if($meteobridgeapi[158]>=0 ){echo "<green>" .number_format($weather['wind_speed_avgday'],$numberformat)."</green>&nbsp;<smalltempunit2>".$windunit;}
 ?></div>
 
 <div class="maxbftgauge">
@@ -28,8 +27,7 @@ else if($weather["bft-daymax"]>=5){echo "<orange>".$weather['bft-daymax']."</ora
 else if($weather["bft-daymax"]>=4){echo "<yellow>".$weather['bft-daymax']."</yellow> &nbsp;";echo $beaufort4s;}
 else if($weather["bft-daymax"]>=3){echo "<yellow>".$weather['bft-daymax']."</yellow> &nbsp; ";echo $beaufort3s;}
 else if($weather["bft-daymax"]>=2){echo "<green>".$weather['bft-daymax']."</green> &nbsp;";echo $beaufort2s;}
-else if($weather["bft-daymax"]>=1){echo "<deepblue>".$weather['bft-daymax']."</deepblue> &nbsp;";echo $beaufort1s;}
-else if($weather["bft-daymax"]>=0){echo "<blue>".$weather['bft-daymax']."</blue> &nbsp;";echo $beaufort0s;}
+else if($weather["bft-daymax"]>=0){echo "<green>".$weather['bft-daymax']."</green> &nbsp;";echo $beaufort1s;}
 ?></div>
 
 
@@ -42,16 +40,16 @@ if($meteobridgeapi[40]>=16.66){echo "<icon-26-30>" .number_format($weather["wind
 else if($meteobridgeapi[40]>=12.5 ){echo "<icon-21-25>" .number_format($weather["wind_speed_max"],$formatdecimal)."</icon-21-25>&nbsp;";}
 else if($meteobridgeapi[40]>=2.77 ){echo "<icon-11-15>" .number_format($weather["wind_speed_max"],$formatdecimal)."</icon-11-15>&nbsp;";}
 else if($meteobridgeapi[40]>=1.3 ){echo "<icon-6-10>" .number_format($weather["wind_speed_max"],$formatdecimal)."</icon-6-10>&nbsp;";}
-else if($meteobridgeapi[40]>=0 ){echo "<icon-0-5>" .number_format($weather["wind_speed_max"],$formatdecimal)."</icon-0-5>&nbsp;";}     
+else if($meteobridgeapi[40]>=0 ){echo "<green>" .number_format($weather["wind_speed_max"],$formatdecimal)."</green>&nbsp;";}     
 ?>
 </realfeel>
-<div class="button-dial-label">          
+<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">      
 <?php 
 if($meteobridgeapi[17]>=16.66){ echo "<icon-31-35>".number_format($weather["wind_speed"],$numberformat)."</icon-31-35>";}   
 else if($meteobridgeapi[17]>=12.5){ echo "<icon-21-25>".number_format($weather["wind_speed"],$numberformat)."</icon-21-25>";}          
 else if($meteobridgeapi[17]>=2.77){ echo "<icon-11-15>".number_format($weather["wind_speed"],$numberformat)."</icon-11-15>";}     
 else if($meteobridgeapi[17]>=1.3){ echo "<icon-6-10>".number_format($weather["wind_speed"],$numberformat)."</icon-6-10>";}
-else if($meteobridgeapi[17]>=0){ echo "<icon-0-5>".number_format($weather["wind_speed"],$numberformat)."</icon-0-5>";}                     
+else if($meteobridgeapi[17]>=0){ echo "<green>".number_format($weather["wind_speed"],$numberformat)."</green>";}                     
 ?></div></div><div>
 
 <?php //unit
@@ -70,8 +68,7 @@ echo "<windindicator>Average</windindicator>";?>
 if ($weather['wind_speed_bft']>=7 ){echo 'var(--red)';}
 elseif ($weather['wind_speed_bft']>=5 ){echo 'var(--orange)';}
 elseif ($weather['wind_speed_bft']>=3 ){echo 'var(--yellow)';}
-elseif ($weather['wind_speed_bft']>=2 ){echo 'var(--green)';}
-elseif ($weather['wind_speed_bft']>=0 ){echo 'var(--blue)';}
+elseif ($weather['wind_speed_bft']>=0 ){echo 'var(--green)';}
 echo "'>";
 echo "<uvopacity>".number_format($weather['wind_speed_bft'],0)." <uvunits>BFT</uvunits></uvopacity></uvreadings";
 ?>  
@@ -88,8 +85,7 @@ echo "<uvopacity>".number_format($weather['wind_speed_bft'],0)." <uvunits>BFT</u
 if ($weather['wind_speed_bft']>=7 ){echo 'var(--red)';}
 elseif ($weather['wind_speed_bft']>=5 ){echo 'var(--orange)';}
 elseif ($weather['wind_speed_bft']>=3 ){echo 'var(--yellow)';}
-elseif ($weather['wind_speed_bft']>=2 ){echo 'var(--green)';}
-elseif ($weather['wind_speed_bft']>=0 ){echo 'var(--blue)';}?>">        
+elseif ($weather['wind_speed_bft']>=0 ){echo 'var(--green)';}?>">        
 </div></div></div></div></div></div>
 
 
@@ -107,7 +103,7 @@ else if ($meteobridgeapi[17]>=8.33){echo "0&nbsp;10&nbsp;20&nbsp;<icon-11-15>".$
 else if ($meteobridgeapi[17]>=5.5){echo "0&nbsp;10&nbsp;<icon-11-15>".$weather['wind_speed']."</icon-11-15>&nbsp;30&nbsp;40&nbsp;50&nbsp;60+&nbsp";}
 else if ($meteobridgeapi[17]>=2.77){echo "0&nbsp;<icon-11-15>".$weather['wind_speed']."</icon-11-15>&nbsp;20&nbsp;30&nbsp;40&nbsp;50&nbsp;60+&nbsp";}
 else if ($meteobridgeapi[17]>=1.3){echo " 0&nbsp;<icon-6-10>".$weather['wind_speed']."</icon-6-10>&nbsp;10&nbsp;20&nbsp;30&nbsp;40&nbsp;50&nbsp;60+";}
-else if ($meteobridgeapi[17]>=0){echo "<icon-0-5>".$weather['wind_speed']."</icon-0-5>&nbsp;5&nbsp;10&nbsp;20&nbsp;30&nbsp;40&nbsp;50&nbsp;60+";}}
+else if ($meteobridgeapi[17]>=0){echo "<green>".$weather['wind_speed']."</green>&nbsp;5&nbsp;10&nbsp;20&nbsp;30&nbsp;40&nbsp;50&nbsp;60+";}}
 //mph
 if ($weather["wind_units"]=="mph"){
 if ($meteobridgeapi[17]>=16.66){echo "0&nbsp;12&nbsp;18&nbsp;24&nbsp;27&nbsp;31&nbsp;37&nbsp;<icon-31-35>".$weather['wind_speed']."+</icon-31-35>&nbsp";}
@@ -118,7 +114,7 @@ else if ($meteobridgeapi[17]>=8.33){echo "0&nbsp;4&nbsp;6&nbsp;<icon-11-15>".$we
 else if ($meteobridgeapi[17]>=5.5){echo "0&nbsp;4&nbsp;<icon-11-15>".$weather['wind_speed']."</icon-11-15>&nbsp;18&nbsp;24&nbsp;27&nbsp;31&nbsp37+";}
 else if ($meteobridgeapi[17]>=2.77){echo "0&nbsp;<icon-11-15>".$weather['wind_speed']."</icon-11-15>&nbsp;15&nbsp;18&nbsp;24&nbsp;37&nbsp;31&nbsp37+";}
 else if ($meteobridgeapi[17]>=1.3){echo "0&nbsp;<icon-6-10>".$weather['wind_speed']."</icon-6-10>&nbsp;6&nbsp;12&nbsp;18&nbsp;24&nbsp;31&nbsp;37+&nbsp";}
-else if ($meteobridgeapi[17]>=0){echo "<icon-0-5>".$weather['wind_speed']."</icon-0-5>&nbsp;4&nbsp;6&nbsp;12&nbsp;18&nbsp;24&nbsp;31&nbsp;37+&nbsp";}
+else if ($meteobridgeapi[17]>=0){echo "<green>".$weather['wind_speed']."</green>&nbsp;4&nbsp;6&nbsp;12&nbsp;18&nbsp;24&nbsp;31&nbsp;37+&nbsp";}
 }
 //kts          
 if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=26.99){echo "0&nbsp;5&nbsp;12&nbsp;16&nbsp;20&nbsp;26&nbsp;32&nbsp;&nbsp;<red>".number_format($weather["wind_speed"],0)."</red>&nbsp&nbsp&nbsp";}
@@ -128,7 +124,7 @@ else if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=16.19){echo "0
 else if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=10.79){echo "0&nbsp;5&nbsp;12&nbsp;<yellow>".number_format($weather["wind_speed"],0)."</yellow>&nbsp;20&nbsp;26&nbsp;32&nbsp;50+&nbsp";}
 else if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=5.39){echo "0&nbsp;5&nbsp;<yellow>".number_format($weather["wind_speed"],0)."</yellow>&nbsp;16&nbsp;20&nbsp;26&nbsp;32&nbsp;50&nbsp";}
 else if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=2.69){echo "0&nbsp;<green>".number_format($weather["wind_speed"],0)."</green>&nbsp;12&nbsp;16&nbsp;20&nbsp;26&nbsp;32&nbsp;50+&nbsp";}
-else if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=0){echo "<blue>".number_format($weather["wind_speed"],0)."</blue>&nbsp;5&nbsp;12&nbsp;16&nbsp;20&nbsp;26&nbsp;32&nbsp;50+";}
+else if ($weather["wind_units"]=="kts" && $weather['wind_speed']>=0){echo "<green>".number_format($weather["wind_speed"],0)."</green>&nbsp;5&nbsp;12&nbsp;16&nbsp;20&nbsp;26&nbsp;32&nbsp;50+";}
 //ms
 if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=16.66){echo  "0&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;<red>".$weather['wind_speed']."</red>&nbsp;&nbsp;&nbsp;";}
 else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=13.88){echo  "0&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;<red>14</red>&nbsp;&nbsp;".$weather['wind_speed']."+&nbsp;&nbsp;&nbsp;";}
@@ -137,7 +133,7 @@ else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=8){echo  "0&nb
 else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=6){echo  "0&nbsp;&nbsp;2&nbsp;&nbsp;<yellow>".$weather['wind_speed']."</yellow>&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
 else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=2.77){echo  "0&nbsp;&nbsp;<yellow>".$weather['wind_speed']."</yellow>&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
 else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=1.38){echo  "<green>".$weather['wind_speed']."</green>&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
-else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=0){echo  "<blue>".$weather['wind_speed']."</blue>&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
+else if ($weather["wind_units"]=="m/s" && $weather['wind_speed']>=0){echo  "<green>".$weather['wind_speed']."</green>&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
 
 echo "<smalltempunit2>&nbsp;".$weather["wind_units"];?></smalltempunit2>
 </valuetextheading5>
@@ -148,8 +144,7 @@ background:<?php
 if ($meteobridgeapi[17]>=16.66 ){echo '#cc504c';}
 elseif ($meteobridgeapi[17]>=12.5 ){echo '#d87040';}
 elseif ($meteobridgeapi[17]>=2.77 ){echo '#e6a241';}
-elseif ($meteobridgeapi[17]>=1.3){echo '#9bbc2f';}
-elseif ($meteobridgeapi[17]>=0) {echo '#00adbd';}
+elseif ($meteobridgeapi[17]>=0){echo '#9bbc2f';}
 ?>;">
 </div></div></div>
 

@@ -71,7 +71,7 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["wind_gust_speed"]    = $meteobridgeapi[6];
 	$weather["wind_speed_bft"]     = $meteobridgeapi[12];
 	$weather["wind_speed_max"]     = $meteobridgeapi[40];	
-	$weather["wind_gust_speed_max"]= $meteobridgeapi[32];	
+	//$weather["wind_gust_speed_max"]= $meteobridgeapi[32];	
 	$weather["wind_units"]         = 'm/s'; // m/s or mph or km/h or kts
 	$weather["wind_speed_avg15"]   = $meteobridgeapi[72];
 	$weather["wind_speed_avg30"]   = $meteobridgeapi[73];
