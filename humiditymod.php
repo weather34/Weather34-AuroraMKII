@@ -131,14 +131,14 @@ else if ($weather["humidity"]>=40) {echo 60;}
 else if ($weather["humidity"]>=30) {echo 40;}
 else if ($weather["humidity"]>=20) {echo 25;}
 else if ($weather["humidity"]>=10) {echo 15;}
-else if ($weather["humidity"]>=0) {echo 5;}
+else if ($weather["humidity"]>=0) {echo 5;} 
 ?>px;
 background:
 <?php 
 if ($weather["humidity"]>=70 ){echo 'var(--temp0-5)';}
 else if ($weather["humidity"]>=60 ){echo 'var(--temp10-15)';}
 elseif ($weather["humidity"]>=40 ){echo 'var(--temp5-10)';}
-elseif ($weather["humidity"]>=0 ){echo 'var(--temp31-35)';}?>;">
+elseif ($weather["humidity"]>=0 ){echo 'var(--red)';}?>;">
 </div></div></div>
 
 <div class=extrainfo><a href='humidity-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
