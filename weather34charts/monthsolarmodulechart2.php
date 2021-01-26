@@ -1,7 +1,7 @@
 <?php
 	
 	####################################################################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
 	# https://weather34.com/homeweatherstation/index.html 											   # 
 	# 	                                                                                               #
 	# 	built on CanvasJs  	                                                                           #
@@ -100,7 +100,7 @@ return theWM;}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		toolTip:{
 			fontStyle: "normal",
@@ -111,17 +111,19 @@ return theWM;}
 			   fontSize: 11,	
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
-			   shared: true,
+			   shared: true, 
+			   fontFamily: "weathertext2",
+			   fontFamily: "weathertext2", 
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",
-		    labelFontSize: 7.5,
+		    labelFontSize: 8,
 			labelFontColor:' #888',
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			titleFontFamily: "arial",	
-			labelFontFamily: "arial",	
+			titleFontFamily: "weathertext2",	
+			labelFontFamily: "weathertext2",	
 			minimum:-0.5,	
 			interval:5,	
 			intervalType:"day",
@@ -148,8 +150,8 @@ return theWM;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",
+		
 		labelFormatter: function ( e ) {
             return e.value .toFixed(0) ;
          },	
@@ -167,7 +169,7 @@ return theWM;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
 	  margin: 0,
   

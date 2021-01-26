@@ -101,7 +101,7 @@ return thecolor;}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		toolTip:{
 			   fontStyle: "normal",
@@ -112,16 +112,17 @@ return thecolor;}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
+			   fontFamily: "weathertext2", 
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",
-		    labelFontSize: 7.5,
+		    labelFontSize: 8,
 			labelFontColor:' #888',
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			titleFontFamily: "arial",	
-			labelFontFamily: "arial",	
+			titleFontFamily: "weathertext2",	
+			labelFontFamily: "weathertext2",	
 			minimum:-0.5,	
 			interval:5,		
 			intervalType:"day",
@@ -148,8 +149,7 @@ return thecolor;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) + "°" ;  
          },	
@@ -167,7 +167,7 @@ return thecolor;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
 	  margin: 0,
   

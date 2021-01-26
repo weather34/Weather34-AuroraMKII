@@ -78,7 +78,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		dataPointWidth: 2,
 		toolTip:{
@@ -90,6 +90,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
+			   fontFamily: "weathertext2", 
  },
 
 		axisX: {
@@ -98,16 +99,16 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:' #888',
-			labelFontFamily: "Arial",
-			labelFontWeight: "bold",
-			labelFontSize:7.5,
+			labelFontFamily: "weathertext2",
+			
+			labelFontSize:8,
 			interval: 18,
    			intervalType:5,
 			minimum:-0.5,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				
-			labelFontSize:7,
+			labelFontSize:8,
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 		}
@@ -126,8 +127,8 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",		
+		labelFontFamily: "weathertext2",
+				
 		interval: "auto",
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) +" AQI";           },		 
@@ -144,7 +145,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
   
  },

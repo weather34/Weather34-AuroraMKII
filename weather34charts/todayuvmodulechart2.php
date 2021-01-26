@@ -1,14 +1,14 @@
 <?php
 	
 	####################################################################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
 	# https://weather34.com/homeweatherstation/index.html 											   # 
 	# 	                                                                                               #
 	# 	built on CanvasJs  	                                                                           #
 	#   canvasJs.js is protected by CREATIVE COMMONS LICENCE BY-NC 3.0  	                           #
 	# 	free for non commercial use and credit must be left in tact . 	                               #
 	# 	                                                                                               #
-	# 	Release: July 2019						  	                                                   #
+	# 	Release December 2020					  	                                                   #
 	# 	                                                                                               #
 	#   https://www.weather34.com 	                                                                   #
 	####################################################################################################
@@ -102,7 +102,7 @@ return theD;}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		dataPointWidth: 1,
 		toolTip:{
@@ -114,7 +114,8 @@ return theD;}
 			   fontSize: 11,	
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
-			   shared: true,
+			   shared: true, 
+			   fontFamily: "weathertext2",
  },
 
 		axisX: {
@@ -123,16 +124,16 @@ return theD;}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:' #888',
-			labelFontFamily: "Arial",
-			labelFontWeight: "bold",
-			labelFontSize:7.5,
+			labelFontFamily: "weathertext2",
+			
+			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
 			minimum:-0.5,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				
-			labelFontSize:7,
+			labelFontSize:8,
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 		}
@@ -151,8 +152,8 @@ return theD;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",		
+		labelFontFamily: "weathertext2",
+				
 		interval: 1,
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0);  
@@ -170,7 +171,7 @@ return theD;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
   
  },

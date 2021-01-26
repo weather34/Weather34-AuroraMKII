@@ -195,7 +195,7 @@ greencircle{background:var(--green)}
 .weather34windgridlines{display:none}
 .text3{font-family:weathertext3}
 .text2{position:absolute;top:37px;left:48px;font-size:1em;color:var(--dark);font-family:weathertext2;opacity:.8;text-shadow:var(--text-shadow)}
-.text2b{font-size:.7em;font-family:weathertext2}
+.text2b{font-size:21px;font-family:weathertext2}
 thetrend{display:block;margin-top:5px;font-size:.6em;color:var(--silver);font-family:weathertext2;text-shadow:none;text-shadow:var(--text-shadow)}
 .text2 span,.text3{z-index:999;color:var(--body-text-light);font-size:9px}
 steady{font-size:11px;text-shadow:none;color:var(--body-text-light)}

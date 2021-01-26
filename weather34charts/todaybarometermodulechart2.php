@@ -16,15 +16,12 @@
 	
 	include('preload.php');
 	$conv = 1;		
-	if ($tempunit == 'F') {$conv= 0.02953 ;}	
-	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}
 	$int = 5;	
-	if ($tempunit == 'F') {$int= 0.5;}		
 
-	if ($weather["barometer_units"] == 'inHg') {$pressureunit= 'inHg';}
-	else if ($weather["barometer_units"] == 'hPa') {$pressureunit= 'hPa';}
-	else if ($weather["barometer_units"] == 'mb') {$pressureunit='mb';}
-	if ($position8=='barometer-modmmHG.php') {$pressureunit= 'mmHG';}
+	if ($pressureunit=='inHg'){$conv= 0.02953; $int=0.5;}
+	else if ($pressureunit= 'hPa') {$conv=1; $int=5;}
+	else if ($pressureunit='mb') {$conv=1; $int=5;}
+	else if ($pressureunit= 'mmHG') {$conv=0.750062; $int=0.5;}
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -102,7 +99,7 @@ return thecolor;}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		toolTip:{
 			   fontStyle: "normal",
@@ -113,6 +110,7 @@ return thecolor;}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
+			   fontFamily: "weathertext2",
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",		    		
@@ -120,16 +118,15 @@ return thecolor;}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:' #888',
-			labelFontFamily: "Arial",
-			labelFontWeight: "bold",
-			labelFontSize:7.5,
+			labelFontFamily: "weathertext2",			
+			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
 			minimum:0,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				
-			labelFontSize:7,
+			labelFontSize:8,
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 			
@@ -147,8 +144,8 @@ return thecolor;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",
+		
 		labelFormatter: function ( e ) {
 			return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '1';} else echo '0';?>) ;
          },		 
@@ -165,7 +162,7 @@ return thecolor;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
 	  margin: 0,
   

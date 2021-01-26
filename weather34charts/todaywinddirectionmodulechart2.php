@@ -23,7 +23,7 @@
 		<script src=../js/jquery.js></script>
 		
 	';
-	
+	date_default_timezone_set($TZ);
 	$date= date('D jS Y');$weatherfile =date('Y')."/".date('jMY');?>
     <br>
     	<script type="text/javascript">
@@ -113,7 +113,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
             text: " ",
 			fontSize: 0,
 			fontColor:' #555',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		toolTip:{
 			fontStyle: "normal",
@@ -125,6 +125,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
+			   fontFamily: "weathertext2", 
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",		    		
@@ -132,16 +133,16 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:' #888',
-			labelFontFamily: "Arial",
-			labelFontWeight: "bold",
-			labelFontSize:7.5,
+			labelFontFamily: "weathertext2",
+			
+			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
 			minimum:0,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				
-			labelFontSize:7,
+			labelFontSize:8,
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 		}			
@@ -162,8 +163,8 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 9,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",				
+		labelFontFamily: "weathertext2",
+						
 		interval: 45,
   	labelFormatter: function ( e ) {
       var yCats = yLabels[yLabelCounter++];
@@ -186,7 +187,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
   
  },

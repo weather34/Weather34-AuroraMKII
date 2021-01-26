@@ -1903,7 +1903,6 @@ Font Size for Temperature/Dewpoint/Humidity/Wind Modules</div>
 <option>26</option>
 <option>28</option>
 <option>30</option>
-<option>32</option>
 </select>
 <br>
 

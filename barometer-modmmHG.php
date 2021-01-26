@@ -30,8 +30,8 @@ echo "<deepblue>".$weather["barometer_min"]."</deepblue> ";echo $maxclock." ".$w
 <div class="button button-dial">               
  <div class="button-dial-top"></div>
 <realfeel>Actual Pressure</realfeel>
-<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">    
-<?php // indicator color
+<div class="button-dial-label">    
+<?php // actual barometer value
 echo '<div class="text2b">'.$weather["barometer"].'</div>';
 ?>
 </div></div><div>

@@ -105,7 +105,7 @@ return thecolor;}
             text: "From 00:00 - <?php echo date('H:i')?>",
 			fontSize: 0,
 			fontColor:' #777',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
 			margin: -25,
         },
 		zoomEnabled: false,		
@@ -118,6 +118,7 @@ return thecolor;}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
+			   fontFamily: "weathertext2",
  },
  axisX: {
 	gridColor: "rgba(82, 92, 97, 0.39)",		    		
@@ -125,16 +126,15 @@ return thecolor;}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:' #888',
-			labelFontFamily: "Arial",
-			labelFontWeight: "bold",
-			labelFontSize:7.5,
+			labelFontFamily: "weathertext2",			
+			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
 			minimum:-0.5,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				
-			labelFontSize:7,
+			labelFontSize:8,
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 			
@@ -152,8 +152,8 @@ return thecolor;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",
+		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) + "°" ;  
          },	
@@ -170,7 +170,7 @@ return thecolor;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
 	  margin: 0,
   

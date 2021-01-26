@@ -1,7 +1,7 @@
 <?php
 	
 	####################################################################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
 	# https://weather34.com/homeweatherstation/index.html 											   # 
 	# 	                                                                                               #
 	# 	built on CanvasJs  	                                                                           #
@@ -103,7 +103,7 @@ return theD;}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		toolTip:{
 			fontStyle: "normal",
@@ -114,7 +114,9 @@ return theD;}
 			   fontSize: 11,	
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
-			   shared: true,
+			   shared: true, 
+			   fontFamily: "weathertext2",
+			   fontFamily: "weathertext2", 
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",
@@ -123,8 +125,8 @@ return theD;}
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			titleFontFamily: "arial",	
-			labelFontFamily: "arial",	
+			titleFontFamily: "weathertext2",	
+			labelFontFamily: "weathertext2",	
 			minimum:-0.5,	
 			interval:5,	
 			intervalType:"day",
@@ -151,8 +153,7 @@ return theD;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",		
 		labelFormatter: function ( e ) {
             return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '0';} else echo '0';?>) ;
          },	
@@ -166,11 +167,12 @@ return theD;}
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 			valueFormatString: "#",
+			
 		}	 
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
 	  margin: 0,
   

@@ -192,7 +192,7 @@ greencircle{background:var(--green)}
 .windirectiontext1 span{color:var(--blue)}
 .text3{font-family:weathertext3}
 .text2{position:absolute;top:40px;left:47px;font-size:1em;font-family:weathertext2}
-.text2b{font-size:.7em;font-family:weathertext2}
+.text2b{font-size:21px;font-family:weathertext2}
 thetrend{display:block;margin-top:5px;left:0;font-size:.65em;color:var(--light);font-family:weathertext2}
 .text2 span,.text3{color:var(--body-text-dark);font-size:10px}
 .thearrow4{z-index:200;position:absolute;top:0;left:43%;width:10px;height:50%;margin-left:-6px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}

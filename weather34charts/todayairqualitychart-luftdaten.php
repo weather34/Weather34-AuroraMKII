@@ -3,7 +3,7 @@
 	include('preload.php');
 
 	    ####################################################################################################
-    #	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+    #	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
     # https://weather34.com/homeweatherstation/index.html 											   #
     # 	                                                                                               #
     # 	Revised: October 2020					  	                                                   #
@@ -86,7 +86,7 @@ return AQIlevel;}
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		dataPointWidth: 2,
 		toolTip:{
@@ -98,6 +98,7 @@ return AQIlevel;}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
+			   fontFamily: "weathertext2",
  },
 
 		axisX: {
@@ -106,16 +107,15 @@ return AQIlevel;}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:' #888',
-			labelFontFamily: "Arial",
-			labelFontWeight: "bold",
-			labelFontSize:7.5,
+			labelFontFamily: "weathertext2",			
+			labelFontSize:8,
 			interval: 18,
    			intervalType:5,
 			minimum:-0.5,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				
-			labelFontSize:7,
+			labelFontSize:8,
 			labelBackgroundColor: "#44a6b5",
 			labelMaxWidth: 60,
 		}
@@ -134,8 +134,8 @@ return AQIlevel;}
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
 		labelFontColor:' #888',
-		labelFontFamily: "Arial",
-		labelFontWeight: "bold",		
+		labelFontFamily: "weathertext2",
+				
 		interval: "auto",
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) +" AQI";           },		 
@@ -152,7 +152,7 @@ return AQIlevel;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
   
  },

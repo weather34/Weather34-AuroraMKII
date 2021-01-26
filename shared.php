@@ -67,7 +67,7 @@ function fToCrel(&$weather, $field){if(!isset($weather[$field])) return;$weather
 function fToCDirect($field){return round((float)(0.55555556*($field - 32)), 1);}
 function cToFDirect($field){return  number_format((float)$field*1.8 +32,1);}
 // Pressure
-function mbToin(&$weather, $field){if(!isset($weather[$field])) return;	$weather[$field] = round((float)(0.02952999*$weather[$field]), 2);}
+function mbToin(&$weather, $field){if(!isset($weather[$field])) return;	$weather[$field] = round((float)(0.02952999*$weather[$field]), 3);}
 function inTomb(&$weather, $field){	if(!isset($weather[$field])) return;$weather[$field] = round((float)(33.86388158*$weather[$field]), 2);}
 // Depth
 function mmToin(&$weather, $field){if(!isset($weather[$field])) return;$weather[$field] = number_format(0.03937008*$weather[$field], 2);}
