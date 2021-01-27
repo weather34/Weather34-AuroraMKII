@@ -51,10 +51,10 @@ echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrai
 else if ($seconds_ago >= 7200) { echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
 else if ($seconds_ago >= 3600) {
   echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
-else if ($seconds_ago > 60) {
+  else if ($seconds_ago <=119) { 
+  echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minute Ago'; }
+else if ($seconds_ago >119) {
   echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minutes Ago'; }
-else if ($seconds_ago <= 60) { 
-  echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Minute Ago'; }
 ?>
 </div>
 

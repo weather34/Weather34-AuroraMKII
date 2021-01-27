@@ -376,7 +376,7 @@ blue{color:#00adbd }
 
                                 </p>
 
-                                <div class="stationvalue">Add Your Path to data file (mbridge/MBrealtimeupload.txt)</div>
+                                <div class="stationvalue">Add Your Path to data file ( <em>mbridge/MBrealtimeupload.txt</em>)</div>
                                 <svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="silver" stroke="silver" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
                                     <path d="M30 12 L16 24 2 12" /></svg><br>
 
@@ -386,21 +386,26 @@ blue{color:#00adbd }
 
                                 <strong><svg id="i-info" viewBox="0 0 32 32" width="10" height="10" fill="rgba(7, 114, 125, 1.000)" stroke="rgba(7, 114, 125, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.25%">
                                         <path d="M16 14 L16 23 M16 8 L16 10" />
-                                        <circle cx="16" cy="16" r="14" /></svg></strong><span style="color:silver;"> METEOBRIDGE-API path use the default : mbridge/MBrealtimeupload.txt</span><br>
+                                        <circle cx="16" cy="16" r="14" /></svg></strong><span style="color:silver;"> METEOBRIDGE-API path use the default :  <em>mbridge/MBrealtimeupload.txt</em></span><br>
 
                                 <br>
 
-                                <strong><svg id="i-info" viewBox="0 0 32 32" width="10" height="10" fill="rgba(7, 114, 125, 1.000)" stroke="rgba(7, 114, 125, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.25%">
-                                        <path d="M16 14 L16 23 M16 8 L16 10" />
-                                        <circle cx="16" cy="16" r="14" /></svg></strong><span style="color:silver;"> METEOBRIDGE path example if your wanting to use another upload 
-                                        path: http://yourdomain/somewhere/mbridge/MBrealtime.txt</span><br>
-
-                                <br>
+                               
                                 <span style="color:silver">
                                     <strong> <svg id="i-info" viewBox="0 0 32 32" width="10" height="10" fill="#FF793A" stroke="#FF793A" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.25%">
                                             <path d="M16 14 L16 23 M16 8 L16 10" />
-                                            <circle cx="16" cy="16" r="14" /></svg> getting the path correct is essential for live realtime data display <br>
-                                            (mbridge/MBrealtimeupload.txt works 99% if you stick to the default template layout)</strong></span>
+                                            <circle cx="16" cy="16" r="14" /></svg></strong> getting the path correct is essential for live realtime data display <br>
+                                            the simple approach using  <em>mbridge/MBrealtimeupload.txt</em> works 99% if you stick to the default template layout</strong></span>
+
+                                            <br>
+
+                               
+<span style="color:silver">
+    <strong> <svg id="i-info" viewBox="0 0 32 32" width="10" height="10" fill="#FF793A" stroke="#FF793A" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.25%">
+            <path d="M16 14 L16 23 M16 8 L16 10" />
+            <circle cx="16" cy="16" r="14" /></svg></strong> do not use direct url paths example https://www.something.com/xxxx/  always use the simple approach
+            <em>mbridge/MBrealtimeupload.txt</em>  <br>
+            (this will also fix the display updated 51 years ago)</strong></span>
                                 <p>
 
 
