@@ -18,10 +18,16 @@
 	$conv = 1;		
 	$int = 5;	
 
-	if ($pressureunit=='inHg'){$conv= 0.02953; $int=0.5;}
-	else if ($pressureunit= 'hPa') {$conv=1; $int=5;}
-	else if ($pressureunit='mb') {$conv=1; $int=5;}
-	else if ($pressureunit= 'mmHG') {$conv=0.750062; $int=0.5;}
+	$conv = 1;		
+	if ($tempunit == 'F') {$conv= 0.02953 ;}	
+	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}
+	$int = 5;	
+	if ($tempunit == 'F') {$int= 1;}		
+
+	if ($weather["barometer_units"] == 'inHg') {$pressureunit= 'inHg';}
+	else if ($weather["barometer_units"] == 'hPa') {$pressureunit= 'hPa';}
+	else if ($weather["barometer_units"] == 'mb') {$pressureunit='mb';}
+	if ($position8=='barometer-modmmHG.php') {$pressureunit= 'mmHG';}
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
