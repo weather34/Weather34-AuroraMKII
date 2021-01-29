@@ -141,7 +141,7 @@ if ($notifications=='yes') {
 if(file_exists($livedata)&&time()- filemtime($livedata)>300){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Weather Station </weather34-alertmessage> <br>
   <weather34-alertvalue><red>Offline</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -186,7 +186,7 @@ else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquali
       else if ($weather["temp_units"]=='C' && $weather["temp_trend"]>5 ){echo "
         <div class='weather34alert' id='weather34message'> 
         <div class='weather34-notification'> 
-        <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+        <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
         <weather34-alertmessage>Temp Rising Rapidly <icon-26-30>".$weather34_temp_icon."</icon-26-30></weather34-alertmessage> <br>
         <weather34-alertvalue>+<red>".$weather['temp_trend']."</red><weather34-alertunit>&deg; Last 15 Minutes</weather34-alertunit>
         </weather34-alertvalue></div></div>";}
@@ -195,7 +195,7 @@ else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquali
       else if ($weather["temp_units"]=='F' && $weather["temp_trend"]>5 ){echo "
         <div class='weather34alert' id='weather34message'> 
         <div class='weather34-notification'> 
-        <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+        <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
         <weather34-alertmessage>Temp Rising Rapidly <icon-26-30>".$weather34_temp_icon."</icon-26-30></weather34-alertmessage> <br>
         <weather34-alertvalue>+<red>".$weather['temp_trend']."</red><weather34-alertunit>&deg; Last 15 Minutes</weather34-alertunit>
         </weather34-alertvalue></div></div>";}
@@ -205,7 +205,7 @@ else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquali
       else if ($weather["temp_units"]=='C' && $weather["temp_trend"]<-5 ){echo "
         <div class='weather34alert' id='weather34message'> 
         <div class='weather34-notification'> 
-        <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+        <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
         <weather34-alertmessage>Temp Falling Rapidly <icon-zero>".$weather34_temp_icon."</icon-zero></weather34-alertmessage> <br>
         <weather34-alertvalue>+<red>".$weather['temp_trend']."</red><weather34-alertunit>&deg;Last 15 Minutes</weather34-alertunit>
         </weather34-alertvalue></div></div>";}
@@ -214,7 +214,7 @@ else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquali
       else if ($weather["temp_units"]=='F' && $weather["temp_trend"]<=-5 ){echo "
         <div class='weather34alert' id='weather34message'> 
         <div class='weather34-notification'> 
-        <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+        <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
         <weather34-alertmessage>Temp Falling Rapidly <icon-zero>".$weather34_temp_icon."</icon-zero></weather34-alertmessage> <br>
         <weather34-alertvalue>+<red>".$weather['temp_trend']."</red><weather34-alertunit>&deg;Last 15 Minutes</weather34-alertunit>
         </weather34-alertvalue></div></div>";}    
@@ -223,7 +223,7 @@ else if ($davisairquality=='yes' && number_format(pm25_to_aqi($weather["airquali
 else if ($weather["temp_units"]=='C' &&  $weather["rain"]>0 && $weather["temp"]<2){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Caution $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>Sleet/Snowfall</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -232,7 +232,7 @@ else if ($weather["temp_units"]=='C' &&  $weather["rain"]>0 && $weather["temp"]<
 else if ($weather["temp_units"]=='F' &&  $weather["rain"]>0 && $weather["temp"]<35){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Caution $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>Sleet/Snowfall</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -241,7 +241,7 @@ else if ($weather["temp_units"]=='F' &&  $weather["rain"]>0 && $weather["temp"]<
 else if ($weather["temp_units"]=='C' && $weather["windchill"]<=0 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Wind Chill Caution $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather['windchill']."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -250,7 +250,7 @@ else if ($weather["temp_units"]=='C' && $weather["windchill"]<=0 ){echo "
   else if ($weather["temp_units"]=='F' && $weather["windchill"]<=32 ){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Windchill Caution $snowflakesvg</weather34-alertmessage> <br>
     <weather34-alertvalue><blue>".$weather['windchill']."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
     </weather34-alertvalue></div></div>";}
@@ -260,7 +260,7 @@ else if ($weather["temp_units"]=='C' && $weather["windchill"]<=0 ){echo "
   else if ($weather["temp_units"]=='C' && $weather["barometer_trend"]<=-1.2 ){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Pressure Falling</weather34-alertmessage> <br>
     <weather34-alertvalue><blue> Rapidly </weather34-alertunit>
     </weather34-alertvalue></div></div>";}
@@ -269,7 +269,7 @@ else if ($weather["temp_units"]=='C' && $weather["windchill"]<=0 ){echo "
 else if ($weather["temp_units"]=='F' && $weather["barometer_trend"]<=-0.04 ){echo  "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Pressure Falling</weather34-alertmessage> <br>
   <weather34-alertvalue><blue> Rapidly </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -278,7 +278,7 @@ else if ($weather["temp_units"]=='F' && $weather["barometer_trend"]<=-0.04 ){ech
 else if ($weather["temp_units"]=='C' && $weather["dewpoint"]<=0 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Dewpoint Freezing $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather['dewpoint']."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -287,7 +287,7 @@ else if ($weather["temp_units"]=='C' && $weather["dewpoint"]<=0 ){echo "
 else if ($weather["temp_units"]=='F' && $weather["dewpoint"]<=32 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Dewpoint Freezing $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather['dewpoint']."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -296,7 +296,7 @@ else if ($weather["temp_units"]=='F' && $weather["dewpoint"]<=32 ){echo "
   else if ($weather["temp_units"]=='C' && $weather["realfeel"]<0){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Feels Cold $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather["realfeel"]."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -305,7 +305,7 @@ else if ($weather["temp_units"]=='F' && $weather["dewpoint"]<=32 ){echo "
 else if ($weather["temp_units"]=='F' && $weather["realfeel"]<=32 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Feels Cold $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather["realfeel"]."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -314,7 +314,7 @@ else if ($weather["temp_units"]=='F' && $weather["realfeel"]<=32 ){echo "
 else if ($weather["temp_units"]=='C' && $weather["heat_index"]>=30 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Heat Index Caution $heatindexwu2</weather34-alertmessage> <br>
   <weather34-alertvalue><red>".$weather['heat_index']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}  
@@ -323,7 +323,7 @@ else if ($weather["temp_units"]=='C' && $weather["heat_index"]>=30 ){echo "
   else if ($weather["temp_units"]=='F' && $weather["heat_index"]>=92 ){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Heat Index Caution $heatindexwu2</weather34-alertmessage> <br>
     <weather34-alertvalue><red>".$weather['heat_index']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
     </weather34-alertvalue></div></div>";}
@@ -332,7 +332,7 @@ else if ($weather["temp_units"]=='C' && $weather["heat_index"]>=30 ){echo "
 else if ($weather["temp_units"]=='C' && $weather["dewpoint"]<=3 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Dewpoint Feeling Colder $snowflakesvg</weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather['dewpoint']."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";} 
@@ -341,7 +341,7 @@ else if ($weather["temp_units"]=='C' && $weather["dewpoint"]<=3 ){echo "
 else if ($weather["temp_units"]=='F' && $weather["dewpoint"]<=33.8 ){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Dewpoint Cold $snowflakesvg</weather34-alertmessage> <br>
     <weather34-alertvalue><blue>".$weather['dewpoint']."</blue><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
     </weather34-alertvalue></div></div>";}  
@@ -350,7 +350,7 @@ else if ($weather["temp_units"]=='F' && $weather["dewpoint"]<=33.8 ){echo "
 else if ($weather["rain_units"]=='mm' && $weather["rain_rate"]>=20){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Heavy Rainfall <img rel='prefetch' src='console/forecasticons/rainvp.svg' width='20px' height='20px'></weather34-alertmessage> <br>
   <weather34-alertvalue><blue>".$weather["rain_rate"]."</blue><weather34-alertunit>mm per h/r</weather34-alertunit>
   </weather34-alertvalue></div></div>";} 
@@ -359,7 +359,7 @@ else if ($weather["rain_units"]=='mm' && $weather["rain_rate"]>=20){echo "
 else if ($weather["rain_units"]=='in' && $weather["rain_rate"]>=0.7){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Heavy Rainfall <img rel='prefetch' src='console/forecasticons/rainvp.svg' width='20px' height='20px'></weather34-alertmessage> <br>
     <weather34-alertvalue><blue>".$weather["rain_rate"]."</blue><weather34-alertunit>mm per h/r</weather34-alertunit>
     </weather34-alertvalue></div></div>";}  
@@ -370,7 +370,7 @@ else if ($weather["rain_units"]=='in' && $weather["rain_rate"]>=0.7){echo "
 else if ($weather["temp_units"]=='C' && $weather["temp"]>=32 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Temperature High $heatindexwu2</weather34-alertmessage> <br>
   <weather34-alertvalue><red>".$weather['temp']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -379,7 +379,7 @@ else if ($weather["temp_units"]=='C' && $weather["temp"]>=32 ){echo "
 else if ($weather["temp_units"]=='F' && $weather["temp"]>=89.6 ){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Temperature High $heatindexwu2</weather34-alertmessage> <br>
   <weather34-alertvalue><red>".$weather['temp']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -389,7 +389,7 @@ else if ($weather["temp_units"]=='F' && $weather["temp"]>=89.6 ){echo "
 else if ($weather["wind_units"]=='km/h' && $weather["wind_speed_max"]>60){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Caution Strong Gusts <blue>$weather34_wind_icon</blue></weather34-alertmessage> <br>
   <weather34-alertvalue><red>".$weather['wind_speed_max']."</red><weather34-alertunit>".$weather['wind_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -398,7 +398,7 @@ else if ($weather["wind_units"]=='km/h' && $weather["wind_speed_max"]>60){echo "
   else if ($weather["wind_units"]=='km/h' && $weather["wind_speed_max"]>45){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Caution Gusty Winds <blue>$weather34_wind_icon</blue></weather34-alertmessage> <br>
     <weather34-alertvalue><icon-21-25>".$weather['wind_speed_max']."</icon-21-25><weather34-alertunit>".$weather['wind_units']."</weather34-alertunit>
     </weather34-alertvalue></div></div>";}
@@ -407,7 +407,7 @@ else if ($weather["wind_units"]=='km/h' && $weather["wind_speed_max"]>60){echo "
 else if ($weather["wind_units"]=='mph' && $weather["wind_speed_max"]>37){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Caution Strong Gusts  <blue>$weather34_wind_icon</blue></weather34-alertmessage> <br>
   <weather34-alertvalue><red>".$weather['wind_speed_max']."</red><weather34-alertunit>".$weather['wind_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -416,7 +416,7 @@ else if ($weather["wind_units"]=='mph' && $weather["wind_speed_max"]>37){echo "
   else if ($weather["wind_units"]=='mph' && $weather["wind_speed_max"]>27.9){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Caution Gusty Winds <blue>$weather34_wind_icon</blue></weather34-alertmessage> <br>
     <weather34-alertvalue><icon-21-25>".$weather['wind_speed_max']."</icon-21-25><weather34-alertunit>".$weather['wind_units']."</weather34-alertunit>
     </weather34-alertvalue></div></div>";}
@@ -427,7 +427,7 @@ else if ($weather["wind_units"]=='mph' && $weather["wind_speed_max"]>37){echo "
 else if ($weather["temp_units"]=='C' && $weather["dewpoint"]>=20 && $weather["dewpoint_trend"]>0){echo "
   <div class='weather34alert' id='weather34message'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+  <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <weather34-alertmessage>Dewpoint Caution $heatindexwu2</weather34-alertmessage> <br>
   <weather34-alertvalue><red>".$weather['dewpoint']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
@@ -436,7 +436,7 @@ else if ($weather["temp_units"]=='C' && $weather["dewpoint"]>=20 && $weather["de
 else if ($weather["temp_units"]=='C' && $weather["dewpoint"]>=68 && $weather["dewpoint_trend"]>0){echo "
     <div class='weather34alert' id='weather34message'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2>Alert $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <weather34-alertmessage>Dewpoint High $heatindexwu2</weather34-alertmessage> <br>
     <weather34-alertvalue><red>".$weather['dewpoint']."</red><weather34-alertunit>&deg;".$weather['temp_units']."</weather34-alertunit>
     </weather34-alertvalue></div></div>";}
