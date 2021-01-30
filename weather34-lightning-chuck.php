@@ -1,6 +1,6 @@
 <?php 
 //weather34 optional weatherflow addition lightning when used with an extra meteobridge 
-include('console-settings.php');include('common.php');error_reporting(0);
+include('livedata.php');error_reporting(0);
 $strike='<svg width="10pt" height="10pt"  fill="#d87040" viewBox="0 0 1024 1024" version="weather34 strike icon">
 <path d="M718.933333 106.666667L469.333333 362.666667l320 106.666666-334.933333 313.6 108.8 59.733334L256 917.333333l57.6-315.733333 61.866667 
 108.8L576 512l-320-106.666667L533.333333 106.666667h185.6z" fill="#d87040" />
@@ -16,18 +16,6 @@ $info='<svg  viewBox="0 0 32 32" width=7 height=7 fill=none stroke=currentColor 
 <path d="M16 14 L16 23 M16 8 L16 10" /><circle cx=16 cy=16 r=14 /></svg> ';
 $lightningalert8='<svg width="8" height="8" fill="#ff552e" viewBox="0 0 20 20"><path d="M19.64 16.36L11.53 2.3A1.85 1.85 0 0 0 10 1.21 1.85 1.85 0 0 0 8.48 2.3L.36 16.36C-.48 17.81.21 19 1.88 19h16.24c1.67 0 2.36-1.19 1.52-2.64zM11 16H9v-2h2zm0-4H9V6h2z"/></svg>';
 
-
-$file_live2=file_get_contents('mbridge2/MBrealtimeupload.txt');
-    $weather34lightning=explode(" ", $file_live2);    
-    //weather34 sensor lightning
-    $weather["lightning"]          = $weather34lightning[76];
-    $weather["lightningkm"]        = $weather34lightning[75];
-    $weather["lightningmi"]        = $weather34lightning[75];
-	$weather["lightningmax"]       = $weather34lightning[77];
-	$weather["lightningmaxdist"]   = $weather34lightning[75];
-	$weather["lightningtimeago"]   = $weather34lightning[76];
-	$weather["lightningmonth"]     = $weather34lightning[78];
-	$weather["lightningyear"]      = $weather34lightning[79];
 ?>
  
  <?php //weather34 timeago lightning
@@ -139,18 +127,23 @@ if ($weather["lightningyear"]>=2000 ){echo '#d35f50';}
 else if ($weather["lightningyear"]>=0 ){echo '#d87040';}
 ?>;">
 </div></div></div>
+
+
 <div class="thelaststrike">
+<a href="lightning-almanac2.php" data-lity data-title="Lightning Almanac">
 <?php  //weatherflow weather34 air lightning output
-if ($lightningseconds <61 ){ echo $lightningalert8." <orange>Just Now</orange>";}
-else if ($lightningseconds >=61 ){echo $info;
-echo convert($lightningseconds);}?></div>
+if ($lightningseconds <120 ){ echo $lightningalert8." <orange>Just Now</orange>";}
+else if ($lightningseconds >=61 ){echo "&nbsp;".$info;
+echo convert($lightningseconds);}?></a></div>
+
+
 
 <?php
-//lightning
+//lightning notifications
 if($distanceunit=='km' && $weather["lightningtimeago"]>1 && $weather["lightningtimeago"]<=60){echo "
   <div class='weather34alert' id='weather34message2'> 
   <div class='weather34-notification'> 
-  <weather34-alertheader><h2 style='margin-bottom:0px;'>Alert $warmalertnotif</h2> 
+  <weather34-alertheader><h2 style='margin-bottom:0px;text-transform:capitalize'>Awareness $warmalertnotif</h2> 
   <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
   <center><weather34-alertmessage>Lightning  $strike</weather34-alertmessage>  
   <weather34-alertvalue><red>".number_format($weather["lightningkm"],0)."</red><weather34-alertunit>km</weather34-alertunit>
@@ -159,7 +152,7 @@ if($distanceunit=='km' && $weather["lightningtimeago"]>1 && $weather["lightningt
   else if($distanceunit=='mi' && $weather["lightningtimeago"]>1 && $weather["lightningtimeago"]<=60){echo "
     <div class='weather34alert' id='weather34message2'> 
     <div class='weather34-notification'> 
-    <weather34-alertheader><h2 style='margin-bottom:0px;'>Alert $warmalertnotif</h2> 
+    <weather34-alertheader><h2 style='margin-bottom:0px;text-transform:capitalize'>Awareness $warmalertnotif</h2> 
     <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
     <center><weather34-alertmessage>Lightning  $strike</weather34-alertmessage> 
     <weather34-alertvalue><red>".number_format($weather["lightningkm"]*0.621371,0)."</red><weather34-alertunit>mi</weather34-alertunit>
@@ -169,7 +162,7 @@ if($distanceunit=='km' && $weather["lightningtimeago"]>1 && $weather["lightningt
   else if($distanceunit=='km' && $weather["lightningtimeago"]>1 && $weather["lightningtimeago"]<=580){echo "
         <div class='weather34alert' id='weather34message2'> 
         <div class='weather34-notification'> 
-        <weather34-alertheader><h2 style='margin-bottom:0px;'>Alert $warmalertnotif</h2> 
+        <weather34-alertheader><h2 style='margin-bottom:0px;text-transform:capitalize'>Awareness $warmalertnotif</h2> 
         <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
         <center><weather34-alertmessage>Lightning  $strike<orange>". number_format($weather["lightningkm"],0)." km </orange></weather34-alertmessage> 
        <weather34-alertvalue><red>".gmdate("i",$weather["lightningtimeago"])."</red>
@@ -181,7 +174,7 @@ if($distanceunit=='km' && $weather["lightningtimeago"]>1 && $weather["lightningt
   else if($distanceunit=='mi' && $weather["lightningtimeago"]>1 && $weather["lightningtimeago"]<=580){echo "
         <div class='weather34alert' id='weather34message2'> 
         <div class='weather34-notification'> 
-        <weather34-alertheader><h2 style='margin-bottom:0px;'>Alert $warmalertnotif</h2> 
+        <weather34-alertheader><h2 style='margin-bottom:0px;text-transform:capitalize'>Awareness $warmalertnotif</h2> 
         <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader> 
         <center><weather34-alertmessage>Lightning  $strike<orange>". number_format($weather["lightningkm"]*0.621371,0)." mi </orange></weather34-alertmessage> 
         <weather34-alertvalue><red>".gmdate("i",$weather["lightningtimeago"])."</red><weather34-alertunit style='text-transform:none;margin-left:3px;'>Minutes Ago</weather34-alertunit>

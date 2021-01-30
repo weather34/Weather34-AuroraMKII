@@ -15,10 +15,10 @@ $aqiweather["aqindex"]      = number_format(pm25_to_aqi($weather["airquality-dav
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);ini_set("display_errors","off");
 //path is weather34charts/year/day.csv (eg: weathercharts/2019/24Jun2019.csv )
 $weatherchartfile = "weather34charts/".date('Y')."/".date('jMY').".csv";
-//ID-0,time(1),outsideTemp(2),barometer(3),raintoday(4),UV(5),windgustmph(6),windSpeedAvg(7),radiation(8),dewpoint(9),rainrate(10),direction(11),indoortemp(12),indoorhumidity(13),date(14),dewpoint(15),wetbulb(16),humidity(17),airquality(18)
+//ID-0,time(1),outsideTemp(2),barometer(3),raintoday(4),UV(5),windgustmph(6),windSpeedAvg(7),radiation(8),dewpoint(9),rainrate(10),direction(11),indoortemp(12),indoorhumidity(13),date(14),dewpoint(15),lightning(16),humidity(17),airquality(18)
 if ($meteobridgeapi[43]=='--'){$meteobridgeapi[43]=0;}
 if ($meteobridgeapi[45]=='--'){$meteobridgeapi[45]=0;}
-$weather34chartdata   = $id.",".date('H:i').",".$meteobridgeapi[2].",".$meteobridgeapi[10].",".$meteobridgeapi[9].",".$meteobridgeapi[43].",".$meteobridgeapi[40].",".$meteobridgeapi[17].",".$meteobridgeapi[45].",".$meteobridgeapi[4].",".$meteobridgeapi[8].",".$meteobridgeapi[7].",".$meteobridgeapi[22].",".$meteobridgeapi[23].",".date('j M').",".$weather['realfeel'].",".$weather['wetbulb'].",".$weather["humidity"].",".$aqiweather['aqindex'].""."\r\n";
+$weather34chartdata   = $id.",".date('H:i').",".$meteobridgeapi[2].",".$meteobridgeapi[10].",".$meteobridgeapi[9].",".$meteobridgeapi[43].",".$meteobridgeapi[40].",".$meteobridgeapi[17].",".$meteobridgeapi[45].",".$meteobridgeapi[4].",".$meteobridgeapi[8].",".$meteobridgeapi[7].",".$meteobridgeapi[22].",".$meteobridgeapi[23].",".date('j M').",".$weather['realfeel'].",".$weather["lightningmax10"].",".$weather["humidity"].",".$aqiweather['aqindex'].""."\r\n";
 $output=$weatherchartfile;
 $fp = fopen($weatherchartfile, 'a+'); 
 fwrite($fp,$weather34chartdata); 

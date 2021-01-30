@@ -729,4 +729,34 @@ function map($value, $fromLow, $fromHigh, $toLow, $toHigh){
     $tmpValue *= $scaleFactor;
     // Re-zero back to the to range
 	return $tmpValue + $toLow;}
+
+// in meteobridge services upload every 1 minute(60 seconds) 
+//https://yourdomain.com/yourfolder/mbridge/mb-lightning.php?d=[lgt0energy-act:--] [lgt0dist-act:--] [lgt0dist-age:--] [lgt0total-daysum.0:--] [lgt0total-monthsum.0:--] [lgt0total-yearsum.0:--] [lgt0total-sum10.0:--]
+
+//0 [lgt0energy-act:--] 
+//1 [lgt0dist-act:--] 
+//2 [lgt0dist-age:--] 
+//3 [lgt0total-daysum.0:--] 
+//4 [lgt0total-monthsum.0:--] 
+//5 [lgt0total-yearsum.0:--] 
+//6 [lgt0total-sum10.0:--]
+$file_live2=file_get_contents('mbridge/weather34-lightning.txt');
+    $weather34lightning=explode(" ", $file_live2);    
+    //weather34 weatherflow sensor lightning
+  $weather["lightning"]          = $weather34lightning[0]; 
+  $weather["lightningkm"]        = $weather34lightning[1];
+  $weather["lightningmi"]        = $weather34lightning[1];
+	$weather["lightningmax"]       = $weather34lightning[3];
+	$weather["lightningmaxdist"]   = $weather34lightning[1];
+  $weather["lightningtimeago"]   = $weather34lightning[2];
+	$weather["lightningmonth"]     = $weather34lightning[4];
+  $weather["lightningyear"]      = $weather34lightning[5];
+  $weather["lightningmax10"]     = $weather34lightning[6];
+
+
+
+
+
+
+
 ?>
