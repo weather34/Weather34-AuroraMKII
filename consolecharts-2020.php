@@ -44,7 +44,7 @@
     <li2><div id=time-date></div></li2>  
   </ul>
   <div class="nav-bottom">
-  <a href="index.php" data-title="Dashboard"><?php echo $backtohome?></a>
+  <a href="index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
 
   <a href=<?php if ($theme == 'dark') { echo '?theme=light';} else {echo '?theme=dark';} ?>
     <?php if ($theme == 'dark') { echo 'data-title="Light Mode"';} else {echo 'data-title="Dark Mode"';} ?> >

@@ -236,7 +236,7 @@ blue{color:#00adbd }
 
 
 <?php echo 'Your Current PHP version is :<oblue><b> ' . phpversion(), '</b></oblue>
-            <br>Enter Your Password For <br>Weather34 Aurora <br>Setup Screen'; ?>
+            <br>Enter Your Password For <br>Weather34 Aurora MKII <br>Setup Screen'; ?>
             
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="pwd">
                     
@@ -245,15 +245,16 @@ blue{color:#00adbd }
                             <input name="passwd" type="password" class="input-button" /> <input type="submit" name="submit_pwd" value="Login " class="modal-button" />
                 </form>                
                 </center>
-                <?php echo "2015-"; ?><?php echo date('Y'); ?> &copy;</a> WEATHER34 Aurora Version </span></span></span>
+                <?php echo "2015-"; ?><?php echo date('Y'); ?> &copy;</a> WEATHER34 Aurora MKII Version </span></span></span>
 
                 <br><br>
                 <center> 
                 <a href="index.php" alt="return to dashboard" title="return to dashboard"> <?php 
-                $backtohome='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="var(--blue)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" stroke-width="0"/><rect x="3" y="4" width="18" height="16" rx="3" /><circle cx="9" cy="10" r="2" stroke="#ccc"/><line x1="15" y1="8" x2="17" y2="8" stroke="#777"/><line x1="15" y1="12" x2="17" y2="12" stroke="#777"/>
-                <line x1="7" y1="16" x2="17" y2="16" stroke="#777"/></svg>';                
-                echo $backtohome ?><blue>Return To Weather34 Station Dashboard</blue></a></center>
+                $backtohome='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#ccc" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="0" d="M0 0h24v24H0z" stroke-width="0"/> <circle cx="5" cy="5" r="1" stroke="#777"  /> <circle cx="12" cy="5" r="1" stroke="#777"/><circle cx="19" cy="5" r="1" stroke="#777"/> <circle cx="5" cy="12" r="1" stroke="#777" /> <circle cx="12" cy="12" r="1" stroke="#777"/>
+                <circle cx="19" cy="12" r="1" stroke="#777"/> <circle cx="5" cy="19" r="1" stroke="#777" /> <circle cx="12" cy="19" r="1" stroke="#777"/><circle cx="19" cy="19" r="1" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
+                             
+                echo $backtohome ?><blue>Return To Weather34 Dashboard</blue></a></center>
                 
                
             <?php
@@ -287,10 +288,10 @@ blue{color:#00adbd }
 
                 <br>
 
-                Welcome you have logged into the <br>WEATHER34 Aurora setup screen <blue><?php echo date("M jS Y H:i"); ?></blue>
+                Welcome you have logged into the <br>WEATHER34 Aurora MKII setup screen <blue><?php echo date("M jS Y H:i"); ?></blue>
                 <br>Please set the options below and double check <br>to avoid any <orange>errors</orange> .<br>
                 
-                 WEATHER34 <blue>Aurora</blue> Version 
+                 WEATHER34 <blue>Aurora MKII</blue> Version 
                  <br>
                  <img src='weather34-app-icon.svg' width='40px' style="float:none">
                   </span>
@@ -1975,7 +1976,7 @@ Font Size for Temperature/Dewpoint/Humidity/Wind Modules</div>
                                                                 <a href="https://weather34.com/homeweatherstation/" title="https://weather34.com/homeweatherstation/" target="_blank">
                                                                 <img src='Wxsoft34-app.png' width='50' style="float:left;margin-top:-20px"></a>
                                                                 <br><br><span style="font-size:12px;color:#777;">
-                                                                    <center><?php echo "2015-"; ?><?php echo date('Y'); ?> &copy; WEATHER34 Aurora Template Design</center>
+                                                                    <center><?php echo "2015-"; ?><?php echo date('Y'); ?> &copy; WEATHER34 Aurora MKII Template Design</center>
                                                                 </span>
                                                             </p>
                                         </p>

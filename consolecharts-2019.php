@@ -37,7 +37,7 @@
     <li2><div id=time-date></div></li2>  
   </ul>
   <div class="nav-bottom">
-  <a href="index.php" data-title="Dashboard"><?php echo $backtohome?></a>
+  <a href="index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
 
   <a href="consolecharts.php" data-title="<?php echo strftime("%A" );?> Charts">
   <?php echo $weather34chart2?> 

@@ -62,8 +62,7 @@ else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="n
   </ul>
 </div>
 <div class="nav-bottom" >
-&nbsp; <a href="../index.php" data-title="Dashboard"> <?php echo $backtohome ?> </a>  
-
+&nbsp; <a href="../index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
 <a href="../outlookwutext.php" data-lity data-title="5 day Forecast Summary"><?php echo $weather34foretxt?></a>
 
 <a href="chartforecast.php" alt="refresh this dashboard " data-title="Refresh"><?php echo $weather34refr?></a>
