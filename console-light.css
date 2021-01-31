@@ -442,8 +442,8 @@ smallminutes{font-size:7px;color:var(--body-text-light);font-family:weathertext2
 smallminutes1{font-size:7px;color:#555;font-family:weathertext2}
 [data-title]:hover:after{opacity:1;transition:all .1s ease .5s;visibility:visible;-webkit-transition:all .1s ease .5s;-moz-transition:all .1s ease .5s;-ms-transition:all .1s ease .5s;-o-transition:all .1s ease .5s}
 [data-title]:after{content:attr(data-title);background-color:var(--blue);color:#fff;font-size:10px;position:absolute;
-    padding:3px;padding-bottom:1px;bottom:2.8em;left:0;white-space:nowrap;opacity:0;z-index:99999;visibility:hidden;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-[data-title]{position:relative;left:-5px;z-index:99999;text-transform:capitalize;}
+    padding:3px;padding-bottom:1px;bottom:2.8em;left:0;white-space:nowrap;opacity:0;z-index:100;visibility:hidden;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
+[data-title]{position:relative;left:-5px;z-index:100;text-transform:capitalize;}
 .nav-bottom .version{top:16px;color:#777;right:9px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .nav-bottom-charts .version{top:20px;color:#555;right:10px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .weather34alert{position:fixed;z-index:999;text-shadow:none;font-family:weathertext2;font-weight:400}
