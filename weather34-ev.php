@@ -60,7 +60,7 @@ $aqiweather["humidity"]     = $weather["humidity_indoor"];
 <bar>
 
 <dashboardicon>
-<a  href="index.php" data-title="Dashboard"><?php echo $backtohome?></a>
+&nbsp; <a href="index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
 </dashboardicon>
 
 <selectunit>
