@@ -730,6 +730,7 @@ function map($value, $fromLow, $fromHigh, $toLow, $toHigh){
     // Re-zero back to the to range
 	return $tmpValue + $toLow;}
 
+//Lightning Data for weatherflow Air Only !
 // in meteobridge services upload every 1 minute(60 seconds) 
 //https://yourdomain.com/yourfolder/mbridge/mb-lightning.php?d=[lgt0energy-act:--] [lgt0dist-act:--] [lgt0dist-age:--] [lgt0total-daysum.0:--] [lgt0total-monthsum.0:--] [lgt0total-yearsum.0:--] [lgt0total-sum10.0:--]
 
@@ -752,11 +753,4 @@ $file_live2=file_get_contents('mbridge/weather34-lightning.txt');
 	$weather["lightningmonth"]     = $weather34lightning[4];
   $weather["lightningyear"]      = $weather34lightning[5];
   $weather["lightningmax10"]     = $weather34lightning[6];
-
-
-
-
-
-
-
 ?>

@@ -636,7 +636,7 @@ smallminutes{font-size:7px;color:#bfbfbf;font-family:weathertext2}
 smallminutes1{font-size:7px;color:#fff;font-family:weathertext2}
 [data-title]:hover:after{opacity:1;transition:all .1s ease .5s;visibility:visible}
 [data-title]:after{content:attr(data-title);background-color:var(--blue);color:#fff;font-size:10px;position:absolute;padding:3px;padding-bottom:1px;bottom:2.8em;left:0;white-space:nowrap;opacity:0;z-index:99999;visibility:hidden;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-[data-title]{position:relative;left:-5px}
+[data-title]{position:relative;left:-5px;text-transform:capitalize;}
 .nav-bottom .version{top:10px;color:#ccc;right:7px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .nav-bottom-charts .version{top:10px;color:#aaa;right:10px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .baromaxtoday{position:absolute;font-size:.6em;margin-top:-10px;color:var(--orange)}
@@ -655,9 +655,10 @@ valuetextheadinguv{position:relative;color:var(--body-text-dark);font-family:wea
 valuetextheadingbft,valuetextheadingbft1{position:relative;color:var(--body-text-dark);font-family:weathertext2;text-align:left;font-size:8px;left:-3px}
 valuetextheadingbft1{left:-6px}
 valuetextheadingsolar{position:relative;color:var(--body-text-dark);font-family:weathertext2;text-align:left;font-size:8.5px}
-.thelaststrike{position:absolute;left:215px;top:62px;margin:0;font-family:weathertext2;font-size:8px;color:var(--body-text-dark);width:100px}
-.thelaststrike interval{font-size:7px}
-a:hover{filter:brightness(110%);-webkit-filter:brightness(110%)}
+.thelaststrike{position:absolute;left:210px;top:57px;margin:0;font-family:weathertext2;font-size:7.5px;color:var(--body-text-dark);width:100px}
+.thelaststrike interval{font-size:7.5px;font-family:weathertext2;}
+.thelaststrike a{font-size:7.5px;color:var(--body-text-dark);font-family:weathertext2;}
+a:hover{filter:brightness(110%);-webkit-filter:brightness(110%);}
 .forecastlink{color:var(--body-text-dark);text-transform:capitalize}
 .suntext1{color:var(--suntext)}
 .thegrad{background:#8aa2cc;background:-moz-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:-webkit-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:linear-gradient(to right,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8aa2cc', endColorstr='#bf6e4e', GradientType=1)}

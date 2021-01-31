@@ -4,18 +4,6 @@ date_default_timezone_set($TZ);
 ?>
  
  <?php
-$file_live2=file_get_contents('mbridge2/MBrealtimeupload.txt');
-    $weather34lightning=explode(" ", $file_live2);    
-    //weather34 sensor lightning
-    $weather["lightning"]          = $weather34lightning[76];
-    $weather["lightningkm"]        = $weather34lightning[75];
-    $weather["lightningmi"]        = $weather34lightning[75];
-	$weather["lightningmax"]       = $weather34lightning[77];
-	$weather["lightningmaxdist"]   = $weather34lightning[75];
-	$weather["lightningtimeago"]   = $weather34lightning[76];
-	$weather["lightningmonth"]     = $weather34lightning[78];
-    $weather["lightningyear"]      = $weather34lightning[79];
-    
 //weather34 timeago lightning
 $lightningseconds = $weather["lightningtimeago"];function convert($lightningseconds){$weather34timeago = "";$days = intval(intval($lightningseconds) / (3600*24));
     $hours = (intval($lightningseconds) / 3600) % 24;$minutes = (intval($lightningseconds) / 60) % 60;$seconds = (intval($lightningseconds)) % 60;
