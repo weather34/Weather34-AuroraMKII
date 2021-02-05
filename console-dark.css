@@ -636,7 +636,7 @@ smallminutes{font-size:7px;color:#bfbfbf;font-family:weathertext2}
 smallminutes1{font-size:7px;color:#fff;font-family:weathertext2}
 [data-title]:hover:after{opacity:1;transition:all .1s ease .5s;visibility:visible}
 [data-title]:after{content:attr(data-title);background-color:var(--blue);color:#fff;font-size:10px;position:absolute;padding:3px;padding-bottom:1px;bottom:2.8em;left:0;white-space:nowrap;opacity:0;z-index:99999;visibility:hidden;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-[data-title]{position:relative;left:-5px;text-transform:capitalize;}
+[data-title]{position:relative;left:-5px;text-transform:capitalize}
 .nav-bottom .version{top:10px;color:#ccc;right:7px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .nav-bottom-charts .version{top:10px;color:#aaa;right:10px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .baromaxtoday{position:absolute;font-size:.6em;margin-top:-10px;color:var(--orange)}
@@ -656,15 +656,16 @@ valuetextheadingbft,valuetextheadingbft1{position:relative;color:var(--body-text
 valuetextheadingbft1{left:-6px}
 valuetextheadingsolar{position:relative;color:var(--body-text-dark);font-family:weathertext2;text-align:left;font-size:8.5px}
 .thelaststrike{position:absolute;left:210px;top:57px;margin:0;font-family:weathertext2;font-size:7.5px;color:var(--body-text-dark);width:100px}
-.thelaststrike interval{font-size:7.5px;font-family:weathertext2;}
-.thelaststrike a{font-size:7.5px;color:var(--body-text-dark);font-family:weathertext2;}
-a:hover{filter:brightness(110%);-webkit-filter:brightness(110%);}
+.thelaststrike interval{font-size:7.5px;font-family:weathertext2}
+.thelaststrike a{font-size:7.5px;color:var(--body-text-dark);font-family:weathertext2}
+a:hover{filter:brightness(110%);-webkit-filter:brightness(110%)}
 .forecastlink{color:var(--body-text-dark);text-transform:capitalize}
 .suntext1{color:var(--suntext)}
 .thegrad{background:#8aa2cc;background:-moz-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:-webkit-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:linear-gradient(to right,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8aa2cc', endColorstr='#bf6e4e', GradientType=1)}
 winddirectionvalueword{font-size:.9em}
 .aqiid-brand a,.aqiid-brand2 a{position:relative;left:145px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;max-width:200px;line-height:1.2;top:40px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
-.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
+.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a,.extrainfoeq a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
+.extrainfoeq a{margin-left:225px;margin-top:42px}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
 .extrainfo3 a{margin-left:175px;margin-top:-15px}
 .extrainfo4 a{margin-left:46px;margin-top:46px}
@@ -674,7 +675,8 @@ extrainfoiconuv{position:absolute;margin-top:12px;margin-left:70px;color:var(--o
 winddirectionvalueword{font-size:.9em}
 icontext{position:relative;top:-8px;font-family:weathertext2;font-size:.8em;right:1px;color:var(--body-text-dark)}
 .button-dial-toprain{border:0;box-shadow:none;background-image:none}
-.indoordesc,.indoordesc2,.indoordesc3,.indoordesc4,.indoordesc5{display:flex;background-color:hsla(204,31%,21%,.229);color:var(--body-text-dark);line-height:1;top:2px;position:absolute;margin-left:200px;text-align:left;font-family:headingtext;width:80px;font-size:10px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;text-transform:none}
+.indoordesc,.indoordesc2,.indoordesc3,.indoordesc4,.indoordesc5,.indoordescdeprem{display:flex;background-color:hsla(204,31%,21%,.229);color:var(--body-text-dark);line-height:1;top:2px;position:absolute;margin-left:200px;text-align:left;font-family:headingtext;width:80px;font-size:10px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;text-transform:none}
+.indoordescdeprem{margin-left:195px;width:100px}
 .indoordesc2{margin-left:240px;width:45px}
 .indoordesc3{margin-left:250px;width:30px}
 .indoordesc4{margin-left:245px;width:60px}

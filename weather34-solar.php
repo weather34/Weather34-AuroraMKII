@@ -131,7 +131,7 @@ elseif ($weather['lux']>=0 ){echo 'var(--yellow)';}?>">
 
 
 
-<div class=extrainfo2 style="margin-top:-5px"><a href='weather34-almanac.php' data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo2 style="margin-top:-5px"><a href='solar-almanac2.php' data-lity data-title="Solar Almanac"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
 
 <div class="weather-tempicon-identity">
 <?php if ($weather['solar']<=0){echo "<grey>".$weather34_sun_icon."</grey>";}else echo "<icon-16-20>".$weather34_sun_icon."</icon-16-20>"; ?>

@@ -226,7 +226,7 @@ weather34-barometerlimitmax{left:140px;color:var(--orange)}
 .weather34barometerarrowmax:after{content:"";position:absolute;text-align:left;left:50%;top:0;width:11px;height:3px;border-radius:20px;background:var(--orange);-webkit-transform:translate(-50%,-45%);-moz-transform:translate(-50%,-45%);-o-transform:translate(-50%,-45%);-ms-transform:translate(-50%,-45%);transform:translate(-50%,-45%);z-index:90;-moz-border-radius:20px;-ms-border-radius:20px;-o-border-radius:20px}
 a{font-size:12px;font-family:headingtext;text-decoration:none;margin-left:10px;color:var(--white)}
 .sunriset-set{color:var(--body-text-light);font-size:10px;font-family:weathertext2;text-decoration:none;margin-left:125px;float:none;margin-top:-16px;word-wrap:break-word;width:400px;max-width:400px}
-.sunriset-set a{color:var(--body-text-light);}
+.sunriset-set a{color:var(--body-text-light)}
 .desktoplink2{color:var(--body-text-light);font-size:10px;font-family:headingtext;text-decoration:none;margin-right:40px;float:right;margin-top:0;word-wrap:break-word;width:auto}
 .desktoplink5{color:var(--body-text-light);font-size:10px;font-family:headingtext;text-decoration:none;margin-right:40px;float:right;margin-top:0;word-wrap:break-word;width:auto}
 .desktoplink{color:var(--silver);font-size:10px;font-family:headingtext;text-decoration:none;margin-right:100px;float:right;margin-top:17px}
@@ -419,7 +419,8 @@ button:focus{border:0;outline:0!important;outline-style:none}
 .weather34moonphasesvg{margin-left:1px;margin-top:17px}
 .sunrise-sun,.sunset-sun{display:block;background:0;color:var(--body-text-light);font-size:9px;line-height:1;position:absolute;margin-left:60px;font-family:weathertext2;text-align:left;margin-top:3px;text-transform:none;text-shadow:var(--text-shadow)}
 .sunset-sun{margin-top:29px}
-.indoordesc,.indoordesc2,.indoordesc3{display:flex;background:0;color:var(--body-text-light);font-size:10px;line-height:1;top:5px;position:absolute;margin-left:210px;font-family:headingtext;text-align:center;box-shadow:-1px -1px 8px rgba(255,255,255,.9),2px 2px 2px rgba(0,0,0,.07);background:#fff;text-transform:none;text-shadow:var(--text-shadow);flex-grow:0;flex-shrink:1;flex-basis:auto}
+.indoordesc,.indoordesc2,.indoordesc3,.indoordescdeprem{display:flex;background:0;color:var(--body-text-light);font-size:10px;line-height:1;top:5px;position:absolute;margin-left:210px;font-family:headingtext;text-align:center;box-shadow:-1px -1px 8px rgba(255,255,255,.9),2px 2px 2px rgba(0,0,0,.07);background:#fff;text-transform:none;text-shadow:var(--text-shadow);flex-grow:0;flex-shrink:1;flex-basis:auto}
+.indoordescdeprem{margin-left:170px;width:100px}
 .lightningdesc,.lightningdesc2,.moondesc{display:flex;background:0;color:var(--body-text-light);font-size:10px;line-height:1;top:5px;position:absolute;margin-left:165px;font-family:headingtext;text-align:center;box-shadow:-1px -1px 8px rgba(255,255,255,.9),2px 2px 2px rgba(0,0,0,.07);background:#fff;text-transform:none;text-shadow:var(--text-shadow);flex-grow:0;flex-shrink:1;flex-basis:auto}
 .lightningdesc2{margin-left:220px}
 .moondesc{top:0;margin-left:190px;text-align:center;align-items:center;justify-content:center}
@@ -441,9 +442,8 @@ button-block-date{font-size:10px}
 smallminutes{font-size:7px;color:var(--body-text-light);font-family:weathertext2}
 smallminutes1{font-size:7px;color:#555;font-family:weathertext2}
 [data-title]:hover:after{opacity:1;transition:all .1s ease .5s;visibility:visible;-webkit-transition:all .1s ease .5s;-moz-transition:all .1s ease .5s;-ms-transition:all .1s ease .5s;-o-transition:all .1s ease .5s}
-[data-title]:after{content:attr(data-title);background-color:var(--blue);color:#fff;font-size:10px;position:absolute;
-    padding:3px;padding-bottom:1px;bottom:2.8em;left:0;white-space:nowrap;opacity:0;z-index:100;visibility:hidden;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-[data-title]{position:relative;left:-5px;z-index:100;text-transform:capitalize;}
+[data-title]:after{content:attr(data-title);background-color:var(--blue);color:#fff;font-size:10px;position:absolute;padding:3px;padding-bottom:1px;bottom:2.8em;left:0;white-space:nowrap;opacity:0;z-index:100;visibility:hidden;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
+[data-title]{position:relative;left:-5px;z-index:100;text-transform:capitalize}
 .nav-bottom .version{top:16px;color:#777;right:9px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .nav-bottom-charts .version{top:20px;color:#555;right:10px;font-size:7px;box-shadow:none;background:0;position:absolute}
 .weather34alert{position:fixed;z-index:999;text-shadow:none;font-family:weathertext2;font-weight:400}
@@ -582,8 +582,8 @@ indoorpm,indoorpm2{position:absolute;width:4rem;height:4rem;left:10px;top:23px;z
 indoorpm2{left:9px}
 valuetextheadingindoor{left:-4px;font-size:8.5px;width:15em;color:var(--body-text-light)}
 .thelaststrike{position:absolute;left:180px;top:55px;margin:0;font-family:weathertext2;font-size:7.5px;color:var(--body-text-light);width:100px}
-.thelaststrike interval{font-size:7.5px;font-family:weathertext2;}
-.thelaststrike a{font-size:7.5px;color:var(--body-text-light);font-family:weathertext2;}
+.thelaststrike interval{font-size:7.5px;font-family:weathertext2}
+.thelaststrike a{font-size:7.5px;color:var(--body-text-light);font-family:weathertext2}
 .daylight3,.daylight4,.daylight5{display:flex;position:absolute;margin-left:-50px;margin-top:0;color:var(--body-text-dark);background-color:rgba(217,224,230,.229);font-family:weathertext2;width:22em;height:10px;font-size:11px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;font-size:.6em}
 .daylight3,.daylight4 tillrise{font-size:9px}
 .daylight4{margin-top:67px;margin-left:5px;font-size:9px;width:auto;max-width:22.5em}
@@ -606,7 +606,8 @@ smallminutes1{font-size:6px}
 untilsunriset{width:50px;font-family:weathertext2;position:absolute;font-size:8px;margin-top:20px;margin-left:0;text-align:center;word-break:break-word;line-height:1em}
 .aqiid-brand a{position:absolute;left:195px;padding:2px;padding-top:4px;font-size:9px;color:#aaa;display:flex;justify-content:left;width:75px;max-width:75px;line-height:1;top:42px;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px}
 .aqiid-brand2 a{position:absolute;margin-left:-70px;font-size:9px;margin-top:20px;color:#aaa;padding:2px;padding-top:4px;display:flex;justify-content:left;width:75px;max-width:75px;line-height:1;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
-.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;color:#aaa;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:220px;line-height:1.2;margin-top:85px;text-transform:none;box-shadow:var(--button-shadow);background:#fff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);cursor:pointer;z-index:100}
+.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a,.extrainfoeq a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;color:#aaa;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:220px;line-height:1.2;margin-top:85px;text-transform:none;box-shadow:var(--button-shadow);background:#fff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);cursor:pointer;z-index:100}
+.extrainfoeq a{margin-left:205px;margin-top:38px}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
 .extrainfo3 a{margin-left:175px;margin-top:-12px}
 .extrainfo4 a{margin-left:40px;margin-top:39px}

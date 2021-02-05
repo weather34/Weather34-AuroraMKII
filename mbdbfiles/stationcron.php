@@ -62,3 +62,11 @@ curl_setopt($ch, CURLOPT_FILE, $fp2);
 $result = curl_exec ($ch);
 curl_close ($ch);}
 ?>
+
+
+
+<?php 
+//earthquake
+$json5 =file_get_contents('https://www.seismicportal.eu/fdsnws/event/1/query?limit=10&lat='.$lat.'&lon='.$lon.'&maxradius=10&format=json&minmag=2');
+$file5 = '../jsondata/eqnotification.txt';file_put_contents($file5, $json5);
+?>

@@ -1128,7 +1128,8 @@ blue{color:#00adbd }
                                                 <option>weather34-moonphasemod.php</option>
                                                 <option>weather34-firerisk.php</option>  
                                                 <option>weather34-heat-index.php</option>
-                                                <option>weather34-windchill.php</option>                                              
+                                                <option>weather34-windchill.php</option>  
+                                                <option>weather34-earthquake.php</option>                                            
                                             </select>
 
 <br>
@@ -1159,6 +1160,7 @@ blue{color:#00adbd }
                                                 <option>weather34-firerisk.php</option>
                                                 <option>weather34-heat-index.php</option>
                                                 <option>weather34-windchill.php</option>
+                                                <option>weather34-earthquake.php</option>
                                             </select>
 
 <br>
@@ -1189,6 +1191,7 @@ blue{color:#00adbd }
                                                 <option>weather34-firerisk.php</option>
                                                 <option>weather34-heat-index.php</option>
                                                 <option>weather34-windchill.php</option>
+                                                <option>weather34-earthquake.php</option>
                                             </select>
 
 <br>

@@ -1,23 +1,23 @@
 <?php 
 ########################################################
-#	CREATED FOR WEATHER34 Aurora TEMPLATE  		              						                
+#	CREATED FOR WEATHER34 Aurora MKII TEMPLATE  		              						                
 # https://weather34.com/homeweatherstation/index.html 											                        
 # 	                                                                                               
-# 	Release: December 2020				  	                                           
+# 	Release: December 2020	Updated: February 2021			  	                                           
 ########################################################
 
 
-// original default weather34 menu 
-// weather34 side menu you can build your menu to use other links in this file 
+// original default weather34 Aurora MKII menu 
+// weather34 Aurora MKII side menu you can build your menu to use other links in this file 
 // example if you wish to use a pop up always include the string "data-lity" without the commas
 // like this <a href="weather34-large-cam.php" data-lity data-title="Webcam"> Webcam </a>
 // if you want a tool tip just include the data-title="Webcam" Webcam used for example 
 // to use icons use the php echo $nameoficon all icons are SVG !! dont use crappy gif,jpg,png feel free to ask if you need icons to be made 
-// to suit your links . Weather34 does not scrape data or pull iframe data from other sites by default it is left to you .scraping is unethical if 
-// service not provided or can impact you website if iframe scraped data is unavailable. in short wont scrape dont scrape..
+// to suit your links . Weather34 does not scrape data or pull iframe data from other sites by default it is left to you .Un-authorized scraping is unethical if 
+// an authorzed service is not provided caution scraping can impact you website if iframe scraped data is unavailable. in short wont scrape dont scrape..
 // weather34 is happy to answer any questions if you get stuck..
 // you can build your own menu and share with the meteobridge community a new option will appear to choose which custom menu to use
-// by default this menu is dispalyed.
+// by default this menu is displayed.
 ?>
 
 <button>X</button></div> 
@@ -68,8 +68,15 @@ if ($webcamdevice == "yes") { echo '<a href="weather34-large-cam.php" data-lity 
 <?php //weather34 smart tv option if yes
 if ($smarttv=='yes'){echo '<a href="weather34-tv.php" data-title="Smart TV">'. $weather34smtv.'&nbsp;Smart TV</a><br>';} ?>
 
-<?php echo '<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">'.$weather34moonicon?>&nbsp;Moonphase Info</a><br>
-<?php echo '<a href="weather34-meteor.php" data-lity data-title="Meteor Showers">'.$weather34meteoricon?>&nbsp;MeteorShower Info</a><br>
+<?php // moon phase data
+echo '<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">'.$weather34moonicon?>&nbsp;Moonphase Info</a><br>
+
+<?php //meteor shower data
+echo '<a href="weather34-meteor.php" data-lity data-title="Meteor Showers">'.$weather34meteoricon?>&nbsp;MeteorShower Info</a><br>
+
+<?php // regional earthquake
+if (filesize('jsondata/eqnotification.txt')<160) { echo "";}
+else echo '<a href="eqlist.php" data-lity data-title="Regional Earthquakes">&nbsp;'.$weather34eq."&nbsp;Regional Earthquakes</a><br>"?>
 
 <a  href="weather34-template-legend.php" data-lity data-title="Hardware Info"> <?php echo $weather34hinfo;?>&nbsp; Hardware Info</a><br>
 
