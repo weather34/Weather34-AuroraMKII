@@ -25,16 +25,16 @@
 		
 		
 	';
-	
-	$date= date('D jS Y');$date= date('D jS Y');$weatherfile =date('Y')."/".date('jMY');?>
+	date_default_timezone_set($TZ);
+	$date= date('D jS Y');$weatherfile =date('Y')."/".date('jMY');?>
     <br>
     	<script type="text/javascript">
 
 
 
 function WEATHER34CHARTCOLORS(uv) {
-if (uv>=0 && uv<=3) {uvlevel=' hsl(75, 62%, 43%)';}
-else if (uv>3 && uv<=5) {uvlevel='hsl(35, 77%, 58%)';}
+if (uv>=0 && uv<3) {uvlevel=' hsl(75, 62%, 43%)';}
+else if (uv>=3 && uv<=5) {uvlevel='hsl(35, 77%, 58%)';}
 else if (uv>5 && uv<=7) {uvlevel='hsl(19, 66%, 55%)';} 
 else if (uv>7 && uv<=10) {uvlevel='hsl(7, 60%, 57%)';} 
 else if (uv>10 ) {uvlevel='hsl(246, 31%, 62%)';}                

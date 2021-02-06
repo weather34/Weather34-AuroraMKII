@@ -25,8 +25,8 @@
 		
 		
 	';
-	
-	$date= date('D jS Y');$date= date('D jS Y');$weatherfile =date('Y')."/".date('jMY');?>
+	date_default_timezone_set($TZ);
+	$date= date('D jS Y');$weatherfile =date('Y')."/".date('jMY');?>
     <br>
     	<script type="text/javascript">
 

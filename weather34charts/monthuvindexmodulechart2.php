@@ -14,6 +14,7 @@
 	####################################################################################################
 		
 	include('preload.php');
+	date_default_timezone_set($TZ);
 	$weatherfile = date('F');	
 	$conv = 1;	
 	$int = 1;	

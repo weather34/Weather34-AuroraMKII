@@ -15,6 +15,7 @@
 	
 	
 	include('preload.php');
+	date_default_timezone_set($TZ);
 	$weatherfile = date('F');
 	$conv = 1;
 	if ($weather["wind_units"] == 'mph') {$conv= '2.23694';}

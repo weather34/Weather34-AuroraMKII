@@ -1,4 +1,5 @@
-<?php include('../settings.php');?><script rel="preload" src='canvasJs.js' as="script"></script>
+<?php include('../settings.php');date_default_timezone_set($TZ);
+?><script rel="preload" src='canvasJs.js' as="script"></script>
 <link rel="preload" href="fonts/verbatim-regular.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff" as="font" type="font/woff" crossorigin>
 <style>

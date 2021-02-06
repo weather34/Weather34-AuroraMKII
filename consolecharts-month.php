@@ -53,14 +53,19 @@
     <li><div id=gust></div></li>
     <?php //purple air if no show clock
     if($purpleairhardware=="yes"){echo "<li><div id=airq></div></li> ";} else echo "<li><div id=winddir></div></li>";?>
-
+<?php //purple air if no show clock
+    if($purpleairhardware=="no" && $davisairquality=='yes'){echo "<li><div id=airqd></div></li> ";} 
+    ?>
 
     <?php if($uvsensor=="yes"){?>    
     <li><div id=uvindex></div></li>
     <li><div id=solar></div></li>  
     <?php //purple air if no show clock
-    if($purpleairhardware=="yes"){echo "<li><div id=winddir></div></li> ";} else echo "<li><div id=theclock></div></li>";?>    
+    if($purpleairhardware=="yes"){echo "<li><div id=winddir></div></li> ";} 
+    else if($purpleairhardware=="no" && $davisairquality=='yes'){echo "";} 
+    else echo "<li><div id=theclock></div></li>";?>    
     <?php };?>
+    
     
     <li2><div id=moon></div></li2> 
     <li2><div id=sun></div></li2> 

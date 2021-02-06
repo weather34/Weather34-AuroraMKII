@@ -14,6 +14,7 @@
 	####################################################################################################
 	
 	include('preload.php');
+	date_default_timezone_set($TZ);
 	$conv = 1;		
 	if ($tempunit == 'F') {$conv= 0.02953 ;}	
 	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}

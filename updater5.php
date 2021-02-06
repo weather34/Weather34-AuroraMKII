@@ -12,6 +12,7 @@
 
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#wind").show()}});var c=a("#wind");c.load("yearavgwindspeedmodule.php");var b=setInterval(function(){c.load("yearavgwindspeedmodule.php")},1130000)})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#airq").show()}});var c=a("#airq");c.load("yearpurpleairmodule.php");var b=setInterval(function(){c.load("yearpurpleairmodule.php")},1130000)})})(jQuery);
+(function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#airqd").show()}});var c=a("#airqd");c.load("yearairqualitymodule.php");var b=setInterval(function(){c.load("yearairqulaitymodule.php")},1130000)})})(jQuery);
 
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#rain").show()}});var c=a("#rain");c.load("yearrainfallmodule.php");var b=setInterval(function(){c.load("yearrainfallmodule.php")},1130000)})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#barometer").show()}});var c=a("#barometer");c.load("yearbarometermodule.php");var b=setInterval(function(){c.load("yearbarometermodule.php")},11300000 )})})(jQuery);

@@ -15,6 +15,7 @@
 	
 	
 	include('preload.php');
+	date_default_timezone_set($TZ);
 	$weatherfile = date('Y');
 	
 	$conv = 1;

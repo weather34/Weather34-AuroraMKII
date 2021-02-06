@@ -19,6 +19,7 @@
 	if ($tempunit == 'F') {$conv= '(1.8) +32';}	
 	$interval = 1;
 	if ($tempunit == 'F') {$interval= '0.5';}
+	date_default_timezone_set($TZ);
 	$weatherfile = date('F');	
 	
 

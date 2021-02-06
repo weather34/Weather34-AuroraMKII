@@ -14,6 +14,8 @@ error_reporting(0);
 ?>
 <?php //current eqlist
 $heatindexalert8='<svg id="weather34 heatindex alert" width="7pt" height="7pt" fill="#ff552e" viewBox="0 0 20 20"><path d="M19.64 16.36L11.53 2.3A1.85 1.85 0 0 0 10 1.21 1.85 1.85 0 0 0 8.48 2.3L.36 16.36C-.48 17.81.21 19 1.88 19h16.24c1.67 0 2.36-1.19 1.52-2.64zM11 16H9v-2h2zm0-4H9V6h2z"/></svg><br>';
+$stationlocation='This Station';
+
 date_default_timezone_set($TZ);
 $json = file_get_contents('jsondata/eqnotification.txt'); 
 $data = json_decode($json,true);
