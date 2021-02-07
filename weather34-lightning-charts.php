@@ -189,7 +189,8 @@ include('livedata.php');
     align-items: center;width:120px;color:#aaa;}
 date{position:absolute;margin:0 auto;margin-left:10px;display:flex;justify-content: center;align-items: center;font-size:9px;color:#ccc}
 
-lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolute;margin-top:120px;;margin-left:12%;display:flex;justify-content: center;align-items: center;font-size:38px;color:rgba(82, 92, 97, 0.19)}
+lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolute;margin-top:120px;
+    margin-left:10%;display:flex;justify-content: center;align-items: center;font-size:30px;color:rgba(82, 92, 97, 0.19)}
 
 
 
@@ -224,7 +225,11 @@ echo "<orange>".$weather["lightningyear"] ."</orange> strikes";
     <?php  //month total
 echo "<blue>2020</blue> Total<br>";   
 echo "<orange>6427</orange> strikes";
-?></div></article>
+?></div>
+<lword>Lightning Data</lword>
+
+
+</article>
 
 
 
