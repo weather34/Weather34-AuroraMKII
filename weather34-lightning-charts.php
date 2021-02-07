@@ -9,13 +9,24 @@
 	########################################################################
 
 include('livedata.php');
+date_default_timezone_set($TZ);
+$lightningseconds = $weather["lightningtimeago"];function convert($lightningseconds){$weather34timeago = "";$days = intval(intval($lightningseconds) / (3600*24));
+  $hours = (intval($lightningseconds) / 3600) % 24;$minutes = (intval($lightningseconds) / 60) % 60;
+  if($days> 1){$weather34timeago .= "$days <interval>Days </interval>";}
+  else {if($days>0){$weather34timeago .= "$days <interval>Day </interval>";}
+  if($hours > 1 ){$weather34timeago .= "$hours <interval>Hrs </interval>";}
+  else if($hours >0 && $days<1){$weather34timeago .= "$hours <interval>Hr </interval>";}
+  else if($hours <=0){$weather34timeago .= " ";}
+  if($minutes > 1 && $days<1){$weather34timeago .= "$minutes <interval>Mins </interval>";}
+  else if($minutes >=0 && $days<1){$weather34timeago .= "$minutes <interval>Min </interval>";}
+  }return $weather34timeago."<interval>Ago</interval>";}
   ?>
   
   <!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Weather34 MB-SMART Moon Phase Information</title>
+    <title>Weather34 Lightning Charts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   :root {
@@ -73,7 +84,7 @@ include('livedata.php');
   
   @font-face {
     font-family: weathertext2;
-    src: url(fonts/verbatim-regular.woff) format("woff");
+    src: url(fonts/verbatim-medium.woff) format("woff");
   }
   @font-face {
     font-family: clock;
@@ -85,13 +96,14 @@ include('livedata.php');
     font-family: "weathertext2", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--body-text-dark);
   }
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    color: #f5f7fc;
+    color: #ccc;
     margin-top: 10px;
   }
   
@@ -108,6 +120,7 @@ include('livedata.php');
     background:hsla(217, 15%, 17%, .3);
     background-image: var(--grid-lines);
     background-size: 5px 5px;
+    color: var(--body-text-dark);
     
   }
 
@@ -127,15 +140,17 @@ include('livedata.php');
     background-size: 5px 5px;
   }
   a {
-    color: #aaa;
+   
     text-decoration: none;
+    color: var(--body-text-dark);
   }
   
  
   
   grey{color:#ccc}
   blue {
-    color: #01a4b4;
+    color: var(--body-text-dark);
+   
   }
   orange {
     color: #d87040;
@@ -166,6 +181,7 @@ include('livedata.php');
   purple {
     color: #916392;
   }
+  lblue{color:var(--rainblue);}
   
   .info2a {
     position: absolute;
@@ -176,21 +192,27 @@ include('livedata.php');
   }
   
   
-  .charttempmodule{position:absolute;margin:0 auto;margin-top:-15px;margin-left:10px;display:flex;justify-content: center;align-items: center;}
-  .lightning-text{position:absolute;border:1px solid hsla(217, 15%, 17%, 1);
-    padding:10px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textmonth{margin-left:120px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:10px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear{margin-left:240px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:10px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear2{margin-top:60px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:10px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .charttempmodule{position:absolute;margin:0 auto;margin-top:-15px;margin-left:10px;display:flex;justify-content: center;align-items: center;color: var(--body-text-dark);}
+  .lightning-text{position:absolute;margin-top:25px;border:1px solid hsla(217, 15%, 17%, 1);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textmonth{margin-left:120px;margin-top:25px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear{margin-left:240px;margin-top:25px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear2{margin-top:80px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear3{margin-top:80px;margin-left:120px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);
+  padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear4{margin-top:80px;margin-left:240px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear5{margin-top:135px;margin-left:0px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-timeago{margin-top:80px;margin-left:120px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);
+    padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:auto;max-width:200px}
+  
   .credits{margin-top:5px;margin-left:40px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
-    align-items: center;width:200px}
+    align-items: center;width:200px;color: var(--body-text-dark);}
 
     .credits2{margin-top:5px;margin-left:640px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
-    align-items: center;width:120px;color:#aaa;}
+    align-items: center;width:120px;color: var(--body-text-dark);}
 date{position:absolute;margin:0 auto;margin-left:10px;display:flex;justify-content: center;align-items: center;font-size:9px;color:#ccc}
 
-lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolute;margin-top:120px;
-    margin-left:10%;display:flex;justify-content: center;align-items: center;font-size:30px;color:rgba(82, 92, 97, 0.19)}
+lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolute;margin-top:0px;
+    margin-left:10%;display:flex;justify-content: center;align-items: center;font-size:16px;color:rgba(82, 92, 97, 0.7)}
 
 
 
@@ -205,7 +227,17 @@ lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolut
     </style>  
   
   <main class="grid">
-<article><div class="lightning-text">
+
+
+
+
+    <article>  
+<date>Today</date>
+    <iframe  class="charttempmodule" src="weather34charts/todaylightning.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
+  
+  </article>  
+
+  <article><div class="lightning-text">
     <?php  //month total
 echo "<blue>Todays</blue> Total<br>";   
 echo "<orange>".$weather["lightningmax"] ."</orange> strikes";
@@ -222,22 +254,22 @@ echo "<orange>".$weather["lightningyear"] ."</orange> strikes";
 ?></div>
 
 <div class="lightning-textyear2">
-    <?php  //month total
+    <?php  //last years total
 echo "<blue>2020</blue> Total<br>";   
 echo "<orange>6427</orange> strikes";
 ?></div>
+
+
+<div class="lightning-timeago">
+<?php  //weatherflow weather34 air lightning output
+if ($lightningseconds <120 ){ echo $lightningalert8." <orange>Just Now</orange>";}
+else if ($lightningseconds >=61 ){echo "&nbsp; Last Strike &nbsp;<lblue>";
+echo convert($lightningseconds);}?></lblue></div>
+
 <lword>Lightning Data</lword>
 
 
 </article>
-
-
-
-    <article>  
-<date>Today</date>
-    <iframe  class="charttempmodule" src="weather34charts/todaylightning.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
-  
-  </article>  
 
   <article>  
   <date><?php echo date('F')?></date>

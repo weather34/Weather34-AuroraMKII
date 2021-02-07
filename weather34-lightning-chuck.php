@@ -21,14 +21,15 @@ $lightningalert8='<svg width="8" height="8" fill="#ff552e" viewBox="0 0 20 20"><
  <?php //weather34 timeago lightning
 $lightningseconds = $weather["lightningtimeago"];function convert($lightningseconds){$weather34timeago = "";$days = intval(intval($lightningseconds) / (3600*24));
   $hours = (intval($lightningseconds) / 3600) % 24;$minutes = (intval($lightningseconds) / 60) % 60;
-  if($days> 1){$weather34timeago .= "$days <interval>Days </interval>";}
+  if($days> 1){$weather34timeago .= "<span style='font-size:10px;color: #aaa;'>Extra Info</span> ";}
+  else if($days> 1){$weather34timeago .= "$days Days ";}
   else {if($days>0){$weather34timeago .= "$days <interval>Day </interval>";}
   if($hours > 1 ){$weather34timeago .= "$hours <interval>Hrs </interval>";}
   else if($hours >0 && $days<1){$weather34timeago .= "$hours <interval>Hr </interval>";}
   else if($hours <=0){$weather34timeago .= " ";}
   if($minutes > 1 && $days<1){$weather34timeago .= "$minutes <interval>Mins </interval>";}
   else if($minutes >=0 && $days<1){$weather34timeago .= "$minutes <interval>Min </interval>";}
-  }return $weather34timeago."<interval>Ago</interval>";}
+  }return $weather34timeago."<interval></interval>";}
 ?>
 <div class="sunblock">
 <div class="lightningdesc2">Lightning</div>
