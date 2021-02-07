@@ -43,7 +43,7 @@ echo $weather34aqi2;echo "&nbsp;Air Quality Data</a><br>";}?>
 
 <?php //lightning OPTION if positions 10,11,12
 if ($position10 == "weather34-lightning-chuck.php" OR  $position11 == "weather34-lightning-chuck.php" OR $position12 == "weather34-lightning-chuck.php" ) {
-echo '<a href="lightning-almanac2.php" data-lity data-title="Lightning Almanac">';
+echo '<a href="weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">';
 echo $weather34_lightningdata;echo "&nbsp;Lightning Data</a><br>";}?>
 
 

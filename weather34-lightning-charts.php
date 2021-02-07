@@ -204,28 +204,7 @@ lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolut
     </style>  
   
   <main class="grid">
-    <article>  
-<date>Today</date>
-    <iframe  class="charttempmodule" src="weather34charts/todaylightning.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
-  
-  </article>  
-
-  <article>  
-  <date><?php echo date('F')?></date>
-  <iframe  class="charttempmodule" src="weather34charts/monthlightningmodulechart2.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
-  
-  </article>  
-
-  <article>  
-  <date><?php echo date('Y')?></date>
-  <iframe  class="charttempmodule" src="weather34charts/yearlightningmodulechart2.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
-  
-  </article>  
-
-
-  
-    <article2>  
-<div class="lightning-text">
+<article><div class="lightning-text">
     <?php  //month total
 echo "<blue>Todays</blue> Total<br>";   
 echo "<orange>".$weather["lightningmax"] ."</orange> strikes";
@@ -245,11 +224,29 @@ echo "<orange>".$weather["lightningyear"] ."</orange> strikes";
     <?php  //month total
 echo "<blue>2020</blue> Total<br>";   
 echo "<orange>6427</orange> strikes";
-?></div>
+?></div></article>
 
-<lword>Lightning</lword>
+
+
+    <article>  
+<date>Today</date>
+    <iframe  class="charttempmodule" src="weather34charts/todaylightning.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
   
-    </article2>
+  </article>  
+
+  <article>  
+  <date><?php echo date('F')?></date>
+  <iframe  class="charttempmodule" src="weather34charts/monthlightningmodulechart2.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
+  
+  </article>  
+
+  <article>  
+  <date><?php echo date('Y')?></date>
+  <iframe  class="charttempmodule" src="weather34charts/yearlightningmodulechart2.php" frameborder="0" scrolling="no" width="45%" height="220px"></iframe>  
+  
+  </article>  
+
+
   </main>
 
   <div class="credits">

@@ -40,7 +40,8 @@ else {uvlevel='hsla(206, 12%, 27%, .4)';}
 return uvlevel;}
 
 function WEATHER34UVI(weather34Dvalue) {
-if (weather34Dvalue>=0 && weather34Dvalue<30) {theD='Weak Storm';}
+if (weather34Dvalue>=0 && weather34Dvalue<1) {theD='No Storm';}
+else if (weather34Dvalue>=1 && weather34Dvalue<=30) {theD='Weak Storm';}
 else if (weather34Dvalue>30 && weather34Dvalue<=100) {theD='Moderate Storm';}
 else if (weather34Dvalue>100 && weather34Dvalue<=1000) {theD='Strong Storm ';}
 else {theD='No Data !';}
