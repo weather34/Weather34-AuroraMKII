@@ -122,7 +122,7 @@ return theD;}
 			titleFontFamily: "weathertext2",	
 			labelFontFamily: "weathertext2",	
 			minimum:-0.5,	
-			interval:5,	
+			interval:'auto',	
 			intervalType:"day",
 			xValueType: "dateTime",	
 			crosshair: {
@@ -139,7 +139,7 @@ return theD;}
 			
 		axisY:{
 		margin: 0,
-		interval:1,			
+		interval:'auto',			
 		lineThickness: 1,		
 		gridThickness: 1,	
 		gridDashType: "dot",	

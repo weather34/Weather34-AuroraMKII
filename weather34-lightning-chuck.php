@@ -130,7 +130,7 @@ else if ($weather["lightningyear"]>=0 ){echo '#d87040';}
 
 
 <div class="thelaststrike"> 
-<a href="lightning-almanac2.php" data-lity data-title="Lightning Almanac">
+<a href="weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">
 <?php  //weatherflow weather34 air lightning output
 if ($lightningseconds <120 ){ echo $lightningalert8." <orange>Just Now</orange>";}
 else if ($lightningseconds >=61 ){echo "&nbsp;".$info;
