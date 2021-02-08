@@ -32,14 +32,15 @@
 	<script type="text/javascript">
 
 
-function WEATHER34CHARTCOLORS(uv) {
-if (uv>=0 && uv<=1) {uvlevel=' hsl(75, 62%, 43%)';}
-else if (uv>0 && uv<=30) {uvlevel='hsl(19, 66%, 55%)';} 
-else if (uv>30 && uv<=1000) {uvlevel='hsl(7, 60%, 57%)';}           
-else {uvlevel='hsla(206, 12%, 27%, .4)';}
-return uvlevel;}
+//color the strikes based on amount
+function WEATHER34CHARTCOLORS(strikes) {
+if (strikes>=0 && strikes<=1) {strikeslevel=' hsl(75, 62%, 43%)';}
+else if (strikes>0 && strikes<=30) {strikeslevel='hsl(19, 66%, 55%)';} 
+else if (strikes>30 && strikes<=1000) {strikeslevel='hsl(7, 60%, 57%)';}           
+else {strikeslevel='hsla(206, 12%, 27%, .4)';}
+return strikeslevel;}
 
-function WEATHER34UVI(weather34Dvalue) {
+function WEATHER34strikes(weather34Dvalue) {
 if (weather34Dvalue>=0 && weather34Dvalue<1) {theD='No Storm';}
 else if (weather34Dvalue>=1 && weather34Dvalue<=30) {theD='Weak Storm';}
 else if (weather34Dvalue>30 && weather34Dvalue<=100) {theD='Moderate Storm';}
@@ -80,7 +81,7 @@ return theD;}
 				var rowData = allLinesArray[i].split(',');
 				if ( rowData[1] >-100)
 				//dataPoints2.push({label: rowData[0],y:parseFloat(rowData[12])});
-				dataPoints2.push({y:WEATHER34UVI(parseFloat(rowData[1]))});
+				dataPoints2.push({y:WEATHER34strikes(parseFloat(rowData[1]))});
 				
 				
 			}
@@ -176,7 +177,7 @@ return theD;}
 		
  data: [
 		{
-			//UV
+			//strikes
 			type: "column",		
 			showInLegend:false,
 			fillOpacity: .8,
@@ -185,7 +186,7 @@ return theD;}
 			yValueFormatString:"##.## Strikes",
 		},
 		{			
-			//UV phrase
+			//strikes phrase
 			type: "scatter",
 			//color:"rgba(68, 166, 181, 1.000)",
 			markerSize:0,
