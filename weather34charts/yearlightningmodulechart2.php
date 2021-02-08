@@ -33,17 +33,18 @@
 
 //color the strikes based on amount
 function WEATHER34CHARTCOLORS(strikes) {
-if (strikes>=0 && strikes<=1) {strikeslevel=' hsl(75, 62%, 43%)';}
-else if (strikes>0 && strikes<=30) {strikeslevel='hsl(19, 66%, 55%)';} 
-else if (strikes>30 && strikes<=1000) {strikeslevel='hsl(7, 60%, 57%)';}           
+if (strikes>=0 && strikes<=1) {strikeslevel='hsl(35, 77%, 58%)';}
+else if (strikes>1 && strikes<=30) {strikeslevel='hsl(19, 66%, 55%)';} 
+else if (strikes>30 && strikes<=100) {strikeslevel='hsla(19, 66%, 55%,.7)';} 
+else if (strikes>100 && strikes<=1000) {strikeslevel='hsl(7, 60%, 57%)';}           
 else {strikeslevel='hsla(206, 12%, 27%, .4)';}
 return strikeslevel;}
 
 function WEATHER34strikes(weather34Dvalue) {
 if (weather34Dvalue>=0 && weather34Dvalue<1) {theD='No Storm';}
 else if (weather34Dvalue>=1 && weather34Dvalue<=30) {theD='Weak Storm';}
-else if (weather34Dvalue>30 && weather34Dvalue<=100) {theD='Moderate Storm';}
-else if (weather34Dvalue>100 && weather34Dvalue<=1000) {theD='Strong Storm ';}
+else if (weather34Dvalue>30 && weather34Dvalue<=200) {theD='Moderate Storm';}
+else if (weather34Dvalue>200 && weather34Dvalue<=1000) {theD='Strong Storm ';}
 else {theD='No Data !';}
 return theD;}
 
