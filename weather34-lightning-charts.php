@@ -28,7 +28,7 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
     <meta charset="UTF-8">
     <title>Weather34 Lightning Charts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
+    <style>
   :root {
     --white: #ffffff;
     --light: #f5f5f5;
@@ -115,7 +115,7 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
     background: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    border: 1px solid hsla(217, 15%, 17%, .5);    
+    border:2px solid hsla(217, 15%, 17%, .5);   
     height: 185px;
     background:hsla(217, 15%, 17%, .3);
     background-image: var(--grid-lines);
@@ -143,6 +143,7 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
    
     text-decoration: none;
     color: var(--body-text-dark);
+    color:#009bb4
   }
   
  
@@ -182,7 +183,6 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
     color: #916392;
   }
   lblue{color:var(--rainblue);}
-  
   .info2a {
     position: absolute;
     margin-top: 40px;
@@ -193,23 +193,24 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
   
   
   .charttempmodule{position:absolute;margin:0 auto;margin-top:-15px;margin-left:10px;display:flex;justify-content: center;align-items: center;color: var(--body-text-dark);}
-  .lightning-text{position:absolute;margin-top:25px;border:1px solid hsla(217, 15%, 17%, 1);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textmonth{margin-left:120px;margin-top:25px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear{margin-left:240px;margin-top:25px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear2{margin-top:80px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear3{margin-top:80px;margin-left:120px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);
-  padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear4{margin-top:80px;margin-left:240px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-textyear5{margin-top:135px;margin-left:0px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
-  .lightning-timeago{margin-top:80px;margin-left:120px;position:absolute;border:1px solid hsla(217, 15%, 17%, .5);
+  .lightning-text{position:absolute;margin-top:25px;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textmonth{margin-left:110px;margin-top:25px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear{margin-left:110px;margin-top:80px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear2{margin-top:80px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear3{margin-top:80px;margin-left:110px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear4{margin-top:80px;margin-left:240px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-textyear5{margin-top:135px;margin-left:0px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
+  .lightning-timeago{margin-top:135px;margin-left:0px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);
     padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:auto;max-width:200px}
   
-  .credits{margin-top:5px;margin-left:40px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
-    align-items: center;width:200px;color: var(--body-text-dark);}
+  
+  .credits{margin-left:40px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
+    align-items: center;color: var(--body-text-dark);opacity: .5;width:max-content}
 
-    .credits2{margin-top:5px;margin-left:640px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
-    align-items: center;width:120px;color: var(--body-text-dark);}
-date{position:absolute;margin:0 auto;margin-left:10px;display:flex;justify-content: center;align-items: center;font-size:9px;color:#ccc}
+    .credits2{margin-left:540px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
+    align-items: center;color: var(--body-text-dark);opacity: .5;width:max-content}
+date{position:absolute;margin:0 auto;margin-left:10px;display:flex;padding:3px;border-radius: 3px;-webkit-border-radius: 3px;
+  justify-content: center;align-items: center;font-size:9px;color:#ccc;background:hsla(217, 15%, 17%, .8);width:max-content}
 
 lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolute;margin-top:0px;
     margin-left:10%;display:flex;justify-content: center;align-items: center;font-size:16px;color:rgba(82, 92, 97, 0.7)}
@@ -287,10 +288,11 @@ echo convert($lightningseconds);}?></lblue></div>
   </main>
 
   <div class="credits">
-<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
-Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div>
+
+Charts compiled with <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >CanvasJs.com </a>
+<br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</div>
 
 <div class="credits2">
-CSS/SVG/PHP Developed by weather34.com </div>
+CSS/SVG/PHP Developed by <a class="canvascreditlink" href="https://weather34.com/homeweatherstation" target="_blank" data-title="weather34.com" >weather34.com </div>
   
   
