@@ -655,9 +655,9 @@ valuetextheadinguv{position:relative;color:var(--body-text-dark);font-family:wea
 valuetextheadingbft,valuetextheadingbft1{position:relative;color:var(--body-text-dark);font-family:weathertext2;text-align:left;font-size:8px;left:-3px}
 valuetextheadingbft1{left:-6px}
 valuetextheadingsolar{position:relative;color:var(--body-text-dark);font-family:weathertext2;text-align:left;font-size:8.5px}
-.thelaststrike{position:absolute;left:210px;top:57px;margin:0;font-family:weathertext2;font-size:7.5px;color:var(--body-text-dark);width:100px}
+.thelaststrike{position:absolute;margin-left:215px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:max-content;max-width:200px;line-height:1.2;margin-top:42px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
 .thelaststrike interval{font-size:7.5px;font-family:weathertext2}
-.thelaststrike a{font-size:7.5px;color:var(--body-text-dark);font-family:weathertext2}
+.thelaststrike a{font-size:9px;color:var(--body-text-dark);font-family:weathertext2}
 a:hover{filter:brightness(110%);-webkit-filter:brightness(110%)}
 .forecastlink{color:var(--body-text-dark);text-transform:capitalize}
 .suntext1{color:var(--suntext)}
