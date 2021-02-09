@@ -1,10 +1,14 @@
 <?php include('livedata.php');error_reporting(0);?>
 <style>body{background:rgba(30, 31, 35, 1.000);}
+
 .webcamlarge{
--webkit-border-radius:4px;	-moz-border-radius:4px;	-o-border-radius:4px;	-ms-border-radius:4px;border-radius:4px;border:solid RGBA(84, 85, 86, 1.00) 2px;max-width:167vh;height:80vh;display:block;margin-left:auto;margin-right:auto;}
-.videoWeatherCamLarge{-webkit-border-radius:4px;	-moz-border-radius:4px;	-o-border-radius:4px;	-ms-border-radius:4px;border-radius:4px;
+-webkit-border-radius:4px;	-moz-border-radius:4px;	-o-border-radius:4px;	-ms-border-radius:4px;border-radius:4px;
+max-width:167vh;height:80vh;display:block;margin-left:auto;margin-right:auto;border:solid rgba(84, 85, 86, 0.2) 5px;
+width:167vh;height:93vh;display:block;margin-left:auto;margin-right:auto;}
+
+.videoWeatherCamLarge{-webkit-border-radius:4px;	-moz-border-radius:4px;	-o-border-radius:4px;	-ms-border-radius:4px;border-radius:4px;  
 border:solid rgba(76, 123, 160, 0.5) 5px;
-width:167vh;height:94vh;display:block;margin-left:auto;margin-right:auto;
+width:167vh;height:80vh;display:block;margin-left:auto;margin-right:auto;
 }
  a{color:#aaa;text-decoration:none} 
 .weather34darkbrowser{position:relative;background:0;width:96%;height:30px;margin:auto;margin-top:-5px;margin-left:0px;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;}
@@ -36,8 +40,10 @@ width:167vh;height:94vh;display:block;margin-left:auto;margin-right:auto;
 </style>
 </head>
 <body>
-   
-<!-- Aurora MKII TEMPLATE SIMPLE WEBCAM -add your url as shown below do NOT delete the class='webcam large' !!! -->
-    <iframe class="videoWeatherCamLarge" allowfullscreen webkitallowfullscreen mozallowfullscreen src="<?php echo $webcamurl?>" frameborder="0" ></iframe>
+  <!-- HOMEWEATHER STATION TEMPLATE SIMPLE WEBCAM -add your url as shown below do NOT delete the class='webcam large' !!! -->
+<?php if (!empty($videoWeatherCamURL) && $videoWeatherCamURL != ' ' && $videoWeatherCamURL != 'Null' && $videoWeatherCamURL != 'null'){?>
+    <iframe class="videoWeatherCamLarge" allowfullscreen webkitallowfullscreen mozallowfullscreen src="<?php echo $videoWeatherCamURL;?>" frameborder="0"></iframe>
+<?php } else {?>
+    <img src="<?php echo $webcamurl;?>?v=<?php echo date('YmdGis');?>" alt="weathercam" class="webcamlarge">
+<?php }?>
 </span>
-
