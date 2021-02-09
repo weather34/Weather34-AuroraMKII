@@ -3,12 +3,12 @@
 	#	CREATED FOR Aurora MKII version								   							   
 	# https://weather34.com/homeweatherstation/index.html 	
 	# Lightning Creates and adds month and year  csv data  
-	# 	Release: February 2021		
+	# 	Release: February 2021	TPLINK	
 	# 	                                                                                               
 	#   https://www.weather34.com 	                                                                   
 	#######################################################
 //0 (date-month-0)),
-//1 day lightning total)
+//1 day lightning total)  
 
 date_default_timezone_set($TZ);
 $date = date_create();
