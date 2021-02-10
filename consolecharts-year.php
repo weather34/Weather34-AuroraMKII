@@ -68,7 +68,20 @@
     else if($purpleairhardware=="no" && $davisairquality=='yes'){echo "";} 
     else echo "<li><div id=theclock></div></li>";?>    
     <?php };?>
-    
+
+    <?php //no uvsensor but davis air quality show clock and sun    
+    if($uvsensor=="no" && $davisairquality=='yes'){?>   
+    <li><div id=theclock></div></li>  
+    <li><div id=moonsun></div></li>         
+    <?php };?>
+
+
+    <?php //no uvsensor but purple air quality show clock and sun    
+    if($uvsensor=="no" && $purpleairhardware=="yes"){?>   
+    <li><div id=theclock></div></li>  
+    <li><div id=moonsun></div></li>         
+    <?php };?>
+
     <li2><div id=moon></div></li2> 
     <li2><div id=sun></div></li2> 
     <li2><div id=time-date></div></li2>  

@@ -22,6 +22,9 @@ var b=setInterval(function(){c.load("yearuvindexmodule.php")},11300000 )})})(jQu
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#solar").show()}});var c=a("#solar");c.load("yearsolarmodule.php");
 var b=setInterval(function(){c.load("yearsolarmodule.php")},11300000 )})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#winddir").show()}});var c=a("#winddir");c.load("yearwinddirmodule.php");
+
+(function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#moonsun").show()}});var c=a("#moonsun");c.load("weather34-sun-moon.php");var b=setInterval(function(){c.load("weather34-sun-moon.php")},11300000)})})(jQuery);
+
 var b=setInterval(function(){c.load("yearwinddirmodule.php")},11300000 )})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#theclock").show()}});var c=a("#theclock");c.load("weather34-clockphone.php");var b=setInterval(function(){c.load("weather34-clockphone.php")},11300000 )})})(jQuery);
 

@@ -17,6 +17,7 @@
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#solar").show()}});var c=a("#solar");c.load("monthsolarmodule.php");var b=setInterval(function(){c.load("monthsolarmodule.php")},11300000 )})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#winddir").show()}});var c=a("#winddir");c.load("monthwinddirmodule.php");var b=setInterval(function(){c.load("monthwinddirmodule.php")},11300000 )})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#theclock").show()}});var c=a("#theclock");c.load("weather34-clockphone.php");var b=setInterval(function(){c.load("weather34-clockphone.php")},11300000 )})})(jQuery);
+(function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#moonsun").show()}});var c=a("#moonsun");c.load("weather34-sun-moon.php");var b=setInterval(function(){c.load("weather34-sun-moon.php")},11300000)})})(jQuery);
 
 
 
