@@ -20,21 +20,24 @@ $file_live2=file_get_contents($livedata);
 	$weather["lightningyear"]      = $weather34lightning[79];
 ?>
  
+ 
  <?php //weather34 timeago lightning
-$lightningseconds = $weather["lightning2timeago"];function convert($lightningseconds){$weather34timeago = "";$days = intval(intval($lightningseconds) / (3600*24));
-  $hours = (intval($lightningseconds) / 3600) % 24;$minutes = (intval($lightningseconds) / 60) % 60;
-  if($days> 1){$weather34timeago .=  "Extra Info";}
-  else if($days> 1){$weather34timeago .= "$days Days ";}
-  else {if($days>0){$weather34timeago .= "$days Day ";}
-  if($hours > 1 ){$weather34timeago .= "$hours Hours ";}
-  else if($hours >24 && $days>0){$weather34timeago .= "";}
-  else if($hours >0 && $days<1){$weather34timeago .= "$hours Hour ";}
-  else if($hours <=0){$weather34timeago .= " ";}
-  if($minutes >0 && $minutes<61 && $days<1){$weather34timeago .= "Ago";}
-  else if($minutes >0 && $days<1){$weather34timeago .= "$minutes Mins Ago";}        
-  else if($minutes >=0 && $minutes<120 && $days<1){$weather34timeago .= "$minutes Min Ago";}
-  }return "<interval>".$weather34timeago."</interval>";}
-
+// calculate the strike time ago
+$lightningseconds = $weather["lightningtimeago"];
+function convert($lightningseconds){$weather34timeago = "";
+$days = intval(intval($lightningseconds) / (3600*24));
+$hours = (intval($lightningseconds) / 3600) % 24;
+$minutes = (intval($lightningseconds) / 60) % 60;
+if($days>= 1){$weather34timeago .=  "Extra Info";}
+else if($days> 1){$weather34timeago .= "$days Days ";}
+else {if($days>0){$weather34timeago .= "$days Day ";}
+if($hours > 1 ){$weather34timeago .= "$hours Hours ";}
+else if($hours >=24 && $days>0){$weather34timeago .= "";}
+else if($hours >0 && $days<1){$weather34timeago .= "$hours Hour ";}
+else if($hours <=0){$weather34timeago .= " ";}
+if($minutes >0 && $minutes<61 && $days<1){$weather34timeago .= "$minutes Mins Ago";}         
+else if($minutes >0 && $minutes<59 && $days<1){$weather34timeago .= "$minutes Min Ago";}
+}return "<interval>".$weather34timeago."</interval>";}
 ?>
 <div class="sunblock">
 <div class="lightningdesc2">Lightning</div>

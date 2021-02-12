@@ -28,9 +28,9 @@ $minutes = (intval($lightningseconds) / 60) % 60;
 if($days>= 1){$weather34timeago .=  "Extra Info";}
 else if($days> 1){$weather34timeago .= "$days Days ";}
 else {if($days>0){$weather34timeago .= "$days Day ";}
-if($hours > 1 ){$weather34timeago .= "$hours Hrs ";}
+if($hours > 1 ){$weather34timeago .= "$hours Hours ";}
 else if($hours >=24 && $days>0){$weather34timeago .= "";}
-else if($hours >0 && $days<1){$weather34timeago .= "$hours Hr ";}
+else if($hours >0 && $days<1){$weather34timeago .= "$hours Hour ";}
 else if($hours <=0){$weather34timeago .= " ";}
 if($minutes >0 && $minutes<61 && $days<1){$weather34timeago .= "$minutes Mins Ago";}         
 else if($minutes >0 && $minutes<59 && $days<1){$weather34timeago .= "$minutes Min Ago";}

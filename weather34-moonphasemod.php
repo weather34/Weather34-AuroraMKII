@@ -80,7 +80,7 @@ else!function(){
 if(void 0===supportsVml.supported){
 var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
 var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
-  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.8)};
+  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
   phase_junk(moon_day(new Date)),window.onresize=function(){center()},center(); 
 </script>
 <?php 

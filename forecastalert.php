@@ -1194,84 +1194,89 @@ $wuskydayTime10=str_replace("Sun", "Sunday", $wuskydayTime10);
 $wuskydayTime1=str_replace("TM Night","Tomorrow Night",$wuskydayTime1);
 $wuskydayTime2=str_replace("TM Night","Tomorrow Night",$wuskydayTime2);
 $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);	
+
+if ($wuapiunit=='e'){$snowunit="in";}
+else if ($wuapiunit=='m'){$snowunit="cm";}
+else if ($wuapiunit=='s'){$snowunit="cm";}
+else if ($wuapiunit=='h'){$snowunit="cm";}
 date_default_timezone_set($TZ);
 //snow
 if ($wuskydaysnow>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime."</deepblue><br><weather34-alertunit> ".$wuskydaysnow."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow1>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime1."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime1."</deepblue><br><weather34-alertunit> ".$wuskydaysnow1."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow2>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime2."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime2."</deepblue><br><weather34-alertunit> ".$wuskydaysnow2."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow3>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime3."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime3."</deepblue><br><weather34-alertunit> ".$wuskydaysnow3."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow4>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime4."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime4."</deepblue><br><weather34-alertunit> ".$wuskydaysnow4."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}        
   else if ($wuskydaysnow5>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime5."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime5."</deepblue><br><weather34-alertunit> ".$wuskydaysnow5."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow6>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime6."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime6."</deepblue><br><weather34-alertunit> ".$wuskydaysnow6."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow7>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
    <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime7."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime7."</deepblue><weather34-alertunit> ".$wuskydaysnow7."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow8>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime8."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime8."</deepblue><br><weather34-alertunit> ".$wuskydaysnow8."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskydaysnow9>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime9."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime9."</deepblue><br><weather34-alertunit> ".$wuskydaysnow9."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
    else if ($wuskydaysnow10>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <deepblue>Snow</deepblue> ".$snow_icon."</weather34-alertmessage> <br>
-  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime10."</deepblue><weather34-alertunit> </weather34-alertunit>
+  <weather34-alertmessage>Expect Snow ".$snow_icon."</weather34-alertmessage> <br>
+  <weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime10."</deepblue><br><weather34-alertunit> ".$wuskydaysnow10."".$snowunit."</weather34-alertunit>
   </weather34-alertvalue></div></div>";}
 
 //thunderstorm
@@ -1279,163 +1284,164 @@ else if ($wuskythunder>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder1>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime1."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder2>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime2."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder3>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime3."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder4>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime4."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}        
   else if ($wuskythunder5>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime5."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder6>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime6."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder7>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
    <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime7."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder8>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime8."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
   else if ($wuskythunder9>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime9."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}
    else if ($wuskythunder10>0 ){echo "
   <div class='weather34alert' id='weather34message-alert'> 
  <div class='weather34-notification'> 
   <weather34-alertheader><h2>Awareness $warmalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-  <weather34-alertmessage>Expect <orange>Thunderstorms</orange> ".$lightning_icon."</weather34-alertmessage> <br>
+  <weather34-alertmessage>Expect Thunderstorms ".$lightning_icon."</weather34-alertmessage> <br>
   <weather34-alertvalue style='font-size:.8rem;'><orange>".$wuskydayTime10."</orange><weather34-alertunit> </weather34-alertunit>
   </weather34-alertvalue></div></div>";}     
 
+
 //rain
 else if ($wuskydayprecipIntensity>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity1>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime1."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity2>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime2."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity3>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime3."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity4>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime4."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}        
-else if ($wuskydayprecipIntensity5>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime5."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity6>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime6."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity7>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
- <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime7."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity8>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime8."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
-else if ($wuskydayprecipIntensity9>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime9."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}
- else if ($wuskydayprecipIntensity10>0 ){echo "
-<div class='weather34alert' id='weather34message-alert'> 
-<div class='weather34-notification'> 
-<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
-<weather34-alertmessage>Expect <deepblue>Rain</deepblue> ".$rain_icon."</weather34-alertmessage> <br>
-<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime10."</deepblue><weather34-alertunit> </weather34-alertunit>
-</weather34-alertvalue></div></div>";}     
-    //add more if required
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity1>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime1."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity1."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity2>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime2."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity2."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity3>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime3."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity3."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity4>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime4."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity4."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}        
+	else if ($wuskydayprecipIntensity5>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime5."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity5."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity6>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime6."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity6."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity7>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	 <weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime7."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity7."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity8>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime8."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity8."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	else if ($wuskydayprecipIntensity9>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime9."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity9."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}
+	 else if ($wuskydayprecipIntensity10>0 ){echo "
+	<div class='weather34alert' id='weather34message-alert'> 
+	<div class='weather34-notification'> 
+	<weather34-alertheader><h2>Awareness $coldalertnotif</h2> <span class='weather34-timestamp'>".$maxclock." ". date('H:i')."</span> </weather34-alertheader>  
+	<weather34-alertmessage>Expect Rain ".$rain_icon."</weather34-alertmessage> <br>
+	<weather34-alertvalue style='font-size:.8rem;'><deepblue>".$wuskydayTime10."</deepblue><br><weather34-alertunit>".$wuskydayprecipIntensity10."".$rainunit." </weather34-alertunit>
+	</weather34-alertvalue></div></div>";}     
+		//add more if required
 ?>
 
 <script> //fire the weather34 notification
 function closeweather34alert(el) { el.addClass('weather34alert-hide');}
 $('.js-messageClose').on('click', function(e) { closeweather34alert($(this).closest('.weather34alert'));});
-$(document).ready(function() {  setTimeout(function() { closeweather34alert($('#weather34message-alert')); }, 10000);});
+$(document).ready(function() {  setTimeout(function() { closeweather34alert($('#weather34message-alert')); }, 10000);}); 
 </script>
