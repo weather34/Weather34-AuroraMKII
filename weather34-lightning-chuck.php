@@ -20,7 +20,7 @@ $lightningalert8='<svg width="8" height="8" fill="#ff552e" viewBox="0 0 20 20"><
  
  <?php //weather34 timeago lightning
 // calculate the strike time ago
-$lightningseconds = $weather["lightning2timeago"];
+$lightningseconds = $weather["lightningtimeago"];
 function convert($lightningseconds){$weather34timeago = "";
 $days = intval(intval($lightningseconds) / (3600*24));
 $hours = (intval($lightningseconds) / 3600) % 24;
