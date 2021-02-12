@@ -424,6 +424,7 @@ theword{position:absolute;margin-left:15%;font-size:36px;font-family:weathertext
 monthchart{position:absolute;display:flex;font-size:11px;top:5px;margin-left:35px;width:182px;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);padding:3px;border-radius:5px;line-height:1}
 .canvascreditlink{font-size:8px;font-family:weathertext2;z-index:100}
 .canvascredit a,.canvascredituv a{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:80px;top:380px;width:250px;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;line-height:1.5;background-image:var(--grid-lines);background-size:2px 2px;justify-content:center;align-items:center;vertical-align:middle;height:30px}
+.weather34credit{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:470px;top:380px;width:max-content;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;line-height:1.5;background-image:var(--grid-lines);background-size:2px 2px;justify-content:center;align-items:center;vertical-align:middle;height:20px}
 .canvascredituv{display:none}
 @media screen and (max-width:960px){
 .nav-bottom .weather34-acplug,.nav-bottom .weather34-battery,.showicon,.sunriset-set,.version,aurora,chartpage{display:none}

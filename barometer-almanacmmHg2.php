@@ -21,6 +21,13 @@ $weather["barometer_min"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
 Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>
+
+
+<div class="weather34credit">
+<a class="canvascreditlink" href="https://weather34.com/homeweatherstation" target="_blank" data-title="weather34.com" >
+CSS/SVG/PHP developed by weather<blue>34</blue></a></div></div>
+
+
 <div class="almanacouterboxrain">
 <br><br>
 <div class="almanacchartx">
