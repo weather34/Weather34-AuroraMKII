@@ -1,6 +1,6 @@
 <?php include('livedata.php');?>
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
-<theword>Rainfall </theword>
+<theword>Rainfall (Precipitation)</theword>
 <extrainfoicon><?php echo $weather34_rain_icon;?></extrainfoicon>
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
@@ -13,7 +13,7 @@ CSS/SVG/PHP developed by weather<blue>34</blue></a></div></div>
 <div class="almanacouterboxrain">
 <br><br>
 <div class="almanacchartx">
-<monthchart>Current Day Rainfall Chart</monthchart>
+<monthchart>Current Day Precipitation Chart</monthchart>
 <iframe  class="charttempmodule" src="weather34charts/todayrainfallmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
 </div>
 <div class="almanacx"><div class="almanac-content">

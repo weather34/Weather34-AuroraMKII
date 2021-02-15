@@ -55,12 +55,12 @@ $metar34viskm        = number_format($metar34visibility*0.001,1) ;
 
 
 //snow
-if($metar34conditions1=='SN' || $metar34conditions1 =='-RASN' || $metar34conditions1 =='-SN' || $metar34conditions1 =='+SN' || $metar34conditions1 =='SG'){
-if ($now >$suns2 ){$sky_icon='nt_snow.svg';} 
-else if ($now <$sunrs2 ){$sky_icon='nt_snow.svg';} 
-else $sky_icon='snow.svg'; 
-$sky_desc='Snow<br>Showers';
-}
+if($metar34conditions1=='SN' || $metar34conditions1 =='-RASN' || $metar34conditions1 =='-SN' || $metar34conditions1 =='+SN' || $metar34conditions1 =='SG' || $metar34conditions=='SHSN' || $metar34conditions=='RESHSN'){
+	if ($now >$suns2 ){$sky_icon='nt_snow.svg';} 
+	else if ($now <$sunrs2 ){$sky_icon='nt_snow.svg';} 
+	else $sky_icon='snow.svg'; 
+	$sky_desc='Snow<br>Showers';
+	}
 //LIGHT RAIN
 else if($metar34conditions =='-SHRA' || $metar34conditions =='SHRA' || $metar34conditions=='-RA'){
 if ($now >$suns2 ){$sky_icon='nt_rain.svg';} 

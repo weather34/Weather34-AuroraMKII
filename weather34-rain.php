@@ -5,7 +5,7 @@
 	# https://www.weather34.com/homeweatherstation/ 	                                                                   
 	#################################################
 include('livedata.php');date_default_timezone_set($TZ);?>
-<div class="modulecaptionb">Rainfall</div>
+<div class="modulecaptionb">Precipitation</div>
 
 <todaysrain>Today</todaysrain>
 <div class="button button-dialrain">               
@@ -48,13 +48,13 @@ echo $min1." ";
 // weather34 sez lets get rainfall hours or minutes ago if within last 8 hours
 if ($seconds_ago >28800) {
 echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";}
-else if ($seconds_ago >= 7200) { echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
+else if ($seconds_ago >= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
 else if ($seconds_ago >= 3600) {
-  echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
+  echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
   else if ($seconds_ago <=119) { 
-  echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minute Ago'; }
+  echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minute Ago'; }
 else if ($seconds_ago >119) {
-  echo 'Last Rainfall&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minutes Ago'; }
+  echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minutes Ago'; }
 ?>
 </div>
 
@@ -66,7 +66,7 @@ else if ($meteobridgeapi[8]>=60){echo  $umbrella." <rainphrasetext>Very Heavy";}
 else if ($meteobridgeapi[8]>=40){echo $umbrella. " <rainphrasetext>Heavy";}
 else if ($meteobridgeapi[8]>=10){echo $umbrella. " <rainphrasetext>Moderate";}
 else if ($meteobridgeapi[8]>=2.5){echo $umbrella. " <rainphrasetext>Steady";}
-else if ($meteobridgeapi[8]>0){echo $umbrella. " <rainphrasetext>Light Rain";}
+else if ($meteobridgeapi[8]>0){echo $umbrella. " <rainphrasetext>Precipitation";}
 echo "<deepblue> ".$weather["rain_rate"]."</deepblue> <smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3> p/hr</smalltrainunit3>";
 }
 else  echo $min1 ." ".date('Y')." Total <deepblue>".$weather["rain_year"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";

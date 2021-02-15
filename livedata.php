@@ -8,7 +8,7 @@
 ########################################################
 
  include('settings.php');include('shared.php');error_reporting(0); 
- 	date_default_timezone_set($TZ);	
+ 	date_default_timezone_set($TZ);	 
 //meteobridge - api 
 if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$file_live = file_get_contents($livedata);
@@ -25,6 +25,9 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 		$meteobridgeapi[23] = number_format((float)$meteobridgeapi[23],0,'.','');
 		}	
 	}
+
+	
+  
 // Meteobridge api starts record with dd/mm/yyyy hh:mm:ss
 	$recordDate = mktime(substr($meteobridgeapi[1], 0, 2), substr($meteobridgeapi[1], 3, 2), substr($meteobridgeapi[1], 6, 2),
 	substr($meteobridgeapi[0], 3, 2), substr($meteobridgeapi[0], 0, 2), $year);
@@ -87,7 +90,8 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["wind_run"]           = number_format($weather["wind_speed"]/24,3); //10 minute wind run
 	$weather["swversion"]		   = $meteobridgeapi[38];
 	$weather["build"]			   = $meteobridgeapi[39];
-	$weather["actualhardware"]	   = $meteobridgeapi[42];	
+	$weather["actualhardware"]	   = $meteobridgeapi[42];
+	$weather["stationtype"]	       = $meteobridgeapi[25];		
 	$weather["uptime"]		       = $meteobridgeapi[81];//uptime in seconds
 	$weather["vpforecasttext"]	   = $meteobridgeapi1[1];//davis console forecast text
 	$weather["temp_avgtoday"]	   =$meteobridgeapi[152];	
@@ -112,7 +116,7 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
     $windrunformula=$windrunhr=date('G')+$windrunmin;    
     $weather34windrunms=$meteobridgeapi[158]*2.23694;
     $windrunhr=date('G');$weather["windrun341"]=$weather34windrunms*number_format($windrunformula,1);   
-
+	
 //weather34 meteobridge real feel 02-08-2018 based on cumulus forum formula (THW)
 	$weather['realfeel'] = round(($weather['temp'] + 0.33*($weather['humidity']/100)*6.105*exp(17.27*$weather['temp']/(237.7+$weather['temp']))- 0.70*$weather["wind_speed"] - 4.00),1);
 //humidex josep
@@ -623,6 +627,7 @@ if ($pressureunit != $weather["barometer_units"]) {
 		mbToin($weather, "barometer_trendt");		
 		$weather["barometer_units"] = $pressureunit;
 	}
+	
 	else if (($pressureunit == "mb" || $pressureunit == 'hPa') && $weather["barometer_units"] == 'inHg') {
 		inTomb($weather, "barometer");	
 		inTomb($weather, "thb0seapressamax");
@@ -701,6 +706,10 @@ $cloudtempc=0.55555556*($cloudtempf - 32);
 
 $weather['airquality']= $meteobridge[175];
 //davis air quality
+if ($weather["stationtype"]=="GW1000" || $weather["stationtype"]=="gw1000" || $weather["stationtype"]=="GW1001"  || 
+	$weather["stationtype"]=="gw1001" || $weather["stationtype"]=="GW1002" || $weather["stationtype"]=="gw1002"  || 
+	$weather["stationtype"]=="GW1003" || $weather["stationtype"]=="gw1003" || $weather["stationtype"]=="DP1500"){
+	$weather['rain_24hrs']=0;$weather["temp"]=0 ;$weather["dewpoint"]=0 ;$weather["barometer"]=0;$weather["rain_today"]=0;$weather["wind_gust_speed"]=0;$weather["wind_speed"]=0;$weather["wind_direction"]=0;$weather['wind_speed_bft']=0;$weather["humidity"]=0;$weather["uv"]=0;$weather["solar"]=0;}
 $weather["airquality-davispm1"]=$meteobridgeapi[180];
 $weather["airquality-davispm25"]=$meteobridgeapi[181];
 $weather["airquality-davispm10"]=$meteobridgeapi[182];
@@ -752,5 +761,6 @@ $file_live2=file_get_contents('mbridge/weather34-lightning.txt');
   $weather["lightningtimeago"]   = $weather34lightning[2];
 	$weather["lightningmonth"]     = $weather34lightning[4];
   $weather["lightningyear"]      = $weather34lightning[5];
-  $weather["lightningmax10"]     = $weather34lightning[6];
+  $weather["lightningmax10"]     = $weather34lightning[6]; 
+  
 ?>

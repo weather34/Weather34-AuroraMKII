@@ -1,5 +1,5 @@
 <?php include('livedata.php');?>
-<div class="almanac-word">Rainfall</div>
+<div class="almanac-word">Precipitation</div>
 <br><br>
 <div class="almanac"><div class="almanac-content">
 <?php  //month 

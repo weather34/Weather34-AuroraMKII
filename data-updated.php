@@ -32,4 +32,3 @@ echo get_modified_line($weather34updatefile);
 if(file_exists($livedata)&&time()- filemtime($livedata)>300)echo $wirelessoffline;
 else echo $wireless?><?php echo $weather34timeago?>
 </div>
-

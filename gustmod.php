@@ -14,7 +14,17 @@ else if($meteobridgeapi[32]>=1.3){echo "<green>" .number_format($weather["wind_g
 else if($meteobridgeapi[32]>=0){echo "<green>" .number_format($weather["wind_gust_speed_max"],$numberformat)."</green>&nbsp;<smalltempunit2>".$weather["wind_units"];}
 echo "</smalltempunit2>";echo "<span style='position:relative;top:1px'> ".$maxclock." </span>"; echo $weather["winddmaxtime"];
 ?> </div>
-
+<?php if ($weather["stationtype"]=="GW1000" || $weather["stationtype"]=="gw1000" || $weather["stationtype"]=="GW1001" || 
+$weather["stationtype"]=="gw1001" || $weather["stationtype"]=="GW1002" || $weather["stationtype"]=="gw1002" || $weather["stationtype"]=="GW1003" || 
+$weather["stationtype"]=="gw1003" || $weather["stationtype"]=="DP1500"){
+  echo'
+<section id="weather34warning" class="weather34-warning-proof">
+<div class="weather34-hardwarenotifications"><div class="weather34-hardwarenotifications-container">
+<div class="weather34-hardwarenotifications-image-wrapper">'.$hardwarealertnotif.'</div>
+ <div class="weather34-hardwarenotifications-content-wrapper">
+<p class="weather34-hardwarenotifications-content">Your Weather Station Hardware <br>Is Not Compatible <br>with this Weather<blue>34</blue> Template </p>
+</div></div></div></section>
+';}?>
 <div class="maxbftgauge">
 <?php  //Wind Run
 echo $weather34_windrun_icon." Wind Run ";
@@ -25,7 +35,8 @@ if ($distanceunit=='mi'){echo '&nbsp;<deepblue>'.number_format($weather["windrun
 <div class="button button-dial">                
 <div class="button-dial-top"></div>
 <realfeel>
-<?php  //max last 10 mins
+<?php  
+//max last 10 mins
 if ( $weather['wind_speed_bft']>=12){echo "Hurricane";echo $heatindexalert8;}
 else if ($weather['wind_speed_bft']>=11){echo "Violent Storm";echo $heatindexalert8;}
 else if ($weather['wind_speed_bft']>=10){echo "Storm";echo $heatindexalert8;}
@@ -144,13 +155,6 @@ else if ($weather["wind_units"]=="m/s" && $weather['wind_gust_speed']>=6){echo  
 else if ($weather["wind_units"]=="m/s" && $weather['wind_gust_speed']>=2.77){echo  "0&nbsp;&nbsp;<yellow>".$weather['wind_gust_speed']."</yellow>&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
 else if ($weather["wind_units"]=="m/s" && $weather['wind_gust_speed']>=1.38){echo  "<green>".$weather['wind_gust_speed']."</green>&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
 else if ($weather["wind_units"]=="m/s" && $weather['wind_gust_speed']>=0){echo  "<green>".$weather['wind_gust_speed']."</green>&nbsp;&nbsp;2&nbsp;&nbsp;6&nbsp;&nbsp;8&nbsp;&nbsp;11&nbsp;&nbsp;14&nbsp;&nbsp;16+&nbsp;&nbsp;&nbsp;";}
-
-
-
-
-
-
-
 echo "<smalltempunit2>&nbsp;".$weather["wind_units"];?></smalltempunit2>
 </valuetextheading5>
 <div class=sunratebar>
@@ -166,7 +170,6 @@ elseif ($meteobridgeapi[6]>=0) {echo '#00adbd';}?>
 </div></div></div>
 
 <div class=extrainfo><a href='wind-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
-
 
 <div class="weather-tempicon-identity" ><?php 
 //icon

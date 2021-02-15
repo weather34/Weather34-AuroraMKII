@@ -18,7 +18,17 @@ else if(anytoC($weather["temp_today_high"])<40){ echo "<icon-36-40>".$weather["t
 else if(anytoC($weather["temp_today_high"])<100){ echo "<icon-41-45>".$weather["temp_today_high"]."</icon-41-45>";}
 echo "&deg; ";echo $maxclock." ".$weather["tempdmaxtime"];
 ?></div>
-
+<?php if ($weather["stationtype"]=="GW1000" || $weather["stationtype"]=="gw1000" || $weather["stationtype"]=="GW1001" || 
+$weather["stationtype"]=="gw1001" || $weather["stationtype"]=="GW1002" || $weather["stationtype"]=="gw1002" || $weather["stationtype"]=="GW1003" || 
+$weather["stationtype"]=="gw1003" || $weather["stationtype"]=="DP1500"){
+echo'
+<section id="weather34warning" class="weather34-warning-proof">
+<div class="weather34-hardwarenotifications"><div class="weather34-hardwarenotifications-container">
+<div class="weather34-hardwarenotifications-image-wrapper">'.$hardwarealertnotif.'</div>
+ <div class="weather34-hardwarenotifications-content-wrapper">
+<p class="weather34-hardwarenotifications-content">Your Weather Station Hardware <br>Is Not Compatible <br>with this Weather<blue>34</blue> Template </p>
+</div></div></div></section>
+';}?>
 <div class="maxbftgauge">
 <?php  //Min
 echo $mintodayicon." ";

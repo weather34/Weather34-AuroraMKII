@@ -25,7 +25,6 @@ var b=setInterval(function(){c.load("data-updated.php")},10000)})})(jQuery);//10
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#forecastalert").show()}});var c=a("#forecastalert");c.load("forecastalert.php");
 var b=setInterval(function(){c.load("forecastalert.php")},900000)})})(jQuery);//15 minutes
 </script>
-
 <script>
 var clockID;var yourTimeZoneFrom='<?php echo $UTC?>';var d=new Date();
 var weekdays=[];
