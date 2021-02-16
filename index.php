@@ -132,7 +132,7 @@ include_once('livedata.php');include_once('updater2.php');?>
 <weather34-rightfootericons>
 
 <a href="index.php" data-title="Refresh"> <?php echo $weather34refr?></a>
-<aurora>Aurora MKII</aurora>
+<aurora>Aurora MKII <?php echo $weather["stationtype"]?></aurora>
 <div class="weather34-aurora" ><a  href="info.html" data-lity data-title="Weather34"> <img src="images/weather34-logo-small.svg" width="23px" height="23px" ></a></div>
 </weather34-rightfootericons>
 </div>

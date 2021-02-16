@@ -324,7 +324,7 @@ wuprob{color:var(--blue);display:flex;font-size:6pt;line-height:1;margin-top:0;p
 .wuicon-2{margin-top:82px;position:absolute;margin-left:15px;padding-top:5px;z-index:10}
 .wuaheadforetop{display:flex;position:absolute;right:35%;top:7px;font-family:weathertext2;font-size:8px;color:var(--body-text-light);text-shadow:none}
 .showicon2{display:none}
-aurora{position:relative;font-size:1em;font-family:weathertext2;margin-left:50px;opacity:.2;top:5px}
+aurora{position:absolute;width:max-content;font-size:.75em;font-family:weathertext2;margin-left:40px;opacity:.3;margin-top:15px;text-shadow:var(--text-shadow)}
 .weather-aqi-identity,.weather-clockicon-identity,.weather-directionicon-identity,.weather-icon-identity,.weather-icon-identity-wind,.weather-indoor-tempicon-identity,.weather-indoor-tempicon-identity2,.weather-pressureicon-identity,.weather-rain-icon-identity,.weather-simsek-identity,.weather-sunpos-identity,.weather-tempicon-identity{position:absolute;width:2rem;height:1.2rem;margin-left:235px;margin-top:-25px;z-index:10;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .weather-icon-identity{width:2rem;height:1rem;margin-left:120px;margin-top:45px}
 .weather-icon-identity-wind{width:2rem;height:1rem;margin-left:180px;margin-top:10px;border-left:0}
@@ -385,12 +385,12 @@ li2{display:none}
 .weather34-tablet{border:0}
 .grid-container{display:flex;flex-direction:row;flex-wrap:wrap;width:99%;display:grid;grid-template-columns:repeat(1,1fr);grid-template-rows:repeat(1,1fr);grid-column-gap:3px;grid-row-gap:3px}
 }
-.weather34-warning-proof{position:fixed;top:10%;left:33%;margin:0 auto;z-index:9999999999999!important}.weather34-warning-proof .weather34-hardwarenotifications{width:320px;border:0;text-align:left;z-index:99999;box-sizing:border-box;font-weight:400;border-radius:6px;box-shadow:2px 2px 10px 2px rgba(11,10,10,.2);background:hsla(230,9%,13%,1);position:relative;cursor:pointer}
+.weather34-warning-proof{position:fixed;top:10%;left:33%;margin:0 auto;z-index:9999999999999!important}
+.weather34-warning-proof .weather34-hardwarenotifications{width:320px;border:0;text-align:left;z-index:99999;box-sizing:border-box;font-weight:400;border-radius:6px;box-shadow:2px 2px 10px 2px rgba(11,10,10,.2);background:hsla(230,9%,13%,1);position:relative;cursor:pointer}
 .weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container{display:flex!important;align-items:center;height:80px;font-weight:400;text-shadow:none}
 .weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container .weather34-hardwarenotifications-image-wrapper img{width:60px;overflow:hidden;object-fit:cover;margin-left:10px}
 .weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container .weather34-hardwarenotifications-image-wrapper svg{width:60px;overflow:hidden;object-fit:cover;margin-left:10px}
-.weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container .weather34-hardwarenotifications-content-wrapper{margin:0;height:100%;
-    color:#eee;padding-left:20px;padding-right:20px;border-radius:0 6px 6px 0;flex:1;display:flex!important;flex-direction:column;justify-content:center}
+.weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container .weather34-hardwarenotifications-content-wrapper{margin:0;height:100%;color:#eee;padding-left:20px;padding-right:20px;border-radius:0 6px 6px 0;flex:1;display:flex!important;flex-direction:column;justify-content:center}
 .weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container .weather34-hardwarenotifications-content-wrapper .weather34-hardwarenotifications-content{font-family:inherit!important;margin:0!important;padding:0!important;font-size:14px;line-height:16px}
 .weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container .weather34-hardwarenotifications-content-wrapper .weather34-hardwarenotifications-content small{margin-top:3px!important;display:block!important;font-size:12px!important;opacity:.8}
 .weather34-warning-proof .weather34-hardwarenotifications .custom-close{position:absolute;top:8px;right:8px;height:12px;width:12px;cursor:pointer;transition:.2s ease-in-out;transform:rotate(45deg);opacity:0}

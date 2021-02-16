@@ -1853,7 +1853,7 @@ Type your Email (Contact) if email display icon is set to yes
 
     <br>
     <div class= "stationvalue">
-Check<b>WX</b> Metar API KEY you need to sign up here for free API key <br><a href="https://www.checkwx.com/signup" title="https://www.checkwx.com/signup" target="_blank"><span style="color:#fff;">https://www.checkwx.com/signup</a> 
+Check<b>WX</b> Metar API KEY you need to sign up here for free API key <br><a href="https://www.checkwxapi.com/auth/signup" title="https://www.checkwxapi.com/auth/signup" target="_blank"><span style="color:#fff;">https://www.checkwxapi.com/auth/signup</a> 
 <img src="images/checkwx.svg" style="width:15%;float:right;margin-top:10px;margin-right:20px;">
 </div>
 <img src="images/checkwx.svg" style="width:15%;float:right;margin-top:10px;margin-right:20px;">
@@ -1990,3 +1990,4 @@ Font Size for Temperature/Dewpoint/Humidity/Wind Modules</div>
 </p>
         </div>
     </div>
+    
