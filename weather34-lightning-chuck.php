@@ -28,9 +28,9 @@ $minutes = (intval($lightningseconds) / 60) % 60;
 if($days>= 1){$weather34timeago .=  "Extra Info";}
 else if($days> 1){$weather34timeago .= "$days Days ";}
 else {if($days>0){$weather34timeago .= "$days Day ";}
-if($hours > 1 ){$weather34timeago .= "$hours Hours ";}
+if($hours > 1 ){$weather34timeago .= "$hours Hrs ";}
 else if($hours >=24 && $days>0){$weather34timeago .= "";}
-else if($hours >0 && $days<1){$weather34timeago .= "$hours Hour ";}
+else if($hours >0 && $days<1){$weather34timeago .= "$hours Hr ";}
 else if($hours <=0){$weather34timeago .= " ";}
 if($minutes >0 && $minutes<61 && $days<1){$weather34timeago .= "$minutes Mins Ago";}         
 else if($minutes >0 && $minutes<59 && $days<1){$weather34timeago .= "$minutes Min Ago";}
@@ -67,7 +67,7 @@ else if ($weather["lightningmonth"]>=300){echo "0 100 200 <orange>".$weather["li
 else if ($weather["lightningmonth"]>=200 ){echo "0 100 150 <orange>".$weather["lightningmonth"]."</orange> 300 400 500";}
 else if ($weather["lightningmonth"]>=100 ){echo "0 50 <orange>".$weather["lightningmonth"]."</orange> 200 300 400 500 ";}
 else if ($weather["lightningmonth"]>=0 ){echo "<orange>".$weather["lightningmonth"]."</orange> 100 200 300 400 500 ";}
-echo " <smalltempunit2>[<deepblue>". date('F')."</deepblue>]</smalltempunit2>";
+echo " <smalltempunit2>[<deepblue>". date('M')."</deepblue>]</smalltempunit2>";
 ?>
 </valuetextheadingindoor>
 <div class=sunratebar>
@@ -76,7 +76,7 @@ style="width:
 <?php 
 if ($weather["lightningmonth"]<50){echo $weather["lightningmonth"]/5;}
 else if ($weather["lightningmonth"]<100){echo $weather["lightningmonth"]*0.24;}
-else if ($weather["lightningmonth"]<500){echo $weather["lightningmonth"]*0.20;}
+else if ($weather["lightningmonth"]<500){echo $weather["lightningmonth"]*0.25;}
 else if ($weather["lightningmonth"]<600){echo $weather["lightningmonth"]*0.17;}
 else if ($weather["lightningmonth"]<700){echo $weather["lightningmonth"]*0.14;}
 else if ($weather["lightningmonth"]<800){echo $weather["lightningmonth"]*0.11;}
@@ -119,7 +119,7 @@ echo " <smalltempunit2>Total [<deepblue>".date('Y')."</deepblue>]</smalltempunit
 style="width:<?php 
 if ($weather["lightningyear"]<50){echo $weather["lightningyear"]/5;}
 else if ($weather["lightningyear"]<100){echo $weather["lightningyear"]*0.24;}
-else if ($weather["lightningyear"]<500){echo $weather["lightningyear"]*0.20;}
+else if ($weather["lightningyear"]<500){echo $weather["lightningyear"]*0.25;}
 else if ($weather["lightningyear"]<600){echo $weather["lightningyear"]*0.17;}
 else if ($weather["lightningyear"]<700){echo $weather["lightningyear"]*0.14;}
 else if ($weather["lightningyear"]<800){echo $weather["lightningyear"]*0.11;}
