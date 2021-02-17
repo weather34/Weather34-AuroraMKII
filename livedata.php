@@ -59,8 +59,9 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["solar"]              = round($meteobridgeapi[45],1);
 	$weather["temp"]               = $meteobridgeapi[2];
 	$weather["temp_feel"]          = heatIndex($meteobridgeapi[2], $meteobridgeapi[3]); // must set temp_units first
-	$weather["heat_index"]         = $weather["temp_feel"]; // must set temp_units first
+	//$weather["heat_index"]         = $weather["temp_feel"]; // must set temp_units first
     $weather["heat_index"]         = $meteobridgeapi[42];
+
 	$weather["windchill"]          = $meteobridgeapi[24];
 	$weather["humidity"]           = number_format($meteobridgeapi[3],0);	
 	$weather["temp_today_high"]    = $meteobridgeapi[26];
@@ -90,7 +91,7 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["wind_run"]           = number_format($weather["wind_speed"]/24,3); //10 minute wind run
 	$weather["swversion"]		   = $meteobridgeapi[38];
 	$weather["build"]			   = $meteobridgeapi[39];
-	$weather["actualhardware"]	   = $meteobridgeapi[42];
+	//$weather["actualhardware"]	   = $meteobridgeapi[42];
 	$weather["stationtype"]	       = $meteobridgeapi[25];		
 	$weather["uptime"]		       = $meteobridgeapi[81];//uptime in seconds
 	$weather["vpforecasttext"]	   = $meteobridgeapi1[1];//davis console forecast text
@@ -290,16 +291,6 @@ $weather["windchillymintime"]=$meteobridgeapi[195];
 $originalDatechill=$meteobridgeapi[195];
 $windchillmintime=date('jS M',strtotime($originalDatechill));
 $windchillmintime2=date('jS M',strtotime($originalDatechill));
-
-//windchill
-$weather["windchilldmin"]=$meteobridgeapi[185];
-$weather["windchillmmin"]=$meteobridgeapi[42];
-$weather["windchillmmintime"]=$meteobridgeapi[43];
-$originalDatechill2=$meteobridgeapi[43];
-//$windchillmmintime=date("jS M Y", strtotime($originalDatechill2));
-$windchillmmintime=date("jS ", strtotime($originalDatechill2));
-
-
 
 //wind 
 	$originalDate8 = $meteobridgeapi[95];
@@ -510,7 +501,7 @@ if ($tempunit != $weather["temp_units"]) {
 		fToC($weather, "dewydmin");
 		fToC($weather, "dewpoint2");
 		fToC($weather, "realfeel");	
-		fToC($weather,"tempyearavg");	
+		fToC($weather,"tempyearavg");		
 		fToCrel($weather, "temp_trend");
 		fToCrel($weather, "dewpoint_trend");	
 		fToCrel($weather, "humidex");				
@@ -556,7 +547,7 @@ if ($tempunit != $weather["temp_units"]) {
 		cToF($weather, "dewydmax");
 		cToF($weather, "dewydmin");
 		cToF($weather, "dewpoint2");
-		cToF($weather, "realfeel");
+		cToF($weather, "realfeel");				
 		cToF($weather,"tempyearavg");
 		cToFrel($weather, "temp_trend");
 		cToFrel($weather, "dewpoint_trend");	

@@ -182,11 +182,19 @@ $fontweight   = "'. $_POST["fontweight"]. '";
    .btn{border:2px solid transparent;background:rgba(86,95,103,1);color:#fff;font-size:16px;line-height:25px;padding:10px 0;text-decoration:none;text-shadow:none;border-radius:3px;box-shadow:none;transition:.25s;
    display:block;width:150px;margin:10px;text-align:center;-webkit-appearance:none}
    .btn:hover{background-color:rgba(86,95,103,1)}.login-link{font-size:12px;color:#444;display:block;margin-top:12px;-webkit-appearance: none;}
-   .loginformarea{margin:0 auto;text-align:center;font-size:16px;-webkit-appearance: none;}   
+   .loginformarea{margin:0 auto;text-align:center;font-size:16px;-webkit-appearance: none;background:#ecf0f3}   
    orange{color:rgba(236,87,27,1)}green{color:rgba(67,58,80,1)}blue{color:rgba(67,58,80,1)}
    img{border-radius:4px}white{color:#fff}
 
-   .input-button,.modal-button{font-size:18px;padding:10px 40px;-webkit-appearance: none;}
+   .input-button,.modal-button{
+      
+    background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  }
    .input-block input,.input-button,.modal-button{font-family:Arial,sans-serif;border:1px solid #ccc;-webkit-appearance: none;}
    .icon-button,.input-block input,.input-button,.modal-button{outline:0;cursor:pointer;-webkit-appearance: none;}
    .modal-button{color:#f5f5f5;border-radius:5px;background:#2095a7;width:120px;text-align:center;-webkit-appearance: none;}
@@ -229,20 +237,30 @@ blue{color:#00adbd }
         {
             ?> <?php echo $error; ?>
 
-<div class="login_screen" style="width:70%;max-width:600px;margin:0 auto;color:#555;border:0;padding:10px;font-size:14px;border-radius: 20px;
-	background-color: #eaeef3;box-shadow: 20px 20px 40px #c7cacf, -20px -20px 40px #ffffff;text-align:center;
+<div class="login_screen" style="
+  margin:0 auto;
+  text-align:center;position: relative;
+  width: max-content;
+  height: 350px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  color:#3d464d;
 "> 
 <img src='weather34-app-icon.svg' width='60px' alt="weather34 designed" style="position:relative;margin-left:0%;margin-top:0px"></img><br>
 
 
 <?php echo 'Your Current PHP version is :<oblue><b> ' . phpversion(), '</b></oblue>
-            <br>Enter Your Password For <br>Weather34 Aurora MKII <br>Setup Screen'; ?>
+            <br>Enter Your Password For <br>Weather<blue>34</blue> Aurora MKII Setup Screen<br><br>'; ?>
             
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="pwd">
                     
                     <center>
                         <div class="modal-buttons">
-                            <input name="passwd" type="password" class="input-button" /> <input type="submit" name="submit_pwd" value="Login " class="modal-button" />
+                            <input name="passwd" type="password" class="input-button" style="border:0; box-sizing: border-box;
+  background: #ecf0f3;box-shadow: 14px 14px 20px #cbced1, -4px -4px 20px white;color:#3d464d"/> <input type="submit" name="submit_pwd" value="Login " class="modal-button" />
                 </form>                
                 </center>
                 <?php echo "2015-"; ?><?php echo date('Y'); ?> &copy;</a> WEATHER34 Aurora MKII Version </span></span></span>
@@ -254,7 +272,7 @@ blue{color:#00adbd }
                 <path stroke="0" d="M0 0h24v24H0z" stroke-width="0"/> <circle cx="5" cy="5" r="1" stroke="#777"  /> <circle cx="12" cy="5" r="1" stroke="#777"/><circle cx="19" cy="5" r="1" stroke="#777"/> <circle cx="5" cy="12" r="1" stroke="#777" /> <circle cx="12" cy="12" r="1" stroke="#777"/>
                 <circle cx="19" cy="12" r="1" stroke="#777"/> <circle cx="5" cy="19" r="1" stroke="#777" /> <circle cx="12" cy="19" r="1" stroke="#777"/><circle cx="19" cy="19" r="1" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
                              
-                echo $backtohome ?><blue>Return To Weather34 Dashboard</blue></a></center>
+                echo $backtohome ?><blue> Return To Weather34 Dashboard</blue></a></center>
                 
                
             <?php
