@@ -117,15 +117,15 @@ else if ($magnitude8>4) {$magnitude=$magnitude8;$eventime=$eventime8;$eqdist=$eq
 
 $dist="km";
 if ($distanceunit=='mi'){
-	$eqdist=$eqdist* 0.621371;
-	$eqdist1=$eqdist1* 0.621371;
-	$eqdist2=$eqdist2* 0.621371;
-	$eqdist3=$eqdist3* 0.621371;
-	$eqdist4=$eqdist4* 0.621371;
-	$eqdist5=$eqdist5* 0.621371;
-	$eqdist6=$eqdist6* 0.621371;
-	$eqdist7=$eqdist7* 0.621371;
-	$eqdist8=$eqdist8* 0.621371;
+	$eqdist=round($eqdist* 0.621371,0);
+	$eqdist1=round($eqdist1* 0.621371,0);
+	$eqdist2=round($eqdist2* 0.621371,0);
+	$eqdist3=round($eqdist3* 0.621371,0);
+	$eqdist4=round($eqdist4* 0.621371,0);
+	$eqdist5=round($eqdist5* 0.621371,0);
+	$eqdist6=round($eqdist6* 0.621371,0);
+	$eqdist7=round($eqdist7* 0.621371,0);
+	$eqdist8=round($eqdist8* 0.621371,0);
 	$dist="miles";
 }
 
@@ -180,20 +180,37 @@ elseif ($magnitude>=0){echo '#9bbc2f';}
 ?>;"></div></div></div>
 
 <div class="indoortempa-mod3a"> 
-<valuetextheadingindoor>
+<valuetextheadingindoor> 
 <?php // weather34 simple css scale distance
-if ($eqdist>=800 ){echo "0 100 200 300 500 <green>".round($eqdist,0)."</green> ";}
-else if ($eqdist>=500 ){echo "0 100 200 300 500 <green>".round($eqdist,0)."</green> ";}
-else if ($eqdist>=400 ){echo "0 100 200 300 <yellow>".round($eqdist,0)."</yellow> 500 ";}
-else if ($eqdist>=300 ){echo "0 100 200 <orange>".round($eqdist,0)."</orange> 400 500 ";}
-else if ($eqdist>=200 ){echo "0 100 <orange>".round($eqdist,0)."</orange> 300 400 500 ";}
-else if ($eqdist>=0 ){echo "0 <red>".round($eqdist,0)."</red> 200 300 400 500 ";}
-echo " <span style='font-size:7px;text-transform:capatilize;'>".$dist."</span> ";?>
+if ($eqdist<=100){echo "*<depremspacing1>1500</depremspacing1>";}
+else if ($eqdist>100){echo "0<depremspacing1>1500</depremspacing1>";}
+echo"<depremspacing>Epicenter from Weather Station</depremspacing>";
+?>
+<style>
+.weather34sunratebarbottom2::before{
+content:"<?php echo $eqdist ,$distanceunit?>";
+padding-left:<?php 
+if ( $eqdist<100){echo $eqdist/12;}
+else if ( $eqdist<500){echo $eqdist/12;}
+else if ( $eqdist<1000){echo $eqdist/12;}
+else if ( $eqdist<1500){echo $eqdist/12;}
+else echo $eqdist/12;?>px;
+color:<?php if ($eqdist>=500 ){echo 'var(--green)';}
+else if ($eqdist>=400 ){echo 'var(--yellow)';}
+elseif ($eqdist>=300 ){echo 'var(--orange)';}
+elseif ($eqdist>=0 ){echo '#d35f50';}?>;
+}
+</style>
 </valuetextheadingindoor>
-<div class=sunratebar>
-<div class="weather34sunratebarbottom" 
+<div class=sunratebar style="margin-top:-2px">
+<div class="weather34sunratebarbottom2" 
 style="width:
-<?php echo $eqdist/5;?>px;
+<?php if ( $eqdist<100){echo $eqdist/10.5;}
+else if ( $eqdist<200){echo $eqdist/10.5;}
+else if ( $eqdist<500){echo $eqdist/11;}
+else if ( $eqdist<1000){echo $eqdist/11;}
+else if ( $eqdist<1500){echo $eqdist/11;}
+else echo $eqdist/11;?>px;
 background:
 <?php 
 if ($eqdist>=500 ){echo 'var(--green)';}
@@ -202,5 +219,5 @@ elseif ($eqdist>=300 ){echo 'var(--orange)';}
 elseif ($eqdist>=0 ){echo '#d35f50';}?>
 ;">
 </div></div></div>
-<div class=extrainfoeq><a href='eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=aqiid-brand3><a href='console/eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
 </div></div>

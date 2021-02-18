@@ -102,6 +102,8 @@ wuwindgust{margin-left:8px}
 .weather34ratebar{background-color:#009cad}
 .sunratebar,.weather34sunratebar{height:8px}
 smallrainrateunit{color:#222;font-family:headingtext;font-size:.45rem;vertical-align:text-top}
+.weather34sunratebarbottom2::before{position:absolute;font-size:9px;color:var(--barometerbar2);top:0;text-shadow:var(--text-shadow);text-transform:lowercase}
+smallrainrateunit{color:#222;font-family:headingtext;font-size:.45rem;vertical-align:text-top}
 .heatcircle,.heatcircle2,.heatcircle3,.heatcircle4,.heatcircle5,.heatcircledir,.heatcirclerain,.heatcirclerain1,.windgauge{position:absolute;width:120px;max-width:120px;float:left;padding:0;text-shadow:var(--text-shadow)}
 .heatcircle{margin-top:-95px;margin-left:55px}
 .windgauge{margin-top:-60px;margin-left:42px}
@@ -618,6 +620,7 @@ smallminutes1{font-size:6px}
 untilsunriset{width:50px;font-family:weathertext2;position:absolute;font-size:8px;margin-top:20px;margin-left:0;text-align:center;word-break:break-word;line-height:1em}
 .aqiid-brand a{position:absolute;left:195px;padding:2px;padding-top:4px;font-size:9px;color:#aaa;display:flex;justify-content:left;width:75px;max-width:75px;line-height:1;top:42px;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px}
 .aqiid-brand2 a{position:absolute;margin-left:-70px;font-size:9px;margin-top:20px;color:#aaa;padding:2px;padding-top:4px;display:flex;justify-content:left;width:75px;max-width:75px;line-height:1;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
+.aqiid-brand3 a{position:absolute;margin-left:199px;padding:2px;padding-top:4px;font-size:9px;color:#aaa;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:220px;line-height:1.2;margin-top:37px;text-transform:none;box-shadow:var(--button-shadow);background:#fff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;text-shadow:none;cursor:pointer;z-index:100}
 .extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a,.extrainfoeq a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;color:#aaa;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:220px;line-height:1.2;margin-top:85px;text-transform:none;box-shadow:var(--button-shadow);background:#fff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);cursor:pointer;z-index:100}
 .extrainfoeq a{margin-left:205px;margin-top:38px}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
@@ -675,3 +678,5 @@ smalltrainunit3{font-size:7px;text-shadow:var(--text-shadow);color:var(--body-da
 .mooninfo2 a{position:relative;left:125px;padding:2px;padding-top:4px;font-size:9px;color:var(--body-text-dark);display:flex;justify-content:left;width:75px;max-width:75px;line-height:1;top:37px;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}
+depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;text-shadow:var(--text-shadow)}
+depremspacing{position:absolute;margin-left:-12px;font-size:7px;margin-top:22px;color:#aaa;text-shadow:var(--text-shadow)}

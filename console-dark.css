@@ -114,6 +114,7 @@ steady{font-size:11px;text-shadow:none;color:var(--body-text-dark)}
 .rainratebar,.weather34ratebar{height:7px;color:#aeb6bf}
 .weather34ratebar{background-color:hsla(186,100%,34%,.6)}
 .sunratebar,.weather34sunratebar{height:8px}
+.weather34sunratebarbottom2::before{position:absolute;font-size:9px;color:var(--barometerbar2);top:5px;text-transform:lowercase}
 .rainconverter{display:-webkit-box;display:flex;position:absolute;font-size:12px}
 smallrainunit{font-size:.7em}
 smallrainunit4{position:relative;font-size:7px;vertical-align:top;top:2px;font-family:weathertext2}
@@ -677,6 +678,7 @@ a:hover{filter:brightness(110%);-webkit-filter:brightness(110%)}
 .thegrad{background:#8aa2cc;background:-moz-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:-webkit-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:linear-gradient(to right,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8aa2cc', endColorstr='#bf6e4e', GradientType=1)}
 winddirectionvalueword{font-size:.9em}
 .aqiid-brand a,.aqiid-brand2 a{position:relative;left:145px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;max-width:200px;line-height:1.2;top:40px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
+.aqiid-brand3 a{position:relative;left:145px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;max-width:200px;line-height:1.2;top:40px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 .extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a,.extrainfoeq a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
 .extrainfoeq a{margin-left:225px;margin-top:42px}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
@@ -702,3 +704,5 @@ indoorpm2{left:10px;top:25px;margin:0;font-family:weathertext2;font-size:9px}
 .mooninfo2 a{position:relative;left:120px;padding:2px;padding-top:4px;font-size:9px;color:var(--body-text-dark);display:flex;justify-content:left;width:100px;max-width:70px;line-height:1;top:43px;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px}
 barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}
+depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;color:#aeb6bf}
+depremspacing{position:absolute;margin-left:-10px;font-size:7px;margin-top:23px;color:#aeb6bf}

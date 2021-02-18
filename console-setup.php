@@ -197,8 +197,8 @@ $fontweight   = "'. $_POST["fontweight"]. '";
   }
    .input-block input,.input-button,.modal-button{font-family:Arial,sans-serif;border:1px solid #ccc;-webkit-appearance: none;}
    .icon-button,.input-block input,.input-button,.modal-button{outline:0;cursor:pointer;-webkit-appearance: none;}
-   .modal-button{color:#f5f5f5;border-radius:5px;background:#2095a7;width:120px;text-align:center;-webkit-appearance: none;}
-   .modal-button:hover{border-color:rgba(255,255,255,.2);background:rgba(144,177,42,1);color:#f8f8f8;-webkit-appearance: none;}
+   .modal-button{color:#f5f5f5;border-radius:5px;background:#1DA1F2;width:120px;text-align:center;-webkit-appearance: none;border:0;}
+   .modal-button:hover{background:hsla(14, 95%, 50%, .8);color:#f8f8f8;-webkit-appearance: none;}
    .input-button{color:#7d695e;border-radius:5px;background:#fff;-webkit-appearance: none;}
    .input-button:hover{background:rgba(144,177,42,1);color:#fff;-webkit-appearance: none;}
    .input-label{font-size:11px;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:600;letter-spacing:.7px;color:#8c7569}
@@ -249,7 +249,7 @@ blue{color:#00adbd }
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
   color:#3d464d;
 "> 
-<img src='weather34-app-icon.svg' width='60px' alt="weather34 designed" style="position:relative;margin-left:0%;margin-top:0px"></img><br>
+<img src='weather34-app-icon.svg' width='60px' alt="weather34 designed" style="position:relative;margin-left:0%;margin-top:-5px;margin-bottom:10px"></img><br>
 
 
 <?php echo 'Your Current PHP version is :<oblue><b> ' . phpversion(), '</b></oblue>
