@@ -181,8 +181,10 @@ elseif ($magnitude>=0){echo '#9bbc2f';}
 
 <div class="indoortempa-mod3a"> 
 <valuetextheadingindoor> 
+<valuetextheadingindoor> 
 <?php // weather34 simple css scale distance
 if ($eqdist<=100){echo "*<depremspacing1>1500</depremspacing1>";}
+else if ($eqdist>1000){echo "0<depremspacing1></depremspacing1>";}
 else if ($eqdist>100){echo "0<depremspacing1>1500</depremspacing1>";}
 echo"<depremspacing>Epicenter from Weather Station</depremspacing>";
 ?>
