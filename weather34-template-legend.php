@@ -174,7 +174,7 @@ background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-g
 .weather34weekdays todayorange{color:#fff;background:var(--orange);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
 grey{color:#ccc}
 green1{color:hsl(75, 62%, 43%)}
-
+h2{font-size:2em;font-family:weathertext2}
 
 </style>
 <script src="js/jquery.js"></script>
@@ -517,10 +517,16 @@ function displayDays(date, days) {
   
   </article>
   <article>
-  
-  <img src="images/weather34-app-icon.svg" width="140px" class="weather34-image" alt="weather34 logo" title="weather34 logo">
-
-
+  <article2>  
+  <center>
+  <br>
+  <br>
+  <h2>Template Version <br>
+  <blue><?php echo $weather34version?></blue>
+  <br>
+  <?php echo $weather34versiondate?></h2>
+  </center>
+  </article2>
 
   </article>
 
