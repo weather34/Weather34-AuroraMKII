@@ -753,5 +753,5 @@ $file_live2=file_get_contents('mbridge/weather34-lightning.txt');
 	$weather["lightningmonth"]     = $weather34lightning[4];
   $weather["lightningyear"]      = $weather34lightning[5];
   $weather["lightningmax10"]     = $weather34lightning[6]; 
-  
+  $start_time = microtime(TRUE);
 ?>
