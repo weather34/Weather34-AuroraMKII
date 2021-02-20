@@ -181,26 +181,25 @@ elseif ($magnitude>=0){echo '#9bbc2f';}
 
 <div class="indoortempa-mod3a"> 
 <valuetextheadingindoor> 
-<valuetextheadingindoor> 
 <?php // weather34 simple css scale distance
 if ($eqdist<=100){echo "*<depremspacing1>1500</depremspacing1>";}
-else if ($eqdist>1000){echo "0<depremspacing1></depremspacing1>";}
+else if ($eqdist>900){echo "0<depremspacing1></depremspacing1>";}
 else if ($eqdist>100){echo "0<depremspacing1>1500</depremspacing1>";}
-echo"<depremspacing>Epicenter from Weather Station</depremspacing>";
+echo"<depremspacing>Epicenter Distance from Istanbul</depremspacing>";
 ?>
 <style>
 .weather34sunratebarbottom2::before{
-content:"<?php echo $eqdist ,$distanceunit?>";
+content:"<?php echo $eqdist?>km";
 padding-left:<?php 
-if ( $eqdist<100){echo $eqdist/12;}
+if ( $eqdist<100){echo $eqdist/8;}
 else if ( $eqdist<500){echo $eqdist/12;}
 else if ( $eqdist<1000){echo $eqdist/12;}
 else if ( $eqdist<1500){echo $eqdist/12;}
 else echo $eqdist/12;?>px;
 color:<?php if ($eqdist>=500 ){echo 'var(--green)';}
 else if ($eqdist>=400 ){echo 'var(--yellow)';}
-elseif ($eqdist>=300 ){echo 'var(--orange)';}
-elseif ($eqdist>=0 ){echo '#d35f50';}?>;
+elseif ($eqdist>=200 ){echo 'var(--orange)';}
+elseif ($eqdist>=0 ){echo 'var(--red)';}?>;
 }
 </style>
 </valuetextheadingindoor>
@@ -217,8 +216,8 @@ background:
 <?php 
 if ($eqdist>=500 ){echo 'var(--green)';}
 else if ($eqdist>=400 ){echo 'var(--yellow)';}
-elseif ($eqdist>=300 ){echo 'var(--orange)';}
-elseif ($eqdist>=0 ){echo '#d35f50';}?>
+elseif ($eqdist>=200 ){echo 'var(--orange)';}
+elseif ($eqdist>=0 ){echo 'var(--red)';}?>
 ;">
 </div></div></div>
 <div class=aqiid-brand3><a href='console/eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>

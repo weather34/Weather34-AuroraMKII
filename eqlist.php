@@ -116,7 +116,7 @@ $eqalert6='<svg id="i-activity" viewBox="0 0 32 32" width="28" height="28" fill=
   <title>Weather34 Recent Regional Earthquakes Information </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff) format("woff")}
+@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2")}
 body,html{font-size:13px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,2fr));grid-gap:5px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);

@@ -154,9 +154,9 @@ $fontweight   = "'. $_POST["fontweight"]. '";
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link href="favicon.ico" rel="icon" type="image/x-icon">
 <style>
-   @font-face{font-family:clock;src:url(fonts/clock3-webfont.woff) format("woff")}@font-face{font-family:weathertext3;src:url(fonts/verbatim-regular.woff) format("woff")}
-   @font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff) format("woff")}
-   @font-face{font-family:headingtext;src:url(fonts/HelveticaNeue-Medium.woff) format("woff")}
+   @font-face{font-family:clock;src:url(fonts/clock3-webfont.woff2) format("woff2")}@font-face{font-family:weathertext3;src:url(fonts/verbatim-regular.woff2) format("woff2")}
+   @font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2")}
+   @font-face{font-family:headingtext;src:url(fonts/HelveticaNeue-Medium.woff2) format("woff2")}
    body{font-family:headingtext;margin:0 auto;color:#aeb6bf;background:#141418;width:100%;max-width:1024px;text-rendering:optimizeLegibility;
    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-moz-font-smoothing:unset;
    -moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;-webkit-appearance: none;}

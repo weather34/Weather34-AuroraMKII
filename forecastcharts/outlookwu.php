@@ -81,22 +81,22 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
   <style>
   @font-face {
     font-family: clock;
-    src: url(../fonts/clock3-webfont.woff) format("woff")
+    src: url(../fonts/clock3-webfont.woff2) format("woff2")
 }
 
 @font-face {
     font-family: weathertext3;
-    src: url(../fonts/verbatim-regular.woff) format("woff")
+    src: url(../fonts/verbatim-regular.woff2) format("woff2")
 }
 
 @font-face {
     font-family: weathertext2;
-    src: url(../fonts/verbatim-medium.woff) format("woff")
+    src: url(../fonts/verbatim-medium.woff2) format("woff2")
 }
 
 @font-face {
     font-family: headingtext;
-    src: url(../fonts/HelveticaNeue-Medium.woff) format("woff")
+    src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2")
 }
 body,html{font-size:12px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}

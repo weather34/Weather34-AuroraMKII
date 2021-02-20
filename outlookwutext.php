@@ -1,7 +1,7 @@
 <?php include 'livedata.php';
 
 ####################################################################################################
-#    CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE                                                #
+#    CREATED FOR WEATHER34 AURORA MKII TEMPLATE                                                #
 # https://weather34.com/homeweatherstation/index.html                                                #
 #                                                                                                    #
 #     Release: August 2019                                                                             #
@@ -343,7 +343,7 @@ $parsed_weather34wujson1 = json_decode($weather34wuurl, true);
   <title>Weather34 Weather Underground Summary Forecast For <?php echo $stationName ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-regular.woff) format("woff"),url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.ttf) format("truetype")}
+@font-face{font-family:weathertext2;src:url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.woff) format("woff"),url(fonts/verbatim-regular.ttf) format("truetype")}
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;}
 .grid {
   display: grid;

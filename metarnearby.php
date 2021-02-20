@@ -1,6 +1,6 @@
 <?php include('metar34get.php');
 	####################################################################################################
-	#	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
 	# https://weather34.com/homeweatherstation/index.html 											   # 
 	# 	                                                                                               #
 	# 	Updated Release: August 2019						  	                                       #
@@ -83,8 +83,8 @@
     --grid-linesindicators: linear-gradient(hsla(206, 11%, 87%, 0.02) 5px, transparent 2px), linear-gradient(to right, hsla(206, 11%, 87%, 0.02) 5px, transparent 2px);
     --therainrategrad: -webkit-linear-gradient(left, #00adbd 0%, #00adbd 30%, #d35f50 90%)
 }
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff) format("woff")}
-@font-face{font-family:weathertext3;src:url(fonts/verbatim-medium.woff) format("woff")}
+@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2")}
+@font-face{font-family:weathertext3;src:url(fonts/verbatim-medium.woff2) format("woff2")}
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;}
 .grid { 
   display: grid;
@@ -722,7 +722,8 @@ $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo d
   <article>
   <div class=actualt>&nbsp;&nbsp API  Info</div>  
   <div class="lotemp">
-  <?php echo $info?> Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" ><br><img src=images/checkwx.svg width=130px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>"></a></span>
+  <?php echo $info?> Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" >
+  <br><img src=images/checkwx.svg width=130px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>"></a></span>
   <br>Aviation Weather providing METAR, TAF, AIRMET, SIGMET and OUTLOOK Weather Reports
 </div>
   </article> 

@@ -144,11 +144,11 @@ $meteorinfo3="<svg width='22px' height='22px' viewBox='0 0 16 16'><path fill='#a
 
 @font-face {
   font-family: weathertext2;
-  src: url(fonts/verbatim-regular.woff) format("woff");
+  src: url(fonts/verbatim-regular.woff2) format("woff2");
 }
 @font-face {
   font-family: clock;
-  src: url(fonts/clock3-webfont.woff) format("woff");
+  src: url(fonts/clock3-webfont.woff2) format("woff2");
 }
 html,
 body {

@@ -90,9 +90,9 @@ if ($aqiweather["aqindex"] >= 401) { $aqicaution=' Health alert.Everyone may exp
   --button-shadow:inset 5px 5px 20px #0c0b0b,inset -5px -5px 20px hsla(198, 14%, 14%, 0.19)}
 
 @font-face{
-font-family:weathertext2;src:url(fonts/verbatim-medium.woff) format("woff")}
+font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2")}
 @font-face{
-font-family:clock;src:url(fonts/clock3-webfont.woff) format("woff")}
+font-family:clock;src:url(fonts/clock3-webfont.woff2) format("woff2")}
 
 body,html{font-size:13px;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 icont{font-weight:600;color:#aaa;}

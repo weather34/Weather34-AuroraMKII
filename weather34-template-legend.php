@@ -41,9 +41,9 @@ $webcamicon2='
   --light:#f5f5f5;
   --dark:#07090a;--dark-light:hsla(0, 0%, 0%, 0.251);
   --dark-toggle:#35393b;--dark-caption:rgba(66, 70, 72, 0.429);--black:#000000;--deepblue:#00adbd;--blue:#00adbd;--rainblue:#00adbd;--darkred:#703232;--deepred:#703232;--red:#d35f50;--yellow:#e6a241;--green:#90b22a;--orange:rgb(236, 81, 19);--purple:#8680bc;--silver:#ecf0f3;--border-dark:#3d464d;--body-text-dark:#afb7c0;--body-text-light:#545454;--blocks:#e6e8ef;--modules:#1e1f26;--blocks-background:rgba(82, 92, 97, 0.19);--temp-5-10:#7face6;--temp-0-5:#00adbd;--temp0-5:#00adbd;--temp5-10:#9bbc2f;--temp10-15:#e6a241;--temp15-20:#f78d03;--temp20-25:#d87040;--temp25-30:#e64b24;--temp30-35:#cc504c;--temp35-40:hsl(4, 40%, 48%);--temp40-45:#be5285;--temp45-50:#b95c95;--font-color:grey;--bg-color:hsla(198, 14%, 14%, 0.19);--button-bg-color:hsla(198, 14%, 14%, 0.19);--button-shadow:inset 5px 5px 20px #0c0b0b,inset -5px -5px 20px hsla(198, 14%, 14%, 0.19)}
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-regular.woff) format("woff")}
-@font-face{font-family:weathertext3;src:url(fonts/verbatim-medium.woff) format("woff")}
-@font-face{font-family:clock;src:url(fonts/clock3-webfont.woff) format("woff")}
+@font-face{font-family:weathertext2;src:url(fonts/verbatim-regular.woff2) format("woff2")}
+@font-face{font-family:weathertext3;src:url(fonts/verbatim-medium.woff2) format("woff2")}
+@font-face{font-family:clock;src:url(fonts/clock3-webfont.woff2) format("woff2")}
 
 body,html{font-size:13px;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 icont{font-weight:600}

@@ -14,10 +14,10 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="msapplication-TileColor" content="#f8f8f8">
 <link href="console-<?php echo $theme?>.css?version=<?php echo filemtime('console-'.$theme.'.css')?>" rel="stylesheet prefetch">
-<link rel="preload" href="fonts/clock3-webfont.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="fonts/verbatim-regular.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="fonts/verbatim-medium.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="fonts/HelveticaNeue-Medium.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <script>function pageLoaded() {document.querySelector("body").style.opacity = 1;}window.onload = pageLoaded;</script>
 </head>
 <body>

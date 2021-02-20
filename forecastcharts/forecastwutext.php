@@ -400,7 +400,7 @@ else {
   <title>Weather34 Weather Underground Summary Forecast For <?php echo $stationlocation ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-@font-face{font-family:weathertext2;src:url(../css/fonts/verbatim-regular.woff) format("woff"),url(../fonts/verbatim-regular.woff2) format("woff2"),url(../fonts/verbatim-regular.ttf) format("truetype")}
+@font-face{font-family:weathertext2;src:url(../css/fonts/verbatim-regular.woff2) format("woff2"),url(../fonts/verbatim-regular.woff22) format("woff22"),url(../fonts/verbatim-regular.ttf) format("truetype")}
 html,body{font-size:13px;font-family: Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;}
 .grid { 
 	display: grid;
