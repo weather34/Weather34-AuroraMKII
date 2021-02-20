@@ -526,17 +526,28 @@ function displayDays(date, days) {
 Release Date <blue>  <?php echo $weather34versiondate?></blue>
 <br>
 PHP Version <blue><?php echo phpversion()?></blue>
+
 <br>
-CSS Theme file size <?php 
-$filename ="console-".$theme.".css";echo $theme;echo '.css <blue>';
+CSS Theme file size <?php //css file size
+$filename ="console-".$theme.".css";
+echo $theme; 
+echo '.css <blue>';
 $weather34cssfilesize = filesize($filename);
 echo convertToReadableSize($weather34cssfilesize);
 function convertToReadableSize($weather34cssfilesize){$base = log($weather34cssfilesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
 $f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
 ?>
-
 <br>
-<?php
+Jquery file size <?php //jquery file size
+$filename1 ="js/jquery.js";
+echo '<blue>';
+$weather34filesize = filesize($filename1);
+echo convertToReadableSize1($weather34filesize);
+function convertToReadableSize1($weather34filesize){$base = log($weather34filesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
+$f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
+?>
+<br>
+<?php //time to load
 $end_time = microtime(TRUE);
 $time_taken =($end_time - $start_time)*1000;
 $time_taken = round($time_taken,5); 
@@ -545,6 +556,7 @@ echo 'Loaded in <blue>'.$time_taken.'</blue> seconds.';
 
 </h2>
   </center>
+  
   </article>
 
 </main>
