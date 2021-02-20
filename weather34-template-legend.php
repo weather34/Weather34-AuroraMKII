@@ -173,7 +173,7 @@ background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-g
 .weather34weekdays todayorange{color:#fff;background:var(--orange);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
 grey{color:#ccc}
 green1{color:hsl(75, 62%, 43%)}
-h2{font-size:1.15em;font-family:weathertext3;opacity:0.7;font-weight:normal}
+h2{font-size:1em;font-family:weathertext3;opacity:0.7;font-weight:normal}
 
 </style>
 <script src="js/jquery.js"></script>
@@ -527,17 +527,24 @@ Release Date <blue>  <?php echo $weather34versiondate?></blue>
 <br>
 PHP Version <blue><?php echo phpversion()?></blue>
 <br>
-CSS file size <?php $filename ="console-".$theme.".css";echo '<blue>'.filesize($filename) . ' kb</blue>';?>
+CSS Theme file size <?php 
+$filename ="console-".$theme.".css";echo $theme;echo '.css <blue>';
+$weather34cssfilesize = filesize($filename);
+echo convertToReadableSize($weather34cssfilesize);
+function convertToReadableSize($weather34cssfilesize){$base = log($weather34cssfilesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
+$f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
+?>
 
 <br>
 <?php
 $end_time = microtime(TRUE);
 $time_taken =($end_time - $start_time)*1000;
 $time_taken = round($time_taken,5); 
-echo 'Loaded in '.$time_taken.' seconds.';
+echo 'Loaded in <blue>'.$time_taken.'</blue> seconds.';
 ?>
 
 </h2>
+  </center>
   </article>
 
 </main>
