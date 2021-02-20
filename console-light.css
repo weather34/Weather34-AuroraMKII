@@ -636,6 +636,7 @@ icontext{position:relative;top:-8px;font-family:weathertext2;font-size:.8em;righ
 .weather34-header-menu{height:10px;background-color:var(--modules);margin-bottom:10px}
 .weather34-header-menu button{position:relative;left:185px;background-color:#fff;box-shadow:var(--button-shadow3);border:none;margin-top:5px;padding:3px;padding-top:1px;padding-bottom:1px;cursor:pointer;color:var(--body-text-dark);font-size:16px;font-weight:600;margin-bottom:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
 .weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-light);font-weight:500;font-size:12px;line-height:1;padding-left:5px;transition:.2s;float:none;text-align:left;width:160px;justify-content:left;height:14px;padding-bottom:10px;margin-bottom:0;margin-top:-10px}
+.weather34-top-menu a:hover{background:var(--deepred);color:#fff}
 bottomtoolbarspace{margin-left:70px}
 .button-dialrain{display:flex;height:85px;margin:0;left:-80px;align-items:center;justify-content:center;width:130px;font-family:weathertext3;margin-top:-15px;color:gray;box-shadow:none}
 .button-dial-toprain{border-top:0;box-shadow:none;background-image:none}

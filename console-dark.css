@@ -381,6 +381,7 @@ wuwindgust{margin-left:20px}
 .weather34-header-menu{height:10px;background-color:var(--modules);margin-bottom:10px}
 .weather34-header-menu button{display:inline;position:relative;left:185px;background-color:#2d353b;border:none;margin-top:5px;padding:3px;padding-top:1px;padding-bottom:1px;cursor:pointer;color:var(--body-text-dark);font-size:14px;font-weight:600;margin-bottom:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
 .weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-dark);font-weight:500;font-size:12px;line-height:1;padding-left:5px;float:none;text-align:left;width:170px;justify-content:left;height:14px;padding-bottom:10px;cursor:pointer;font-family:headingtext;padding-bottom:10px;margin-bottom:0;margin-top:-10px;margin-left:10px}
+.weather34-top-menu a:hover{background:var(--deepred);color:#fff}
 bottomtoolbarspace{margin-left:65px}
 aurora{position:absolute;width:max-content;font-size:.7em;font-family:weathertext2;margin-left:40px;color:#fff;margin-top:10px;opacity:.2}
 .weather34-webcam,.weather34-webcam-large{border:5px solid hsla(217,15%,17%,.5);border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;width:275px;height:135px;box-shadow:var(--button-shadow);margin-top:0}
