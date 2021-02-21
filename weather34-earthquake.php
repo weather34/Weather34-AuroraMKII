@@ -185,11 +185,14 @@ elseif ($magnitude>=0){echo '#9bbc2f';}
 if ($eqdist<=100){echo "*<depremspacing1>1500</depremspacing1>";}
 else if ($eqdist>900){echo "0<depremspacing1></depremspacing1>";}
 else if ($eqdist>100){echo "0<depremspacing1>1500</depremspacing1>";}
-echo"<depremspacing>Epicenter Distance from Istanbul</depremspacing>";
+echo"<depremspacing>Epicenter Distance from Station</depremspacing>";
 ?>
 <style>
 .weather34sunratebarbottom2::before{
-content:"<?php echo $eqdist?>km";
+content:"<?php 
+if ($distanceunit=="mi"){echo $eqdist. "mi";}
+else if ($distanceunit=="km"){echo $eqdist. "km";}?>";
+
 padding-left:<?php 
 if ( $eqdist<100){echo $eqdist/8;}
 else if ( $eqdist<500){echo $eqdist/12;}
@@ -199,8 +202,7 @@ else echo $eqdist/12;?>px;
 color:<?php if ($eqdist>=500 ){echo 'var(--green)';}
 else if ($eqdist>=400 ){echo 'var(--yellow)';}
 elseif ($eqdist>=200 ){echo 'var(--orange)';}
-elseif ($eqdist>=0 ){echo 'var(--red)';}?>;
-}
+elseif ($eqdist>=0 ){echo 'var(--red)';}?>;}
 </style>
 </valuetextheadingindoor>
 <div class=sunratebar style="margin-top:-2px">
