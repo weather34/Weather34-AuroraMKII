@@ -556,12 +556,13 @@ echo convertToReadableSize1($weather34filesize);
 function convertToReadableSize1($weather34filesize){$base = log($weather34filesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
 $f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
 ?>
+<br>Timezone setting <blue><?php echo $TZ?></blue>
 <br>
 <?php //time to load
 $end_time = microtime(TRUE);
 $time_taken =($end_time - $start_time)*1000;
 $time_taken = round($time_taken,5); 
-echo 'Loaded in <blue>'.$time_taken.'</blue> seconds.';
+echo 'Info Loaded in <blue>'.$time_taken.'</blue> seconds.';
 ?>
 
 </h2>
