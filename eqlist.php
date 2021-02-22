@@ -182,9 +182,9 @@ margin-left:72px;padding:5px;line-height:10px;font-size:9px}
 }
 ?><br>
 <?php
- if ($windunit == 'mph' && $eqdist<=100) { echo "<red>".round($eqdist  * 0.621371) ." Miles from<br> $stationlocation";	}	
-else if ($windunit == 'km/h' && $eqdist<150) {echo "<red>".round($eqdist) ."</red> Km from<br> $stationlocation";}
-else if ($windunit == 'mph') { echo round($eqdist  * 0.621371) ." Miles from<br> $stationlocation";	} 
+ if ($distanceunit=='mi' && $eqdist<=100) { echo "<red>".round($eqdist  * 0.621371) ." Miles from<br> $stationlocation";	}	
+else if ($distanceunit=='km' && $eqdist<150) {echo "<red>".round($eqdist) ."</red> Km from<br> $stationlocation";}
+else if ($distanceunit=='mi') { echo round($eqdist  * 0.621371) ." Miles from<br> $stationlocation";	} 
 else { echo $eqdist ." Km from<br> $stationlocation" ;}echo "";?>
 </div></smalluvunit></article>  
   
@@ -210,9 +210,9 @@ else { echo $eqdist ." Km from<br> $stationlocation" ;}echo "";?>
 	else if ($magnitude1>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime1 ,"</div></span>";echo $eqtitle1 ;} 
 ?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist1<=100) {echo "<red>".round($eqdist1  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist1<150) { echo "<red>".round($eqdist1) ."</red> Km from<br> $stationlocation";}
-else if ($windunit == 'mph') { echo round($eqdist1  * 0.621371) ." Miles from<br> $stationlocation";} 
+if ($distanceunit=='mi' && $eqdist1<=100) {echo "<red>".round($eqdist1  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist1<150) { echo "<red>".round($eqdist1) ."</red> Km from<br> $stationlocation";}
+else if ($distanceunit=='mi') { echo round($eqdist1  * 0.621371) ." Miles from<br> $stationlocation";} 
 else { echo $eqdist1 ." Km from<br> $stationlocation" ;	}echo "";?>
 </div>
 </smalluvunit>
@@ -242,9 +242,9 @@ else { echo $eqdist1 ." Km from<br> $stationlocation" ;	}echo "";?>
 	else if ($magnitude2>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime2,"</div></span>";echo $eqtitle2 ;} 
 }?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist2<=100) { echo "<red>".round($eqdist2  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist2<150) { echo "<red>".round($eqdist2) ."</red> Km from<br> $stationlocation";}	
-else if ($windunit == 'mph') { echo round($eqdist2  * 0.621371) ." Miles from<br> $stationlocation";} 
+if ($distanceunit=='mi' && $eqdist2<=100) { echo "<red>".round($eqdist2  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist2<150) { echo "<red>".round($eqdist2) ."</red> Km from<br> $stationlocation";}	
+else if ($distanceunit=='mi') { echo round($eqdist2  * 0.621371) ." Miles from<br> $stationlocation";} 
 else { echo $eqdist2 ." Km from<br> $stationlocation" ;	}echo "";?>
 </div>
 </smalluvunit>
@@ -271,9 +271,9 @@ else { echo $eqdist2 ." Km from<br> $stationlocation" ;	}echo "";?>
 	else if ($magnitude3>3)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime3 ,"</div></span>";	echo $eqtitle3 ;} 	
 	else if ($magnitude3>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime3 ,"</div></span>";	echo $eqtitle3 ;} }?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist3<=100) {echo "<red>".round($eqdist3  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist3<150) { echo "<red>".round($eqdist3) ."</red> Km from<br> $stationlocation";}	
-else if ($windunit == 'mph') { echo round($eqdist3  * 0.621371) ." Miles from<br> $stationlocation";} 
+if ($distanceunit=='mi' && $eqdist3<=100) {echo "<red>".round($eqdist3  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist3<150) { echo "<red>".round($eqdist3) ."</red> Km from<br> $stationlocation";}	
+else if ($distanceunit=='mi') { echo round($eqdist3  * 0.621371) ." Miles from<br> $stationlocation";} 
 else { echo $eqdist3 ." Km from<br> $stationlocation" ;}echo "";?>
 </div>
 </smalluvunit>
@@ -303,9 +303,9 @@ else { echo $eqdist3 ." Km from<br> $stationlocation" ;}echo "";?>
 	else if ($magnitude4>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime4 ,"</div></span>";echo $eqtitle4 ;} }
 ?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist4<=100) { echo "<red>".round($eqdist4  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist4<150) { echo "<red>".round($eqdist4) ."</red> Km from<br> $stationlocation";}	
-else if ($windunit == 'mph') { echo round($eqdist4  * 0.621371) ." Miles from<br> $stationlocation";} 
+if ($distanceunit=='mi' && $eqdist4<=100) { echo "<red>".round($eqdist4  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist4<150) { echo "<red>".round($eqdist4) ."</red> Km from<br> $stationlocation";}	
+else if ($distanceunit=='mi') { echo round($eqdist4  * 0.621371) ." Miles from<br> $stationlocation";} 
 else { echo $eqdist4 ." Km from<br> $stationlocation" ;	}echo "";?>
 </div>
 </smalluvunit>
@@ -336,9 +336,9 @@ else { echo $eqdist4 ." Km from<br> $stationlocation" ;	}echo "";?>
 }
 ?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist5<=100) { echo "<red>".round($eqdist5  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist5<150) {	 echo "<red>".round($eqdist5) ."</red> Km from<br> $stationlocation";}		
-else if ($windunit == 'mph') { echo round($eqdist5  * 0.621371) ." Miles from<br> $stationlocation";} 
+if ($distanceunit=='mi' && $eqdist5<=100) { echo "<red>".round($eqdist5  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist5<150) {	 echo "<red>".round($eqdist5) ."</red> Km from<br> $stationlocation";}		
+else if ($distanceunit=='mi') { echo round($eqdist5  * 0.621371) ." Miles from<br> $stationlocation";} 
 else { echo $eqdist5 ." Km from<br> $stationlocation" ;	}echo "";?>
 </div>
 </smalluvunit>
@@ -368,9 +368,9 @@ else { echo $eqdist5 ." Km from<br> $stationlocation" ;	}echo "";?>
 	else if ($magnitude6>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime6 ,"</div></span>";	echo $eqtitle6 ;} }
 ?><br>
 <?php
-if ($windunit == 'mph' && $eqdist6<=100) { echo "<red>".round($eqdist6  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist6<150) {	 echo "<red>".round($eqdist6) ."</red> Km from<br> $stationlocation";}	
-else if ($windunit == 'mph') { echo round($eqdist6  * 0.621371) ." Miles from<br> $stationlocation";}
+if ($distanceunit=='mi' && $eqdist6<=100) { echo "<red>".round($eqdist6  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist6<150) {	 echo "<red>".round($eqdist6) ."</red> Km from<br> $stationlocation";}	
+else if ($distanceunit=='mi') { echo round($eqdist6  * 0.621371) ." Miles from<br> $stationlocation";}
 else { echo $eqdist6 ." Km from<br> $stationlocation" ;	}echo "";?>
 </div>
 </smalluvunit>
@@ -399,9 +399,9 @@ else { echo $eqdist6 ." Km from<br> $stationlocation" ;	}echo "";?>
 	else if ($magnitude7>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime7 ,"</div></span>";	echo $eqtitle7 ;} }
 ?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist7<=100) { echo "<red>".round($eqdist7  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist7<150) { echo "<red>".round($eqdist7) ."</red> Km from<br> $stationlocation";}			
-else if ($windunit == 'mph') {echo round($eqdist7  * 0.621371) ." Miles from<br> $stationlocation";	} 
+if ($distanceunit=='mi' && $eqdist7<=100) { echo "<red>".round($eqdist7  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist7<150) { echo "<red>".round($eqdist7) ."</red> Km from<br> $stationlocation";}			
+else if ($distanceunit=='mi') {echo round($eqdist7  * 0.621371) ." Miles from<br> $stationlocation";	} 
 else { echo $eqdist7 ." Km from<br> $stationlocation" ;}echo "";?>
 </div>
 </smalluvunit>
@@ -430,9 +430,9 @@ else { echo $eqdist7 ." Km from<br> $stationlocation" ;}echo "";?>
 	else if ($magnitude8>1)  {echo "<div class='time'><orange1>*Regional <br></orange1><span>",$eventime8 ,"</div></span>";	echo $eqtitle8 ;}}
 ?><br>
 <?php			
-if ($windunit == 'mph' && $eqdist8<=100) { echo "<red>".round($eqdist8  * 0.621371) ." Miles from<br> $stationlocation";}	
-else if ($windunit == 'km/h' && $eqdist8<150) { echo "<red>".round($eqdist8) ."</red> Km from<br> $stationlocation";}
-else if ($windunit == 'mph') { echo round($eqdist8  * 0.621371) ." Miles from<br> $stationlocation";} 
+if ($distanceunit=='mi' && $eqdist8<=100) { echo "<red>".round($eqdist8  * 0.621371) ." Miles from<br> $stationlocation";}	
+else if ($distanceunit=='km' && $eqdist8<150) { echo "<red>".round($eqdist8) ."</red> Km from<br> $stationlocation";}
+else if ($distanceunit=='mi') { echo round($eqdist8  * 0.621371) ." Miles from<br> $stationlocation";} 
 else {echo $eqdist8 ." Km from<br> $stationlocation" ;}	echo "";}
 	?>
 </div></smalluvunit></article>  
