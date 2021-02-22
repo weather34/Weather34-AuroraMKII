@@ -340,12 +340,12 @@ PM10 particles these can get deep into your lungs causing respiratory problems,l
 <main class="grid">
 <article >  
 VOC (Air Pollutant)<br>
-<span style="font-size:2em;font-family: weathertext2;">
+<span style="font-size:1.75em;font-family: weathertext2;">
 <?php //voc
 if($aqiweather["voc"] >=5000){ echo "<purple>".$aqiweather["voc"]."</purple>";}
 else if($aqiweather["voc"] >=2000){ echo "<red>".$aqiweather["voc"]."</red>";}
 else if($aqiweather["voc"] >=1500){ echo "<yellow>".$aqiweather["voc"]."</yellow>";}
-else if($aqiweather["voc"] >0){ echo "<green>".$aqiweather["voc"]."</green>";}
+else if($aqiweather["voc"] >=0){ echo "<green>".$aqiweather["voc"]."</green>";}
 else if($aqiweather["voc"] ==''){echo "<orange>N/A</orange>";}
 echo "<pm25>  </pm25>";?></span>
 <div class=voc>
