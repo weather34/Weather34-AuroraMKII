@@ -1,6 +1,6 @@
 <?php include('livedata.php');?>
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
-<theword>Rainfall (Precipitation)</theword>
+<theword>Rainfall (<blue>Precipitation <?php echo $weather["rain_units"];?></blue>)</theword>
 <extrainfoicon><?php echo $weather34_rain_icon;?></extrainfoicon>
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >

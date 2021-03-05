@@ -1,6 +1,6 @@
 <?php include('livedata.php');?> 
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
-<theword>Dewpoint </theword>
+<theword>Dewpoint (<blue>&deg;<?php echo $weather["temp_units"];?></blue>)</theword>
 <extrainfoicon><?php echo $weather34_temp_icon;?></extrainfoicon>
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >

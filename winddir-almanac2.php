@@ -1,6 +1,6 @@
 <?php include('livedata.php');?>
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
-<theword>Wind Direction </theword>
+<theword>Wind Direction (<blue>Bearing&deg; </blue>| Cardinal)</theword>
 <extrainfoicon><?php echo $weather34compassicon;?></extrainfoicon>
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
