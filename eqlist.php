@@ -115,13 +115,92 @@ $eqalert6='<svg id="i-activity" viewBox="0 0 32 32" width="28" height="28" fill=
   <meta charset="UTF-8">
   <title>Weather34 Recent Regional Earthquakes Information </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2")}
+  <style>
+@font-face{font-family:clock;src:url(fonts/clock3-webfont.woff2) format("woff2"),url(fonts/clock3-webfont.woff) format("woff")}
+@font-face{font-family:weathertext3;src:url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.woff) format("woff")}
+@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2"),url(fonts/verbatim-medium.woff) format("woff")}
+@font-face{font-family:headingtext;src:url(fonts/HelveticaNeue-Medium.woff2) format("woff2"),url(fonts/HelveticaNeue-Medium.woff) format("woff")}
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light: hsl(0, 0%, 96%);
+    --dark: hsl(210, 15%, 8%);
+    --dark-popup: hsl(200, 18%, 3%);
+    --dark-light: hsla(0, 0%, 0%, 0.251);
+    --dark-toggle: hsl(202, 8%, 46%);
+    --dark-caption: rgba(66, 70, 72, 0.429);
+    --black: hsl(0, 0%, 0%);
+    --deepblue: hsla(185, 100%, 37%, 1);
+    --deepcold: hsl(205, 69%, 63%);
+    --blue: hsla(185, 100%, 37%, 1);
+    --rainblue: hsla(185, 100%, 37%, 1);
+    --darkred: hsl(0, 38%, 32%);
+    --deepred: hsl(0, 38%, 32%);
+    --red: hsl(7, 60%, 57%);
+    --yellow: hsl(35, 77%, 58%);
+    --green: hsl(75, 62%, 43%);
+    --orange: hsl(19, 66%, 55%);
+    --border-sun: hsla(206, 12%, 27%, .4);
+    --dark-sun: rgba(47, 50, 61, 1);
+    --barometerbar: rgba(76, 123, 160, 0.5);
+    --barometerbar2: rgba(76, 123, 160, 0.9);
+    --cloudbasebar: hsl(206, 19%, 39%);
+    --black2: hsla(240, 4%, 9%, 0.3);
+    --suntext: hsl(212, 23%, 85%);
+    --suntext2: rgba(233, 237, 240, 0.8);
+    --sunsetdark: hsl(202, 8%, 46%);
+    --daylight: hsla(14, 95%, 50%, .8);
+    --thecenter: --;
+    --compass-shadow-sun: 5px 5px 10px hsla(0, 4%, 5%, .4), -5px -5px 1px hsla(198, 14%, 14%, 0.49);
+    --purple: hsl(246, 31%, 62%);
+    --silver: hsl(206, 23%, 94%);
+    --border-dark: hsl(206, 12%, 27%);
+    --border-dark2: hsla(206, 12%, 27%, .4);
+    --border-dark-sun: hsla(206, 12%, 27%, .2);
+    --blue2: rgba(184, 236, 243, 0.5);
+    --yellow2: hsla(35, 77%, 58%, .8);
+    --body-text-dark: hsl(212, 12%, 72%);
+    --body-text-darkb: hsl(212, 12%, 72%);
+    --body-text-light: hsl(0, 0%, 33%);
+    --blocks: hsl(227, 22%, 92%);
+    --modules: hsl(233, 12%, 13%);
+    --blocks-background2: hsla(200, 7%, 45%, 0.7);
+    --blocks-background: hsla(200, 8%, 35%, 0.19);
+    --temp-5-10: hsl(205, 69%, 63%);
+    --temp-0-5: hsla(185, 100%, 37%, 1);
+    --temp0-5: hsla(185, 100%, 37%, 1);
+    --temp5-10: hsl(74, 60%, 46%);
+    --temp10-15: hsl(35, 77%, 58%);
+    --temp15-20: hsl(34, 98%, 49%);
+    --temp20-25: hsl(19, 66%, 55%);
+    --temp25-30: hsl(12, 80%, 52%);
+    --temp30-35: hsl(2, 56%, 55%);
+    --temp35-40: hsl(4, 40%, 48%);
+    --temp40-45: hsl(332, 45%, 53%);
+    --temp45-50: hsl(323, 40%, 54%);
+    --font-color: hsl(0, 0%, 50%);
+    --text-shadow2: 0px 1px 1px hsl(240, 2%, 36%);
+    --bg-color: hsla(198, 14%, 14%, 0.19);
+    --button-bg-color: hsla(198, 14%, 14%, 0.19);
+    --button-shadow: inset 5px 5px 20px #0c0b0b, inset -5px -5px 20px hsla(198, 14%, 14%, 0.19);
+    --button-shadowbeaker: inset 2px -2px 10px 0px #0c0b0b, inset 2px -2px 10px 0px hsla(198, 14%, 14%, 0.19);
+    --grid-lines: linear-gradient(hsla(0, 0%, 33%, 0.1) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0.1) 1px, transparent 1px);
+    --grid-linesbucket: linear-gradient(hsla(0, 0%, 33%, 0.5) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0) 1px, transparent 1px);
+    --grid-lines2: linear-gradient(hsla(0, 0%, 33%, 0.2) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0.2) 1px, transparent 1px);
+    --grid-lines3: linear-gradient(hsla(0, 0%, 33%, 0.08) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0.08) 1px, transparent 1px);
+    --grid-linesrain: linear-gradient(hsla(240, 6%, 77%, 0.14) 1px, transparent 1px), linear-gradient(to right, hsla(240, 6%, 77%, 0.14) 1px, transparent 1px);
+    --grid-linescompass: linear-gradient(hsla(0, 0%, 33%, 0.1) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0.1) 1px, transparent 1px);
+    --grid-lines23: linear-gradient(hsla(0, 0%, 33%, 0.5) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0.5) 1px, transparent 1px);
+    --grid-lines-sun: linear-gradient(hsla(0, 0%, 33%, 0.1) 1px, transparent 1px), linear-gradient(to right, hsla(0, 0%, 33%, 0.1) 1px, transparent 1px);
+    --grid-linesindicators: linear-gradient(hsla(206, 11%, 87%, 0.02) 5px, transparent 2px), linear-gradient(to right, hsla(206, 11%, 87%, 0.02) 5px, transparent 2px);
+    --therainrategrad: -webkit-linear-gradient(left, #00adbd 0%, #00adbd 30%, #d35f50 90%)
+}
 body,html{font-size:13px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,2fr));grid-gap:5px;align-items:stretch;color:#f5f7fc}
-.grid>article{border:1px solid rgba(245,247,252,.04);
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,2fr));grid-gap:5px;align-items:stretch;color:#f5f7fc;
+}
+.grid>article{border:1px solid hsla(233, 12%, 13%,1);
+	border-bottom: 5px solid hsla(233, 12%, 13%,1) ;
 box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:20px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
-background:hsla(233, 12%, 13%,.5);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+background:hsla(233, 12%, 13%,0);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 .grid>article img{max-width:100%}
 
 .gridfooter{display:grid;grid-template-columns:repeat(auto-fill,minmax(760,1fr));grid-gap:10px;align-items:stretch;color:#f5f7fc}
@@ -141,6 +220,7 @@ smalluvunit{font-size:.6rem;font-family:Arial,Helvetica,system}smallmagunit{font
 .mag1,.mag1-3,.mag11,.mag4-5,.mag6-8,.mag9-10{font-family:weathertext2,Arial,Helvetica,system;width:4.5rem;
 height:2rem;-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;
 border-radius:2px;font-size:1.2rem;padding-top:12px;color:#fff;border-bottom:11px solid #38383c;align-items:center;justify-content:center;text-align:center;
+margin-top:-10px
 }
 
 .magcaution,.magtrend{position:absolute;font-size:1rem}
@@ -153,9 +233,13 @@ border-radius:2px;font-size:1.2rem;padding-top:12px;color:#fff;border-bottom:11p
 .magtrend{margin-left:135px;margin-top:40px;z-index:1;color:#fff}
 .almanac{font-size:1.25em;margin-top:30px;color:#38383c;width:12em}metricsblue{color:#44a6b5;
 font-family:weathertext2,Helvetica,Arial,sans-serif;background:rgba(86,95,103,.5);-webkit-border-radius:2px;border-radius:2px;align-items:center;justify-content:center;font-size:.9em;left:10px;padding:0 3px 0 3px}.w34convertrain{position:relative;font-size:.5em;top:9px;color:silver;margin-left:5px}
-.hitempy{position:relative;background:rgba(61,64,66,.5);color:#fff;font-size:12px;width:110px;padding:1px;-webit-border-radius:2px;border-radius:2px;margin-top:-38px;
-margin-left:72px;padding:5px;line-height:10px;font-size:9px}
-.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#aaa;align-items:center;justify-content:center;margin-bottom:10px;top:-15px}.actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid #38383c;align-items:center;justify-content:center;margin-bottom:10px;top:0}.svgimage{background:#009bab;-webit-border-radius:2px;border-radius:2px}orange1{color:#ff832f}
+.hitempy{position:relative;
+background:var(--blocks-background);color:#fff;font-size:12px;width:110px;
+padding:1px;-webit-border-radius:2px;border-radius:2px;margin-top:-38px;
+margin-left:72px;padding:5px;line-height:10px;font-size:9px;
+}
+.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+	background:var(--blocks-background);padding:5px;font-family:Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#aaa;align-items:center;justify-content:center;margin-bottom:10px;top:-15px}.actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#aaa;border-bottom:2px solid #38383c;align-items:center;justify-content:center;margin-bottom:10px;top:0}.svgimage{background:#009bab;-webit-border-radius:2px;border-radius:2px}orange1{color:#ff832f}
 </style>
 <div class="weather34darkbrowser" url=" <?php echo $stationlocation?> Regional Recent Earthquakes "></div>  
 <main class="grid">

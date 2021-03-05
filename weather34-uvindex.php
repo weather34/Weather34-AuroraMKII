@@ -36,10 +36,10 @@ echo $weather["uvymax"];?>
 
 <div class="heatcircle2"><div class="heatcircle-content">
 <?php  // min year
-echo "<valuetextheading1>Max Wm/2 <deepblue>".$weather["solarymaxtime"]."</deepblue></valuetextheading1><br>";
+echo "<valuetextheading1>Max W/m&#178; <deepblue>".$weather["solarymaxtime"]."</deepblue></valuetextheading1><br>";
 echo "<div class=tempmodulehome0-5c>";
 echo $weather["solarymax"];?>
-<smalltempunit2>&nbsp;Wm/2</smalltempunit2></div></div>
+<smalltempunit2>&nbsp;W/m&#178;</smalltempunit2></div></div>
 
 <div class="heatcircleindoor"><div class="heatcircle-content">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solar  | Lux</valuetextheading1>
@@ -50,7 +50,7 @@ else if ($weather["solar"]>=500) {echo "<orange>".$weather["solar"]."</orange>";
 else if ($weather["solar"]>0) {echo "<yellow>".$weather["solar"]."</yellow>";}
 else if ($weather["solar"]==0) {echo "<white>".number_format($weather["solar"],0)."</white>";}
 
-echo "<smalltempunit2>&nbsp;Wm/2</smalltempunit2>&nbsp;| &nbsp;  ";
+echo "<smalltempunit2>&nbsp;W/m&#178;</smalltempunit2>&nbsp;| &nbsp;  ";
 $weather['lux1']=$weather['lux']/1000;
 if ($weather['lux1']>=10000) {echo "<red>".number_format($weather['lux1'],0)."</red>";}
 else if ($weather['lux1']>=40000) {echo "<orange>".number_format($weather['lux1'],0)."</orange>";}
@@ -78,7 +78,7 @@ else if ($weather["uvdmax"]==0) {echo "<white>".number_format($weather["uvdmax"]
 echo " ".$maxclock." ".$weather["uvdmaxtime"];?></div>
 
 <div class="mintemp2">
-<?php echo $max1 ." W/m2 ";
+<?php echo $max1 ." W/m&#178; ";
 if ($weather["solardmax"]>=800) {echo "<red>".$weather["solardmax"]."</red>";}
 else if ($weather["solardmax"]>=500) {echo "<orange>".$weather["solardmax"]."</orange>";}
 else if ($weather["solardmax"]>0) {echo "<yellow>".$weather["solardmax"]."</yellow>";}

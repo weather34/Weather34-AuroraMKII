@@ -88,7 +88,7 @@ else if ($meteobridgeapi[24]>=0 ){echo 'var(--blue)';}
 else if ($meteobridgeapi[24]>=-10 ){echo 'var(--temp-5-10)';}
 else if ($meteobridgeapi[24]>=-50 ){echo 'var(--deepcold)';}
 echo "'>";
-echo "<uvopacity>".number_format($weather["windchill"],1)." <uvunits>".$weather["temp_units"]."</uvunits></uvopacity></uvreadings";
+echo "<uvopacity>".number_format($weather["windchill"],1)."&deg;</uvopacity></uvreadings";
 ?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
@@ -127,7 +127,7 @@ else if ($meteobridgeapi[42]>=30 ){echo 'var(--red)';}
 else if ($meteobridgeapi[42]>=25 ){echo 'var(--red)';}
  
 echo "'>";
-echo "<uvopacity>".number_format($weather["heat_index"],1)." <uvunits>".$weather["temp_units"]."</uvunits></uvopacity></uvreadings";
+echo "<uvopacity>".number_format($weather["heat_index"],1)."&deg;</uvopacity></uvreadings";
 ?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
@@ -170,7 +170,7 @@ else if ($meteobridgeapi[152]>=0 ){echo 'var(--blue)';}
 else if ($meteobridgeapi[152]>=-10 ){echo 'var(--temp-5-10)';}
 else if ($meteobridgeapi[152]>=-50 ){echo 'var(--deepcold)';}
 echo "'>";
-echo "<uvopacity>".number_format($weather["temp_avgtoday"],1)." <uvunits>".$weather["temp_units"]."</uvunits></uvopacity></uvreadings";
+echo "<uvopacity>".number_format($weather["temp_avgtoday"],1)."&deg;</uvopacity></uvreadings";
 ?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
@@ -272,15 +272,15 @@ elseif (anytoc($weather["temp"])>=-50 ){echo 'var(--deepcold)';}
 
 <div class="weather-tempicon-identity">    
 <?php //temperature id icon
-if(anytoC($weather["temp"])<0){ echo "<icon-minus10>".$weather34_temp_icon."</icon-minus10>";}
-else if(anytoC($weather["temp"])<6){ echo "<icon-0-5>".$weather34_temp_icon."</icon-0-5>";}
-else if(anytoC($weather["temp"])<10){ echo "<icon-6-10>".$weather34_temp_icon."</icon-6-10>";}
-else if(anytoC($weather["temp"])<15){ echo "<icon-11-15>".$weather34_temp_icon."</icon-11-15>";}
-else if(anytoC($weather["temp"])<20){ echo "<icon-16-20>".$weather34_temp_icon."</icon-16-20>";}
-else if(anytoC($weather["temp"])<25){ echo "<icon-21-25>".$weather34_temp_icon."</icon-21-25>";}
-else if(anytoC($weather["temp"])<30){ echo "<icon-26-30>".$weather34_temp_icon."</icon-26-30>";}
-else if(anytoC($weather["temp"])<35){ echo "<icon-31-35>".$weather34_temp_icon."</icon-31-35>";}
-else if(anytoC($weather["temp"])<40){ echo "<icon-36-40>".$weather34_temp_icon."</icon-36-40>";}
-else if(anytoC($weather["temp"])<100){ echo "<icon-41-45>".$weather34_temp_icon."</icon-41-45>";}
+if(anytoC($weather["temp"])<0){ echo "<icon-minus10>&deg;".$weather["temp_units"]."</icon-minus10>";}
+else if(anytoC($weather["temp"])<6){ echo "<icon-0-5>&deg;".$weather["temp_units"]."</icon-0-5>";}
+else if(anytoC($weather["temp"])<10){ echo "<icon-6-10>&deg;".$weather["temp_units"]."</icon-6-10>";}
+else if(anytoC($weather["temp"])<15){ echo "<icon-11-15>&deg;".$weather["temp_units"]."</icon-11-15>";}
+else if(anytoC($weather["temp"])<20){ echo "<icon-16-20>&deg;".$weather["temp_units"]."</icon-16-20>";}
+else if(anytoC($weather["temp"])<25){ echo "<icon-21-25>&deg;".$weather["temp_units"]."</icon-21-25>";}
+else if(anytoC($weather["temp"])<30){ echo "<icon-26-30>&deg;".$weather["temp_units"]."</icon-26-30>";}
+else if(anytoC($weather["temp"])<35){ echo "<icon-31-35>&deg;".$weather["temp_units"]."</icon-31-35>";}
+else if(anytoC($weather["temp"])<40){ echo "<icon-36-40>&deg;".$weather["temp_units"]."</icon-36-40>";}
+else if(anytoC($weather["temp"])<100){ echo "<icon-41-45>&deg;".$weather["temp_units"]."</icon-41-45>";}
  ?>
 </div>

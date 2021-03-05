@@ -156,7 +156,7 @@ if ($weather['solar']>=400) {echo "<orange>".$weather['solar']."</orange>";}
 else if ($weather['solar']>=100) {echo "<yellow>".$weather['solar']."</yellow>";}
 else if ($weather['solar']>0) {echo "<green>".$weather['solar']."</green>";}
 else if ($weather['solar']==0) {echo "<white>".number_format($weather['solar'],0)."</white>";}
-?><uvi>W/m2</uvi></div>
+?><uvi>W/m&#178;</uvi></div>
 
 <div class=wm><?php //uv phrase
 if ($weather['solar']>=700) {echo 'Good';}
@@ -170,7 +170,7 @@ if ($weather["solardmax"]>=800) {echo "<red>".$weather["solardmax"]."</red>";}
 else if ($weather["solardmax"]>=500) {echo "<orange>".$weather["solardmax"]."</orange>";}
 else if ($weather["solardmax"]>0) {echo "<yellow>".$weather["solardmax"]."</yellow>";}
 else if ($weather["solardmax"]==0) {echo "<white>".number_format($weather["solardmax"],0)."</white>";}
-echo " W/m2  ".$maxclock." ".$weather["solardmaxtime"];?></div>
+echo " W/m&#178;  ".$maxclock." ".$weather["solardmaxtime"];?></div>
 
 <div class="daylight5">
 <?php 
@@ -188,7 +188,7 @@ if ($txt=='Sunset'){echo "&nbsp;(<red>".$nextset."</red>)";}?>
 <div class="heatcircle" style="margin-left:-10px;margin-top:-50px"><div class="heatcircle-content">
 <?php  //solar year
 echo "<valuetextheading1>".date('Y')." Max <blue>".$weather["solarymaxtime"]."</blue></valuetextheading1><br>";
-echo "<div class=tempconverter1><div class=tempmodulehome0-5c >".$weather["solarymax"]."<smalltempunit2>&nbsp;W/m2";
+echo "<div class=tempconverter1><div class=tempmodulehome0-5c >".$weather["solarymax"]."<smalltempunit2>&nbsp;W/m&#178;";
 ?><smalltempunit2></div></div></div>
 
 <div class="heatcircle2"><div class="heatcircle-content"><valuetextheading1>&nbsp;Luminance Lux</valuetextheading1>
@@ -199,6 +199,6 @@ echo "<div class=tempconverter1><div class=tempmodulehome0-5c>". $weather["lux"]
 
 <div class="heatcircleindoor"><div class="heatcircle-content">&nbsp;&nbsp;&nbsp;<?php echo date('F')?> <orange>Max</orange> <deepblue><?php echo $weather["solarmmaxtime"]?> </deepblue></valuetextheading1>
 <?php //SOLAR max month
-    echo "<div class=tempconverter1><div class=tempmodulehome0-5c>". $weather["solarmmax"]."<smalltempunit2> &nbsp;W/m2</smalltempunit2>";
+    echo "<div class=tempconverter1><div class=tempmodulehome0-5c>". $weather["solarmmax"]."<smalltempunit2> &nbsp;W/m&#178;</smalltempunit2>";
 ?>
 </div></div></div><div>

@@ -1,22 +1,22 @@
 <?php include('livedata.php');?>
-<div class="almanac-word">Solar Radiation</div>
+<div class="almanac-word">Solar W/m&#178;</div>
 <br><br>
 <div class="almanac"><div class="almanac-content">
 <?php  //month max
 echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["solarmmaxtime"]."</deepblue></valuetextheading1><br>";   
-echo "<div class=tempmodulehome0-5c>".$weather["solarmmax"]	."<smalltempunit2>W/m2";
+echo "<div class=tempmodulehome0-5c>".$weather["solarmmax"]	."<smalltempunit2>W/m&#178;";
 ?><smalltempunit2></div></div>
 
 <div class="almanac2"><div class="almanac-content">
 <?php  //max year
 echo "<valuetextheading1>".date('Y')." Max <deepblue>".$weather["solarymaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=tempmodulehome0-5c>".$weather["solarymax"]."<smalltempunit2>W/m2";
+echo "<div class=tempmodulehome0-5c>".$weather["solarymax"]."<smalltempunit2>W/m&#178;";
  ?></smalltempunit2></div></div>
 
 <div class="almanac3"><div class="almanac-content">
 <?php  //month min
 echo "<valuetextheading1>Yesterday Max <deepblue>".$weather["solarydmaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=tempmodulehome0-5c>".$weather["solarydmax"]."<smalltempunit2>W/m2";
+echo "<div class=tempmodulehome0-5c>".$weather["solarydmax"]."<smalltempunit2>W/m&#178;";
 ?><smalltempunit2></div></div>
 
 <div class="almanac4"><div class="almanac-content">

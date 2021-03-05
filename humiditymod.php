@@ -70,7 +70,7 @@ else if ((anytoc($weather["realfeel"]))>=0 ){echo 'var(--blue)';}
 else if ((anytoc($weather["realfeel"]))>=-10 ){echo 'var(--temp-5-10)';}
 else if ((anytoc($weather["realfeel"]))>=-50 ){echo 'var(--deepcold)';}
 echo "'>";
-echo "<uvopacity>".number_format($weather["realfeel"],1)." <uvunits>".$weather["temp_units"]."</uvunits></uvopacity></uvreadings";
+echo "<uvopacity>".number_format($weather["realfeel"],1)."&deg;</uvopacity></uvreadings";
 ?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
@@ -147,8 +147,8 @@ elseif ($weather["humidity"]>=0 ){echo 'var(--red)';}?>;">
 
 <div class="weather-tempicon-identity">    
 <?php //humidity id
-if ($weather["humidity"]>=70){ echo "<blue>".$weather34_humidity_icon."</blue>";}
-else if ($weather["humidity"]>=60){ echo "<yellow>".$weather34_humidity_icon."</yellow>";}
-else if ($weather["humidity"]>=40){ echo "<green>".$weather34_humidity_icon."</green>";}
-else if ($weather["humidity"]>=0){ echo "<red>".$weather34_humidity_icon."</red>";}
+if ($weather["humidity"]>=70){ echo "<blue>RH</blue>";}
+else if ($weather["humidity"]>=60){ echo "<yellow>RH</yellow>";}
+else if ($weather["humidity"]>=40){ echo "<green>RH</green>";}
+else if ($weather["humidity"]>=0){ echo "<red>RH</red>";}
 ?></div>

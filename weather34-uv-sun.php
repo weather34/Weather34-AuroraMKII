@@ -184,7 +184,7 @@ if ($weather["solardmax"]>=800) {echo "<red>".$weather["solardmax"]."</red>";}
 else if ($weather["solardmax"]>=500) {echo "<orange>".$weather["solardmax"]."</orange>";}
 else if ($weather["solardmax"]>0) {echo "<yellow>".$weather["solardmax"]."</yellow>";}
 else if ($weather["solardmax"]==0) {echo "<white>".number_format($weather["solardmax"],0)."</white>";}
-echo " W/m2  ".$maxclock." ".$weather["solardmaxtime"];?></div>
+echo " W/m&#178;  ".$maxclock." ".$weather["solardmaxtime"];?></div>
 
 <div class="daylight4">
 <?php 
@@ -231,7 +231,7 @@ else if ($weather['solar']>=400 ){echo "0 200 <yellow>".$weather['solar']."</yel
 else if ($weather['solar']>=200 ){echo "0 <yellow>".$weather['solar']."</yellow> 400 600 800 1k ";}
 else if ($weather['solar']>0 ){echo "<yellow>".$weather['solar']."</yellow> 200 400  600 800 1k ";}
 else if ($weather['solar']==0 ){echo "".$weather['solar']." 200 400  600 800 1k ";}
-echo "<smalltempunit2>W/m2</smalltempunit2>";
+echo "<smalltempunit2>W/m&#178;</smalltempunit2>";
 ?></smalltempunit2></valuetextheadingsolar>
 <div class=sunratebar>
 <div class="weather34sunratebar" 

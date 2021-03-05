@@ -28,6 +28,8 @@ include_once('livedata.php');include_once('updater2.php');?>
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/verbatim-bold.woff2" as="font" type="font/woff2" crossorigin> 
+
 </head>
 <body>
 <!-- weather34 Aurora MKII flex layout -->

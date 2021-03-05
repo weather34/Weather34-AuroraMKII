@@ -40,7 +40,7 @@ else if ($weather['solar']>=600 ){echo "0 200 400 <orange>600</orange>  800 1k "
 else if ($weather['solar']>=400 ){echo "0 200 <yellow>400</yellow> 600 800 1k ";}
 else if ($weather['solar']>=200 ){echo "0 <yellow>200</yellow> 400 600 800 1k ";}
 else if ($weather['solar']>=0 ){echo "<green>0</green> 200 400  600 800 1k ";}
-echo "W/m2";
+echo "W/m&#178;";
 if ($weather['solar']>=1000){echo "(<red>".number_format($weather['solar'],0)."</red>)";}
 else if ($weather['solar']>=600){echo "(<orange>".number_format($weather['solar'],0)."</orange>)";}
 else if ($weather['solar']>=200){echo "(<yellow>".number_format($weather['solar'],0)."</yellow>)";}

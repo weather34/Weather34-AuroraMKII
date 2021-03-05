@@ -125,7 +125,8 @@ else echo 'background:var(--blue);'?>">
 
 <div class="weather-tempicon-identity">
 <?php  //Rain icon
-echo $weather34_rain_icon;?>
+if ($seconds_ago <=3600){echo $umbrella;}
+else echo "<rain>".$weather34_rain_icon."</rain>";?>
 </div></div>
 
 <?php //weather34 clean notifications 

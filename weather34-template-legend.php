@@ -547,16 +547,7 @@ echo convertToReadableSize($weather34cssfilesize);
 function convertToReadableSize($weather34cssfilesize){$base = log($weather34cssfilesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
 $f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
 ?>
-<br>
-Jquery file size <?php //jquery file size
-$filename1 ="js/jquery.js";
-echo '<blue>';
-$weather34filesize = filesize($filename1);
-echo convertToReadableSize1($weather34filesize);
-function convertToReadableSize1($weather34filesize){$base = log($weather34filesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
-$f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
-?>
-<br>Timezone setting <blue><?php echo $TZ?></blue>
+<br>Timezone <blue><?php echo $TZ?></blue>
 <br>
 <?php //time to load
 $end_time = microtime(TRUE);

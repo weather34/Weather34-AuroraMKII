@@ -1,6 +1,6 @@
 <?php include('livedata.php');?>
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
-<theword>Solar Radiation</theword>
+<theword>Solar W/m&#178;</theword>
 <extrainfoiconuv><?php echo $solarpanelicon?></extrainfoiconuv>
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
@@ -19,25 +19,25 @@ CSS/SVG/PHP developed by weather<blue>34</blue></a></div></div>
 <div class="almanacxuv"><div class="almanac-content">
 <?php  //month max
 echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["solarmmaxtime"]."</deepblue></valuetextheading1><br>";   
-echo "<div class=almanacareas>".$weather["solarmmax"]	."<smalltempunit2>Wm/2";
+echo "<div class=almanacareas>".$weather["solarmmax"]	."<smalltempunit2>W/m&#178;";
 ?><smalltempunit2></div></div>
 
 <div class="almanac2xuv"><div class="almanac-content">
 <?php  //max year
 echo "<valuetextheading1>".date('Y')." Max <deepblue>".$weather["solarymaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["solarymax"]."<smalltempunit2>Wm/2";
+echo "<div class=almanacareas>".$weather["solarymax"]."<smalltempunit2>W/m&#178;";
  ?></smalltempunit2></div></div>
 
 <div class="almanac3xuv"><div class="almanac-content">
 <?php  //yesterday
 echo "<valuetextheading1>Yesterday Max <deepblue>".$weather["solarydmaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["solarydmax"]."<smalltempunit2>Wm/2";
+echo "<div class=almanacareas>".$weather["solarydmax"]."<smalltempunit2>W/m&#178;";
 ?><smalltempunit2></div></div>
 
 <div class="almanac4xuv"><div class="almanac-content">
 <?php  //All time
 echo "<valuetextheading1>Record Max <deepblue>".$weather["solaramaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["solaramax"]."<smalltempunit2>Wm/2";
+echo "<div class=almanacareas>".$weather["solaramax"]."<smalltempunit2>W/m&#178;";
 ?><smalltempunit2></div></div>
 
 <br><br>

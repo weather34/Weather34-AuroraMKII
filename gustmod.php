@@ -171,11 +171,11 @@ elseif ($meteobridgeapi[6]>=0) {echo '#00adbd';}?>
 
 <div class=extrainfo><a href='wind-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
 
+
 <div class="weather-tempicon-identity" ><?php 
 //icon
 if($meteobridgeapi[6]>=16.66){ echo "<icon-26-30>".$weather34_wind_icon."</icon-26-30>";}      
 else if($meteobridgeapi[6]>=12.5){ echo "<icon-21-25>".$weather34_wind_icon."</icon-21-25>";}          
-else if($meteobridgeapi[6]>=2.77){ echo "<icon-11-15>".$weather34_wind_icon."</icon-11-15>";}     
-else if($meteobridgeapi[6]>=1.3){ echo "<icon-6-10>".$weather34_wind_icon."</icon-6-10>";}
-else if($meteobridgeapi[6]>=0){ echo "<icon-0-5>".$weather34_wind_icon."</icon-0-5>";}
+else if($meteobridgeapi[6]>3){ echo "<icon-11-15>".$weather34_wind_icon."</icon-11-15>";}     
+else if($meteobridgeapi[6]>=0){ echo "<green>".$weather34_wind_icon."</green>";}
 ?></div>

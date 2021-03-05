@@ -26,7 +26,7 @@ $nextset = $result['sunset'];if ($now > $nextset) { $nextset = date($timeformat,
 	elseif ($now < $firstset) { $time = $firstset - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time);$txt = 'Sunset';} 
 	else { $time = $secondrise - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time); $txt = 'Sunrise';}echo "";
 ?>
-<div class="modulecaptionb">UVINDEX</div>
+<div class="modulecaptionb">UVINDEX | W/m&#178;</div>
 
 <div class="maxuvindex">
 <?php echo $max1 ." UVI ";
@@ -39,7 +39,7 @@ else if ($weather["uvdmax"]==0) {echo "<white>".number_format($weather["uvdmax"]
 echo " ".$maxclock." ".$weather["uvdmaxtime"];?></div>
 
 <div class="maxwm2">
-<?php echo $max1 ." W/m2 ";
+<?php echo $max1 ." W/m&#178; ";
 if ($weather["solardmax"]>=800) {echo "<red>".$weather["solardmax"]."</red>";}
 else if ($weather["solardmax"]>=500) {echo "<orange>".$weather["solardmax"]."</orange>";}
 else if ($weather["solardmax"]>0) {echo "<yellow>".$weather["solardmax"]."</yellow>";}
@@ -98,15 +98,15 @@ if ($weather['solar']>=1000 ){echo 'var(--red)';}
 elseif ($weather['solar']>=600 ){echo 'var(--orange)';}
 elseif ($weather['solar']>0 ){echo 'var(--yellow)';}
 echo "'>";
-if ($weather['solar']>=1000 ){echo "<uvopacity>".round($weather["solar"],0)."<uvunits>Wm/2</uvunits></uvopacity></uvreadings";}
-else echo "<uvopacity>".round($weather["solar"],1)." <uvunits>Wm/2</uvunits></uvopacity></uvreadings";
+if ($weather['solar']>=1000 ){echo "<uvopacity>".round($weather["solar"],0)."<uvunits>W/m&#178;</uvunits></uvopacity></uvreadings";}
+else echo "<uvopacity>".round($weather["solar"],1)." <uvunits>W/m&#178;</uvunits></uvopacity></uvreadings";
 ?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
 <div id="raincontainer2">
 <div id="weather34rainbeaker2">
   <?php //relative 24 hour 50mm/2in scale
-  echo "<volume>Wm/2 <br>-- <br>-- <br>-- <br>-- <br>100 </volume>";
+  echo "<volume>W/m&#178; <br>-- <br>-- <br>-- <br>-- <br>100 </volume>";
   ?>
 <div id="weather34rainwater2" style="height:<?php echo $weather["solar"]/23;?>pt;opacity:0.7;background:
 <?php //solar color

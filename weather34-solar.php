@@ -52,7 +52,7 @@ class sunPos{public function getSunPos(){$date=clone $this->date;$date->setTimez
 
 
 <div class="maxuvindex">
-<?php echo $max1 ." Max W/m2 ";
+<?php echo $max1 ." Max W/m&#178; ";
 if ($weather["solardmax"]>=800) {echo "<red>".$weather["solardmax"]."</red>";}
 else if ($weather["solardmax"]>=500) {echo "<orange>".$weather["solardmax"]."</orange>";}
 else if ($weather["solardmax"]>0) {echo "<yellow>".$weather["solardmax"]."</yellow>";}
@@ -66,7 +66,7 @@ if ($txt=='Sunrise'){echo $sunrisesicon2;}if ($txt=='Sunset'){echo $sunsetsicon2
 <?php if ($txt=='Sunrise'){echo "&nbsp;(<orange>".$nextrise."</orange>)";}if ($txt=='Sunset'){echo "&nbsp;(<red>".$nextset."</red>)";}?> 
 </div>
 
-<uvheading style='margin-left:-40px;'>Solar Wm/2</uvheading>
+<uvheading style='margin-left:-40px;'>Solar W/m&#178;</uvheading>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 

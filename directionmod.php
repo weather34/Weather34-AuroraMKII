@@ -163,9 +163,6 @@ else if( $weather['wind_direction_avgmonth']<=348.75){echo "NNW";}else if( $weat
 <div class=extrainfo4 ><a href='winddir-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>
 &nbsp;Extra Info</a></div>
 
-<div class="weather-directionicon-identity">    
-<?php echo $weather34compassicon;?>
-</div>
-
-</div></div>
+<div class="weather-directionicon-identity"><?php echo $weather34winddirection?></div>
+</div></div></div>
 <div class="modulecaptiondirection">Wind Direction</div>
