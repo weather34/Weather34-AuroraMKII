@@ -722,5 +722,5 @@ $weather34winddirection='<svg width="17pt" height="17pt" viewBox="0 0 313 319" v
 </g><g><path fill="#ffa243" opacity="1.00" d=" M 40.40 241.38 C 42.14 240.52 44.28 240.91 45.41 242.54 C 50.94 249.04 56.48 255.55 61.92 262.13 C 65.48 266.37 57.27 272.52 54.08 268.03 C 48.55 261.49 42.96 255.00 37.54 248.37 C 35.27 245.88 37.80 242.36 40.40 241.38 Z" />
 </g></svg>';
 $weather34version='Aurora MKII';
-$weather34versiondate='5th March 2021';
+$weather34versiondate='6th March 2021';
 ?>
