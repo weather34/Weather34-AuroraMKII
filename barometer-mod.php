@@ -63,8 +63,16 @@ echo '<div class="text2b">'.$weather["barometer"].'</div>';
 ?>
 </div></div><div>
 
-<?php //unit
-echo "<unitindicator>".$weather["barometer_units"]."</unitindicator>";?>
+<?php //trend phrase
+echo "<unitindicator>";
+//falling
+if($weather["barometer_trend"]<0){echo '&nbsp;Falling';}
+//rising
+else if($weather["barometer_trend"]>0){echo '&nbsp;Rising';}
+//steady
+else echo "Steady";echo "</unitindicator>";
+?>
+
 
 <?php //trend
 echo "<tempman>";

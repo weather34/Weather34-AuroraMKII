@@ -55,8 +55,16 @@ else if(anytoC($weather["temp"])<100){ echo "<icon-41-45>".$weather["temp"]."&de
 ?>
 </div></div><div>
 
-<?php //unit
-echo "<unitindicator>&deg;";echo $weather["temp_units"];echo "</unitindicator>";?>
+<?php //trend phrase
+echo "<unitindicator>";
+//falling
+if($weather["temp_trend"]<0){echo '&nbsp;Falling';}
+//rising
+else if($weather["temp_trend"]>0){echo '&nbsp;Rising';}
+//steady
+else echo "Steady";echo "</unitindicator>";
+?>
+
 
 <?php //trend
 echo "<tempman>";

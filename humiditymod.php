@@ -33,9 +33,20 @@ else if($weather["humidity"]>=60){ echo "<icon-11-15>".$weather["humidity"]."<sm
 else if($weather["humidity"]>=40){ echo "<icon-6-10>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-6-10>";}
 else if($weather["humidity"]>=0){ echo "<icon-31-35>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-26-30>";}
 ?></div></div><div>
-<windunitindicator>RH</windunitindicator>
 
-<?php //feels like man
+
+<?php //trend phrase
+echo "<unitindicator>";
+//falling
+if($weather["humidity_trend"]<0){echo '&nbsp;Falling';}
+//rising
+else if($weather["humidity_trend"]>0){echo '&nbsp;Rising';}
+//steady
+else echo "Steady";echo "</unitindicator>";
+?>
+
+
+<?php //trend
 echo "<tempman>";
 //falling
 if($weather["humidity_trend"]<0){

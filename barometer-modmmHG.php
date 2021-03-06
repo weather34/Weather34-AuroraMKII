@@ -36,8 +36,16 @@ echo '<div class="text2b">'.$weather["barometer"].'</div>';
 ?>
 </div></div><div>
 
-<?php //unit
-echo "<unitindicator>".$weather["barometer_units"]."</unitindicator>";?>
+<?php //trend phrase
+echo "<unitindicator>";
+//falling
+if($weather["barometer_trend"]<0){echo '&nbsp;Falling';}
+//rising
+else if($weather["barometer_trend"]>0){echo '&nbsp;Rising';}
+//steady
+else echo "Steady";echo "</unitindicator>";
+?>
+
 
 <?php //trend
 echo "<tempman>";
@@ -117,11 +125,9 @@ style=
 </div></div></div>
 
 <div class=extrainfo><a href='barometer-almanacmmHg2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
-
-
-<div class="weather-tempicon-identity">    
-<?php //id
-echo "<icon-zero>".$weather34_pressure_icon."</icon-zero>";?></div>
-
-
+<div class="weather-pressureicon-identity" style="font-size:8.5px">    
+<?php //id unit
+if ($weather["barometer_trend"]>0 ){echo "<orange>".$weather["barometer_units"]."</orange>";}
+else if ($weather["barometer_trend"]==0 ){echo "<green>".$weather["barometer_units"]."</green>";}
+else if ($weather["barometer_trend"]<0 ){echo "<blue>".$weather["barometer_units"]."</blue>";}?></div>
 
