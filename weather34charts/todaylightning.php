@@ -18,8 +18,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR AQI CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR AQI CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -70,7 +69,7 @@
 	}
 	function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-		 backgroundColor: "rgba(40, 45, 52,0)",
+		 backgroundColor: "<?php echo $bcolor;?>",
 		 animationEnabled: false,
 		 
 		title: {
@@ -95,7 +94,7 @@
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
+			labelFontColor:'<?php echo $ccolor?>',
 			labelFontFamily: "Arial",
 			labelFontWeight: "bold",
 			labelFontSize:7.5,
@@ -125,7 +124,7 @@
 		gridColor: "rgba(82, 92, 97, 0.39)",		
 		gridDashType: "dot",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
+		labelFontColor:'<?php echo $ccolor?>',
 		labelFontFamily: "Arial",
 		labelFontWeight: "bold",
 		labelFormatter: function ( e ) {

@@ -1,12 +1,13 @@
 <?php include('../settings.php');date_default_timezone_set($TZ);
-if ($theme=='light'){$ccolor="#597286";}
+if ($theme=='light'){$ccolor="#3D464D";}
 if ($theme=='dark'){$ccolor="#AFB7C0";}
 if ($theme=='light'){$bcolor="hsla(206, 33%, 96%,0)";}
-if ($theme=='dark'){$bcolor="#21232C";}
+if ($theme=='dark'){$bcolor="#20222A";}
 if ($theme=='light'){$bordercolor="#DEE3F0";}
 if ($theme=='dark'){$bordercolor="#3D464D";}
 ?>
-<script rel="preload" src='canvasJs.js' as="script"></script>
+<script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
+<script rel="preload" src=../js/jquery.js></script>
 <link rel="preload" href="fonts/verbatim-bold.woff" as="font" type="font/woff" crossorigin>
 <style>
 @font-face {font-family: weathertext3;src: url(fonts/verbatim-bold.woff) format("woff");}

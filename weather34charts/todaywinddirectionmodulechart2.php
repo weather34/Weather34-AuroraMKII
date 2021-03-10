@@ -19,8 +19,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR WIND Direction day CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR WIND Direction day CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -105,7 +104,7 @@ function drawChart( dataPoints1 , dataPoints2 ) {
 var yLabels = ["North","NE","East","SE","South","SW","West","NW","North" ];
 var yLabelCounter=0;		
 var chart = new CanvasJS.Chart("chartContainer2", {
-		 backgroundColor: "rgba(40, 45, 52,.0)",
+		 backgroundColor: "<?php echo $bcolor;?>",
 		 animationEnabled: false,
 		 margin: 0,
 		 
@@ -113,7 +112,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
             text: " ",
 			fontSize: 0,
 			fontColor:' #555',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		toolTip:{
 			fontStyle: "normal",
@@ -125,16 +124,15 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2", 
+			   fontFamily: "verb", 
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",		    		
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
-			labelFontFamily: "weathertext2",
-			
+			labelFontColor:'<?php echo $ccolor?>',
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
@@ -162,8 +160,8 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 		gridDashType: "dot",
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 9,
-		labelFontColor:'#597286',
-		labelFontFamily: "weathertext2",
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",
 						
 		interval: 45,
   	labelFormatter: function ( e ) {
@@ -187,7 +185,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
   
  },

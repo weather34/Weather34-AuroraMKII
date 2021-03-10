@@ -29,5 +29,5 @@ weather34.com</a> © 2015-<?php echo date('Y');?>.
 <div class="info-2"> 
 Data Charts compiled with <a href="https://canvasjs.com/" target="_blank" title="https://canvasjs.com/" alt="https://canvasjs.com/" class="info2a">CanvasJs.com</a> 
 v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version. <br>
-<info2b>* © 2015-<?php echo date('Y');?> weather<blue>34</blue> aurora</info2b>
+<info2b>* © 2015-<?php echo date('Y');?> weather<blue>34</blue> Aurora MKII</info2b>
 </div>

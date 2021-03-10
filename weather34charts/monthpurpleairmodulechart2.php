@@ -24,8 +24,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR SOLAR MONTH CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR SOLAR MONTH CHART</title>
 		
 	';	
 	?>
@@ -100,14 +99,14 @@ return theD;}
 	
 	function drawChart( dataPoints1,dataPoints2) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-		backgroundColor: "rgba(40, 45, 52,0)",
+		backgroundColor: "<?php echo $bcolor;?>",
 		animationEnabled: false,
 		 
 		title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		toolTip:{
 			fontStyle: "normal",
@@ -119,16 +118,15 @@ return theD;}
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2",
-			   fontFamily: "weathertext2", 
+			   fontFamily: "verb",
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",		    		
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
-			labelFontFamily: "weathertext2",			
+			labelFontColor:'<?php echo $ccolor?>',
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType:5,
@@ -153,8 +151,8 @@ return theD;}
         includeZero: true,
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
-		labelFontFamily: "weathertext2",		
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",		
 		labelFormatter: function ( e ) {
             return e.value .toFixed(0) ;
          },	
@@ -172,7 +170,7 @@ return theD;}
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
 	  margin: 0,
   

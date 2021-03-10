@@ -34,8 +34,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR Barometer CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR Barometer CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -98,14 +97,14 @@ return thecolor;}
 	
 	function drawChart( dataPoints1) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-		backgroundColor: "rgba(40, 45, 52,0)",
+		backgroundColor: "<?php echo $bcolor;?>",
 		animationEnabled: false,
 		 
 		title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		toolTip:{
 			   fontStyle: "normal",
@@ -116,15 +115,15 @@ return thecolor;}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2",
+			   fontFamily: "verb",
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",		    		
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
-			labelFontFamily: "weathertext2",			
+			labelFontColor:'<?php echo $ccolor?>',
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
@@ -149,8 +148,8 @@ return thecolor;}
         includeZero: false,
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
-		labelFontFamily: "weathertext2",
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",
 		
 		labelFormatter: function ( e ) {
 			return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '1';} else echo '0';?>) ;
@@ -168,7 +167,7 @@ return thecolor;}
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
 	  margin: 0,
   

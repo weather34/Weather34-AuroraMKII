@@ -23,8 +23,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>STRIKES MONTH CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>STRIKES MONTH CHART</title>
 		
 	';	
 	?>
@@ -93,14 +92,14 @@ return theD;}
 	
 	function drawChart(dataPoints1,dataPoints2) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-		backgroundColor: "rgba(40, 45, 52,0)",
+		backgroundColor: "<?php echo $bcolor;?>",
 		animationEnabled: false,
 		 
 		title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		toolTip:{
 			fontStyle: "normal",
@@ -112,18 +111,17 @@ return theD;}
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2",
-			   fontFamily: "weathertext2", 
+			   fontFamily: "verb",
  },
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",
 		    labelFontSize: 7.5,
-			labelFontColor:'#597286',
+			labelFontColor:'<?php echo $ccolor?>',
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			titleFontFamily: "weathertext2",	
-			labelFontFamily: "weathertext2",	
+			titleFontFamily: "verb",	
+			labelFontFamily: "verb",	
 			minimum:-0.5,	
 			interval:'auto',	
 			intervalType:"day",
@@ -149,8 +147,8 @@ return theD;}
         includeZero: true,
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
-		labelFontFamily: "weathertext2",		
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",		
 		labelFormatter: function ( e ) {
             return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '0';} else echo '0';?>) ;
          },	
@@ -169,7 +167,7 @@ return theD;}
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
 	  margin: 0,
   

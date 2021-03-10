@@ -1,23 +1,9 @@
 <?php
-	
-	####################################################################################################
-	#	CREATED FOR STANDALONE CONSOLE VERSION TEMPLATE 											   #
-	# https://weather34.com/homeweatherstation/index.html 											   # 
-	# 	                                                                                               #
-	# 	built on CanvasJs  	                                                                           #
-	#   canvasJs.js is protected by CREATIVE COMMONS LICENCE BY-NC 3.0  	                           #
-	# 	free for non commercial use and credit must be left in tact . 	                               #
-	# 	                                                                                               #
-	# 	Release: April 2020  Revised October 2020 Air Quality   	  	 	                           #
-	# 	                                                                                               #
-	#   https://www.weather34.com 	                                                                   #
-	####################################################################################################
-	
-	
+
 	include('preload.php');
 
 	####################################################################################################
-    #	CREATED FOR Weather34											 							   #
+    #	CREATED FOR Weather34Aurora MKII   								 							   #
     # https://weather34.com/homeweatherstation/index.html 											   #
     # 	                                                                                               #
     # 	Revised: October 2020					  	                                                   #
@@ -36,8 +22,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR AQI CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR AQI CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -85,14 +70,14 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 
 		function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-            backgroundColor: "rgba(40, 45, 52,0)",
+            backgroundColor: "<?php echo $bcolor;?>",
 		 animationEnabled: false,		
 		
          title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		dataPointWidth: 2,
 		toolTip:{
@@ -104,7 +89,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2",
+			   fontFamily: "verb",
  },
 
 		axisX: {
@@ -112,8 +97,8 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
-			labelFontFamily: "weathertext2",			
+			labelFontColor:'<?php echo $ccolor?>',
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType:5,
@@ -139,8 +124,8 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 		gridDashType: "dot",
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
-		labelFontFamily: "weathertext2",
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",
 		interval: "auto",
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) +" AQI";           },		 
@@ -157,7 +142,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
   
  },

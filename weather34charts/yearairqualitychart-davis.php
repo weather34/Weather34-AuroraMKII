@@ -22,8 +22,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR AQI CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR AQI CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -71,14 +70,14 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 
 		function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-            backgroundColor: "rgba(40, 45, 52,0)",
+            backgroundColor: "<?php echo $bcolor;?>",
 		 animationEnabled: false,		
 		
          title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		dataPointWidth: 2,
 		toolTip:{
@@ -90,7 +89,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2", 
+			   fontFamily: "verb", 
  },
 
 		axisX: {
@@ -98,8 +97,8 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
-			labelFontFamily: "weathertext2",
+			labelFontColor:'<?php echo $ccolor?>',
+			labelFontFamily: "verb",
 			
 			labelFontSize:8,
 			interval: 45,
@@ -126,8 +125,8 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 		gridDashType: "dot",
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
-		labelFontFamily: "weathertext2",
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",
 				
 		interval: "auto",
 		labelFormatter: function ( e ) {
@@ -145,7 +144,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
   
  },

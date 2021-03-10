@@ -22,8 +22,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR AQI CHART</title>	
-		<script src=../js/jquery.js></script>
+		<title>OUTDOOR AQI CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -83,14 +82,14 @@ function processData1(allText) {
 
 		function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-            backgroundColor: "rgba(40, 45, 52,0)",
+            backgroundColor: "<?php echo $bcolor;?>",
 		 animationEnabled: false,		
 		
          title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #aaa',
-			fontFamily: "weathertext2",
+			fontFamily: "verb",
         },
 		dataPointWidth: 1,
 		toolTip:{
@@ -103,8 +102,7 @@ function processData1(allText) {
 			   content: "{label} {y}" ,     	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
-			   fontFamily: "weathertext2",
-			   fontFamily: "weathertext2", 
+			   fontFamily: "verb",
  },
 
 		axisX: {
@@ -112,8 +110,8 @@ function processData1(allText) {
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:'#597286',
-			labelFontFamily: "weathertext2",			
+			labelFontColor:'<?php echo $ccolor?>',
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType:5,
@@ -140,8 +138,8 @@ function processData1(allText) {
 		gridDashType: "dot",
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:'#597286',
-		labelFontFamily: "Weathertext2",
+		labelFontColor:'<?php echo $ccolor?>',
+		labelFontFamily: "verb",
 				
 		interval: "auto",
 		labelFormatter: function ( e ) {
@@ -159,7 +157,7 @@ function processData1(allText) {
       },
 	  
 	  legend:{
-      fontFamily: "weathertext2",
+      fontFamily: "verb",
       fontColor:"#555",
   
  },
