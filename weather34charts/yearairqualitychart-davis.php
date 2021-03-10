@@ -98,11 +98,11 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:' #888',
+			labelFontColor:'#597286',
 			labelFontFamily: "weathertext2",
 			
 			labelFontSize:8,
-			interval: 18,
+			interval: 45,
    			intervalType:5,
 			minimum:-0.5,
 			crosshair: {
@@ -126,7 +126,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 		gridDashType: "dot",
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:' #888',
+		labelFontColor:'#597286',
 		labelFontFamily: "weathertext2",
 				
 		interval: "auto",

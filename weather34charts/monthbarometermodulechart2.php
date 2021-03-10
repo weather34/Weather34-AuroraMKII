@@ -118,7 +118,7 @@ return thecolor;}
 		axisX: {
 			gridColor: "rgba(82, 92, 97, 0.39)",
 		    labelFontSize: 8,
-			labelFontColor:' #888',
+			labelFontColor:'#597286',
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
@@ -149,7 +149,7 @@ return thecolor;}
         includeZero: false,
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:' #888',
+		labelFontColor:'#597286',
 		labelFontFamily: "weathertext2",		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '1';} else echo '0';?>) ;

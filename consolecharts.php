@@ -10,12 +10,11 @@
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
-<script>function pageLoaded() {document.querySelector("body").style.opacity = 1;}window.onload = pageLoaded;</script>
+
 </head>
 <body>
 <!-- weather34 NANOSD console flex layout -->
 <div class="weather34-tablet">
-<div class="fade-in">
 <div class="container">
 <div class="nav-top">   
 <div class="weather34-indoor"><?php echo $timeicon?> <div id="weather34clock4"></div>

@@ -95,7 +95,7 @@
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:' #888',
+			labelFontColor:'#597286',
 			labelFontFamily: "Arial",
 			labelFontWeight: "bold",
 			labelFontSize:7.5,
@@ -125,7 +125,7 @@
 		gridColor: "rgba(82, 92, 97, 0.39)",		
 		gridDashType: "dot",
 		labelFontSize: 8,
-		labelFontColor:' #888',
+		labelFontColor:'#597286',
 		labelFontFamily: "Arial",
 		labelFontWeight: "bold",
 		labelFormatter: function ( e ) {

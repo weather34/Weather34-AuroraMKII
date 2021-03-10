@@ -123,7 +123,7 @@ return thecolor;}
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:' #888',
+			labelFontColor:'#597286',
 			labelFontFamily: "weathertext2",			
 			labelFontSize:8,
 			interval: 18,
@@ -149,7 +149,7 @@ return thecolor;}
         includeZero: false,
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 8,
-		labelFontColor:' #888',
+		labelFontColor:'#597286',
 		labelFontFamily: "weathertext2",
 		
 		labelFormatter: function ( e ) {

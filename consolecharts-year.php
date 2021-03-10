@@ -15,7 +15,6 @@
 <body>
 <!-- weather34 NANOSD console flex layout -->
 <div class="weather34-tablet">
-<div class="fade-in">
 <div class="container">
 <div class="nav-top">   
 <div class="weather34-indoor"><?php echo $timeicon?> <div id="weather34clock4"></div>

@@ -135,7 +135,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			lineThickness: 1,
 			gridThickness: 1,
 			gridDashType: "dot",	
-			labelFontColor:' #888',
+			labelFontColor:'#597286',
 			labelFontFamily: "weathertext2",			
 			labelFontSize:8,		
    			intervalType: "hour",
@@ -164,7 +164,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 		gridDashType: "dot",
 		gridColor: "rgba(82, 92, 97, 0.39)",
 		labelFontSize: 9,
-		labelFontColor:' #888',
+		labelFontColor:'#597286',
 		labelFontFamily: "weathertext2",						
 		interval: 45,
   	labelFormatter: function ( e ) {

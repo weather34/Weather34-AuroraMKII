@@ -1,7 +1,7 @@
   
  <?php include('livedata.php');?>
 
- <div class="modulecaptionchart">Barometer &nbsp; <blue>
+ <div class="modulecaptionchart">Barometric Pressure &nbsp; <blue>
  <?php 
  if ($weather["temp_units"]=='C' && $position8=='barometer-modmmHG.php') {echo 'mmHG';}
  else  echo $weather["barometer_units"]; 

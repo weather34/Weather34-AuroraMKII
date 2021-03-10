@@ -229,9 +229,9 @@ Date.prototype.getJulian=function(){
 // calculate lunar phase (1900 - 2199)
 $year = date('Y');$month = date('n');$day = date('j');
 if ($month < 4) {$year = $year - 1; $month = $month + 12;}
-$days_y = 365.25 * $year;$days_m = 30.6 * $month;
+$days_y = 365.25 * $year;$days_m = 30.42 * $month;
 $weather34julian = $days_y + $days_m + $day - 694039.09;
-$weather34julian = $weather34julian / 29.5305882;
+$weather34julian = $weather34julian / 29.53;
 $weather34phase = intval($weather34julian);
 $weather34julian = $weather34julian - $weather34phase;
 $weather34phase = round($weather34julian * 8 + 0.5);
