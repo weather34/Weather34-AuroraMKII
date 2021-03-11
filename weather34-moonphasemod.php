@@ -24,7 +24,7 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
 
 <svg id="weather34moonsvg2"  style="position:relative; max-width:60px" viewBox="0 0 200 200"  version="1.1"></svg>
 <script type="text/javascript" charset="UTF-8"> 
-//moonphase june 2020 based on original by http://www.ben-daglish.net/moon.shtml  
+//moonphase revised March 2021 based on original by http://www.ben-daglish.net/moon.shtml  
 function moon_day(today) {    
     var thisJD = today.getJulian();
     var year = today.getFullYear();
@@ -80,22 +80,23 @@ else!function(){
 if(void 0===supportsVml.supported){
 var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
 var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
-  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
+  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) +  2440586.7999)};
   phase_junk(moon_day(new Date)),window.onresize=function(){center()},center(); 
 </script>
 <?php 
 // calculate lunar phase (1900 - 2199)
 $year = date('Y');$month = date('n');$day = date('j');
-if ($month < 4) {$year = $year - 1; $month = $month + 12;}
-//$days_y = 365.25 * $year;$days_m = 30.45 * $month;
-$days_y = 365.25 * $year;$days_m = 30.42 * $month;
+if ($month < 3) {$year = $year - 1; 
+$month = $month + 12;}
+$days_y = 365.25 * $year; 
+$days_m = 30.6 * $month;
 $weather34julian = $days_y + $days_m + $day - 694039.09;
-$weather34julian = $weather34julian / 29.53;
+$weather34julian = $weather34julian / 29.5305882;
 $weather34phase = intval($weather34julian);
 $weather34julian = $weather34julian - $weather34phase;
-$weather34phase = round($weather34julian * 8 + 0.5);
+$weather34phase = round($weather34julian * 8); 
 if ($weather34phase == 8) {$weather34phase = 0;}
-$weather34phase_array =array('New Moon','Waxing Crescent','First Quarter','Waxing Gibbous','Full Moon','Waning Gibbous','Third Quarter','Waning Crescent','New Moon');
+$weather34phase_array = array('New Moon', 'Waxing Crescent', 'First Quarter', 'Waxing Gibbous', 'Full Moon', 'Waning Gibbous', 'Third Quarter', 'Waning Crescent');
 $weather34lunar_phase = $weather34phase_array[$weather34phase];
 ?></div></div>
 

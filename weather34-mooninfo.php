@@ -755,8 +755,11 @@ grey{color:#ccc}
   <div class="moonphaseposition">
   <div class="weather34moonphasesvg">  
   <svg id="weather34moonsvg"  viewBox="0 0 200 200"  version="1.1"></svg>
-<script type="text/javascript" charset="UTF-8"> 
-//moonphase june 2020 based on original by http://www.ben-daglish.net/moon.shtml  
+  <script type="text/javascript" charset="UTF-8"> 
+//moonphase revised March 2021 based on original by http://www.ben-daglish.net/moon.shtml  
+Date.prototype.getJulian = function() {
+    return Math.floor((this / 86400000) - (this.getTimezoneOffset()/1440) + 2440587.5);
+}
 function moon_day(today) {    
     var thisJD = today.getJulian();
     var year = today.getFullYear();
@@ -782,59 +785,62 @@ function moon_day(today) {
         F += 0.0161 * Math.sin(2 * M6) + 0.0104 * Math.sin(2 * B6);
         F -= 0.0074 * Math.sin(M5 - M6) - 0.0051 * Math.sin(M5 + M6);
         F += 0.0021 * Math.sin(2 * M5) + 0.0010 * Math.sin(2 * B6 - M6);
-        F += 0.5 / 1440;        
+        F += 0.5 / 1440;
         oldJ = jday;
          //jday = J0 + 28 * phase + Math.floor(F);
          jday = J0 + 28 * phase + Math.floor(F);
         phase++;
     }
     // 29.53059 days per lunar month
-    return (thisJD - oldJ) /29.53059;
-    function GetFrac(fr) {	return (fr - Math.floor(fr));}}
-
-  function phase_junk(e){var t,n,a=[];e<=.25?(a=[1,0],t=20-20*e*4):e<=.5?(a=[0,0],t=20*(e-.25)*4):e<=.75?(a=[1,1],
-    t=20-20*(e-.5)*4):e<=1?(a=[0,1],t=20*(e-.75)*4):exit;
-  var o=document.getElementById("weather34moonsvg");
-  if(0!=o&&null!=o)
-  if(document.createElementNS&&document.createElementNS("http://www.w3.org/2000/svg","svg")
-  .createSVGRect){
-  var r="m100,0 ";r=(r=r+"a"+t+",18 0 1,"+a[0]+" 0,150 ")+"a20,20 0 1,"+a[1]+" 0,-150";
-  var i="http://www.w3.org/2000/svg",
-  s=document.createElementNS(i,"path"),
-  d=document.createElementNS(i,"path");
-  d.setAttribute("class","weather34moonsvgmoonback"),
-  d.setAttribute("d","m100,0 a20,20 0 1,1 0,150 a20,20 0 1,1 0,-150"),
-  s.setAttribute("class","weather34moonsvgmoon"),
-  s.setAttribute("d",r),
-  o.setAttribute("height",.12*window.screen.availHeight),
-  o.setAttribute("width",.12*window.screen.availWidth),
-  o.appendChild(d),
-  o.appendChild(s)}
-  else!function(){
-  if(void 0===supportsVml.supported){
-  var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
-  var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
-    return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
-    phase_junk(moon_day(new Date)); 
-  </script>
+    return (thisJD - oldJ) / 29.53059;
+    function GetFrac(fr) {	return (fr - Math.floor(fr));}
+}
+function phase_junk(e){var t,n,a=[];e<=.25?(a=[1,0],t=20-20*e*4):e<=.5?(a=[0,0],t=20*(e-.25)*4):e<=.75?(a=[1,1],
+  t=20-20*(e-.5)*4):e<=1?(a=[0,1],t=20*(e-.75)*4):exit;
+var o=document.getElementById("weather34moonsvg");
+if(0!=o&&null!=o)
+if(document.createElementNS&&document.createElementNS("http://www.w3.org/2000/svg","svg")
+.createSVGRect){
+var r="m100,0 ";r=(r=r+"a"+t+",18 0 1,"+a[0]+" 0,150 ")+"a20,20 0 1,"+a[1]+" 0,-150";
+var i="http://www.w3.org/2000/svg",
+s=document.createElementNS(i,"path"),
+d=document.createElementNS(i,"path");
+d.setAttribute("class","weather34moonsvgmoonback"),
+d.setAttribute("d","m100,0 a20,20 0 1,1 0,150 a20,20 0 1,1 0,-150"),
+s.setAttribute("class","weather34moonsvgmoon"),
+s.setAttribute("d",r),
+o.setAttribute("height",.12*window.screen.availHeight),
+o.setAttribute("width",.12*window.screen.availWidth),
+o.appendChild(d),
+o.appendChild(s)}
+else!function(){
+if(void 0===supportsVml.supported){
+var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
+var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
+  //return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
+  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
+  phase_junk(moon_day(new Date)); 
+</script>
   </div></div>
   
   
   <div class=moonphasetext>  
   <?php 
-  // calculate lunar phase (1900 - 2199)
-  $year = date('Y');$month = date('n');$day = date('j');
-  if ($month < 4) {$year = $year - 1; $month = $month + 12;}
-  $days_y = 365.25 * $year;$days_m = 30.42 * $month;
-  $weather34julian = $days_y + $days_m + $day - 694039.09;
-  $weather34julian = $weather34julian / 29.53;
-  $weather34phase = intval($weather34julian);
-  $weather34julian = $weather34julian - $weather34phase;
-  $weather34phase = round($weather34julian * 8 + 0.5);
-  if ($weather34phase == 8) {$weather34phase = 0;}
-  $weather34phase_array = array('New Moon', 'Waxing Crescent', 'First Quarter', 'Waxing Gibbous', 'Full Moon', 'Waning Gibbous', 'Third Quarter', 'Waning Crescent');
-  $weather34lunar_phase = $weather34phase_array[$weather34phase];
-  ?>
+// calculate lunar phase (1900 - 2199)
+$year = date('Y');$month = date('n');$day = date('j');
+if ($month < 3) {$year = $year - 1; 
+$month = $month + 12;}
+$days_y = 365.25 * $year; 
+$days_m = 30.6 * $month;
+$weather34julian = $days_y + $days_m + $day - 694039.09;
+$weather34julian = $weather34julian / 29.5305882;
+$weather34phase = intval($weather34julian);
+$weather34julian = $weather34julian - $weather34phase;
+$weather34phase = round($weather34julian * 8); 
+if ($weather34phase == 8) {$weather34phase = 0;}
+$weather34phase_array = array('New Moon', 'Waxing Crescent', 'First Quarter', 'Waxing Gibbous', 'Full Moon', 'Waning Gibbous', 'Third Quarter', 'Waning Crescent');
+$weather34lunar_phase = $weather34phase_array[$weather34phase];
+?>
   
   <?php echo " ";{$day = date('l jS F Y');
   
