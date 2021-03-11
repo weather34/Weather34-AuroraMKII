@@ -36,7 +36,7 @@ li3{display:none}
 .moonblock{border-radius:3px;padding:0;padding-left:10px;padding-right:0;padding-top:15px;display:flex;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:0;text-align:center;width:250px;position:relative;color:var(--body-text-light);font-size:12px;text-transform:capitalize;height:64px;line-height:2;margin-top:5px;font-family:headingtext}
 .date1,.date2{display:block;background:0;color:var(--body-text-light);font-size:.7rem;line-height:1;margin-top:-60px;position:absolute;margin-left:70px;font-family:headingtext;text-shadow:var(--text-shadow)}
 .date2{margin-top:-45px;margin-left:70px}
-.phase2{display:flex;background:0;color:#e1e7ef;font-size:8.5px;line-height:1;margin-top:-50px;position:absolute;font-family:headingtext;max-width:25px;text-align:center;word-wrap:break-word;justify-content:center;align-items:center;margin-left:14px}
+.phase2{display:flex;background:0;color:#e1e7ef;font-size:8px;line-height:1;margin-top:-50px;position:absolute;font-family:verb;max-width:25px;text-align:center;word-wrap:break-word;justify-content:center;align-items:center;margin-left:14px}
 .sunblock{border-radius:3px;padding:0;padding-left:0;padding-right:0;padding-top:15px;display:flex;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:0;text-align:left;width:250px;position:relative;color:var(--blue);font-size:2rem;text-transform:uppercase;height:64px;line-height:2;margin-top:5px;font-family:headingtext}
 .sunblock2{background:0;border-radius:3px;padding:0;padding-left:0;padding-right:0;padding-top:15px;display:flex;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;margin-left:0;text-align:left;width:250px;position:relative;color:var(--blue);font-size:2rem;text-transform:uppercase;height:64px;line-height:1;margin-top:45px;font-family:headingtext}
 .sunrise2,.sunset2{display:block;background:0;color:var(--body-text-light);font-size:.7rem;line-height:1;margin-top:-50px;position:absolute;margin-left:0;font-family:headingtext;text-align:left}
@@ -164,7 +164,7 @@ uv0{background-color:var(--green)}
 .weather34compassring{position:absolute;width:135px;height:135px;margin:0 auto;border:5px solid rgba(234,236,240,.5);border-radius:50%;margin-left:-75px;margin-top:-65px;box-shadow:var(--compass-shadow)}
 .weather34compassgrid{position:absolute;width:100px;height:100px;margin:0 auto;border-radius:50%;margin-left:-45px;margin-top:-45px;background-image:var(--grid-linescompass);background-size:5px 5px}
 .homeweathercompass1>.windirectiontext1{z-index:10;display:block;margin:0 auto;margin-left:15px;color:var(--body-text-dark);text-align:center;font-family:headingtext;font-size:10px;line-height:.9}
-.weather34-0deg,.weather34-135deg,.weather34-180deg,.weather34-225deg,.weather34-270deg,.weather34-315deg,.weather34-45deg,.weather34-90deg,.weather34-ne,.weather34-nw,.weather34-se,.weather34-sw{position:absolute;font-size:8px;margin-top:24px;margin-left:86px;font-family:weathertext2;z-index:10;color:var(--body-text-dark)}
+.weather34-0deg,.weather34-135deg,.weather34-180deg,.weather34-225deg,.weather34-270deg,.weather34-315deg,.weather34-45deg,.weather34-90deg,.weather34-ne,.weather34-nw,.weather34-se,.weather34-sw{position:absolute;font-size:8px;margin-top:24px;margin-left:86px;font-family:verb;z-index:10;color:var(--body-text-dark)}
 .weather34-0deg{margin-top:41px;margin-left:94px}
 .weather34-45deg{margin-top:53px;margin-left:120px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg)}
 .weather34-ne{margin-top:36px;margin-left:140px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg)}
@@ -177,7 +177,7 @@ uv0{background-color:var(--green)}
 .weather34-270deg{margin-top:82px;margin-left:48px;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg)}
 .weather34-315deg{margin-top:53px;margin-left:60px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg)}
 .weather34-nw{margin-top:36px;margin-left:46px;transform:rotate(-46deg);-webkit-transform:rotate(-46deg);-moz-transform:rotate(-46deg);-ms-transform:rotate(-46deg);-o-transform:rotate(-46deg)}
-.weather34east,.weather34north,.weather34south,.weather34west{position:absolute;font-size:8px;margin-top:85px;margin-left:158px;z-index:10}
+.weather34east,.weather34north,.weather34south,.weather34west{position:absolute;font-size:8px;margin-top:85px;margin-left:158px;z-index:10;font-family:verb}
 .weather34north{margin-top:21px;margin-left:95px}
 .weather34south{margin-top:146px;margin-left:95px}
 .weather34west{margin-top:85px;margin-left:32px}

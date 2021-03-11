@@ -7,9 +7,9 @@ if ($weather["wind_units"]=='kts'){$numberformat=0;}
 <div class="maxwindgauge">
 <?php  //Average Today
 echo $max1.' Average Today ';
-if($meteobridgeapi[158]>=13.88 ){echo "<red>" .number_format($weather['wind_speed_avgday'],$numberformat)."</red>&nbsp;<smalltempunit2> ".$windunit;}
-else if($meteobridgeapi[158]>=12.5 ){echo "<orange>" .number_format($weather['wind_speed_avgday'],$numberformat)."</orange>&nbsp;<smalltempunit2>".$windunit;}
-else if($meteobridgeapi[158]>=2.77 ){echo "<yellow>" .number_format($weather['wind_speed_avgday'],$numberformat)."</yellow>&nbsp;<smalltempunit2>".$windunit;}
+if($meteobridgeapi[158]>=16.66 ){echo "<red>" .number_format($weather['wind_speed_avgday'],$numberformat)."</red>&nbsp;<smalltempunit2> ".$windunit;}
+else if($meteobridgeapi[158]>=11.11 ){echo "<orange>" .number_format($weather['wind_speed_avgday'],$numberformat)."</orange>&nbsp;<smalltempunit2>".$windunit;}
+else if($meteobridgeapi[158]>=3 ){echo "<yellow>" .number_format($weather['wind_speed_avgday'],$numberformat)."</yellow>&nbsp;<smalltempunit2>".$windunit;}
 else if($meteobridgeapi[158]>=0 ){echo "<green>" .number_format($weather['wind_speed_avgday'],$numberformat)."</green>&nbsp;<smalltempunit2>".$windunit;}
 ?></div>
 

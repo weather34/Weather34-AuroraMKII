@@ -101,12 +101,7 @@ $weather34lunar_phase = $weather34phase_array[$weather34phase];
 ?></div></div>
 
 <div class="mooninfo2"><a href='weather34-mooninfo.php' data-lity data-title="Moonphase Information"><?php echo  $aqilinks?>&nbsp; More Info</a></div>
-
-
 </div> 
-
-
-
 
 <div class="date1"> &nbsp;<?php echo $sunuphalf." ".$risingsymbolxx?> Moonrise: <?php  echo $weather['moonrise'];?></div>
 <div class="date2"> &nbsp;<?php echo $sundownhalf." ".$fallingsymbolxx?>  Moonset: <?php echo  $weather['moonset'];?></div>

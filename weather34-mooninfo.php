@@ -196,10 +196,15 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     font-family: clock;
     src: url(fonts/clock3-webfont.woff2) format("woff2");
   }
+
+  @font-face {
+    font-family: verb;
+    src: url(fonts/verbatim-bold.woff2) format("woff2");
+  }
   html,
   body {
     font-size: 13px;
-    font-family: "weathertext2", Helvetica, Arial, sans-serif;
+    font-family: 'weathertext2',verb,Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -261,6 +266,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     max-height: 120px;
     border: 1px solid hsla(217, 15%, 17%, .5);
       border-bottom: 15px solid hsla(217, 15%, 17%, .5);
+      font-family:verb
   }
   
   .gridfooter {
@@ -281,6 +287,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     background: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family:verb
   }
   
   a {
@@ -322,15 +329,17 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     max-height: 120px; 
   }
   .moonphasetext {
-    font-size: 0.8rem;
-    color: #f5f7fc;
+    font-size: 0.75rem;
+    color: #aaa;
     position: absolute;
     display: inline;
-    left: 122px;
+    left: 120px;
     top: 100px;
+    font-family:verb
   }
   moonphaseriseset {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    font-family:weathertext2
   }
   credit {
     position: relative;
@@ -346,7 +355,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     border-radius: 3px;
     background: rgba(74, 99, 111, 0.1);
     padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
     width: 100px;
     height: 0.8em;
     font-size: 0.8rem;
@@ -366,7 +375,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     border-radius: 3px;
     background: rgba(74, 99, 111, 0.1);
     padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
     width: 100px;
     height: 0.8em;
     font-size: 0.8rem;
@@ -509,7 +518,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     content: "12";
     font-size: 12px;
     color: hsla(214, 29%, 91%, 0.8);
-    font-family: weathertext2;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
   }
   .three {
     right: 11px;
@@ -519,17 +528,17 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     content: "3";
     font-size: 12px;
     color: hsla(214, 29%, 91%, 0.8);
-    font-family: weathertext2;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
   }
   .weather34brand {
-    left: 42px;
+    left: 40px;
     bottom: 15px;
   }
   .weather34brand::after {
     content: "weather34";
     font-size: 9px;
     color: hsla(214, 29%, 91%, 0.8);
-    font-family: weathertext2;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
   }
   .six {
     left: 62px;
@@ -539,7 +548,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     content: "6";
     font-size: 12px;
     color: hsla(214, 29%, 91%, 0.8);
-    font-family: weathertext2;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
   }
   .nine {
     left: 5px;
@@ -551,7 +560,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     content: "9";
     font-size: 12px;
     color: hsla(214, 29%, 91%, 0.8);
-    font-family: weathertext2;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
   }
   .hand {
     --rotation: 0;
@@ -609,8 +618,8 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   .gridcal{display:grid;grid-template-columns:repeat(7,minmax(14px,1fr));
   grid-gap:.75em;color:hsla(214,29%,91%,.6);}
 .day{background:hsla(214,29%,91%,.1);display:flex;justify-content:center;align-items:center;border-radius:2px;color:#fff;
--webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family:weathertext2}
-.wrapper{width:calc(240px + 1.12em);margin:auto;margin-top:0px;margin-left:0;font-family:weathertext2;overflow:hidden;padding:7px;padding-right:10px;
+-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family: 'verb',Arial, Helvetica, sans-serif;}
+.wrapper{width:calc(240px + 1.12em);margin:auto;margin-top:0px;margin-left:0;font-family: 'verb',Arial, Helvetica, sans-serif;overflow:hidden;padding:7px;padding-right:10px;
 background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);background-size:2px 2px;border-radius:5px}
 .days{display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;}
 .curr_date{color:hsla(214,29%,91%,.8)}
@@ -658,7 +667,7 @@ grey{color:#ccc}
     border-radius: 3px;
     background: rgba(74, 99, 111, 0);
     padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: verb,Arial, Helvetica, sans-serif;
     width: 190px;
     height: 0.8em;
     font-size: 0.8rem;
@@ -674,7 +683,7 @@ grey{color:#ccc}
     left: 35px;
     background: rgba(74, 99, 111, 0);
     padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
     width: 140px;
     height: 0.8em;
     font-size: 0.8rem;
@@ -691,7 +700,7 @@ grey{color:#ccc}
     left: 145px;
     background: rgba(74, 99, 111, 0);
     padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'verb',Arial, Helvetica, sans-serif;
     width: 190px;
     height: 0.8em;
     font-size: 0.8rem;

@@ -30,7 +30,7 @@ li5555{min-width:958px;max-width:958px;padding:0;height:195px;margin-bottom:-30p
 .moonblock{padding:0;padding-left:10px;padding-right:0;padding-top:15px;display:flex;margin-left:0;text-align:center;width:300px;position:relative;color:var(--body-text-dark);font-size:12px;text-transform:capitalize;height:64px;line-height:2;margin-top:5px;font-family:headingtext}
 .date1,.date2{display:block;background:0;color:var(--body-text-dark);font-size:9px;font-family:clock;line-height:1.1;margin-top:-56px;position:absolute;margin-left:110px;font-family:weathertext2;text-transform:none}
 .date2{margin-top:-43px}
-.phase2{display:flex;background:0;color:#e1e7ef;font-size:9px;line-height:1;margin-top:-45px;position:absolute;font-family:headingtext;max-width:25px;text-align:center;word-wrap:break-word;justify-content:center;align-items:center;margin-left:40px}
+.phase2{display:flex;background:0;color:#afb7c0;font-size:8px;line-height:1;margin-top:-45px;position:absolute;font-family:verb;max-width:25px;text-align:center;word-wrap:break-word;justify-content:center;align-items:center;margin-left:40px}
 .sunblock,.sunblock2{padding:0;padding-left:0;padding-right:0;padding-top:15px;display:flex;margin-left:0;text-align:left;width:310px;position:relative;color:var(--blue);font-size:2rem;text-transform:uppercase;height:64px;line-height:2;margin-top:5px;font-family:headingtext}
 .sunblock2{background:0;left:-20px;width:275px;line-height:1;margin-top:25px}
 .sunposition-block{display:block;background:0;color:var(--body-text-silver);font-size:.7rem;line-height:1;margin-top:-40px;position:absolute;margin-left:-5px;font-family:headingtext;text-align:left}
@@ -163,7 +163,7 @@ uv0{background-color:var(--green)}
 .weather34windgridlines{width:100px;height:100px;position:relative}
 .weather34barometergridlines{box-shadow:var(--button-shadow)}
 .homeweathercompass1>.windirectiontext1{z-index:10;display:block;margin:0 auto;margin-left:15px;color:var(--body-text-dark);text-align:center;font-family:headingtext;font-size:10px;line-height:.9}
-.weather34-0deg,.weather34-135deg,.weather34-180deg,.weather34-225deg,.weather34-270deg,.weather34-315deg,.weather34-45deg,.weather34-90deg,.weather34-ne,.weather34-nw,.weather34-se,.weather34-sw{position:absolute;font-size:8px;margin-top:24px;margin-left:96px;font-family:weathertext2;z-index:inherit}
+.weather34-0deg,.weather34-135deg,.weather34-180deg,.weather34-225deg,.weather34-270deg,.weather34-315deg,.weather34-45deg,.weather34-90deg,.weather34-ne,.weather34-nw,.weather34-se,.weather34-sw{position:absolute;font-size:8px;margin-top:24px;margin-left:96px;font-family:verb;z-index:inherit}
 .weather34-0deg{margin-top:40px;margin-left:95px}
 .weather34-45deg{margin-top:52px;margin-left:123px;transform:rotate(46deg);-webkit-transform:rotate(46deg);-moz-transform:rotate(46deg);-ms-transform:rotate(46deg);-o-transform:rotate(46deg)}
 .weather34-ne{margin-top:37px;margin-left:139px;transform:rotate(47deg);-webkit-transform:rotate(47deg);-moz-transform:rotate(47deg);-ms-transform:rotate(47deg);-o-transform:rotate(47deg)}
@@ -176,7 +176,7 @@ uv0{background-color:var(--green)}
 .weather34-270deg{margin-top:80px;margin-left:45px;transform:rotate(-90deg);-webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);-ms-transform:rotate(-90deg);-o-transform:rotate(-90deg)}
 .weather34-315deg{margin-top:53px;margin-left:56px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg)}
 .weather34-nw{margin-top:38.5px;margin-left:42px;transform:rotate(-48deg);-webkit-transform:rotate(-48deg);-moz-transform:rotate(-48deg);-ms-transform:rotate(-48deg);-o-transform:rotate(-48deg)}
-.weather34east,.weather34north,.weather34south,.weather34west{position:absolute;font-size:8px;margin-top:83px;margin-left:160px;z-index:10}
+.weather34east,.weather34north,.weather34south,.weather34west{position:absolute;font-size:8px;margin-top:83px;margin-left:160px;z-index:10;font-family:verb}
 .weather34north{margin-top:19px;margin-left:95px}
 .weather34south{margin-top:147px;margin-left:95px}
 .weather34west{margin-top:83px;margin-left:29px}
@@ -234,7 +234,7 @@ valuebeaufort{font-size:.75em;margin-left:2px}
 .modulecaption2,.modulecaptionb{left:90px;top:-20px;align-items:center;justify-content:center;flex-grow:0;flex-shrink:1;flex-basis:auto}
 .modulecaptionb{top:-20px}
 .modulecaptionindoor{left:115px;top:-30px;width:50px}
-.modulecaptionchart,.modulecaptionchart2,.modulecaptionchart3{left:33%;top:57px;width:max-content;font-family:verb;font-size:8px;display:flex;position:relative;color:#AFB7C0;background:0}
+.modulecaptionchart,.modulecaptionchart2,.modulecaptionchart3{left:33%;top:57px;width:max-content;font-family:verb;font-size:8px;display:flex;position:relative;color:#afb7c0;background:0}
 .modulecaptionchart3{left:40%}
 .charttempmodule{margin-top:6px}
 .modulecaptionwindchart{left:120px;top:-10px}
@@ -578,7 +578,7 @@ button:focus{border:none;outline:0!important;outline-style:none}
 .button-dial-label-small-hours{font-size:6.5px;position:absolute;top:22px;z-index:10;font-family:weathertext3;color:var(--body-text-dark);text-transform:none}
 .button-dial-label-small-aq{font-size:8px;position:absolute;top:53px;z-index:10;font-family:weathertext3;color:var(--body-text-dark)}
 .weather34moonphasesvg{margin-left:1.5px;margin-top:17px}
-.weather34moonphasesvg1{display:flex;position:absolute;font-size:1.2em;color:var(--body-text-dark);font-weight:500;font-family:weathertext2;margin-top:52px;margin-left:120px;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:20;opacity:1}
+.weather34moonphasesvg1{display:flex;position:absolute;font-size:1.2em;color:var(--body-text-dark);font-weight:500;font-family:verb;margin-top:52px;margin-left:120px;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;z-index:20;opacity:1}
 newphase{position:absolute;align-items:center;justify-content:center;font-size:9px;text-align:center;color:#ccc;z-index:170;line-height:1;margin-top:-10px}
 .sunrise-sun,.sunset-sun{display:block;background:0;color:var(--body-text-dark);font-size:9px;line-height:1;margin-top:5px;position:absolute;margin-left:90px;text-align:left;font-family:weathertext2;text-transform:none}
 .sunset-sun{margin-top:30px}
