@@ -191,7 +191,7 @@ function moon_day(today) {
         F += 0.5 / 1440;
         oldJ = jday;
          //jday = J0 + 28 * phase + Math.floor(F);
-         jday = J0 + 28 * phase + Math.floor(F);
+         jday = J0 + 28.6 * phase + Math.floor(F);
         phase++;
     }
     // 29.53059 days per lunar month
@@ -203,7 +203,7 @@ var o=document.getElementById("weather34moonsvg");
 if(0!=o&&null!=o)
 if(document.createElementNS&&document.createElementNS("http://www.w3.org/2000/svg","svg")
 .createSVGRect){
-var r="m100,0 ";r=(r=r+"a"+t+",18 0 1,"+a[0]+" 0,150 ")+"a20,20 0 1,"+a[1]+" 0,-150";
+var r="m100,0 ";r=(r=r+"a"+t+",20 0 1,"+a[0]+" 0,150 ")+"a20,20 0 1,"+a[1]+" 0,-150";
 var i="http://www.w3.org/2000/svg",
 s=document.createElementNS(i,"path"),
 d=document.createElementNS(i,"path");
