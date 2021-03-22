@@ -779,6 +779,10 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   <!---simple weather34 svg moonphase -->
   <div class="moonphaseposition">
   <div class="weather34moonphasesvg">
+  <?php // lets rotate for those in the souther hemisphere 
+if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);margin-left:1px;margin-bottom:9px;}
+</style>';}
+?>
   <svg id="weather34moonsvg"  viewBox="0 0 200 200"  version="June 2020"></svg>
   <script type="text/javascript" charset="UTF-8"> 
   //moonphase june 2020 based on original by http://www.ben-daglish.net/moon.shtml  

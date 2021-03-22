@@ -15,9 +15,7 @@ include('livedata.php');include('console-settings.php');header('Content-type: te
 <div class="button button-dial-small-moon">
 <div class="button-dial-top-small-moon"></div>
 <div class="weather34moonphasesvg">
-<?php // lets rotate for Tony (Beaumaris-Weather) down under
-if ($hemisphere==0){echo '<style>.weather34moonphasesvg{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);}
-</style>';}
+<?php // lets rotate for those in the souther hemisphere 
 if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);margin-left:1px;margin-bottom:29px;}
 </style>';}
 ?>
