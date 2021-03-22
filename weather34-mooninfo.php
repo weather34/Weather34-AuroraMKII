@@ -869,7 +869,10 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   ?>
   Phase:<blue><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></blue><br>
   Luminance:<blue><?php $moon=new MoonPhase();$lum=$moon->illumination();echo number_format($lum,1);?></blue>%<br>
-  Distance:<blue><?php $moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance,0);?></blue> km<br>
+  Distance:<blue><?php 
+  if ($distanceunit=='km'){$moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance,0);echo "</blue>km";}
+  if ($distanceunit=='mi'){$moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance*0.621371,0);echo "</blue> miles";}
+  ?><br>
   Cycle:<blue><?php $moon = new MoonPhase();$moonage =round($moon->age(),2);echo round($moonage,2)?></blue> Days
   
     <div class="moonriset">

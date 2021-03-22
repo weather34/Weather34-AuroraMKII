@@ -162,7 +162,7 @@ uv0{background-color:var(--green)}
 .weather34barometergridlines,.weather34windgridlines{width:100px;height:100px;background-image:var(--grid-lines);background-size:5px 5px;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
 .weather34windgridlines{width:100px;height:100px;position:relative}
 .weather34barometergridlines{box-shadow:var(--button-shadow)}
-.homeweathercompass1>.windirectiontext1{z-index:10;display:block;margin:0 auto;margin-left:15px;color:var(--body-text-dark);text-align:center;font-family:headingtext;font-size:10px;line-height:.9}
+.homeweathercompass1>.windirectiontext1{z-index:10;display:block;margin:0 auto;margin-left:15px;color:var(--body-text-dark);text-align:center;font-family:verb;font-size:9px;line-height:1}
 .weather34-0deg,.weather34-135deg,.weather34-180deg,.weather34-225deg,.weather34-270deg,.weather34-315deg,.weather34-45deg,.weather34-90deg,.weather34-ne,.weather34-nw,.weather34-se,.weather34-sw{position:absolute;font-size:8px;margin-top:24px;margin-left:96px;font-family:verb;z-index:inherit}
 .weather34-0deg{margin-top:40px;margin-left:95px}
 .weather34-45deg{margin-top:52px;margin-left:123px;transform:rotate(46deg);-webkit-transform:rotate(46deg);-moz-transform:rotate(46deg);-ms-transform:rotate(46deg);-o-transform:rotate(46deg)}
@@ -401,8 +401,8 @@ aurora{position:absolute;width:max-content;font-size:.7em;font-family:weathertex
 .weather-indoor-tempicon-identity,.weather-indoor-tempicon-identity2{width:1.05rem;height:1.2rem;left:270px;top:50px;padding:2px}
 .weather-aqi-identity{left:260px;top:35px;padding:2px;width:50px;margin:0}
 .weather-indoor-tempicon-identity{left:130px;top:70px}
-.weather-directionicon-identity,.weather-pressureicon-identity{width:2rem;height:1.5rem;margin-left:120px;margin-top:42px;line-height:1.4;padding-bottom:4px;font-size:9px}
-.weather-directionicon-identity{margin-top:36px;margin-left:123px;color:#2d353b!important}
+.weather-directionicon-identity,.weather-pressureicon-identity{font-family:verb;width:2rem;height:1.5rem;margin-left:120px;margin-top:42px;line-height:1.4;padding-bottom:4px;font-size:9px}
+.weather-directionicon-identity{margin-top:44px;margin-left:122px;color:#2d353b!important}
 .weather-pressureicon-identity{height:1.1rem;margin-top:2px;line-height:1;padding-bottom:2px;font-size:10px;margin-left:180px}
 .almanacareas{display:-webkit-box;display:flex;width:7.5rem;height:3rem;color:var(--body-text-dark);overflow:hidden;font-family:verb;line-height:1;border:1px solid hsla(206,12%,27%,.3);font-size:20px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:30px;background:var(--button-bg-color);border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
 .almanacouterbox,.almanacouterboxrain,.almanacouterboxuv{padding:5px;-webkit-border-radius:10px;border-radius:10px;border:6px solid #242a32;width:650px;height:270px;margin-left:-210px;margin-top:-80px;border-radius:10px;background-image:var(--grid-lines);background-size:5px 5px;box-shadow:var(--button-shadow)}
