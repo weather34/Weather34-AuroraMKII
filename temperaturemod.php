@@ -158,7 +158,7 @@ else if ($meteobridgeapi[42]>=25 ){echo 'var(--red)';}
 
 <?php 
 //month average if no windchill<0 or heatindex>28
-if ($meteobridgeapi[42]<28 && $meteobridgeapi[24]>=0){;?>
+if ($meteobridgeapi[42]<=28 && $meteobridgeapi[24]>=0){;?>
 <div class="windgauge">
 <div class="second24hourguage">
   <?php echo "<solarheading style='margin-left:-45px;width:70px'>Average Today</solarheading>";?>

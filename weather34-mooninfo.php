@@ -880,13 +880,9 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
   Cycle:<blue><?php $moon = new MoonPhase();$moonage =round($moon->age(),2);echo round($moonage,2)?></blue> Days
   
     <div class="moonriset">
-    <svg class="moon rise up" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="grey" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z"/><polyline points="6 15 12 9 18 15" /></svg> 
-  Moon Rise: <blue><?php echo $weather['moonrise']," ";?></blue>
+    <?php echo $moonrisehalf?> Moon Rise: <?php echo $weather['moonrise']," ";?>
     <br>
-    <svg class="moon set down" width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="grey" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke="none" d="M0 0h24v24H0z"/><polyline points="6 9 12 15 18 9" /></svg> 
-  Moon Set:  &nbsp;<orange><?php echo $weather['moonset']," ";?></orange>
+    <?php echo $moonsethalf?> Moon Set:  &nbsp;<?php echo $weather['moonset']," ";?>
   <br>
   </article>  
     <article> 
@@ -894,15 +890,13 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
     <?php echo $info;?> <blue>Moon </blue>| <blue>Lunar Event Information</blue><br>
     
   <?php echo $info;?>
-  Next Full Moon: <?php  // homeweatherstation fullmoon info output 18th Aug
+  Next Full Moon:<blue> &nbsp;<?php  // homeweatherstation new/fullmoon info output 18th Aug
   $now1 =time();$moon1 = new MoonPhase();
-  echo "";
-  if ($now1 < $moon1->full_moon()) 
-  {echo date('D jS-M-Y', $moon1->full_moon() );}
-  else echo date('D jS-M-Y', $moon1->next_full_moon() );
-  ?></span><br>
-  <?php echo $info;?>  Next New Moon:<?php $moon=new MoonPhase();$nextnewmoon=date('D jS-M-Y',$moon->next_new_moon());echo $nextnewmoon;?>
-  </span>
+  echo "";if ($now1 < $moon1->full_moon()){echo date('l jS-M-Y', $moon1->full_moon() );}
+  else echo date('l jS-M-Y', $moon1->next_full_moon() );
+  ?></blue><br>
+  <?php echo $info;?>  Next New Moon:<blue> <?php $moon=new MoonPhase();$nextnewmoon=date('l jS-M-Y',$moon->next_new_moon());echo $nextnewmoon;?>
+  </blue>
   <br><br />
              <?php 
   $lunayear=date('Y');		

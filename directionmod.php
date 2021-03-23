@@ -16,8 +16,8 @@ $weather["wind_direction_avg"]=str_pad($weather["wind_direction_avg"],3,"0",STR_
 $weather["wind_direction_avgmonth"]= str_pad($weather["wind_direction_avgmonth"],3,"0",STR_PAD_LEFT);
 $weather["wind_direction_avgday"]= str_pad($weather["wind_direction_avgday"],3,"0",STR_PAD_LEFT);
 }
-
 ?>
+
 <meta http-equiv="Content-Type: text/html; charset=UTF-8" />
 <head>
 <style>
@@ -48,7 +48,7 @@ $weather["wind_direction_avgday"]= str_pad($weather["wind_direction_avgday"],3,"
         transform: translate(-50%, 5%) rotatez(<?php echo $weather["wind_direction_avg"]+44; ?>deg);  
     }
 
-    .thearrow5 {
+.thearrow5 {
         -webkit-transform: translate(-50%, 5%) rotatez(<?php echo $weather['wind_direction_avgday']+44; ?>deg);
         -moz-transform: translate(-50%, 5%) rotatez(<?php echo $weather['wind_direction_avgday']+44; ?>deg);
         -o-transform: translate(-50%, 5%) rotatez(<?php echo $weather['wind_direction_avgday']+44; ?>deg);
@@ -56,7 +56,7 @@ $weather["wind_direction_avgday"]= str_pad($weather["wind_direction_avgday"],3,"
         transform: translate(-50%, 5%) rotatez(<?php echo $weather['wind_direction_avgday']+44; ?>deg);       
     }
 
-    .thearrow6 {
+.thearrow6 {
         -webkit-transform: translate(-50%, 5%) rotatez(<?php echo $weather["wind_direction_avgmonth"]+44; ?>deg);
         -moz-transform: translate(-50%, 5%) rotatez(<?php echo $weather["wind_direction_avgmonth"]+44; ?>deg);
         -o-transform: translate(-50%, 5%) rotatez(<?php echo $weather["wind_direction_avgmonth"]+44; ?>deg);
@@ -64,11 +64,19 @@ $weather["wind_direction_avgday"]= str_pad($weather["wind_direction_avgday"],3,"
         transform: translate(-50%, 5%) rotatez(<?php echo $weather["wind_direction_avgmonth"]+44; ?>deg);        
     }
 
-    spancalm {
+spancalm {
         position: relative;
         font-family: headingtext;
         font-size: 26px;
-    }</style>
+    }
+windcolor{color:
+<?php if ($weather['wind_speed_bft']>=7 ){echo 'var(--red)';}
+elseif ($weather['wind_speed_bft']>=5 ){echo 'var(--orange)';}
+elseif ($weather['wind_speed_bft']>=3 ){echo 'var(--yellow)';}
+elseif ($weather['wind_speed_bft']>=0 ){echo 'var(--green)';}
+?>}
+    
+    </style>
 
 </head>
 <div class="compassposition">
