@@ -41,25 +41,26 @@ $webcamicon2='
   --light:#f5f5f5;
   --dark:#07090a;--dark-light:hsla(0, 0%, 0%, 0.251);
   --dark-toggle:#35393b;--dark-caption:rgba(66, 70, 72, 0.429);--black:#000000;--deepblue:#00adbd;--blue:#00adbd;--rainblue:#00adbd;--darkred:#703232;--deepred:#703232;--red:#d35f50;--yellow:#e6a241;--green:#90b22a;--orange:rgb(236, 81, 19);--purple:#8680bc;--silver:#ecf0f3;--border-dark:#3d464d;--body-text-dark:#afb7c0;--body-text-light:#545454;--blocks:#e6e8ef;--modules:#1e1f26;--blocks-background:rgba(82, 92, 97, 0.19);--temp-5-10:#7face6;--temp-0-5:#00adbd;--temp0-5:#00adbd;--temp5-10:#9bbc2f;--temp10-15:#e6a241;--temp15-20:#f78d03;--temp20-25:#d87040;--temp25-30:#e64b24;--temp30-35:#cc504c;--temp35-40:hsl(4, 40%, 48%);--temp40-45:#be5285;--temp45-50:#b95c95;--font-color:grey;--bg-color:hsla(198, 14%, 14%, 0.19);--button-bg-color:hsla(198, 14%, 14%, 0.19);--button-shadow:inset 5px 5px 20px #0c0b0b,inset -5px -5px 20px hsla(198, 14%, 14%, 0.19)}
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.woff) format("woff")}
+@font-face{font-family:verb;src:url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.woff) format("woff")}
 @font-face{font-family:weathertext3;src:url(fonts/verbatim-medium.woff2) format("woff2"),url(fonts/verbatim-medium.woff) format("woff")}
+@font-face{font-family:verb;src:url(fonts/verbatim-bold.woff2) format("woff2"),url(fonts/verbatim-bold.woff) format("woff")}
 @font-face{font-family:clock;src:url(fonts/clock3-webfont.woff2) format("woff2"),url(fonts/clock3-webfont.woff) format("woff")}
-body,html{font-size:13px;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body,html{font-size:13px;font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 icont{font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:5px;grid-row-gap:5px;color:#f5f7fc;margin-top:5px;}
 
-.grid>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:.8em;border-radius:4px;-webkit-border-radius:4px;background:0;
+.grid>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:9px;border-radius:4px;-webkit-border-radius:4px;background:0;
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale; border: 1px solid hsla(217, 15%, 17%, .5);
     border-bottom: 5px solid hsla(217, 15%, 17%, .5);max-width:280px}
 
 grey{color:#ccc}
 .grid2{display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:5px;grid-row-gap:5px;color:#f5f7fc;overflow:hidden;margin-top:5px;}
-.grid2>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:.8em;border-radius:4px;-webkit-border-radius:4px;
+.grid2>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:9px;border-radius:4px;-webkit-border-radius:4px;
 background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale; border: 1px solid hsla(217, 15%, 17%, .5);
     border-bottom: 5px solid hsla(217, 15%, 17%, .5);height:130px}
 
 .gridfooter{display:grid;grid-template-columns:repeat(1,1fr);grid-column-gap:5px;grid-row-gap:5px;color:#f5f7fc;overflow:hidden;margin-top:5px}
-.gridfooter>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:.8em;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.gridfooter>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:9px;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 a{color:#aaa;text-decoration:none;font-size:1em}
 .weather34darkbrowser{position:relative;background:0;width:97%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px}
 .weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:rgba(97,106,114,.3);height:20px;box-sizing:border-box}
@@ -73,15 +74,15 @@ red6{color:#d65b4a}
 value{color:#fff}
 yellow{color:#cc0}
 purple{color:#916392}
-.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,0);padding:5px;font-family:Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#aaa;align-items:center;justify-content:center;margin-bottom:10px;top:0}
-.actualups{position:relative;left:35px;background:rgba(74,99,111,0);padding:5px;font-family:Arial,Helvetica,sans-serif;width:140px;height:.8em;font-size:.8rem;align-items:center;justify-content:center;top:-30px;margin-bottom:-10px}
+.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:9px;padding-top:2px;color:#aaa;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualups{position:relative;left:35px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:140px;height:.8em;font-size:9px;align-items:center;justify-content:center;top:-30px;margin-bottom:-10px}
 actualt34{display:none}
 .actualtlocal{position:relative;
   left:165px;
   background:rgba(74,99,111,0);
-  padding:5px;font-family:Arial,Helvetica,sans-serif;
+  padding:5px;font-family:verb,Arial,Helvetica,sans-serif;
   width:190px;height:.8em;
-  font-size:.8rem;padding-top:2px;color:#aaa;
+  font-size:9px;padding-top:2px;color:#aaa;
   align-items:center;justify-content:center;margin-bottom:10px;
   top:0px}
 
@@ -120,15 +121,15 @@ icontextrefresh{position:relative;top:8px;color:#aaa}
 .circle{background-color:var(--blue);width:10px;height:10px;border-radius:50%;position:absolute;left:45px;top:40px;z-index:1}
 .hour-indicator{width:0;height:25px;background-color:#b7c5d3;border-radius:5px;position:absolute}
 .twelve{top:0;left:60px}
-.twelve::after{content:"12";font-size:12px;color:hsla(214,29%,91%,.8);font-family:weathertext2}
+.twelve::after{content:"12";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb}
 .three{right:10px;top:53px;}
-.three::after{content:"3";font-size:12px;color:hsla(214,29%,91%,.8);font-family:weathertext2}
+.three::after{content:"3";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb}
 .weather34brand{left:42px;bottom:15px}
-.weather34brand::after{content:"weather34";font-size:9px;color:hsla(214,29%,91%,.8);font-family:weathertext2}
+.weather34brand::after{content:"weather34";font-size:9px;color:hsla(214,29%,91%,.8);font-family:verb}
 .six{left:62px;bottom:-10px}
-.six::after{content:"6";font-size:12px;color:hsla(214,29%,91%,.8);font-family:weathertext2}
+.six::after{content:"6";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb}
 .nine{left:5px;top:53px;height:3px;width:0}
-.nine::after{content:"9";font-size:12px;color:hsla(214,29%,91%,.8);font-family:weathertext2}
+.nine::after{content:"9";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb}
 .hand{--rotation:0;height:50px;width:5px;border-radius:2px;position:absolute;left:63px;top:10px;transform-origin:bottom;transform:rotate(calc(var(--rotation) * 1deg))}
 .hour{background-color:#888989;height:35px;top:25px}
 .minute{background-color:#ec5113;width:4px}
@@ -163,18 +164,18 @@ justify-content:center;align-items:center;
 .gridcal{display:grid;grid-template-columns:repeat(7,minmax(14px,1fr));
   grid-gap:.75em;color:hsla(214,29%,91%,.6);}
 .day{background:hsla(214,29%,91%,.1);display:flex;justify-content:center;align-items:center;border-radius:2px;color:#fff;
--webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family:weathertext2}
-.wrapper{width:calc(240px + 1.12em);margin:auto;margin-top:0px;margin-left:0;font-family:weathertext2;overflow:hidden;padding:7px;padding-right:10px;
+-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family:verb}
+.wrapper{width:calc(240px + 1.12em);margin:auto;margin-top:0px;margin-left:0;font-family:verb;overflow:hidden;padding:7px;padding-right:10px;
 background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);background-size:2px 2px;border-radius:5px}
-.days{display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;font-family:weathertext2}
+.days{display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;font-family:verb}
 .curr_date{color:hsla(214,29%,91%,1)}
-.weather34weekdays{position:relative;text-transform:uppercase;font-size:.8rem;display:grid;
-grid-template-columns:repeat(7,30px);grid-gap:.75em;list-style:none;left:-36px;top:-10px;margin-bottom:-5px;font-family:weathertext2}
-.weather34weekdays todayorange{color:#fff;background:var(--orange);border-radius:2px;-webkit-border-radius:2px;font-family:weathertext2;
+.weather34weekdays{position:relative;text-transform:uppercase;font-size:9px;display:grid;
+grid-template-columns:repeat(7,30px);grid-gap:.75em;list-style:none;left:-36px;top:-10px;margin-bottom:-5px;font-family:verb}
+.weather34weekdays todayorange{color:#fff;background:var(--orange);border-radius:2px;-webkit-border-radius:2px;font-family:verb;
 -moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
 grey{color:#ccc}
 green1{color:hsl(75, 62%, 43%)}
-h2{font-size:1em;font-family:weathertext2;font-weight:normal}
+h2{font-size:1em;font-family:verb;font-weight:normal}
 
 </style>
 <script src="js/jquery.js"></script>
@@ -184,18 +185,15 @@ h2{font-size:1em;font-family:weathertext2;font-weight:normal}
 <?php //meteobridge uptime
 $nanosduptime = $meteobridgeapi[81];
 function convert($nanosduptime){$weather34nanotimeago = "";
-$months1 = intval(intval($nanosduptime) / (3600*730));
 $days1 = intval(intval($nanosduptime) / (3600*24));
 $hours1 = (intval($nanosduptime) / 3600) % 24;
 $minutes1 = (intval($nanosduptime) / 60) % 60;
-if($months1> 1){$weather34nanotimeago .= "$months1 Months ";}
-else if($days1> 28){$weather34nanotimeago .= "$months1 Month ";}
-else if($days1> 1){$weather34nanotimeago .= "$days1 Days" ;}
-else {if($days1>0){$weather34nanotimeago .= "$days1 Day" ;}
-if($hours1 > 1){$weather34nanotimeago .= "$hours1 hrs ";}
-else if($hours1 >=0){$weather34nanotimeago .= "$hours1 hr ";}
-if($minutes1 > 1){$weather34nanotimeago .= "$minutes1 mins ";}
-else if($minutes1 >=0){$weather34nanotimeago .= "$minutes1 min ";}}
+if($days1==0){$weather34nanotimeago .= "";}
+if($days1> 0){$weather34nanotimeago .= "$days1 <grey>Days</grey> ";}
+if($hours1 > 1){$weather34nanotimeago .= "$hours1 <grey>hrs</grey> ";}
+else if($hours1 >=0){$weather34nanotimeago .= "$hours1 <grey>hr</grey> ";}
+if($minutes1 > 1){$weather34nanotimeago .= "$minutes1 <grey>mins</grey> ";}
+else if($minutes1 >=0){$weather34nanotimeago .= "$minutes1 <grey>min</grey> ";}
 return $weather34nanotimeago;}?>
 
 <div class=actualt>Interface Weatherstation</div> 
