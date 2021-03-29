@@ -1,13 +1,13 @@
 <?php include('metar34get.php');
-	####################################################################################################
-	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
-	# https://weather34.com/homeweatherstation/index.html 											   # 
-	# 	                                                                                               #
-	# 	Updated Release: August 2019						  	                                       #
-	# 	                                                                                               #
-	#   https://www.weather34.com 	                                                                   #
-	####################################################################################################
-//weather34 original metarnearby script 2018-2019 checkwx attribution must be in tact//
+	#########################################################
+	#	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											
+	# https://weather34.com/homeweatherstation/index.html 											  
+	# 	                                                                                               
+	# 	Updated Release: Revised March 2021					  	                                      
+	# 	                                                                                              
+	#   https://www.weather34.com 	                                                                   
+	#########################################################
+//weather34 original metarnearby script 2018-2021 checkwx attribution must be in tact//
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,8 +83,11 @@
     --grid-linesindicators: linear-gradient(hsla(206, 11%, 87%, 0.02) 5px, transparent 2px), linear-gradient(to right, hsla(206, 11%, 87%, 0.02) 5px, transparent 2px);
     --therainrategrad: -webkit-linear-gradient(left, #00adbd 0%, #00adbd 30%, #d35f50 90%)
 }
-@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2")}
-@font-face{font-family:weathertext3;src:url(fonts/verbatim-medium.woff2) format("woff2")}
+@font-face{font-family:clock;src:url(fonts/clock3-webfont.woff2) format("woff2"),url(fonts/clock3-webfont.woff) format("woff")}
+@font-face{font-family:weathertext3;src:url(fonts/verbatim-regular.woff2) format("woff2"),url(fonts/verbatim-regular.woff) format("woff")}
+@font-face{font-family:weathertext2;src:url(fonts/verbatim-medium.woff2) format("woff2"),url(fonts/verbatim-medium.woff) format("woff")}
+@font-face{font-family:headingtext;src:url(fonts/HelveticaNeue-Medium.woff2) format("woff2"),url(fonts/HelveticaNeue-Medium.woff) format("woff")}
+@font-face{font-family:verb;src:url(fonts/verbatim-bold.woff2) format("woff2"),url(fonts/verbatim-bold.woff) format("woff")}
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;}
 .grid { 
   display: grid;
@@ -119,7 +122,7 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
 .windseparator{color:rgba(57,61,64,1)}
 .text1,.windvalue1{color:#aaa}
 .directiontext{
-	font-family:weathertext3;
+	font-family:verb;
 	display:flex;
 	font-size:1em;
 	position:absolute;
@@ -129,7 +132,7 @@ html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-ser
   top:52%;width:10rem;left:10%;color:var(--body-text-dark)}
   
   .directiontextvalue{
-	font-family:weathertext3;
+	font-family:verb;
 	display:flex;
 	font-size:1.75em;
 	position:absolute;
@@ -204,7 +207,7 @@ box-shadow: var(--button-shadow)
 
 	
 .thearrow2{transform:rotate(<?php echo $metar34windir;?>deg);-webkit-transform:rotate(<?php echo $metar34windir;?>deg);-moz-transform:rotate(<?php echo $metar34windir;?>deg);-o-transform:rotate(<?php echo $metar34windir;?>deg);-ms-transform:rotate(<?php echo $metar34windir;?>deg);transform:rotate(<?php echo $metar34windir;?>deg);position:absolute;z-index:200;top:0;left:50%;margin-left:-5px;width:10px;height:50%;-webkit-transform-origin:50% 100%;-moz-transform-origin:50% 100%;-o-transform-origin:50% 100%;-ms-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:after{content:'';position:absolute;left:50%;top:0;height:10px;width:10px;background-color:NONE;width:0;height:0;border-style:solid;border-width:14px 9px 0 9px;border-color:RGBA(255,121,58,1.00) transparent transparent transparent;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transition-duration:3s;-moz-transition-duration:3s;-o-transition-duration:3s;-ms-transition-duration:3s;transition-duration:3s}.thearrow2:before{content:'';width:3px;height:3px;position:absolute;z-index:9;left:2px;top:-5px;border:1px solid RGBA(255,255,255,0.8);-webkit-border-radius:100%;-moz-border-radius:100%;-o-border-radius:100%;-ms-border-radius:100%;border-radius:100%}
-spancalm{position:relative;font-family:weathertext2,Arial;font-size:16px;}
+spancalm{position:relative;font-family:verb,Arial;font-size:16px;}
 
 
 .weather34-0deg,
@@ -220,7 +223,7 @@ spancalm{position:relative;font-family:weathertext2,Arial;font-size:16px;}
     font-size: 8px;
     margin-top: 24px;
     margin-left: 96px;
-    font-family: weathertext2;
+    font-family: verb;
     z-index:10;
     color:#aaa
 }
@@ -339,9 +342,9 @@ spancalm{position:relative;font-family:weathertext2,Arial;font-size:16px;}
 .metarwindcontainer5{margin-top:-50px;margin-left:5px;position:relative}
 
 .metartemptoday0,.metartemptoday5,.metartemptoday10,.metartemptoday20,.metartemptoday25,.metartemptoday30{
-font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
+font-family:'verb',weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
 border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex;border:1px solid hsla(217, 15%, 17%, 1);
-font-size:1.25rem;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
+font-size:15px;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
 border-radius:3px;margin-bottom:21px;
   background-size: 2px 2px;
   background-image: var(--grid-lines2);
@@ -357,9 +360,9 @@ border-radius:3px;margin-bottom:21px;
 .metartemptoday25{color:rgba(255, 124, 57, 0.7)}
 .metartemptoday30{color:rgba(211, 93, 78, 1.000)}
 .metardewcontainer1{left:70px;margin-top:10px}
-.metardewtoday0,.metardewtoday5,.metardewtoday10,.metardewtoday20,.metardewtoday25,.metardewtoday30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
+.metardewtoday0,.metardewtoday5,.metardewtoday10,.metardewtoday20,.metardewtoday25,.metardewtoday30{font-family:'verb',weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
 border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex;border:1px solid hsla(217, 15%, 17%, 1);
-font-size:1.25rem;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
+font-size:15px;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
 border-radius:3px;margin-bottom:21px;
 background-size: 2px 2px;
   background-image: var(--grid-lines2);
@@ -376,9 +379,9 @@ background-size: 2px 2px;
 .metarhumcontainer1{position:relative;top:-100px;font-size:.7rem;z-index:1;color:#fff;margin-left:92px;display:inline-block;}
 .metarhumcontainer2{left:70px;margin-top:10px}
 .metarhumtoday0-35,.metarhumtoday35-70,.metarhumtoday70-85,.metarhumtoday85-100{
-  font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
+  font-family:'verb',Arial, Helvetica, sans-serif;width:5rem;height:2.5rem;
 border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex;border:1px solid hsla(217, 15%, 17%, 1);
-font-size:1.25rem;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
+font-size:15px;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
 border-radius:3px;margin-bottom:21px;
 background-size: 2px 2px;
   background-image: var(--grid-lines2);
@@ -390,10 +393,10 @@ background-size: 2px 2px;
 .metarhumtoday70-85{color:rgba(230, 161, 65, 1.000)}
 .metarhumtoday85-100{color:rgba(68, 166, 181, 1.000)}
 
+
 .humword,.dewword,.tword{display:flex;position:absolute;margin-top:-33px;font-size:.7rem;z-index:1;color:#eee}
 .tword{position:relative;left:-17px}
 .humword,.dewword{margin-left:10px}.tword{margin-left:20px}
-.dewword{margin-left:8px}.tword{margin-left:20px}
 .tword2{position:absolute;margin-top:-32px;font-size:.65rem;z-index:1;color:#fff}
 .dewword2{position:absolute;margin-top:33px;font-size:.65rem;z-index:1;color:#fff;margin-left:75px}
 .tword2{margin-left:70px}
@@ -401,30 +404,31 @@ background-size: 2px 2px;
 .maxword{margin-left:10px}
 .windword{position:absolute;margin-top:32px;font-size:.65rem;z-index:1;color:#fff;margin-left:7px}
 
-.metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
+.metarwindtoday0,.metarwindtoday5,.metarwindtoday10,.metarwindtoday20,.metarwindtoday25,.metarwindtoday30{font-family:'verb',Arial, Helvetica, sans-serif;width:5rem;height:2.5rem;
 border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex;border:1px solid hsla(217, 15%, 17%, 1);
-font-size:1.25rem;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
+font-size:15px;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
 border-radius:3px;margin-bottom:21px; 
 background-size: 2px 2px;
   background-image: var(--grid-lines2);
   background-size: 2px 2px;
   box-shadow: var(--button-shadow);}
 
-.metarwindtodaykts0,.metarwindtodaykts5,.metarwindtodaykts10,.metarwindtodaykts20,.metarwindtodaykts25,.metarwindtodaykts30{font-family:weathertext2,Arial,Helvetica,system;width:5rem;height:2.5rem;
+.metarwindtodaykts0,.metarwindtodaykts5,.metarwindtodaykts10,.metarwindtodaykts20,.metarwindtodaykts25,.metarwindtodaykts30{font-family:'verb',Arial, Helvetica, sans-serif;width:5rem;height:2.5rem;
 border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;display:flex;border:1px solid hsla(217, 15%, 17%, 1);
-font-size:1.25rem;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
+font-size:15px;padding-top:0;color:#fff;border-bottom:12px solid hsla(217, 15%, 17%, 1);align-items:center;justify-content:center;
 border-radius:3px;margin-bottom:21px; background-size: 2px 2px;
   background-image: var(--grid-lines2);
   background-size: 2px 2px;
   box-shadow: var(--button-shadow);}
 
-.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
-padding:5px;font-family:Arial, Helvetica, sans-serif;width:150px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;
-align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualt{position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
+padding:5px;font-family:'verb',Arial, Helvetica, sans-serif;width:max-content;font-size:10px;padding-top:2px;color:#aaa;
+margin-bottom:10px;top:0}
 
-.actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
-padding:5px;font-family:Arial, Helvetica, sans-serif;width:150px;height:0.8em;font-size:0.8rem;padding-top:2px;color:#aaa;
-align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualw{position:relative;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74, 99, 111, 0.1);
+padding:5px;font-family:'verb',Arial, Helvetica, sans-serif;width:max-content;font-size:10px;padding-top:2px;color:#aaa;
+margin-bottom:10px;top:0}
+
 .metarwindtodaykts0{color:rgba(68, 166, 181, 1.000)}
 .metarwindtodaykts5{color:rgba(144, 177, 42, 1.000)}
 .metarwindtodaykts10{color:rgba(230, 161, 65, 1.000)}
@@ -439,7 +443,7 @@ align-items:center;justify-content:center;margin-bottom:10px;top:0}
 .metarwindtoday25{color:rgba(255, 124, 57, 0.7)}
 .metarwindtoday30{color:rgba(211, 93, 78, 1.000)}
 
-smalluvunit{font-size:.7rem;font-family:weathertext2,Arial,Helvetica,system;color:#aaa;margin-top:-5px}
+smalluvunit{font-size:.6rem;font-family:'verb',Arial, Helvetica, sans-serif;color:#aaa;margin-top:-5px}
 valuecalm{font-size:.8em;font-family:weathertext2;}
 stationid{font-size:1.4em;font-family:weathertext2;color:#009bb4}
 .hitemp,.lotemp{font-size:9px;}
@@ -453,7 +457,7 @@ stationid{font-size:1.4em;font-family:weathertext2;color:#009bb4}
 <main class="grid">
 
  <article>
-  <div class=actualt>&nbsp;&nbsp Current Conditions </div>
+  <div class=actualt> Current Conditions </div>
   <div class="iconcondition"><?php echo "<img rel='prefetch' src='wuicons/icons/".$sky_icon."' width='60px'>";?></div>
   <div class="icontext"><?php  echo $sky_desc; ?> </div>
 <br><br>
@@ -501,7 +505,7 @@ if ($distanceunit =='mi') {
 
 
   <article>       
-<div class=actualt>&nbsp;&nbsp Temperature </div>   
+<div class=actualt>Temperature </div>   
 
  <div class="metartempcontainer1"><?php
  if ($tempunit == 'C') {
@@ -565,7 +569,7 @@ else if ($metar34humidity=='') {echo '<div class=metarhumtoday0-35><smalluvunit>
 </article>    
    
   <article>
-  <div class=actualw>&nbsp;&nbsp Wind Speed</div>   
+  <div class=actualw> Wind Speed</div>   
    <?php
 //set windspeed variables
 if ($windunit == 'km/h') {
@@ -644,7 +648,7 @@ echo $$metarspot4;
 
 
 <article>
-<div class=actualw>&nbsp;&nbsp Wind Direction</div> 
+<div class=actualw> Wind Direction</div> 
 </div>
 </div> 
 <div class="metar34compass1">
@@ -697,7 +701,7 @@ else{echo "Due North";}?></div>
   </article> 
  
   <article>
-  <div class=actualt>&nbsp;&nbsp Airport Data </div>   
+  <div class=actualt> Airport Data </div>   
   <stationid><?php echo $metar34stationid ; ?></stationid><br>
   <?php echo $metar34stationname;?>
   
@@ -714,13 +718,13 @@ $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo d
   </article> 
   
   <article>
-  <div class=actualt>&nbsp;&nbsp Raw Metar Info</div>  
+  <div class=actualt> Raw Metar Info</div>  
   <div class="lotemp">
   <?php echo $info?> Raw METAR is the most common format in the world for the transmission of observational weather data. It is highly standardized through the International Civil Aviation Organization (ICAO), which allows it to be understood throughout most of the world.</span></div>
   </article> 
   
   <article>
-  <div class=actualt>&nbsp;&nbsp API  Info</div>  
+  <div class=actualt> API  Info</div>  
   <div class="lotemp">
   <?php echo $info?> Data Provided by </span><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank" >
   <br><img src=images/checkwx.svg width=130px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>"></a></span>
@@ -730,7 +734,7 @@ $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo d
   
   
   <article>
-  <div class=actualt>&nbsp;&nbsp &copy; Info</div>  
+  <div class=actualt> &copy; Info</div>  
   <div class="lotemp">
   <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:9px;">weather34.com</a>  for use in the weather34 template &copy; 2015-<?php echo date('Y');?>
   <br><br>

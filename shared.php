@@ -725,5 +725,5 @@ $moonsetuv='<svg width="10pt" height="10pt" fill="#565F67" opacity=".6" version=
 <g><g><path d="M500,10C229.4,10,10,229.4,10,500c0,270.5,219.4,490,490,490c270.5,0,490-219.5,490-490C990,229.4,770.5,10,500,10z M500,826.7c-180.4,0-326.7-146.3-326.7-326.7c0-180.4,146.3-326.7,326.7-326.7V826.7z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g>
 </svg>';
 $weather34version='Aurora MKII';
-$weather34versiondate='23rd March 2021';
+$weather34versiondate='29th March 2021';
 ?>

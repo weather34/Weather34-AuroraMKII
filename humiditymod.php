@@ -70,7 +70,6 @@ echo "</tempman>";?>
 <?php echo "<uvreadings style='opacity:0.8;background:";
 if ((anytoc($weather["realfeel"]))>=45 ){echo 'var(--purple)';}
 else if ((anytoc($weather["realfeel"]))>=35 ){echo 'var(--deepred)';}
-else if ((anytoc($weather["realfeel"]))>=30 ){echo 'var(--red)';}
 else if ((anytoc($weather["realfeel"]))>=25 ){echo 'var(--red)';}
 else if ((anytoc($weather["realfeel"]))>=20 ){echo 'var(--orange)';}
 else if ((anytoc($weather["realfeel"]))>=15 ){echo 'var(--yellow)';}
@@ -100,7 +99,6 @@ em;opacity:0.7;background:
 <?php //color
 if ((anytoc($weather["realfeel"]))>=45 ){echo 'var(--purple)';}
 else if ((anytoc($weather["realfeel"]))>=35 ){echo 'var(--deepred)';}
-else if ((anytoc($weather["realfeel"]))>=30 ){echo 'var(--red)';}
 else if ((anytoc($weather["realfeel"]))>=25 ){echo 'var(--red)';}
 else if ((anytoc($weather["realfeel"]))>=20 ){echo 'var(--orange)';}
 else if ((anytoc($weather["realfeel"]))>=15 ){echo 'var(--yellow)';}
