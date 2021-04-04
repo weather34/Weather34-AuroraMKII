@@ -59,11 +59,11 @@ $nextday = time() + 24*60*60;$result2 = date_sun_info($nextday,$lat, $lon);
 //weather34 sunrise 
 $nextrise = $result['sunrise']; $now = time(); 
 if ($now > $nextrise) { $nextrise = date($timeformat,$result2['sunrise']);
-$nextrisetxt = 'Tomorrow'  ;} 
-else { $nextrisetxt = 'Today';$nextrise = date($timeformat,$nextrise);} 
+$nextrisetxt = ' Tomorrow'  ;} 
+else { $nextrisetxt = ' Today';$nextrise = date($timeformat,$nextrise);} 
 //weather34 sunset
 $nextset = $result['sunset'];if ($now > $nextset) { $nextset = date($timeformat,$result2['sunset']);
-$nextsettxt = 'Tomorrow';}else { $nextsettxt = 'Today'; $nextset = date($timeformat,$nextset);} 
+$nextsettxt = ' Tomorrow';}else { $nextsettxt = ' Today'; $nextset = date($timeformat,$nextset);} 
 $firstrise = $result['sunrise']; $secondrise = $result2['sunrise']; $firstset = $result ['sunset'];
 if ($now < $firstrise) { $time = $firstrise - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time);$txt = 'Sunrise';} 
 elseif ($now < $firstset) { $time = $firstset - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time);$txt = 'Sunset';} 
