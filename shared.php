@@ -724,6 +724,15 @@ $weather34winddirection='<svg width="17pt" height="17pt" viewBox="0 0 313 319" v
 $moonsetuv='<svg width="10pt" height="10pt" fill="#565F67" opacity=".6" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" style="margin-top:3px;margin-left:3px;">
 <g><g><path d="M500,10C229.4,10,10,229.4,10,500c0,270.5,219.4,490,490,490c270.5,0,490-219.5,490-490C990,229.4,770.5,10,500,10z M500,826.7c-180.4,0-326.7-146.3-326.7-326.7c0-180.4,146.3-326.7,326.7-326.7V826.7z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g>
 </svg>';
+$weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0 473.935 510.935" style="enable-background:new 0 0 473.935 473.935;">
+<circle style="fill:#99B1C9;" cx="236.967" cy="236.967" r="236.967"/>
+<radialGradient id="SVGID_1_" cx="13.4697" cy="528.3893" r="31.929" gradientTransform="matrix(3.7418 0 0 -3.7418 186.5668 2214.0767)" gradientUnits="userSpaceOnUse">
+  <stop  offset="0.818" style="stop-color:#DF9741"/><stop  offset="1" style="stop-color:#D87040"/></radialGradient><path style="fill:#DF9741;" 
+  d="M236.956,117.477c-0.004,0-0.007,0-0.007,0c22.679,34.26,35.917,75.318,35.917,119.475
+  c0,44.164-13.238,85.219-35.917,119.483c0,0,0.004,0,0.007,0c65.986,0,119.475-53.496,119.475-119.483	C356.431,170.974,302.939,117.477,236.956,117.477z"/>
+  <path style="fill:#DF9741;" d="M236.945,117.477c-65.983,0.007-119.468,53.496-119.468,119.475
+	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
+</svg>';
 $weather34version='Aurora MKII';
-$weather34versiondate='29th March 2021';
+$weather34versiondate='5th April 2021';
 ?>

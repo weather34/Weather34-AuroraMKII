@@ -61,6 +61,8 @@ wuwind3day{color:var(--body-text-dark);top:44px}
 .wuahead,.wuaheadfore{color:var(--body-text-light);font-size:.6rem;line-height:1;top:46px;position:absolute;left:75px;font-family:headingtext;text-align:left;width:300px;text-shadow:var(--text-shadow);text-transform:capitalize}
 .wuaheadfore{top:-22px;position:relative;left:140px}
 .button-dial-small wutemp{font-size:20px;padding-left:3px;padding-top:5px;position:relative}
+.button-dial-small-sun wutemp{color:#99b1c9;font-size:14px;padding-top:2px}
+wutemp{font-size:14px;padding-left:0;padding-top:0;position:relative;font-family:verb;color:#aec0d1}
 wuunits{font-size:1rem;vertical-align:top}
 .weather34-indoor{position:relative;display:inline-block;width:250px;clear:both;top:3px;margin-left:10px;padding-top:0;font-size:13px;font-family:weathertext2;line-height:2}
 .indoorblock{padding:0;padding-left:10px;padding-right:0;padding-top:0;display:flex;margin-left:0;text-align:center;width:250px;position:relative;color:var(--body-text-light);font-size:12px;text-transform:capitalize;line-height:2;margin-top:-60px;font-family:headingtext}
@@ -155,9 +157,7 @@ uv0{background-color:var(--green)}
 .thearrow3:after{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%)}
 .thearrow:before{z-index:9;position:absolute;top:-3px;left:2px;width:6px;height:6px;border:2px solid silver;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%}
 .text1{color:var(--dark);font-family:weathertext3;font-size:1.25rem;opacity:.8;text-shadow:var(--text-shadow)}
-.windvalue1{display:flex;margin-left:63px;margin-top:20px;margin-bottom:2px;-webkit-box-pack:center;-ms-flex-pack:center;
-    justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:60px;padding-left:4px;padding-right:4px;font-size:1.25rem;
-    font-family:weathertext2;text-shadow:var(--text-shadow)}
+.windvalue1{display:flex;margin-left:63px;margin-top:20px;margin-bottom:2px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:60px;padding-left:4px;padding-right:4px;font-size:1.25rem;font-family:weathertext2;text-shadow:var(--text-shadow)}
 .windirection1{width:100%;margin:115px 0 0 85px}
 .homeweathercompass1{position:absolute;width:180px;height:180px;margin-top:-80px;margin-left:-100px;text-align:center}
 .text1{margin:68px 0 auto;text-align:center;margin-left:3px}
@@ -428,19 +428,19 @@ button:focus{border:0;outline:0!important;outline-style:none}
 .button-dial-small{border-radius:50%;display:flex;height:55px;margin:0;align-items:center;justify-content:center;width:55px;font-family:weathertext2;margin-top:-10px;color:var(--temp20-25);border:4px solid rgba(193,199,204,.1);-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;margin-left:-15px}
 .button-dial-top-small{border-radius:50%;width:100%;height:100%;position:absolute;display:flex;left:0;text-align:center;background:0;background-image:var(--grid-lines);background-size:3px 3px;text-shadow:var(--text-shadow);box-shadow:var(--compass-shadow);-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%}
 .button-dial-label-small{font-size:16px;position:relative;z-index:10;text-shadow:var(--text-shadow)}
-.button-dial-small-moon,.button-dial-small-sun,.button-dial-smallwu{border-radius:50%;display:flex;height:55px;margin:0;align-items:center;justify-content:center;width:55px;font-family:weathertext2;top:23px;color:var(--temp20-25);border:4px solid rgba(193,199,204,.1);-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;margin-left:0}
+.button-dial-small-moon,.button-dial-small-sun,.button-dial-smallwu{border-radius:50%;display:flex;height:55px;margin:0;align-items:center;justify-content:center;width:55px;font-family:verb;top:23px;color:var(--temp20-25);border:4px solid rgba(193,199,204,.1);-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;margin-left:0}
 .button-dial-small-moon{margin-top:-20px;color:var(--temp20-25);margin-left:-5px;font-size:.5em;top:0}
 .button-dial-top-small-moon,.button-dial-top-small-sun,.button-dial-top-smallwu{border-radius:50%;width:100%;height:100%;position:absolute;display:flex;left:0;text-align:center;background:0;background-image:var(--grid-lines);background-size:3px 3px;text-shadow:var(--text-shadow);box-shadow:var(--compass-shadow)}
-.button-dial-small-sun{margin-top:-10px;color:var(--temp20-25);margin-left:-15px;font-size:.5em;top:0}
+.button-dial-small-sun{margin-top:-10px;color:#99b1c9;margin-left:-15px;font-size:14px;top:0}
 .button-dial-label-small-sun{font-size:8px;position:absolute;top:35px;z-index:10}
+.button-dial-label-small-sun1{font-size:7px;position:absolute;top:35px;z-index:10;color:#363841;font-family:weathertext3}
 .button-dial-label-small-aq{font-size:8px;position:absolute;top:37px;z-index:10;font-family:weathertext3;color:#555}
 .button-dial-label-small-hours{font-size:6.5px;position:absolute;top:8px;z-index:10;font-family:weathertext3;color:#555;text-transform:none}
 .weather34moonphasesvg{margin-left:1px;margin-top:17px}
-.sunrise-sun,.sunset-sun{display:block;background:0;color:var(--body-text-light);font-size:9px;line-height:1;position:absolute;margin-left:60px;font-family:weathertext2;text-align:left;margin-top:3px;text-transform:none;text-shadow:var(--text-shadow)}
-.sunset-sun{margin-top:29px}
-.indoordesc,.indoordesc2,.indoordesc3,.indoordescdeprem{display:flex;background:0;color:var(--body-text-light);font-size:10px;line-height:1;top:5px;position:absolute;margin-left:210px;font-family:headingtext;text-align:center;box-shadow:-1px -1px 8px rgba(255,255,255,.9),2px 2px 2px rgba(0,0,0,.07);background:#fff;text-transform:none;text-shadow:var(--text-shadow);flex-grow:0;flex-shrink:1;flex-basis:auto}
+.daylighthours,.indoordesc,.indoordesc2,.indoordesc3,.indoordescdeprem{display:flex;background:0;color:var(--body-text-light);font-size:10px;line-height:1;top:5px;position:absolute;margin-left:210px;font-family:headingtext;text-align:center;box-shadow:-1px -1px 8px rgba(255,255,255,.9),2px 2px 2px rgba(0,0,0,.07);background:#fff;text-transform:none;text-shadow:var(--text-shadow);flex-grow:0;flex-shrink:1;flex-basis:auto}
 .indoordescdeprem{margin-left:170px;width:100px}
 .lightningdesc,.lightningdesc2,.moondesc{display:flex;background:0;color:var(--body-text-light);font-size:10px;line-height:1;top:5px;position:absolute;margin-left:165px;font-family:headingtext;text-align:center;box-shadow:-1px -1px 8px rgba(255,255,255,.9),2px 2px 2px rgba(0,0,0,.07);background:#fff;text-transform:none;text-shadow:var(--text-shadow);flex-grow:0;flex-shrink:1;flex-basis:auto}
+.daylighthours{margin-left:190px;width:max-content}
 .lightningdesc2{margin-left:220px}
 .moondesc{top:0;margin-left:190px;text-align:center;align-items:center;justify-content:center}
 laststrike{display:flex;background:0;color:var(--body-text-light);font-size:9px;line-height:1;top:25px;position:absolute;left:65px;font-family:headingtext;text-align:left;width:60px;word-wrap:break-word;text-shadow:var(--text-shadow)}
@@ -681,7 +681,7 @@ smalltrainunit2{font-size:.45rem;text-shadow:var(--text-shadow);color:var(--body
 smalltrainunit3{font-size:7px;text-shadow:var(--text-shadow);color:var(--body-dark)}
 .maxbftgauge,.maxuvindex,.maxwindgauge,.maxwm2{position:absolute;margin-top:-50px;margin-left:-85px;font-size:.55em;font-family:weathertext2;width:auto;max-width:175px;box-shadow:var(--button-shadow);line-height:1.1;background:#fff;text-align:center;text-shadow:var(--text-shadow);padding-left:2px;padding-right:2px}
 .maxbftgauge,.maxwm2{margin-top:-37px}
-.mooninfo2 a{position:relative;left:125px;padding:2px;padding-top:4px;font-size:9px;color:var(--body-text-dark);display:flex;justify-content:left;width:75px;max-width:75px;line-height:1;top:37px;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
+.mooninfo2 a{position:relative;left:140px;padding:2px;padding-top:4px;font-size:9px;color:var(--body-text-dark);display:flex;justify-content:left;width:max-content;line-height:1;top:37px;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}
 depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;text-shadow:var(--text-shadow)}

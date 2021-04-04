@@ -139,11 +139,38 @@ elseif ($weather['solar']>=0 ){echo 'var(--yellow)';}?>">
 </div></div></div></div></div></div>
 
 
-<div class="rainrateextra1">
+
+
+
+<div class="rainrateextra1" style="width:500px">
 <valuetextheading5>
-<?php echo $sunrisesicon2." Sunrise ". $nextrisetxt.' (<orange>'.$nextrise.'</orange>)';?><br>
-<?php echo $sunsetsicon2." Sunset ". $nextsettxt.' (<blue>'.$nextset.'</blue>)';?>
+<?php
+$weather["lux1"]  = number_format($weather['solar']*126.7,0, '.', '');
+$weather["lux"]  = round($weather["lux1"],0);
+if ($weather["lux"]>80000){echo "0<smalltempunit2>&nbsp;&nbsp;Luminance Lux</smalltempunit2><barometerspacinghpa></barometerspacinghpa>";}
+else if ($weather["lux"]>=10000){echo "0<barometerspacinghpa><orange>100k</orange></barometerspacinghpa><smalltempunit2>&nbsp;Lux</smalltempunit2>";}
+else if ($weather["lux"]>=0){echo "<barometerspacinghpa><orange>100k</orange></barometerspacinghpa><smalltempunit2>&nbsp;Lux</smalltempunit2>";}
+
+?></smalltempunit2>
+<style>
+.weather34sunratebar12::before{
+position:absolute;
+content:"<?php echo number_format($weather["lux"]/1000,0)?>k";
+font-size:9px;
+padding-left:<?php 
+if ($weather["lux"]>70000){echo $weather["lux"]/1150;}else if ($weather["lux"]>=0){echo $weather["lux"]/1100;}?>px;
+top:0px;
+color:<?php if ($weather["lux"]>80000){echo "var(--orange);";}if ($weather["lux"]>0){echo "var(--yellow);";}else echo "var(--body);";?>;}	
+</style>
 </valuetextheading5>
+
+<div class=sunratebar>
+<div class="weather34sunratebar12" style="width:<?php echo $weather["lux"]/1000;?>px;background:<?php if ($weather["lux"]>80000){echo "var(--orange);";}else echo "var(--yellow);";?>">
+</div></div>
+
+
+
+
 
 
 

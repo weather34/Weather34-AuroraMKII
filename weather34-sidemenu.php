@@ -68,6 +68,11 @@ if ($webcamdevice == "yes") { echo '<a href="weather34-large-cam.php" data-lity 
 <?php //weather34 smart tv option if yes
 if ($smarttv=='yes'){echo '<a href="weather34-tv.php" data-title="Smart TV">'. $weather34smtv.'&nbsp;Smart TV</a><br>';} ?>
 
+
+<?php // sun position data
+echo '<a href="weather34-suninfo.php" data-lity data-title="Lunar Info">'.$weather34sunicon?>&nbsp;Sun Position Info</a><br>
+
+
 <?php // moon phase data
 echo '<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">'.$weather34moonicon?>&nbsp;Moonphase Info</a><br>
 

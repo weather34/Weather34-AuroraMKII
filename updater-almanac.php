@@ -18,6 +18,10 @@
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#clock").show()}});var c=a("#clock");c.load("weather34-sun-moon.php");var b=setInterval(function(){c.load("weather34-sun-moon.php")},1160000)})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#indoor").show()}});var c=a("#indoor");c.load("weather34-clockphone3.php");var b=setInterval(function(){c.load("weather34-clockphone3.php")},60000)})})(jQuery);
 
+(function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#sunpos").show()}});var c=a("#sunpos");c.load("weather34-sun-moon2.php");
+var b=setInterval(function(){c.load("weather34-sun-moon2.php")},60000)})})(jQuery);
+
+
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#moon").show()}});var c=a("#moon");c.load("<?php echo $position10a ?>");var b=setInterval(function(){c.load("<?php echo $position10a?>")},11300000)})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#sun").show()}});var c=a("#sun");c.load("<?php echo $position11a ?>");var b=setInterval(function(){c.load("<?php echo $position11a ?>")},111300000)})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#time-date").show()}});var c=a("#time-date");c.load("<?php echo $position12a ?>");var b=setInterval(function(){c.load("<?php echo $position12a ?>")},111300000)})})(jQuery);</script>
