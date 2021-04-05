@@ -200,7 +200,7 @@ li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
 <?php echo $sunuphalf." Last Light (<deepblue>".date('H:i',$civil_twilight_night)."</deepblue>)";?><br>
 <?php echo $sundownhalf.' Total Darkness (<deepblue>'.$darkhours,":".$darkminutes.'</deepblue> Hours)';?><br>
 
-<br>
+
 <?php echo $moonrisehalf?> Moon Rise: <?php echo $weather['moonrise']," ";?>
     <br>
 <?php echo $moonsethalf?> Moon Set:  &nbsp;<?php echo $weather['moonset']," ";?>
@@ -427,13 +427,18 @@ function setRotation(element, rotationRatio) {
 setClock();
   </script>
   
-  <div style="font-family:verb;position:absolute;margin-top:-75px;font-size:10px;margin-left:155px;text-align:center;background:#242A32;border-radius:3px;padding:3px;">
+  <div style="font-family:verb;position:absolute;width:140px;margin-top:-75px;font-size:10px;margin-left:155px;text-align:center;background:#242A32;border-radius:3px;padding:3px;">
 <?php 
 if ($txt=='Sunrise'){echo $sunrisesicon; echo " <yellow>Sun</yellow> comes up in <br>";}
 if ($txt=='Sunset'){echo $sunsetsicon; echo " <orange>Sun</orange> goes down in <br>";}?>
 <?php echo $hrs." hrs : ". $min." min" ?>
 <?php if ($txt=='Sunrise'){echo " (<yellow>".$nextrise."</yellow>)";}
 if ($txt=='Sunset'){echo " (<orange>".$nextset."</orange>)";}?> 
+</div>
+
+<div style="font-family:verb;position:absolute;width:140px;margin-top:-35px;font-size:10px;margin-left:155px;text-align:center;background:#242A32;border-radius:3px;padding:3px;">
+Timezone <br>
+<blue><?php $TZ	=str_replace('/', ' ', $TZ);$TZ	=str_replace('_', ' ', $TZ);echo $TZ;?> </blue>
 </div>
 
 <script type="text/javascript">
