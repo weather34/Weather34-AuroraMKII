@@ -121,7 +121,7 @@ else if ($meteobridgeapi[24]>=-50 ){echo 'var(--deepcold)';}
 <?php ;}?>
 <?php 
 //if ($meteobridgeapi[42]='-'){$meteobridgeapi[42]="0";}
-//heat index 28+
+//heat index >30
 if ($meteobridgeapi[42]>=30){;?>
 <div class="windgauge">
 <div class="second24hourguage">
@@ -157,8 +157,8 @@ else if ($meteobridgeapi[42]>=25 ){echo 'var(--red)';}
 <?php ;}?>
 
 <?php 
-//month average if no windchill<0 or heatindex>28
-if ($meteobridgeapi[42]<=28 && $meteobridgeapi[24]>=0){;?>
+//month average if no windchill<0 or heatindex<30
+if ($meteobridgeapi[42]<30 && $meteobridgeapi[24]>=0){;?>
 <div class="windgauge">
 <div class="second24hourguage">
   <?php echo "<solarheading style='margin-left:-45px;width:70px'>Average Today</solarheading>";?>

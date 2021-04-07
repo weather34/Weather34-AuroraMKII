@@ -24,7 +24,7 @@ include_once('livedata.php');include_once('updater2.php');?>
 <meta name="apple-mobile-web-app-title" content="Weather34">
 <meta name="application-name" content="Weather34">
 <link href="console-<?php echo $theme?>.css?version=<?php echo filemtime('console-'.$theme.'.css')?>" rel="stylesheet prefetch">
-<link rel="preload" href="fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
