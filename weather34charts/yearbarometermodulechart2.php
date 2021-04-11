@@ -18,7 +18,7 @@
 	$conv = 1;		
 	if ($tempunit == 'F') {$conv= 0.02953 ;}	
 	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}
-	$int = 5;	
+	$int = 10;	
 	if ($tempunit == 'F') {$int= 0.75;}		
 
 	
@@ -71,7 +71,7 @@ return thecolor;}
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');						
 					//dataPoints1.push({label:rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ?>)});
-					if ( rowData[9] >-999)		
+					if ( rowData[9] >20)		
 				//dataPoints1.push({label:rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ?>)});			
 				dataPoints1.push({label: rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ;?>),color:WEATHER34CHARTCOLORS(parseFloat(rowData[9]))});	
 					
@@ -85,7 +85,7 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[10] >-999)	
+				if ( rowData[10] >20)	
 				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[10]*<?php echo $conv ?>)});
 					
 				
@@ -207,7 +207,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>

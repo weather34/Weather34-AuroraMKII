@@ -17,10 +17,11 @@
 	include('preload.php');
 	if ($tempunit == 'F') {$conv= '(1.8) +32';}	
 	else $conv = 1;	
-	$max = 50;
+	$max = 50; 
 	if ($tempunit  == 'F') {$max= '120';}	
 
 	$int= '0';
+	if ($tempunit  == 'C'){$int="1";}
 	if ($tempunit  == 'F') {$int= '5';} 
 
 
@@ -197,7 +198,9 @@ return thecolor;}
 		});
 		
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });</script>
 <body>

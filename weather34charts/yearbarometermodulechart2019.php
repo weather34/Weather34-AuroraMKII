@@ -54,7 +54,7 @@
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[9] >-100)		
+				if ( rowData[9] >20)		
 					dataPoints1.push({label:rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ?>)});
 					
 					
@@ -68,7 +68,7 @@
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[10] >-100)
+				if ( rowData[10] >20)
 				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[10]*<?php echo $conv ?>)});
 					
 				
@@ -111,7 +111,7 @@
 			titleFontFamily: "verb",	
 			labelFontFamily: "verb",	
 			minimum:-1,	
-			interval:50	,
+			interval:60	,
 			intervalType:"day",
 			xValueType: "dateTime",	
 			crosshair: {
@@ -192,7 +192,9 @@
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>

@@ -122,7 +122,7 @@ return theWM;}
 			titleFontFamily: "verb",	
 			labelFontFamily: "verb",	
 			minimum:-1,	
-			interval:45,	
+			interval:60,	
 			intervalType:"day",
 			xValueType: "dateTime",	
 			crosshair: {
@@ -204,7 +204,9 @@ return theWM;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>

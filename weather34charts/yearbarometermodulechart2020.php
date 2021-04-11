@@ -17,7 +17,7 @@
 	$conv = 1;		
 	if ($tempunit == 'F') {$conv= 0.02953 ;}	
 	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}
-	$int = 5;	
+	$int = 10;	
 	if ($tempunit == 'F') {$int= 0.75;}		
 
 	if ($weather["barometer_units"] == 'inHg') {$pressureunit= 'inHg';}
@@ -54,7 +54,7 @@
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[9] >-100)		
+				if ( rowData[9] >20)		
 					dataPoints1.push({label:rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ?>)});
 					
 					
@@ -68,7 +68,7 @@
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[10] >-100)
+				if ( rowData[10] >20)
 				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[10]*<?php echo $conv ?>)});
 					
 				
@@ -111,7 +111,7 @@
 			titleFontFamily: "verb",	
 			labelFontFamily: "verb",	
 			minimum:-1,	
-			interval:45	,
+			interval:60	,
 			intervalType:"day",
 			xValueType: "dateTime",	
 			crosshair: {
@@ -192,7 +192,9 @@
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>

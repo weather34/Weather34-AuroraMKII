@@ -225,7 +225,7 @@ function moon_day(today) {
         F += 0.5 / 1440;
         oldJ = jday;
          //jday = J0 + 28 * phase + Math.floor(F);
-         jday = J0 + 28 * phase + Math.floor(F);
+         jday = J0 + 28.2 * phase + Math.floor(F);
         phase++;
     }
     // 29.53059 days per lunar month

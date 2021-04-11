@@ -201,7 +201,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			//wind direction
 			type: "scatter",
 			//color:"rgba(68, 166, 181, 1.000)",
-			markerSize:4,
+			markerSize:2,
 			showInLegend:false,
 			legendMarkerType: "triangle",
 			lineThickness: 1,
@@ -216,7 +216,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			//wind direction cardinal
 			type: "scatter",
 			//color:"rgba(68, 166, 181, 1.000)",
-			markerSize:4,
+			markerSize:2,
 			showInLegend:false,
 			legendMarkerType: "triangle",
 			lineThickness: 0,
@@ -231,7 +231,9 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });</script>
 <body>
