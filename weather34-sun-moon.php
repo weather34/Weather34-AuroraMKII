@@ -228,7 +228,7 @@ function moon_day(today) {
         F += 0.5 / 1440;
         oldJ = jday;
          //jday = J0 + 28 * phase + Math.floor(F);
-         jday = J0 + 28.2 * phase + Math.floor(F);
+         jday = J0 + 28.3 * phase + Math.floor(F);
         phase++;
     }
     // 29.53059 days per lunar month
@@ -261,10 +261,10 @@ Date.prototype.getJulian=function(){
 return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
 phase_junk(moon_day(new Date)); 
 </script>
+</div></div></div>
 
-
-<newphase><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></newphase>
-</div></div></div></div>
+<div class="newphase"><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?>
+</div>
 <div class="daylight4">
 <?php 
 if ($txt=='Sunrise'){echo $sunrisesicon;}if ($txt=='Sunset'){echo $sunsetsicon;}?>&nbsp;

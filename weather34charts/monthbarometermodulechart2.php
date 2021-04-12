@@ -41,7 +41,7 @@
 	<script type="text/javascript">
 
 function WEATHER34CHARTCOLORS(weather34value) {
-	if (weather34value>=900 && weather34value<=1000) {thecolor='hsla(185, 100%, 37%, 1)';}
+if (weather34value>=900 && weather34value<=1000) {thecolor='hsla(185, 100%, 37%, 1)';}
 else if (weather34value>1000 && weather34value<=1010) {thecolor='hsl(75, 62%, 43%)';}
 else if (weather34value>1010 && weather34value<=1020) {thecolor='hsl(35, 77%, 58%)';}
 else if (weather34value>1020 && weather34value<=1030) {thecolor='hsl(19, 66%, 55%)';} 
@@ -69,7 +69,7 @@ return thecolor;}
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');						
 					//dataPoints1.push({label:rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ?>)});
-					if ( rowData[9] >-999)		
+					if ( rowData[9] >20)		
 				//dataPoints1.push({label:rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ?>)});			
 				dataPoints1.push({label: rowData[0],y:parseFloat(rowData[9]*<?php echo $conv ;?>),color:WEATHER34CHARTCOLORS(parseFloat(rowData[9]))});	
 					
@@ -83,7 +83,7 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[10] >-999)	
+				if ( rowData[10] >20)	
 				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[10]*<?php echo $conv ?>)});
 					
 			}
@@ -199,7 +199,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>

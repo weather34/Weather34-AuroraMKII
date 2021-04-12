@@ -686,3 +686,4 @@ barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}
 depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;text-shadow:var(--text-shadow)}
 depremspacing{position:absolute;margin-left:-12px;font-size:7px;margin-top:22px;color:#aaa;text-shadow:var(--text-shadow)}
+.newphase{position:absolute;margin-left:-95px;margin-top:-10px;font-size:9.5px;z-index:999;width:max-content;text-align:center;color:#fff;font-family:weathertext2}

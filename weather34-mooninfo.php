@@ -817,7 +817,7 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
           F += 0.5 / 1440;
           oldJ = jday;
            //jday = J0 + 28 * phase + Math.floor(F);
-           jday = J0 + 28.2 * phase + Math.floor(F);
+           jday = J0 + 28.3 * phase + Math.floor(F);
           phase++;
       }
       // 29.53059 days per lunar month
@@ -851,7 +851,9 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
     return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
     phase_junk(moon_day(new Date)); 
   </script>
-  </div></div>
+   </div>
+  </div>
+  <div style="background:rgba(86, 95, 103, 0.3);margin-left:20px;margin-top:-70px;border-radius:50%;width:60px;height:60px;"></div>
   
   <div class=moonphasetext>  
   <?php 
