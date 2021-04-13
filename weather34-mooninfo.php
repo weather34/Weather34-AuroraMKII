@@ -42,7 +42,9 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   function next_first_quarter(){return $this->get_phase(5);} 
   function next_full_moon(){return $this->get_phase(6);} 
   function next_last_quarter(){return $this->get_phase(7);} 
-  function phase_name(){$names=array('New Moon','Waxing Crescent','First Quarter','Waxing Gibbous','Full Moon','Waning Gibbous','Third Quarter','Waning Crescent','New Moon');return $names[ floor(($this->phase + 0.0625)* 8)];} } 
+  function phase_name(){$names=array('New <br>Moon','Waxing <br>Crescent','First <br>Quarter','Waxing <br>Gibbous','Full <br>Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','New <br>Moon');
+    //return $names[ floor(($this->phase + 0.0625)* 8)];} } 
+    return $names[ floor(($this->phase + 0.070)* 8)];} } 
   
   $meteor_default="No Meteor";
   $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 1, 3),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 4),);
@@ -756,7 +758,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
       font-size: 0.95em;
       width: 200px;
       margin-top: 10px;
-      margin-left:-5px
+      margin-left:0px
     }
     
     
@@ -768,6 +770,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
     }
     
     }
+    .moonphrase{position:absolute;z-index:999;text-align:center;margin-left:30px;margin-top:50px;width:max-content;color:#99B1C9;font-family:verb;}
     </style>
   <script src="js/jquery.js"></script>
   
@@ -776,7 +779,9 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   <main class="grid">
     <article>  
   <?php echo $info;?> Moon Phase Data<br><br>  
+
   <!---simple weather34 svg moonphase -->
+  <div class="moonphrase"><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></div>
   <div class="moonphaseposition">
   <div class="weather34moonphasesvg">
   <?php // lets rotate for those in the souther hemisphere 
@@ -853,7 +858,6 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
   </script>
    </div>
   </div>
-  <div style="background:rgba(86, 95, 103, 0.3);margin-left:20px;margin-top:-70px;border-radius:50%;width:60px;height:60px;"></div>
   
   <div class=moonphasetext>  
   <?php 
@@ -873,13 +877,13 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
   //function next_full_moon(){return $this->get_phase(6);} 
   //function next_last_quarter(){return $this->get_phase(7);} 
   ?>
-  Phase:<blue><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></blue><br>
-  Luminance:<blue><?php $moon=new MoonPhase();$lum=$moon->illumination();echo number_format($lum,1);?></blue>%<br>
-  Distance:<blue><?php 
+  
+  <?php echo $info;?> Luminance:<blue><?php $moon=new MoonPhase();$lum=$moon->illumination();echo number_format($lum,1);?></blue>%<br>
+  <?php echo $info;?> Distance:<blue><?php 
   if ($distanceunit=='km'){$moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance,0);echo "</blue>km";}
   if ($distanceunit=='mi'){$moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance*0.621371,0);echo "</blue> miles";}
   ?><br>
-  Cycle:<blue><?php $moon = new MoonPhase();$moonage =round($moon->age(),2);echo round($moonage,2)?></blue> Days
+  <?php echo $info;?> Cycle:<blue><?php $moon = new MoonPhase();$moonage =round($moon->age(),2);echo round($moonage,2)?></blue> Days
   
     <div class="moonriset">
     <?php echo $moonrisehalf?> Moon Rise: <?php echo $weather['moonrise']," ";?>
