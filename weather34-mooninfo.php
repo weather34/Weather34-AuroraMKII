@@ -8,6 +8,17 @@
 	#   https://www.weather34.com 	                                                                   
 	########################################################
 include('livedata.php');
+include('updater-almanac.php');
+if ($clockformat=='12'){$timeformat= 'g:i' ;}
+if ($clockformat=='24'){$timeformat= 'H:i' ;}
+$TZconf = $TZ; 
+$rise_zenith = 90+ 40/60;  
+$set_zenith = 90+ 36/60; 
+date_default_timezone_set($TZ);
+$result = date_sun_info(time(), $lat, $lon);time();
+$sunrisetoday= date_sunrise(time(), SUNFUNCS_RET_STRING, $lat, $lon, $rise_zenith, $UTC);
+$sunsetoday= date_sunset(time(), SUNFUNCS_RET_STRING, $lat, $lon, $rise_zenith, $UTC);
+$nextday = time() + 24*60*60;$result2 = date_sun_info($nextday,$lat, $lon);
 //get moon data rise/set
 class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lon){$utrise=$utset=0;$timezone=(int)($lon / 15);
   $date=self::modifiedJulianDate($month,$day,$year);$date-=$timezone / 24;$latRad=deg2rad($lat);$sinho=0.0023271056;
@@ -42,91 +53,29 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   function next_first_quarter(){return $this->get_phase(5);} 
   function next_full_moon(){return $this->get_phase(6);} 
   function next_last_quarter(){return $this->get_phase(7);} 
-  function phase_name(){$names=array('New <br>Moon','Waxing <br>Crescent','First <br>Quarter','Waxing <br>Gibbous','Full <br>Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','New <br>Moon');
+  function phase_name(){$names=array('&nbsp;New <br>Moon','Waxing <br>Crescent','First <br>Quarter','Waxing <br>Gibbous','&nbsp;Full <br>Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','New <br>Moon');
     //return $names[ floor(($this->phase + 0.0625)* 8)];} } 
     return $names[ floor(($this->phase + 0.070)* 8)];} } 
-  
-  $meteor_default="No Meteor";
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 1, 3),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 4),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 1, 5),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 12),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 28,2021),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 2,2022),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 28,2022),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 2,2023),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 28,2023),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 2,2024),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 28,2024),"event_title"=>"Quadrantids Meteor","event_end"=>mktime(23, 59, 59, 1, 2,2025),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 4, 9),"event_title"=>"Lyrids Meteor","event_end"=>mktime(20, 59, 59, 4, 20),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 4, 21),"event_title"=>"Lyrids Meteor","event_end"=>mktime(23, 59, 59, 4, 22),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 3, 5),"event_title"=>"ETA Aquarids","event_end"=>mktime(23, 59, 59, 5, 6),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 7, 20),"event_title"=>"Delta Aquarids","event_end"=>mktime(23, 59, 59, 7, 28),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 7, 29),"event_title"=>"Delta Aquarids","event_end"=>mktime(23, 59, 59, 7, 30),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 8, 1),"event_title"=>"Perseids Meteor","event_end"=>mktime(23, 59, 59, 8, 10),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 8, 11),"event_title"=>"Perseids Meteor <br><peak>".$info." For Next Two Days Peak Viewing Period</peak>","event_end"=>mktime(23, 59, 59, 8, 13),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 8, 14),"event_title"=>"Perseids Meteor","event_end"=>mktime(23, 59, 59, 8, 18),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 10, 6),"event_title"=>"Draconids","event_end"=>mktime(23, 59, 59, 10, 7),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 10, 20),"event_title"=>"Orionids Meteor","event_end"=>mktime(23, 59, 59, 10, 21),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 11, 4),"event_title"=>"South Taurids","event_end"=>mktime(23, 59, 59, 11, 5),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 11, 11),"event_title"=>"North Taurids","event_end"=>mktime(23, 59, 59, 11, 13),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 11, 13),"event_title"=>"Leonids Meteor","event_end"=>mktime(23, 59, 59, 11, 16),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 11, 17),"event_title"=>"Leonids Meteor","event_end"=>mktime(23, 59, 59, 11, 18),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 11, 19),"event_title"=>"Leonids Meteor","event_end"=>mktime(23, 59, 59, 11, 29),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 11, 30),"event_title"=>"Geminids Meteor","event_end"=>mktime(23, 59, 59, 12, 12),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 13),"event_title"=>"Geminids Meteor","event_end"=>mktime(23, 59, 59, 12, 14),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 16),"event_title"=>"Ursids Meteor","event_end"=>mktime(23, 59, 59, 12, 20),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 21),"event_title"=>"Ursids Meteor","event_end"=>mktime(23, 59, 59, 12, 22),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 12, 23),"event_title"=>"Ursids Meteor","event_end"=>mktime(23, 59, 59, 12, 25),);
-  $meteor_events[]=array("event_start"=>mktime(0, 0, 0, 7, 3,2020),"event_title"=>"Comet Neowise","event_end"=>mktime(23, 59, 59, 7, 23,2020),);
-  $meteorNow=time();
-  $meteorOP=false;
-  foreach ($meteor_events as $meteor_check) {if ($meteor_check["event_start"]<=$meteorNow&&$meteorNow<=$meteor_check["event_end"]) {$meteorOP=true;$meteor_default=$meteor_check["event_title"];}};
-  //end meteor
-  //weather34 next meteor event original idea betejuice of cumulus forum..
-  $meteor_nextevent="No Meteor Shower<br>";
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 18,23),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Active Dec 28th-Jan 12th
-  <br><green>Estimated ZHR: </green><blue>120 <br> Peaks <blue>Jan 3rd-4th</blue></div></div>","event_end"=>mktime(23, 59, 59, 1, 2,24),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 18,22),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Active Dec 28th-Jan 12th
-  <br><green>Estimated ZHR: </green><blue>120 <br> Peaks <blue>Jan 3rd-4th</blue></div></div>","event_end"=>mktime(23, 59, 59, 1, 2,23),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 18,21),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Active Dec 28th-Jan 12th
-  <br><green>Estimated ZHR: </green><blue>120 <br> Peaks <blue>Jan 3rd-4th</blue></div></div>","event_end"=>mktime(23, 59, 59, 1, 2,22),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 18,20),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Active Dec 28th-Jan 12th
-  <br><green>Estimated ZHR: </green><blue>120 <br> Peaks <blue>Jan 3rd-4th</blue></div></div>","event_end"=>mktime(23, 59, 59, 1, 2,21),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 18,19),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Active Dec 28th-Jan 12th
-  <br><green>Estimated ZHR: </green><blue>120 <br> Peaks <blue>Jan 3rd-4th</blue></div></div>","event_end"=>mktime(23, 59, 59, 1, 2,20),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 24),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Active Dec 28th-Jan 12th
-  <br><green>Estimated ZHR: </green><blue>120 <br>Peaks <blue>Jan 3rd-4th</blue></div></div>","event_end"=>mktime(23, 59, 59, 1, 2),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(0, 0, 0, 1, 3),"event_title"=>"Meteor Shower<br> <orange1>Quadrantids</orange1><div class=date2><br>Peak Viewing Now<br><div class=date2>
-  <br><green>Estimated ZHR: </green><blue>120</div></div>","event_end"=>mktime(23, 59, 59, 1, 4),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 1, 2),"event_title"=>"Meteor Shower<br> <orange1>&nbsp; &nbsp;Lyrids</orange1><div class=date2><br>Active Apr 18th-Apr 25th<br>
-  <green>Estimated ZHR: </green><blue>18</blue><br>Peaks <blue>Apr 23rd</blue></div></div>","event_end"=>mktime(23, 59, 59, 4, 20),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 4, 20),"event_title"=>"Meteor Shower<br> <orange1>Lyrids</orange1> <div class=date2><br>Peak Viewing Now<br>
-  <green>Estimated ZHR: </green><blue>18</blue><br>Peaks <blue>Apr 23rd</blue></div></div>","event_end"=>mktime(23, 59, 59, 4, 22),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 4, 22),"event_title"=>"Meteor Shower<br> <orange1>&nbsp; &nbsp;ETA Aquarids </orange1><br><div class=date2><br>Active Apr 24th-May 19th
-  <br><green>Estimated ZHR: </green><blue>55 </blue><br> Peaks <blue>May 6th</blue></div></div>","event_end"=>mktime(23, 59, 59, 5, 6),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 5, 6),"event_title"=>"Meteor Shower<br> <orange1>&nbsp; &nbsp;Delta Aquarids</orange1><div class=date2><br>Active Jul 21st-Aug 23rd<br><green>Estimated ZHR: </green><blue>16</blue><br> Peaks <blue>Jul 28th</blue></div></div>","event_end"=>mktime(23, 59, 59, 7, 27),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 7, 27),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;Perseids</orange1><div class=date2><br>Active Jul 13th-Aug 26th<br>
-  <green>Estimated ZHR: </green><blue>100</blue><br> Peaks <blue>Aug 11th-13th</blue></div>","event_end"=>mktime(23, 59, 59, 8, 10),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(0, 0, 0, 8, 11),"event_title"=>"Meteor Shower<br><orange1> &nbsp; &nbsp;Perseids</orange1> <br><div class=date2><br>
-  <green>Estimated ZHR: </green><blue>100</blue><br> Peaks <blue>Aug 11th-13th</blue><br>Visible till 26th August</div></div>","event_end"=>mktime(23, 59, 59, 8, 26),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 8, 26),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;Draconids</orange1><div class=date2><br>Active October 6th-10th<br>
-  <green>Estimated ZHR: </green><blue>5</blue><br> Peaks <blue>Oct 9th</blue></div></div>","event_end"=>mktime(23, 59, 59, 10, 7),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 10, 7),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;Orionids</orange1><div class=date2><br>Active Oct 21st-Oct 22nd<br>
-  <green>Estimated ZHR: </green><blue>25</blue><br> Peaks <blue>Oct 22nd</blue></div></div>","event_end"=>mktime(23, 59, 59, 10, 21),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 10, 21),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;South Taurids</orange1><div class=date2><br>Active Nov 4th- Nov 5th<br><green>Estimated ZHR: </green><blue>5</blue><br> Peaks <blue>Nov 5th</blue></div></div>","event_end"=>mktime(23, 59, 59, 11, 5),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 11, 5),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;North Taurids</orange1><div class=date2><br>Active Nov 11th<br>
-  <green>Estimated ZHR: </green><blue>5</blue><br> Peaks <blue>Nov 12-13th</blue></div></div>","event_end"=>mktime(23, 59, 59, 11, 13),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 11, 13),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;Leonids</orange1><div class=date2><br>Active Nov 5th-Dec 3rd<br>
-  <green>Estimated ZHR: </green><blue>15</blue><br> Peaks <blue>Nov 18th</blue></div></div>","event_end"=>mktime(23, 59, 59, 11, 18),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 11, 18),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;Geminids</orange1><div class=date2><br>Active Nov 30th-Dec 17th<br>
-  <green>Estimated ZHR: </green><blue>120</blue><br> Peaks <blue>Dec 14th</blue></div></div>","event_end"=>mktime(23, 59, 59, 12, 14),);
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 14),"event_title"=>"Meteor Shower<br> <orange1> &nbsp; &nbsp;Ursids</orange1><div class=date2><br>Active Dec 17th-Dec 24th<br>
-  <green>Estimated ZHR: </green><blue>5-10</blue><br> Peaks <blue>Dec 23rd</blue></div></div>","event_end"=>mktime(23, 59, 59, 12, 18),);
-  
-  $meteor_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 7, 3 , 2020),"event_title"=>"Comet Visible<br> <orange1> &nbsp; &nbsp;Neowise</orange1><div class=date2><br>Active Jul 7th-Jul 24th<br>
-  <green>North West: </green><blue></blue><br>Visible 1-2 Hours after <blue>Sunset</blue></div></div>","event_end"=>mktime(23, 59, 59, 7, 24, 2020),);
-  
-  
-  $meteorNext=time();$meteorOP=false;
-  foreach ($meteor_eventsnext as $meteor_check) {if ($meteor_check["event_start"]<=$meteorNext&&$meteorNext<=$meteor_check["event_end"]) {$meteorOP=true;$meteor_nextevent=$meteor_check["event_title"];}};
-  //end meteor nevt event
-  $meteorinfo3="<svg width='22px' height='22px' viewBox='0 0 16 16'><path fill='#aaa' d='M0 0l14.527 13.615s.274.382-.081.764c-.355.382-.82.055-.82.055L0 0zm4.315 1.364l11.277 10.368s.274.382-.081.764c-.355.382-.82.055-.82.055L4.315 1.364zm-3.032 2.92l11.278 10.368s.273.382-.082.764c-.355.382-.819.054-.819.054L1.283 4.284zm6.679-1.747l7.88 7.244s.19.267-.058.534-.572.038-.572.038l-7.25-7.816zm-5.68 5.13l7.88 7.244s.19.266-.058.533-.572.038-.572.038l-7.25-7.815zm9.406-3.438l3.597 3.285s.094.125-.029.25c-.122.125-.283.018-.283.018L11.688 4.23zm-7.592 7.04l3.597 3.285s.095.125-.028.25-.283.018-.283.018l-3.286-3.553z'/></svg>";
+//weather34 sunrise 
+$nextrise = $result['sunrise']; $now = time(); 
+if ($now > $nextrise) { $nextrise = date($timeformat,$result2['sunrise']);
+$nextrisetxt = ' Tomorrow'  ;} 
+else { $nextrisetxt = ' Today';$nextrise = date($timeformat,$nextrise);} 
+//weather34 sunset
+$nextset = $result['sunset'];if ($now > $nextset) { $nextset = date($timeformat,$result2['sunset']);
+$nextsettxt = ' Tomorrow';}else { $nextsettxt = ' Today'; $nextset = date($timeformat,$nextset);} 
+$firstrise = $result['sunrise']; $secondrise = $result2['sunrise']; $firstset = $result ['sunset'];
+if ($now < $firstrise) { $time = $firstrise - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time);$txt = 'Sunrise';} 
+elseif ($now < $firstset) { $time = $firstset - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time);$txt = 'Sunset';} 
+else { $time = $secondrise - $now; $hrs = gmdate ('G',$time); $min = gmdate ('i',$time); $txt = 'Sunrise';}echo "";
+
+//sun position based on https://github.com/KiboOst/php-sunPos
+class sunPos{public function getSunPos(){$date=clone $this->date;$date->setTimezone(new DateTimeZone('UTC'));$year=$date->format("Y");$month=$date->format("m");$day=$date->format("d");$hour=$date->format("H");$min=$date->format("i");$pos=$this->getSunPosition($this->latitude,$this->longitude,$year,$month,$day,$hour,$min);$this->elevation=$pos[0];$this->azimuth=$pos[1];return array('elevation'=>$pos[0],'azimuth'=>$pos[1]);}public function getDayPeriod(){$ts=$this->date->getTimestamp();$sun_info=date_sun_info($ts,$this->latitude,$this->longitude);$sunrise=date("H:i:s",$sun_info["sunrise"]);$transit=date("H:i:s",$sun_info["transit"]);$sunset=date("H:i:s",$sun_info["sunset"]);$this->sunrise=$sunrise;$this->transit=$transit;$this->sunset=$sunset;$isDay=0;$isMorning=0;$isNoon=0;$isAfternoon=0;$isEvening=0;$now=$this->date->format('H:i:s');if($now>$sunrise and $now<$sunset)$isDay=1;if($isDay==1){if($now<='12:00:00')$isMorning=1;if($now>'12:00:00' and $now<'14:00:00')$isNoon=1;if($isMorning==0 and $isNoon==0){$sunrise=new DateTime($sunrise);$transit=new DateTime($transit);$sunset=new DateTime($sunset);$nowTime=new DateTime($now);$dayLenght=date_diff($sunset,$sunrise);$dayLenght=$dayLenght->h * 60 + $dayLenght->i;$sunsetDelta=date_diff($sunset,$nowTime);$sunsetDelta=$sunsetDelta->h * 60 + $sunsetDelta->i;$portion=pow($dayLenght / 12,2)/ 40;if($sunsetDelta<$portion)$isEvening=1;else $isAfternoon=1;}}$this->isDay=$isDay;$this->isMorning=$isMorning;$this->isNoon=$isNoon;$this->isAfternoon=$isAfternoon;$this->isEvening=$isEvening;}public function isSunny($from=0,$to=0){if(is_null($this->azimuth)){$pos=$this->getSunPos();$this->elevation=$pos['elevation'];$this->azimuth=$pos['azimuth'];}if($to<$from){if($this->azimuth<$to)$this->azimuth+=360;$to+=360;}if($this->azimuth>$from and $this->azimuth<$to)return true;return false;}public function getSunPosition($lat,$long,$year,$month,$day,$hour,$min){$jd=gregoriantojd($month,$day,$year);$dayfrac=$hour / 24 - .5;$frac=$dayfrac + $min / 60 / 24;$jd=$jd + $frac;$time=($jd - 2451545);$mnlong=(280.460 + 0.9856474 * $time);$mnlong=fmod($mnlong,360);if($mnlong<0)$mnlong=($mnlong + 360);$mnanom=(357.528 + 0.9856003 * $time);$mnanom=fmod($mnanom,360);if($mnanom<0)$mnanom=($mnanom + 360);$mnanom=deg2rad($mnanom);$eclong=($mnlong + 1.915 * sin($mnanom)+ 0.020 * sin(2 * $mnanom));$eclong=fmod($eclong,360);if($eclong<0)$eclong=($eclong + 360);$oblqec=(23.439 - 0.0000004 * $time);$eclong=deg2rad($eclong);$oblqec=deg2rad($oblqec);$num=(cos($oblqec)* sin($eclong));$den=(cos($eclong));$ra=(atan($num / $den));if($den<0)$ra=($ra + pi());if($den>=0&&$num<0)$ra=($ra + 2*pi());$dec=(asin(sin($oblqec)* sin($eclong)));$h=$hour + $min / 60;$gmst=(6.697375 + .0657098242 * $time + $h);$gmst=fmod($gmst,24);if($gmst<0)$gmst=($gmst + 24);$lmst=($gmst + $long / 15);$lmst=fmod($lmst,24);if($lmst<0)$lmst=($lmst + 24);$lmst=deg2rad($lmst * 15);$ha=($lmst - $ra);if($ha<pi())$ha=($ha + 2*pi());if($ha>pi())$ha=($ha - 2*pi());$lat=deg2rad($lat);$el=(asin(sin($dec)* sin($lat)+ cos($dec)* cos($lat)* cos($ha)));$az=(asin(-cos($dec)* sin($ha)/ cos($el)));if((sin($dec)- sin($el)* sin($lat))>00){if(sin($az)<0)$az=($az + 2*pi());}else{$az=(pi()- $az);}$el=rad2deg($el);$az=rad2deg($az);$lat=rad2deg($lat);return array(number_format($el,2),number_format($az,2));}public $latitude=null;public $longitude=null;public $date=null;public $timezone=null;public $elevation=null;public $azimuth=null;public $sunrise=null;public $transit=null;public $sunset=null;public $isDay=null;public $isMorning=null;public $isNoon=null;public $isAfternoon=null;public $isEvening=null;protected $dateFormat='Y-m-d';function __construct($latitude=0,$longitude=0,$timezone=false,$date=false,$time=false){$this->latitude=$latitude;$this->longitude=$longitude;if($timezone){$this->timezone=$timezone;date_default_timezone_set($timezone);}else $this->timezone=date_default_timezone_get();if($date)$this->date=DateTime::createFromFormat($this->dateFormat,$date);else $this->date=new DateTime('NOW',new DateTimeZone($this->timezone));if($time){$var=explode(':',$time);$this->date->setTime($var[0],$var[1]);}$this->getSunPos();$this->getDayPeriod();}}$lati=$lat;$long=$lon;$timezone=$TZ;$_SunPos=new sunPos($lati,$long,$timezone);$azimuth=$_SunPos->azimuth ;$elev=$_SunPos->elevation ;
+//use meteobridge daylight with some improvements by Josh(milehighweather)
+$light =$weather["daylight"]; $daylight = ltrim($light, '0'); $dark = 24 - str_replace(':','.',$daylight);
+$lighthours = substr($daylight, 0, 2); $lightmins = substr($daylight, -2);
+$darkhours = 23 - $lighthours; $darkminutes = 60 - $lightmins;if ($darkminutes<10) $darkminutes= '0' .$darkminutes;
+else $darkminutes=$darkminutes;$thehour=date('H');$theminute=date('i');  
   ?>
   <?php 
   //weather34 next lunar event..
@@ -147,7 +96,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   $lunarNext=time();$lunarOP=false;
   foreach ($lunar_eventsnext as $lunar_check) {if ($lunar_check["event_start"]<=$lunarNext&&$lunarNext<=$lunar_check["event_end"]) {$lunarOP=true;$lunar_nextevent=$lunar_check["event_title"];}};
   //end meteor nevt event
-  $lunarinfo3='<svg width="110" viewBox="0 0 512 512" id="weather34 svg eclipse"><g id="weather34eclipse"><path fill="#49545b" opacity=".5" d=" M 162.82 68.68 C 217.22 42.05 283.43 41.17 338.48 66.45 C 356.45 74.61 373.20 85.40 388.08 98.34 C 411.02 118.31 429.61 143.30 441.71 171.21 C 461.45 216.04 464.30 267.98 449.86 314.76 C 439.41 349.21 419.54 380.72 393.08 405.11 C 360.92 435.22 318.71 454.36 274.88 458.76 C 227.90 463.90 179.25 452.31 139.80 426.23 C 96.19 397.68 64.01 352.07 52.47 301.18 C 41.60 254.95 47.17 205.00 68.34 162.46 C 88.32 121.92 122.13 88.36 162.82 68.68 M 241.61 70.93 C 205.47 73.17 170.04 86.26 141.37 108.41 C 113.46 129.68 91.96 159.22 80.24 192.29 C 72.92 212.99 69.23 235.01 69.62 256.96 C 70.21 300.95 87.26 344.52 116.92 377.05 C 136.12 398.29 160.36 414.99 187.13 425.19 C 223.20 439.09 263.68 441.22 300.98 431.01 C 339.57 420.78 374.47 397.34 398.64 365.58 C 426.37 329.66 439.83 283.09 435.67 237.92 C 431.92 192.52 410.38 148.90 376.56 118.36 C 340.47 85.10 290.54 67.71 241.61 70.93 Z" /></g><g id="weather34pass"><path fill="#01a4b5" opacity="1.00" d=" M 338.48 66.45 C 344.19 58.84 353.31 53.45 363.03 53.96 C 378.55 53.20 392.86 67.55 392.04 83.07 C 392.30 88.44 390.64 93.68 388.08 98.34 C 373.20 85.40 356.45 74.61 338.48 66.45 Z" /></g>
+  $lunarinfo3='<svg width="80" viewBox="0 0 512 512" id="weather34 svg eclipse"><g id="weather34eclipse"><path fill="#49545b" opacity=".5" d=" M 162.82 68.68 C 217.22 42.05 283.43 41.17 338.48 66.45 C 356.45 74.61 373.20 85.40 388.08 98.34 C 411.02 118.31 429.61 143.30 441.71 171.21 C 461.45 216.04 464.30 267.98 449.86 314.76 C 439.41 349.21 419.54 380.72 393.08 405.11 C 360.92 435.22 318.71 454.36 274.88 458.76 C 227.90 463.90 179.25 452.31 139.80 426.23 C 96.19 397.68 64.01 352.07 52.47 301.18 C 41.60 254.95 47.17 205.00 68.34 162.46 C 88.32 121.92 122.13 88.36 162.82 68.68 M 241.61 70.93 C 205.47 73.17 170.04 86.26 141.37 108.41 C 113.46 129.68 91.96 159.22 80.24 192.29 C 72.92 212.99 69.23 235.01 69.62 256.96 C 70.21 300.95 87.26 344.52 116.92 377.05 C 136.12 398.29 160.36 414.99 187.13 425.19 C 223.20 439.09 263.68 441.22 300.98 431.01 C 339.57 420.78 374.47 397.34 398.64 365.58 C 426.37 329.66 439.83 283.09 435.67 237.92 C 431.92 192.52 410.38 148.90 376.56 118.36 C 340.47 85.10 290.54 67.71 241.61 70.93 Z" /></g><g id="weather34pass"><path fill="#01a4b5" opacity="1.00" d=" M 338.48 66.45 C 344.19 58.84 353.31 53.45 363.03 53.96 C 378.55 53.20 392.86 67.55 392.04 83.07 C 392.30 88.44 390.64 93.68 388.08 98.34 C 373.20 85.40 356.45 74.61 338.48 66.45 Z" /></g>
   </svg>';
   ?>
   
@@ -155,756 +104,116 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Weather34 MB-SMART Moon Phase Information</title>
+    <title>Weather34 Aurora MKII Sun Moon Position Information</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
     <style>
-    :root {
-      --white: #ffffff;
-      --light: #f5f5f5;
-      --dark: #07090a;
-      --dark-light: hsla(0, 0%, 0%, 0.251);
-      --dark-toggle: #35393b;
-      --dark-caption: rgba(66, 70, 72, 0.429);
-      --black: #000000;
-      --deepblue: #00adbd;
-      --blue: #00adbd;
-      --rainblue: #00adbd;
-      --darkred: #703232;
-      --deepred: #703232;
-      --red: #d35f50;
-      --yellow: #e6a241;
-      --green: #90b22a;
-      --orange: rgb(236, 81, 19);
-      --purple: #8680bc;
-      --silver: #ecf0f3;
-      --border-dark: #3d464d;
-      --body-text-dark: #afb7c0;
-      --body-text-light: #545454;
-      --blocks: #e6e8ef;
-      --modules: #1e1f26;
-      --blocks-background: rgba(82, 92, 97, 0.19);
-      --temp-5-10: #7face6;
-      --temp-0-5: #00adbd;
-      --temp0-5: #00adbd;
-      --temp5-10: #9bbc2f;
-      --temp10-15: #e6a241;
-      --temp15-20: #f78d03;
-      --temp20-25: #d87040;
-      --temp25-30: #e64b24;
-      --temp30-35: #cc504c;
-      --temp35-40: hsl(4, 40%, 48%);
-      --temp40-45: #be5285;
-      --temp45-50: #b95c95;
-      --font-color: grey;
-      --bg-color: hsla(198, 14%, 14%, 0.19);
-      --button-bg-color: hsla(198, 14%, 14%, 0.19);
-      --button-shadow: inset 5px 5px 20px #0c0b0b,
-        inset -5px -5px 20px hsla(198, 14%, 14%, 0.19);
-    }
     
-    @font-face {
-      font-family: weathertext2;
-      src: url(fonts/verbatim-regular.woff2) format("woff2");
-    }
-    @font-face {
-      font-family: clock;
-      src: url(fonts/clock3-webfont.woff2) format("woff2");
-    }
-  
-    @font-face {
-      font-family: verb;
-      src: url(fonts/verbatim-bold.woff2) format("woff2");
-    }
-    html,
-    body {
-      font-size: 13px;
-      font-family: 'verb',weathertext2,Arial, Helvetica, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #AFB7C0;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 5px;
-      grid-row-gap: 5px;
-      color: #AFB7C0;
-      margin-top: 5px;
-    }
-    
-    .grid > article {
-     
-      padding: 5px;
-      font-size: 0.8em;
-      border-radius: 4px;
-      -webkit-border-radius: 4px;
-      background: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      border: 1px solid hsla(217, 15%, 17%, .5);
-        border-bottom: 15px solid hsla(217, 15%, 17%, .5);
-      height: 155px;
-      
-    }
-    
-    .grid > article2 {
-     
-      padding: 5px;
-      font-size: 0.8em;
-      border-radius: 4px;
-      -webkit-border-radius: 4px;
-      background: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      border: 1px solid hsla(217, 15%, 17%, .5);
-        border-bottom: 15px solid hsla(217, 15%, 17%, .5);
-      height: 170px;  
-    }
-    .grid2 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 5px;
-      grid-row-gap: 5px;
-      color: #afb7c0;
-      overflow: hidden;
-      margin-top: 5px;
-    }
-    .grid2 > article {
-     
-      padding: 5px;
-      font-size: 0.8em;
-      border-radius: 4px;
-      -webkit-border-radius: 4px;
-      background: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      max-height: 120px;
-      border: 1px solid hsla(217, 15%, 17%, .5);
-        border-bottom: 15px solid hsla(217, 15%, 17%, .5);
-        font-family:verb
-    }
-    
-    .gridfooter {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-column-gap: 5px;
-      grid-row-gap: 5px;
-      color: #afb7c0;
-      overflow: hidden;
-      margin-top: 5px;
-    }
-    .gridfooter > article {
-     
-      padding: 5px;
-      font-size: 0.8em;
-      border-radius: 4px;
-      -webkit-border-radius: 4px;
-      background: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-family:verb
-    }
-    
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-    .weather34darkbrowser {
-      position: relative;
-      background: 0;
-      width: 96%;
-      height: 30px;
-      margin: auto;
-      margin-top: -5px;
-      margin-left: 0px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      padding-top: 10px;
-    }
-    .weather34darkbrowser[url]:after {
-      content: attr(url);
-      color: #afb7c0;
-      font-size: 10px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      padding: 4px 15px;
-      margin: 11px 10px 0 auto;
-      border-radius: 3px;
-      background: hsla(233, 12%, 13%, 0.5);
-      height: 20px;
-      box-sizing: border-box;
-    }
-    
-    .moonphasesvg {
-      align-items: right;
-      justify-content: center;
-      display: flex;
-      max-height: 120px; 
-    }
-    .moonphasetext {
-      font-size: 0.7rem;
-      color: #AFB7C0;
-      position: absolute;
-      display: inline;
-      left: 110px;
-      top: 100px;
-      font-family:verb
-    }
-    moonphaseriseset {
-      font-size: 0.7rem;
-      font-family:verb;
-      color: #AFB7C0;
-    }
-    credit {
-      position: relative;
-      font-size: 0.7em;
-      top: 10%;
-    }
-    .actualt {
-      position: relative;
-      left: 5px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      background: rgba(74, 99, 111, 0.1);
-      padding: 5px;
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-      width: 100px;
-      height: 0.8em;
-      font-size: 0.8rem;
-      padding-top: 2px;
-      color: #afb7c0;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      top: 0;
-    }
-    .actualw {
-      position: relative;
-      left: 5px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      background: rgba(74, 99, 111, 0.1);
-      padding: 5px;
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-      width: 100px;
-      height: 0.8em;
-      font-size: 0.8rem;
-      padding-top: 2px;
-      color: #afb7c0;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      top: 0;
-    }
-    .moonphaseing {
-      width: 110px;
-      padding-bottom: 50px;
-      margin-top: -10px;
-    }
-    .weather34moonforeground {
-      fill: rgba(230, 232, 239, 0.3);
-      stroke: rgba(86, 95, 103, 0.8);
-      stroke-width: 0;
-      max-height: 100px;
-    }
-    .weather34moonbackground {
-      fill: rgba(86, 95, 103, 0.8);
-      stroke: rgba(230, 232, 239, 0.3);
-      stroke-width: 0;
-    }
-    .mbsmartlogo {
-      position: relative;
-      float: right;
-      left: 10px;
-      top: 70px;
-    }
-    small {
-      font-size: 8px;
-    }
-    large {
-      position: relative;
-      top: -5px;
-      left: 15px;
-      font-size: 12px;
-      width: 80px;
-    }
-    .date {
-      position: relative;
-      top: -85px;
-      left: 110px;
-      font-size: 11px;
-      width: 120px;
-    }
-    
-    .date2 {
-      position: relative;
-      top: -5px;
-      left: 5px;
-      font-size: 11px;
-      width: 160px;
-    }
-    .weather34moonsvgmoon {
-      fill: rgba(145, 157, 163, 0.7);
-      stroke: rgba(230, 232, 239, 0.1);
-      stroke-width: 0; overflow:hidden
-    }
-    .weather34moonsvgmoonback {
-      fill: #0D1115;
-      stroke: rgba(230, 232, 239, 0.1);
-      stroke-width: 0;overflow:hidden
-    }
-    .weather34moonphasesvg {
-      position: relative;
-      display: flex;
-      max-width: 130px;
-      overflow:hidden
-    }
-    .moonphaseposition {
-      position: relative;
-      margin-left: -5px;
-      top: 15px;
-      display: flex;
-      max-width: 100px;
-      width: 100px;
-      height: 100px;
-      overflow:hidden
-    }
-    .weather34-container-clock {
-      width: 120px;
-      height: 120px;
-      position: relative;
-      top: -50px;
-      left: -5px;
-    }
-    .weather34-large-clock {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: hsla(214, 29%, 91%, 0.1);
-      position: absolute;
-      top: 50px;
-      left: 50px;
-      box-shadow: var(--button-shadow);
-      transform: rotate(var(--rotation));
-      border: 4px solid hsla(204, 31%, 21%, 0.2);
-      -webkit-transform: rotate(var(--rotation));
-      -moz-transform: rotate(var(--rotation));
-      -ms-transform: rotate(var(--rotation));
-      -o-transform: rotate(var(--rotation));
-    }
-    .weather34-small-clock {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.4);
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      box-shadow: var(--button-shadow);
-      background-image: linear-gradient(hsla(0, 0%, 33%, 0.3) 1px, transparent 1px),
-        linear-gradient(to right, hsla(0, 0%, 33%, 0.3) 1px, transparent 1px);
-      background-size: 5px 5px;
-    }
-    .circle {
-      background-color: var(--blue);
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      position: absolute;
-      left: 45px;
-      top: 40px;
-      z-index: 1;
-    }
-    .hour-indicator {
-      width: 0;
-      height: 25px;
-      background-color: #b7c5d3;
-      border-radius: 5px;
-      position: absolute;
-    }
-    .twelve {
-      top: 0;
-      left: 60px;
-    }
-    .twelve::after {
-      content: "12";
-      font-size: 12px;
-      color: hsla(214, 29%, 91%, 0.8);
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-    }
-    .three {
-      right: 11px;
-      top: 53px;
-    }
-    .three::after {
-      content: "3";
-      font-size: 12px;
-      color: hsla(214, 29%, 91%, 0.8);
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-    }
-    .weather34brand {
-      left: 40px;
-      bottom: 15px;
-    }
-    .weather34brand::after {
-      content: "weather34";
-      font-size: 9px;
-      color: hsla(214, 29%, 91%, 0.8);
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-    }
-    .six {
-      left: 62px;
-      bottom: -10px;
-    }
-    .six::after {
-      content: "6";
-      font-size: 12px;
-      color: hsla(214, 29%, 91%, 0.8);
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-    }
-    .nine {
-      left: 5px;
-      top: 53px;
-      height: 3px;
-      width: 0;
-    }
-    .nine::after {
-      content: "9";
-      font-size: 12px;
-      color: hsla(214, 29%, 91%, 0.8);
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-    }
-    .hand {
-      --rotation: 0;
-      height: 50px;
-      width: 5px;
-      border-radius: 2px;
-      position: absolute;
-      left: 63px;
-      top: 10px;
-      transform-origin: bottom;
-      transform: rotate(calc(var(--rotation) * 1deg));
-    }
-    .hour {
-      background-color: #888989;
-      height: 35px;
-      top: 25px;
-    }
-    .minute {
-      background-color: #ec5113;
-      width: 4px;
-    }
-    .second {
-      background-color: var(--blue);
-      width: 1px;
-    }
-    .clock34 {
-      box-shadow: var(--button-shadow);
-      background-color: #1d2124;
-      display: flex;
-      font-family: clock;
-      border-radius: 3px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      left: 0px;
-      text-align: center;
-      position: relative;
-      color: hsla(214, 29%, 91%, 0.6);
-      font-size: 1rem;
-      text-transform: none;
-      padding: 4px;
-      padding-top: 6px;
-      top: -147px;
-      font-family: clock;
-      z-index: 20;
-      width: 5.5em;
-      background-image: linear-gradient(hsla(0, 0%, 33%, 0.1) 1px, transparent 1px),
-        linear-gradient(to right, hsla(0, 0%, 33%, 0.1) 1px, transparent 1px);
-      background-size: 5px 5px;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .gridcal{display:grid;grid-template-columns:repeat(7,minmax(14px,1fr));
-    grid-gap:.75em;color:hsla(214,29%,91%,.6);}
-  .day{background:hsla(214,29%,91%,.1);display:flex;justify-content:center;align-items:center;border-radius:2px;color:#fff;
-  -webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family: 'verb',Arial, Helvetica, sans-serif;}
-  .wrapper{width:calc(240px + 1.12em);margin:auto;margin-top:0px;margin-left:0;font-family: 'verb',Arial, Helvetica, sans-serif;overflow:hidden;padding:7px;padding-right:10px;
-  background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);background-size:2px 2px;border-radius:5px}
-  .days{display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;}
+    .grida{display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:3px;grid-row-gap:3px;color:#afb7c0;margin-top:5px;font-family:verb}
+  .grida>article{padding:5px;font-size:9px;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border:1px solid hsla(217,15%,17%,.5);border-bottom:10px solid hsla(217,15%,17%,.5);height:160px}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);grid-column-gap:3px;grid-row-gap:3px;color:#afb7c0;overflow:hidden;margin-top:5px}
+  .grid2>article{padding:5px;font-size:.8em;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:160px;border:1px solid hsla(217,15%,17%,.5);border-bottom:10px solid hsla(217,15%,17%,.5);font-family:verb}
+  .grid2>article2{padding:5px;font-size:8px;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:15px;border:1px solid hsla(217,15%,17%,.5);border-bottom:1px solid hsla(217,15%,17%,.5);font-family:verb;width:max-content}
+  a{color:var(--blue);text-decoration:none}
+  .weather34darkbrowser{position:relative;background:0;width:96%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;font-family:verb}
+  .weather34darkbrowser[url]:after{content:attr(url);color:#afb7c0;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:hsla(233,12%,13%,.5);height:20px;box-sizing:border-box}
+  credit{position:relative;font-size:.7em;top:10%}
+  .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+  .actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+  .mbsmartlogo{position:relative;float:right;left:10px;top:70px}
+  small{font-size:8px}
+  large{position:relative;top:-5px;left:15px;font-size:12px;width:80px}
+  .date{position:relative;top:-85px;left:110px;font-size:11px;width:120px}
+  .date2{position:relative;top:-5px;left:5px;font-size:11px;width:160px}
+  .weather34-container-clock{width:120px;height:120px;position:relative;top:-45px;left:-45px}
+  .weather34-large-clock{width:130px;height:130px;border-radius:50%;background:hsla(214,29%,91%,.1);position:absolute;top:50px;left:50px;box-shadow:var(--button-shadow);transform:rotate(var(--rotation));border:4px solid hsla(204,31%,21%,.2);-webkit-transform:rotate(var(--rotation));-moz-transform:rotate(var(--rotation));-ms-transform:rotate(var(--rotation));-o-transform:rotate(var(--rotation))}
+  .weather34-small-clock{width:100px;height:100px;border-radius:50%;background-color:rgba(0,0,0,.4);position:absolute;top:15px;left:15px;box-shadow:var(--button-shadow);background-image:linear-gradient(hsla(0,0%,33%,.3) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.3) 1px,transparent 1px);background-size:5px 5px}
+  .circle{background-color:var(--blue);width:10px;height:10px;border-radius:50%;position:absolute;left:45px;top:40px;z-index:1}
+  .hour-indicator{width:0;height:25px;background-color:#b7c5d3;border-radius:5px;position:absolute}
+  .twelve{top:0;left:60px}
+  .twelve::after{content:"12";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+  .three{right:11px;top:53px}
+  .three::after{content:"3";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+  .weather34brand{left:40px;bottom:15px}
+  .weather34brand::after{content:"weather34";font-size:9px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+  .six{left:62px;bottom:-10px}
+  .six::after{content:"6";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+  .nine{left:5px;top:53px;height:3px;width:0}
+  .nine::after{content:"9";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+  .hand{--rotation:0;height:50px;width:5px;border-radius:2px;position:absolute;left:63px;top:10px;transform-origin:bottom;transform:rotate(calc(var(--rotation) * 1deg))}
+  .hour{background-color:#888989;height:35px;top:25px}
+  .minute{background-color:#ec5113;width:4px}
+  .second{background-color:var(--blue);width:1px}
+  .clock34{box-shadow:var(--button-shadow);background-color:#1d2124;
+  display:flex;font-family:clock;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;left:0;
+  text-align:center;position:relative;color:#99B1C9;font-size:12px;text-transform:none;padding:4px;padding-top:6px;top:-147px;
+  z-index:20;width:5.5em;background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);
+  background-size:5px 5px;justify-content:center;align-items:center}
+  .gridcal{display:grid;grid-template-columns:repeat(7,minmax(14px,1fr));grid-gap:.75em;color:hsla(214,29%,91%,.6)}
+  .day{background:hsla(214,29%,91%,.1);display:flex;justify-content:center;align-items:center;border-radius:2px;color:#fff;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family:verb,Arial,Helvetica,sans-serif}
+  .wrapper{width:calc(250px + 1.12em);margin:auto;margin-top:5px;margin-left:20px;font-family:verb,Arial,Helvetica,sans-serif;overflow:hidden;padding:7px;padding-right:10px;background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);background-size:2px 2px;border-radius:5px}
+  .days{display:none;display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;background:0}
   .curr_date{color:hsla(214,29%,91%,.8)}
-  .weather34weekdays{position:relative;text-transform:uppercase;font-size:.8rem;display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;list-style:none;left:-36px;top:-10px;margin-bottom:-5px}
-  .weather34weekdays todayorange{color:#fff;background:var(--orange);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
+  .weather34weekdays{position:relative;text-transform:uppercase;font-size:.8rem;display:grid;grid-template-columns:repeat(7,35px);grid-gap:.25em;list-style:none;left:6px;top:-70px;margin-bottom:-145px}
+  .weather34weekdays todayorange{color:#fff;background:var(--green);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
   grey{color:#ccc}
-    blue {
-      color: #01a4b4;
-    }
-    orange {
-      color: #d87040;
-    }
-    orange1 {
-      position: relative;
-      color: #009bb4;
-      margin: 0 auto;
-      text-align: center;
-      margin-left: 5%;
-      font-size: 1.1rem;
-    }
-    green {
-      color: #afb7c0;
-    }
-    red {
-      color: #f37867;
-    }
-    red6 {
-      color: #d65b4a;
-    }
-    value {
-      color: #fff;
-    }
-    yellow {
-      color: #cc0;
-    }
-    purple {
-      color: #916392;
-    }
-    .actualt {
-      position: relative;
-      left: 5px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      background: rgba(74, 99, 111, 0);
-      padding: 5px;
-      font-family: verb,Arial, Helvetica, sans-serif;
-      width: 190px;
-      height: 0.8em;
-      font-size: 0.8rem;
-      padding-top: 2px;
-      color: #afb7c0;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      top: 0;
-    }
-    .actualups {
-      position: relative;
-      left: 35px;
-      background: rgba(74, 99, 111, 0);
-      padding: 5px;
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-      width: 140px;
-      height: 0.8em;
-      font-size: 0.8rem;
-      align-items: center;
-      justify-content: center;
-      top: -30px;
-      margin-bottom: -10px;
-    }
-    actualt34 {
-      display: none;
-    }
-    .actualtlocal {
-      position: relative;
-      left: 145px;
-      background: rgba(74, 99, 111, 0);
-      padding: 5px;
-      font-family: 'verb',Arial, Helvetica, sans-serif;
-      width: 190px;
-      height: 0.8em;
-      font-size: 0.8rem;
-      padding-top: 2px;
-      color: #afb7c0;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      top: 0px;
-    }
-    
-    .weather34logosvg {
-      position: absolute;
-      display: flex;
-      right: 40px;
-      margin-top: -60px;
-      width: 4rem;
-    }
-    .weather34-image {
-      position: absolute;
-      display: flex;
-      right: 70px;
-      margin-top: 20px;
-      width: 10rem;
-      opacity: 0.9;
-    }
-    .info2a {
-      position: absolute;
-      margin-top: 40px;
-      font-size: 0.8em;
-      margin-left:5px;
-      width: 200px;
-    }
-    
-    .moonriset{
-      position: absolute;  
-      font-size: 0.95em;
-      width: 200px;
-      margin-top: 10px;
-      margin-left:0px
-    }
+  blue{color:#01a4b4}
+  orange{color:#d87040}
+  orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}
+  green{color:#afb7c0}
+  red{color:#f37867}
+  red6{color:#d65b4a}
+  value{color:#fff}
+  yellow{color:#df9741}
+  purple{color:#916392}
+  .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+  .actualups{position:relative;left:35px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:140px;height:.8em;font-size:.8rem;align-items:center;justify-content:center;top:-30px;margin-bottom:-10px}
+  actualt34{display:none}
+  .actualtlocal{position:relative;left:145px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+  .weather34logosvg{position:absolute;display:flex;right:40px;margin-top:-60px;width:4rem}
+  .weather34-image{position:absolute;display:flex;right:70px;margin-top:20px;width:10rem;opacity:.9}
+  .info2a{position:absolute;margin-top:40px;font-size:.8em;margin-left:5px;width:200px}
+  li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
     
     
-    @media screen and (max-width: 720px) {
-    
-      .moonriset{
-      margin-top: 40px;
-      margin-left:-45px
-    }
-    
-    }
-    .moonphrase{position:absolute;z-index:999;text-align:center;margin-left:30px;margin-top:50px;width:max-content;color:#99B1C9;font-family:verb;}
     </style>
-  <script src="js/jquery.js"></script>
-  
-  <div class="weather34darkbrowser" url="Moon Phase Information"></div>
+  <div class="weather34darkbrowser" url="Moon Phase and Relative Information"></div>
+  <main class="grida">
     
-  <main class="grid">
-    <article>  
-  <?php echo $info;?> Moon Phase Data<br><br>  
-
-  <!---simple weather34 svg moonphase -->
-  <div class="moonphrase"><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></div>
-  <div class="moonphaseposition">
-  <div class="weather34moonphasesvg">
-  <?php // lets rotate for those in the souther hemisphere 
-if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);margin-left:1px;margin-bottom:9px;}
-</style>';}
-?>
-  <svg id="weather34moonsvg"  viewBox="0 0 200 200"  version="June 2020"></svg>
-  <script type="text/javascript" charset="UTF-8"> 
-  //moonphase june 2020 based on original by http://www.ben-daglish.net/moon.shtml  
-  Date.prototype.getJulian = function() {
-      return Math.floor((this / 86400000) - (this.getTimezoneOffset()/1440) + 2440587.5);
-  }
-  function moon_day(today) {    
-      var thisJD = today.getJulian();
-      var year = today.getFullYear();
-      var degToRad = 3.14159265 / 180;
-      var K0, T, T2, T3, J0, F0, M0, M1, B1, oldJ;
-      K0 = Math.floor((year - 1900) * 12.3685);
-      T = (year - 1899.5) / 100;
-      T2 = T * T;
-      T3 = T * T * T;
-      J0 = 2415020 + 29 * K0;
-      F0 = 0.0001178 * T2 - 0.000000155 * T3 + (0.75933 + 0.53058868 * K0) - (0.000837 * T + 0.000335 * T2);
-      M0 = 360 * (GetFrac(K0 * 0.08084821133)) + 359.2242 - 0.0000333 * T2 - 0.00000347 * T3;
-      M1 = 360 * (GetFrac(K0 * 0.07171366128)) + 306.0253 + 0.0107306 * T2 + 0.00001236 * T3;
-      B1 = 360 * (GetFrac(K0 * 0.08519585128)) + 21.2964 - (0.0016528 * T2) - (0.00000239 * T3);
-      var phase = 0;
-      var jday = 0;
-      while (jday < thisJD) {
-          var F = F0 + 1.530588 * phase;
-          var M5 = (M0 + phase * 29.10535608) * degToRad;
-          var M6 = (M1 + phase * 385.81691806) * degToRad;
-          var B6 = (B1 + phase * 390.67050646) * degToRad;
-          F -= 0.4068 * Math.sin(M6) + (0.1734 - 0.000393 * T) * Math.sin(M5);
-          F += 0.0161 * Math.sin(2 * M6) + 0.0104 * Math.sin(2 * B6);
-          F -= 0.0074 * Math.sin(M5 - M6) - 0.0051 * Math.sin(M5 + M6);
-          F += 0.0021 * Math.sin(2 * M5) + 0.0010 * Math.sin(2 * B6 - M6);
-          F += 0.5 / 1440;
-          oldJ = jday;
-           //jday = J0 + 28 * phase + Math.floor(F);
-           jday = J0 + 28.3 * phase + Math.floor(F);
-          phase++;
-      }
-      // 29.53059 days per lunar month
-      return (thisJD - oldJ) / 29.53059;
-      function GetFrac(fr) {	return (fr - Math.floor(fr));}
-  }
-  function phase_junk(e){var t,n,a=[];e<=.25?(a=[1,0],t=20-20*e*4):e<=.5?(a=[0,0],t=20*(e-.25)*4):e<=.75?(a=[1,1],
-    t=20-20*(e-.5)*4):e<=1?(a=[0,1],t=20*(e-.75)*4):exit;
-  var o=document.getElementById("weather34moonsvg");
-  if(0!=o&&null!=o)
-  if(document.createElementNS&&document.createElementNS("http://www.w3.org/2000/svg","svg")
-  .createSVGRect){
-  var r="m100,0 ";
-  r=(r=r+"a"+t+",20 0 1,"+a[0]+" 0,150 ")+"a20,20 0 1,"+a[1]+" 0,-150";
-  var i="http://www.w3.org/2000/svg",
-  s=document.createElementNS(i,"path"),
-  d=document.createElementNS(i,"path");
-  d.setAttribute("class","weather34moonsvgmoonback"),
-  d.setAttribute("d","m100,0 a20,20 0 1,1 0,150 a20,20 0 1,1 0,-150"),
-  s.setAttribute("class","weather34moonsvgmoon"),
-  s.setAttribute("d",r),
-  o.setAttribute("height",.12*window.screen.availHeight),
-  o.setAttribute("width",.12*window.screen.availWidth),
-  o.appendChild(d),
-  o.appendChild(s)}
-  else!function(){
-  if(void 0===supportsVml.supported){
-  var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
-  var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
-    //return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
-    return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
-    phase_junk(moon_day(new Date)); 
-  </script>
-   </div>
-  </div>
+  <article>
+  <?php echo $info;?> Moonphase | Sun Position <br>
+  <div style="position:relative;margin-left:175px;margin-top:70px"> <div id="sunpos"></div></div>
+  <br>
+  </article>
   
-  <div class=moonphasetext>  
-  <?php 
-  //function phase(){return $this->phase;}
-  //function illumination(){return $this->illum*100;} 
-  //function age(){return $this->age;} 
-  //function distance(){return $this->dist;} 
-  //function diameter(){return $this->angdia;} 
-  //function sundistance(){return $this->sundist;} 
-  //function sundiameter(){return $this->sunangdia;} 
-  //function new_moon(){return $this->get_phase(0);} 
-  //function first_quarter(){return $this->get_phase(1);} 
-  //function full_moon(){return $this->get_phase(2);} 
-  //function last_quarter(){return $this->get_phase(3);} 
-  //function next_new_moon(){return $this->get_phase(4);} 
-  //function next_first_quarter(){return $this->get_phase(5);} 
-  //function next_full_moon(){return $this->get_phase(6);} 
-  //function next_last_quarter(){return $this->get_phase(7);} 
-  ?>
+  <article>
+  <moonphaseriseset>
+      <?php echo $info;?> <blue>Moon Information</blue><br>    
+    <?php echo $info;?>
+    Next Full Moon:<blue> &nbsp;<?php  // homeweatherstation new/fullmoon info output 18th Aug
+    $now1 =time();$moon1 = new MoonPhase();
+    echo "";if ($now1 < $moon1->full_moon()){echo date('l jS M', $moon1->full_moon() );}else echo date('l jS M', $moon1->next_full_moon() );
+    ?></blue><br>
+    <?php echo $info;?>  Next New Moon:<blue> <?php $moon=new MoonPhase();$nextnewmoon=date('l jS M',$moon->next_new_moon());echo $nextnewmoon;?>
+    </blue>
+    <br><br />
   
   <?php echo $info;?> Luminance:<blue><?php $moon=new MoonPhase();$lum=$moon->illumination();echo number_format($lum,1);?></blue>%<br>
-  <?php echo $info;?> Distance:<blue><?php 
-  if ($distanceunit=='km'){$moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance,0);echo "</blue>km";}
-  if ($distanceunit=='mi'){$moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance*0.621371,0);echo "</blue> miles";}
-  ?><br>
-  <?php echo $info;?> Cycle:<blue><?php $moon = new MoonPhase();$moonage =round($moon->age(),2);echo round($moonage,2)?></blue> Days
-  
-    <div class="moonriset">
-    <?php echo $moonrisehalf?> Moon Rise: <?php echo $weather['moonrise']," ";?>
-    <br>
-    <?php echo $moonsethalf?> Moon Set:  &nbsp;<?php echo $weather['moonset']," ";?>
+  <?php echo $info;?> Distance:<blue><?php $moon=new MoonPhase();$distance=$moon->distance();echo number_format($distance,0);?></blue> km<br>
+  <?php echo $info;?> Cycle:<blue><?php $moon = new MoonPhase();$moonage =round($moon->age(),2);echo round($moonage,2)?></blue> Days<br>
   <br>
-  </article>  
-    <article> 
-   <moonphaseriseset>
-    <?php echo $info;?> <blue>Moon </blue>| <blue>Lunar Event Information</blue><br>
-    
-  <?php echo $info;?>
-  Next Full Moon:<blue> &nbsp;<?php  // homeweatherstation new/fullmoon info output 18th Aug
-  $now1 =time();$moon1 = new MoonPhase();
-  echo "";if ($now1 < $moon1->full_moon()){echo date('l jS-M-Y', $moon1->full_moon() );}
-  else echo date('l jS-M-Y', $moon1->next_full_moon() );
-  ?></blue><br>
-  <?php echo $info;?>  Next New Moon:<blue> <?php $moon=new MoonPhase();$nextnewmoon=date('l jS-M-Y',$moon->next_new_moon());echo $nextnewmoon;?>
-  </blue>
-  <br><br />
-             <?php 
+  <?php echo $moonrisehalf?> Moon Rise: <?php echo $weather['moonrise']," ";?>
+  <br>
+  <?php echo $moonsethalf?> Moon Set:  <?php echo $weather['moonset']," ";?>
+  
+  
+  </article>
+  
+  <article>
+  
+  <?php echo $info;?> <blue>Lunar Event Information</blue>
+  <br>
+  <?php 
   $lunayear=date('Y');		
    if($lunayear==2020 || $lunayear==2021 || $lunayear==2022 ){  
     echo $info." Total Lunar <blue>Eclipse</blue> 26 May 2021<br>";
@@ -912,92 +221,16 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
     echo $info." Partial Lunar <blue>Eclipse </blue> 18-19 Nov 2021<br>	";
     echo $info." Total <blue>Eclipse </blue> 4 Dec 2021<br>"; 
     }	?>	
-     </article>  
   
-     <article>
-     <?php echo $info;?> Next Lunar Event<br><br> 
+  
     <?php if ($lunar_nextevent)  {echo $lunarinfo3 ,$lunar_nextevent ;} ?>  
-    </article>  
-  
-    <article2>  
-    <div class=actualtlocal>Local Time</div>   
-      <div class="weather34-container-clock">
-          <div class="weather34-large-clock">
-              <div class="hour-indicator twelve"></div>
-              <div class="hour-indicator three"></div>
-              <div class="hour-indicator six"></div>
-              <div class="hour-indicator weather34brand"></div>
-              <div class="hour-indicator nine"></div>
-              <div class="weather34-small-clock">
-              <div class="circle"></div>
-              </div>
-              <div class="hand hour" id="hour"></div>
-              <div class="hand minute" id="minute"></div>
-              <div class="hand second" id="second"></div>
-          </div>
-      </div>
-      <script>
-  // Based on Dribbble design adapted by weather34 with time based on your settings 
-  // https://dribbble.com/shots/8200836-Skeuomorph-Clock-App
-  var secondHand = document.getElementById("second");
-  var minuteHand = document.getElementById("minute");
-  var hourHand = document.getElementById("hour");
-  var offset=<?php echo $UTC;?>;
-  setInterval(setClock, 1000);
-  function setClock() {  
-    var e=new Date(new Date().getTime()+offset);
-    var c=e.getHours();
-    var a=e.getMinutes();
-    var g=e.getSeconds();
-    var f=e.getFullYear();
-    var h=e.getMonth();
-    var b=e.getDate();
-    var b=e.getDate();
-    var secondsRatio = e.getSeconds() / 60;
-    var minutesRatio = (secondsRatio + e.getMinutes()) / 60;
-    var hoursRatio = (minutesRatio + e.getHours()) / 12;
-      setRotation(secondHand, secondsRatio);
-      setRotation(minuteHand, minutesRatio);
-      setRotation(hourHand, hoursRatio);}
-  function setRotation(element, rotationRatio) {
-      element.style.setProperty('--rotation', rotationRatio * 360)
-  }
-  setClock();
-    </script>
+  </article>
+  </main>
   
   
   
-  <script type="text/javascript">
-  var clockID;var yourTimeZoneFrom='<?php echo $UTC?>';var d=new Date();
-  var weekdays=[];
-  var months=[];
-  //calculte the weather34 date-time UTC
-  var tzDifference=yourTimeZoneFrom*60+d.getTimezoneOffset();
-  var offset=tzDifference*60*1000;
-  function UpdateClock(){
-  var e=new Date(new Date().getTime()+offset);
-  var a=e.getMinutes();
-  var g=e.getSeconds();
-  var f=e.getFullYear();
-  var h=e.getMonth();
-  var b=e.getDate();
-  <?php if($clockformat=='12') {echo "if(e.getHours()<12){amorpm=' am'}else{amorpm=' pm'}";} else {echo "amorpm='';";}?>
-  // add the weather34 date prefix
-  var suffix = "";switch(b) {case 1: case 21: case 31: suffix = 'st'; break;case 2: case 22: suffix = 'nd'; break;case 3: case 23: suffix = 'rd'; break;default: suffix = 'th';}
-  var i=weekdays[e.getDay()];if(a<10){a="0"+a}if(g<10){g="0"+g}if(c<10){c="0"+c}
-  //weather34 option to use 24/12 hour format
-  var c=e.getHours()
-  <?php if ($clockformat == '12') { echo '% 12 || 12';} else { echo '% 24 || 00';}?>;
-  document.getElementById("weather34clock2").innerHTML="<div class='clock34'>"+c+":"+a+":"+g+
-  "<?php if($clockformat=='12') {echo "&nbsp;".date('a')."";} else {echo "&nbsp;";}?>"}
-  function StartClock(){clockID=setInterval(UpdateClock,500)}
-  function KillClock(){clearTimeout(clockID)}window.onload=function(){StartClock()}(jQuery);</script>
-  </div></div>
-  <div id="weather34clock2"></div>
-  
-  </article2> 
-  
-    <article2>     
+  <main class="grid2">
+    <article>   <div style="font-size:9px;">  
     <script>$( document ).ready( function() {
     $('.day').remove();
     var start = new Date(new Date().getTime()+offset);
@@ -1006,7 +239,7 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
     displayDays(start, days);
     let currDay = start.getDate();
     console.log(currDay);
-    $('.day:nth-of-type('+currDay+')').css('background', ' rgb(236, 81, 19)').css('box-shadow','none'); 
+    $('.day:nth-of-type('+currDay+')').css('background', ' var(--green)').css('box-shadow','none'); 
    
   });
   var d = new Date(new Date().getTime()+offset);
@@ -1087,9 +320,9 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
     $('h1').text(currMonth(date) + " " + date.getFullYear());
   }
   </script>
-    <div class="curr_date"></div>
+    <div class="curr_date"></div></div>
       <div class="wrapper">
-      <ul class="weather34weekdays">
+      <ul class="weather34weekdays" >
           <?php $datecolor=date('D');?>
            <li><?php if ($datecolor=='Sun'){echo '<todayorange>Sun</todayorange>';}else echo 'Sun';?></li>
            <li><?php if ($datecolor=='Mon'){echo '<todayorange>Mon</todayorange>';}else echo 'Mon';?></li>
@@ -1099,8 +332,7 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
            <li>&nbsp;<?php if ($datecolor=='Fri'){echo '<todayorange>Fri</todayorange>';}else echo 'Fri';?></li>
            <li><?php if ($datecolor=='Sat'){echo '<todayorange>Sat</todayorange>';}else echo 'Sat';?></li>
          </ul>  
-      <div class="gridcal">  
-          
+      <div class="gridcal">          
         <div class="days">
           <div class="day day_1">1</div>
           <div class="day">2</div>
@@ -1116,7 +348,7 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
           <div class="day">12</div>
           <div class="day">13</div>
           <div class="day">14</div>
-          <div class="day">15</div>
+          <div class="day">15</div> 
           <div class="day">16</div>
           <div class="day">17</div>
           <div class="day">18</div>
@@ -1136,17 +368,110 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
       </div>
    
     
-    </article2>
-    <article2>  
-  
-    <?php if ($meteor_nextevent)  {echo $meteorinfo3 ,"  ",$meteor_nextevent ;} ?>    
+    </article>
     
-    <div class="info2a">
+  
+  
+  <article>  <div style="font-size:9px;"><?php echo $info;?> Local Time</div>
+      <div class="weather34-container-clock">
+          <div class="weather34-large-clock">
+              <div class="hour-indicator twelve"></div>
+              <div class="hour-indicator three"></div>
+              <div class="hour-indicator six"></div>
+              <div class="hour-indicator weather34brand"></div>
+              <div class="hour-indicator nine"></div>
+              <div class="weather34-small-clock">
+              <div class="circle"></div>
+              </div>
+              <div class="hand hour" id="hour"></div>
+              <div class="hand minute" id="minute"></div>
+              <div class="hand second" id="second"></div>
+          </div>
+      </div>
+      <script>
+  // Based on Dribbble design adapted by weather34 with time based on your settings 
+  // https://dribbble.com/shots/8200836-Skeuomorph-Clock-App
+  var secondHand = document.getElementById("second");
+  var minuteHand = document.getElementById("minute");
+  var hourHand = document.getElementById("hour");
+  var offset=<?php echo $UTC;?>;
+  setInterval(setClock, 1000);
+  function setClock() {  
+    var e=new Date(new Date().getTime()+offset);
+    var c=e.getHours();
+    var a=e.getMinutes();
+    var g=e.getSeconds();
+    var f=e.getFullYear();
+    var h=e.getMonth();
+    var b=e.getDate();
+    var b=e.getDate();
+    var secondsRatio = e.getSeconds() / 60;
+    var minutesRatio = (secondsRatio + e.getMinutes()) / 60;
+    var hoursRatio = (minutesRatio + e.getHours()) / 12;
+      setRotation(secondHand, secondsRatio);
+      setRotation(minuteHand, minutesRatio);
+      setRotation(hourHand, hoursRatio);}
+  function setRotation(element, rotationRatio) {
+      element.style.setProperty('--rotation', rotationRatio * 360) 
+  }
+  setClock();
+    </script>
+    
+  <div style="font-family:verb;position:absolute;width:140px;margin-top:-75px;font-size:10px;margin-left:155px;text-align:center;background:#242A32;border-radius:3px;padding:3px;">
+  <?php 
+  if ($txt=='Sunrise'){echo $sunrisesicon; echo " <yellow>Sun</yellow> comes up in <br>";}
+  if ($txt=='Sunset'){echo $sunsetsicon; echo " <orange>Sun</orange> goes down in <br>";}?>
+  <?php echo $hrs." hrs : ". $min." min" ?>
+  <?php if ($txt=='Sunrise'){echo " (<yellow>".$nextrise."</yellow>)";}
+  if ($txt=='Sunset'){echo " (<orange>".$nextset."</orange>)";}?> 
+  </div>
+  
+  <div style="font-family:verb;position:absolute;width:140px;margin-top:-35px;font-size:10px;margin-left:155px;text-align:center;background:#242A32;border-radius:3px;padding:3px;">
+  Timezone <br><blue><?php $TZ	=str_replace('/', ' ', $TZ);$TZ	=str_replace('_', ' ', $TZ);echo $TZ;?> </blue>
+  </div>
+  
+  <script type="text/javascript">
+  var clockID;var yourTimeZoneFrom='<?php echo $UTC?>';var d=new Date();
+  var weekdays=[];
+  var months=[];
+  //calculte the weather34 date-time UTC
+  var tzDifference=yourTimeZoneFrom*60+d.getTimezoneOffset();
+  var offset=tzDifference*60*1000;
+  function UpdateClock(){
+  var e=new Date(new Date().getTime()+offset);
+  var a=e.getMinutes();
+  var g=e.getSeconds();
+  var f=e.getFullYear();
+  var h=e.getMonth();
+  var b=e.getDate();
+  <?php if($clockformat=='12') {echo "if(e.getHours()<12){amorpm=' am'}else{amorpm=' pm'}";} else {echo "amorpm='';";}?>
+  // add the weather34 date prefix
+  var suffix = "";switch(b) {case 1: case 21: case 31: suffix = 'st'; break;case 2: case 22: suffix = 'nd'; break;case 3: case 23: suffix = 'rd'; break;default: suffix = 'th';}
+  var i=weekdays[e.getDay()];if(a<10){a="0"+a}if(g<10){g="0"+g}if(c<10){c="0"+c}
+  //weather34 option to use 24/12 hour format
+  var c=e.getHours()
+  <?php if ($clockformat == '12') { echo '% 12 || 12';} else { echo '% 24 || 00';}?>;
+  document.getElementById("weather34clock2").innerHTML="<div class='clock34'>"+c+":"+a+":"+g+
+  "<?php if($clockformat=='12') {echo "&nbsp;".date('a')."";} else {echo "&nbsp;";}?>"}
+  function StartClock(){clockID=setInterval(UpdateClock,500)}
+  function KillClock(){clearTimeout(clockID)}window.onload=function(){StartClock()}(jQuery);</script>
+  </div></div>
+  <div style="margin-top:15px;margin-left:200px;" id="weather34clock2"></div>
+  
+  </article> 
+  
+  <article2>  
     CSS/SVG/PHP scripts were developed by 
     <a href="https://weather34.com/homeweatherstation" target="_blank" title="https://weather34.com" alt="https://weather34.com">weather34.com</a> © 2015-<?php echo date('Y');?>
-    <?php echo $weather34version ?>
-    </div>
+    <?php echo $weather34version ?> 
     </article2>
+  
+  
   </main>
+  
+  
+  
+  
+  <script src="js/jquery.js"></script>
   
   
