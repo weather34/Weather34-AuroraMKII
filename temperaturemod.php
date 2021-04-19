@@ -47,8 +47,8 @@ echo "&deg; ";echo $maxclock." ".$weather["tempdmintime"];
 
  <realfeel>
 <?php //windchill if below freezing or heat index above 32c
-if ($weather['windchill']<=2){echo "Windchill <deepblue>" .$weather['windchill']."</deepblue>&deg;";}
-else if ($weather['heat_index']>=32){echo "Heat Index <red>" .$weather['heat_index']."</red>&deg;";}
+if (anytoC($weather['windchill'])<=2){echo "Windchill <deepblue>" .$weather['windchill']."</deepblue>&deg;";}
+else if (anytoC($weather['heat_index'])>=32){echo "Heat Index <red>" .$weather['heat_index']."</red>&deg;";}
 else echo "Actual Temp";?>
 </realfeel>
 
