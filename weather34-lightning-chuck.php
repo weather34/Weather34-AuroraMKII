@@ -1,5 +1,12 @@
 <?php 
-//weather34 optional weatherflow addition lightning when used with an extra meteobridge 
+  #######################################################
+	#	CREATED FOR WEATHER34 Aurora MKII TEMPLATE 		     
+	# https://weather34.com/homeweatherstation/index.html 		
+	# 	Release: October 2019 Revised April 2021		
+	# 	                           
+	#   https://www.weather34.com 	    
+	######################################################
+
 include('livedata.php');error_reporting(0);
 $strike='<svg width="10pt" height="10pt"  fill="#d87040" viewBox="0 0 1024 1024" version="weather34 strike icon">
 <path d="M718.933333 106.666667L469.333333 362.666667l320 106.666666-334.933333 313.6 108.8 59.733334L256 917.333333l57.6-315.733333 61.866667 
@@ -134,17 +141,15 @@ else if ($weather["lightningyear"]>=0 ){echo '#d87040';}
 ?>;">
 </div></div></div>
 
-
-
 <?php //weather34 Aurora MKII lightning time ago
 //if strike more than 23 hours ago
 if ($lightningseconds >=82800){?>
-<div class=mooninfo2 ><a href='console/weather34-lightning-charts.php' data-lity data-title="Indoor Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=mooninfo2 ><a href='weather34-lightning-charts.php' data-lity data-title="Indoor Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
 <?php ;}?>
 <?php 
 //if strike less than 23 hours ago
 if ($lightningseconds <82800){?>
-<a href="console/weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">
+<a href="weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">
 <?php  //weatherflow weather34 air lightning output
 if ($lightningseconds <120 ){ echo "<div class='thelaststrike'>Last Strike<br><orange>Just Now</orange>";}
 else if ($lightningseconds >=61 ){echo "<div class='thelaststrike'>Last Strike<br>".convert($lightningseconds);}
