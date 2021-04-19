@@ -1,7 +1,13 @@
-<?php include('livedata.php');?>
+<?php 
+  #######################################################
+	#	CREATED FOR WEATHER34 Aurora MKII TEMPLATE 		     
+	# https://weather34.com/homeweatherstation/index.html 		
+	# 	Release: September 2020 Revised April 2021		
+	# 	                           
+	#   https://www.weather34.com 	    
+	######################################################
+include('livedata.php');?>
 <div class="modulecaption2">Temperature</div>
-
-
 <div class="maxwindgauge">
 <?php  //Max
 echo $maxtodayicon." ";
@@ -38,7 +44,14 @@ echo "&deg; ";echo $maxclock." ".$weather["tempdmintime"];
 
 <div class="button button-dial">               
  <div class="button-dial-top"></div>
- <realfeel>Actual Temp</realfeel>
+
+ <realfeel>
+<?php //windchill if below freezing or heat index above 32c
+if ($weather['windchill']<=2){echo "Windchill <deepblue>" .$weather['windchill']."</deepblue>&deg;";}
+else if ($weather['heat_index']>=32){echo "Heat Index <red>" .$weather['heat_index']."</red>&deg;";}
+else echo "Actual Temp";?>
+</realfeel>
+
 <div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">     
 <?php // temperature display
 if(anytoC($weather["temp"])<-10){ echo "<icon-minus10>".$weather["temp"]."&deg;</icon-minus10 >";}
@@ -81,84 +94,7 @@ echo "</tempman>";?>
 </div></div></div></div></div>
 
 
-<?php 
-//windchill less than 0c
-if ($meteobridgeapi[24]<0){;?>
-<div class="windgauge">
-<div class="second24hourguage">
-  <?php echo "<solarheading style='margin-left:-45px;width:70px'>Windchill</solarheading>";?>
-<div class="button button-dialrain">               
- <div class="button-dial-toprain"></div>
-<div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
-if ($meteobridgeapi[24]>=2 ){echo 'var(--blue)';}
-else if ($meteobridgeapi[24]>=0 ){echo 'var(--blue)';}
-else if ($meteobridgeapi[24]>=-10 ){echo 'var(--temp-5-10)';}
-else if ($meteobridgeapi[24]>=-50 ){echo 'var(--deepcold)';}
-echo "'>";
-echo "<uvopacity>".number_format($weather["windchill"],1)."&deg;</uvopacity></uvreadings";
-?>  
-</div></div></div>
-<div class="weather34i-rairate-bar2">
-<div id="raincontainer2">
-<div id="weather34rainbeaker2">
-<?php //relative scale
-//C
-if($weather["temp_units"]=='C' && $meteobridgeapi[24]<0){
-echo "<volumet>40c <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumet>";}
-//F
-if($weather["temp_units"]=='F' && $meteobridgeapi[24]<32){
-echo "<volumet>104F <br>95 <br>86 <br>77 <br>68 <br>59 <br>50 <br>41</volumet>";}
-  ?>
-<div id="weather34rainwater2" style="height:
-<?php if ($meteobridgeapi[24]<=0){echo 0.05;}else echo $meteobridgeapi[24]/9.5;?>em;opacity:0.7;background:
-<?php //solar color
-if ($meteobridgeapi[24]>=2 ){echo 'var(--blue)';}
-else if ($meteobridgeapi[24]>=0 ){echo 'var(--blue)';}
-else if ($meteobridgeapi[24]>=-10 ){echo 'var(--temp-5-10)';}
-else if ($meteobridgeapi[24]>=-50 ){echo 'var(--deepcold)';}
-?>">   
-<?php ;}?>
-<?php 
-//if ($meteobridgeapi[42]='-'){$meteobridgeapi[42]="0";}
-//heat index >30
-if ($meteobridgeapi[42]>=30){;?>
-<div class="windgauge">
-<div class="second24hourguage">
-  <?php echo "<solarheading style='margin-left:-45px;width:70px'>Heat Index</solarheading>";?>
-<div class="button button-dialrain">               
- <div class="button-dial-toprain"></div>
-<div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
-if ($meteobridgeapi[42]>=45 ){echo 'var(--purple)';}
-else if ($meteobridgeapi[42]>=35 ){echo 'var(--deepred)';}
-else if ($meteobridgeapi[42]>=25 ){echo 'var(--red)';}
- 
-echo "'>";
-echo "<uvopacity>".number_format($weather["heat_index"],1)."&deg;</uvopacity></uvreadings";
-?>  
-</div></div></div>
-<div class="weather34i-rairate-bar2">
-<div id="raincontainer2">
-<div id="weather34rainbeaker2">
-<?php //relative scale
-  if($weather["temp_units"]=='C'){
-  echo "<volumet>40c <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumet>";}
 
-  if($weather["temp_units"]=='F'){
-  echo "<volumet>104F <br>95 <br>86 <br>77 <br>68 <br>59 <br>50 <br>41</volumet>";}
-  ?>
-<div id="weather34rainwater2" style="height:<?php echo $meteobridgeapi[42]/9.5;?>em;opacity:0.7;background:
-<?php //solar color
-if ($meteobridgeapi[42]>=45 ){echo 'var(--purple)';}
-else if ($meteobridgeapi[42]>=35 ){echo 'var(--deepred)';}
-else if ($meteobridgeapi[42]>=25 ){echo 'var(--red)';}
-?>">   
-<?php ;}?>
-
-<?php 
-//month average if no windchill<0 or heatindex<30
-if ($meteobridgeapi[42]<30 && $meteobridgeapi[24]>=0){;?>
 <div class="windgauge">
 <div class="second24hourguage">
   <?php echo "<solarheading style='margin-left:-45px;width:70px'>Average Today</solarheading>";?>
@@ -205,9 +141,7 @@ else if ($meteobridgeapi[152]>=2 ){echo 'var(--blue)';}
 else if ($meteobridgeapi[152]>=0 ){echo 'var(--blue)';}
 else if ($meteobridgeapi[152]>=-10 ){echo 'var(--temp-5-10)';}
 else if ($meteobridgeapi[152]>=-50 ){echo 'var(--deepcold)';}
-?>">   
-<?php ;}?>
-
+?>"> 
 </div></div></div></div></div></div>
 
 
