@@ -107,10 +107,10 @@ else if ($weather["lightningyear"]>=700 ){echo "0 100 200 400 <orange>".$weather
 else if ($weather["lightningyear"]>=600 ){echo "0 100 200 300 <orange>".$weather["lightningyear"]."</orange>";}
 else if ($weather["lightningyear"]>=500 ){echo "0 100 200 300 <orange>".$weather["lightningyear"]."</orange>";}
 else if ($weather["lightningyear"]>=400){echo "0 50 100 200 300 <orange>".$weather["lightningyear"]."</orange>";}
-else if ($weather["lightningyear"]>=300){echo "0 50 100 200 <orange>".$weather["lightningyear"]."</orange> 400 500 ";}
-else if ($weather["lightningyear"]>=200 ){echo "0 50 100 <orange>".$weather["lightningyear"]."</orange> 300 400 500 ";}
-else if ($weather["lightningyear"]>=100 ){echo "0 50 <orange>".$weather["lightningyear"]."</orange> 200 300 400 500 ";}
-else if ($weather["lightningyear"]>=0 ){echo "<orange>".$weather["lightningyear"]."</orange> 100 200 300 400 500 1k+ ";}
+else if ($weather["lightningyear"]>=300){echo "0 50 100 200 <orange>".$weather["lightningyear"]."</orange> 400 ";}
+else if ($weather["lightningyear"]>=200 ){echo "0 50 100 <orange>".$weather["lightningyear"]."</orange> 300 400 ";}
+else if ($weather["lightningyear"]>=100 ){echo "0 50 <orange>".$weather["lightningyear"]."</orange> 200 300 400 ";}
+else if ($weather["lightningyear"]>=0 ){echo "<orange>".$weather["lightningyear"]."</orange> 100 200 300 400 500";}
 echo " <smalltempunit2>[<deepblue>".date('Y')."</deepblue>]</smalltempunit2>";
 ?>
 </valuetextheadingindoor>
