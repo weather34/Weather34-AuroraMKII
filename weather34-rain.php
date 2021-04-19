@@ -5,7 +5,7 @@
 	# https://www.weather34.com/homeweatherstation/ 	                                                                   
 	#################################################
 include('livedata.php');date_default_timezone_set($TZ);?>
-<div class="modulecaptionb">Precipitation</div>
+<div class="modulecaptionb">Precipitation (Rain)</div>
 
 <todaysrain>Today</todaysrain>
 <div class="button button-dialrain">               

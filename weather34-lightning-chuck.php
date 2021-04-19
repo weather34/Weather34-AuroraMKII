@@ -25,7 +25,7 @@ function convert($lightningseconds){$weather34timeago = "";
 $days = intval(intval($lightningseconds) / (3600*24));
 $hours = (intval($lightningseconds) / 3600) % 24;
 $minutes = (intval($lightningseconds) / 60) % 60;
-if($days>= 1){$weather34timeago .=  "Extra Info";}
+if($days>= 1){$weather34timeago .=  "";}
 else if($days> 1){$weather34timeago .= "$days Days ";}
 else {if($days>0){$weather34timeago .= "$days Day ";}
 if($hours > 1 ){$weather34timeago .= "$hours Hrs ";}
@@ -111,7 +111,7 @@ else if ($weather["lightningyear"]>=300){echo "0 50 100 200 <orange>".$weather["
 else if ($weather["lightningyear"]>=200 ){echo "0 50 100 <orange>".$weather["lightningyear"]."</orange> 300 400 500 ";}
 else if ($weather["lightningyear"]>=100 ){echo "0 50 <orange>".$weather["lightningyear"]."</orange> 200 300 400 500 ";}
 else if ($weather["lightningyear"]>=0 ){echo "<orange>".$weather["lightningyear"]."</orange> 100 200 300 400 500 1k+ ";}
-echo " <smalltempunit2>Total [<deepblue>".date('Y')."</deepblue>]</smalltempunit2>";
+echo " <smalltempunit2>[<deepblue>".date('Y')."</deepblue>]</smalltempunit2>";
 ?>
 </valuetextheadingindoor>
 <div class=sunratebar>
@@ -135,12 +135,21 @@ else if ($weather["lightningyear"]>=0 ){echo '#d87040';}
 </div></div></div>
 
 
-<div class="thelaststrike"><?php echo $aqilinks?>
-<a href="weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">
+
+<?php //weather34 Aurora MKII lightning time ago
+//if strike more than 23 hours ago
+if ($lightningseconds >=82800){?>
+<div class=mooninfo2 ><a href='console/weather34-lightning-charts.php' data-lity data-title="Indoor Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<?php ;}?>
+<?php 
+//if strike less than 23 hours ago
+if ($lightningseconds <82800){?>
+<a href="console/weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">
 <?php  //weatherflow weather34 air lightning output
-if ($lightningseconds <120 ){ echo $lightningalert8." <orange>Just Now</orange>";}
-else if ($lightningseconds >=61 ){
-echo convert($lightningseconds);}?></a></div>
+if ($lightningseconds <120 ){ echo "<div class='thelaststrike'>Last Strike<br><orange>Just Now</orange>";}
+else if ($lightningseconds >=61 ){echo "<div class='thelaststrike'>Last Strike<br>".convert($lightningseconds);}
+?><?php ;}?>
+</a></div>
 
 <?php
 //lightning notifications

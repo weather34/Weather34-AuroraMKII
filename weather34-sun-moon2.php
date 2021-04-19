@@ -53,7 +53,8 @@ $nextday = time() + 24*60*60;$result2 = date_sun_info($nextday,$lat, $lon);
 	function next_first_quarter(){return $this->get_phase(5);} 
 	function next_full_moon(){return $this->get_phase(6);} 
 	function next_last_quarter(){return $this->get_phase(7);} 
-	function phase_name(){$names=array('&nbsp;&nbsp;&nbsp;New <br>&nbsp;&nbsp;Moon','Waxing <br>Crescent','First <br>Quarter','Waxing <br>Gibbous','&nbsp;&nbsp;&nbsp;Full <br>&nbsp;&nbsp;Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','New <br>Moon');return $names[ floor(($this->phase + 0.0625)* 8)];} } 
+	function phase_name(){$names=array('&nbsp;&nbsp;New <br>&nbsp;&nbsp;Moon','Waxing <br>Crescent','&nbsp;&nbsp;First <br>&nbsp;Quarter','Waxing <br>Gibbous','&nbsp;&nbsp;Full<br>&nbsp;&nbsp;Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','&nbsp;&nbsp;New <br>&nbsp;&nbsp;Moon');
+	return $names[ floor(($this->phase + 0.0625)* 8)];} } 
 	
 
 //weather34 sunrise 

@@ -1,13 +1,12 @@
 <?php include_once('livedata.php');
  date_default_timezone_set($TZ);
-	####################################################################################################
-	#	CREATED FOR WEATHER34 TEMPLATE 											                       #
-	# https://weather34.com/homeweatherstation/index.html 											   # 
-	# 	                                                                                               #
-	# 	Release: September 2020 				  	                                                   #
-	# 	                                                                                               #
-	#   https://www.weather34.com 	                                                                   #
-	####################################################################################################
+	#######################################################	
+	#	CREATED FOR WEATHER34 Aurora MKII TEMPLATE 		     
+	# https://weather34.com/homeweatherstation/index.html 		
+	# 	Release: September 2020 Revised April 2021		
+	# 	                           
+	#   https://www.weather34.com 	    
+	######################################################
 
 $result = date_sun_info(time(), $lat, $lon);time(); 
 $nextday = time() + 86400; 
