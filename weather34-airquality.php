@@ -1,7 +1,7 @@
 <?php  include('livedata.php');
 date_default_timezone_set($TZ);
     ####################################################################################################
-    #	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+    #	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
     # https://weather34.com/homeweatherstation/index.html 											   #
     # 	                                                                                               #
     # 	Revised: April 2020					  	                                                   #
@@ -34,7 +34,7 @@ $aqiweather["pm10"]=number_format($aqiweather["pm10"],1);
 
 ?>
 <div class="sunblock">
-<div class="indoordesc5">Air Quality</div>
+<div class="indoordesc5">Purple Air</div>
 <div class="button button-dial-small">      
 <div class="button-dial-top-small"></div>
 <div class="button-dial-label-small">          
@@ -90,4 +90,4 @@ else if ($aqiweather["aqindex"] >=100){echo "Unhealthy For Some";}
 else if ($aqiweather["aqindex"] >=50){echo "Moderate Risk";}
 else if ($aqiweather["aqindex"] >0){echo "Good No Risk";}
 ?></div>
-<div class=aqiid-brand><a href='weather34-aqi-info.php' data-lity data-title="Purple Air Quality"><?php echo  $aqilinks?>&nbsp; Purple Air</a></div></div>
+<div class=aqiid-brand><a href='weather34-aqi-info.php' data-lity data-title="Purple Air Quality"><?php echo  $aqilinks?>&nbsp; Extra Info</a></div></div>

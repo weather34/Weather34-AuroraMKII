@@ -11,7 +11,7 @@
 ?>
 
 <div class="sunblock">
-<div class="indoordesc5">Air Quality</div> 
+<div class="indoordesc5">Davis AQI</div> 
 <div class="button button-dial-small">      
 <div class="button-dial-top-small"></div>
 <div class="button-dial-label-small">          
@@ -73,4 +73,4 @@ else if ($aqiweather["aqindex"] >=0){echo "Good No Risk";}
 else echo "<red>N/A</red>";?>
 </div>
 
-<div class=aqiid-brand><a href='weather34-aqi-info-davis.php' data-lity data-title="Davis Air Quality"><?php echo  $aqilinks?>&nbsp; Davis Airlink</a></div></div>
+<div class=aqiid-brand><a href='weather34-aqi-info-davis.php' data-lity data-title="Davis Air Quality"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
