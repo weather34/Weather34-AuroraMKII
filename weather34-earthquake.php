@@ -222,5 +222,6 @@ elseif ($eqdist>=200 ){echo 'var(--orange)';}
 elseif ($eqdist>=0 ){echo 'var(--red)';}?>
 ;">
 </div></div></div>
-<div class=aqiid-brand3><a href='eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+
+<div class=mooninfo2><a href='eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
 </div></div>
