@@ -528,6 +528,7 @@ Current PHP Version <blue><?php echo phpversion()?></blue>
 
 <br>
 Weather<blue>34</blue> Current API file size <?php //API file size
+
 $filename3 =$livedata;
 echo '<blue>';
 $weather34apifilesize = filesize($filename3);
@@ -545,7 +546,7 @@ echo convertToReadableSize($weather34cssfilesize);
 function convertToReadableSize($weather34cssfilesize){$base = log($weather34cssfilesize) / log(1024);$suffix = array("", "KB", "MB", "GB", "TB");
 $f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
 ?>
-<br>Timezone <blue><?php echo $TZ?></blue>
+<br>Timezone <blue><?php $TZ	=str_replace('/', ' ', $TZ);$TZ	=str_replace('_', ' ', $TZ);echo $TZ;?> </blue>
 <br>
 <?php //time to load
 $end_time = microtime(TRUE);

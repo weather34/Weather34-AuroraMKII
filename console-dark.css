@@ -387,7 +387,7 @@ wuwindgust{margin-left:20px}
 .weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-dark);font-weight:500;font-size:12px;line-height:1;padding-left:5px;float:none;text-align:left;width:170px;justify-content:left;height:14px;padding-bottom:10px;cursor:pointer;font-family:headingtext;padding-bottom:10px;margin-bottom:0;margin-top:-10px;margin-left:10px}
 .weather34-top-menu a:hover{background:var(--deepred);color:#fff}
 bottomtoolbarspace{margin-left:65px}
-aurora{position:absolute;width:max-content;font-size:.7em;font-family:weathertext2;margin-left:40px;color:#fff;margin-top:10px;opacity:.2}
+aurora{position:absolute;width:max-content;font-size:.75em;font-family:verb;margin-left:40px;opacity:.8;margin-top:10px;text-shadow:none;color:#98b1c9}
 .weather34-webcam,.weather34-webcam-large{border:5px solid hsla(217,15%,17%,.5);border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;width:275px;height:135px;box-shadow:var(--button-shadow);margin-top:0}
 .weather34-webcam-large{width:90%;height:99%}
 .modulecaptioncam{display:flex;position:relative;left:165px;top:-3px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);font-family:Headingtext;width:11em;height:10px;font-size:10px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
@@ -715,3 +715,4 @@ barometerspacinginhg{margin-left:100px}
 depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;color:#aeb6bf}
 depremspacing{position:absolute;margin-left:-10px;font-size:7px;margin-top:23px;color:#aeb6bf}
 .newphase{display:flex;position:absolute;margin-left:-103px;margin-top:-10px;font-size:9px;z-index:999;width:max-content;text-align:center;color:#aeb6bf;font-family:weathertext2}
+smallhumidityunit2{position:absolute;font-size:.4rem;color:#fff;margin-top:-5px;font-family:weathertext2;opacity:.7}

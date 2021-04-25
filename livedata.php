@@ -739,4 +739,13 @@ $file_live2=file_get_contents('mbridge/weather34-lightning.txt');
   $weather["lightningmax10"]     = $weather34lightning[6]; 
   //loaded time
   $start_time = microtime(TRUE);
+
+
+//wetbulb
+$Tc =($weather['temp']);$P = $weather['barometer'];$RH = $weather['humidity'];
+$Tdc = (($Tc - (14.55 + 0.114 * $Tc) * (1 - (0.01 * $RH)) - pow((2.5 + 0.007 * $Tc) * (1 - (0.01 * $RH)) , 3) - (15.9 + 0.117 * $Tc) * pow(1 - (0.01 * $RH),  14)));
+$E = (6.11 * pow(10 , (7.5 * $Tdc / (237.7 + $Tdc))));
+$wetbulbcalc = (((0.00066 * $P) * $Tc) + ((4098 * $E) / pow(($Tdc + 237.7) , 2) * $Tdc)) / ((0.00066 * $P) + (4098 * $E) / pow(($Tdc + 237.7) , 2));
+$wetbulbx =number_format($wetbulbcalc,1);
+$weather['wetbulb']=$wetbulbx;
 ?>

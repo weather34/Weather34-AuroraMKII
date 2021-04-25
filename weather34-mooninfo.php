@@ -98,6 +98,21 @@ else $darkminutes=$darkminutes;$thehour=date('H');$theminute=date('i');
   //end meteor nevt event
   $lunarinfo3='<svg width="80" viewBox="0 0 512 512" id="weather34 svg eclipse"><g id="weather34eclipse"><path fill="#49545b" opacity=".5" d=" M 162.82 68.68 C 217.22 42.05 283.43 41.17 338.48 66.45 C 356.45 74.61 373.20 85.40 388.08 98.34 C 411.02 118.31 429.61 143.30 441.71 171.21 C 461.45 216.04 464.30 267.98 449.86 314.76 C 439.41 349.21 419.54 380.72 393.08 405.11 C 360.92 435.22 318.71 454.36 274.88 458.76 C 227.90 463.90 179.25 452.31 139.80 426.23 C 96.19 397.68 64.01 352.07 52.47 301.18 C 41.60 254.95 47.17 205.00 68.34 162.46 C 88.32 121.92 122.13 88.36 162.82 68.68 M 241.61 70.93 C 205.47 73.17 170.04 86.26 141.37 108.41 C 113.46 129.68 91.96 159.22 80.24 192.29 C 72.92 212.99 69.23 235.01 69.62 256.96 C 70.21 300.95 87.26 344.52 116.92 377.05 C 136.12 398.29 160.36 414.99 187.13 425.19 C 223.20 439.09 263.68 441.22 300.98 431.01 C 339.57 420.78 374.47 397.34 398.64 365.58 C 426.37 329.66 439.83 283.09 435.67 237.92 C 431.92 192.52 410.38 148.90 376.56 118.36 C 340.47 85.10 290.54 67.71 241.61 70.93 Z" /></g><g id="weather34pass"><path fill="#01a4b5" opacity="1.00" d=" M 338.48 66.45 C 344.19 58.84 353.31 53.45 363.03 53.96 C 378.55 53.20 392.86 67.55 392.04 83.07 C 392.30 88.44 390.64 93.68 388.08 98.34 C 373.20 85.40 356.45 74.61 338.48 66.45 Z" /></g>
   </svg>';
+
+//weather34 super moon event 2021-2023..
+//2021
+$supermooneventnext[]=array("event_start"=>mktime(00, 00, 59, 4, 27, 21),"event_title"=>"<blue>Super Moon</blue> is Visible","event_end"=>mktime(23, 59, 59, 4, 27, 21),);
+$supermooneventnext[]=array("event_start"=>mktime(00, 00, 59, 5, 26, 21),"event_title"=>"<blue>Super Moon</blue> is Visible","event_end"=>mktime(23, 59, 59, 5, 26, 21),);
+//2022
+$supermooneventnext[]=array("event_start"=>mktime(00, 00, 59, 6, 14, 22),"event_title"=>"<blue>Super Moon</blue> is Visible","event_end"=>mktime(23, 59, 59, 6, 14, 22),);
+$supermooneventnext[]=array("event_start"=>mktime(00, 00, 59, 7, 13, 22),"event_title"=>"<blue>Super Moon</blue> is Visible","event_end"=>mktime(23, 59, 59, 7, 13, 22),);
+//2023
+$supermooneventnext[]=array("event_start"=>mktime(00, 00, 59, 8, 1, 23),"event_title"=>"<blue>Super Moon</blue> is Visible","event_end"=>mktime(23, 59, 59, 8, 1, 23),);
+$supermooneventnext[]=array("event_start"=>mktime(00, 00, 59, 8, 31, 23),"event_title"=>"<blue>Super Moon</blue> is Visible","event_end"=>mktime(23, 59, 59, 8, 31, 23),);
+$supermooneventNext=time();$supermooneventOP=false;
+foreach ($supermooneventnext as $supermooneventcheck){
+if ($supermooneventcheck["event_start"]<=$supermooneventNext&&$supermooneventNext<=$supermooneventcheck["event_end"]){$supermooneventOP=true;
+$supermoonevent=$supermooneventcheck["event_title"];}};
   ?>
   
   <!DOCTYPE html>
@@ -183,6 +198,7 @@ else $darkminutes=$darkminutes;$thehour=date('H');$theminute=date('i');
   <article>
   <?php echo $info;?> Moonphase | Sun Position <br>
   <div style="position:relative;margin-left:175px;margin-top:70px"> <div id="sunpos"></div></div>
+  <div style="position:absolute;margin-left:45px;margin-top:65px"> <?php  echo $supermoonevent;?></div>
   <br>
   </article>
   
