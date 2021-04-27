@@ -714,5 +714,5 @@ barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}
 depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;color:#aeb6bf}
 depremspacing{position:absolute;margin-left:-10px;font-size:7px;margin-top:23px;color:#aeb6bf}
-.newphase{display:flex;position:absolute;margin-left:-103px;margin-top:-10px;font-size:9px;z-index:999;width:max-content;text-align:center;color:#aeb6bf;font-family:weathertext2}
+.newphase{position:absolute;margin-left:0px;margin-top:-10px;font-size:9px;z-index:999;width:max-content;text-align:center;color:#aeb6bf;font-family:weathertext2}
 smallhumidityunit2{position:absolute;font-size:.4rem;color:#fff;margin-top:-5px;font-family:weathertext2;opacity:.7}

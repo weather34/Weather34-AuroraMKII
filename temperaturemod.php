@@ -46,32 +46,18 @@ echo "&deg; ";echo $maxclock." ".$weather["tempdmintime"];
  <div class="button-dial-top"></div>
 
  <realfeel>
-<?php 
-//windchill if below freezing or heat index above 32c or wetbulb if no windchill or heat index
-//windchill
-if (anytoC($weather['windchill'])<=2){echo "Windchill <deepblue>" .$weather['windchill']."</deepblue>&deg;";}
-//heat index
+<?php //windchill if below freezing or heat index above 32c else real feel
+if (anytoC($weather['windchill'])<0){echo "Windchill <deepblue>" .$weather['windchill']."</deepblue>&deg;";}
 else if (anytoC($weather['heat_index'])>=32){echo "Heat Index <red>" .$weather['heat_index']."</red>&deg;";}
-//wetbulb
-else if($weather["temp_units"]=='C'){ echo "Wetbulb ";
-if ($weather['wetbulb']>=45 ){echo "<purple>". $weather['wetbulb']."</purple>";}
-else if ($weather['wetbulb']>=35 ){echo '<deepred>'. $weather['wetbulb']."</deepred>";}
-else if ($weather['wetbulb']>=25 ){echo '<red>'. $weather['wetbulb']."</red>";}
-else if ($weather['wetbulb']>=20 ){echo '<orange>'. $weather['wetbulb']."</orange>";}
-else if ($weather['wetbulb']>=10 ){echo '<yellow>'. $weather['wetbulb']."</yellow>";}
-else if ($weather['wetbulb']>=6 ){echo '<green>'. $weather['wetbulb']."</green>";}
-else if ($weather['wetbulb']>=0 ){echo '<blue>'. $weather['wetbulb']."</blue>";}
-else if ($weather['wetbulb']>=-50 ){echo '<icon-minus10>'. $weather['wetbulb']."</icon-minus10>";}}
-else if($weather["temp_units"]=='F'){ echo "Wetbulb ";
-if ($weather['wetbulb']>=113 ){echo "<purple>". $weather['wetbulb']."</purple>";}
-else if ($weather['wetbulb']>=95 ){echo '<deepred>'. $weather['wetbulb']."</deepred>";}
-else if ($weather['wetbulb']>=77 ){echo '<red>'. $weather['wetbulb']."</red>";}
-else if ($weather['wetbulb']>=68 ){echo '<orange>'. $weather['wetbulb']."</orange>";}
-else if ($weather['wetbulb']>=50 ){echo '<yellow>'. $weather['wetbulb']."</yellow>";}
-else if ($weather['wetbulb']>=42.8 ){echo '<green>'. $weather['wetbulb']."</green>";}
-else if ($weather['wetbulb']>=32 ){echo '<blue>'. $weather['wetbulb']."</blue>";}
-else if ($weather['wetbulb']>=-58 ){echo '<icon-minus10>'. $weather['wetbulb']."</icon-minus10>";}}
-?>&deg;
+else if ((anytoc($weather["realfeel"]))>=45 ){echo "Real Feel <purple>". $weather["realfeel"]."</purple>&deg";}
+else if ((anytoc($weather["realfeel"]))>=35 ){echo 'Real Feel <red>'. $weather["realfeel"]."</red>&deg";}
+else if ((anytoc($weather["realfeel"]))>=25 ){echo 'Real Feel <red>'. $weather["realfeel"]."</red>&deg";}
+else if ((anytoc($weather["realfeel"]))>=20 ){echo 'Real Feel <orange>'. $weather["realfeel"]."</orange>&deg";}
+else if ((anytoc($weather["realfeel"]))>=10 ){echo 'Real Feel <yellow>'. $weather["realfeel"]."</yellow>&deg";}
+else if ((anytoc($weather["realfeel"]))>=6 ){echo 'Real Feel <green>'. $weather["realfeel"]."</green>&deg";}
+else if ((anytoc($weather["realfeel"]))>=0 ){echo 'Real Feel <blue>'. $weather["realfeel"]."</blue>&deg";}
+else if ((anytoc($weather["realfeel"]))>=-50 ){echo 'Real Feel <icon-minus10>'. $weather["realfeel"]."</icon-minus10>&deg";}
+?> 
 </realfeel>
 
 <div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">     

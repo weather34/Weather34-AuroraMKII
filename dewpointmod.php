@@ -78,90 +78,55 @@ echo "</tempman>";?>
 </div></div></div></div></div> 
 
 
+
 <div class="windgauge">
 <div class="second24hourguage">
-<?php echo "<solarheading style='margin-left:-65px;width:110px'>Cloud Temp at <deepblue>";
-if ($cloudbaseunit=='mt'){echo round($weather['cloudbase']*0.3048,0)."</deepblue> mt</solarheading>";}
-else if ($cloudbaseunit=='ft'){echo round($weather['cloudbase'],0)."</deepblue> ft</solarheading>";}
-else echo round($weather['cloudbase'],0)."</deepblue> ft</solarheading>";  
-?>
+<?php echo "<solarheading style='margin-left:-45px;width:70px'>Average Today</solarheading>";?>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
 <?php 
-
-if($weather["temp_units"]=='C'){
 echo "<uvreadings style='opacity:0.8;background:";
-if ($cloudtempc>=40 ){echo 'var(--purple)';}
-else if ($cloudtempc>=30 ){echo 'var(--red)';}
-else if ($cloudtempc>=25 ){echo 'var(--red)';}
-else if ($cloudtempc>=20 ){echo 'var(--orange)';}
-else if ($cloudtempc>=15 ){echo 'var(--yellow)';}
-else if ($cloudtempc>=10 ){echo 'var(--yellow)';}
-else if ($cloudtempc>=6 ){echo 'var(--green)';}
-else if ($cloudtempc>=2 ){echo 'var(--blue)';}
-else if ($cloudtempc>=0 ){echo 'var(--blue)';}
-else if ($cloudtempc>=-10 ){echo 'var(--temp-5-10)';}
-else if ($cloudtempc>=-50 ){echo 'var(--deepcold)';}
+if (anytoc($weather["dewpoint_avgtoday"])>=40 ){echo 'var(--purple)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=30 ){echo 'var(--red)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=25 ){echo 'var(--red)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=20 ){echo 'var(--orange)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=15 ){echo 'var(--yellow)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=10 ){echo 'var(--yellow)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=6 ){echo 'var(--green)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=2 ){echo 'var(--blue)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=0 ){echo 'var(--blue)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=-10 ){echo 'var(--temp-5-10)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=-50 ){echo 'var(--temp-5-10)';}
 echo "'>";
-echo "<uvopacity>".number_format($cloudtempc,1)."&deg;</uvopacity></uvreadings";  
-}
+echo "<uvopacity>".number_format($weather["dewpoint_avgtoday"],1)."&deg;</uvopacity></uvreadings";  
 
-if($weather["temp_units"]=='F'){
-  echo "<uvreadings style='opacity:0.8;background:";
-  if ($cloudtempf>=100 ){echo 'var(--purple)';}
-  else if ($cloudtempf>=86 ){echo 'var(--red)';}
-  else if ($cloudtempf>=77 ){echo 'var(--red)';}
-  else if ($cloudtempf>=68 ){echo 'var(--orange)';}
-  else if ($cloudtempf>=59 ){echo 'var(--yellow)';}
-  else if ($cloudtempf>=50 ){echo 'var(--yellow)';}
-  else if ($cloudtempf>=42.8 ){echo 'var(--green)';}
-  else if ($cloudtempf>=35.6 ){echo 'var(--blue)';}
-  else if ($cloudtempf>=32 ){echo 'var(--blue)';}
-  else if ($cloudtempf>=14 ){echo 'var(--temp-5-10)';}
-  else if ($cloudtempf>=-50 ){echo 'var(--deepcold)';}
-  echo "'>";
-  echo "<uvopacity>".number_format($cloudtempf,1)." &deg;</uvopacity></uvreadings";  
-  }
 ?>  
-</div></div></div><div class="weather34i-rairate-bar2">
+</div></div></div>
+<div class="weather34i-rairate-bar2">
 <div id="raincontainer2">
 <div id="weather34rainbeaker2">
 <?php //relative scale
 //C cloudbase temp
-if($weather["temp_units"]=='C'){echo "<volumet>40C <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumet>";}
+if($weather["temp_units"]=='C'){echo "<volumet>40c <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumet>";}
 //F
 if($weather["temp_units"]=='F'){echo "<volumet>104F <br>95 <br>86 <br>77 <br>68 <br>59 <br>50 <br>41</volumet>";}
   ?>
 <div id="weather34rainwater2" style="height:<?php //height 
-if ($cloudtempc<='0'){echo 0.05;}else echo $cloudtempc/9.5;?>em;opacity:0.7;background:
+  if (anytoc($weather["dewpoint_avgtoday"])<='0'){echo 0.05;}else echo anytoc($weather["dewpoint_avgtoday"])/9.5;?>em;opacity:0.7;background:
 <?php // color
-if($weather["temp_units"]=='F'){
-  if ($cloudtempf>=100 ){echo 'var(--purple)';}
-  else if ($cloudtempf>=86 ){echo 'var(--red)';}
-  else if ($cloudtempf>=77 ){echo 'var(--red)';}
-  else if ($cloudtempf>=68 ){echo 'var(--orange)';}
-  else if ($cloudtempf>=59 ){echo 'var(--yellow)';}
-  else if ($cloudtempf>=50 ){echo 'var(--yellow)';}
-  else if ($cloudtempf>=42.8 ){echo 'var(--green)';}
-  else if ($cloudtempf>=35.6 ){echo 'var(--blue)';}
-  else if ($cloudtempf>=32 ){echo 'var(--blue)';}
-  else if ($cloudtempf>=14 ){echo 'var(--temp-5-10)';}
-  else if ($cloudtempf>=-50 ){echo 'var(--deepcold)';}
-  }
-if($weather["temp_units"]=='C'){
-if ($cloudtempc>=40 ){echo 'var(--purple)';}
-else if ($cloudtempc>=30 ){echo 'var(--red)';}
-else if ($cloudtempc>=25 ){echo 'var(--red)';}
-else if ($cloudtempc>=20 ){echo 'var(--orange)';}
-else if ($cloudtempc>=15 ){echo 'var(--yellow)';}
-else if ($cloudtempc>=10 ){echo 'var(--yellow)';}
-else if ($cloudtempc>=6 ){echo 'var(--green)';}
-else if ($cloudtempc>=2 ){echo 'var(--blue)';}
-else if ($cloudtempc>=0 ){echo 'var(--blue)';}
-else if ($cloudtempc>=-10 ){echo 'var(--temp-5-10)';}
-else if ($cloudtempc>=-50 ){echo 'var(--deepcold)';}
-}
+if (anytoc($weather["dewpoint_avgtoday"])>=40 ){echo 'var(--purple)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=30 ){echo 'var(--red)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=25 ){echo 'var(--red)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=20 ){echo 'var(--orange)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=15 ){echo 'var(--yellow)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=10 ){echo 'var(--yellow)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=6 ){echo 'var(--green)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=2 ){echo 'var(--blue)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=0 ){echo 'var(--blue)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=-10 ){echo 'var(--temp-5-10)';}
+else if (anytoc($weather["dewpoint_avgtoday"])>=-50 ){echo 'var(--deepcold)';}
+
 ?>">   
 </div></div></div></div></div></div>
 <div class="heatcirclerain1" >

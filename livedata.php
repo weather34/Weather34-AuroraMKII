@@ -48,6 +48,7 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["humidity_indoor"]    = $meteobridgeapi[23];
 	$weather["rain_rate"]          = $meteobridgeapi[8];
 	$weather["dewpoint"]           = number_format($meteobridgeapi[4],1);
+	$weather["dewpoint_avgtoday"]  = number_format($meteobridgeapi[39],1);
 	$weather["rain_today"]         = $meteobridgeapi[9];
 	$weather["rain_lasthour"]      = $meteobridgeapi[47];
 	$weather["rain_month"]         = $meteobridgeapi[19];
@@ -64,6 +65,7 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 
 	$weather["windchill"]          = $meteobridgeapi[24];
 	$weather["humidity"]           = number_format($meteobridgeapi[3],0);	
+	$weather["humidity_davg"] 	   = number_format($meteobridgeapi[153],0);	
 	$weather["temp_today_high"]    = $meteobridgeapi[26];
 	$weather["temp_today_low"]     = $meteobridgeapi[28];
 	$weather["temp_avg15"]         = $meteobridgeapi[67];
@@ -484,6 +486,7 @@ if ($tempunit != $weather["temp_units"]) {
 		fToC($weather, "dewydmax");
 		fToC($weather, "dewydmin");
 		fToC($weather, "dewpoint2");
+		fToC($weather, "dewpoint_avgtoday");
 		fToC($weather, "realfeel");	
 		fToC($weather,"tempyearavg");		
 		fToCrel($weather, "temp_trend");
@@ -531,6 +534,7 @@ if ($tempunit != $weather["temp_units"]) {
 		cToF($weather, "dewydmax");
 		cToF($weather, "dewydmin");
 		cToF($weather, "dewpoint2");
+		cToF($weather, "dewpoint_avgtoday");
 		cToF($weather, "realfeel");				
 		cToF($weather,"tempyearavg");
 		cToFrel($weather, "temp_trend");

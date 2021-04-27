@@ -199,7 +199,7 @@ return $weather34nanotimeago;}?>
 <div class=actualt>Interface Weatherstation</div> 
     <?php echo $info?> <?php echo 'Meteobridge Interface'?> <blue><?php echo $mbplatform?></blue><br>
     <?php echo $info?> <?php echo 'Interface Uptime'?>: <blue><?php echo convert($nanosduptime)?></blue><br>
-    <?php echo $info?> Firmware:<?php echo "<orange>",$weather["swversion"];echo "-",$weather["build"]?></orange><br>
+    <?php echo $info?> Firmware Rev: <?php echo "<orange>",$weather["swversion"];?></orange><br>
 
 <?php 
 if($mbplatform=='Nano' OR $mbplatform=='NanoSD'){echo '<img src="images/nano.svg" width="50px" class="hardwareimagenano" alt="Meteobridge NANOSD" title="Meteobridge NANOSD">';}

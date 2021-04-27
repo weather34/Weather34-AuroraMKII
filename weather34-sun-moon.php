@@ -53,8 +53,9 @@ $nextday = time() + 24*60*60;$result2 = date_sun_info($nextday,$lat, $lon);
 	function next_first_quarter(){return $this->get_phase(5);} 
 	function next_full_moon(){return $this->get_phase(6);} 
 	function next_last_quarter(){return $this->get_phase(7);} 
-	function phase_name(){$names=array('&nbsp;&nbsp;New <br>&nbsp;&nbsp;Moon','Waxing <br>Crescent','&nbsp;&nbsp;First <br>&nbsp;Quarter','Waxing <br>Gibbous','&nbsp;&nbsp;Full<br>&nbsp;&nbsp;Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','&nbsp;&nbsp;New <br>&nbsp;&nbsp;Moon');
-		return $names[ floor(($this->phase + 0.0625)* 8)];} } 
+	function phase_name(){$names=array('New<br>Moon','Waxing<br>Crescent','First<br>Quarter',
+		'Waxing<br>Gibbous','Full<br>Moon','Waning<br>Gibbous','Third<br>Quarter','Waning<br>Crescent','New<br>Moon');
+		return $names[ floor(($this->phase + 0.070)* 8)];} } 
 	
 
 //weather34 sunrise 
@@ -191,6 +192,7 @@ gradient2.addColorStop("0.20", "hsla(206, 12%, 27%,.6)");
 </div>
 	
 <div class="weather34moonphasesvg1">
+<div class="newphase"><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></div>
 <?php // lets rotate for those in the souther hemisphere 
 if ($hemisphere==180){echo '<style>.weather34moonphasesvg1{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);margin-top:32px;}
 newphase{transform: rotate(180deg);</style>';}
@@ -264,8 +266,7 @@ phase_junk(moon_day(new Date));
 </script>
 </div></div></div>
 
-<div class="newphase"><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?>
-</div>
+
 <div class="daylight4">
 <?php 
 if ($txt=='Sunrise'){echo $sunrisesicon;}if ($txt=='Sunset'){echo $sunsetsicon;}?>&nbsp;
