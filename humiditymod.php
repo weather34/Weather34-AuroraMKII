@@ -104,7 +104,7 @@ else if (number_format($weather["humidity_davg"],0)<40){echo $weather["humidity_
 else if (number_format($weather["humidity_davg"],0)<50){echo $weather["humidity_davg"]/20.5;}
 else if (number_format($weather["humidity_davg"],0)<80){echo $weather["humidity_davg"]/20.5;}
 else if (number_format($weather["humidity_davg"],0)<90){echo $weather["humidity_davg"]/19.5;}
-else if (number_format($weather["humidity_davg"],0)<100){echo $weather["humidity_davg"]/19.9;}
+else if (number_format($weather["humidity_davg"],0)<100){echo $weather["humidity_davg"]/22.5;}
 else echo $weather["humidity_davg"]/19;?>em;opacity:0.7;background:
 <?php //color
 if ($weather["humidity_davg"]>=70 ){echo 'var(--temp0-5)';}
