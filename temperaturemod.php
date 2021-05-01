@@ -136,7 +136,10 @@ echo "<volumet>40c <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumet>";}
 if($weather["temp_units"]=='F'){
 echo "<volumet>104F <br>95 <br>86 <br>77 <br>68 <br>59 <br>50 <br>41</volumet>";}
   ?>
-<div id="weather34rainwater2" style="height:<?php if ($meteobridgeapi[152]<=0){echo 0.05;}else echo $meteobridgeapi[152]/9.5;?>em;opacity:0.7;background:
+<div id="weather34rainwater2" style="height:<?php 
+if ($meteobridgeapi[152]<=0){echo 0.05;}
+else if ($meteobridgeapi[152]>=12){echo $meteobridgeapi[152]/9.25;}
+else echo $meteobridgeapi[152]/9.5;?>em;opacity:0.7;background:
 <?php //color
 if ($meteobridgeapi[152]>=45 ){echo 'var(--purple)';}
 else if ($meteobridgeapi[152]>=35 ){echo 'var(--deepred)';}

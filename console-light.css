@@ -330,7 +330,7 @@ wuprob{color:var(--blue);display:flex;font-size:6pt;line-height:1;margin-top:0;p
 .wuicon-2{margin-top:82px;position:absolute;margin-left:15px;padding-top:5px;z-index:10}
 .wuaheadforetop{display:flex;position:absolute;right:35%;top:7px;font-family:weathertext2;font-size:8px;color:var(--body-text-light);text-shadow:none}
 .showicon2{display:none}
-aurora{position:absolute;width:max-content;font-size:.75em;font-family:verb;margin-left:40px;opacity:.8;margin-top:15px;text-shadow:none;color:#98b1c9}
+aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margin-left:40px;opacity:.8;margin-top:15px;text-shadow:none;color:#98b1c9}
 .weather-aqi-identity,.weather-clockicon-identity,.weather-directionicon-identity,.weather-icon-identity,.weather-icon-identity-wind,.weather-icon-identity-wind2,.weather-indoor-tempicon-identity,.weather-indoor-tempicon-identity2,.weather-pressureicon-identity,.weather-rain-icon-identity,.weather-simsek-identity,.weather-sunpos-identity,.weather-tempicon-identity{position:absolute;width:2rem;height:1.2rem;margin-left:235px;margin-top:-25px;z-index:10;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:verb;text-shadow:none;font-size:11px}
 .weather-icon-identity{width:2rem;height:1rem;margin-left:120px;margin-top:45px}
 .weather-icon-identity-wind{width:2rem;height:1rem;margin-left:180px;margin-top:10px;border-left:0}
