@@ -93,18 +93,16 @@ echo "<uvopacity>".number_format($weather["humidity_davg"],0)."<humidityunit>%</
 </div></div></div>
 <div class="weather34i-rairate-bar2">
 <div id="raincontainer2">
-<div id="weather34rainbeaker2">
+<div id="weather34rainbeaker2"> 
   <?php //relative scale
 echo "<volumet>100% <br> <br>75 <br> <br>50 <br> <br>25 <br></volumet>";
   ?>
 <div id="weather34rainwater2" style="height:<?php //height
 if (number_format($weather["humidity_davg"],1)<=0){echo 0.05;}
-else if (number_format($weather["humidity_davg"],0)<30){echo $weather["humidity_davg"]/25;}
-else if (number_format($weather["humidity_davg"],0)<40){echo $weather["humidity_davg"]/20;}
-else if (number_format($weather["humidity_davg"],0)<50){echo $weather["humidity_davg"]/20.5;}
-else if (number_format($weather["humidity_davg"],0)<80){echo $weather["humidity_davg"]/20.5;}
-else if (number_format($weather["humidity_davg"],0)<90){echo $weather["humidity_davg"]/19.5;}
-else if (number_format($weather["humidity_davg"],0)<100){echo $weather["humidity_davg"]/22.5;}
+
+else if (number_format($weather["humidity_davg"],0)<=80){echo $weather["humidity_davg"]/22.5;}
+else if (number_format($weather["humidity_davg"],0)<=90){echo $weather["humidity_davg"]/22.25;}
+else if (number_format($weather["humidity_davg"],0)<=100){echo $weather["humidity_davg"]/22.5;}
 else echo $weather["humidity_davg"]/19;?>em;opacity:0.7;background:
 <?php //color
 if ($weather["humidity_davg"]>=70 ){echo 'var(--temp0-5)';}

@@ -189,11 +189,17 @@ gradient2.addColorStop("0.20", "hsla(206, 12%, 27%,.6)");
 </div>
 	
 <div class="weather34moonphasesvg1">
-<div class="newphase"><?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></div>
+<div class="newphase">
+<?php // lets rotate for those in the souther hemisphere 
+if ($hemisphere==180){echo '<style>.newphase{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);}</style>';}?>
+
+<?php $moon=new MoonPhase();$phases=$moon->phase_name();echo $phases;?></div>
 <?php // lets rotate for those in the souther hemisphere 
 if ($hemisphere==180){echo '<style>.weather34moonphasesvg1{-webkit-transform: rotate('.$hemisphere.'deg);transform: rotate('.$hemisphere.'deg);margin-top:32px;}
 newphase{transform: rotate(180deg);</style>';}
 ?>
+
+
 <svg id="weather34moonsvg"  viewBox="0 0 200 200"  version="1.1"></svg>
 <script type="text/javascript" charset="UTF-8"> 
 //moonphase revised March 2021 based on original by http://www.ben-daglish.net/moon.shtml  
