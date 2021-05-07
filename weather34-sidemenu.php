@@ -23,28 +23,28 @@
 <button>X</button></div> 
 <div class="weather34-top-menu">
   
-<a href="console-setup.php" target="_blank" data-title="Dashboard Setup">&nbsp;<?php echo $weather34settingsicon?>&nbsp;Dashboard Admin &nbsp;
-<?php if($password==''){echo $weather34unlocked;}else echo $weather34locked; ?></a><br>
+<a href="console-setup.php" target="_blank" data-title="Dashboard Setup">&nbsp;<?php echo $weather34settingsicon?><div class="link">Dashboard Admin
+<?php if($password==''){echo $weather34unlocked;}else echo $weather34locked; ?></div></a><br>
 
 <?php //air quality indoor options if yes
 if ($indooricon == "yes" && $davisairquality == "yes" && $davisairqualitylocation=="indoor") {
-echo '<a  href="weather34-ev-air.php"  data-title="Indoor Enviroment">';echo $hometempmenu.'&nbsp;Indoor Air Quality</a><br>';}
+echo '<a  href="weather34-ev-air.php"  data-title="Indoor Enviroment">';echo $hometempmenu.'<div class="link">Indoor Air Quality</div></a><br>';}
 else if ($indooricon == "yes" && $luftdatenhardware == "yes" && $lufdatenairqualitylocation=="indoor") {
-echo '<a  href="weather34-ev-air-luftdaten.php"  data-title="Indoor Enviroment">';echo $hometempmenu.'&nbsp;Luftdaten Air Quality</a><br>';}
-else if ($indooricon == "yes"){echo '<a  href="weather34-ev.php"  data-title="Indoor Enviroment">'; 
-echo $hometempmenu.'&nbsp;Indoor Data</a><br>';}
+echo '<a  href="weather34-ev-air-luftdaten.php"  data-title="Indoor Enviroment">';echo $hometempmenu.'<div class="link">Luftdaten Air Quality</div></a><br>';}
+else if ($indooricon == "yes"){echo '<a href="weather34-ev.php"  data-title="Indoor Enviroment">'; 
+echo $hometempmenu.'<div class="link">Indoor Data</div></a><br>';}
 ?>
 
 <?php //air quality CHART OPTION if yes
 if ($davisairquality == "yes" && $purpleairhardware=="yes") {
 echo '<a  href="air-quality-charts.php"  data-title="Air Quality">';
-echo $weather34aqi2;echo "&nbsp;Air Quality Data</a><br>";}?>
+echo $weather34aqi2;echo '<div class="link">Air Quality Data</div></a><br>';}?>
 
 
 <?php //lightning OPTION if positions 10,11,12
 if ($position10 == "weather34-lightning-chuck.php" OR  $position11 == "weather34-lightning-chuck.php" OR $position12 == "weather34-lightning-chuck.php" ) {
 echo '<a href="weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">';
-echo $weather34_lightningdata;echo "&nbsp;Lightning Data</a><br>";}?>
+echo $weather34_lightningdata;echo '<div class="link">Lightning Data</div></a><br>';}?>
 
 
 <?php //Windy Radar with units switching 
@@ -52,40 +52,40 @@ echo '<a data-lity data-title="Windy Radar"
 <iframe width="100%" frameborder="0" style="border:0;" 
 src="https://embed.windy.com/embed2.html?lat='.$lat.'&lon='.$lon.'&detailLat='.$lat.'&detailLon='.$lon.'
 &width=650&height=450&zoom=8&level=surface&overlay=wind&product=ecmwf&menu=&message=false&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind='.$weather["wind_units"].'&metricTemp=%C2%B0'.$weather["temp_units"].'&radarRange=-1" frameborder="0"></iframe>';
-echo $weather34windyradar.'&nbsp;Windy Radar</a><br>';?>
+echo $weather34windyradar.'<div class="link">Windy Radar</div></a><br>';?>
 
 <?php //Rainviwer Radar
 echo '<a data-lity data-title="Rain Radar" 
 <iframe src="https://www.rainviewer.com/map.html?loc='.$lat.','.$lon.',8&oFa=0&oC=0&oU=0&oCS=1&oF=0&oAP=0&rmt=4&c=1&o=83&lm=1&th=0&sm=1&sn=1" 
 width="100%" frameborder="0" style="border:0;" allowfullscreen></iframe> ';
-echo $weather34_rainradar.'&nbsp;Rain Radar</a><br>';?>
+echo $weather34_rainradar.'<div class="link">Rain Radar</div></a><br>';?>
 
 <?php //metar option if yes
-if ($metar=='yes'){echo '<a href="metarnearby.php" data-lity data-title="Local Airport">'.$metarlocal.' &nbsp;Local Airport </a><br>';}?>
+if ($metar=='yes'){echo '<a href="metarnearby.php" data-lity data-title="Local Airport">'.$metarlocal.' <div class="link">Local Airport</div></a><br>';}?>
 
 <?php //webcam option if yes
-if ($webcamdevice == "yes") { echo '<a href="weather34-large-cam.php" data-lity data-title="Webcam">';echo $webcamicon2.'&nbsp;Webcam</a><br>';}?>
+if ($webcamdevice == "yes") { echo '<a href="weather34-large-cam.php" data-lity data-title="Webcam">';echo $webcamicon2.'<div class="link">Webcam</div></a><br>';}?>
 <?php //weather34 smart tv option if yes
-if ($smarttv=='yes'){echo '<a href="weather34-tv.php" data-title="Smart TV">'. $weather34smtv.'&nbsp;Smart TV</a><br>';} ?>
+if ($smarttv=='yes'){echo '<a href="weather34-tv.php" data-title="Smart TV">'. $weather34smtv.'<div class="link">Smart TV</div></a><br>';} ?>
 
 
 <?php // sun position data
-echo '<a href="weather34-suninfo.php" data-lity data-title="Lunar Info">'.$weather34sunicon?>&nbsp;Sun Position Info</a><br>
+echo '<a href="weather34-suninfo.php" data-lity data-title="Lunar Info">'.$weather34sunicon?><div class="link">Sun Position Info</div></a><br>
 
 
 <?php // moon phase data
-echo '<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">'.$weather34moonicon?>&nbsp;Moonphase Info</a><br>
+echo '<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">'.$weather34moonicon?><div class="link">Moonphase Info</div></a><br>
 
 <?php //meteor shower data
-echo '<a href="weather34-meteor.php" data-lity data-title="Meteor Showers">'.$weather34meteoricon?>&nbsp;MeteorShower Info</a><br>
+echo '<a href="weather34-meteor.php" data-lity data-title="Meteor Showers">'.$weather34meteoricon?><div class="link">MeteorShower Info</div></a><br>
 
 <?php // regional earthquake
 if (filesize('jsondata/eqnotification.txt')<160) { echo "";}
-else echo '<a href="eqlist.php" data-lity data-title="Regional Earthquakes">&nbsp;'.$weather34eq."&nbsp;Regional Earthquakes</a><br>"?>
+else echo '<a href="eqlist.php" data-lity data-title="Regional Earthquakes">'.$weather34eq."<div class='link'>Regional Earthquakes</div></a><br>"?>
 
-<a  href="weather34-template-legend.php" data-lity data-title="Hardware Info"> <?php echo $weather34hinfo;?>&nbsp; Hardware Info</a><br>
+<a  href="weather34-template-legend.php" data-lity data-title="Hardware Info"> <?php echo $weather34hinfo;?><div class="link">Hardware Info</div></a><br>
 
 <?php //email contact form with anti-spam question
 if ($displayemail== "yes"){?>
-<a href="contact/contactform.htm" data-lity data-title="Contact"><?php echo $weather34mail?>&nbsp;Get in Touch</a><br>
+<a href="contact/contactform.htm" data-lity data-title="Contact"><?php echo $weather34mail?><div class="link">Get in Touch</div></a><br>
 <?php ;}?>

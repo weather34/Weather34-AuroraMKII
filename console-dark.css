@@ -378,13 +378,16 @@ wuwind3day{top:60px;color:var(--body-text-dark)}
 wuwindgust{margin-left:20px}
 .wuaheadforetop{display:flex;position:absolute;right:35%;top:7px;font-family:weathertext2;font-size:8px;color:#ccc;text-shadow:none}
 .showicon2{display:none}
-.weather34-menuside{max-height:100%;top:0;width:210px;position:fixed;left:-350px;z-index:1001;background-color:var(--modules);overflow:hidden;text-align:left;-webkit-transition:transform 250ms ease-in-out;transition:transform 250ms ease-in-out;color:var(--body-text-dark);-moz-transition:transform 250ms ease-in-out;-ms-transition:transform 250ms ease-in-out;-o-transition:transform 250ms ease-in-out;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-bottomright:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}
+.weather34-menuside{max-height:100vh;top:40px;width:220px;position:fixed;left:-350px;z-index:1001;background-color:var(--modules);text-align:left;-webkit-transition:transform 250ms ease-in-out;transition:transform 250ms ease-in-out;color:var(--body-text-dark);-moz-transition:transform 250ms ease-in-out;-ms-transition:transform 250ms ease-in-out;-o-transition:transform 250ms ease-in-out;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-bottomright:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;background:linear-gradient(90deg,#2c3033 96%,var(--orange) 88%)}
 .weather34-highlight{-webkit-transform:translateX(350px);-moz-transform:translateX(350px);-o-transform:translateX(350px);-ms-transform:translateX(350px);transform:translateX(350px);box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);-moz-box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);-webkit-box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22)}
 .weather34-open-menu{display:inline}
 .weather34-open-menu button{position:absolute;border-radius:3px;background-color:#2d353b;font-size:10px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding:2px;padding-left:3px;padding-right:3px;justify-content:center;align-items:center;margin-top:1px;cursor:pointer;margin-left:5px;line-height:1.2}
-.weather34-header-menu{height:10px;background-color:var(--modules);margin-bottom:10px}
+.weather34-header-menu{height:10px;margin-bottom:10px}
 .weather34-header-menu button{display:inline;position:relative;left:185px;background-color:#2d353b;border:none;margin-top:5px;padding:3px;padding-top:1px;padding-bottom:1px;cursor:pointer;color:var(--body-text-dark);font-size:14px;font-weight:600;margin-bottom:5px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-.weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-dark);font-weight:500;font-size:12px;line-height:1;padding-left:5px;float:none;text-align:left;width:170px;justify-content:left;height:14px;padding-bottom:10px;cursor:pointer;font-family:headingtext;padding-bottom:10px;margin-bottom:0;margin-top:-10px;margin-left:10px}
+.weather34-top-menu a{display:flex;text-decoration:none;color:var(--body-text-dark);font-weight:500;font-size:12px;line-height:1;padding-left:5px;float:none;text-align:left;width:170px;justify-content:left;height:14px;cursor:pointer;font-family:headingtext;padding-bottom:5px;padding-top:10px;margin-bottom:0;margin-top:-10px;box-shadow:0 0 6px rgba(255,255,255,.1),1px 2px 6px rgba(0,0,0,.8)}
+.link{position:absolute;margin-left:30px;background:0 0}
+.weather34-top-menu svg{max-height:24px;margin-top:-5px}
+.weather34-top-menu img{height:20px;margin-top:-5px}
 .weather34-top-menu a:hover{background:var(--deepred);color:#fff}
 bottomtoolbarspace{margin-left:65px}
 aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margin-left:40px;opacity:.8;margin-top:10px;text-shadow:none;color:#98b1c9}
@@ -499,6 +502,7 @@ extrainfoiconuv{position:absolute;margin-top:12px;margin-left:40px;color:var(--o
 html{overflow-x:visible}
 .canvascredit,.canvascredituv{display:none}
 .weather34-open-menu button{position:relative;top:-4px;left:3px}
+.weather34-top-menu a{margin-left:10px}
 .weather-icon-identity-wind{margin-left:170px}
 bottomtoolbarspace{margin-left:20px}
 .twentyfourhourtrend{margin-left:-105px;margin-top:-83px}
@@ -687,10 +691,10 @@ a:hover{filter:brightness(110%);-webkit-filter:brightness(110%)}
 .thegrad{background:#8aa2cc;background:-moz-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:-webkit-linear-gradient(left,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);background:linear-gradient(to right,#8aa2cc 0,#8c3310 50%,#752201 100%,#bf6e4e 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#8aa2cc', endColorstr='#bf6e4e', GradientType=1)}
 winddirectionvalueword{font-size:.9em}
 .aqiid-brand3 a{left:148px}
-.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a,.extrainfoeq a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;font-size:9px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:70px;max-width:200px;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);text-shadow:none;filter:brightness(100%);-webkit-filter:brightness(100%);border-radius:2px;cursor:pointer;z-index:100}
+.extrainfo a,.extrainfo2 a,.extrainfo3 a,.extrainfo4 a,.extrainfoeq a{position:absolute;margin-left:225px;padding:2px;padding-top:4px;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:max-content;width:max-content;line-height:1.2;margin-top:70px;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px;cursor:pointer;z-index:100;color:#aec0d1;text-align:center;font-family:verb;font-size:8px}
 .extrainfoeq a{margin-left:225px;margin-top:42px}
 .extrainfo2 a{margin-left:175px;margin-top:-12px}
-.extrainfo3 a{margin-left:175px;margin-top:-15px}
+.extrainfo3 a{margin-left:175px;margin-top:-18px}
 .extrainfo4 a{margin-left:46px;margin-top:46px}
 extrainfoicon{position:absolute;margin-top:20px;margin-left:80px;color:var(--blue)}
 extrainfoiconsolar{position:absolute;margin-top:20px;margin-left:400px;color:var(--yellow)}
@@ -707,12 +711,12 @@ icontext{position:relative;top:-8px;font-family:weathertext2;font-size:.8em;righ
 indoorpm,indoorpm2{position:absolute;width:4rem;height:4rem;margin-left:-25px;margin-top:25px;z-index:100;font-size:8px;color:var(--body-text-dark)}
 indoorpm{left:12px;top:25px;margin:0;font-family:weathertext2;font-size:9px}
 indoorpm2{left:10px;top:25px;margin:0;font-family:weathertext2;font-size:9px}
-.aqiid-brand a{position:absolute;left:210px;padding:2px;font-size:8.5px;color:var(--body-text-dark);display:flex;justify-content:left;width:max-content;line-height:1.4;top:60px;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px}
-.aqiid-brand2 a{position:absolute;margin-left:-70px;font-size:8.5px;margin-top:0;color:var(--body-text-dark);padding:2px;display:flex;justify-content:left;width:max-content;line-height:1.4;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
-.mooninfo2 a{position:relative;left:140px;padding:2px;font-size:8.5px;color:var(--body-text-dark);display:flex;justify-content:left;width:max-content;line-height:1.4;top:40px;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px}
+.aqiid-brand a{position:absolute;left:210px;padding:2px;font-size:8.5px;color:var(--body-text-dark);display:flex;justify-content:left;width:max-content;line-height:1.4;top:60px;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;color:#aec0d1;text-align:center;font-family:verb;font-size:8px}
+.aqiid-brand2 a{position:absolute;margin-left:-70px;font-size:8.5px;margin-top:0;color:var(--body-text-dark);padding:2px;display:flex;justify-content:left;width:max-content;line-height:1.4;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;color:#aec0d1;text-align:center;font-family:verb;font-size:8px}
+.mooninfo2 a{position:relative;left:140px;padding:2px;font-size:8.5px;color:var(--body-text-dark);display:flex;justify-content:left;width:max-content;line-height:1.4;top:40px;text-shadow:none;text-transform:none;background-color:hsla(204,31%,21%,.229);text-shadow:none;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;color:#aec0d1;text-align:center;font-family:verb;font-size:8px}
 barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}
 depremspacing1{position:absolute;margin-left:110px;font-size:9px;margin-top:1px;color:#aeb6bf}
 depremspacing{position:absolute;margin-left:-10px;font-size:7px;margin-top:23px;color:#aeb6bf}
-.newphase{position:absolute;margin-left:0px;margin-top:-10px;font-size:9px;z-index:999;width:max-content;text-align:center;color:#aeb6bf;font-family:weathertext2}
+.newphase{position:absolute;margin-left:0;margin-top:-10px;font-size:9px;z-index:999;width:max-content;text-align:center;color:#aeb6bf;font-family:weathertext2}
 smallhumidityunit2{position:absolute;font-size:.4rem;color:#fff;margin-top:-5px;font-family:weathertext2;opacity:.7}
