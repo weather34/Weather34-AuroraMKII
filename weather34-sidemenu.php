@@ -38,8 +38,11 @@ echo $hometempmenu.'<div class="link">Indoor Data</div></a><br>';}
 <?php //air quality CHART OPTION if yes
 if ($davisairquality == "yes" && $purpleairhardware=="yes") {
 echo '<a  href="air-quality-charts.php"  data-title="Air Quality">';
-echo $weather34aqi2;echo '<div class="link">Air Quality Data</div></a><br>';}?>
-
+echo $weather34aqi2;echo '<div class="link">Air Quality Data</div></a><br>';}
+if ($davisairquality == "yes" && $purpleairhardware=="no") {
+echo '<a  href="weather34-aqi-info-davis.php"  data-lity data-title="Air Quality">';
+echo $weather34aqi2;echo '<div class="link">Air Quality Data</div></a><br>';}
+?>
 
 <?php //lightning OPTION if positions 10,11,12
 if ($position10 == "weather34-lightning-chuck.php" OR  $position11 == "weather34-lightning-chuck.php" OR $position12 == "weather34-lightning-chuck.php" ) {

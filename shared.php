@@ -427,10 +427,11 @@ $weather34fore='<svg width="20" height="20"  viewBox="0 0 64 64" fill="hsla(185,
 </svg>';
 $weather34chart2='<svg  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="12" width="6" height="8" rx="1" fill="hsla(185, 100%, 37%, 1)" stroke-width="0"/> <rect x="9" y="8" width="6" height="12" rx="1" fill="hsl(35, 77%, 58%)" stroke-width="0"/>
 <rect x="15" y="4" width="6" height="16" rx="1" fill="hsl(19, 66%, 55%)" stroke-width="0"/></svg>';
-$weather34alm='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="hsl(35, 77%, 58%)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path stroke="none" d="M0 0h24v24H0z"/><rect x="4" y="5" width="16" height="16" rx="2" stroke="hsla(185, 100%, 37%, 1)"/><line x1="16" y1="3" x2="16" y2="7" stroke="hsl(19, 66%, 55%)" />  <line x1="8" y1="3" x2="8" y2="7" stroke="hsl(19, 66%, 55%)" /><line x1="4" y1="11" x2="20" y2="11" stroke="#777" stroke-width="1" /> <rect x="8" y="15" width="2" height="2"/></svg>';
-  $weather34smtv='<svg fill="currentColor" x="0px" y="0px" viewBox="0 0 1000 900" enable-background="new 0 0 1000 1000" width="24" height="24" style="margin-top:-5px;">
-  
+$weather34alm='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#e6a241" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z"/><rect x="4" y="5" width="16" height="16" rx="2" stroke="#00a4b4"/><line x1="16" y1="3" x2="16" y2="7" stroke="#d87040" />
+  <line x1="8" y1="3" x2="8" y2="7" stroke="#d87040" /><line x1="4" y1="11" x2="20" y2="11" stroke="#777" stroke-width="1" /> <rect x="8" y="15" width="2" height="2"/></svg>';
+
+$weather34smtv='<svg fill="currentColor" x="0px" y="0px" viewBox="0 0 1000 900" enable-background="new 0 0 1000 1000" width="24" height="24" style="margin-top:-5px;">  
   <g><path  d="M990,137.1H10v622.7h980V137.1z M939.8,709.6H60.2V187.3h879.5V709.6z"/> <path  fill="hsla(185, 100%, 37%, 1)" d="M810.6,837.8c0-13.9-11.3-25.1-25.1-25.1h-574c-13.9,0-25.1,11.3-25.1,25.1c0,13.9,11.2,25.1,25.1,25.1h574C799.4,
   862.9,810.6,851.7,810.6,837.8z"/><path d="M181.6,336.7h70.5c9.2,0,16.7,7.5,16.7,16.7v251.3c0,9.3,7.5,16.8,16.8,16.8h39.3c9.2,0,16.7-7.5,16.7-16.8V353.4c0-9.2,7.5-16.7,16.8-16.7h70.1c9.2,0,16.8-7.5,16.8-16.8v-27.8c0-9.2-7.5-16.7-16.8-16.7H181.6c-9.2,0-16.7,7.5-16.7,16.7v27.8C164.8,329.2,172.3,336.7,181.6,336.7z"/>  <path  d="M640.5,605.6c3,8.8,12.9,15.9,22.1,15.9h34.8c9.3,0,19.2-7.1,22.2-15.9l107.2-314.4c3-8.8-2.1-15.8-11.3-15.8h-41.6c-9.3,0-18.8,7.2-21.4,16.1L685.8,522c-2.5,8.9-6.7,8.9-9.2,0l-65.9-230.6c-2.6-8.9-12.1-16.1-21.3-16.1h-43.8c-9.3,0-14.4,7.1-11.4,15.9L640.5,605.6z"/>
   </g></svg>';
@@ -438,7 +439,8 @@ $weather34alm='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" 
 </svg>';
 $weather34hinfo='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#777" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" /><circle cx="12" cy="12" r="9" stroke="#aaa"/><line x1="12" y1="8" x2="12.01" y2="8" stroke="hsla(185, 100%, 37%, 1)"/><polyline points="11 12 12 12 12 16 13 16" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
 $weather34copyr=' <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#aaa" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" fill="none" /><path d="M14.5 9a3.5 4 0 1 0 0 6" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
-$weather34refr='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M12 4a8 8 0 0 1 3 15.45m0 -4.45v5h5" stroke="#90b22a"/><path d="M11 19.95a8 8 0 0 1 -2 -15.35" stroke-dasharray=".1 4" />
+$weather34refr='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px">
+<path stroke="none" d="M0 0h24v24H0z"/><path d="M12 4a8 8 0 0 1 3 15.45m0 -4.45v5h5" stroke="#90b22a"/><path d="M11 19.95a8 8 0 0 1 -2 -15.35" stroke-dasharray=".1 4" />
 </svg>';
 $weather34desktop='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/>
 <rect x="3" y="4" width="18" height="12" rx="1" /><line x1="7" y1="20" x2="17" y2="20" /><line x1="9" y1="16" x2="9" y2="20" /><line x1="15" y1="16" x2="15" y2="20" /></svg>';  
@@ -742,5 +744,5 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
 $weather34version='Aurora MKII';
-$weather34versiondate='7th May 2021';
+$weather34versiondate='9th May 2021';
 ?>

@@ -130,12 +130,13 @@ include_once('livedata.php');include_once('updater2.php');?>
 <a href="consolecharts.php" data-title="Daily Charts"><?php echo $weather34chart2?></a>
 <a href="weather34-almanac.php" data-title="Almanac"><?php echo $weather34alm?></a>
 <a href="index.php" data-title="Refresh" class="showicon2"><?php echo $weather34refr?></a>
-
 <weather34-rightfootericons>
 
-<a href="index.php" data-title="Refresh"> <?php echo $weather34refr?></a>
+
 <aurora>Aurora MKII <?php echo $weather["stationtype"]?></aurora>
+
 <div class="weather34-aurora" ><a  href="info.html" data-lity data-title="Weather34"> <img src="images/weather34-logo-small.svg" width="23px" height="23px" ></a></div>
+<a href="index.php" data-title="Refresh" class="showicon3" ><?php echo $weather34refr?></a>
 </weather34-rightfootericons>
 </div>
 <?php //if notifications is yes weather34 rain/snow/thunder awareness every 15 minutes 

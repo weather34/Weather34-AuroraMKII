@@ -255,7 +255,7 @@ blue1{color:var(--blue);font-size:.85em;margin-left:3px}
 .nav-top{margin:0 auto;max-width:1024px;background:#3d464d;padding:6px 0 0 0;height:20px;line-height:2;position:relative;bottom:0;margin-top:-5px;margin-bottom:0}
 .nav,.nav-bottom,.nav-bottom-charts{position:absolute;margin:0 auto;max-width:1024px;background-color:#3d464d;padding:2px;position:relative;bottom:-30px;border-top:5px solid #3d464d;height:37px;padding-top:4px;padding-bottom:0}
 .nav-bottom .weather34-battery{position:absolute;display:inline;top:4px;right:10px;width:30px}
-.nav-bottom .weather34-aurora{position:absolute;display:inline;top:5px;right:25px}
+.nav-bottom .weather34-aurora{position:absolute;display:inline;top:6.5px;right:25px}
 .nav-bottom .weather34-acplug{position:absolute;display:inline;top:2px;margin-left:45px}
 .nav-bottom icon-forecast{position:relative;top:-1px}
 .nav-bottom a{border-radius:3px;background-color:#2d353b;font-size:11px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding-top:17px;padding-left:3px;padding-right:3px;justify-content:center;align-items:center;top:4px}
@@ -378,7 +378,7 @@ wuwind3day{top:60px;color:var(--body-text-dark)}
 wuwindgust{margin-left:20px}
 .wuaheadforetop{display:flex;position:absolute;right:35%;top:7px;font-family:weathertext2;font-size:8px;color:#ccc;text-shadow:none}
 .showicon2{display:none}
-.weather34-menuside{max-height:100vh;top:40px;width:220px;position:fixed;left:-350px;z-index:1001;background-color:var(--modules);text-align:left;-webkit-transition:transform 250ms ease-in-out;transition:transform 250ms ease-in-out;color:var(--body-text-dark);-moz-transition:transform 250ms ease-in-out;-ms-transition:transform 250ms ease-in-out;-o-transition:transform 250ms ease-in-out;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-bottomright:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;background:linear-gradient(90deg,#2c3033 96%,var(--orange) 88%)}
+.weather34-menuside{max-height:100vh;top:23px;width:220px;position:fixed;left:-350px;z-index:1001;background-color:var(--modules);text-align:left;-webkit-transition:transform 250ms ease-in-out;transition:transform 250ms ease-in-out;color:var(--body-text-dark);-moz-transition:transform 250ms ease-in-out;-ms-transition:transform 250ms ease-in-out;-o-transition:transform 250ms ease-in-out;-webkit-border-top-right-radius:5px;-webkit-border-bottom-right-radius:5px;-moz-border-radius-topright:5px;-moz-border-radius-bottomright:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;background:linear-gradient(90deg,#2c3033 96%,var(--orange) 88%)}
 .weather34-highlight{-webkit-transform:translateX(350px);-moz-transform:translateX(350px);-o-transform:translateX(350px);-ms-transform:translateX(350px);transform:translateX(350px);box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);-moz-box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22);-webkit-box-shadow:0 19px 38px rgba(0,0,0,.3),0 15px 12px rgba(0,0,0,.22)}
 .weather34-open-menu{display:inline}
 .weather34-open-menu button{position:absolute;border-radius:3px;background-color:#2d353b;font-size:10px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding:2px;padding-left:3px;padding-right:3px;justify-content:center;align-items:center;margin-top:1px;cursor:pointer;margin-left:5px;line-height:1.2}
@@ -390,7 +390,7 @@ wuwindgust{margin-left:20px}
 .weather34-top-menu img{height:20px;margin-top:-5px}
 .weather34-top-menu a:hover{background:var(--deepred);color:#fff}
 bottomtoolbarspace{margin-left:65px}
-aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margin-left:40px;opacity:.8;margin-top:10px;text-shadow:none;color:#98b1c9}
+aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margin-left:10px;opacity:.8;margin-top:10px;text-shadow:none;color:#98b1c9}
 .weather34-webcam,.weather34-webcam-large{border:5px solid hsla(217,15%,17%,.5);border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;width:275px;height:135px;box-shadow:var(--button-shadow);margin-top:0}
 .weather34-webcam-large{width:90%;height:99%}
 .modulecaptioncam{display:flex;position:relative;left:165px;top:-3px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.429);font-family:Headingtext;width:11em;height:10px;font-size:10px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
@@ -449,8 +449,10 @@ monthchart{position:absolute;display:flex;font-size:11px;top:5px;margin-left:35p
 .canvascredit a,.canvascredituv a{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:80px;top:380px;width:250px;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;line-height:1.5;background-image:var(--grid-lines);background-size:2px 2px;justify-content:center;align-items:center;vertical-align:middle;height:30px}
 .weather34credit{font-size:9px;position:absolute;display:flex;font-family:weathertext2;margin-left:470px;top:380px;width:max-content;max-width:300px;color:var(--body-text-dark);background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;line-height:1.5;background-image:var(--grid-lines);background-size:2px 2px;justify-content:center;align-items:center;vertical-align:middle;height:20px}
 .canvascredituv{display:none}
+.showicon3{margin-left:260px}
 @media screen and (max-width:960px){
 .nav-bottom .weather34-acplug,.nav-bottom .weather34-battery,.showicon,.sunriset-set,.version,aurora,chartpage{display:none}
+.showicon3{position:absolute;margin-left:90px}
 theword{font-size:1.25em}
 .almanacouterboxrain{display:flex;position:relative;margin-left:0;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;margin-left:0;margin-top:50px}
