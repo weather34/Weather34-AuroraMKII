@@ -55,7 +55,7 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   function next_last_quarter(){return $this->get_phase(7);} 
   function phase_name(){$names=array('&nbsp;New <br>Moon','Waxing <br>Crescent','First <br>Quarter','Waxing <br>Gibbous','&nbsp;Full <br>Moon','Waning <br>Gibbous','Third <br>Quarter','Waning <br>Crescent','New <br>Moon');
     //return $names[ floor(($this->phase + 0.0625)* 8)];} } 
-    return $names[ floor(($this->phase + 0.070)* 8)];} } 
+    return $names[ floor(($this->phase + 0.0625)* 8)];} } 
 //weather34 sunrise 
 $nextrise = $result['sunrise']; $now = time(); 
 if ($now > $nextrise) { $nextrise = date($timeformat,$result2['sunrise']);

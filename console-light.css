@@ -261,7 +261,7 @@ onlinetime span{font-weight:500;font-family:weathertext2}
 .online2{position:relative;top:0}
 blue1{color:var(--blue);font-size:.85em;margin-left:3px}
 .nav-top{margin:0 auto;max-width:1024px;background:#e0e5e9;padding:6px 0 0 0;height:20px;line-height:2;position:relative;bottom:0;margin-top:-5px;margin-bottom:0;color:#555}
-.nav,.nav-bottom,.nav-bottom-charts,.nav-bottom-charts2{position:absolute;margin:0 auto;max-width:1024px;background:#fff;padding:2px;position:relative;bottom:-25px;height:45px;border-top:5px solid#e0e5e9;background-image:var(--grid-lines);background-size:5px 5px}
+.nav,.nav-bottom,.nav-bottom-charts,.nav-bottom-charts2{position:absolute;margin:0 auto;max-width:1024px;background:#fff;padding:2px;position:relative;bottom:-25px;height:45px;border-top:5px solid#e0e5e9}
 .nav-bottom .weather34-battery{position:absolute;display:inline;top:-4px;right:10px}
 .nav-bottom .weather34-aurora{position:absolute;display:inline;top:5px;right:25px}
 .nav-bottom .weather34-acplug{position:absolute;display:inline;top:2px;margin-left:45px}
