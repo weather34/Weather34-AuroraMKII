@@ -1,4 +1,8 @@
+<meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT"/>
+<meta http-equiv="pragma" content="no-cache" />
+
 <?php include_once('wudata.php');
+
 ###########################################################
 #	WEATHER STATION TEMPLATE by BRIAN UNDERDOWN 2015-2020        		                           
 #	CREATED FOR AURORA TEMPLATE 
@@ -124,6 +128,18 @@ purplet{color:rgba(151,88,190,.8)}
 padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
 	background: hsla(228, 10%, 10%,.9);height:38px}
 }
+
+img{
+	filter:contrast(120%);
+	-webkit-filter:contrast(120%);
+	-moz-filter:contrast(120%);
+	-o-filter:contrast(120%);
+	-ms-filter:contrast(120%);	
+}
+article :hover{filter:contrast(160%);
+	-webkit-filter:contrast(160%);
+	-moz-filter:contrast(160%);
+	-o-filter:contrast(160%);
 </style>
 
 
