@@ -1,8 +1,8 @@
-<?php include('../settings.php');
+<?php include('../../settings.php');
 	
 	#############################################################
 	#	                                                      
-    #	CREATED FOR Aurora TEMPLATE 
+    #	CREATED FOR Aurora MKII TEMPLATE 
     #   http://weather34.com/homeweatherstation/index.html  	 	                                                                                               
     # 	built on CanvasJs  	                                                                           	
     #   canvasJs.js is protected by CREATIVE COMMONS LICENCE BY-NC 3.0  	                           
@@ -32,6 +32,24 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Forecast Chart Temp</title>	
+		<style>
+		@font-face {
+			   font-family: weathertext3;
+			   src: url(../fonts/verbatim-bold.woff) format("woff");
+		   }
+	   
+		   @font-face {
+			   font-family: weathertext2;
+			   src: url(../fonts/verbatim-bold.woff) format("woff");
+		   }
+
+		   @font-face {
+			font-family: verb;
+			src: url(../fonts/verbatim-bold.woff) format("woff");
+		}
+		   </style>
+
+
 		<script src=../js/jquery.js></script>
 		
 	';	
@@ -41,13 +59,15 @@
 	
 	
 
-function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=-50 && weather34value<=5) {tempcolor='hsla(185, 100%, 37%, .8)';}
-else if (weather34value>5 && weather34value<=11) {tempcolor='hsla(74, 60%, 46%,.8)';}
-else if (weather34value>11 && weather34value<=18){tempcolor=' hsla(35, 77%, 58%,.8)';}  
-else if (weather34value>18 && weather34value<=25){tempcolor=' hsla(34, 98%, 49%,.8)';}  
-else if (weather34value>25 && weather34value<=35){tempcolor=' hsla(6, 58%, 54%,.8)';}    
-else if (weather34value>35 && weather34value<=60){tempcolor=' hsla(0, 38%, 32%,.8)';}  
+
+	function WEATHER34CHARTCOLORS(weather34value) {
+if (weather34value>=-50 && weather34value<=5) {tempcolor='hsla(185, 100%, 37%, 1)';}
+else if (weather34value>5 && weather34value<=11) {tempcolor='hsl(75, 62%, 43%)';}
+else if (weather34value>11 && weather34value<=18){tempcolor=' hsl(35, 77%, 58%)';}  
+else if (weather34value>18 && weather34value<=23){tempcolor=' hsl(34, 98%, 49%)';} 
+else if (weather34value>23 && weather34value<=27){tempcolor=' hsl(19, 66%, 55%)';}   
+else if (weather34value>27 && weather34value<=35){tempcolor=' hsla(6, 58%, 54%,1)';}    
+else if (weather34value>35 && weather34value<=60){tempcolor=' hsla(0, 38%, 32%,1)';}  
 return tempcolor;}
 	
 
@@ -100,12 +120,13 @@ return tempcolor;}
 		 backgroundColor: " hsla(228, 10%, 10%,.9)",
 		 animationEnabled: false,
 		 margin: 0,
+		 fontFamily: "weathertext2",
 		 
 		title: {
             text: " ",
 			fontSize: 0,
 			fontColor:' #555',
-			fontFamily: "arial",
+			fontFamily: "weathertext2",
         },
 		toolTip:{
 			   fontStyle: "normal",
@@ -123,12 +144,11 @@ return tempcolor;}
  axisX: {
 	gridColor: "#555",	
 			gridDashType: "dot",
-		    labelFontSize: 8,
+		    labelFontSize: 7,
 			labelFontColor:' #fff',
 			lineThickness: 1,
 			gridThickness: 1,				
-			labelFontFamily: "Helvetica",	
-			labelFontWeight: "bold",			
+			labelFontFamily: "weathertext2",						
 			interval:1,
 			labelAngle: 0,			
 			crosshair: {
@@ -161,8 +181,7 @@ return tempcolor;}
 		interval:<?php echo $interval?>,
 		labelFontSize: 8,
 		labelFontColor:' #fff',			
-		labelFontFamily: "Helvetica",	
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) ;  
          },		
@@ -181,7 +200,7 @@ return tempcolor;}
       },
 	  
 	  legend:{
-      fontFamily: "arial",
+      fontFamily: "weathertext2",
       fontColor:"#555",
   
  },
@@ -191,10 +210,9 @@ return tempcolor;}
 		{
 			indexLabelLineThickness:0, 			
        		indexLabel: "{y}°",
-	   		indexLabelFontSize: 9,
+	   		indexLabelFontSize: 8,
 	   		indexLabelFontColor: "#FFF",	  
-	   		indexLabelMaxWidth: 50,
-	   		indexLabelFontWeight: "bold",
+	   		indexLabelMaxWidth: 50,	   		
        		indexLabelWrap: true,
 	   		indexLabelPlacement: "inside",     
 			markerSize:23,

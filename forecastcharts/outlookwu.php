@@ -81,32 +81,37 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
   <style>
   @font-face {
     font-family: clock;
-    src: url(../fonts/clock3-webfont.woff2) format("woff2")
+    src: url(../fonts/clock3-webfont.woff) format("woff")
 }
 
 @font-face {
     font-family: weathertext3;
-    src: url(../fonts/verbatim-regular.woff2) format("woff2")
+    src: url(../fonts/verbatim-regular.woff) format("woff")
 }
 
 @font-face {
     font-family: weathertext2;
-    src: url(../fonts/verbatim-medium.woff2) format("woff2")
+    src: url(../fonts/verbatim-medium.woff) format("woff")
 }
 
 @font-face {
     font-family: headingtext;
-    src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2")
+    src: url(../fonts/HelveticaNeue-Medium.woff) format("woff")
+}
+
+@font-face {
+    font-family: verb;
+    src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff")
 }
 body,html{font-size:12px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:5px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,.9);}
 .grid>article img{max-width:23%}
-actualt{font-size:9px}
-a{color:#777;text-transform:none;text-decoration:none;color:hsla(185,100%,37%,1)}
-.greydesc{color:#c5c5c5;margin-left:35px;margin-top:-22px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px}
-.tempvalue{color:#c5c5c5;margin-left:110px;margin-top:-42px;position:absolute;font-size:15px}
-bluet{color:#01a4b5}
+actualt{font-size:8.5px}
+a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
+.greydesc{color:#fff;margin-left:35px;margin-top:-22px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
+.tempvalue{color:#fff;margin-left:100px;margin-top:-42px;position:absolute;font-size:15px;font-family:verb}
+bluet{color:#01a4b5;background:#01a4b5}
 yellowt{color:#e6a141}
 oranget{color:#d05f2d}
 greent{color:#90b12a}
@@ -121,299 +126,341 @@ padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
 }
 </style>
 
+
 <main class="grid">
-  <article>  
-   <actualt><?php echo $wuskydayTime ?></actualt>
+  <article style="background:<?php 
+  if($tempunit=='F'){
+if($wuskydayTempHigh <=41){echo "hsla(185, 100%, 37%, 1)";}
+else if($wuskydayTempHigh>=95){echo "hsl(4, 40%, 48%)";}
+else if($wuskydayTempHigh>=80.6){echo "hsl(2, 56%, 55%)";}
+else if($wuskydayTempHigh>=75.2){echo "hsl(19, 66%, 55%)";}
+else if($wuskydayTempHigh>=68){echo "#F88D01";}
+else if($wuskydayTempHigh>=59){echo "hsl(35, 77%, 58%)";}			  
+else if($wuskydayTempHigh>41){echo "hsl(74, 60%, 46%)";}}
+
+if($tempunit=='C'){
+if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
+	else if($wuskydayTempHigh>=35){echo "hsl(4, 40%, 48%)";}
+	else if($wuskydayTempHigh>=27){echo "hsl(2, 56%, 55%)";}
+	else if($wuskydayTempHigh>=24){echo "hsl(19, 66%, 55%)";}
+	else if($wuskydayTempHigh>=20){echo "#F88D01";}
+	else if($wuskydayTempHigh>=15){echo "hsl(35, 77%, 58%)";}			  
+	else if($wuskydayTempHigh>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime ?></actualt>
  <?php //0  detailed forecast  
 	echo"<div class=iconpos> ";      		  			  
 	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg" class="iconpos"></img></div>';}
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc.'</div>';	
-	echo "<div class=tempvalue>"; 				  
-	if($tempunit=='F' && $wuskydayTempHigh<=41){echo "<bluet>".number_format($wuskydayTempHigh,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh>=95){echo "<deepredt>".number_format($wuskydayTempHigh,0);}	 
-	else if($tempunit=='F' && $wuskydayTempHigh>80){echo "<redt>".number_format($wuskydayTempHigh,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh>66){echo "<oranget>".number_format($wuskydayTempHigh,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh>53){echo "<yellowt>".number_format($wuskydayTempHigh,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh>41){echo "<greent>".number_format($wuskydayTempHigh,0);}
-	else if($wuskydayTempHigh <=5){echo "<bluet>".number_format($wuskydayTempHigh,0);}
-	else if($wuskydayTempHigh>=35){echo "<deepredt>".number_format($wuskydayTempHigh,0);}
-	else if($wuskydayTempHigh>=27){echo "<redt>".number_format($wuskydayTempHigh,0);}
-	else if($wuskydayTempHigh>=19){echo "<oranget>".number_format($wuskydayTempHigh,0);}
-	else if($wuskydayTempHigh>=12){echo "<yellowt>".number_format($wuskydayTempHigh,0);}			  
-	else if($wuskydayTempHigh>5){echo "<greent>".number_format($wuskydayTempHigh,0);}
-	echo"°";
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh,0);echo"°";
 	 ?>  </div>
-</article>  
- <article>  
-  <actualt><?php echo $wuskydayTime1 ?></actualt>    
+</article> 
 
- <?php  //1  detailed forecast  
-	//icon        
+
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh1 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh1>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh1>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh1>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh1>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh1>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh1>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh1 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh1>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh1>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh1>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh1>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh1>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh1>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime1 ?></actualt>
+ <?php //0  detailed forecast  
 	echo"<div class=iconpos> ";      		  			  
 	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg" class="iconpos"></img></div>';}
 	 //summary of icon
-	 echo '<div class=greydesc>'. $wuskydesc1.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	if($tempunit=='F' && $wuskydayTempHigh1<=41){echo "<bluet>".number_format($wuskydayTempHigh1,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh1>=95){echo "<deepredt>".number_format($wuskydayTempHigh1,0);}	 
-	else if($tempunit=='F' && $wuskydayTempHigh1>80){echo "<redt>".number_format($wuskydayTempHigh1,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh1>66){echo "<oranget>".number_format($wuskydayTempHigh1,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh1>53){echo "<yellowt>".number_format($wuskydayTempHigh1,0);}
-	else if($tempunit=='F' && $wuskydayTempHigh1>41){echo "<greent>".number_format($wuskydayTempHigh1,0);}
-	else if($wuskydayTempHigh1<=5){echo "<bluet>".number_format($wuskydayTempHigh1,0);}
-	else if($wuskydayTempHigh1>=35){echo "<deepredt>".number_format($wuskydayTempHigh1,0);}
-	else if($wuskydayTempHigh1>=27){echo "<redt>".number_format($wuskydayTempHigh1,0);}
-	else if($wuskydayTempHigh1>=19){echo "<oranget>".number_format($wuskydayTempHigh1,0);}
-	else if($wuskydayTempHigh1>=12){echo "<yellowt>".number_format($wuskydayTempHigh1,0);}			  
-	else if($wuskydayTempHigh1>5){echo "<greent>".number_format($wuskydayTempHigh1,0);}
-	echo"°";
-	?>  </div>
-</article>  
+	echo '<div class=greydesc>'. $wuskydesc1.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh1,0);echo"°";
+	 ?>  </div>
+</article> 
   
-   <article>  
-    <actualt><?php echo $wuskydayTime2 ?></actualt>   
-    
-
- <?php   //2 detailed forecast 
- 	//icon        
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh2 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh2>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh2>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh2>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh2>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh2>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh2>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh2 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh2>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh2>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh2>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh2>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh2>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh2>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime2 ?></actualt>
+ <?php //0  detailed forecast  
 	echo"<div class=iconpos> ";      		  			  
 	if ($wuskydaynight2=='D'){echo '<img src="../wuicons/'.$wuskydayIcon2.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight2=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon2.'.svg" class="iconpos"></img></div>';}
 	 //summary of icon
-	 echo '<div class=greydesc>'. $wuskydesc2.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh2<=41){echo "<bluet>".number_format($wuskydayTempHigh2,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh2>=95){echo "<deepredt>".number_format($wuskydayTempHigh2,0);}	 
-	 else if($tempunit=='F' && $wuskydayTempHigh2>80){echo "<redt>".number_format($wuskydayTempHigh2,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh2>66){echo "<oranget>".number_format($wuskydayTempHigh2,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh2>53){echo "<yellowt>".number_format($wuskydayTempHigh2,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh2>41){echo "<greent>".number_format($wuskydayTempHigh2,0);}
-	 else if($wuskydayTempHigh2<=5){echo "<bluet>".number_format($wuskydayTempHigh2,0);}
-	 else if($wuskydayTempHigh2>=35){echo "<deepredt>".number_format($wuskydayTempHigh2,0);}
-	 else if($wuskydayTempHigh2>=27){echo "<redt>".number_format($wuskydayTempHigh2,0);}
-	 else if($wuskydayTempHigh2>=19){echo "<oranget>".number_format($wuskydayTempHigh2,0);}
-	 else if($wuskydayTempHigh2>=12){echo "<yellowt>".number_format($wuskydayTempHigh2,0);}			  
-	 else if($wuskydayTempHigh2>5){echo "<greent>".number_format($wuskydayTempHigh2,0);}
-	 echo"°";
-	 ?>  </div>  		  
-				  
+	echo '<div class=greydesc>'. $wuskydesc2.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh2,0);echo"°";
+	 ?>  </div>
 </article> 
- <article>  
- <actualt><?php echo $wuskydayTime3 ?></actualt>     
-    
 
- <?php   //3  short forecast 
- 
-	//icon        
+<article style="background:<?php 
+  if($tempunit=='F'){
+	if($wuskydayTempHigh3 <=41){echo "hsla(185, 100%, 37%, 1)";}
+	else if($wuskydayTempHigh3>=95){echo "hsl(4, 40%, 48%)";}
+	else if($wuskydayTempHigh3>=80.6){echo "hsl(2, 56%, 55%)";}
+	else if($wuskydayTempHigh3>=75.2){echo "hsl(19, 66%, 55%)";}
+	else if($wuskydayTempHigh3>=68){echo "#F88D01";}
+	else if($wuskydayTempHigh3>=59){echo "hsl(35, 77%, 58%)";}			  
+	else if($wuskydayTempHigh3>41){echo "hsl(74, 60%, 46%)";}}
+	
+	if($tempunit=='C'){
+	if($wuskydayTempHigh3 <=5){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh3>=35){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh3>=27){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh3>=24){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh3>=20){echo "#F88D01";}
+		else if($wuskydayTempHigh3>=15){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh3>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime3 ?></actualt>
+ <?php //0  detailed forecast  
 	echo"<div class=iconpos> ";      		  			  
 	if ($wuskydaynight3=='D'){echo '<img src="../wuicons/'.$wuskydayIcon3.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight3=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon3.'.svg" class="iconpos"></img></div>';}
 	 //summary of icon
-	 echo '<div class=greydesc>'. $wuskydesc3.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh3<=41){echo "<bluet>".number_format($wuskydayTempHigh3,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh3>=95){echo "<deepredt>".number_format($wuskydayTempHigh3,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh3>80){echo "<redt>".number_format($wuskydayTempHigh3,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh3>66){echo "<oranget>".number_format($wuskydayTempHigh3,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh3>53){echo "<yellowt>".number_format($wuskydayTempHigh3,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh3>41){echo "<greent>".number_format($wuskydayTempHigh3,0);}
-	 else if($wuskydayTempHigh3<=5){echo "<bluet>".number_format($wuskydayTempHigh3,0);}
-	 else if($wuskydayTempHigh3>=35){echo "<deepredt>".number_format($wuskydayTempHigh3,0);}
-	 else if($wuskydayTempHigh3>=27){echo "<redt>".number_format($wuskydayTempHigh3,0);}
-	 else if($wuskydayTempHigh3>=19){echo "<oranget>".number_format($wuskydayTempHigh3,0);}
-	 else if($wuskydayTempHigh3>=12){echo "<yellowt>".number_format($wuskydayTempHigh3,0);}			  
-	 else if($wuskydayTempHigh3>5){echo "<greent>".number_format($wuskydayTempHigh3,0);}
-	 echo"°";
-	 ?>  </div>  	  
-</article>  
+	echo '<div class=greydesc>'. $wuskydesc3.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh3,0);echo"°";
+	 ?>  </div>
+</article> 
   
- <article>  
-     <actualt><?php echo $wuskydayTime4 ?></actualt>    
-    
-     <?php   //4  short forecast	 
-	//icon        
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh4 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh4>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh4>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh4>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh4>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh4>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh4>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh4 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh4>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh4>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh4>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh4>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh4>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh4>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime4 ?></actualt>
+ <?php //0  detailed forecast  
 	echo"<div class=iconpos> ";      		  			  
 	if ($wuskydaynight4=='D'){echo '<img src="../wuicons/'.$wuskydayIcon4.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight4=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon4.'.svg" class="iconpos"></img></div>';}
 	 //summary of icon
-	 echo '<div class=greydesc>'. $wuskydesc4.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh4<=41){echo "<bluet>".number_format($wuskydayTempHigh4,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh4>=95){echo "<deepredt>".number_format($wuskydayTempHigh4,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh4>80){echo "<redt>".number_format($wuskydayTempHigh4,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh4>66){echo "<oranget>".number_format($wuskydayTempHigh4,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh4>53){echo "<yellowt>".number_format($wuskydayTempHigh4,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh4>41){echo "<greent>".number_format($wuskydayTempHigh4,0);}
-	 else if($wuskydayTempHigh4<=5){echo "<bluet>".number_format($wuskydayTempHigh4,0);}
-	 else if($wuskydayTempHigh4>=35){echo "<deepredt>".number_format($wuskydayTempHigh4,0);}
-	 else if($wuskydayTempHigh4>=27){echo "<redt>".number_format($wuskydayTempHigh4,0);}
-	 else if($wuskydayTempHigh4>=19){echo "<oranget>".number_format($wuskydayTempHigh4,0);}
-	 else if($wuskydayTempHigh4>=12){echo "<yellowt>".number_format($wuskydayTempHigh4,0);}			  
-	 else if($wuskydayTempHigh4>5){echo "<greent>".number_format($wuskydayTempHigh4,0);}
-	 echo"°";
-	 ?>  </div>  	  
+	echo '<div class=greydesc>'. $wuskydesc4.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh4,0);echo"°";
+	 ?>  </div>
 </article> 
-<article>  
-     <actualt><?php echo $wuskydayTime5 ?></actualt>       
-     <?php   //5 short forecast
-	 
-	//icon        
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh5 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh5>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh5>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh5>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh5>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh5>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh5>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh5 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh5>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh5>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh5>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh5>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh5>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh5>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime5 ?></actualt>
+ <?php //0  detailed forecast  
 	echo"<div class=iconpos> ";      		  			  
 	if ($wuskydaynight5=='D'){echo '<img src="../wuicons/'.$wuskydayIcon5.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight5=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon5.'.svg" class="iconpos"></img></div>';}
 	 //summary of icon
-	 echo '<div class=greydesc>'. $wuskydesc5.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh5<=41){echo "<bluet>".number_format($wuskydayTempHigh5,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh5>=95){echo "<deepredt>".number_format($wuskydayTempHigh5,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh5>80){echo "<redt>".number_format($wuskydayTempHigh5,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh5>66){echo "<oranget>".number_format($wuskydayTempHigh5,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh5>53){echo "<yellowt>".number_format($wuskydayTempHigh5,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh5>41){echo "<greent>".number_format($wuskydayTempHigh5,0);}
-	 else if($wuskydayTempHigh5<=5){echo "<bluet>".number_format($wuskydayTempHigh5,0);}
-	 else if($wuskydayTempHigh5>=35){echo "<deepredt>".number_format($wuskydayTempHigh5,0);}
-	 else if($wuskydayTempHigh5>=27){echo "<redt>".number_format($wuskydayTempHigh5,0);}
-	 else if($wuskydayTempHigh5>=19){echo "<oranget>".number_format($wuskydayTempHigh5,0);}
-	 else if($wuskydayTempHigh5>=12){echo "<yellowt>".number_format($wuskydayTempHigh5,0);}			  
-	 else if($wuskydayTempHigh5>5){echo "<greent>".number_format($wuskydayTempHigh5,0);}
-	 echo"°";
-	 ?>  </div>  	  
+	echo '<div class=greydesc>'. $wuskydesc5.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh5,0);echo"°";
+	 ?>  </div>
 </article> 
-  <article>
-     <actualt><?php echo $wuskydayTime6 ?></actualt>   
-     <?php   //6 short forecast 	 
-	   
-echo"<div class=iconpos> ";      		  			  
-if ($wuskydaynight6=='D'){echo '<img src="../wuicons/'.$wuskydayIcon6.'.svg" class="iconpos"></img></div>';}
-if ($wuskydaynight6=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon6.'.svg" class="iconpos"></img></div>';}
-	 //summary icon
-	 echo '<div class=greydesc>'. $wuskydesc6.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh6<=41){echo "<bluet>".number_format($wuskydayTempHigh6,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh6>=95){echo "<deepredt>".number_format($wuskydayTempHigh6,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh6>80){echo "<redt>".number_format($wuskydayTempHigh6,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh6>66){echo "<oranget>".number_format($wuskydayTempHigh6,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh6>53){echo "<yellowt>".number_format($wuskydayTempHigh6,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh6>41){echo "<greent>".number_format($wuskydayTempHigh6,0);}
-	 else if($wuskydayTempHigh6<=5){echo "<bluet>".number_format($wuskydayTempHigh6,0);}
-	 else if($wuskydayTempHigh6>=35){echo "<deepredt>".number_format($wuskydayTempHigh6,0);}
-	 else if($wuskydayTempHigh6>=27){echo "<redt>".number_format($wuskydayTempHigh6,0);}
-	 else if($wuskydayTempHigh6>=19){echo "<oranget>".number_format($wuskydayTempHigh6,0);}
-	 else if($wuskydayTempHigh6>=12){echo "<yellowt>".number_format($wuskydayTempHigh6,0);}			  
-	 else if($wuskydayTempHigh6>5){echo "<greent>".number_format($wuskydayTempHigh6,0);}
-	 echo"°";
-	 ?>  </div>  	  
-  </article> 
-  <article>
-    <actualt><?php echo $wuskydayTime7 ?></actualt>         
-     <?php   //7  short forecast  	 
-	 
-echo"<div class=iconpos> ";      		  			  
-if ($wuskydaynight7=='D'){echo '<img src="../wuicons/'.$wuskydayIcon7.'.svg" class="iconpos"></img></div>';}
-if ($wuskydaynight7=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon7.'.svg" class="iconpos"></img></div>';}
-	 //summary icon
-	 echo '<div class=greydesc>'. $wuskydesc7.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh7<=41){echo "<bluet>".number_format($wuskydayTempHigh7,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh7>=95){echo "<deepredt>".number_format($wuskydayTempHigh7,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh7>80){echo "<redt>".number_format($wuskydayTempHigh7,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh7>66){echo "<oranget>".number_format($wuskydayTempHigh7,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh7>53){echo "<yellowt>".number_format($wuskydayTempHigh7,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh7>41){echo "<greent>".number_format($wuskydayTempHigh7,0);}
-	 else if($wuskydayTempHigh7<=5){echo "<bluet>".number_format($wuskydayTempHigh7,0);}
-	 else if($wuskydayTempHigh7>=35){echo "<deepredt>".number_format($wuskydayTempHigh7,0);}
-	 else if($wuskydayTempHigh7>=27){echo "<redt>".number_format($wuskydayTempHigh7,0);}
-	 else if($wuskydayTempHigh7>=19){echo "<oranget>".number_format($wuskydayTempHigh7,0);}
-	 else if($wuskydayTempHigh7>=12){echo "<yellowt>".number_format($wuskydayTempHigh7,0);}			  
-	 else if($wuskydayTempHigh7>5){echo "<greent>".number_format($wuskydayTempHigh7,0);}
-	 echo"°";
-	 ?>  </div>  	  
-  </article> 
-  
-  
-  
-  <article>
-    <actualt><?php echo $wuskydayTime8 ?></actualt>         
-     <?php   //8  short forecast  	 
-	 
-echo"<div class=iconpos> ";      		  			  
-if ($wuskydaynight8=='D'){echo '<img src="../wuicons/'.$wuskydayIcon8.'.svg" class="iconpos"></img></div>';}
-if ($wuskydaynight8=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon8.'.svg" class="iconpos"></img></div>';}
-	 //summary icon
-	 echo '<div class=greydesc>'. $wuskydesc8.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh8<=41){echo "<bluet>".number_format($wuskydayTempHigh8,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh8>=95){echo "<deepredt>".number_format($wuskydayTempHigh8,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh8>80){echo "<redt>".number_format($wuskydayTempHigh8,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh8>66){echo "<oranget>".number_format($wuskydayTempHigh8,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh8>53){echo "<yellowt>".number_format($wuskydayTempHigh8,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh8>41){echo "<greent>".number_format($wuskydayTempHigh8,0);}
-	 else if($wuskydayTempHigh8<=5){echo "<bluet>".number_format($wuskydayTempHigh8,0);}
-	 else if($wuskydayTempHigh8>=35){echo "<deepredt>".number_format($wuskydayTempHigh8,0);}
-	 else if($wuskydayTempHigh8>=27){echo "<redt>".number_format($wuskydayTempHigh8,0);}
-	 else if($wuskydayTempHigh8>=19){echo "<oranget>".number_format($wuskydayTempHigh8,0);}
-	 else if($wuskydayTempHigh8>=12){echo "<yellowt>".number_format($wuskydayTempHigh8,0);}			  
-	 else if($wuskydayTempHigh8>5){echo "<greent>".number_format($wuskydayTempHigh8,0);}
-	 echo"°";
-	 ?>  </div>  	  
-  </article> 
-  
-  
-  <article>
-    <actualt><?php echo $wuskydayTime9 ?></actualt>         
-     <?php   //9  short forecast  	 
-	 
-echo"<div class=iconpos> ";      		  			  
-if ($wuskydaynight9=='D'){echo '<img src="../wuicons/'.$wuskydayIcon9.'.svg" class="iconpos"></img></div>';}
-if ($wuskydaynight9=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon9.'.svg" class="iconpos"></img></div>';}
-	 //summary icon
-	 echo '<div class=greydesc>'. $wuskydesc9.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $tempunit=='F' && $wuskydayTempHigh9<=41){echo "<bluet>".number_format($wuskydayTempHigh9,0);}
-	 else if($wuskydayTempHigh9>=95){echo "<deepredt>".number_format($wuskydayTempHigh9,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh9>80){echo "<redt>".number_format($wuskydayTempHigh9,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh9>66){echo "<oranget>".number_format($wuskydayTempHigh9,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh9>53){echo "<yellowt>".number_format($wuskydayTempHigh9,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh9>41){echo "<greent>".number_format($wuskydayTempHigh9,0);}
-	 else if($wuskydayTempHigh9<=5){echo "<bluet>".number_format($wuskydayTempHigh9,0);}
-	 else if($wuskydayTempHigh9>=35){echo "<deepredt>".number_format($wuskydayTempHigh9,0);}
-	 else if($wuskydayTempHigh9>=27){echo "<redt>".number_format($wuskydayTempHigh9,0);}
-	 else if($wuskydayTempHigh9>=19){echo "<oranget>".number_format($wuskydayTempHigh9,0);}
-	 else if($wuskydayTempHigh9>=12){echo "<yellowt>".number_format($wuskydayTempHigh9,0);}			  
-	 else if($wuskydayTempHigh9>5){echo "<greent>".number_format($wuskydayTempHigh9,0);}
-	 echo"°";
-	 ?>  </div>  	  
-  </article> 
-  <article>
-  <actualt><?php echo $wuskydayTime10 ?></actualt>         
-     <?php   //9  short forecast  	 
-	 
-echo"<div class=iconpos> ";      		  			  
-if ($wuskydaynight10=='D'){echo '<img src="../wuicons/'.$wuskydayIcon10.'.svg" class="iconpos"></img></div>';}
-if ($wuskydaynight10=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon10.'.svg" class="iconpos"></img></div>';}
-	 //summary icon
-	 echo '<div class=greydesc>'. $wuskydesc10.'</div>';	
-	 echo "<div class=tempvalue>"; 				  
-	 if($tempunit=='F' && $wuskydayTempHigh10<=41){echo "<bluet>".number_format($wuskydayTempHigh10,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh10>=95){echo "<deepredt>".number_format($wuskydayTempHigh10,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh10>80){echo "<redt>".number_format($wuskydayTempHigh10,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh10>66){echo "<oranget>".number_format($wuskydayTempHigh10,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh10>53){echo "<yellowt>".number_format($wuskydayTempHigh10,0);}
-	 else if($tempunit=='F' && $wuskydayTempHigh10>41){echo "<greent>".number_format($wuskydayTempHigh10,0);}
-	 else if($wuskydayTempHigh10<=5){echo "<bluet>".number_format($wuskydayTempHigh10,0);}
-	 else if($wuskydayTempHigh10>=35){echo "<deepredt>".number_format($wuskydayTempHigh10,0);}
-	 else if($wuskydayTempHigh10>=27){echo "<redt>".number_format($wuskydayTempHigh10,0);}
-	 else if($wuskydayTempHigh10>=19){echo "<oranget>".number_format($wuskydayTempHigh10,0);}
-	 else if($wuskydayTempHigh10>=12){echo "<yellowt>".number_format($wuskydayTempHigh10,0);}			  
-	 else if($wuskydayTempHigh10>5){echo "<greent>".number_format($wuskydayTempHigh10,0);}
-	 echo"°";
-	 ?>  </div>  	  
-  </article> 
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh6 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh6>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh6>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh6>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh6>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh6>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh6>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh6 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh6>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh6>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh6>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh6>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh6>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh6>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime6 ?></actualt>
+ <?php //0  detailed forecast  
+	echo"<div class=iconpos> ";      		  			  
+	if ($wuskydaynight6=='D'){echo '<img src="../wuicons/'.$wuskydayIcon6.'.svg" class="iconpos"></img></div>';}
+	if ($wuskydaynight6=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon6.'.svg" class="iconpos"></img></div>';}
+	 //summary of icon
+	echo '<div class=greydesc>'. $wuskydesc6.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh6,0);echo"°";
+	 ?>  </div>
+</article> 
 
-  <article>
+
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh7 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh7>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh7>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh7>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh7>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh7>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh7>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh7 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh7>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh7>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh7>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh7>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh7>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh7>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime7 ?></actualt>
+ <?php //0  detailed forecast  
+	echo"<div class=iconpos> ";      		  			  
+	if ($wuskydaynight7=='D'){echo '<img src="../wuicons/'.$wuskydayIcon7.'.svg" class="iconpos"></img></div>';}
+	if ($wuskydaynight7=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon7.'.svg" class="iconpos"></img></div>';}
+	 //summary of icon
+	echo '<div class=greydesc>'. $wuskydesc7.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh7,0);echo"°";
+	 ?>  </div>
+</article> 
+  
+  
+  
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh8 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh8>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh8>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh8>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh8>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh8>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh8>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh8 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh8>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh8>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh8>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh8>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh8>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh8>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime8 ?></actualt>
+ <?php //0  detailed forecast  
+	echo"<div class=iconpos> ";      		  			  
+	if ($wuskydaynight8=='D'){echo '<img src="../wuicons/'.$wuskydayIcon8.'.svg" class="iconpos"></img></div>';}
+	if ($wuskydaynight8=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon8.'.svg" class="iconpos"></img></div>';}
+	 //summary of icon
+	echo '<div class=greydesc>'. $wuskydesc8.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh8,0);echo"°";
+	 ?>  </div>
+</article> 
+  
+  
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh9 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh9>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh9>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh9>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh9>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh9>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh9>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh9 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh9>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh9>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh9>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh9>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh9>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh9>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime9 ?></actualt>
+ <?php //0  detailed forecast  
+	echo"<div class=iconpos> ";      		  			  
+	if ($wuskydaynight9=='D'){echo '<img src="../wuicons/'.$wuskydayIcon9.'.svg" class="iconpos"></img></div>';}
+	if ($wuskydaynight9=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon9.'.svg" class="iconpos"></img></div>';}
+	 //summary of icon
+	echo '<div class=greydesc>'. $wuskydesc9.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh9,0);echo"°";
+	 ?>  </div>
+</article> 
+<article style="background:<?php 
+  	if($tempunit=='F'){
+		if($wuskydayTempHigh10 <=41){echo "hsla(185, 100%, 37%, 1)";}
+		else if($wuskydayTempHigh10>=95){echo "hsl(4, 40%, 48%)";}
+		else if($wuskydayTempHigh10>=80.6){echo "hsl(2, 56%, 55%)";}
+		else if($wuskydayTempHigh10>=75.2){echo "hsl(19, 66%, 55%)";}
+		else if($wuskydayTempHigh10>=68){echo "#F88D01";}
+		else if($wuskydayTempHigh10>=59){echo "hsl(35, 77%, 58%)";}			  
+		else if($wuskydayTempHigh10>41){echo "hsl(74, 60%, 46%)";}}
+		
+		if($tempunit=='C'){
+		if($wuskydayTempHigh10 <=5){echo "hsla(185, 100%, 37%, 1)";}
+			else if($wuskydayTempHigh10>=35){echo "hsl(4, 40%, 48%)";}
+			else if($wuskydayTempHigh10>=27){echo "hsl(2, 56%, 55%)";}
+			else if($wuskydayTempHigh10>=24){echo "hsl(19, 66%, 55%)";}
+			else if($wuskydayTempHigh10>=20){echo "#F88D01";}
+			else if($wuskydayTempHigh10>=15){echo "hsl(35, 77%, 58%)";}			  
+			else if($wuskydayTempHigh10>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+   <actualt ><?php echo $wuskydayTime10 ?></actualt>
+ <?php //0  detailed forecast  
+	echo"<div class=iconpos> ";      		  			  
+	if ($wuskydaynight10=='D'){echo '<img src="../wuicons/'.$wuskydayIcon10.'.svg" class="iconpos"></img></div>';}
+	if ($wuskydaynight10=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon10.'.svg" class="iconpos"></img></div>';}
+	 //summary of icon
+	echo '<div class=greydesc>'. $wuskydesc10.'</div>';	
+	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh10,0);echo"°";
+	 ?>  </div>
+</article> 
+
+  <article style="background:rgba(76, 123, 160, 1);">
   <span style="font-size:8px;">
   <?php echo $info?> CSS/SVG/PHP <a href="https://weather34.com" title="weather34.com" target="_blank" >weather34.com</a></span> 
   <br>

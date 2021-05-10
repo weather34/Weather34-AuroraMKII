@@ -1,8 +1,8 @@
-<?php include('../settings.php');
+<?php include('../../settings.php');
 	
 	#############################################################
 	#	                                                      
-    #	CREATED FOR Aurora TEMPLATE 
+    #	CREATED FOR Aurora MKII TEMPLATE 
     #   http://weather34.com/homeweatherstation/index.html  	 	                                                                                               
     # 	built on CanvasJs  	                                                                           	
     #   canvasJs.js is protected by CREATIVE COMMONS LICENCE BY-NC 3.0  	                           
@@ -23,6 +23,23 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Forecast Chart Temp</title>	
+
+		<style>
+		@font-face {
+			   font-family: weathertext3;
+			   src: url(../fonts/verbatim-bold.woff) format("woff");
+		   }
+	   
+		   @font-face {
+			   font-family: weathertext2;
+			   src: url(../fonts/verbatim-bold.woff) format("woff");
+		   }
+
+		   @font-face {
+			font-family: verb;
+			src: url(../fonts/verbatim-bold.woff) format("woff");
+		}
+		   </style>
 		<script src=../js/jquery.js></script>		
 	';	
 	?>
@@ -33,15 +50,14 @@
 	
 
 	function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=-100 && weather34value<=41) {thecolor='hsla(185, 100%, 37%, .8';}
-else if (weather34value>41 && weather34value<=53) {thecolor='hsla(74, 60%, 46%,.8)';}
-else if (weather34value>53 && weather34value<=18){thecolor=' hsla(35, 77%, 58%,.8)';}  
-else if (weather34value>64 && weather34value<=77){thecolor=' hsla(34, 98%, 49%,.8)';}  
-else if (weather34value>77 && weather34value<=935){thecolor=' hsla(6, 58%, 54%,.8)';}    
-else if (weather34value>95 && weather34value<=150){thecolor=' hsla(0, 38%, 32%,.8)';}    
-          
-else {thecolor='hsl(35, 77%, 58%)';}
-return thecolor;}
+if (weather34value>=-50 && weather34value<=41) {tempcolor='hsla(185, 100%, 37%, 1)';}
+else if (weather34value>41 && weather34value<=51.8) {tempcolor='hsl(75, 62%, 43%)';}
+else if (weather34value>51.8 && weather34value<=64.4){tempcolor=' hsl(35, 77%, 58%)';}  
+else if (weather34value>64.4 && weather34value<=73.4){tempcolor=' hsl(34, 98%, 49%)';} 
+else if (weather34value>73.4 && weather34value<=80.6){tempcolor=' hsl(19, 66%, 55%)';}   
+else if (weather34value>80.6 && weather34value<=95){tempcolor=' hsla(6, 58%, 54%,1)';}    
+else if (weather34value>95 && weather34value<=140){tempcolor=' hsla(0, 38%, 32%,1)';}  
+return tempcolor;}
 	
 
 
@@ -116,12 +132,11 @@ return thecolor;}
 		axisX: {
 			gridColor: "#555",	
 			gridDashType: "dot",
-		    labelFontSize: 8,
+		    labelFontSize: 7,
 			labelFontColor:' #fff',
 			lineThickness: 1,
 			gridThickness: 1,				
-			labelFontFamily: "Helvetica",	
-			labelFontWeight: "bold",			
+			labelFontFamily: "weathertext2",						
 			interval:1,
 			labelAngle: 0,			
 			crosshair: {
@@ -153,8 +168,8 @@ return thecolor;}
 		interval:10,
 		labelFontSize: 8,
 		labelFontColor:' #fff',			
-		labelFontFamily: "Helvetica",	
-		labelFontWeight: "bold",
+		labelFontFamily: "weathertext2",
+		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) ;  
          },		
@@ -183,10 +198,9 @@ return thecolor;}
 		{
 			indexLabelLineThickness:0, 			
        		indexLabel: "{y}°",
-	   		indexLabelFontSize: 9,
+	   		indexLabelFontSize: 8,
 	   		indexLabelFontColor: "#FFF",	  
-	   		indexLabelMaxWidth: 50,
-	   		indexLabelFontWeight: "bold",
+	   		indexLabelMaxWidth: 50,	   		
        		indexLabelWrap: true,
 	   		indexLabelPlacement: "inside",     
 			markerSize:23,
