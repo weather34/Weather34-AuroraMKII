@@ -128,18 +128,13 @@ purplet{color:rgba(151,88,190,.8)}
 padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
 	background: hsla(228, 10%, 10%,.9);height:38px}
 }
-
 img{
-	filter:contrast(120%);
-	-webkit-filter:contrast(120%);
-	-moz-filter:contrast(120%);
-	-o-filter:contrast(120%);
-	-ms-filter:contrast(120%);	
+	filter:contrast(140%);
+	-webkit-filter:contrast(140%);
+	-moz-filter:contrast(140%);
+	-o-filter:contrast(140%);
+	-ms-filter:contrast(140%);		
 }
-article :hover{filter:contrast(160%);
-	-webkit-filter:contrast(160%);
-	-moz-filter:contrast(160%);
-	-o-filter:contrast(160%);
 </style>
 
 
