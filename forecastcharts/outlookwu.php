@@ -212,8 +212,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm>0){echo number_format($wuskydayacumm,1);echo " cm";}
-	else if ($wuskydayprecipIntensity>0){echo number_format($wuskydayprecipIntensity,1);echo " ".$rainunit;}
+	if ($wuskydayacumm>0){echo number_format($wuskydayacumm,2);echo " cm";}
+	else if ($wuskydayprecipIntensity>0){echo number_format($wuskydayprecipIntensity,2);echo " ".$rainunit;}
 	else echo "";
 	
 	 ?>  </div>
@@ -252,8 +252,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc1.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh1,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm1>0){echo number_format($wuskydayacumm1,1);echo " cm";}
-	else if ($wuskydayprecipIntensity1>0){echo number_format($wuskydayprecipIntensity1,1);echo " ".$rainunit;}
+	if ($wuskydayacumm1>0){echo number_format($wuskydayacumm1,2);echo " cm";}
+	else if ($wuskydayprecipIntensity1>0){echo number_format($wuskydayprecipIntensity1,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -290,8 +290,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc2.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh2,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm2>0){echo number_format($wuskydayacumm2,1);echo " cm";}
-	else if ($wuskydayprecipIntensity2>0){echo number_format($wuskydayprecipIntensity2,1);echo " ".$rainunit;}
+	if ($wuskydayacumm2>0){echo number_format($wuskydayacumm2,2);echo " cm";}
+	else if ($wuskydayprecipIntensity2>0){echo number_format($wuskydayprecipIntensity2,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -329,8 +329,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh3,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm3>0){echo number_format($wuskydayacumm3,1);echo " cm";}
-	else if ($wuskydayprecipIntensity3>0){echo number_format($wuskydayprecipIntensity3,1);echo " ".$rainunit;}
+	if ($wuskydayacumm3>0){echo number_format($wuskydayacumm3,2);echo " cm";}
+	else if ($wuskydayprecipIntensity3>0){echo number_format($wuskydayprecipIntensity3,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -365,8 +365,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc4.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh4,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm4>0){echo number_format($wuskydayacumm4,1);echo " cm";}
-	else if ($wuskydayprecipIntensity4>0){echo number_format($wuskydayprecipIntensity4,1);echo " ".$rainunit;}
+	if ($wuskydayacumm4>0){echo number_format($wuskydayacumm4,2);echo " cm";}
+	else if ($wuskydayprecipIntensity4>0){echo number_format($wuskydayprecipIntensity4,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -400,8 +400,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc5.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh5,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm5>0){echo number_format($wuskydayacumm5,1);echo " cm";}
-	else if ($wuskydayprecipIntensity5>0){echo number_format($wuskydayprecipIntensity5,1);echo " ".$rainunit;}
+	if ($wuskydayacumm5>0){echo number_format($wuskydayacumm5,2);echo " cm";}
+	else if ($wuskydayprecipIntensity5>0){echo number_format($wuskydayprecipIntensity5,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -435,8 +435,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc6.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh6,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm6>0){echo number_format($wuskydayacumm6,1);echo " cm";}
-	else if ($wuskydayprecipIntensity6>0){echo number_format($wuskydayprecipIntensity6,1);echo " ".$rainunit;}
+	if ($wuskydayacumm6>0){echo number_format($wuskydayacumm6,2);echo " cm";}
+	else if ($wuskydayprecipIntensity6>0){echo number_format($wuskydayprecipIntensity6,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -472,8 +472,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc7.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh7,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm7>0){echo number_format($wuskydayacumm7,1);echo " cm";}
-	else if ($wuskydayprecipIntensity7>0){echo number_format($wuskydayprecipIntensity7,1);echo " ".$rainunit;}
+	if ($wuskydayacumm7>0){echo number_format($wuskydayacumm7,2);echo " cm";}
+	else if ($wuskydayprecipIntensity7>0){echo number_format($wuskydayprecipIntensity7,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -510,8 +510,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc8.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh8,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm8>0){echo number_format($wuskydayacumm8,1);echo " cm";}
-	else if ($wuskydayprecipIntensity8>0){echo number_format($wuskydayprecipIntensity8,1);echo " ".$rainunit;}
+	if ($wuskydayacumm8>0){echo number_format($wuskydayacumm8,2);echo " cm";}
+	else if ($wuskydayprecipIntensity8>0){echo number_format($wuskydayprecipIntensity8,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -547,8 +547,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc9.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh9,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm9>0){echo number_format($wuskydayacumm9,1);echo " cm";}
-	else if ($wuskydayprecipIntensity9>0){echo number_format($wuskydayprecipIntensity9,1);echo " ".$rainunit;}
+	if ($wuskydayacumm9>0){echo number_format($wuskydayacumm9,2);echo " cm";}
+	else if ($wuskydayprecipIntensity9>0){echo number_format($wuskydayprecipIntensity9,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
@@ -582,8 +582,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc10.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh10,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm10>0){echo number_format($wuskydayacumm10,1);echo " cm";}
-	else if ($wuskydayprecipIntensity10>0){echo number_format($wuskydayprecipIntensity10,1);echo " ".$rainunit;}
+	if ($wuskydayacumm10>0){echo number_format($wuskydayacumm10,2);echo " cm";}
+	else if ($wuskydayprecipIntensity10>0){echo number_format($wuskydayprecipIntensity10,2);echo " ".$rainunit;}
 	else echo "";
 	 ?>  </div>
 </article> 
