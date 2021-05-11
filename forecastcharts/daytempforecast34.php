@@ -31,25 +31,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>Forecast Chart Temp</title>	
-		<style>
-		@font-face {
-			   font-family: weathertext3;
-			   src: url(../fonts/verbatim-bold.woff) format("woff");
-		   }
-	   
-		   @font-face {
-			   font-family: weathertext2;
-			   src: url(../fonts/verbatim-bold.woff) format("woff");
-		   }
-
-		   @font-face {
-			font-family: verb;
-			src: url(../fonts/verbatim-bold.woff) format("woff");
-		}
-		   </style>
-
-
+		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
 		
 	';	
@@ -141,11 +123,12 @@ return tempcolor;}
  axisX: {
 	gridColor: "#555",	
 			gridDashType: "dot",
-		    labelFontSize: 7,
+		    labelFontSize: 8,
 			labelFontColor:' #fff',
 			lineThickness: 1,
 			gridThickness: 1,				
-			labelFontFamily: "weathertext2",						
+			labelFontFamily: "Helvetica",	
+		labelFontWeight: "bold",					
 			interval:1,
 			labelAngle: 0,			
 			crosshair: {
@@ -178,7 +161,8 @@ return tempcolor;}
 		interval:<?php echo $interval?>,
 		labelFontSize: 8,
 		labelFontColor:' #fff',			
-		labelFontFamily: "weathertext2",		
+		labelFontFamily: "Helvetica",	
+		labelFontWeight: "bold",			
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) ;  
          },		
@@ -207,7 +191,7 @@ return tempcolor;}
 		{
 			indexLabelLineThickness:0, 			
        		indexLabel: "{y}°",
-	   		indexLabelFontSize: 8,
+	   		indexLabelFontSize: 9,
 	   		indexLabelFontColor: "#FFF",	  
 	   		indexLabelMaxWidth: 50,	   		
        		indexLabelWrap: true,
@@ -222,7 +206,7 @@ return tempcolor;}
 			markerType: "circle",
 			name:"Temperature",
 			dataPoints: dataPoints1,
-			yValueFormatString: "#0.##",
+			yValueFormatString: "#",
 		},
 		{
 			

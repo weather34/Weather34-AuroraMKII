@@ -25,9 +25,8 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>Forecast Chart Temp</title>	
+		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
-		
 	';	
 	?>
     <br>
@@ -202,7 +201,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });
 

@@ -28,20 +28,19 @@ $conv= '1';
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>Forecast Chart Temp</title>	
+		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
-		
 	';	
 	?>
     <br>
     <script type="text/javascript">
 
 function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=0 && weather34value<=10) {thecolor='hsla(185, 100%, 37%, .8)';}
-else if (weather34value>10 && weather34value<=20) {thecolor='hsla(75, 62%, 43%,.8)';}
-else if (weather34value>20 && weather34value<=30) {thecolor='hsla(35, 77%, 58%,.8)';}
-else if (weather34value>30 && weather34value<=50) {thecolor='hsla(19, 66%, 55%,.8)';}  
-else if (weather34value>50 && weather34value<=200) {thecolor='hsla(2, 56%, 55%,.8)';}            
+if (weather34value>=0 && weather34value<=10) {thecolor='hsla(185, 100%, 37%,1)';}
+else if (weather34value>10 && weather34value<=20) {thecolor='hsla(75, 62%, 43%,1)';}
+else if (weather34value>20 && weather34value<=30) {thecolor='hsla(35, 77%, 58%,1)';}
+else if (weather34value>30 && weather34value<=50) {thecolor='hsla(19, 66%, 55%,1)';}  
+else if (weather34value>50 && weather34value<=200) {thecolor='hsla(2, 56%, 55%,1)';}            
 else {thecolor='hsla(206, 12%, 27%, .4)';}
 return thecolor;}
 
@@ -211,7 +210,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });
 

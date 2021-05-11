@@ -161,15 +161,15 @@ img{
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-	margin-top:-45px;
-	margin-left:-10px;
-	width:180px;
+	margin-top:-47px;
+	margin-left:-12px;
+	width:165px;
 	height:max-content;	
 	word-wrap:break-word;
 	overflow: visible;
+	font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Ubuntu,Roboto,Cantarell,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
 
 }
-
 [data-title] {
     position: relative;
     left: -5px;
