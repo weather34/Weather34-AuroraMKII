@@ -1,4 +1,4 @@
-<?php include('../../settings.php');
+<?php include('../settings.php');
 	
 	#############################################################
 	#	                                                      
@@ -46,17 +46,15 @@
     <br>
 	<script type="text/javascript">
 	
-	
-	
 
 	function WEATHER34CHARTCOLORS(weather34value) {
 if (weather34value>=-50 && weather34value<=41) {tempcolor='hsla(185, 100%, 37%, 1)';}
-else if (weather34value>41 && weather34value<=51.8) {tempcolor='hsl(75, 62%, 43%)';}
-else if (weather34value>51.8 && weather34value<=64.4){tempcolor=' hsl(35, 77%, 58%)';}  
-else if (weather34value>64.4 && weather34value<=73.4){tempcolor=' hsl(34, 98%, 49%)';} 
-else if (weather34value>73.4 && weather34value<=80.6){tempcolor=' hsl(19, 66%, 55%)';}   
-else if (weather34value>80.6 && weather34value<=95){tempcolor=' hsla(6, 58%, 54%,1)';}    
-else if (weather34value>95 && weather34value<=140){tempcolor=' hsla(0, 38%, 32%,1)';}  
+else if (weather34value>41 && weather34value<=59) {tempcolor='hsl(74, 60%, 46%)';}
+else if (weather34value>59 && weather34value<=68){tempcolor=' hsl(35, 77%, 58%)';}  
+else if (weather34value>68 && weather34value<=75.2){tempcolor='#F88D01';} 
+else if (weather34value>75.2 && weather34value<=80.6){tempcolor=' hsl(19, 66%, 55%)';}   
+else if (weather34value>80.6 && weather34value<=95){tempcolor=' hsl(2, 56%, 55%)';}    
+else if (weather34value>95 && weather34value<=140){tempcolor='hsl(4, 40%, 48%)';}  
 return tempcolor;}
 	
 
