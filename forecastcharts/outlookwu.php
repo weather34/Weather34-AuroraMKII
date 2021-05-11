@@ -110,12 +110,12 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
 body,html{font-size:12px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:5px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,.9);}
-.grid>article img{max-width:23%}
+.grid>article img{max-width:20%}
 actualt{font-size:8.5px}
 a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
-.greydesc{color:#fff;margin-left:35px;margin-top:-22px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
-.tempvalue{color:#fff;margin-left:100px;margin-top:-42px;position:absolute;font-size:15px;font-family:verb}
-.rainvalue{color:#fff;margin-left:-25px;margin-top:15px;position:absolute;font-size:8px;font-family:verb;width:max-content}
+.greydesc{color:#fff;margin-left:35px;margin-top:-18px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
+.tempvalue{color:#fff;margin-left:100px;margin-top:-37px;position:absolute;font-size:15px;font-family:verb}
+.rainvalue{color:#fff;margin-left:7px;margin-top:13px;position:absolute;font-size:8px;font-family:verb;width:max-content}
 bluet{color:#01a4b5;background:#01a4b5}
 yellowt{color:#e6a141}
 oranget{color:#d05f2d}
@@ -123,6 +123,7 @@ greent{color:#90b12a}
 redt{color:#cd5245}
 deepredt{color:hsl(0, 38%, 32%)}
 purplet{color:rgba(151,88,190,.8)}
+.iconpos{position:relative;padding-left:5px;}
 @media screen and (max-width:960px){
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,4r));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);
@@ -134,6 +135,45 @@ img{
 	-moz-filter:contrast(140%);
 	-o-filter:contrast(140%);
 	-ms-filter:contrast(140%);		
+}
+
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all .1s ease .5s;
+    visibility: visible
+}
+
+[data-title]:after {	
+	display:flex;
+    content: attr(data-title);
+    background-color: #3D464D;
+    color: #fff;
+    font-size: 9px;
+    position: absolute;
+    padding: 3px;
+    padding-bottom: 3px;        
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+	margin-top:-45px;
+	margin-left:-10px;
+	width:180px;
+	height:max-content;	
+	word-wrap:break-word;
+	overflow: visible;
+
+}
+
+[data-title] {
+    position: relative;
+    left: -5px;
+	
 }
 </style>
 
@@ -159,19 +199,25 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	else if($wuskydayTempHigh>5){echo "hsl(74, 60%, 46%)";}}?>
 	">  
    <actualt><?php echo $wuskydayTime ?></actualt>
+
+
+
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";    
+	echo "<a href='#' data-title='$wuskydaysummary'>";      		  			  
 	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm>0){echo number_format($wuskydayacumm,1);echo " cm";}
 	else if ($wuskydayprecipIntensity>0){echo number_format($wuskydayprecipIntensity,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	
 	 ?>  </div>
+	
 </article> 
 
 
@@ -195,17 +241,20 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 			else if($wuskydayTempHigh1>5){echo "hsl(74, 60%, 46%)";}}?>
 	">  
    <actualt ><?php echo $wuskydayTime1 ?></actualt>
+
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";  
+	echo "<a href='#' data-title='$wuskydaysummary1'>";        		  			  
 	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc1.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh1,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm1>0){echo number_format($wuskydayacumm1,1);echo " cm";}
 	else if ($wuskydayprecipIntensity1>0){echo number_format($wuskydayprecipIntensity1,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
   
@@ -229,17 +278,21 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 			else if($wuskydayTempHigh2>5){echo "hsl(74, 60%, 46%)";}}?>
 	">  
    <actualt ><?php echo $wuskydayTime2 ?></actualt>
+
+   <a href='#' data-title="<?php echo $wuskydaysummary2?>">
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";  
+	echo "<a href='#' data-title='$wuskydaysummary2'>";     		  			  
 	if ($wuskydaynight2=='D'){echo '<img src="../wuicons/'.$wuskydayIcon2.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight2=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon2.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc2.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh2,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm2>0){echo number_format($wuskydayacumm2,1);echo " cm";}
 	else if ($wuskydayprecipIntensity2>0){echo number_format($wuskydayprecipIntensity2,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
 
@@ -263,17 +316,22 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 		else if($wuskydayTempHigh3>5){echo "hsl(74, 60%, 46%)";}}?>
 	">  
    <actualt ><?php echo $wuskydayTime3 ?></actualt>
+
+   
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";  
+	echo "<a href='#' data-title='$wuskydaysummary3'>";    		  			  
 	if ($wuskydaynight3=='D'){echo '<img src="../wuicons/'.$wuskydayIcon3.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight3=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon3.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc3.'</div>';	
+	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh3,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm3>0){echo number_format($wuskydayacumm3,1);echo " cm";}
 	else if ($wuskydayprecipIntensity3>0){echo number_format($wuskydayprecipIntensity3,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
   
@@ -298,16 +356,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime4 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";  
+	echo "<a href='#' data-title='$wuskydaysummary4'>";        		  			  
 	if ($wuskydaynight4=='D'){echo '<img src="../wuicons/'.$wuskydayIcon4.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight4=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon4.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc4.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh4,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm4>0){echo number_format($wuskydayacumm4,1);echo " cm";}
 	else if ($wuskydayprecipIntensity4>0){echo number_format($wuskydayprecipIntensity4,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
 <article style="background:<?php 
@@ -331,16 +391,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime5 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";   
+	echo "<a href='#' data-title='$wuskydaysummary5'>";       		  			  
 	if ($wuskydaynight5=='D'){echo '<img src="../wuicons/'.$wuskydayIcon5.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight5=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon5.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc5.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh5,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm5>0){echo number_format($wuskydayacumm5,1);echo " cm";}
 	else if ($wuskydayprecipIntensity5>0){echo number_format($wuskydayprecipIntensity5,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
 <article style="background:<?php 
@@ -364,16 +426,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime6 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";    
+	echo "<a href='#' data-title='$wuskydaysummary6'>";      		  			  
 	if ($wuskydaynight6=='D'){echo '<img src="../wuicons/'.$wuskydayIcon6.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight6=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon6.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc6.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh6,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm6>0){echo number_format($wuskydayacumm6,1);echo " cm";}
 	else if ($wuskydayprecipIntensity6>0){echo number_format($wuskydayprecipIntensity6,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
 
@@ -399,16 +463,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime7 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";   
+	echo "<a href='#' data-title='$wuskydaysummary7'>";       		  			  
 	if ($wuskydaynight7=='D'){echo '<img src="../wuicons/'.$wuskydayIcon7.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight7=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon7.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc7.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh7,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm7>0){echo number_format($wuskydayacumm7,1);echo " cm";}
 	else if ($wuskydayprecipIntensity7>0){echo number_format($wuskydayprecipIntensity7,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
   
@@ -435,16 +501,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime8 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";  
+	echo "<a href='#' data-title='$wuskydaysummary8'>";        		  			  
 	if ($wuskydaynight8=='D'){echo '<img src="../wuicons/'.$wuskydayIcon8.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight8=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon8.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc8.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh8,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm8>0){echo number_format($wuskydayacumm8,1);echo " cm";}
 	else if ($wuskydayprecipIntensity8>0){echo number_format($wuskydayprecipIntensity8,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
   
@@ -470,16 +538,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime9 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";  
+	echo "<a href='#' data-title='$wuskydaysummary9'>";        		  			  
 	if ($wuskydaynight9=='D'){echo '<img src="../wuicons/'.$wuskydayIcon9.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight9=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon9.'.svg" class="iconpos"></img></div>';}
+	echo "</a>";
 	 //summary of icon
 	echo '<div class=greydesc>'. $wuskydesc9.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh9,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm9>0){echo number_format($wuskydayacumm9,1);echo " cm";}
 	else if ($wuskydayprecipIntensity9>0){echo number_format($wuskydayprecipIntensity9,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
 <article style="background:<?php 
@@ -503,16 +573,18 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	">  
    <actualt ><?php echo $wuskydayTime10 ?></actualt>
  <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";      		  			  
+	echo"<div class=iconpos> ";     
+	echo "<a href='#' data-title='$wuskydaysummary10'>";     		  			  
 	if ($wuskydaynight10=='D'){echo '<img src="../wuicons/'.$wuskydayIcon10.'.svg" class="iconpos"></img></div>';}
 	if ($wuskydaynight10=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon10.'.svg" class="iconpos"></img></div>';}
-	 //summary of icon
+	echo "</a>";
+	//summary of icon
 	echo '<div class=greydesc>'. $wuskydesc10.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh10,0);echo"°";
 	echo "<div class=rainvalue>"; 
 	if ($wuskydayacumm10>0){echo number_format($wuskydayacumm10,1);echo " cm";}
 	else if ($wuskydayprecipIntensity10>0){echo number_format($wuskydayprecipIntensity10,1);echo " ".$rainunit;}
-	else echo "No Precipitation";
+	else echo "";
 	 ?>  </div>
 </article> 
 

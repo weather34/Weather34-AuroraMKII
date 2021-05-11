@@ -21,19 +21,18 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>Forecast Chart Temp</title>	
+		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
-		
 	';	
 	?>
     <br>
     <script type="text/javascript">
 
-function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=0 && weather34value<=90) {thecolor='hsla(185, 100%, 37%, .4)';}
-else if (weather34value>90 && weather34value<=180) {thecolor='hsla(19, 66%, 55%,.4)';}
-else if (weather34value>180 && weather34value<=300) {thecolor='hsla(2, 56%, 55%,.4)';}
-else if (weather34value>300 && weather34value<=360) {thecolor='hsla(185, 100%, 37%, .4)';}           
+function WEATHER34CHARTCOLORS(weather34value) { 
+if (weather34value>=0 && weather34value<=90) {thecolor='hsla(185, 100%, 37%, 1)';}
+else if (weather34value>90 && weather34value<=180) {thecolor='hsl(35, 77%, 58%)';}
+else if (weather34value>180 && weather34value<=300) {thecolor='hsla(2, 56%, 55%,1)';}
+else if (weather34value>300 && weather34value<=360) {thecolor='hsla(185, 100%, 37%, 1)';}           
 else {thecolor='#00adbd';}
 return thecolor;}
 
@@ -211,7 +210,9 @@ var yLabelCounter=0;
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });
 
