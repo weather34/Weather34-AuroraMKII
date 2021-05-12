@@ -744,5 +744,5 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
 $weather34version='Aurora MKII';
-$weather34versiondate='9th May 2021';
+$weather34versiondate='12th May 2021';
 ?>
