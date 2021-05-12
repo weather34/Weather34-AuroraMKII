@@ -189,11 +189,12 @@ return tempcolor;}
 		
 		data: [
 		{
-			indexLabelLineThickness:0, 			
-       		indexLabel: "{y}°",
+			indexLabelLineThickness:0,       
+       		indexLabel: "{y}",
 	   		indexLabelFontSize: 9,
 	   		indexLabelFontColor: "#FFF",	  
-	   		indexLabelMaxWidth: 50,	   		
+	   		indexLabelMaxWidth: 50,
+	   		indexLabelFontWeight: "bold",		   			   		
        		indexLabelWrap: true,
 	   		indexLabelPlacement: "inside",     
 			markerSize:23,

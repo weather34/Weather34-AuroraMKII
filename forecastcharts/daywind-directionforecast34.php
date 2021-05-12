@@ -189,7 +189,7 @@ var yLabelCounter=0;
 			indexLabelLineThickness:0,       
        		indexLabel: "{y}",
 	   		indexLabelFontSize: 9,
-	   		indexLabelFontColor: "#eee",	  
+	   		indexLabelFontColor: "#fff",	  
 	   		indexLabelMaxWidth: 50,
 	   		indexLabelFontWeight: "bold",
        		indexLabelWrap: true,

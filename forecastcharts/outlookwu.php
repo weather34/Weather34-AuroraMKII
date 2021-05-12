@@ -115,7 +115,7 @@ actualt{font-size:8.5px}
 a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
 .greydesc{color:#fff;margin-left:35px;margin-top:-18px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
 .tempvalue{color:#fff;margin-left:100px;margin-top:-37px;position:absolute;font-size:15px;font-family:verb}
-.rainvalue{color:#fff;margin-left:7px;margin-top:13px;position:absolute;font-size:8px;font-family:verb;width:max-content}
+.rainvalue{color:#fff;margin-left:2px;margin-top:13px;position:absolute;font-size:8px;font-family:verb;width:max-content}
 bluet{color:#01a4b5;background:#01a4b5}
 yellowt{color:#e6a141}
 oranget{color:#d05f2d}

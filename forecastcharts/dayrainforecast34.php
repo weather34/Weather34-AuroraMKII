@@ -182,7 +182,7 @@ return rainlevel;}
 			indexLabelLineThickness: 0,       
        		indexLabel: "{y}",
 	   		indexLabelFontSize: 9,
-	   		indexLabelFontColor: "#eee",	  
+	   		indexLabelFontColor: "#fff",	  
 	   		indexLabelMaxWidth: 100,
 	   		indexLabelFontWeight: "bold",
        		indexLabelWrap: true,

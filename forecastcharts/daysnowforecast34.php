@@ -180,7 +180,7 @@ return thecolor;}
 			indexLabelLineThickness: 0,       
        		indexLabel: "{y}",
 	   		indexLabelFontSize: 9,
-	   		indexLabelFontColor: "#eee",	  
+	   		indexLabelFontColor: "#fff",	  
 	   		indexLabelMaxWidth: 30,
 	   		indexLabelFontWeight: "bold",
        		indexLabelWrap: true,

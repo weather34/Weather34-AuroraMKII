@@ -182,6 +182,7 @@ return tempcolor;}
 			indexLabelLineThickness:0, 			
        		indexLabel: "{y}°",
 	   		indexLabelFontSize: 9,
+			indexlabelFontWeight: "bold",
 	   		indexLabelFontColor: "#FFF",	  
 	   		indexLabelMaxWidth: 50,	   		
        		indexLabelWrap: true,

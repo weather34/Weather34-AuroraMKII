@@ -170,7 +170,7 @@ return uvlevel;}
 		{
 			indexLabelLineThickness:0,       
        		indexLabel: "{y}",
-	   		indexLabelFontSize: 10,
+	   		indexLabelFontSize:9,
 	   		indexLabelFontColor: "#FFF",	  
 	   		indexLabelMaxWidth: 50,
 	   		indexLabelFontWeight: "bold",
