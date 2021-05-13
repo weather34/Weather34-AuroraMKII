@@ -107,11 +107,11 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
     font-family: verb;
     src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff")
 }
-body,html{font-size:12px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body,html{font-size:12px;font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:5px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,.9);}
 .grid>article img{max-width:20%}
-actualt{font-size:8.5px}
+actualt{font-size:8px}
 a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
 .greydesc{color:#fff;margin-left:35px;margin-top:-18px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
 .tempvalue{color:#fff;margin-left:100px;margin-top:-37px;position:absolute;font-size:15px;font-family:verb}
@@ -130,8 +130,8 @@ purplet{color:rgba(151,88,190,.8)}
 padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
 	background: hsla(228, 10%, 10%,.9);height:38px}}
 img{
-	filter:contrast(140%);
-	-webkit-filter:contrast(140%);
+	filter:contrast(180%);
+	-webkit-filter:contrast(180%);
 	-moz-filter:contrast(140%);
 	-o-filter:contrast(140%);
 	-ms-filter:contrast(140%);		
@@ -163,7 +163,6 @@ img{
     -o-border-radius: 3px;
 	margin-top:-47px;
 	margin-left:-12px;
-	line-height:1;
 	width:165px;
 	height:max-content;	
 	word-wrap:break-word;
@@ -171,9 +170,11 @@ img{
 	font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Ubuntu,Roboto,Cantarell,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
 
 }
+
 [data-title] {
     position: relative;
     left: -5px;
+	
 	
 }
 </style>
@@ -213,9 +214,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm>0){echo number_format($wuskydayacumm,2);echo " cm";}
+	if ($wuskydayacumm>0){echo number_format($wuskydayacumm,1);echo " cm";}
 	else if ($wuskydayprecipIntensity>0){echo number_format($wuskydayprecipIntensity,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV>0){echo " UVI ".number_format($wuskydayUV,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity."%</span>";
 	
 	 ?>  </div>
 	
@@ -253,9 +255,11 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc1.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh1,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm1>0){echo number_format($wuskydayacumm1,2);echo " cm";}
+	if ($wuskydayacumm1>0){echo number_format($wuskydayacumm1,1);echo " cm";}
 	else if ($wuskydayprecipIntensity1>0){echo number_format($wuskydayprecipIntensity1,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV1>0){echo " UVI ".number_format($wuskydayUV1,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity1."%</span>";
+	
 	 ?>  </div>
 </article> 
   
@@ -291,9 +295,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc2.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh2,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm2>0){echo number_format($wuskydayacumm2,2);echo " cm";}
+	if ($wuskydayacumm2>0){echo number_format($wuskydayacumm2,1);echo " cm";}
 	else if ($wuskydayprecipIntensity2>0){echo number_format($wuskydayprecipIntensity2,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV2>0){echo " UVI ".number_format($wuskydayUV2,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity2."%</span>";
 	 ?>  </div>
 </article> 
 
@@ -330,9 +335,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh3,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm3>0){echo number_format($wuskydayacumm3,2);echo " cm";}
+	if ($wuskydayacumm3>0){echo number_format($wuskydayacumm3,1);echo " cm";}
 	else if ($wuskydayprecipIntensity3>0){echo number_format($wuskydayprecipIntensity3,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV3>0){echo " UVI ".number_format($wuskydayUV3,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity3."%</span>";
 	 ?>  </div>
 </article> 
   
@@ -366,9 +372,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc4.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh4,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm4>0){echo number_format($wuskydayacumm4,2);echo " cm";}
+	if ($wuskydayacumm4>0){echo number_format($wuskydayacumm4,1);echo " cm";}
 	else if ($wuskydayprecipIntensity4>0){echo number_format($wuskydayprecipIntensity4,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV4>0){echo " UVI ".number_format($wuskydayUV4,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity4."%</span>";
 	 ?>  </div>
 </article> 
 <article style="background:<?php 
@@ -401,9 +408,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc5.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh5,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm5>0){echo number_format($wuskydayacumm5,2);echo " cm";}
+	if ($wuskydayacumm5>0){echo number_format($wuskydayacumm5,1);echo " cm";}
 	else if ($wuskydayprecipIntensity5>0){echo number_format($wuskydayprecipIntensity5,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV5>0){echo " UVI ".number_format($wuskydayUV5,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity5."%</span>";
 	 ?>  </div>
 </article> 
 <article style="background:<?php 
@@ -436,9 +444,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc6.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh6,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm6>0){echo number_format($wuskydayacumm6,2);echo " cm";}
+	if ($wuskydayacumm6>0){echo number_format($wuskydayacumm6,1);echo " cm";}
 	else if ($wuskydayprecipIntensity6>0){echo number_format($wuskydayprecipIntensity6,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV6>0){echo " UVI ".number_format($wuskydayUV6,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity6."%</span>";
 	 ?>  </div>
 </article> 
 
@@ -473,9 +482,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc7.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh7,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm7>0){echo number_format($wuskydayacumm7,2);echo " cm";}
+	if ($wuskydayacumm7>0){echo number_format($wuskydayacumm7,1);echo " cm";}
 	else if ($wuskydayprecipIntensity7>0){echo number_format($wuskydayprecipIntensity7,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV7>0){echo " UVI ".number_format($wuskydayUV7,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity7."%</span>";
 	 ?>  </div>
 </article> 
   
@@ -511,9 +521,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc8.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh8,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm8>0){echo number_format($wuskydayacumm8,2);echo " cm";}
+	if ($wuskydayacumm8>0){echo number_format($wuskydayacumm8,1);echo " cm";}
 	else if ($wuskydayprecipIntensity8>0){echo number_format($wuskydayprecipIntensity8,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV8>0){echo " UVI ".number_format($wuskydayUV8,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity8."%</span>";
 	 ?>  </div>
 </article> 
   
@@ -548,9 +559,10 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc9.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh9,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm9>0){echo number_format($wuskydayacumm9,2);echo " cm";}
+	if ($wuskydayacumm9>0){echo number_format($wuskydayacumm9,1);echo " cm";}
 	else if ($wuskydayprecipIntensity9>0){echo number_format($wuskydayprecipIntensity9,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV9>0){echo " UVI ".number_format($wuskydayUV9,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity9."%</span>";
 	 ?>  </div>
 </article> 
 <article style="background:<?php 
@@ -583,15 +595,16 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	echo '<div class=greydesc>'. $wuskydesc10.'</div>';	
 	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh10,0);echo"°";
 	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm10>0){echo number_format($wuskydayacumm10,2);echo " cm";}
+	if ($wuskydayacumm10>0){echo number_format($wuskydayacumm10,1);echo " cm";}
 	else if ($wuskydayprecipIntensity10>0){echo number_format($wuskydayprecipIntensity10,2);echo " ".$rainunit;}
-	else echo "";
+	else if ($wuskydayUV10>0){echo " UVI ".number_format($wuskydayUV10,0);}
+	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity10."%</span>";
 	 ?>  </div>
 </article> 
 
   <article style="background:rgba(76, 123, 160, 1);">
   <span style="font-size:8px;">
-  <?php echo $info?> CSS/SVG/PHP <a href="https://weather34.com" title="weather34.com" target="_blank" >weather34.com</a></span> 
+  <?php echo $info?> CSS/SVG/PHP <a href="https://weather34.com/homeweatherstation/" title="weather34.com" target="_blank" >weather34.com</a></span> 
   <br>
   <span style="font-size:8px;">
   <?php echo $info?> Forecast <a href="https://www.wunderground.com/weather/api/" title="Weather Underground API" target="_blank">Weather Underground</a></span>
