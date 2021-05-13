@@ -161,8 +161,8 @@ img{
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-	margin-top:-47px;
-	margin-left:-12px;
+	top:-30px;
+	left:-12px;
 	width:165px;
 	height:max-content;	
 	word-wrap:break-word;
