@@ -27,11 +27,11 @@
 
 
 function WEATHER34CHARTCOLORS(uv) {
-if (uv>=1 && uv<=2) {uvlevel=' hsla(75, 62%, 43%,.9)';}
-else if (uv>2 && uv<=5) {uvlevel='hsla(35, 77%, 58%,.8)';}
-else if (uv>5 && uv<=7) {uvlevel='hsla(19, 66%, 55%,.8)';}
-else if (uv>7 && uv<=10) {uvlevel='hsla(7, 60%, 57%,.8)';}
-else if (uv>10 ) {uvlevel='hsla(246, 31%, 62%,.8)';}         
+if (uv>=1 && uv<=2) {uvlevel=' hsla(75, 62%, 43%,1)';}
+else if (uv>2 && uv<=5) {uvlevel='hsla(35, 77%, 58%,1)';}
+else if (uv>5 && uv<=7) {uvlevel='hsla(19, 66%, 55%,1)';}
+else if (uv>7 && uv<=10) {uvlevel='hsla(7, 60%, 57%,1)';}
+else if (uv>10 ) {uvlevel='hsla(246, 31%, 62%,1)';}         
 else {uvlevel='hsla(206, 12%, 27%, 0)';}
 return uvlevel;}
 

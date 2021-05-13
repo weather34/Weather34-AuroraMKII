@@ -430,7 +430,8 @@ smalluvunit{font-size:.6rem;font-family:Arial,Helvetica,system;}
 .hitempy{position:relative;background:rgba(61, 64, 66, 0.5);color:#fff;font-size:12px;width:110px;padding:1px;-webit-border-radius:2px;border-radius:2px;margin-top:-44px;margin-left:72px;padding:2px;line-height:10px;font-size:9px}.svgimage{background:rgba(0, 155, 171, 1.000);-webit-border-radius:2px;border-radius:2px;}
 orange1{color:#fff;}
 .greydesc{color:#3D464D;margin-left:40px;margin-top:-20px;position:absolute;font-size:0.85em;font-family:verb}
-.summarydesc{position:relative;margin-left:5px;margin-top:-8px;font-size:10px;width:100%;height:max-content;color:#fff;z-index:100;font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Ubuntu,Roboto,Cantarell,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+.summarydesc{position:relative;margin-left:5px;margin-top:-5px;font-size:10px;width:100%;height:max-content;color:#fff;line-height:1;
+z-index:100;font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Ubuntu,Roboto,Cantarell,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
 }
 .none{float:none;margin-top:10px;position:absolute}
 spantemp{font-size:0.75em;color:#3D464D;font-family:weathertext2;}
@@ -451,9 +452,8 @@ canvas,img,iframe,svg{image-rendering:auto;}
 .mbsmartlogo{position:relative;float:right;top:12px;}
 
 </style>
-<?php $forecastime = filemtime ('../../jsondata/wuforecast.txt');?>
-<div class="weather34darkbrowser" url="Forecast For Sinanoba Istanbul
-<?php echo '&nbsp;';echo "Forecast Updated &nbsp;".date('g:ia ', $forecastime);?>">
+<?php $forecastime = filemtime ('jsondata/wuforecast.txt');?>
+<div class="weather34darkbrowser" url="Forecast For <?php echo $stationName ?> <?php echo '&nbsp;';echo "Forecast Updated &nbsp;".date( $timeformat, $forecastime);?>">
 </div>  
 <main class="grid">
   <article>
@@ -862,7 +862,7 @@ if($wuskydayTempHigh10 <=5){echo "hsla(185, 100%, 37%, 1)";}
   
   <!-- copyright needs to be kept please be ethical--->
   <article style="padding-left:10px;font-size:8px;">
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:8px;">
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com/homeweatherstation/" title="weather34.com" target="_blank" style="font-size:8px;">
   <br>weather34.com</a> &copy; 2015-<?php echo date('Y');?></span> <br>
 
   <span style="font-size:8px;"><br>

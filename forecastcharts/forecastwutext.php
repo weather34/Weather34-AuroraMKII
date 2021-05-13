@@ -397,7 +397,7 @@ else {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Weather34 Weather Underground Summary Forecast For <?php echo $stationlocation ?></title>
+  <title>Weather Underground Summary Forecast For <?php echo $stationName ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 @font-face{font-family:weathertext2;src:url(../css/fonts/verbatim-regular.woff) format("woff"),url(../fonts/verbatim-regular.woff2) format("woff2"),url(../fonts/verbatim-regular.ttf) format("truetype")}
@@ -895,7 +895,7 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
   <!-- copyright needs to be kept please be ethical--->
   <article style="border-left:10px solid rgba(76, 123, 160, 1);padding-left:10px">
     <span style="font-size:8px;">
-  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com" title="weather34.com" target="_blank" style="font-size:8px;">
+  <?php echo $info?> CSS/SVG/PHP scripts were developed by <a href="https://weather34.com/homeweatherstation/" title="weather34.com" target="_blank" style="font-size:8px;">
   <br>weather34.com</a> &copy; 2015-<?php echo date('Y');?></span> <br>
 
   <span style="font-size:8px;"><br>

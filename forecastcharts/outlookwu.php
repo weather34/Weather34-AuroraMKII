@@ -163,6 +163,7 @@ img{
     -o-border-radius: 3px;
 	margin-top:-47px;
 	margin-left:-12px;
+	line-height:1;
 	width:165px;
 	height:max-content;	
 	word-wrap:break-word;
