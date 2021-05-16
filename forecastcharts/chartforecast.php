@@ -227,7 +227,7 @@ if ($wuskydayWinddircardinal1=='ESE'){$wuskydayWinddircardinal1='<yellow>ESE</ye
 if ($wuskydayWinddircardinal1=='SSE'){$wuskydayWinddircardinal1='<yellow>SSE</yellow>';}
 
 if ($wuskydayWinddircardinal1=='SW'){$wuskydayWinddircardinal1='<orange>SW</orange>';}
-if ($wuskydayWinddircardina1l=='SSW'){$wuskydayWinddircardinal1='<orange>SSW</orange>';}
+if ($wuskydayWinddircardinal1=='SSW'){$wuskydayWinddircardinal1='<orange>SSW</orange>';} 
 if ($wuskydayWinddircardinal1=='S'){$wuskydayWinddircardinal1='<orange>South</orange>';}
 
 if ($wuskydayWinddircardinal1=='WSW'){$wuskydayWinddircardinal1='<red>WSW</red>';}
