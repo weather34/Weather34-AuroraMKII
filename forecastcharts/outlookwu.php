@@ -108,27 +108,26 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
     src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff")
 }
 body,html{font-size:12px;font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
-.grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:5px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,.9);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,4fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
+.grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:3px;font-size:.8em;
+-webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,1);}
 .grid>article img{max-width:20%}
 actualt{font-size:8px}
 a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
-.greydesc{color:#fff;margin-left:35px;margin-top:-18px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
-.tempvalue{color:#fff;margin-left:100px;margin-top:-37px;position:absolute;font-size:15px;font-family:verb}
-.rainvalue{color:#fff;margin-left:2px;margin-top:13px;position:absolute;font-size:8px;font-family:verb;width:max-content}
-bluet{color:#01a4b5;background:#01a4b5}
-yellowt{color:#e6a141}
-oranget{color:#d05f2d}
-greent{color:#90b12a}
-redt{color:#cd5245}
-deepredt{color:hsl(0, 38%, 32%)}
-purplet{color:rgba(151,88,190,.8)}
+.greydesc{color:#fff;margin-left:45px;margin-top:-20px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
+.tempvalue{color:#fff;margin-left:130px;margin-top:-38px;position:absolute;font-size:15px;font-family:verb}
+.rainvalue{color:#fff;margin-left:0px;margin-top:8px;position:absolute;font-size:8px;font-family:verb;width:max-content}
+
 .iconpos{position:relative;padding-left:5px;}
-@media screen and (max-width:960px){
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(70px,4r));grid-gap:2px;align-items:stretch;color:#f5f7fc}
+@media screen and (max-width:800px){
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);
 padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
-	background: hsla(228, 10%, 10%,.9);height:38px}}
+	background: hsla(228, 10%, 10%,.9);height:38px}
+	.tempvalue{color:#fff;margin-left:100px;margin-top:-36px;position:absolute;font-size:15px;font-family:verb}	
+.rainvalue{color:#fff;margin-left:-12px;margin-top:12px;position:absolute;font-size:8px;font-family:verb;width:max-content}
+.greydesc{color:#fff;margin-left:40px;margin-top:-17px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
+	}
 img{
 	filter:contrast(180%);
 	-webkit-filter:contrast(180%);
@@ -181,87 +180,7 @@ img{
 
 
 <main class="grid">
-  <article style="background:<?php 
-  if($tempunit=='F'){
-if($wuskydayTempHigh <=41){echo "hsla(185, 100%, 37%, 1)";}
-else if($wuskydayTempHigh>=95){echo "hsl(4, 40%, 48%)";}
-else if($wuskydayTempHigh>=80.6){echo "hsl(2, 56%, 55%)";}
-else if($wuskydayTempHigh>=75.2){echo "hsl(19, 66%, 55%)";}
-else if($wuskydayTempHigh>=68){echo "#F88D01";}
-else if($wuskydayTempHigh>=59){echo "hsl(35, 77%, 58%)";}			  
-else if($wuskydayTempHigh>41){echo "hsl(74, 60%, 46%)";}}
-
-if($tempunit=='C'){
-if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
-	else if($wuskydayTempHigh>=35){echo "hsl(4, 40%, 48%)";}
-	else if($wuskydayTempHigh>=27){echo "hsl(2, 56%, 55%)";}
-	else if($wuskydayTempHigh>=24){echo "hsl(19, 66%, 55%)";}
-	else if($wuskydayTempHigh>=20){echo "#F88D01";}
-	else if($wuskydayTempHigh>=15){echo "hsl(35, 77%, 58%)";}			  
-	else if($wuskydayTempHigh>5){echo "hsl(74, 60%, 46%)";}}?>
-	">  
-   <actualt><?php echo $wuskydayTime ?></actualt>
-
-
-
- <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";    
-	echo "<a href='#' data-title='$wuskydaysummary'>";      		  			  
-	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg" class="iconpos"></img></div>';}
-	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg" class="iconpos"></img></div>';}
-	echo "</a>";
-	 //summary of icon
-	echo '<div class=greydesc>'. $wuskydesc.'</div>';	
-	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh,0);echo"°";
-	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm>0){echo number_format($wuskydayacumm,1);echo " cm";}
-	else if ($wuskydayprecipIntensity>0){echo number_format($wuskydayprecipIntensity,2);echo " ".$rainunit;}
-	else if ($wuskydayUV>0){echo " UVI ".number_format($wuskydayUV,0);}
-	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity."%</span>";
-	
-	 ?>  </div>
-	
-</article> 
-
-
-<article style="background:<?php 
-  	if($tempunit=='F'){
-		if($wuskydayTempHigh1 <=41){echo "hsla(185, 100%, 37%, 1)";}
-		else if($wuskydayTempHigh1>=95){echo "hsl(4, 40%, 48%)";}
-		else if($wuskydayTempHigh1>=80.6){echo "hsl(2, 56%, 55%)";}
-		else if($wuskydayTempHigh1>=75.2){echo "hsl(19, 66%, 55%)";}
-		else if($wuskydayTempHigh1>=68){echo "#F88D01";}
-		else if($wuskydayTempHigh1>=59){echo "hsl(35, 77%, 58%)";}			  
-		else if($wuskydayTempHigh1>41){echo "hsl(74, 60%, 46%)";}}
-		
-		if($tempunit=='C'){
-		if($wuskydayTempHigh1 <=5){echo "hsla(185, 100%, 37%, 1)";}
-			else if($wuskydayTempHigh1>=35){echo "hsl(4, 40%, 48%)";}
-			else if($wuskydayTempHigh1>=27){echo "hsl(2, 56%, 55%)";}
-			else if($wuskydayTempHigh1>=24){echo "hsl(19, 66%, 55%)";}
-			else if($wuskydayTempHigh1>=20){echo "#F88D01";}
-			else if($wuskydayTempHigh1>=15){echo "hsl(35, 77%, 58%)";}			  
-			else if($wuskydayTempHigh1>5){echo "hsl(74, 60%, 46%)";}}?>
-	">  
-   <actualt ><?php echo $wuskydayTime1 ?></actualt>
-
- <?php //0  detailed forecast  
-	echo"<div class=iconpos> ";  
-	echo "<a href='#' data-title='$wuskydaysummary1'>";        		  			  
-	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg" class="iconpos"></img></div>';}
-	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg" class="iconpos"></img></div>';}
-	echo "</a>";
-	 //summary of icon
-	echo '<div class=greydesc>'. $wuskydesc1.'</div>';	
-	echo "<div class=tempvalue>"; echo number_format($wuskydayTempHigh1,0);echo"°";
-	echo "<div class=rainvalue>"; 
-	if ($wuskydayacumm1>0){echo number_format($wuskydayacumm1,1);echo " cm";}
-	else if ($wuskydayprecipIntensity1>0){echo number_format($wuskydayprecipIntensity1,2);echo " ".$rainunit;}
-	else if ($wuskydayUV1>0){echo " UVI ".number_format($wuskydayUV1,0);}
-	else echo "<span style='margin-left:-20px'>Humidity ".$wuskyhumidity1."%</span>";
-	
-	 ?>  </div>
-</article> 
+  
   
 <article style="background:<?php 
   	if($tempunit=='F'){
@@ -603,13 +522,11 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 </article> 
 
   <article style="background:rgba(76, 123, 160, 1);">
-  <span style="font-size:8px;">
+  <span style="font-size:8px;display:inline-block">
   <?php echo $info?> CSS/SVG/PHP <a href="https://weather34.com/homeweatherstation/" title="weather34.com" target="_blank" >weather34.com</a></span> 
-  <br>
-  <span style="font-size:8px;">
+  <span style="font-size:8px;display:inline-block">
   <?php echo $info?> Forecast <a href="https://www.wunderground.com/weather/api/" title="Weather Underground API" target="_blank">Weather Underground</a></span>
-  <br>
-  <span style="font-size:8px;">
+  <span style="font-size:8px;display:inline-block">
   <?php echo $info?> Compiled with<a href="https://canvasjs.com" title="https://canvasjs.com" target="_blank"> CanvasJs</a></span>
 
     </article>  

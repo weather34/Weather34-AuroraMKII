@@ -1144,4 +1144,47 @@ if ($wuskydayWindGust5>=30){$wuskydayWindGust5=$wuskydayWindGust5*1.60934;}
 if ($wuskydayWindGust6>=30){$wuskydayWindGust6=$wuskydayWindGust6*1.60934;}
 if ($wuskydayWindGust7>=30){$wuskydayWindGust7=$wuskydayWindGust7*1.60934;}
 if ($wuskydayWindGust8>=30){$wuskydayWindGust8=$wuskydayWindGust8*1.60934;}
+
+ $wuskydaysummary=str_replace('Âº','°',$wuskydaysummary);
+ $wuskydaysummary1=str_replace('Âº','°',$wuskydaysummary1);
+ $wuskydaysummary2=str_replace('Âº','°',$wuskydaysummary2);
+ $wuskydaysummary3=str_replace('Âº','°',$wuskydaysummary3);
+ $wuskydaysummary4=str_replace('Âº','°',$wuskydaysummary4);
+ $wuskydaysummary5=str_replace('Âº','°',$wuskydaysummary5);
+ $wuskydaysummary6=str_replace('Âº','°',$wuskydaysummary6);
+ $wuskydaysummary7=str_replace('Âº','°',$wuskydaysummary7);
+ $wuskydaysummary8=str_replace('Âº','°',$wuskydaysummary8);
+ $wuskydaysummary9=str_replace('Âº','°',$wuskydaysummary9);
+ $wuskydaysummary10=str_replace('Âº','°',$wuskydaysummary10);
+
+ $wuskydaysummary=str_replace('ºC','°C',$wuskydaysummary);
+$wuskydaysummary1=str_replace('ºC','°C',$wuskydaysummary1);
+$wuskydaysummary=str_replace('ºF','°F',$wuskydaysummary);
+$wuskydaysummary1=str_replace('ºF','°F',$wuskydaysummary1);
+
+
+ $wuskydayTempHigh=str_replace('ÂºC','',$wuskydayTempHigh);
+ $wuskydayTempHigh1=str_replace('ÂºC','',$wuskydayTempHigh1);
+ $wuskydayTempHigh2=str_replace('ÂºC','',$wuskydayTempHigh2);
+ $wuskydayTempHigh3=str_replace('ÂºC','',$wuskydayTempHigh3);
+ $wuskydayTempHigh4=str_replace('ÂºC','',$wuskydayTempHigh4);
+ $wuskydayTempHigh5=str_replace('ÂºC','',$wuskydayTempHigh5);
+ $wuskydayTempHigh6=str_replace('ÂºC','',$wuskydayTempHigh6);
+ $wuskydayTempHigh7=str_replace('ÂºC','',$wuskydayTempHigh7);
+ $wuskydayTempHigh8=str_replace('ÂºC','',$wuskydayTempHigh8);
+ $wuskydayTempHigh9=str_replace('ÂºC','',$wuskydayTempHigh9);
+ $wuskydayTempHigh10=str_replace('ÂºC','',$wuskydayTempHigh10);
+
+ $wuskydayTempHigh=str_replace('ÂºF','',$wuskydayTempHigh);
+ $wuskydayTempHigh1=str_replace('ÂºF','',$wuskydayTempHigh1);
+ $wuskydayTempHigh2=str_replace('ÂºF','',$wuskydayTempHigh2);
+ $wuskydayTempHigh3=str_replace('ÂºF','',$wuskydayTempHigh3);
+ $wuskydayTempHigh4=str_replace('ÂºF','',$wuskydayTempHigh4);
+ $wuskydayTempHigh5=str_replace('ÂºF','',$wuskydayTempHigh5);
+ $wuskydayTempHigh6=str_replace('ÂºF','',$wuskydayTempHigh6);
+ $wuskydayTempHigh7=str_replace('ÂºF','',$wuskydayTempHigh7);
+ $wuskydayTempHigh8=str_replace('ÂºF','',$wuskydayTempHigh8);
+ $wuskydayTempHigh9=str_replace('ÂºF','',$wuskydayTempHigh9);
+ $wuskydayTempHigh10=str_replace('ÂºF','',$wuskydayTempHigh10);
+
 ?>

@@ -1,6 +1,7 @@
 <?php include_once('updaterwu.php');include('wudata.php');?>
 <!DOCTYPE html><html><head>
 <title> Weather34 Forecast <?php echo $stationName?></title>
+<meta charset="UTF-8">
 <meta name="title" content="Weather34 Forecast <?php echo $stationName?>">
 <meta name="description" content="Weather34 Forecast <?php echo $stationName?>">
 <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes">
@@ -13,6 +14,62 @@
 <link rel="preload" href="../fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face {
+    font-family: clock;
+    src: url(../fonts/clock3-webfont.woff2) format("woff2"), url(../fonts/clock3-webfont.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: weathertext3;
+    src: url(../fonts/verbatim-regular.woff2) format("woff2"), url(../fonts/verbatim-regular.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: weathertext2;
+    src: url(../fonts/verbatim-medium.woff2) format("woff2"), url(../fonts/verbatim-medium.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: headingtext;
+    src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2"), url(../fonts/HelveticaNeue-Medium.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: verb;
+    src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");
+    font-display: swap
+}
+
+body,html{font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.weather34-aurora a{background:none;}
+actualt{position:relative;font-size:11px;left:20px;top:-50px;}
+greydesc{display:block;left:-20px;margin-top:-15px;position:relative;font-size:11px;line-height:1;
+max-width:max-content;font-family:verb;padding-right:15px}
+
+tempvalue{margin-left:-10px;top:45px;position:absolute;font-size:28px;font-family:verb}
+extradata{display:block;left:-90px;top:30px;position:relative;font-size:10px;font-family:verb;width:450px}
+iconpos{position:relative;padding-left:5px;left:70px;margin-top:-80px}
+img{width:60px}
+.weather34-battery a {background:none;width:25px}
+.weather34-battery img {background:none;width:25px}
+
+
+@media screen and (max-width:960px){
+actualt{position:relative;font-size:10px;left:20px;top:-55px;}
+greydesc{position:relative;top:15px;font-size:10px;margin-left:-35px;max-width:max-content;padding:5px}
+tempvalue{position:relative;top:-55px;font-size:22px;margin-left:110px;}
+extradata{margin-left:-135px;top:25px;font-size:9px;font-family:verb;width:200px;padding:5px}
+iconpos{position:relative;padding-left:0px;;margin-left:0px;top:-10px}
+img{width:60px}}
+
+</style>
+<meta charset="UTF-8">
 </head>
 <body>
 <!-- weather34 grid flex layout -->
@@ -26,6 +83,199 @@
 </div>
 
   <ul class="grid-container-forecast">
+  
+  <li55>
+  <actualt><?php echo $wuskydayTime ?></actualt>
+  <iconpos>
+  <a href="#" data-title="<?php echo $wuskydesc?>">
+  <?php //Icon forecast  	    
+  			  
+	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg" ></img>';}
+	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg" ></img>';}
+  ?></a></iconpos>
+
+<tempvalue style="color:
+<?php //TEMPERATURE
+if($tempunit=='F'){
+if($wuskydayTempHigh <=41){echo "hsla(185, 100%, 37%, 1)";}
+else if($wuskydayTempHigh>=95){echo "hsl(4, 40%, 48%)";}
+else if($wuskydayTempHigh>=80.6){echo "hsl(2, 56%, 55%)";}
+else if($wuskydayTempHigh>=75.2){echo "hsl(19, 66%, 55%)";}
+else if($wuskydayTempHigh>=68){echo "#F88D01";}
+else if($wuskydayTempHigh>=59){echo "hsl(35, 77%, 58%)";}			  
+else if($wuskydayTempHigh>41){echo "hsl(74, 60%, 46%)";}}
+
+if($tempunit=='C'){
+if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
+	else if($wuskydayTempHigh>=35){echo "hsl(4, 40%, 48%)";}
+	else if($wuskydayTempHigh>=27){echo "hsl(2, 56%, 55%)";}
+	else if($wuskydayTempHigh>=24){echo "hsl(19, 66%, 55%)";}
+	else if($wuskydayTempHigh>=20){echo "#F88D01";}
+	else if($wuskydayTempHigh>=15){echo "hsl(35, 77%, 58%)";}			  
+	else if($wuskydayTempHigh>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+<?php echo number_format($wuskydayTempHigh,0);echo"°";?></tempvalue>
+
+
+
+<extradata>
+<?php //RAIN
+echo "Rain ";if ($wuskydayprecipIntensity>0)echo "<span style='color:hsla(185, 100%, 37%, 1)'>";echo number_format($wuskydayprecipIntensity,2);echo " ".$rainunit;echo "</span>";?><br>
+<?php //WIND
+if ($wuskydayWinddircardinal=='N'){$wuskydayWinddircardinal='<blue>North</blue>';}
+if ($wuskydayWinddircardinal=='NE'){$wuskydayWinddircardinal='<blue>NE</blue>';}
+if ($wuskydayWinddircardinal=='ENE'){$wuskydayWinddircardinal='<blue>ENE</blue>';}
+if ($wuskydayWinddircardinal=='NNW'){$wuskydayWinddircardinal='<blue>NNW</blue>';}
+if ($wuskydayWinddircardinal=='NWN'){$wuskydayWinddircardinal='<blue>NWN</blue>';}
+if ($wuskydayWinddircardinal=='NW'){$wuskydayWinddircardinal='<blue>NW</blue>';}
+
+if ($wuskydayWinddircardinal=='E'){$wuskydayWinddircardinal='<yellow>East</yellow>';}
+if ($wuskydayWinddircardinal=='SE'){$wuskydayWinddircardinal='<yellow>SE</yellow>';}
+if ($wuskydayWinddircardinal=='ESE'){$wuskydayWinddircardinal='<yellow>ESE</yellow>';}
+if ($wuskydayWinddircardinal=='SSE'){$wuskydayWinddircardinal='<yellow>SSE</yellow>';}
+
+if ($wuskydayWinddircardinal=='SW'){$wuskydayWinddircardinal='<orange>SW</orange>';}
+if ($wuskydayWinddircardinal=='SSW'){$wuskydayWinddircardinal='<orange>SSW</orange>';}
+if ($wuskydayWinddircardinal=='S'){$wuskydayWinddircardinal='<orange>South</orange>';}
+
+if ($wuskydayWinddircardinal=='WSW'){$wuskydayWinddircardinal='<red>WSW</red>';}
+if ($wuskydayWinddircardinal=='W'){$wuskydayWinddircardinal='<red>West</red>';}
+if ($wuskydayWinddircardinal=='WNW'){$wuskydayWinddircardinal='<red>WNW</red>';}
+echo "Wind ";
+if ($wuskydayWindGust>40)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayWindGust,0)."</span>";
+else if ($wuskydayWindGust>20)echo "<span style='hsl(34, 98%, 49%)'>". number_format($wuskydayWindGust,0)."</span>";
+else if ($wuskydayWindGust>=0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayWindGust,0)."</span>";
+echo " ".$windunit;echo " ".$wuskydayWinddircardinal;echo "</span>";?><br>
+<?php //UVINDEX
+if ($wuskydayUV>0){
+echo "UVINDEX ";
+if ($wuskydayUV>=10)echo "<span style='color:hsl(323, 40%, 54%)'>". number_format($wuskydayUV,0)."<br>";
+else if ($wuskydayUV>=8)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayUV,0)."<br>";
+else if ($wuskydayUV>=5)echo "<span style='color:hsl(34, 98%, 49%)'>". number_format($wuskydayUV,0)."<br>";
+else if ($wuskydayUV>=3)echo "<span style='color:hsla(35, 77%, 58%, 1)'>". number_format($wuskydayUV,0)."<br>";
+else if ($wuskydayUV>0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayUV,0)."<br>";
+echo "</span>";}
+?>
+<?php //HUMIDITY
+echo "Humidity ";
+if ($wuskyhumidity>=70)echo "<blue>". number_format($wuskyhumidity,0)."</blue>%<br>";
+else if ($wuskyhumidity>=60)echo "<yellow>". number_format($wuskyhumidity,0)."</yellow>%<br>";
+else if ($wuskyhumidity>=40)echo "<green>". number_format($wuskyhumidity,0)."</green>%<br>";
+else if ($wuskyhumidity>=0)echo "<red>". number_format($wuskyhumidity,0)."</red>%<br>";
+?>
+<?php //SNOW
+if ($wuskydaysnow>0)echo "Snow <blue>".$wuskydaysnow." </blue>cm";
+?>
+<?php //HEAT INDEX
+if ($tempunit=="F" && $wuskyheatindex>90)echo "Heat Index <red>".number_format($wuskyheatindex,0)."</red>°<br>";
+if ($tempunit=="C" && $wuskyheatindex>28)echo "Heat Index <red>".number_format($wuskyheatindex,0)."</red>°<br>";
+?>
+<?php //THUNDERSTORM
+if ($wuskythunder>=3)echo "Thunderstorm <red>Risk</red>";
+else if ($wuskythunder>=2)echo "Thunderstorm <orange>Risk</orange>";
+else if ($wuskythunder>0)echo "Thunderstorm <yellow>Risk</yellow>";
+?>
+</extradata>
+<greydesc><?php echo $wuskydaysummary;?></greydesc>
+  </li55>
+
+
+  <li55>
+  <actualt><?php echo $wuskydayTime1 ?></actualt>
+  <iconpos><a href="#" data-title="<?php echo $wuskydesc1?>">
+  <?php //Icon forecast  	    		  			  
+	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg"></img>';}
+	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg"></img>';}
+  ?></a></iconpos>
+
+<tempvalue style="color:
+<?php //TEMPERATURE
+if($tempunit=='F'){
+if($wuskydayTempHigh1 <=41){echo "hsla(185, 100%, 37%, 1)";}
+else if($wuskydayTempHigh1>=95){echo "hsl(4, 40%, 48%)";}
+else if($wuskydayTempHigh1>=80.6){echo "hsl(2, 56%, 55%)";}
+else if($wuskydayTempHigh1>=75.2){echo "hsl(19, 66%, 55%)";}
+else if($wuskydayTempHigh1>=68){echo "#F88D01";}
+else if($wuskydayTempHigh1>=59){echo "hsl(35, 77%, 58%)";}			  
+else if($wuskydayTempHigh1>41){echo "hsl(74, 60%, 46%)";}}
+
+if($tempunit=='C'){
+if($wuskydayTempHigh1 <=5){echo "hsla(185, 100%, 37%, 1)";}
+	else if($wuskydayTempHigh1>=35){echo "hsl(4, 40%, 48%)";}
+	else if($wuskydayTempHigh1>=27){echo "hsl(2, 56%, 55%)";}
+	else if($wuskydayTempHigh1>=24){echo "hsl(19, 66%, 55%)";}
+	else if($wuskydayTempHigh1>=20){echo "#F88D01";}
+	else if($wuskydayTempHigh1>=15){echo "hsl(35, 77%, 58%)";}			  
+	else if($wuskydayTempHigh1>5){echo "hsl(74, 60%, 46%)";}}?>
+	">  
+<?php echo number_format($wuskydayTempHigh1,0);echo "°";?></tempvalue>
+
+<extradata>
+<?php //RAIN
+echo "Rain ";if ($wuskydayprecipIntensity1>0)echo "<span style='color:hsla(185, 100%, 37%, 1)'>";echo number_format($wuskydayprecipIntensity1,2);echo " ".$rainunit;echo "</span>";?><br>
+<?php  //WIND
+if ($wuskydayWinddircardinal1=='N'){$wuskydayWinddircardinal1='<blue>North</blue>';}
+if ($wuskydayWinddircardinal1=='NE'){$wuskydayWinddircardinal1='<blue>NE</blue>';}
+if ($wuskydayWinddircardinal1=='ENE'){$wuskydayWinddircardinal1='<blue>ENE</blue>';}
+if ($wuskydayWinddircardinal1=='NNW'){$wuskydayWinddircardinal1='<blue>NNW</blue>';}
+if ($wuskydayWinddircardinal1=='NWN'){$wuskydayWinddircardinal1='<blue>NWN</blue>';}
+if ($wuskydayWinddircardinal1=='NW'){$wuskydayWinddircardinal1='<blue>NW</blue>';}
+
+if ($wuskydayWinddircardinal1=='E'){$wuskydayWinddircardinal1='<yellow>East</yellow>';}
+if ($wuskydayWinddircardinal1=='SE'){$wuskydayWinddircardinal1='<yellow>SE</yellow>';}
+if ($wuskydayWinddircardinal1=='ESE'){$wuskydayWinddircardinal1='<yellow>ESE</yellow>';}
+if ($wuskydayWinddircardinal1=='SSE'){$wuskydayWinddircardinal1='<yellow>SSE</yellow>';}
+
+if ($wuskydayWinddircardinal1=='SW'){$wuskydayWinddircardinal1='<orange>SW</orange>';}
+if ($wuskydayWinddircardina1l=='SSW'){$wuskydayWinddircardinal1='<orange>SSW</orange>';}
+if ($wuskydayWinddircardinal1=='S'){$wuskydayWinddircardinal1='<orange>South</orange>';}
+
+if ($wuskydayWinddircardinal1=='WSW'){$wuskydayWinddircardinal1='<red>WSW</red>';}
+if ($wuskydayWinddircardinal1=='W'){$wuskydayWinddircardinal1='<red>West</red>';}
+if ($wuskydayWinddircardinal1=='WNW'){$wuskydayWinddircardinal1='<red>WNW</red>';}
+echo "Wind ";
+if ($wuskydayWindGust1>40)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayWindGust1,0)."</span>";
+else if ($wuskydayWindGust1>20)echo "<span style='hsl(34, 98%, 49%)'>". number_format($wuskydayWindGust1,0)."</span>";
+else if ($wuskydayWindGust1>=0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayWindGust1,0)."</span>";
+echo " ".$windunit;echo " ".$wuskydayWinddircardinal1;echo "</span>";?><br>
+<?php //UVINDEX
+if ($wuskydayUV1>0){
+echo "UVINDEX ";
+if ($wuskydayUV1>=10)echo "<span style='color:hsl(323, 40%, 54%)'>". number_format($wuskydayUV1,0)."<br>";
+else if ($wuskydayUV1>=8)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayUV1,0)."<br>";
+else if ($wuskydayUV1>=5)echo "<span style='hsl(34, 98%, 49%)'>". number_format($wuskydayUV1,0)."<br>";
+else if ($wuskydayUV1>=3)echo "<span style='color:hsla(35, 77%, 58%, 1)'>". number_format($wuskydayUV1,0)."<br>";
+else if ($wuskydayUV1>0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayUV1,0)."<br>";
+echo "</span>";}
+?>
+<?php 
+//HUMIDITY
+echo "Humidity ";
+if ($wuskyhumidity1>=70)echo "<blue>". number_format($wuskyhumidity1,0)."</blue>%<br>";
+else if ($wuskyhumidity1>=60)echo "<yellow>". number_format($wuskyhumidity1,0)."</yellow>%<br>";
+else if ($wuskyhumidity1>=40)echo "<green>". number_format($wuskyhumidity1,0)."</green>%<br>";
+else if ($wuskyhumidity1>=0)echo "<red>". number_format($wuskyhumidity1,0)."</red>%<br>";?>
+<?php //HEAT INDEX
+if ($tempunit=="F" && $wuskyheatindex1>90)echo "Heat Index <red>".number_format($wuskyheatindex1,0)."</red>°<br>";
+if ($tempunit=="C" && $wuskyheatindex1>28)echo "Heat Index <red>".number_format($wuskyheatindex1,0)."</red>°<br>";
+?>
+<?php //SNOW
+if ($wuskydaysnow1>0)echo "Snow <blue>".$wuskydaysnow1." </blue>cm";
+?>
+<?php //THUNDERSTORM
+if ($wuskythunder1>=3)echo "Thunderstorm <red>Risk</red>";
+else if ($wuskythunder1>=2)echo "Thunderstorm <orange>Risk</orange>";
+else if ($wuskythunder1>0)echo "Thunderstorm <yellow>Risk</yellow>";
+
+?>
+
+
+</extradata>
+<greydesc><?php echo $wuskydaysummary1;?></greydesc>
+
+  </li55>
+
+
   <li55>
       <?php if ($tempunit == 'F'){;?>    
       <iframe  src="daytempforecast34f.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
@@ -33,12 +283,10 @@
       <?php if ($tempunit == 'C'){;?>    
       <iframe  src="daytempforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
       <?php ;}?>    
-    </li55>  
-    <?php if ($wuskydaysnow>0 || $wuskydaysnow1>0 || $wuskydaysnow2>0 || $wuskydaysnow3>0 || $wuskydaysnow4>0 || $wuskydaysnow5>0 || $wuskydaysnow6>0 || $wuskydaysnow7>0 || $wuskydaysnow8>0)
-{echo '<li55><iframe  src="daysnowforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>' ;}    
-else if ($wuskythunder>0 || $wuskythunder1>0 || $wuskythunder2>0 || $wuskythunder3>0 || $wuskythunder4>0 || $wuskythunder5>0 || $wuskythunder6>0 || $wuskythunder7>0 || $wuskythunder8>0)
-{echo '<li55><iframe  src="daythunderforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55> ';}    
-else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>';?>    
+    </li55> 
+
+
+
 
     <?php if  ($windunit == 'mph') {;?>
     <li55><iframe  src="daywindforecast34mph.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
@@ -52,11 +300,16 @@ else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="n
     <?php if  ($windunit == 'm/s') {;?>
     <li55><iframe  src="daywindforecast34ms.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
     <?php ;}?>
-    <li55><iframe  src="daywind-directionforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
+    
 
     <li55><iframe  src="dayrainforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>
-    <li55><iframe  src="dayrainchanceforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
-    
+
+    <?php if ($wuskydaysnow2>0 || $wuskydaysnow3>0 || $wuskydaysnow4>0 || $wuskydaysnow5>0 || $wuskydaysnow6>0 || $wuskydaysnow7>0 || $wuskydaysnow8>0 || $wuskydaysnow9>0 || $wuskydaysnow10>0 )
+{echo '<li55><iframe  src="daysnowforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>' ;}    
+else if ($wuskythunder2>0 || $wuskythunder3>0 || $wuskythunder4>0 || $wuskythunder5>0 || $wuskythunder6>0 || $wuskythunder7>0 || $wuskythunder8>0 || $wuskythunder9>0 || $wuskythunder10>0)
+{echo '<li55><iframe  src="daythunderforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55> ';}    
+else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>';?>   
+
     <li555><iframe  src="outlookwu.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li555>    
     
   </ul>
@@ -69,7 +322,7 @@ else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="n
 
 <chartpage>Forecast Updated <?php $forecastime=filemtime('../jsondata/wuforecast.txt');echo date('jS M g:i a',$forecastime);?></chartpage>
 <weather34-rightfootericonscharts>
-<div class="weather34-battery"><a  href="../info.html" data-lity data-title="Weather34"> <img src="../images/weather34-icon-small.png" width="24em" ></a></div>
+<div class="weather34-battery"><a  href="../info.html" data-lity> <img src="../images/weather34-icon-small.png" width="20px" ></a></div>
 </div></body></html>
 
 <?php //weather34 clean notifications 

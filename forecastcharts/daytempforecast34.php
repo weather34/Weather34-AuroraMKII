@@ -12,6 +12,30 @@
 	#   http://www.weather34.com 	                                                                
 	#############################################################
 	
+ $wuskydayTempHigh=str_replace('ÂºC','',$wuskydayTempHigh);
+ $wuskydayTempHigh1=str_replace('ÂºC','',$wuskydayTempHigh1);
+ $wuskydayTempHigh2=str_replace('ÂºC','',$wuskydayTempHigh2);
+ $wuskydayTempHigh3=str_replace('ÂºC','',$wuskydayTempHigh3);
+ $wuskydayTempHigh4=str_replace('ÂºC','',$wuskydayTempHigh4);
+ $wuskydayTempHigh5=str_replace('ÂºC','',$wuskydayTempHigh5);
+ $wuskydayTempHigh6=str_replace('ÂºC','',$wuskydayTempHigh6);
+ $wuskydayTempHigh7=str_replace('ÂºC','',$wuskydayTempHigh7);
+ $wuskydayTempHigh8=str_replace('ÂºC','',$wuskydayTempHigh8);
+ $wuskydayTempHigh9=str_replace('ÂºC','',$wuskydayTempHigh9);
+ $wuskydayTempHigh10=str_replace('ÂºC','',$wuskydayTempHigh10);
+
+ $wuskydayTempHigh=str_replace('ÂºF','',$wuskydayTempHigh);
+ $wuskydayTempHigh1=str_replace('ÂºF','',$wuskydayTempHigh1);
+ $wuskydayTempHigh2=str_replace('ÂºF','',$wuskydayTempHigh2);
+ $wuskydayTempHigh3=str_replace('ÂºF','',$wuskydayTempHigh3);
+ $wuskydayTempHigh4=str_replace('ÂºF','',$wuskydayTempHigh4);
+ $wuskydayTempHigh5=str_replace('ÂºF','',$wuskydayTempHigh5);
+ $wuskydayTempHigh6=str_replace('ÂºF','',$wuskydayTempHigh6);
+ $wuskydayTempHigh7=str_replace('ÂºF','',$wuskydayTempHigh7);
+ $wuskydayTempHigh8=str_replace('ÂºF','',$wuskydayTempHigh8);
+ $wuskydayTempHigh9=str_replace('ÂºF','',$wuskydayTempHigh9);
+ $wuskydayTempHigh10=str_replace('ÂFC','',$wuskydayTempHigh10);
+
 	
 	header('Content-type: text/html; charset=utf-8');	
 	if ($tempunit == 'F') {$unit='F';}	
