@@ -1,4 +1,4 @@
-<?php header('Content-Type: text/html; charset=utf-8');include_once('updaterwu.php');include('wudata.php');?>
+<?php include_once('updaterwu.php');include('wudata.php');header('Content-Type: text/html; charset=utf-8');?>
 <!DOCTYPE html><html><head>
 <title> Weather34 Forecast <?php echo $stationName?></title>
 <meta charset="UTF-8">
@@ -142,19 +142,19 @@ if ($wuskydayWinddircardinal=='WSW'){$wuskydayWinddircardinal='<red>WSW</red>';}
 if ($wuskydayWinddircardinal=='W'){$wuskydayWinddircardinal='<red>West</red>';}
 if ($wuskydayWinddircardinal=='WNW'){$wuskydayWinddircardinal='<red>WNW</red>';}
 echo "Wind ";
-if ($wuskydayWindGust>40)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayWindGust,0)."</span>";
-else if ($wuskydayWindGust>20)echo "<span style='hsl(34, 98%, 49%)'>". number_format($wuskydayWindGust,0)."</span>";
-else if ($wuskydayWindGust>=0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayWindGust,0)."</span>";
-echo " ".$windunit;echo " ".$wuskydayWinddircardinal;echo "</span>";?><br>
+if ($wuskydayWindGust>40)echo "<red>". number_format($wuskydayWindGust,0)."</red>";
+else if ($wuskydayWindGust>20)echo "<orange>". number_format($wuskydayWindGust,0)."</orange>";
+else if ($wuskydayWindGust>20)echo "<yellow>". number_format($wuskydayWindGust,0)."</yellow>";
+else if ($wuskydayWindGust>=0)echo "<green>". number_format($wuskydayWindGust,0)."</green>";
+echo " ".$windunit;echo " ".$wuskydayWinddircardinal;?><br>
 <?php //UVINDEX
 if ($wuskydayUV>0){
 echo "UVINDEX ";
-if ($wuskydayUV>=10)echo "<span style='color:hsl(323, 40%, 54%)'>". number_format($wuskydayUV,0)."<br>";
-else if ($wuskydayUV>=8)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayUV,0)."<br>";
-else if ($wuskydayUV>=5)echo "<span style='color:hsl(34, 98%, 49%)'>". number_format($wuskydayUV,0)."<br>";
-else if ($wuskydayUV>=3)echo "<span style='color:hsla(35, 77%, 58%, 1)'>". number_format($wuskydayUV,0)."<br>";
-else if ($wuskydayUV>0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayUV,0)."<br>";
-echo "</span>";}
+if ($wuskydayUV>10)echo "<purple>". number_format($wuskydayUV,0)."</purple><br>";
+else if ($wuskydayUV>=8)echo "<red>". number_format($wuskydayUV,0)."</red><br>";
+else if ($wuskydayUV>=5)echo "<orange>". number_format($wuskydayUV,0)."</orange><br>";
+else if ($wuskydayUV>=3)echo "<yellow'>". number_format($wuskydayUV,0)."</yellow><br>";
+else if ($wuskydayUV>0)echo "<green>". number_format($wuskydayUV,0)."</green><br>";}
 ?>
 <?php //HUMIDITY
 echo "Humidity ";
@@ -234,19 +234,19 @@ if ($wuskydayWinddircardinal1=='WSW'){$wuskydayWinddircardinal1='<red>WSW</red>'
 if ($wuskydayWinddircardinal1=='W'){$wuskydayWinddircardinal1='<red>West</red>';}
 if ($wuskydayWinddircardinal1=='WNW'){$wuskydayWinddircardinal1='<red>WNW</red>';}
 echo "Wind ";
-if ($wuskydayWindGust1>40)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayWindGust1,0)."</span>";
-else if ($wuskydayWindGust1>20)echo "<span style='hsl(34, 98%, 49%)'>". number_format($wuskydayWindGust1,0)."</span>";
-else if ($wuskydayWindGust1>=0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayWindGust1,0)."</span>";
-echo " ".$windunit;echo " ".$wuskydayWinddircardinal1;echo "</span>";?><br>
+if ($wuskydayWindGust1>40)echo "<red>". number_format($wuskydayWindGust1,0)."</red>";
+else if ($wuskydayWindGust1>20)echo "<orange>". number_format($wuskydayWindGust1,0)."</orange>";
+else if ($wuskydayWindGust1>20)echo "<yellow>". number_format($wuskydayWindGust1,0)."</yellow>";
+else if ($wuskydayWindGust1>=0)echo "<green>". number_format($wuskydayWindGust1,0)."</green>";
+echo " ".$windunit;echo " ".$wuskydayWinddircardinal1;?><br>
 <?php //UVINDEX
 if ($wuskydayUV1>0){
 echo "UVINDEX ";
-if ($wuskydayUV1>=10)echo "<span style='color:hsl(323, 40%, 54%)'>". number_format($wuskydayUV1,0)."<br>";
-else if ($wuskydayUV1>=8)echo "<span style='color:hsl(12, 80%, 52%)'>". number_format($wuskydayUV1,0)."<br>";
-else if ($wuskydayUV1>=5)echo "<span style='hsl(34, 98%, 49%)'>". number_format($wuskydayUV1,0)."<br>";
-else if ($wuskydayUV1>=3)echo "<span style='color:hsla(35, 77%, 58%, 1)'>". number_format($wuskydayUV1,0)."<br>";
-else if ($wuskydayUV1>0)echo "<span style='color:hsl(74, 60%, 46%)'>". number_format($wuskydayUV1,0)."<br>";
-echo "</span>";}
+if ($wuskydayUV>10)echo "<purple>". number_format($wuskydayUV1,0)."</purple><br>";
+else if ($wuskydayUV1>=8)echo "<red>". number_format($wuskydayUV1,0)."</red><br>";
+else if ($wuskydayUV1>=5)echo "<orange>". number_format($wuskydayUV1,0)."</orange><br>";
+else if ($wuskydayUV1>=3)echo "<yellow'>". number_format($wuskydayUV1,0)."</yellow><br>";
+else if ($wuskydayUV1>0)echo "<green>". number_format($wuskydayUV1,0)."</green><br>";}
 ?>
 <?php 
 //HUMIDITY
