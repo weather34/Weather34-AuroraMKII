@@ -1,4 +1,4 @@
-<?php include_once('updaterwu.php');include('wudata.php');header('Content-Type: text/html; charset=utf-8');?>
+<?php header('Content-Type: text/html; charset=utf-8');include_once('updaterwu.php');include('wudata.php');?>
 <!DOCTYPE html><html><head>
 <title> Weather34 Forecast <?php echo $stationName?></title>
 <meta charset="UTF-8">
