@@ -1,4 +1,4 @@
-<?php include('../shared.php');include('../settings.php')?>
+<?php include('../shared.php');include('../settings.php');?>
 <?php 
 //start the wu output
 $json='../jsondata/wuforecast.txt';
@@ -1157,7 +1157,7 @@ if ($wuskydayWindGust8>=30){$wuskydayWindGust8=$wuskydayWindGust8*1.60934;}
  $wuskydaysummary9=str_replace('Âº','°',$wuskydaysummary9);
  $wuskydaysummary10=str_replace('Âº','°',$wuskydaysummary10);
 
- $wuskydaysummary=str_replace('ºC','°C',$wuskydaysummary);
+$wuskydaysummary=str_replace('ºC','°C',$wuskydaysummary);
 $wuskydaysummary1=str_replace('ºC','°C',$wuskydaysummary1);
 $wuskydaysummary=str_replace('ºF','°F',$wuskydaysummary);
 $wuskydaysummary1=str_replace('ºF','°F',$wuskydaysummary1);

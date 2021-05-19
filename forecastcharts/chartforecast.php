@@ -90,8 +90,8 @@ img{width:60px}}
   <a href="#" data-title="<?php echo $wuskydesc?>">
   <?php //Icon forecast  	    
   			  
-	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg" ></img>';}
-	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg" ></img>';}
+	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg?ver=5" ></img>';}
+	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg?ver=5" ></img>';}
   ?></a></iconpos>
 
 <tempvalue style="color:
@@ -120,7 +120,7 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 
 <extradata>
 <?php //RAIN
-echo "Rain ";if ($wuskydayprecipIntensity>0)echo "<span style='color:hsla(185, 100%, 37%, 1)'>";echo number_format($wuskydayprecipIntensity,2);echo " ".$rainunit;echo "</span>";?><br>
+echo "Rain ";if ($wuskydayprecipIntensity>0)echo "<blue>";echo number_format($wuskydayprecipIntensity,2);echo "</blue> ".$rainunit;?><br>
 <?php //WIND
 if ($wuskydayWinddircardinal=='N'){$wuskydayWinddircardinal='<blue>North</blue>';}
 if ($wuskydayWinddircardinal=='NE'){$wuskydayWinddircardinal='<blue>NE</blue>';}
@@ -184,8 +184,8 @@ else if ($wuskythunder>0)echo "Thunderstorm <yellow>Risk</yellow>";
   <actualt><?php echo $wuskydayTime1 ?></actualt>
   <iconpos><a href="#" data-title="<?php echo $wuskydesc1?>">
   <?php //Icon forecast  	    		  			  
-	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg"></img>';}
-	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg"></img>';}
+	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg?ver=5"></img>';}
+	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg?ver=5"></img>';}
   ?></a></iconpos>
 
 <tempvalue style="color:
@@ -212,7 +212,7 @@ if($wuskydayTempHigh1 <=5){echo "hsla(185, 100%, 37%, 1)";}
 
 <extradata>
 <?php //RAIN
-echo "Rain ";if ($wuskydayprecipIntensity1>0)echo "<span style='color:hsla(185, 100%, 37%, 1)'>";echo number_format($wuskydayprecipIntensity1,2);echo " ".$rainunit;echo "</span>";?><br>
+echo "Rain ";if ($wuskydayprecipIntensity1>0)echo "<blue>";echo number_format($wuskydayprecipIntensity1,2);echo "</blue> ".$rainunit;?><br>
 <?php  //WIND
 if ($wuskydayWinddircardinal1=='N'){$wuskydayWinddircardinal1='<blue>North</blue>';}
 if ($wuskydayWinddircardinal1=='NE'){$wuskydayWinddircardinal1='<blue>NE</blue>';}
