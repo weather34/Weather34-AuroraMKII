@@ -65,8 +65,8 @@ img{width:60px}}
   <iconpos>
   <a href="#" data-title="<?php echo $wuskydesc?>">
   <?php //Icon forecast 		  
-	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg?ver=5" ></img>';}
-	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg?ver=5" ></img>';}
+	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg?ver=7" ></img>';}
+	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg?ver=7" ></img>';}
   ?></a>
   </iconpos>
 
@@ -156,8 +156,8 @@ else if ($wuskythunder>0)echo "Thunderstorm <yellow>Risk</yellow>";
   <actualt><?php echo $wuskydayTime1 ?></actualt>
   <iconpos><a href="#" data-title="<?php echo $wuskydesc1?>">
   <?php //Icon forecast  	    		  			  
-	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg?ver=5"></img>';}
-	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg?ver=5"></img>';}
+	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg?ver=7"></img>';}
+	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg?ver=7"></img>';}
   ?></a></iconpos>
 
 <tempvalue style="color:
