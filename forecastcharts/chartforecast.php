@@ -13,63 +13,40 @@
 <link rel="preload" href="../fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/verbatim-bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
-
 <style>
-@font-face {
-    font-family: clock;
-    src: url(../fonts/clock3-webfont.woff2) format("woff2"), url(../fonts/clock3-webfont.woff) format("woff");
-    font-display: swap
-}
-
-@font-face {
-    font-family: weathertext3;
-    src: url(../fonts/verbatim-regular.woff2) format("woff2"), url(../fonts/verbatim-regular.woff) format("woff");
-    font-display: swap
-}
-
-@font-face {
-    font-family: weathertext2;
-    src: url(../fonts/verbatim-medium.woff2) format("woff2"), url(../fonts/verbatim-medium.woff) format("woff");
-    font-display: swap
-}
-
-@font-face {
-    font-family: headingtext;
-    src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2"), url(../fonts/HelveticaNeue-Medium.woff) format("woff");
-    font-display: swap
-}
-
-@font-face {
-    font-family: verb;
-    src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");
-    font-display: swap
-}
-
-body,html{font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+@font-face {font-family: clock;src: url(../fonts/clock3-webfont.woff2) format("woff2"), url(../fonts/clock3-webfont.woff) format("woff");font-display: swap}
+@font-face {font-family: weathertext3; src: url(../fonts/verbatim-regular.woff2) format("woff2"), url(../fonts/verbatim-regular.woff) format("woff");font-display: swap}
+@font-face {font-family: weathertext2;src: url(../fonts/verbatim-medium.woff2) format("woff2"), url(../fonts/verbatim-medium.woff) format("woff");font-display: swap}
+@font-face {font-family: headingtext;src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2"), url(../fonts/HelveticaNeue-Medium.woff) format("woff");font-display: swap}
+@font-face {font-family: verb;src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");font-display: swap}
+body,html{font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 .weather34-aurora a{background:none;}
 actualt{position:relative;font-size:11px;left:20px;top:-50px;}
 greydesc{display:block;left:-20px;margin-top:-15px;position:relative;font-size:11px;line-height:1;
 max-width:max-content;font-family:verb;padding-right:15px}
-
 tempvalue{margin-left:-10px;top:45px;position:absolute;font-size:28px;font-family:verb}
 extradata{display:block;left:-90px;top:30px;position:relative;font-size:10px;font-family:verb;width:450px}
 iconpos{position:relative;padding-left:5px;left:70px;margin-top:-80px}
 img{width:60px}
 .weather34-battery a {background:none;width:25px}
 .weather34-battery img {background:none;width:25px}
-
-
+.online{padding-top:5px}
+.desktoplink5{color:#99B1C9}
 @media screen and (max-width:960px){
 actualt{position:relative;font-size:10px;left:20px;top:-55px;}
 greydesc{position:relative;top:15px;font-size:10px;margin-left:-35px;max-width:max-content;padding:5px}
 tempvalue{position:relative;top:-55px;font-size:22px;margin-left:110px;}
 extradata{margin-left:-135px;top:25px;font-size:9px;font-family:verb;width:200px;padding:5px}
 iconpos{position:relative;padding-left:0px;;margin-left:0px;top:-10px}
+.online{padding-top:5px}
 img{width:60px}}
-
+@media screen and (max-width:640px){
+.desktoplink5{display:none}
+.online{padding-top:12px}
+img{width:60px}}
 </style>
-<meta charset="UTF-8">
 </head>
 <body>
 <!-- weather34 grid flex layout -->
@@ -82,17 +59,16 @@ img{width:60px}}
 <div class="online"><?php if(file_exists($livedata)&&time()- filemtime($livedata)>300)echo $wirelessoffline;else echo $wireless?></div>
 </div>
 
-  <ul class="grid-container-forecast">
-  
+  <ul class="grid-container-forecast">  
   <li55>
   <actualt><?php echo $wuskydayTime ?></actualt>
   <iconpos>
   <a href="#" data-title="<?php echo $wuskydesc?>">
-  <?php //Icon forecast  	    
-  			  
+  <?php //Icon forecast 		  
 	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg?ver=5" ></img>';}
 	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg?ver=5" ></img>';}
-  ?></a></iconpos>
+  ?></a>
+  </iconpos>
 
 <tempvalue style="color:
 <?php //TEMPERATURE
@@ -128,16 +104,13 @@ if ($wuskydayWinddircardinal=='ENE'){$wuskydayWinddircardinal='<blue>ENE</blue>'
 if ($wuskydayWinddircardinal=='NNW'){$wuskydayWinddircardinal='<blue>NNW</blue>';}
 if ($wuskydayWinddircardinal=='NWN'){$wuskydayWinddircardinal='<blue>NWN</blue>';}
 if ($wuskydayWinddircardinal=='NW'){$wuskydayWinddircardinal='<blue>NW</blue>';}
-
 if ($wuskydayWinddircardinal=='E'){$wuskydayWinddircardinal='<yellow>East</yellow>';}
 if ($wuskydayWinddircardinal=='SE'){$wuskydayWinddircardinal='<yellow>SE</yellow>';}
 if ($wuskydayWinddircardinal=='ESE'){$wuskydayWinddircardinal='<yellow>ESE</yellow>';}
 if ($wuskydayWinddircardinal=='SSE'){$wuskydayWinddircardinal='<yellow>SSE</yellow>';}
-
 if ($wuskydayWinddircardinal=='SW'){$wuskydayWinddircardinal='<orange>SW</orange>';}
 if ($wuskydayWinddircardinal=='SSW'){$wuskydayWinddircardinal='<orange>SSW</orange>';}
 if ($wuskydayWinddircardinal=='S'){$wuskydayWinddircardinal='<orange>South</orange>';}
-
 if ($wuskydayWinddircardinal=='WSW'){$wuskydayWinddircardinal='<red>WSW</red>';}
 if ($wuskydayWinddircardinal=='W'){$wuskydayWinddircardinal='<red>West</red>';}
 if ($wuskydayWinddircardinal=='WNW'){$wuskydayWinddircardinal='<red>WNW</red>';}
@@ -179,7 +152,6 @@ else if ($wuskythunder>0)echo "Thunderstorm <yellow>Risk</yellow>";
 <greydesc><?php echo $wuskydaysummary;?></greydesc>
   </li55>
 
-
   <li55>
   <actualt><?php echo $wuskydayTime1 ?></actualt>
   <iconpos><a href="#" data-title="<?php echo $wuskydesc1?>">
@@ -220,16 +192,13 @@ if ($wuskydayWinddircardinal1=='ENE'){$wuskydayWinddircardinal1='<blue>ENE</blue
 if ($wuskydayWinddircardinal1=='NNW'){$wuskydayWinddircardinal1='<blue>NNW</blue>';}
 if ($wuskydayWinddircardinal1=='NWN'){$wuskydayWinddircardinal1='<blue>NWN</blue>';}
 if ($wuskydayWinddircardinal1=='NW'){$wuskydayWinddircardinal1='<blue>NW</blue>';}
-
 if ($wuskydayWinddircardinal1=='E'){$wuskydayWinddircardinal1='<yellow>East</yellow>';}
 if ($wuskydayWinddircardinal1=='SE'){$wuskydayWinddircardinal1='<yellow>SE</yellow>';}
 if ($wuskydayWinddircardinal1=='ESE'){$wuskydayWinddircardinal1='<yellow>ESE</yellow>';}
 if ($wuskydayWinddircardinal1=='SSE'){$wuskydayWinddircardinal1='<yellow>SSE</yellow>';}
-
 if ($wuskydayWinddircardinal1=='SW'){$wuskydayWinddircardinal1='<orange>SW</orange>';}
 if ($wuskydayWinddircardinal1=='SSW'){$wuskydayWinddircardinal1='<orange>SSW</orange>';} 
 if ($wuskydayWinddircardinal1=='S'){$wuskydayWinddircardinal1='<orange>South</orange>';}
-
 if ($wuskydayWinddircardinal1=='WSW'){$wuskydayWinddircardinal1='<red>WSW</red>';}
 if ($wuskydayWinddircardinal1=='W'){$wuskydayWinddircardinal1='<red>West</red>';}
 if ($wuskydayWinddircardinal1=='WNW'){$wuskydayWinddircardinal1='<red>WNW</red>';}
@@ -266,15 +235,10 @@ if ($wuskydaysnow1>0)echo "Snow <blue>".$wuskydaysnow1." </blue>cm";
 if ($wuskythunder1>=3)echo "Thunderstorm <red>Risk</red>";
 else if ($wuskythunder1>=2)echo "Thunderstorm <orange>Risk</orange>";
 else if ($wuskythunder1>0)echo "Thunderstorm <yellow>Risk</yellow>";
-
 ?>
-
-
 </extradata>
 <greydesc><?php echo $wuskydaysummary1;?></greydesc>
-
   </li55>
-
 
   <li55>
       <?php if ($tempunit == 'F'){;?>    
@@ -284,9 +248,6 @@ else if ($wuskythunder1>0)echo "Thunderstorm <yellow>Risk</yellow>";
       <iframe  src="daytempforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
       <?php ;}?>    
     </li55> 
-
-
-
 
     <?php if  ($windunit == 'mph') {;?>
     <li55><iframe  src="daywindforecast34mph.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
@@ -299,8 +260,7 @@ else if ($wuskythunder1>0)echo "Thunderstorm <yellow>Risk</yellow>";
     <?php ;}?>
     <?php if  ($windunit == 'm/s') {;?>
     <li55><iframe  src="daywindforecast34ms.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
-    <?php ;}?>
-    
+    <?php ;}?>    
 
     <li55><iframe  src="dayrainforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>
 
@@ -310,16 +270,13 @@ else if ($wuskythunder2>0 || $wuskythunder3>0 || $wuskythunder4>0 || $wuskythund
 {echo '<li55><iframe  src="daythunderforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55> ';}    
 else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>';?>   
 
-    <li555><iframe  src="outlookwu.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li555>    
-    
+    <li555><iframe  src="outlookwu.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li555>        
   </ul>
 </div>
 <div class="nav-bottom" >
 &nbsp; <a href="../index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
-<a href="../outlookwutext.php" data-lity data-title="5 day Forecast Summary"><?php echo $weather34foretxt?></a>
-
+<a href="../outlookwutext.php" data-lity data-title="5 day Forecast Summary"><?php echo $weather34foretxt1?></a>
 <a href="chartforecast.php" alt="refresh this dashboard " data-title="Refresh"><?php echo $weather34refr?></a>
-
 <chartpage>Forecast Updated <?php $forecastime=filemtime('../jsondata/wuforecast.txt');echo date('jS M g:i a',$forecastime);?></chartpage>
 <weather34-rightfootericonscharts>
 <div class="weather34-battery"><a  href="../info.html" data-lity> <img src="../images/weather34-icon-small.png" width="20px" ></a></div>
