@@ -357,6 +357,18 @@ $parsed_weather34wujson1 = json_decode($weather34wuurl, true);
     if ($tempunit == 'C' && $wuapiunit == 'e') {$wuskyheatindex11 = ($wuskyheatindex11 - 32) / 1.8;}
 
 } //end weather34 weather underground summary forecast stuff
+
+ $wuskydaysummary=str_replace('Âº','°',$wuskydaysummary);
+ $wuskydaysummary1=str_replace('Âº','°',$wuskydaysummary1);
+ $wuskydaysummary2=str_replace('Âº','°',$wuskydaysummary2);
+ $wuskydaysummary3=str_replace('Âº','°',$wuskydaysummary3);
+ $wuskydaysummary4=str_replace('Âº','°',$wuskydaysummary4);
+ $wuskydaysummary5=str_replace('Âº','°',$wuskydaysummary5);
+ $wuskydaysummary6=str_replace('Âº','°',$wuskydaysummary6);
+ $wuskydaysummary7=str_replace('Âº','°',$wuskydaysummary7);
+ $wuskydaysummary8=str_replace('Âº','°',$wuskydaysummary8);
+ $wuskydaysummary9=str_replace('Âº','°',$wuskydaysummary9);
+ $wuskydaysummary10=str_replace('Âº','°',$wuskydaysummary10);
 ?>
 <script src="js/jquery.js"></script>
 <!DOCTYPE html>
@@ -480,8 +492,8 @@ if($wuskydayTempHigh <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight=='D'){echo '<img src="wuicons/'.$wuskydayIcon.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight=='D'){echo '<img src="wuicons/'.$wuskydayIcon.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary.'</div>';
 	 //thunder
 	 echo '<div class=alertdesc>';
@@ -516,8 +528,8 @@ if($wuskydayTempHigh1 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight1=='D'){echo '<img src="wuicons/'.$wuskydayIcon1.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight1=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon1.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight1=='D'){echo '<img src="wuicons/'.$wuskydayIcon1.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight1=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon1.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary1.'</div>';
 	 //thunder
 	 echo '<div class=alertdesc>';		
@@ -553,8 +565,8 @@ if($wuskydayTempHigh2 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight2=='D'){echo '<img src="wuicons/'.$wuskydayIcon2.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight2=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon2.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight2=='D'){echo '<img src="wuicons/'.$wuskydayIcon2.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight2=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon2.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary2.'</div>';
 	 //thunder	
 	 echo '<div class=alertdesc>';	
@@ -589,8 +601,8 @@ if($wuskydayTempHigh3 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight3=='D'){echo '<img src="wuicons/'.$wuskydayIcon3.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight3=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon3.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight3=='D'){echo '<img src="wuicons/'.$wuskydayIcon3.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight3=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon3.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary3.'</div>';
 	 //thunder
 	 echo '<div class=alertdesc>';		
@@ -626,8 +638,8 @@ if($wuskydayTempHigh4 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight4=='D'){echo '<img src="wuicons/'.$wuskydayIcon4.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight4=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon4.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight4=='D'){echo '<img src="wuicons/'.$wuskydayIcon4.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight4=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon4.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary4.'</div>';
 	//thunder
 	 echo '<div class=alertdesc>';		
@@ -662,8 +674,8 @@ if($wuskydayTempHigh5 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight5=='D'){echo '<img src="wuicons/'.$wuskydayIcon5.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight5=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon5.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight5=='D'){echo '<img src="wuicons/'.$wuskydayIcon5.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight5=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon5.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary5.'</div>';
 	 //thunder
 	 echo '<div class=alertdesc>';	
@@ -698,8 +710,8 @@ if($wuskydayTempHigh6 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight6=='D'){echo '<img src="wuicons/'.$wuskydayIcon6.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight6=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon6.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight6=='D'){echo '<img src="wuicons/'.$wuskydayIcon6.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight6=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon6.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary6.'</div>';
 	 //thunder	
 	 echo '<div class=alertdesc>';
@@ -734,8 +746,8 @@ if($wuskydayTempHigh7 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight7=='D'){echo '<img src="wuicons/'.$wuskydayIcon7.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight7=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon7.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight7=='D'){echo '<img src="wuicons/'.$wuskydayIcon7.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight7=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon7.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary7.'</div>';
 	 //thunder	
 	 echo '<div class=alertdesc>';
@@ -772,8 +784,8 @@ if($wuskydayTempHigh8 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight8=='D'){echo '<img src="wuicons/'.$wuskydayIcon8.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight8=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon8.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight8=='D'){echo '<img src="wuicons/'.$wuskydayIcon8.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight8=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon8.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary8.'</div>';
 	//thunder	
 	echo '<div class=alertdesc>';
@@ -811,8 +823,8 @@ if($wuskydayTempHigh9 <=5){echo "hsla(185, 100%, 37%, 1)";}
 	 //summary
 	
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight9=='D'){echo '<img src="wuicons/'.$wuskydayIcon9.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight9=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon9.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight9=='D'){echo '<img src="wuicons/'.$wuskydayIcon9.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight9=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon9.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary9.'</div>';
 	//thunder
 	 echo '<div class=alertdesc>';	
@@ -845,8 +857,8 @@ if($wuskydayTempHigh10 <=5){echo "hsla(185, 100%, 37%, 1)";}
      <?php //10  forecast 
 	 //summary	 
 	 echo"<div class=iconpos> ";      		  			  
-	 if ($wuskydaynight10=='D'){echo '<img src="wuicons/'.$wuskydayIcon10.'.svg" width="30" class="iconpos"></img></div>';}
-	 if ($wuskydaynight10=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon10.'.svg" width="30" class="iconpos"></img></div>';}	 
+	 if ($wuskydaynight10=='D'){echo '<img src="wuicons/'.$wuskydayIcon10.'.svg?ver=9" width="30" class="iconpos"></img></div>';}
+	 if ($wuskydaynight10=='N'){echo '<img src="wuicons/nt_'.$wuskydayIcon10.'.svg?ver=9" width="30" class="iconpos"></img></div>';}	 
 	 echo '<div class=summarydesc>'. $wuskydaysummary10.'</div>';
 	 //thunder	
 	 echo '<div class=alertdesc>';
@@ -868,6 +880,6 @@ if($wuskydayTempHigh10 <=5){echo "hsla(185, 100%, 37%, 1)";}
   <span style="font-size:8px;"><br>
   <?php echo $info?> Data Forecast provided by <br><a href="https://www.wunderground.com/weather/api/" title="Weather Underground API" target="_blank">Weather Underground</a></span>
   <a href="https://weather34.com/homeweatherstation/" title="weather34.com" target="_blank">
-  <img src="favicon/weather34-logo.svg" width="40px" class="weather34-image" alt="weather34 template page" title="weather34 template page" style="float:right;margin-top:-20px"></a>
+  <img src="favicon/weather34-logo.svg?ver=9" width="40px" class="weather34-image" alt="weather34 template page" title="weather34 template page" style="float:right;margin-top:-20px"></a>
   </article> 
 </main>
