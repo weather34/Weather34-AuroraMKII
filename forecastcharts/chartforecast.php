@@ -127,7 +127,7 @@ echo "UVINDEX ";
 if ($wuskydayUV>10)echo "<purple>". number_format($wuskydayUV,0)."</purple><br>";
 else if ($wuskydayUV>=8)echo "<red>". number_format($wuskydayUV,0)."</red><br>";
 else if ($wuskydayUV>=5)echo "<orange>". number_format($wuskydayUV,0)."</orange><br>";
-else if ($wuskydayUV>=3)echo "<yellow'>". number_format($wuskydayUV,0)."</yellow><br>";
+else if ($wuskydayUV>=3)echo "<yellow>". number_format($wuskydayUV,0)."</yellow><br>";
 else if ($wuskydayUV>0)echo "<green>". number_format($wuskydayUV,0)."</green><br>";}
 ?>
 <?php //HUMIDITY
@@ -216,7 +216,7 @@ echo "UVINDEX ";
 if ($wuskydayUV>10)echo "<purple>". number_format($wuskydayUV1,0)."</purple><br>";
 else if ($wuskydayUV1>=8)echo "<red>". number_format($wuskydayUV1,0)."</red><br>";
 else if ($wuskydayUV1>=5)echo "<orange>". number_format($wuskydayUV1,0)."</orange><br>";
-else if ($wuskydayUV1>=3)echo "<yellow'>". number_format($wuskydayUV1,0)."</yellow><br>";
+else if ($wuskydayUV1>=3)echo "<yellow>". number_format($wuskydayUV1,0)."</yellow><br>";
 else if ($wuskydayUV1>0)echo "<green>". number_format($wuskydayUV1,0)."</green><br>";}
 ?>
 <?php 
