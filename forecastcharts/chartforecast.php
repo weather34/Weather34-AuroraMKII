@@ -67,8 +67,8 @@ img{width:60px}}
   <iconpos>
   <a href="#" data-title="<?php echo $wuskydesc?>">
   <?php //Icon forecast 		  
-	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg?ver=9" ></img>';}
-	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg?ver=9" ></img>';}
+	if ($wuskydaynight=='D'){echo '<img src="../wuicons/'.$wuskydayIcon.'.svg?ver=34" ></img>';}
+	if ($wuskydaynight=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon.'.svg?ver=34" ></img>';}
   ?></a>
   </iconpos>
 
@@ -159,8 +159,8 @@ else if ($wuskythunder>0)echo "Thunderstorm <yellow>Risk</yellow>";
   <actualt><?php echo $wuskydayTime1 ?></actualt>
   <iconpos><a href="#" data-title="<?php echo $wuskydesc1?>">
   <?php //Icon forecast  	    		  			  
-	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg?ver=9"></img>';}
-	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg?ver=9"></img>';}
+	if ($wuskydaynight1=='D'){echo '<img src="../wuicons/'.$wuskydayIcon1.'.svg?ver=34"></img>';}
+	if ($wuskydaynight1=='N'){echo '<img src="../wuicons/nt_'.$wuskydayIcon1.'.svg?ver=34"></img>';}
   ?></a></iconpos>
 
 <tempvalue style="color:
@@ -266,13 +266,18 @@ else if ($wuskythunder1>0)echo "Thunderstorm <yellow>Risk</yellow>";
     <li55><iframe  src="daywindforecast34ms.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>  
     <?php ;}?>    
 
-    <li55><iframe  src="dayrainforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>
+    <?php //rain,wind direction    
+    if ($wuskydayprecipIntensity2>0 || $wuskydayprecipIntensity3>0 || $wuskydayprecipIntensity4>0 || $wuskydayprecipIntensity5>0 || $wuskydayprecipIntensity6>0 || $wuskydayprecipIntensity7>0 || $wuskydayprecipIntensity8>0 || $wuskydayprecipIntensity9>0 || $wuskydayprecipIntensity10>0 )
+    {echo '<li55><iframe  src="dayrainforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>' ;}  
+    else echo '<li55><iframe  src="daywind-directionforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>';?>
 
-    <?php if ($wuskydaysnow2>0 || $wuskydaysnow3>0 || $wuskydaysnow4>0 || $wuskydaysnow5>0 || $wuskydaysnow6>0 || $wuskydaysnow7>0 || $wuskydaysnow8>0 || $wuskydaysnow9>0 || $wuskydaysnow10>0 )
-{echo '<li55><iframe  src="daysnowforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>' ;}    
-else if ($wuskythunder2>0 || $wuskythunder3>0 || $wuskythunder4>0 || $wuskythunder5>0 || $wuskythunder6>0 || $wuskythunder7>0 || $wuskythunder8>0 || $wuskythunder9>0 || $wuskythunder10>0)
-{echo '<li55><iframe  src="daythunderforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55> ';}    
-else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>';?>   
+    <?php //snow,thunder,uv 
+    if ($wuskydaysnow2>0 || $wuskydaysnow3>0 || $wuskydaysnow4>0 || $wuskydaysnow5>0 || $wuskydaysnow6>0 || $wuskydaysnow7>0 || $wuskydaysnow8>0 || $wuskydaysnow9>0 || $wuskydaysnow10>0 )
+    {echo '<li55><iframe  src="daysnowforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>' ;}    
+    else if ($wuskythunder2>0 || $wuskythunder3>0 || $wuskythunder4>0 || $wuskythunder5>0 || $wuskythunder6>0 || $wuskythunder7>0 || $wuskythunder8>0 || $wuskythunder9>0 || $wuskythunder10>0)
+    {echo '<li55><iframe  src="daythunderforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55> ';}    
+    else echo '<li55><iframe  src="dayuvforecast34.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li55>';
+    ?>   
 
     <li555><iframe  src="outlookwu.php" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></li555>        
   </ul>
