@@ -61,6 +61,7 @@ $parsed_weather34wujson = json_decode($weather34wuurl,false);
 	 $wuskydaynight1 = $parsed_weather34wujson->{'daypart'}[0]->{'dayOrNight'}[1];
 	 $wuskydaynight2 = $parsed_weather34wujson->{'daypart'}[0]->{'dayOrNight'}[2];	 
 	 //thunder
+	 $wuskythunder = $parsed_weather34wujson->{'daypart'}[0]->{'thunderIndex'}[0];
 	 $wuskythunder1 = $parsed_weather34wujson->{'daypart'}[0]->{'thunderIndex'}[1];
 	 $wuskythunder2 = $parsed_weather34wujson->{'daypart'}[0]->{'thunderIndex'}[2];
 	 $wuskythunder3 = $parsed_weather34wujson->{'daypart'}[0]->{'thunderIndex'}[3];
@@ -125,9 +126,7 @@ $parsed_weather34wujson = json_decode($weather34wuurl,false);
 	 }?>
 
 <?php //begin wu stuff 
-//convert lightning index
-if ( $wuskythunder==0 ){$wuskythunder=$lightningalert8.' &nbsp;No Thunder Storm';}else if ( $wuskythunder==1 ){$wuskythunder=$lightningalert8.' &nbsp;Thunder Storm Risk';}
-else if ( $wuskythunder==2 ){$wuskythunder=$lightningalert8.' &nbsp;Thunder Storm';}else if ( $wuskythunder>=3 ){$wuskythunder=$lightningalert8.' &nbsp;Severe Thunderstorm';}
+
 //wu convert temps-rain-wind
 //metric to F
 if ($weather["temp_units"]=='F' && $wuapiunit=='m' ){$wuskydayTempHigh=($wuskydayTempHigh*9/5)+32;}
@@ -246,7 +245,7 @@ else if ($wuskythunder6>0 )  {echo ' <orange>Thunderstorms</orange>	 '.$wuskyday
 else if ($wuskythunder7>0 )  {echo ' <orange>Thunderstorms</orange>	 '.$wuskydayTime7. '&nbsp;'.$lightningalert8.'';}
 else if ($wuskythunder8>0 )  {echo ' <orange>Thunderstorms</orange>	 '.$wuskydayTime8. '&nbsp;'.$lightningalert8.'';}
 else if ($wuskythunder9>0 )  {echo ' <orange>Thunderstorms</orange>	 '.$wuskydayTime9. '&nbsp;'.$lightningalert8.'';}
-else if ($wuskythunder10>0 )  {echo ' <orange>Thunderstorms</orange>	 '.$wuskydayTime10. '&nbsp;'.$lightningalert8.'';}
+else if ($wuskythunder10>0 )  {echo ' <orange>Thunderstorms</orange> '.$wuskydayTime10. '&nbsp;'.$lightningalert8.'';}
 //snowfall wu
 else if ($wuskysnow>0 )  {echo ' <blue>Snow</blue>	'.$wuskydayTime. '&nbsp;'.$freezing.'';}
 else if ($wuskysnow1>0 )  {echo ' <blue>Snow</blue>	'.$wuskydayTime1. '&nbsp;'.$freezing.'';}
