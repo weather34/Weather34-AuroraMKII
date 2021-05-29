@@ -29,7 +29,8 @@ include('livedata.php');date_default_timezone_set($TZ);?>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<raintoday2 style='background:var(--blue);color:#fff;'>".number_format($weather["rain_24hrs"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
+<?php echo "<raintoday2 style='background:var(--blue);color:#fff;'>".number_format($weather["rain_24hrs"],2)."
+ <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
 <div id="raincontainer2">
@@ -50,11 +51,11 @@ if ($seconds_ago >28800) {
 echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";}
 else if ($seconds_ago >= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
 else if ($seconds_ago >= 3600) {
-  echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
+  echo 'Last Tip &nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
   else if ($seconds_ago <=119) { 
-  echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minute Ago'; }
+  echo 'Last Tip&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minute Ago'; }
 else if ($seconds_ago >119) {
-  echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minutes Ago'; }
+  echo 'Last Tip&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minutes Ago'; }
 ?>
 </div>
 
@@ -126,7 +127,7 @@ else echo 'background:var(--blue);'?>">
 <div class="weather-tempicon-identity">
 <?php  //Rain icon
 if ($seconds_ago <=3600){echo $umbrella;}
-else echo "<rain>".$weather34_rain_icon."</rain>";?>
+else echo "<rain>".$weather["rain_units"]."</rain>";?>
 </div></div>
 
 <?php //weather34 clean notifications 
