@@ -678,6 +678,7 @@ weather34-charticonssvg{position:absolute;left:210px;margin-top:-16px}
 .heatcircle-contentsolar2{margin-top:-50px}
 .heatcircle-contentsolar3{margin-top:-57px}
 .weather-tempicon-identity-uv{position:absolute;width:2.15rem;height:.8rem;margin-left:110px;margin-top:18px}
+.weather-tempicon-identity rain{line-height:2.25;padding-top:0;color:var(--blue);font-size:9px;font-family:verb}
 .heatcircle-contentbft,.heatcircle-contentwindrun{display:block;width:170px;float:left;padding:0;color:var(--body-text-light);text-align:center;font:500 10px weathertext2;line-height:15px;font-size:8.5px;margin-top:-73px;margin-left:-120px}
 .heatcircle-contentwindrun{margin-top:-113px}
 valuetextheadinguv{position:relative;color:var(--body-text-dark);font-family:weathertext2;text-align:left;font-size:8.5px}

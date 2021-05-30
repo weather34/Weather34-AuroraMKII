@@ -344,6 +344,14 @@ aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margi
 .weather-rain-icon-identity{width:1.5rem;height:1rem;margin-left:120px;margin-top:33px}
 .weather-directionicon-identity{width:2rem;height:1.5rem;margin-left:120px;margin-top:43px;padding-bottom:2px;font-family:verb;font-size:10px;color:#bac2ce!important}
 .weather-pressureicon-identity{width:2rem;height:1rem;margin-left:180px;margin-top:20px;padding-bottom:2px;font-size:10px}
+
+.weather-tempicon-identity rain {
+    line-height: 2.5;
+    padding-top: 0px;
+    color: var(--blue);
+    font-size: 9px;
+    font-family: verb
+}
 .showicon3{margin-left:260px}
 @media screen and (max-width:960px){
 .grid-container-forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,2fr));grid-template-rows:repeat(4,1fr);grid-column-gap:0;grid-row-gap:3px;width:100%;background:0}
