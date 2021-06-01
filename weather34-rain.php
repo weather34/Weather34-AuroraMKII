@@ -21,7 +21,9 @@ include('livedata.php');date_default_timezone_set($TZ);?>
   if ($weather["rain_units"]=='mm'){echo "<volumer>mm <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumer>";}
   if ($weather["rain_units"]=='in'){echo "<volumer>in <br>1.37 <br>1.18 <br>0.99 <br>0.80 <br>0.60 <br>0.30 <br>0.10</volumer>";}
   ?>
-<div id="weather34rainwater2" style="height:<?php echo $meteobridgeapi[9]/9.5;?>em;">         
+<div id="weather34rainwater2" style="height:<?php 
+if ($meteobridgeapi[9]>=25){echo $meteobridgeapi[9]/9.25;}
+else echo $meteobridgeapi[9]/9.5;?>em;">        
 </div></div></div>
 
 <div class="second24hourguage">
