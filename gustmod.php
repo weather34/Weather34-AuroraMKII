@@ -18,17 +18,7 @@ else if($meteobridgeapi[32]>=3){echo "<yellow>" .number_format($weather["wind_gu
 else if($meteobridgeapi[32]>=0){echo "<green>" .number_format($weather["wind_gust_speed_max"],1)."</green>&nbsp;<smalltempunit2>".$weather["wind_units"];}
 echo "</smalltempunit2>";echo "<span style='position:relative;top:1px'> ".$maxclock." </span>"; echo $weather["winddmaxtime"];
 ?> </div>
-<?php if ($weather["stationtype"]=="GW1000" || $weather["stationtype"]=="gw1000" || $weather["stationtype"]=="GW1001" || 
-$weather["stationtype"]=="gw1001" || $weather["stationtype"]=="GW1002" || $weather["stationtype"]=="gw1002" || $weather["stationtype"]=="GW1003" || 
-$weather["stationtype"]=="gw1003" || $weather["stationtype"]=="DP1500"){
-  echo'
-<section id="weather34warning" class="weather34-warning-proof">
-<div class="weather34-hardwarenotifications"><div class="weather34-hardwarenotifications-container">
-<div class="weather34-hardwarenotifications-image-wrapper">'.$hardwarealertnotif.'</div>
- <div class="weather34-hardwarenotifications-content-wrapper">
-<p class="weather34-hardwarenotifications-content">Your Weather Station Hardware <br>Is Not Compatible <br>with this Weather<blue>34</blue> Template </p>
-</div></div></div></section>
-';}?>
+
 <div class="maxbftgauge">
 <?php  //Wind Run
 echo $weather34_windrun_icon." Wind Run ";

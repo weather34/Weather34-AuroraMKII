@@ -1,5 +1,5 @@
 <?php include('livedata.php');
-$weather["barometer"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
+$weather["barometer"]=number_format($meteobridgeapi[10]*0.75006157584566,1);
 $weather["barometer_max"]=number_format($meteobridgeapi[34]*0.75006157584566,1);
 $weather["barometer_min"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
 $weather["barometer_trend"]    = number_format($meteobridgeapi[10]*0.75006157584566,1) - number_format($meteobridgeapi[18]*0.75006157584566,1);

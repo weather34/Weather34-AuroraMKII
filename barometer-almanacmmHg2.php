@@ -1,6 +1,6 @@
 <?php include('livedata.php');
 
-$weather["barometer"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
+$weather["barometer"]=number_format($meteobridgeapi[10]*0.75006157584566,1);
 $weather["barometer_max"]=number_format($meteobridgeapi[34]*0.75006157584566,1);
 $weather["barometer_min"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
     $weather["thb0seapressmmax"]=number_format($meteobridgeapi[139]*0.75006157584566,1);
@@ -9,10 +9,8 @@ $weather["barometer_min"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
     $weather["thb0seapressymin"]=number_format($meteobridgeapi[145]*0.75006157584566,1);
     $weather["thb0seapressamax"]=number_format($meteobridgeapi[147]*0.75006157584566,1);
     $weather["thb0seapressamin"]=number_format($meteobridgeapi[149]*0.75006157584566,1);
-
     if ($weather["barometer_units"]=='hPa'){$weather["barometer_units"]='mmHg';}
-    if ($weather["barometer_units"]=='inHg'){$weather["barometer_units"]='mmHg';}
-     
+    if ($weather["barometer_units"]=='inHg'){$weather["barometer_units"]='mmHg';}     
 
 ?>
 <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">

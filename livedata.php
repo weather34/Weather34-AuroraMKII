@@ -685,10 +685,6 @@ $cloudtempc=0.55555556*($cloudtempf - 32);
 
 $weather['airquality']= $meteobridge[175];
 //davis air quality
-if ($weather["stationtype"]=="GW1000" || $weather["stationtype"]=="gw1000" || $weather["stationtype"]=="GW1001"  || 
-	$weather["stationtype"]=="gw1001" || $weather["stationtype"]=="GW1002" || $weather["stationtype"]=="gw1002"  || 
-	$weather["stationtype"]=="GW1003" || $weather["stationtype"]=="gw1003" || $weather["stationtype"]=="DP1500"){
-	$weather['rain_24hrs']=0;$weather["temp"]=0 ;$weather["dewpoint"]=0 ;$weather["barometer"]=0;$weather["rain_today"]=0;$weather["wind_gust_speed"]=0;$weather["wind_speed"]=0;$weather["wind_direction"]=0;$weather['wind_speed_bft']=0;$weather["humidity"]=0;$weather["uv"]=0;$weather["solar"]=0;}
 $weather["airquality-davispm1"]=$meteobridgeapi[180];
 $weather["airquality-davispm25"]=$meteobridgeapi[181];
 $weather["airquality-davispm10"]=$meteobridgeapi[182];

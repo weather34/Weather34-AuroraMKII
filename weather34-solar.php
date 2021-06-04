@@ -110,16 +110,7 @@ echo "'>";
 echo "<uvopacity>".round($weather["lux"],0)."</uvopacity></uvreadings";
 ?>  
 </div></div></div>
-<?php if ($weather["stationtype"]=="GW1000" || $weather["stationtype"]=="gw1000" || $weather["stationtype"]=="GW1001" || 
-$weather["stationtype"]=="gw1001" || $weather["stationtype"]=="GW1002" || $weather["stationtype"]=="gw1002" || $weather["stationtype"]=="GW1003" || 
-$weather["stationtype"]=="gw1003" || $weather["stationtype"]=="DP1500"){echo'
-<section id="weather34warning" class="weather34-warning-proof">
-<div class="weather34-hardwarenotifications"><div class="weather34-hardwarenotifications-container">
-<div class="weather34-hardwarenotifications-image-wrapper">'.$hardwarealertnotif.'</div>
- <div class="weather34-hardwarenotifications-content-wrapper">
-<p class="weather34-hardwarenotifications-content">Your Weather Station Hardware <br>Is Not Compatible <br>with this Weather<blue>34</blue> Template </p>
-</div></div></div></section>
-';}?>
+
 
 <div class="weather34i-rairate-bar2">
 <div id="raincontainer2">
