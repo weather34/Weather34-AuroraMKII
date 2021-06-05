@@ -69,8 +69,8 @@ else if ($weather["lightningmonth"]>=800 ){echo "0 100 200 400 <orange>".$weathe
 else if ($weather["lightningmonth"]>=700 ){echo "0 100 200 400 <orange>".$weather["lightningmonth"]."</orange> 800 ";}
 else if ($weather["lightningmonth"]>=600 ){echo "0 100 200 300 <orange>".$weather["lightningmonth"]."</orange> 700 ";}
 else if ($weather["lightningmonth"]>=500 ){echo "0 100 200 300 400 <orange>".$weather["lightningmonth"]."</orange> 600 ";}
-else if ($weather["lightningmonth"]>=400){echo "0 100 200 300 <orange>".$weather["lightningmonth"]."</orange> 500 600";}
-else if ($weather["lightningmonth"]>=300){echo "0 100 200 <orange>".$weather["lightningmonth"]."</orange> 400 500 600";}
+else if ($weather["lightningmonth"]>=400){echo "0 100 200 250 300 <orange>".$weather["lightningmonth"]."</orange> 500 ";}
+else if ($weather["lightningmonth"]>=300){echo "0 100 200 250 <orange>".$weather["lightningmonth"]."</orange> 400 500 ";}
 else if ($weather["lightningmonth"]>=200 ){echo "0 100 150 <orange>".$weather["lightningmonth"]."</orange> 300 400 500";}
 else if ($weather["lightningmonth"]>=100 ){echo "0 50 <orange>".$weather["lightningmonth"]."</orange> 200 300 400 500 ";}
 else if ($weather["lightningmonth"]>=0 ){echo "<orange>".$weather["lightningmonth"]."</orange> 100 200 300 400 500 ";}
@@ -83,7 +83,7 @@ style="width:
 <?php 
 if ($weather["lightningmonth"]<50){echo $weather["lightningmonth"]/5;}
 else if ($weather["lightningmonth"]<100){echo $weather["lightningmonth"]*0.24;}
-else if ($weather["lightningmonth"]<500){echo $weather["lightningmonth"]*0.25;}
+else if ($weather["lightningmonth"]<500){echo $weather["lightningmonth"]*0.225;}
 else if ($weather["lightningmonth"]<600){echo $weather["lightningmonth"]*0.17;}
 else if ($weather["lightningmonth"]<700){echo $weather["lightningmonth"]*0.14;}
 else if ($weather["lightningmonth"]<800){echo $weather["lightningmonth"]*0.11;}
@@ -105,9 +105,9 @@ if ($weather["lightningyear"]>=6000 ){echo "0 100 200 1k 2k 3k 4k <red>".$weathe
 else if ($weather["lightningyear"]>=6000 ){echo "0 100 500 1k 2k 3k 4k <red>".$weather["lightningyear"]."</red> ";}
 else if ($weather["lightningyear"]>=5000 ){echo "0 100 500 1k 2k 3k 4k <red>".$weather["lightningyear"]."</red> ";}
 else if ($weather["lightningyear"]>=4000 ){echo "0 100 500 1k 2k 3k <red>".$weather["lightningyear"]."</red> ";}
-else if ($weather["lightningyear"]>=3000 ){echo "0 100 200 500 700 1k <red>".$weather["lightningyear"]."</red> ";}
-else if ($weather["lightningyear"]>=2000 ){echo "0 100 200 500 700 1k <red>".$weather["lightningyear"]."</red> ";}
-else if ($weather["lightningyear"]>=1000 ){echo "0 100 200 400 600 800 <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=3000 ){echo "0 100 250 500 800 1k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=2000 ){echo "0 100 250 500 800 1k <red>".$weather["lightningyear"]."</red> ";}
+else if ($weather["lightningyear"]>=1000 ){echo "0 100 250 500 1k <red>".$weather["lightningyear"]."</red> ";}
 else if ($weather["lightningyear"]>=900 ){echo "0 100 200 400 600 <orange>".$weather["lightningyear"]."</orange>";}
 else if ($weather["lightningyear"]>=800 ){echo "0 100 200 400 <orange>".$weather["lightningyear"]."</orange>";}
 else if ($weather["lightningyear"]>=700 ){echo "0 100 200 400 <orange>".$weather["lightningyear"]."</orange>";}
@@ -132,6 +132,7 @@ else if ($weather["lightningyear"]<700){echo $weather["lightningyear"]*0.14;}
 else if ($weather["lightningyear"]<800){echo $weather["lightningyear"]*0.11;}
 else if ($weather["lightningyear"]<900){echo $weather["lightningyear"]*0.10;}
 else if ($weather["lightningyear"]<1000){echo $weather["lightningyear"]*0.11;}
+else if ($weather["lightningyear"]<5000){echo $weather["lightningyear"]*0.08;}
 else if ($weather["lightningyear"]<=50000){echo $weather["lightningyear"]*0.18;}
 ?>px;
 background:

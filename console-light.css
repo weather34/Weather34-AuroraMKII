@@ -344,14 +344,7 @@ aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margi
 .weather-rain-icon-identity{width:1.5rem;height:1rem;margin-left:120px;margin-top:33px}
 .weather-directionicon-identity{width:2rem;height:1.5rem;margin-left:120px;margin-top:43px;padding-bottom:2px;font-family:verb;font-size:10px;color:#bac2ce!important}
 .weather-pressureicon-identity{width:2rem;height:1rem;margin-left:180px;margin-top:20px;padding-bottom:2px;font-size:10px}
-
-.weather-tempicon-identity rain {
-    line-height: 2.5;
-    padding-top: 0px;
-    color: var(--blue);
-    font-size: 9px;
-    font-family: verb
-}
+.weather-tempicon-identity rain{line-height:2.5;padding-top:0;color:var(--blue);font-size:9px;font-family:verb}
 .showicon3{margin-left:260px}
 @media screen and (max-width:960px){
 .grid-container-forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,2fr));grid-template-rows:repeat(4,1fr);grid-column-gap:0;grid-row-gap:3px;width:100%;background:0}
@@ -611,7 +604,7 @@ valuetextheadinguv{position:relative;color:var(--body-text-light);font-family:we
 indoorpm,indoorpm2{position:absolute;width:4rem;height:4rem;left:10px;top:23px;z-index:100;font-size:9px;color:var(--body-text-light);text-shadow:var(--text-shadow);font-family:weathertext2}
 indoorpm2{left:9px}
 valuetextheadingindoor{left:-4px;font-size:8.5px;width:15em;color:var(--body-text-light)}
-.thelaststrike{position:absolute;margin-left:185px;padding:2px;font-size:6pt;color:#555;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;width:max-content;line-height:1;margin-top:30px;text-transform:none;box-shadow:var(--button-shadow);background:#fff;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;text-shadow:none;cursor:pointer;z-index:100}
+.thelaststrike{position:absolute;margin-left:185px;padding:2px;font-size:6pt;color:#555;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center;width:max-content;line-height:1;margin-top:30px;text-transform:none;box-shadow:none;background:0 0;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;text-shadow:none;cursor:pointer;z-index:0}
 .thelaststrike interval{font-size:6pt;font-family:weathertext2;text-transform:capitalize}
 .thelaststrike a{color:var(--body-dark);text-transform:capitalize}
 .daylight3,.daylight4,.daylight5{display:flex;position:absolute;margin-left:-50px;margin-top:0;color:var(--body-text-dark);background-color:rgba(217,224,230,.229);font-family:weathertext2;width:22em;height:10px;font-size:11px;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;font-size:.6em}
