@@ -326,7 +326,7 @@ smallrainunit2b{font-family:weathertext2;vertical-align:top;top:2px;font-size:.2
 .maxwindgauge{margin-top:-27px}
 uvopacity{opacity:1;color:#fff}
 uvunits{opacity:1;color:#fff;font-size:7px}
-.lity{z-index:9990;position:fixed;top:0;right:0;bottom:0;left:0;margin:0 auto;opacity:0;background:hsla(214,10%,14%,.5);outline:0!important;white-space:nowrap}
+.lity{z-index:9990;position:fixed;top:0;right:0;bottom:0;left:0;margin:0 auto;opacity:0;background:hsla(214,10%,14%,.5);outline:0!important;white-space:nowrap;filter:brightness(90%)}
 .lity.lity-opened{opacity:1}
 .lity.lity-closed{opacity:0}
 .lity *{-webkit-box-sizing:border-box;box-sizing:border-box}

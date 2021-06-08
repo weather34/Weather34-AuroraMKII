@@ -21,7 +21,7 @@
 @font-face {font-family: weathertext2;src: url(../fonts/verbatim-medium.woff2) format("woff2"), url(../fonts/verbatim-medium.woff) format("woff");font-display: swap}
 @font-face {font-family: headingtext;src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2"), url(../fonts/HelveticaNeue-Medium.woff) format("woff");font-display: swap}
 @font-face {font-family: verb;src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");font-display: swap}
-body,html{font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+body,html{font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;filter:brightness(100%)}
 .weather34-aurora a{background:none;}
 actualt{position:relative;font-size:11px;left:20px;top:-50px;}
 greydesc{display:block;left:-20px;margin-top:-15px;position:relative;font-size:11px;line-height:1;
