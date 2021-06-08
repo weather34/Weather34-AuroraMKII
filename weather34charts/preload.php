@@ -27,7 +27,9 @@ if ($theme=='dark'){$bordercolor="#3D464D";}
     background: hsl(206, 33%, 96%);
     border-radius: 5px;
     box-shadow: inset -3px -3px 7px #ffffffb0, inset 1px 1px 5px rgba(94, 104, 121, 0.671);
-    padding-top:0
+    padding-top:0;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%)
 }
 
 </style>
