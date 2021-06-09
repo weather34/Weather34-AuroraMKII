@@ -21,7 +21,7 @@ echo "</smalltempunit2>";echo "<span style='position:relative;top:1px'> ".$maxcl
 
 <div class="maxbftgauge">
 <?php  //Wind Run
-echo $weather34_windrun_icon." Wind Run ";
+echo $min1." Wind Run ";
 if ($distanceunit=='km'){echo '&nbsp;<deepblue>'.number_format($weather["windrun341"]*1.60934, 1).'';echo '</deepblue><smalltempunit2>&nbsp;km</smalltempunit2>';}
 if ($distanceunit=='mi'){echo '&nbsp;<deepblue>'.number_format($weather["windrun341"], 1).'';echo '</deepblue><smalltempunit2>&nbsp;mi</smalltempunit2>';}?>
 </div>
