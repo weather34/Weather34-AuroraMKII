@@ -88,7 +88,7 @@ function moon_day(today) {
         F += 0.5 / 1440;        
         oldJ = jday;
          //jday = J0 + 28 * phase + Math.floor(F);
-         jday = J0 + 28.3 * phase + Math.floor(F);
+         jday = J0 + 28 * phase + Math.floor(F);
         phase++;
     }
     // 29.53059 days per lunar month
@@ -115,7 +115,8 @@ else!function(){
 if(void 0===supportsVml.supported){
 var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
 var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
-  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
+  //return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
+  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440586.25)};
   phase_junk(moon_day(new Date)); 
 </script>
 </div></div>

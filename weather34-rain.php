@@ -21,10 +21,8 @@ include('livedata.php');date_default_timezone_set($TZ);?>
   if ($weather["rain_units"]=='mm'){echo "<volumer>mm <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumer>";}
   if ($weather["rain_units"]=='in'){echo "<volumer>in <br>1.37 <br>1.18 <br>0.99 <br>0.80 <br>0.60 <br>0.30 <br>0.10</volumer>";}
   ?>
-<div id="weather34rainwater2" style="height:<?php 
-if ($meteobridgeapi[9]>=25){echo $meteobridgeapi[9]/9.25;}
-else echo $meteobridgeapi[9]/9.5;?>em;">        
-</div></div></div>
+<div id="weather34rainwater2" style="height:<?php echo $meteobridgeapi[9]/9.5;?>em;">         
+</div></div></div> 
 
 <div class="second24hourguage">
   <?php echo "<last24h>Last 24 Hours</last24h>";?>
@@ -49,9 +47,9 @@ else echo $meteobridgeapi[9]/9.5;?>em;">
 $raintimeago=$originalDate124;$seconds_ago = (time() - strtotime($raintimeago));
 echo $min1." ";
 // weather34 sez lets get rainfall hours or minutes ago if within last 8 hours
-if ($seconds_ago >28800) {
+if ($seconds_ago >7200) {
 echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";}
-else if ($seconds_ago >= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
+else if ($seconds_ago <= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
 else if ($seconds_ago >= 3600) {
   echo 'Last Tip &nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
   else if ($seconds_ago <=119) { 

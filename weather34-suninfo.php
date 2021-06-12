@@ -223,9 +223,7 @@ if ($elev<=0){echo $sundownhalf1;}else if ($elev>0){echo $sunuphalf1;};echo ' Su
 <?php echo $info;?> Lunar Events<br>
 <?php 
 $lunayear=date('Y');		
- if($lunayear==2020 || $lunayear==2021 || $lunayear==2022 ){  
-	echo $info." Total Lunar <blue>Eclipse</blue> 26 May 2021<br>";
-	echo $info." Annular Solar <blue>Eclipse</blue> 10 Jun 2021<br>	";
+ if($lunayear==2020 || $lunayear==2021 || $lunayear==2022 ){  	
 	echo $info." Partial Lunar <blue>Eclipse </blue> 18-19 Nov 2021<br>	";
   echo $info." Total <blue>Eclipse </blue> 4 Dec 2021<br>"; 
 	}	?>	
