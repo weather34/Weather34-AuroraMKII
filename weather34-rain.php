@@ -47,9 +47,9 @@ include('livedata.php');date_default_timezone_set($TZ);?>
 $raintimeago=$originalDate124;$seconds_ago = (time() - strtotime($raintimeago));
 echo $min1." ";
 // weather34 sez lets get rainfall hours or minutes ago if within last 8 hours
-if ($seconds_ago >7200) {
+if ($seconds_ago >28800) {
 echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";}
-else if ($seconds_ago <= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
+else if ($seconds_ago >= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
 else if ($seconds_ago >= 3600) {
   echo 'Last Tip &nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
   else if ($seconds_ago <=119) { 
