@@ -11,7 +11,7 @@
             #00adbd 0%,
             #00adbd 30%,
             #d35f50 90%)}
-body{font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Ubuntu,Roboto,Cantarell,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";cursor:url(weather34redcursor.png),n-resize;margin:0 auto;background-color:rgba(244,245,246,.5);color:#4a5568;width:100%;max-width:985px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;min-height:100vh;overflow-x:hidden}
+body{font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Ubuntu,Roboto,Cantarell,Noto Sans,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';margin:0 auto;background-color:rgba(244,245,246,.5);color:#4a5568;width:100%;max-width:985px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;min-height:100%;overflow-x:hidden;cursor:url(weather34redcursor.png),n-resize;filter:brightness(100%);-webkit-filter:brightness(100%)}
 html{min-height:100vh;overflow-x:hidden}
 .weather34-tablet{border:5px solid #e0e5e9;border-bottom:30px solid #e0e5e9;padding:0}
 container{margin:0 auto;width:100%;text-align:center;align-items:center;justify-items:center}
