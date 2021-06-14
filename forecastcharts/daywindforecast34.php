@@ -112,7 +112,7 @@ return thecolor;}
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Wind Speed " +  e.entries[0].dataPoint.y.toFixed(0) +" <?php echo $windunit?>";  }
+               return "Wind Speed <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0) +" <?php echo $windunit?>";  }
  },
  axisX: {
 			gridColor: "#555",	

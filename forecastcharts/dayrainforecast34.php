@@ -105,7 +105,7 @@ return rainlevel;}
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Accumulation " +  e.entries[0].dataPoint.y +" <?php echo $rainunit?>";  
+               return "Accumulation <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y +" <?php echo $rainunit?>";  
    }  
 
  },

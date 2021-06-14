@@ -305,7 +305,7 @@ todaysrain,uvheading{position:absolute;font-size:9px;margin-top:12px;margin-left
 last24h,solarheading{position:absolute;font-size:9px;margin-top:22px;margin-left:-41px;z-index:20;font-family:weathertext2;width:auto;max-width:175px;background-color:hsla(204,31%,21%,.229);line-height:1;text-align:center;padding-left:2px;padding-right:2px;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 uvheading{margin-left:-30px}
 solarheading{margin-left:-46px}
-.monthrain,.yearrain{position:absolute;margin-top:-135px;margin-left:-90px;font-size:.55em;font-family:weathertext2;width:max-content;background-color:hsla(217,15%,17%,1);line-height:1.1;text-align:center;padding-left:4px;padding-right:4px;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
+.monthrain,.yearrain{position:absolute;margin-top:-138px;margin-left:-90px;font-size:.55em;font-family:weathertext2;width:max-content;background-color:hsla(217,15%,17%,1);line-height:1.5;text-align:center;padding-left:4px;padding-right:4px;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 .yearrain{margin-top:-123px}
 volume,volumeb,volumer,volumet,volumew{position:absolute;font-size:5.5pt;font-family:weathertext2;display:block;margin-left:2px;opacity:.4;text-shadow:none}
 volumer,volumet,volumew{line-height:9px}
@@ -320,10 +320,10 @@ smalltrainunit2{font-size:.45rem;color:var(--body-text-dark);text-shadow:none}
 smalltrainunit3{font-size:7px;color:var(--body-text-dark);text-shadow:none}
 rainunitin,rainunitmm{position:absolute;font-size:.6rem;color:var(--white);margin-top:-41px;margin-left:0;font-family:headingtext}
 smallrainunit2b{font-family:weathertext2;vertical-align:top;top:2px;font-size:.25rem;color:var(--white)}
-.maxbftgauge,.maxuvindex,.maxwindgauge,.maxwm2{position:absolute;margin-top:-25px;margin-left:-80px;font-size:.55em;font-family:weathertext2;width:max-content;background-color:hsla(217,15%,17%,1);line-height:1.1;text-align:center;padding-left:4px;padding-right:4px;border-radius:2px}
-.maxwm2{margin-top:-11px}
-.maxbftgauge{margin-top:-14px}
-.maxwindgauge{margin-top:-27px}
+.maxbftgauge,.maxuvindex,.maxwindgauge,.maxwm2{position:absolute;margin-top:-30px;margin-left:-80px;font-size:.55em;font-family:weathertext2;width:max-content;background-color:hsla(217,15%,17%,1);line-height:1.5;text-align:center;padding-left:4px;padding-right:4px;border-radius:2px}
+.maxwm2{margin-top:-15px}
+.maxbftgauge{margin-top:-15px}
+.maxwindgauge{margin-top:-30px}
 uvopacity{opacity:1;color:#fff}
 uvunits{opacity:1;color:#fff;font-size:7px}
 .lity{z-index:9990;position:fixed;top:0;right:0;bottom:0;left:0;margin:0 auto;opacity:0;background:hsla(214,10%,14%,.5);outline:0!important;white-space:nowrap;filter:brightness(90%);-webkit-filter:brightness(90%)}

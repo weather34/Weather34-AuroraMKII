@@ -16,7 +16,7 @@ if($meteobridgeapi[32]>=16.66){echo "<red>" .number_format($weather["wind_gust_s
 else if($meteobridgeapi[32]>=11.11){echo "<orange>" .number_format($weather["wind_gust_speed_max"],1)."</orange>&nbsp;<smalltempunit2>".$weather["wind_units"];}
 else if($meteobridgeapi[32]>=3){echo "<yellow>" .number_format($weather["wind_gust_speed_max"],1)."</yellow>&nbsp;<smalltempunit2>".$weather["wind_units"];}
 else if($meteobridgeapi[32]>=0){echo "<green>" .number_format($weather["wind_gust_speed_max"],1)."</green>&nbsp;<smalltempunit2>".$weather["wind_units"];}
-echo "</smalltempunit2>";echo "<span style='position:relative;top:1px'> ".$maxclock." </span>"; echo $weather["winddmaxtime"];
+echo "</smalltempunit2>";echo " ".$maxclock. " ".$weather["winddmaxtime"];
 ?> </div>
 
 <div class="maxbftgauge">

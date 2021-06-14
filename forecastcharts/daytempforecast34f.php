@@ -108,7 +108,7 @@ return tempcolor;}
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Temperature " +  e.entries[0].dataPoint.y.toFixed(0) +"°<?php echo $tempunit?>";  }
+               return "Temperature <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0) +"°<?php echo $tempunit?>";  }
  },
 		axisX: {
 			gridColor: "#555",	

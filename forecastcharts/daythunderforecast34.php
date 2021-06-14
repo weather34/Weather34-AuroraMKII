@@ -93,16 +93,17 @@ return thecolor;}
 		toolTip:{
 			fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
+			   backgroundColor: "hsl(19, 66%, 55%)",	
 			   fontColor: '#fff',	
 			   fontSize: 11,
 			   borderThickness: 3,	   
 			   //toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
-			   shared: true, 
+			   shared: false, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Thunderstorm Expected <?php echo $alert?>" ;  
-			   }
+               return "Thunder Storm <br>Risk Level <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0);  }
+			  
+			  
  },
  axisX: {
 			gridColor: "#333",	

@@ -654,7 +654,7 @@ bottomtoolbarspace{margin-left:70px}
 .button-dial-toprain{border-top:0;box-shadow:none;background-image:none}
 .lastrain,.rainratephrases{position:absolute;margin-top:-117px;margin-left:-85px;font-size:.55em;font-family:weathertext2;width:auto;max-width:175px;box-shadow:var(--button-shadow);line-height:1.1;background:#fff;text-align:center;text-shadow:var(--text-shadow);padding-left:2px;padding-right:2px}
 .rainratephrases{margin-top:17px;margin-left:70px}
-.monthrain,.yearrain{position:absolute;margin-top:-117px;margin-left:-85px;font-size:.55em;font-family:weathertext2;width:auto;max-width:175px;box-shadow:var(--button-shadow);line-height:1.1;background:#fff;text-align:center;text-shadow:var(--text-shadow);padding-left:2px;padding-right:2px}
+.monthrain,.yearrain{position:absolute;margin-top:-120px;margin-left:-85px;font-size:.55em;font-family:weathertext2;width:auto;max-width:175px;box-shadow:var(--button-shadow);line-height:1.5;background:#fff;text-align:center;text-shadow:var(--text-shadow);padding-left:4px;padding-right:4px}
 .yearrain{margin-top:-105px}
 rainphrasetext{position:relative;top:-4px;font-family:weathertext2;font-size:.9em;right:1px;color:var(--body-text-dark)}
 .rainwhite{position:absolute;font-weight:500;color:var(--body-text-dark);left:25px;top:7px;font-family:weathertext3}
@@ -686,8 +686,8 @@ volume{line-height:9.75pt}
 .button-dial-toprain{border-top:0;box-shadow:none;background-image:none}
 smalltrainunit2{font-size:.45rem;text-shadow:var(--text-shadow);color:var(--body-dark)}
 smalltrainunit3{font-size:7px;text-shadow:var(--text-shadow);color:var(--body-dark)}
-.maxbftgauge,.maxuvindex,.maxwindgauge,.maxwm2{position:absolute;margin-top:-50px;margin-left:-85px;font-size:.55em;font-family:weathertext2;width:auto;max-width:175px;box-shadow:var(--button-shadow);line-height:1.1;background:#fff;text-align:center;text-shadow:var(--text-shadow);padding-left:2px;padding-right:2px}
-.maxbftgauge,.maxwm2{margin-top:-37px}
+.maxbftgauge,.maxuvindex,.maxwindgauge,.maxwm2{position:absolute;margin-top:-50px;margin-left:-85px;font-size:.55em;font-family:weathertext2;width:auto;max-width:175px;box-shadow:var(--button-shadow);line-height:1.5;background:#fff;text-align:center;text-shadow:var(--text-shadow);padding-left:4px;padding-right:4px}
+.maxbftgauge,.maxwm2{margin-top:-35px}
 .mooninfo2 a{position:relative;left:140px;padding:2px;font-size:8.5px;color:var(--body-text-dark);display:flex;justify-content:left;width:max-content;line-height:1.4;top:37px;text-shadow:none;text-transform:none;box-shadow:var(--button-shadow);background:#fff;text-shadow:none;border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px}
 barometerspacinghpa{margin-left:95px}
 barometerspacinginhg{margin-left:100px}

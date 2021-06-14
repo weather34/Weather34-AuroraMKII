@@ -453,8 +453,8 @@ $wireless='<svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stro
 <path d="M12 10a8 8 0 0 1 8 8" /><path d="M12 6a12 12 0 0 1 12 12" /></g> </svg>';
 $wirelessoffline='<svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="hsl(19, 66%, 55%)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/> <g transform="rotate(-45 12 18)"><line x1="12" y1="18" x2="12.01" y2="18" /> <path d="M12 14a4 4 0 0 1 4 4" /><path d="M12 10a8 8 0 0 1 8 8" /><path d="M12 6a12 12 0 0 1 12 12" />
 </g> </svg>';
-$maxclock='<svg width="8" height="8" viewBox="0 0 24 24" stroke-width="2" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" 
-stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" /><polyline points="12 7 12 12 9 15" /></svg>';
+$maxclock='<svg version="1.1" width="5px" height="5px" viewBox="0 0 473.935 510.935" style="enable-background:new 0 0 473.935 473.935;margin-top:-2px">
+<circle style="fill:hsla(185, 100%, 37%, 1);" cx="236.967" cy="236.967" r="236.967"/></svg>';
 $tempman='<svg width="18pt" height="16pt" fill="currentColor" viewBox="0 0 1024 1024" version="1.1"> <path d="M528.8 95.68m-84.608 0a84.608 84.608 0 1 0 169.216 0 84.608 84.608 0 1 0-169.216 0Z" fill="" /><path d="M711.136 292.384s4.768-94.496-94.944-94.496h-172.896c-96.16 
    0-95.456 87.264-95.52 94.496l0.032 268.16c1.568 14.464 15.84 30.944 33.568 30.944 17.632 0 30.592-15.968 32.192-30.464l30.016 427.04c2.208 21.728 17.568 29.824 36.448 29.824 18.848 0 34.176-8.096 36.384-29.824h26.656c2.304 21.728 17.6 29.824 36.384 29.824 18.912 0 34.24-8.096 36.512-29.824l30.912-427.328c0 14.496 14.048 30.816 
    31.744 30.816 17.664 0 31.776-16.544 33.344-31.008l-0.832-268.16z" fill="" /></svg>';
@@ -745,5 +745,5 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
 $weather34version='Aurora MKII';
-$weather34versiondate='12th June 2021';
+$weather34versiondate='14th June 2021';
 ?>

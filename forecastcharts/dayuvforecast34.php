@@ -102,7 +102,7 @@ return uvlevel;}
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "UVINDEX " +  e.entries[0].dataPoint.y.toFixed(0);  }
+               return "UVINDEX <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0);  }
  },
  axisX: {
 	gridColor: "#555",	

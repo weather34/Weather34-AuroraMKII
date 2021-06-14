@@ -102,7 +102,7 @@ return thecolor;}
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Precipitation Probability " +  e.entries[0].dataPoint.y +"%";  
+               return "Precipitation Probability <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y +"%";  
    }  
 
  },

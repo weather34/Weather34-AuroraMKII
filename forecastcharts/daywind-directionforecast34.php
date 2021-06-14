@@ -105,7 +105,7 @@ var yLabelCounter=0;
 			   labelWidth: 150,  
 			   fontSize: 11,	
 			   //content: "<hr/> {y} {label}" ,   
-			   content: "{name} {y}" , 	   
+			   content: "{name} <span style='color:#fff;font-weight:600'>{y}" , 	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true,},
  axisX: {
