@@ -125,71 +125,85 @@ $supermoonevent=$supermooneventcheck["event_title"];}};
     <style>
     
     .grida{display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:3px;grid-row-gap:3px;color:#afb7c0;margin-top:5px;font-family:verb}
-  .grida>article{padding:5px;font-size:9px;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border:1px solid hsla(217,15%,17%,.5);border-bottom:10px solid hsla(217,15%,17%,.5);height:160px}
-  .grid2{display:grid;grid-template-columns:repeat(2,1fr);grid-column-gap:3px;grid-row-gap:3px;color:#afb7c0;overflow:hidden;margin-top:5px}
-  .grid2>article{padding:5px;font-size:.8em;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:160px;border:1px solid hsla(217,15%,17%,.5);border-bottom:10px solid hsla(217,15%,17%,.5);font-family:verb}
-  .grid2>article2{padding:5px;font-size:8px;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:15px;border:1px solid hsla(217,15%,17%,.5);border-bottom:1px solid hsla(217,15%,17%,.5);font-family:verb;width:max-content}
-  a{color:var(--blue);text-decoration:none}
-  .weather34darkbrowser{position:relative;background:0;width:96%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;font-family:verb}
-  .weather34darkbrowser[url]:after{content:attr(url);color:#afb7c0;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:hsla(233,12%,13%,.5);height:20px;box-sizing:border-box}
-  credit{position:relative;font-size:.7em;top:10%}
-  .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
-  .actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
-  .mbsmartlogo{position:relative;float:right;left:10px;top:70px}
-  small{font-size:8px}
-  large{position:relative;top:-5px;left:15px;font-size:12px;width:80px}
-  .date{position:relative;top:-85px;left:110px;font-size:11px;width:120px}
-  .date2{position:relative;top:-5px;left:5px;font-size:11px;width:160px}
-  .weather34-container-clock{width:120px;height:120px;position:relative;top:-45px;left:-45px}
-  .weather34-large-clock{width:130px;height:130px;border-radius:50%;background:hsla(214,29%,91%,.1);position:absolute;top:50px;left:50px;box-shadow:var(--button-shadow);transform:rotate(var(--rotation));border:4px solid hsla(204,31%,21%,.2);-webkit-transform:rotate(var(--rotation));-moz-transform:rotate(var(--rotation));-ms-transform:rotate(var(--rotation));-o-transform:rotate(var(--rotation))}
-  .weather34-small-clock{width:100px;height:100px;border-radius:50%;background-color:rgba(0,0,0,.4);position:absolute;top:15px;left:15px;box-shadow:var(--button-shadow);background-image:linear-gradient(hsla(0,0%,33%,.3) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.3) 1px,transparent 1px);background-size:5px 5px}
-  .circle{background-color:var(--blue);width:10px;height:10px;border-radius:50%;position:absolute;left:45px;top:40px;z-index:1}
-  .hour-indicator{width:0;height:25px;background-color:#b7c5d3;border-radius:5px;position:absolute}
-  .twelve{top:0;left:60px}
-  .twelve::after{content:"12";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
-  .three{right:11px;top:53px}
-  .three::after{content:"3";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
-  .weather34brand{left:40px;bottom:15px}
-  .weather34brand::after{content:"weather34";font-size:9px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
-  .six{left:62px;bottom:-10px}
-  .six::after{content:"6";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
-  .nine{left:5px;top:53px;height:3px;width:0}
-  .nine::after{content:"9";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
-  .hand{--rotation:0;height:50px;width:5px;border-radius:2px;position:absolute;left:63px;top:10px;transform-origin:bottom;transform:rotate(calc(var(--rotation) * 1deg))}
-  .hour{background-color:#888989;height:35px;top:25px}
-  .minute{background-color:#ec5113;width:4px}
-  .second{background-color:var(--blue);width:1px}
-  .clock34{box-shadow:var(--button-shadow);background-color:#1d2124;
-  display:flex;font-family:clock;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;left:0;
-  text-align:center;position:relative;color:#99B1C9;font-size:12px;text-transform:none;padding:4px;padding-top:6px;top:-147px;
-  z-index:20;width:5.5em;background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);
-  background-size:5px 5px;justify-content:center;align-items:center}
-  .gridcal{display:grid;grid-template-columns:repeat(7,minmax(14px,1fr));grid-gap:.75em;color:hsla(214,29%,91%,.6)}
-  .day{background:hsla(214,29%,91%,.1);display:flex;justify-content:center;align-items:center;border-radius:2px;color:#fff;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family:verb,Arial,Helvetica,sans-serif}
-  .wrapper{width:calc(250px + 1.12em);margin:auto;margin-top:5px;margin-left:20px;font-family:verb,Arial,Helvetica,sans-serif;overflow:hidden;padding:7px;padding-right:10px;background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);background-size:2px 2px;border-radius:5px}
-  .days{display:none;display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;background:0}
-  .curr_date{color:hsla(214,29%,91%,.8)}
-  .weather34weekdays{position:relative;text-transform:uppercase;font-size:.8rem;display:grid;grid-template-columns:repeat(7,35px);grid-gap:.25em;list-style:none;left:6px;top:-70px;margin-bottom:-145px}
-  .weather34weekdays todayorange{color:#fff;background:var(--green);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
-  grey{color:#ccc}
-  blue{color:#01a4b4}
-  orange{color:#d87040}
-  orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}
-  green{color:#afb7c0}
-  red{color:#f37867}
-  red6{color:#d65b4a}
-  value{color:#fff}
-  yellow{color:#df9741}
-  purple{color:#916392}
-  .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
-  .actualups{position:relative;left:35px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:140px;height:.8em;font-size:.8rem;align-items:center;justify-content:center;top:-30px;margin-bottom:-10px}
-  actualt34{display:none}
-  .actualtlocal{position:relative;left:145px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
-  .weather34logosvg{position:absolute;display:flex;right:40px;margin-top:-60px;width:4rem}
-  .weather34-image{position:absolute;display:flex;right:70px;margin-top:20px;width:10rem;opacity:.9}
-  .info2a{position:absolute;margin-top:40px;font-size:.8em;margin-left:5px;width:200px}
-  li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
-    
+.grida>article{padding:5px;font-size:9px;border-radius:4px;-webkit-border-radius:4px;background:0;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;border:1px solid hsla(217,15%,17%,.5);
+  border-bottom:10px solid hsla(217,15%,17%,.5);height:160px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);
+  grid-column-gap:3px;grid-row-gap:3px;color:#afb7c0;overflow:hidden;margin-top:5px}
+.grid2>article{padding:5px;font-size:.8em;border-radius:4px;
+  -webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;height:160px;border:1px solid hsla(217,15%,17%,.5);
+  border-bottom:10px solid hsla(217,15%,17%,.5);font-family:verb}
+.grid2>article2{padding:5px;font-size:8px;border-radius:4px;
+  -webkit-border-radius:4px;background:0;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:15px;
+  border:1px solid hsla(217,15%,17%,.5);border-bottom:1px solid hsla(217,15%,17%,.5);font-family:verb;}
+a{color:var(--blue);text-decoration:none}
+.weather34darkbrowser{position:relative;background:0;width:96%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;font-family:verb}
+.weather34darkbrowser[url]:after{content:attr(url);color:#afb7c0;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:hsla(233,12%,13%,.5);height:20px;box-sizing:border-box}
+credit{position:relative;font-size:.7em;top:10%}
+.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualw{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.mbsmartlogo{position:relative;float:right;left:10px;top:70px}
+small{font-size:8px}
+large{position:relative;top:-5px;left:15px;font-size:12px;width:80px}
+.date{position:relative;top:-85px;left:110px;font-size:11px;width:120px}
+.date2{position:relative;top:-5px;left:5px;font-size:11px;width:160px}
+.weather34-container-clock{width:120px;height:120px;position:relative;top:-45px;left:-45px}
+.weather34-large-clock{width:130px;height:130px;border-radius:50%;background:hsla(214,29%,91%,.1);position:absolute;top:50px;left:50px;box-shadow:var(--button-shadow);transform:rotate(var(--rotation));border:4px solid hsla(204,31%,21%,.2);-webkit-transform:rotate(var(--rotation));-moz-transform:rotate(var(--rotation));-ms-transform:rotate(var(--rotation));-o-transform:rotate(var(--rotation))}
+.weather34-small-clock{width:100px;height:100px;border-radius:50%;background-color:rgba(0,0,0,.4);position:absolute;top:15px;left:15px;box-shadow:var(--button-shadow);background-image:linear-gradient(hsla(0,0%,33%,.3) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.3) 1px,transparent 1px);background-size:5px 5px}
+.circle{background-color:var(--blue);width:10px;height:10px;border-radius:50%;position:absolute;left:45px;top:40px;z-index:1}
+.hour-indicator{width:0;height:25px;background-color:#b7c5d3;border-radius:5px;position:absolute}
+.twelve{top:0;left:60px}
+.twelve::after{content:"12";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+.three{right:11px;top:53px}
+.three::after{content:"3";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+.weather34brand{left:40px;bottom:15px}
+.weather34brand::after{content:"weather34";font-size:9px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+.six{left:62px;bottom:-10px}
+.six::after{content:"6";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+.nine{left:5px;top:53px;height:3px;width:0}
+.nine::after{content:"9";font-size:12px;color:hsla(214,29%,91%,.8);font-family:verb,Arial,Helvetica,sans-serif}
+.hand{--rotation:0;height:50px;width:5px;border-radius:2px;position:absolute;left:63px;top:10px;transform-origin:bottom;transform:rotate(calc(var(--rotation) * 1deg))}
+.hour{background-color:#888989;height:35px;top:25px}
+.minute{background-color:#ec5113;width:4px}
+.second{background-color:var(--blue);width:1px}
+.clock34{box-shadow:var(--button-shadow);background-color:#1d2124;
+display:flex;font-family:clock;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;left:0;
+text-align:center;position:relative;color:#99B1C9;font-size:12px;text-transform:none;padding:4px;padding-top:6px;top:-147px;
+z-index:20;width:5.5em;background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);
+background-size:5px 5px;justify-content:center;align-items:center}
+.gridcal{display:grid;grid-template-columns:repeat(7,minmax(14px,1fr));grid-gap:.75em;color:hsla(214,29%,91%,.6)}
+.day{background:hsla(214,29%,91%,.1);display:flex;justify-content:center;align-items:center;border-radius:2px;color:#fff;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;height:14px;font-family:verb,Arial,Helvetica,sans-serif}
+.wrapper{width:calc(250px + 1.12em);margin:auto;margin-top:5px;margin-left:0px;
+  font-family:verb,Arial,Helvetica,sans-serif;overflow:hidden;padding:7px;
+  padding-right:10px;
+  background-image:linear-gradient(hsla(0,0%,33%,.1) 1px,transparent 1px),linear-gradient(to right,hsla(0,0%,33%,.1) 1px,transparent 1px);
+  background-size:2px 2px;border-radius:5px}
+.days{display:none;display:grid;grid-template-columns:repeat(7,30px);grid-gap:.75em;background:0}
+.curr_date{color:hsla(214,29%,91%,.8)}
+.weather34weekdays{position:relative;text-transform:uppercase;font-size:.8rem;display:grid;grid-template-columns:repeat(7,35px);grid-gap:.25em;list-style:none;left:6px;top:-70px;margin-bottom:-145px}
+.weather34weekdays todayorange{color:#fff;background:var(--green);border-radius:2px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;line-height:14px;padding:0 2px 0 2px}
+grey{color:#ccc}
+blue{color:#01a4b4}
+orange{color:#d87040}
+orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}
+green{color:#afb7c0}
+red{color:#f37867}
+red6{color:#d65b4a}
+value{color:#fff}
+yellow{color:#df9741}
+purple{color:#916392}
+.actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.actualups{position:relative;left:35px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:140px;height:.8em;font-size:.8rem;align-items:center;justify-content:center;top:-30px;margin-bottom:-10px}
+actualt34{display:none}
+.actualtlocal{position:relative;left:145px;background:rgba(74,99,111,0);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:190px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
+.weather34logosvg{position:absolute;display:flex;right:40px;margin-top:-60px;width:4rem}
+.weather34-image{position:absolute;display:flex;right:70px;margin-top:20px;width:10rem;opacity:.9}
+.info2a{position:absolute;margin-top:40px;font-size:.8em;margin-left:5px;width:200px}
+li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
+black{color:#777}
+  
     
     </style>
   <div class="weather34darkbrowser" url="Moon Phase and Relative Information"></div>
