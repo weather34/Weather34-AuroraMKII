@@ -142,8 +142,6 @@ $displayemail   = "' . $_POST["displayemail"] . '";
 $metarapikey ="'. $_POST["metarapikey"]. '";
 $metar   = "'. $_POST["metar"]. '";
 $icao1   = "'. $_POST["icao1"]. '";
-$fontsize   = "'. $_POST["fontsize"]. '";
-$fontweight   = "'. $_POST["fontweight"]. '";
 ';
 
     $fp = FOPEN("console-settings.php", "w") or die("Unable to open console-settings.php file check file permissions !");
@@ -679,7 +677,7 @@ blue{color:#00adbd }
                                             <input name="stationName" type="text" id="stationName" value="<?php echo $stationName; ?>" class="chooseapi">
                                             <br />  <br />  
 
-                                    <div class="stationvalue"> Theme Colour</div>
+                                    <div class="stationvalue"> Charts Theme Background Colour </div>
                                                     <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
                                                         <path d="M12 30 L24 16 12 2" />
                                                     </svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
@@ -692,8 +690,12 @@ blue{color:#00adbd }
                                                         <option>dark</option>
                                                         <option>light</option>
 
-                                                    </select>
-
+                                                    </select><br>
+                                                    <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                <path d="M16 14 L16 23 M16 8 L16 10" />
+                                                <circle cx="16" cy="16" r="14" /></svg> 
+                                        
+                                        this is a fixed solution for now , a new charts library will come later in 2021 
                                                  <br><br>
             </div>
 
@@ -1903,47 +1905,7 @@ Check<b>WX</b> Metar API KEY you need to sign up here for free API key <br><a hr
 <br>    
     <p>
 
-    <div class="seperator"></div>
-<div class="weathersectiontitle">
-<svg id="i-settings" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-<path d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z" />
-<circle cx="16" cy="16" r="4" />
-</svg>
-Font Size for Temperature/Dewpoint/Humidity/Wind Modules</div>
-<br><br>
-<div style="float:right; margin-right:80px;margin-top:-40px;font-size:32px;">
-<svg version="1.1" width="120px" fill="silver" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-
-<g><g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)"><path d="M6551.1,2922.7c-48.6-120.3-1003.6-2601.3-1569.5-4078.6c-325.2-844.9-596.5-1551.6-601.7-1566.9c-10.2-25.6,105-33.3,524.9-33.3h537.7l64,174.1c33.3,94.7,163.9,453.2,286.8,798.8c125.5,345.6,238.1,642.7,250.9,660.6c17.9,23.1,258.6,30.7,1044.6,30.7h1019l35.8-69.1c20.5-40.9,166.4-414.7,325.2-832.1l291.9-763H9329h571l-115.2,276.5c-61.5,151.1-588.9,1438.9-1172.6,2859.9L7554.7,2966.3l-491.6,7.7C6574.1,2979.1,6574.1,2979.1,6551.1,2922.7z M7777.5-200.9c0-12.8-317.5-20.5-704.1-20.5c-386.6,0-704.1,5.1-704.1,12.8c0,5.1,135.7,378.9,304.7,824.4c166.4,448,309.8,844.9,320,883.3c58.9,253.5,46.1,279.1,427.6-734.8C7616.2,242.1,7777.5-190.6,7777.5-200.9z"/><path d="M1660.9,1360.9c-12.8-33.3-366.1-952.4-783.5-2043.1C457.6-1772.9,109.4-2686.9,101.7-2710c-10.2-43.5,17.9-46.1,330.3-46.1H775l217.6,609.4l217.6,606.8H2027h814.2l235.5-606.8l233-609.4h366.1c207.4,0,363.6,10.2,358.4,23c-2.5,12.8-386.6,952.5-852.6,2086.7l-844.9,2063.6h-327.7C1694.2,1417.3,1681.4,1414.7,1660.9,1360.9z M2080.8,495.6c35.8-110.1,448.1-1213.6,537.7-1438.9c17.9-43.5-20.5-46.1-586.3-46.1c-419.9,0-604.2,7.7-604.2,28.2c0,15.4,107.5,317.5,240.7,670.8c133.1,355.9,261.2,716.9,284.2,806.5c25.6,89.6,53.8,151.1,64,140.8C2027,646.6,2057.8,572.4,2080.8,495.6z"/></g></g>
-</svg>
-
-</div>
-
-<div class="stationvalue">Choose Font Size</div> <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-<path d="M12 30 L24 16 12 2" />
-</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="silver" stroke="silver" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-<path d="M30 12 L16 24 2 12" />
-</svg>
-<select id="fontsize" name="fontsize" class="choose1">
-<option><?php echo $fontsize; ?></option>
-<option>24</option>
-<option>26</option>
-<option>28</option>
-<option>30</option>
-</select>
-<br>
-
-<div class="stationvalue">Use Bold Font ?</div> <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-<path d="M12 30 L24 16 12 2" />
-</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="silver" stroke="silver" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-<path d="M30 12 L16 24 2 12" />
-</svg>
-<select id="fontsize" name="fontweight" class="choose1">
-<option><?php echo $fontweight; ?></option>
-<option>yes</option>
-<option>no</option>
-</select>
-</div>
+   
                                             </P>
 
 

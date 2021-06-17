@@ -13,7 +13,7 @@ $weather["barometer_min"]=number_format($meteobridgeapi[36]*0.75006157584566,1);
     if ($weather["barometer_units"]=='inHg'){$weather["barometer_units"]='mmHg';}     
 
 ?>
-<link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
 <theword>Barometric Pressure (<blue><?php echo $weather["barometer_units"];?></blue>)</theword>
 <extrainfoicon><?php echo $weather34_pressure_icon;?></extrainfoicon>
 <div class="canvascredit">

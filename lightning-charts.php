@@ -1,5 +1,5 @@
 <?php include('livedata.php');?>
-<link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
 <theword>Lightning Strikes </theword>
 <extrainfoicon><orange><?php echo $weather34_lightningdata;?></orange></extrainfoicon>
 <div class="canvascredit">

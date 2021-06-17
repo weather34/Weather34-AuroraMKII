@@ -14,3 +14,12 @@ var b=setInterval(function(){c.load("weather34-airquality-home.php")},1162000)})
 var b=setInterval(function(){c.load("weather34-lightning-chuck-home.php")},1800000)})})(jQuery);//
 </script>
 
+
+<script> //weather34 theme switcher
+function setTheme(themeName) {localStorage.setItem('weather34theme', themeName);  document.documentElement.className = themeName;}
+function toggleTheme() {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-light');} else {setTheme('theme-dark');}}
+(function () {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-dark');document.getElementById('weather34themeslider').checked = true;
+} else {setTheme('theme-light');document.getElementById('weather34themeslider').checked = false; }
+})();        
+</script>
+

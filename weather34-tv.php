@@ -27,7 +27,7 @@ include_once('livedata.php');include_once('updater2.php');
 <meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-title" content="Weather34">
 <meta name="application-name" content="Weather34">
-<link href="console-<?php echo $theme?>.css?version=<?php echo filemtime('console-'.$theme.'.css')?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css')?>" rel="stylesheet prefetch">
 <link rel="preload" href="fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -63,16 +63,18 @@ include_once('livedata.php');include_once('updater2.php');
     <li3><div id=position13></div></li3>
   </ul>
 
-  <div class="nav-bottom">
-  <a href="console-setup.php" target="_blank" data-title="Setup Screen"> <?php echo $adjust ?></a>
-  <a class="ico" href="console-setup.php" data-title="<?php if($password==''){echo 'Unlocked !';}else echo "Locked";?>" target="_blank" style="margin-left:-8px;top:-8px">
-    <?php if($password==''){echo $weather34unlocked;}else echo $weather34locked; ?></a>
-  
-  <a href=<?php if ($theme == 'dark') { echo '?theme=light';} else {echo '?theme=dark';} ?>
-    <?php if ($theme == 'dark') { echo 'data-title="Light Mode"';} else {echo 'data-title="Dark Mode"';} ?> >
-    <?php //theme
-    if ($theme == 'dark') {echo $themeshadelight;} 
-    else {echo $themeshadedark;}?></a>
+  <div class="nav-bottom">  
+<div class="weather34-menuside"><div class="weather34-header-menu">
+ <?php //include custom weather34 menu file 
+ include('weather34-sidemenu.php');?>
+ </div></div>
+ <div class="weather34-open-menu"><button><?php echo $adjust ?> <icontext>Menu</icontext></button></div>
+ <div class="weather34switcher">
+<a data-title="Switch Theme">
+<label id="weather34theme" class="weather34switch">
+<input type="checkbox" onchange="toggleTheme()" id="weather34themeslider" >
+<span class="weather34themeslider round"></span></label></div></a>
+<bottomtoolbarspace></bottomtoolbarspace>
 
      <?php 
   if ($units=='us') {  // NON METRIC OPTIONS C-KTS-MS-UK  
@@ -171,11 +173,17 @@ include_once('livedata.php');include_once('updater2.php');
 <?php };?>
 <a  href="weather34-template-legend.php" data-lity data-title="Hardware Info" class="footericons"> <?php echo $weather34hinfo;?></a>
 </portraitmode>
-<a href="weather34-tv.php" data-title="Refresh"> <?php echo $weather34refr?></a>
 <a href="index.php" data-title="Desktop Version"> <?php echo $weather34desktop?></a>
 
 <?php if ($brand=='yes') {?>
 <div class="weather34-battery">
   <a  href="info.html" data-lity data-title="Weather34"> <img src="images/weather34-icon-small.png" width="24em" ></a></div>  
   
-<?php };?></div> </body></html>
+<?php };?></div> 
+
+<?php //if notifications is yes weather34 rain/snow/thunder awareness every 15 minutes 
+if ($notifications=='yes') {?><div id=forecastalert></div><?php ;}?>
+
+<script>//weather menu sidebar
+$(function() {var box = $('.weather34-menuside');var button = $('.weather34-open-menu, .weather34-header-menu');button.on('click', function(){box.toggleClass('weather34-highlight');});});</script> 
+</html></body>

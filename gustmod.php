@@ -45,7 +45,7 @@ else if ($weather['wind_speed_bft']>=1){echo "Light Breeze";}
 else if ($weather['wind_speed_bft']>=0){echo "Calm ";}   
 ?>
 </realfeel>
-<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">  
+<div class="button-dial-label" >    
 <?php echo "<windcolor>".number_format($weather["wind_gust_speed"],$numberformat)."</windcolor>";           
  ?>
 </div></div></div>

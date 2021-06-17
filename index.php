@@ -23,8 +23,7 @@ include_once('livedata.php');include_once('updater2.php');?>
 <meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-title" content="Weather34">
 <meta name="application-name" content="Weather34">
-<link href="console-<?php echo $theme?>.css?version=<?php echo filemtime('console-'.$theme.'.css')?>" rel="stylesheet prefetch">
-
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css')?>" rel="stylesheet prefetch">
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -62,14 +61,15 @@ include_once('livedata.php');include_once('updater2.php');?>
  <?php //include custom weather34 menu file 
  include('weather34-sidemenu.php');?>
  </div></div>
+ <div class="weather34-open-menu"><button><?php echo $adjust ?> <icontext>Menu</icontext></button></div>
+ 
+ <div class="weather34switcher">
+<a data-title="Switch Theme">
+<label id="weather34theme" class="weather34switch">
+<input type="checkbox" onchange="toggleTheme()" id="weather34themeslider" >
+<span class="weather34themeslider round"></span></label></div></a>
+<bottomtoolbarspace></bottomtoolbarspace>
 
- <div class="weather34-open-menu"><button><?php echo $adjust ?> <icontext>Menu</icontext></button></div><bottomtoolbarspace></bottomtoolbarspace>
-
-  <a href=<?php if ($theme == 'dark') { echo '?theme=light';} else {echo '?theme=dark';} ?>
-    <?php if ($theme == 'dark') { echo 'data-title="Light Mode"';} else {echo 'data-title="Dark Mode"';} ?> >
-    <?php //aurora dark or light theme
-    if ($theme == 'dark') {echo $themeshadelight;} 
-    else {echo $themeshadedark;}?></a>
 
      <?php 
   if ($units=='us') {  // NON METRIC OPTIONS C-KTS-MS-UK  
@@ -81,7 +81,7 @@ include_once('livedata.php');include_once('updater2.php');?>
     '.$weather34MS.'</a>'; }
 
     if ($displayukicon=='yes'){ 
-      echo '<a href="?units=uk" data-title="UK Units"> 
+      echo '<a href="?units=uk" data-title="UK Units" class="footericons"> 
       '.$weather34UK.'</a>'; }     
   }
   else if ($units=='uk'){ // UK OPTIONS F-C-KNOTS
@@ -90,30 +90,30 @@ include_once('livedata.php');include_once('updater2.php');?>
      echo '<a  href="?units=metric" data-title="Metric Units">
      '.$weather34C.'</a>';
      if ($displayktsicon=='yes'){ 
-    echo '<a  href="?units=knots" data-title="Wind Knots">
+    echo '<a  href="?units=knots" data-title="Wind Knots" class="footericons">
     '.$weather34KTS.'</a>';   }  
   }  
   else if ($units=='metric'){ // METRIC OPTIONS F-UK-KTS
     echo '<a  href="?units=us" data-title="Imperial Units">
     '.$weather34F.'</a>';  
     if ($displayukicon=='yes'){ 
-     echo '<a href="?units=uk" data-title="UK Units"> 
+     echo '<a href="?units=uk" data-title="UK Units" class="footericons"> 
      '.$weather34UK.'</a>'; } 
      if ($displayktsicon=='yes'){ 
-     echo '<a  href="?units=knots" data-title="Wind Knots">
+     echo '<a  href="?units=knots" data-title="Wind Knots" >
      '.$weather34KTS.'</a>'; }    
   }  
 
   else if ($units=='scandinavia'){ // MS OPTIONS F-C-KTS
-    echo '<a  href="?units=us" data-title="Imperial Units">
+    echo '<a  href="?units=us" data-title="Imperial Units" class="footericons">
     '.$weather34F.'</a>'; 
     echo '<a  href="?units=metric" data-title="Metric Units">
     '.$weather34C.'</a>';     
   }  
   else if ($units=='knots'){   // KNOTS OPTIONS F-C-UK
-    echo '<a  href="?units=us" data-title="Imperial Units">
+    echo '<a  href="?units=us" data-title="Imperial Units" class="footericons">
     '.$weather34F.'</a>';  
-    echo '<a  href="?units=metric" data-title="Metric Units">
+    echo '<a  href="?units=metric" data-title="Metric Units" >
     '.$weather34C.'</a>'; 
       } 
    
@@ -128,20 +128,22 @@ include_once('livedata.php');include_once('updater2.php');?>
 <a href="forecastcharts/chartforecast.php" data-title="5 day Forecast" ><icon-forecast><?php echo $weather34fore?></icon-forecast></a> 
 <a class="footericons" href="outlookwutext.php" data-lity  data-title="Summary Forecast"><?php echo $weather34foretxt?></a>
 <a href="consolecharts.php" data-title="Daily Charts"><?php echo $weather34chart2?></a>
-<a href="weather34-almanac.php" data-title="Almanac"><?php echo $weather34alm?></a>
+<a class="footericons" href="weather34-almanac.php" data-title="Almanac"><?php echo $weather34alm?></a>
 <a href="index.php" data-title="Refresh" class="showicon2"><?php echo $weather34refr?></a>
 <weather34-rightfootericons>
+<aurora>Aurora MKII (SE) <?php echo $weather["stationtype"]?></aurora>
 
-
-<aurora>Aurora MKII <?php echo $weather["stationtype"]?></aurora>
-
-<div class="weather34-aurora" ><a  href="info.html" data-lity data-title="Weather34"> <img src="images/weather34-logo-small.svg" width="23px" height="23px" ></a></div>
 <a href="index.php" data-title="Refresh" class="showicon3" ><?php echo $weather34refr?></a>
+
+<div class="weather34-aurora" ><a  href="info.html" data-lity data-title="Weather34" class="footericons"> 
+<img src="images/weather34-logo-small.svg" width="23px" height="23px" ></a></div>
+
 </weather34-rightfootericons>
 </div>
 <?php //if notifications is yes weather34 rain/snow/thunder awareness every 15 minutes 
 if ($notifications=='yes') {?><div id=forecastalert></div><?php ;}?>
 </body>
+
 <script>//weather menu sidebar
 $(function() {var box = $('.weather34-menuside');var button = $('.weather34-open-menu, .weather34-header-menu');button.on('click', function(){box.toggleClass('weather34-highlight');});});</script> 
 </html>

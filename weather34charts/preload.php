@@ -1,8 +1,9 @@
 <?php include('../settings.php');date_default_timezone_set($TZ);
-if ($theme=='light'){$ccolor="#3D464D";}
+
+if ($theme=='light'){$ccolor="#597286";}
 if ($theme=='dark'){$ccolor="#AFB7C0";}
 if ($theme=='light'){$bcolor="hsla(206, 33%, 96%,0)";}
-if ($theme=='dark'){$bcolor="#20222A";}
+if ($theme=='dark'){$bcolor="#21232C";}
 if ($theme=='light'){$bordercolor="#DEE3F0";}
 if ($theme=='dark'){$bordercolor="#3D464D";}
 ?>
@@ -31,5 +32,4 @@ if ($theme=='dark'){$bordercolor="#3D464D";}
     filter: brightness(100%);
     -webkit-filter: brightness(100%)
 }
-
 </style>

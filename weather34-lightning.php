@@ -1,4 +1,4 @@
-<?php include('console-settings.php');include('common.php');error_reporting(0);
+<?php include('console-settings.php');error_reporting(0);
 $strike='<svg width="10pt" height="10pt"  fill="#d87040" viewBox="0 0 1024 1024" version="weather34 strike icon">
 <path d="M718.933333 106.666667L469.333333 362.666667l320 106.666666-334.933333 313.6 108.8 59.733334L256 917.333333l57.6-315.733333 61.866667 
 108.8L576 512l-320-106.666667L533.333333 106.666667h185.6z" fill="#d87040" />

@@ -1149,7 +1149,9 @@ transform-origin: 50% 40%;
 <?php echo '
 <div class="button button-dial">     
 <div class="button-dial-top"></div>
-<div class=wudirection>&nbsp;&nbsp;<div class="dirwu34">'.$weather34compassiconwu ."</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$wuskydayWinddircardinal.'<wuwindgust>'.number_format($wuskydayWindGust,0) ." ". $windunit."<blue> "
+<div class=wudirection>&nbsp;&nbsp;
+<div class="dirwu34">'.$weather34compassiconwu ."</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$wuskydayWinddircardinal.'
+<wuwindgust>'.number_format($wuskydayWindGust,0) ." ". $windunit."<blue> "
 .$weather34_wind_iconwu.'</blue></wuwindgust></div>
 <div class="button-dial-label">';
 //temp non metric wu

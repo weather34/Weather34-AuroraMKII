@@ -1,8 +1,6 @@
 <?php include('livedata.php');?>
-<link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
 <theword>UVINDEX | Solar W/m&#178;</theword>
-<extrainfoiconuv><?php echo $uvicon?></extrainfoiconuv>
-<extrainfoiconsolar><?php echo $solarpanelicon?></extrainfoiconsolar>
 <div class="almanacouterboxuv">
 <div class="almanacchartxuv" >
 <iframe  class="charttempmodule" src="weather34charts/todayuvmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  

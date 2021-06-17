@@ -429,7 +429,7 @@ function displayDays(date, days) {
 </main>
 <main class="gridfooter">
 <article> 
-<version><?php echo "Weather<blue>34</blue> ".$weather34version ;?></version>
+<version><?php echo $weather34version ;?></version>
 </article> 
 </main>
 </html>

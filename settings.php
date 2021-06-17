@@ -1,5 +1,5 @@
 <?php //November 2020 // PHP8
-  include('console-settings.php');   include('common.php'); 
+  include('console-settings.php');    
 //set the units 
 $units = ""; 
 if (array_key_exists('units', $_COOKIE)) { $units = $_COOKIE['units']; } 

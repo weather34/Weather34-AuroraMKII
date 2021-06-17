@@ -14,3 +14,12 @@ var b=setInterval(function(){c.load("weather34-dayforecast-text-home.php")},1800
 
 </script>
 
+
+<script> //weather34 theme switcher
+function setTheme(themeName) {localStorage.setItem('weather34theme', themeName);  document.documentElement.className = themeName;}
+function toggleTheme() {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-light');} else {setTheme('theme-dark');}}
+(function () {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-dark');document.getElementById('weather34themeslider').checked = true;
+} else {setTheme('theme-light');document.getElementById('weather34themeslider').checked = false; }
+})();        
+</script>
+

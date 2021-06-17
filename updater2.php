@@ -1,4 +1,4 @@
-<?php include('settings.php');include('common.php');?>
+<?php include('settings.php');?>
 <script src="js/jquery.js"></script>
 <script>
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:false,success:function(){a("#position1").show()}});var c=a("#position1");c.load("<?php echo $position1 ?>");var b=setInterval(function(){c.load("<?php echo $position1 ?>")},60000)})})(jQuery);
@@ -50,3 +50,12 @@ document.getElementById("weather34clock4").innerHTML="<div class='clock3'><time>
 "<?php if($clockformat=='12') {echo "".date('a')."";} else {echo "";}?>"}
 function StartClock(){clockID=setInterval(UpdateClock,500)}
 function KillClock(){clearTimeout(clockID)}window.onload=function(){StartClock()}(jQuery);</script>
+
+
+<script> //weather34 theme switcher
+function setTheme(themeName) {localStorage.setItem('weather34theme', themeName);  document.documentElement.className = themeName;}
+function toggleTheme() {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-light');} else {setTheme('theme-dark');}}
+(function () {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-dark');document.getElementById('weather34themeslider').checked = true;
+} else {setTheme('theme-light');document.getElementById('weather34themeslider').checked = false; }
+})();        
+</script>

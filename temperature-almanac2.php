@@ -1,7 +1,6 @@
 <?php include('livedata.php');?> 
-<link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
 <theword>Temperature (<blue>&deg;<?php echo $weather["temp_units"];?></blue>)</theword>
-<extrainfoicon><?php echo $weather34_temp_icon;?></extrainfoicon>
 <div class="canvascredit">
 <a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
 Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>

@@ -97,6 +97,7 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--body-text-dark);
+    filter: brightness(100%);
   }
   .grid {
     display: grid;
@@ -105,6 +106,7 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
     grid-row-gap: 5px;
     color: #ccc;
     margin-top: 10px;
+    filter: brightness(100%);
   }
   
   .grid > article {   
@@ -192,7 +194,8 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
   }
   
   
-  .charttempmodule{position:absolute;margin:0 auto;margin-top:-15px;margin-left:10px;display:flex;justify-content: center;align-items: center;color: var(--body-text-dark);}
+  .charttempmodule{position:absolute;margin:0 auto;margin-top:-15px;margin-left:10px;display:flex;
+  justify-content: center;align-items: center;color: var(--body-text-dark);filter:brightness(100%)}
   .lightning-text{position:absolute;margin-top:25px;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
   .lightning-textmonth{margin-left:110px;margin-top:25px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
   .lightning-textyear{margin-left:110px;margin-top:80px;position:absolute;border:2px solid hsla(217, 15%, 17%, .5);padding:5px;border-radius:3px;font-size:12px;display:inline;justify-content: center;align-items: center;width:90px}
@@ -205,15 +208,15 @@ $lightningseconds = $weather["lightningtimeago"];function convert($lightningseco
   
   
   .credits{margin-left:40px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
-    align-items: center;color: var(--body-text-dark);opacity: .5;width:max-content}
+    align-items: center;color: var(--body-text-dark);opacity: .5;width:max-content;filter: brightness(100%);}
 
     .credits2{margin-left:540px;position:absolute;padding:5px;font-size:7px;display:inline;justify-content: center;
     align-items: center;color: var(--body-text-dark);opacity: .5;width:max-content}
 date{position:absolute;margin:0 auto;margin-left:10px;display:flex;padding:3px;border-radius: 3px;-webkit-border-radius: 3px;
-  justify-content: center;align-items: center;font-size:9px;color:#ccc;background:hsla(217, 15%, 17%, .8);width:max-content}
+  justify-content: center;align-items: center;font-size:9px;color:#ccc;background:hsla(217, 15%, 17%, .8);width:max-content;filter: brightness(100%);}
 
 lword{font-family: "weathertext2", Helvetica, Arial, sans-serif;position:absolute;margin-top:0px;
-    margin-left:10%;display:flex;justify-content: center;align-items: center;font-size:16px;color:rgba(82, 92, 97, 0.7)}
+    margin-left:10%;display:flex;justify-content: center;align-items: center;font-size:16px;color:#afb7c0}
 
 
 

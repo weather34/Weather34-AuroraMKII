@@ -60,7 +60,7 @@ else if ((anytoc($weather["realfeel"]))>=-50 ){echo 'Real Feel <icon-minus10>'. 
 ?> 
 </realfeel>
 
-<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">     
+<div class="button-dial-label" >     
 <?php // temperature display
 if(anytoC($weather["temp"])<-10){ echo "<icon-minus10>".$weather["temp"]."&deg;</icon-minus10 >";}
 else if(anytoC($weather["temp"])<0){ echo "<icon-minus10>".$weather["temp"]."&deg;</icon-minus10>";}

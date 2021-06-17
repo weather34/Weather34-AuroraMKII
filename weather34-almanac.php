@@ -30,7 +30,7 @@ include_once('livedata.php');include_once('updater-almanac.php');?>
 <meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-title" content="Weather34">
 <meta name="application-name" content="Weather34 Console">
-<link href="console-<?php echo $theme ?>.css?version=<?php echo filemtime('console-'. $theme .'.css') ?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css')?>" rel="stylesheet prefetch">
   <link rel="preload" href="fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -79,11 +79,12 @@ include_once('livedata.php');include_once('updater-almanac.php');?>
 <?php ;}?>
 <a href="index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
   
-<a href=<?php if ($theme == 'dark') { echo '?theme=light';} else {echo '?theme=dark';} ?>
-    <?php if ($theme == 'dark') { echo 'data-title="Light Mode"';} else {echo 'data-title="Dark Mode"';} ?> >
-    <?php //theme
-    if ($theme == 'dark') {echo $themeshadelight;} 
-    else {echo $themeshadedark;}?></a>
+ <div class="weather34switchercharts">
+<a data-title="Switch Theme">
+<label id="weather34theme" class="weather34switch">
+<input type="checkbox" onchange="toggleTheme()" id="weather34themeslider" >
+<span class="weather34themeslider round"></span></label></div></a>
+<bottomtoolbarspacecharts></bottomtoolbarspacecharts>
 
      <?php 
   if ($units=='us') {  // NON METRIC OPTIONS C-MS-KTS   
@@ -138,11 +139,6 @@ include_once('livedata.php');include_once('updater-almanac.php');?>
    } 
 ?>
 
-<a href="weather34-mooninfo.php" data-lity data-title="Lunar Info">
-<?php echo $weather34moonicon?></a>
-
-<a href="weather34-meteor.php" data-lity data-title="Meteor Showers">
-<?php echo $weather34meteoricon?></a>
 
 <a href="consolecharts.php" data-title="Daily Charts">
 <?php echo $weather34chart2?></a>

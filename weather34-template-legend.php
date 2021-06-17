@@ -537,9 +537,9 @@ function convertToReadableSize3($weather34apifilesize){$base = log($weather34api
 $f_base = floor($base);echo round(pow(1024, $base - floor($base)), 1) . $suffix[$f_base];}echo "</blue>"
 ?>
 <br>
-CSS Theme file size <?php //css file size
-$filename ="console-".$theme.".css";
-echo $theme; 
+CSS file <?php //css file size
+$filename ="weather34-theme.css";
+echo 'weather34-theme'; 
 echo '.css <blue>';
 $weather34cssfilesize = filesize($filename);
 echo convertToReadableSize($weather34cssfilesize);

@@ -1,4 +1,4 @@
-<?php include('settings.php');include('common.php');?>
+<?php include('settings.php');?>
 <script src="js/jquery.js"></script>
 
 <script>
@@ -51,3 +51,12 @@ document.getElementById("weather34clock4").innerHTML="<div class='clock3'><time>
 function StartClock(){clockID=setInterval(UpdateClock,500)}
 function KillClock(){clearTimeout(clockID)}window.onload=function(){StartClock()}(jQuery);</script></time>
 </div></div>
+
+
+<script> //weather34 theme switcher
+function setTheme(themeName) {localStorage.setItem('weather34theme', themeName);  document.documentElement.className = themeName;}
+function toggleTheme() {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-light');} else {setTheme('theme-dark');}}
+(function () {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-dark');document.getElementById('weather34themeslider').checked = true;
+} else {setTheme('theme-light');document.getElementById('weather34themeslider').checked = false; }
+})();        
+</script>

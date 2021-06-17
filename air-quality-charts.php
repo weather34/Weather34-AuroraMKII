@@ -13,7 +13,7 @@
 <meta name="msapplication-TileImage" content="appicons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="msapplication-TileColor" content="#f8f8f8">
-<link href="console-<?php echo $theme?>.css?version=<?php echo filemtime('console-'.$theme.'.css')?>" rel="stylesheet prefetch">
+<link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css')?>" rel="stylesheet prefetch">
 <link rel="preload" href="fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -55,34 +55,16 @@
     
   </ul>
   <div class="nav-bottom">
-  <a href="index.php" data-title="Dashboard"><?php echo $backtohome?></a>
+  <a href="index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
 
-  <a href=<?php if ($theme == 'dark') { echo '?theme=light';} else {echo '?theme=dark';} ?>
-    <?php if ($theme == 'dark') { echo 'data-title="Light Mode"';} else {echo 'data-title="Dark Mode"';} ?> >
-    <?php //theme
-    if ($theme == 'dark') {echo $themeshadelight;} 
-    else {echo $themeshadedark;}?></a>
+  <div class="weather34switchercharts">
+<a data-title="Switch Theme">
+<label id="weather34theme" class="weather34switch">
+<input type="checkbox" onchange="toggleTheme()" id="weather34themeslider" >
+<span class="weather34themeslider round"></span></label></div></a>
+<bottomtoolbarspacecharts></bottomtoolbarspacecharts>
 
-
-  <a href="consolecharts.php" data-title="<?php echo strftime("%A" )?> Charts">
-  <?php echo $weather34chart2?> 
-  <span style="position:relative;top:-8px;font-family:weathertext2;font-size:0.8em;right:3px"><?php echo strftime("%A" );?></span></a>
-
-  <a href="consolecharts-year.php" data-title="<?php echo date('Y');?> Charts">
-  <?php echo $weather34chart2?> 
-  <span style="position:relative;top:-8px;font-family:weathertext2;font-size:0.8em;right:3px"><?php echo date ('Y');?></span></a>  
-
-        <?php if ($display2019=='yes'){?>
-        <?php $time = new DateTime('now');
-        $newtime = $time->modify('-1 year')->format('Y');?>
-        <a href="consolecharts-2019.php" data-title="<?php echo $newtime;?> Charts">
-        <?php echo $weather34chart2?> 
-        <span style="position:relative;top:-8px;font-family:weathertext2;font-size:0.8em;right:3px"><?php echo $newtime;?></span></a>
-        <?php };?>
        
-        <chartpage><?php echo $maxclock ?> <?php 
-       $dayfile=date('Y')."/".date('jMY');$forecastime=filemtime('weather34charts/'.$dayfile.'.csv');echo strftime("%A %d %B %Y %l:%M %p",$forecastime);?>     
-      </chartpage>
 
 <weather34-rightfootericonscharts>
 

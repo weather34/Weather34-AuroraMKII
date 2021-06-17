@@ -40,7 +40,7 @@ else if ($weather['wetbulb']>=42.8 ){echo '<green>'. $weather['wetbulb']."</gree
 else if ($weather['wetbulb']>=32 ){echo '<blue>'. $weather['wetbulb']."</blue>";}
 else if ($weather['wetbulb']>=-58 ){echo '<icon-minus10>'. $weather['wetbulb']."</icon-minus10>";}}
 ?>&deg;</realfeel>
-<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">
+<div class="button-dial-label" >  
 <?php 
 if($weather["humidity"]>=70){ echo "<blue>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></blue>";}
 else if($weather["humidity"]>=60){ echo "<icon-11-15>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-11-15>";}

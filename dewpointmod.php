@@ -37,7 +37,7 @@ echo "&deg; ";echo $maxclock." ".$weather["dewmintime"];
 <div class="button button-dial">
 <div class="button-dial-top"></div>
 <realfeel>Dewpoint</realfeel>
-<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">      
+<div class="button-dial-label" >        
 <?php //dewpoint display
 if(anytoC($weather["dewpoint"])<-10){ echo "<icon-minus10>".$weather["dewpoint"]."&deg;</icon-minus10 >";}
 else if(anytoC($weather["dewpoint"])<0){ echo "<icon-minus10>".$weather["dewpoint"]."&deg;</icon-minus10>";}

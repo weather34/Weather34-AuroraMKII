@@ -197,7 +197,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>

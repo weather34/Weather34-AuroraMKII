@@ -43,7 +43,7 @@ else if($meteobridgeapi[40]>=1.3 ){echo "<icon-6-10>" .number_format($weather["w
 else if($meteobridgeapi[40]>=0 ){echo "<green>" .number_format($weather["wind_speed_max"],$formatdecimal)."</green>&nbsp;";}     
 ?>
 </realfeel>
-<div class="button-dial-label" style="font-family:<?php if ($fontweight=="yes"){echo "weathertext2";}else echo "weathertext3";?>;font-size:<?php echo $fontsize?>px;">      
+<div class="button-dial-label" >        
 <?php 
 if($meteobridgeapi[17]>=16.66){ echo "<icon-31-35>".number_format($weather["wind_speed"],$numberformat)."</icon-31-35>";}   
 else if($meteobridgeapi[17]>=12.5){ echo "<icon-21-25>".number_format($weather["wind_speed"],$numberformat)."</icon-21-25>";}          

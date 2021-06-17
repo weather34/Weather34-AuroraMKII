@@ -57,7 +57,7 @@ if ($hemisphere==180){echo '<style>.weather34moonphasesvg{-webkit-transform: rot
 </style>';}
 ?>
 
-<svg id="weather34moonsvg2"  style="position:relative; max-width:60px" viewBox="0 0 200 200"  version="1.1"></svg>
+<svg id="weather34moonsvg2"  style="position:relative;max-width:55px;" viewBox="0 0 200 200"  version="1.1"></svg>
 <script type="text/javascript" charset="UTF-8"> 
 //moonphase revised March 2021 based on original by http://www.ben-daglish.net/moon.shtml  
 function moon_day(today) {    
@@ -107,8 +107,8 @@ d.setAttribute("class","weather34moonsvgmoonback"),
 d.setAttribute("d","m100,0 a20,20 0 1,1 0,150 a20,20 0 1,1 0,-150"),
 s.setAttribute("class","weather34moonsvgmoon"),
 s.setAttribute("d",r),
-o.setAttribute("height",.07*window.screen.availHeight),
-o.setAttribute("width",.07*window.screen.availWidth),
+o.setAttribute("height",55),
+o.setAttribute("width",55),
 o.appendChild(d),
 o.appendChild(s)}
 else!function(){

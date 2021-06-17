@@ -604,7 +604,7 @@ $weather34unlocked='<svg width="14" height="14" viewBox="0 0 24 24" stroke-width
 $weather34locked='<svg width="14" height="14" viewBox="0 0 24 24" stroke-width="1" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="5" y="11" width="14" height="10" rx="2" />  <circle stroke="hsl(7, 60%, 57%)" cx="12" cy="16" r="3" /><path d="M8 11v-4a4 4 0 0 1 8 0v4" /></svg>';
 $weather34setup='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="#aaa" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
   <circle cx="12" cy="12" r="3" stroke="hsla(185, 100%, 37%, 1)" /></svg>';
-$weather34foretxt='<svg width="28" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"> <g><path stroke="none" d="M0 0h24v24H0z"/></g><text x="-2" y="16" font-size="11px" stroke-width="0" fill="#ccc">FTXT</text></svg>';
+$weather34foretxt='<svg width="28" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"> <g><path stroke="none" d="M0 0h24v24H0z"/></g><text x="-2" y="16" font-size="11px" stroke-width="0" fill="currentColor">FTXT</text></svg>';
 $weather34foretxt1='<svg width="120" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><g><path stroke="none" d="M0 0h24v24H0z"/></g><text x="-35" y="16" font-size="11px" stroke-width="0" fill="#98B1C9">Forecast Summary</text></svg>';
 $weather34aqi='<svg  width="28" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"> <g>
  <path stroke="none" d="M0 0h24v24H0z"/></g><text x="-2" y="18" font-size="16px" stroke-width="0" fill="#aaa">AQI</text></svg>';
@@ -744,6 +744,7 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
   <path style="fill:#DF9741;" d="M236.945,117.477c-65.983,0.007-119.468,53.496-119.468,119.475
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
-$weather34version='Aurora MKII';
-$weather34versiondate='14th June 2021';
+$weather34version='Aurora MKII (SE)';
+$weather34versiondate='17th June 2021';
 ?>
+
