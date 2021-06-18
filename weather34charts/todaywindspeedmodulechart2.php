@@ -14,8 +14,7 @@
 	####################################################################################################
 	
 	
-	include('preload.php');	
-	$conv = 1;
+	include('preload.php');		
 	$conv = 1;
 	if ($windunit == 'mph') {$conv= '2.23694';}
 	if ($windunit == 'm/s') {$conv= '1';}
@@ -33,7 +32,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR TEMPERATURE DATABASE CHART</title>
+		<title>Wind Speed CHART</title>
 		
 		
 	';
@@ -204,7 +203,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>
