@@ -56,10 +56,17 @@ function KillClock(){clearTimeout(clockID)}window.onload=function(){StartClock()
 </div></div>
 
 
-<script> //weather34 theme switcher
-function setTheme(themeName) {localStorage.setItem('weather34theme', themeName);  document.documentElement.className = themeName;}
-function toggleTheme() {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-light');} else {setTheme('theme-dark');}}
-(function () {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-dark');document.getElementById('weather34themeslider').checked = true;
-} else {setTheme('theme-light');document.getElementById('weather34themeslider').checked = false; }
-})();        
+
+<script>//weather menu sidebar
+//theme/color-scheme
+function setTheme(themeName) {
+localStorage.setItem('weather34theme', themeName);
+ document.documentElement.className = themeName;
+        }
+        // toggle between light and dark theme
+        function toggleTheme() {
+        if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-light');} else {setTheme('theme-dark');}}
+        // set the theme on initial load
+        (function () {if (localStorage.getItem('weather34theme') === 'theme-dark') {setTheme('theme-dark');document.getElementById('weather34themeslider');} 
+         else {setTheme('theme-light');document.getElementById('weather34themeslider');}})();
 </script>
