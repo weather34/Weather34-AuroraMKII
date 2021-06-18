@@ -1,11 +1,17 @@
 <?php include('../settings.php');date_default_timezone_set($TZ);
 
+
 if ($theme=='light'){$ccolor="#597286";}
-if ($theme=='dark'){$ccolor="#AFB7C0";}
+if ($theme=='dark'){$ccolor="#597286";}
+//if ($theme=='dark'){$ccolor="#AFB7C0";}
+
 if ($theme=='light'){$bcolor="hsla(206, 33%, 96%,0)";}
-if ($theme=='dark'){$bcolor="#21232C";}
+if ($theme=='dark'){$bcolor="hsla(206, 33%, 96%,0)";}
+//if ($theme=='dark'){$bcolor="#21232C";}
+
 if ($theme=='light'){$bordercolor="#DEE3F0";}
-if ($theme=='dark'){$bordercolor="#3D464D";}
+if ($theme=='dark'){$bordercolor="#DEE3F0";}
+//if ($theme=='dark'){$bordercolor="#3D464D";}
 ?>
 <script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
 <script rel="preload" src=../js/jquery.js></script>
@@ -32,4 +38,23 @@ if ($theme=='dark'){$bordercolor="#3D464D";}
     filter: brightness(100%);
     -webkit-filter: brightness(100%)
 }
+
+.chartc{
+    z-index:150;
+    height:149px;    
+    margin-top:0px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    border:0;
+    font-family:verb;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0;
+    padding-top:0
+}
+
+
+
 </style>

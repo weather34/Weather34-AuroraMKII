@@ -234,7 +234,7 @@ valuebeaufort{font-size:.75em;margin-left:2px}
 .modulecaption2,.modulecaptionb{left:90px;top:-20px;align-items:center;justify-content:center;flex-grow:0;flex-shrink:1;flex-basis:auto}
 .modulecaptionb{top:-20px}
 .modulecaptionindoor{left:115px;top:-30px;width:50px}
-.modulecaptionchart,.modulecaptionchart2,.modulecaptionchart3{left:33%;top:57px;width:max-content;font-family:verb;font-size:8px;display:flex;position:relative;color:#fff;filter:brightness(100%);background-color:var(--charttitlebackground);padding-left:4px;padding-right:4px;border-radius:3px;-webkit-border-radius:3px}
+.modulecaptionchart,.modulecaptionchart2,.modulecaptionchart3{left:3%;top:196px;width:max-content;font-family:verb;font-size:8px;display:flex;position:relative;color:#333;background:#dee3f0;padding-left:4px;padding-right:4px;-webkit-border-top-right-radius:4px;-moz-border-radius-topright:4px;border-top-right-radius:4px}
 .charttempmodule{margin-top:6px}
 .modulecaptiondirection{left:85px;top:-74px}
 .modulecaptionwind{left:70px;top:-10px}
