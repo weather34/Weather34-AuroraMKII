@@ -115,7 +115,7 @@ if($weather["temp_units"]=='F'){echo "<volumet>104F <br>95 <br>86 <br>77 <br>68 
 <div id="weather34rainwater2" style="height:
 <?php //height 
   if (anytoc($weather["dewpoint_avgtoday"])<='0'){echo 0.05;}
-  else if (anytoc($weather["dewpoint_avgtoday"])>=12){echo anytoc($weather["dewpoint_avgtoday"])/9.25;}
+  else if (anytoc($weather["dewpoint_avgtoday"])>=12){echo anytoc($weather["dewpoint_avgtoday"])/8.25;}
   else echo anytoc($weather["dewpoint_avgtoday"])/9.5;?>em;opacity:0.7;background:
 <?php // color
 if (anytoc($weather["dewpoint_avgtoday"])>=40 ){echo 'var(--purple)';}
