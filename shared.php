@@ -409,7 +409,7 @@ $adjust='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke
 $themeshadedark='<svg  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#777" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
 <path stroke="none" d="M0 0h24v24H0z"/> <circle cx="12" cy="12" r="4" fill="#555"/> <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" stroke="#999"/></svg>';
 
-$themeshadelight='<svg  width="23pt" height="23pt" id="weather34theme icon" version="1.1" viewBox="0 0 24 24" stroke-width="2" stroke="hsl(205, 5%, 53%)" 
+$themeshadelight='<svg  width="24" height="24" id="weather34theme icon" version="1.1" viewBox="0 0 24 24" stroke-width="2" stroke="hsl(205, 5%, 53%)" 
 fill="none" stroke-linecap="round" stroke-linejoin="round" style="left:-3px;">  <path stroke="none" d="M0 0h24v24H0z"/>  
 <circle cx="12" cy="12" r="4" fill="var(--body-text-dark)"/> 
 <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" />
