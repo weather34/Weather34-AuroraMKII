@@ -9,7 +9,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="msapplication-TileColor" content="#f8f8f8"> 
-<link href="../console-dark.css?version=<?php echo filemtime('../console-dark.css')?>" rel="stylesheet prefetch">
+<link href="../weather34-theme.css?version=<?php echo filemtime('../weather34-theme.css')?>" rel="stylesheet prefetch">
 <link rel="preload" href="../fonts/clock3-webfont.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
@@ -21,7 +21,7 @@
 @font-face {font-family: weathertext2;src: url(../fonts/verbatim-medium.woff2) format("woff2"), url(../fonts/verbatim-medium.woff) format("woff");font-display: swap}
 @font-face {font-family: headingtext;src: url(../fonts/HelveticaNeue-Medium.woff2) format("woff2"), url(../fonts/HelveticaNeue-Medium.woff) format("woff");font-display: swap}
 @font-face {font-family: verb;src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");font-display: swap}
-body,html{font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;filter:brightness(100%)}
+
 .weather34-aurora a{background:none;}
 actualt{position:relative;font-size:11px;left:20px;top:-50px;}
 greydesc{display:block;left:-20px;margin-top:-15px;position:relative;font-size:11px;line-height:1;
@@ -284,6 +284,26 @@ else if ($wuskythunder1>0)echo "Thunderstorm <yellow>Risk</yellow>";
 </div>
 <div class="nav-bottom" >
 &nbsp; <a href="../index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
+
+<!-- weather34 theme -->
+<div class="weather34switcherforecast">
+  <a data-title="Switch Theme"><button id="weather34theme-toggle" class="weather34switch" type="button"> <?php echo $themeshadelight;?> 
+</button>
+</div></a>
+<script>
+var toggle = document.getElementById("weather34theme-toggle");
+var storedTheme = localStorage.getItem('theme');
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+toggle.onclick = function() {var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+    if (currentTheme === "light") {targetTheme = "dark";}
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+</script>
+<bottomtoolbarspacecharts></bottomtoolbarspacecharts>
+
 <a href="../outlookwutext.php" data-lity data-title="5 day Forecast Summary"><?php echo $weather34foretxt1?></a>
 <a href="chartforecast.php" alt="refresh this dashboard " data-title="Refresh"><?php echo $weather34refr?></a>
 <chartpage>Forecast Updated <?php $forecastime=filemtime('../jsondata/wuforecast.txt');echo date('jS M g:i a',$forecastime);?></chartpage>

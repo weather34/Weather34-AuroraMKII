@@ -408,8 +408,11 @@ $adjust='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke
   <circle cx="19" cy="12" r="1" stroke="#777"/> <circle cx="5" cy="19" r="1" stroke="#777" /> <circle cx="12" cy="19" r="1" stroke="#777"/><circle cx="19" cy="19" r="1" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
 $themeshadedark='<svg  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#777" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
 <path stroke="none" d="M0 0h24v24H0z"/> <circle cx="12" cy="12" r="4" fill="#555"/> <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" stroke="#999"/></svg>';
-$themeshadelight='<svg  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#aaa" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="4" fill="#eee"/> <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" />
+
+$themeshadelight='<svg  width="23pt" height="23pt" id="weather34theme icon" version="1.1" viewBox="0 0 24 24" stroke-width="2" stroke="hsl(205, 5%, 53%)" 
+fill="none" stroke-linecap="round" stroke-linejoin="round" style="left:-3px;">  <path stroke="none" d="M0 0h24v24H0z"/>  
+<circle cx="12" cy="12" r="4" fill="var(--body-text-dark)"/> 
+<path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" />
 </svg>';
 $smalltv='<svg width="11" height="11" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="12" rx="1" /><line x1="7" y1="20" x2="17" y2="20" /><line x1="9" y1="16" x2="9" y2="20" /> <line x1="15" y1="16" x2="15" y2="20" />
 </svg>';
@@ -745,6 +748,6 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
 $weather34version='Aurora MKII (SE)';
-$weather34versiondate='18th June 2021';
+$weather34versiondate='19th June 2021';
 ?>
 

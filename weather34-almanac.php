@@ -79,11 +79,23 @@ include_once('livedata.php');include_once('updater-almanac.php');?>
 <?php ;}?>
 <a href="index.php" data-title="Back to Dashboard"><?php echo $adjust?><icontext>Home</icontext></a>  
   
- <div class="weather34switchercharts">
-<a data-title="Switch Theme">
-<label id="weather34theme" class="weather34switch">
-<input type="checkbox" onchange="toggleTheme()" id="weather34themeslider" >
-<span class="weather34themeslider round"></span></label></div></a>
+ <!-- weather34 theme -->
+<div class="weather34switchercharts">
+  <a data-title="Switch Theme"><button id="weather34theme-toggle" class="weather34switch" type="button"> <?php echo $themeshadelight;?> 
+</button>
+</div></a>
+<script>
+var toggle = document.getElementById("weather34theme-toggle");
+var storedTheme = localStorage.getItem('theme');
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+toggle.onclick = function() {var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+    if (currentTheme === "light") {targetTheme = "dark";}
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+</script>
 <bottomtoolbarspacecharts></bottomtoolbarspacecharts>
 
      <?php 

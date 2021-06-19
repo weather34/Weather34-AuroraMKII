@@ -218,7 +218,7 @@ return thecolor;}
 	font-family: Arial;
 	width:auto;
 	max-width:140px;
-	background: hsla(200, 8%, 35%, .3);
+	 background: hsl(225, 3%, 27%);
 	top:112px;
 	line-height:1.1;	
 	z-index: 9999;
@@ -235,7 +235,7 @@ return thecolor;}
 }
 .unitscaption
 {display: flex;position:absolute;width:30px;
-    background: hsla(200, 8%, 35%, .3);
+     background: hsl(225, 3%, 27%);
 	margin-top:101px;
 	float:right;
     line-height:1.1;    
