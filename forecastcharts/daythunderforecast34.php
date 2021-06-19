@@ -206,17 +206,17 @@ return thecolor;}
 });
 
       </script>
-<style>		  
+<style>	
   .modulecaption {
     display: flex;
     position: relative;
-    left: 65px;
+    left: 50px;
     top: 0;
     color: #fff;    
 	font-family: Arial;
 	width:auto;
 	max-width:130px;
-	 background: hsl(225, 3%, 27%);
+	background:hsl(225, 3%, 27%);
 	top:112px;
 	line-height:1.1;	
 	z-index: 9999;
@@ -233,7 +233,7 @@ return thecolor;}
 }
 .unitscaption
 {display: flex;position:absolute;width:30px;
-     background: hsl(225, 3%, 27%);
+    background: hsl(225, 3%, 27%);
 	margin-top:101px;
 	float:right;
     line-height:1.1;    
@@ -248,10 +248,8 @@ return thecolor;}
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-	width:50px;
+    
+	width:max-content
 }</style>
 <body>
 <div class="modulecaption" >Thunderstorm Forecast</div>
