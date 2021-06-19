@@ -108,7 +108,7 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
 }
 body,html{font-size:12px;font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,4fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
-.grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);padding:3px;font-size:.8em;
+.grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:none;padding:3px;font-size:.8em;
 -webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,1);}
 .grid>article img{max-width:20%}
 actualt{font-size:8px}
@@ -120,7 +120,7 @@ a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
 .iconpos{position:relative;padding-left:5px;}
 @media screen and (max-width:800px){
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
-.grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:2px 2px 6px 0 rgba(0,0,0,.6);
+.grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:none;
 padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
 	background: hsla(228, 10%, 10%,.9);height:38px}
 	.tempvalue{color:#fff;margin-left:100px;margin-top:-36px;position:absolute;font-size:15px;font-family:verb}	
