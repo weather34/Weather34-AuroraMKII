@@ -18,7 +18,7 @@
 <link rel="preload" href="fonts/verbatim-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/verbatim-medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/HelveticaNeue-Medium.woff2" as="font" type="font/woff2" crossorigin>
-
+<style>body{filter:brightness(95%);-webkit-filter:brightness(95%)}</style>
 </head>
 <body>
 <!-- weather34 NANOSD console flex layout -->
