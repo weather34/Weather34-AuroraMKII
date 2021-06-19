@@ -12,8 +12,8 @@ body{font-family:headingtext,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI
 .weather34switcherforecast{position:absolute;display:flex;margin-top:-50px;margin-left:63px}
 .weather34switch{position:relative;display:inline-block;width:max-content;z-index:10;background:0 0;height:max-content}
 .weather34switch input{opacity:0;width:0;height:0}
-bottomtoolbarspace{margin-left:120px}
-bottomtoolbarspacecharts{margin-left:80px}
+bottomtoolbarspace{margin-left:125px}
+bottomtoolbarspacecharts{margin-left:85px}
 day{color:var(--daylight)}
 html{min-height:100%;overflow-x:hidden}
 .weather34-tablet{border:5px solid var(--tablet);border-bottom:35px solid var(--tablet);padding:0}
@@ -422,8 +422,8 @@ monthchart{position:absolute;display:flex;font-size:11px;top:5px;margin-left:35p
 @media screen and (max-width:960px){
 .weather34switcher{margin-left:55px}
 .weather34switchercharts{margin-top:-50px}
-bottomtoolbarspace{margin-left:120px}
-bottomtoolbarspacecharts{margin-left:55px}
+bottomtoolbarspace{margin-left:125px}
+bottomtoolbarspacecharts{margin-left:60px}
 .nav-bottom .weather34-acplug,.nav-bottom .weather34-battery,.showicon,.sunriset-set,.version,aurora,chartpage{display:none}
 .showicon3{position:absolute;margin-left:60px}
 theword{font-size:1.25em}
@@ -478,7 +478,7 @@ html{overflow-x:visible}
 .weather34switcher{top:-2px;margin-left:62px}
 .weather34switchercharts{top:23px;margin-left:55px}
 bottomtoolbarspacecharts{margin-left:65px}
-bottomtoolbarspace{margin-left:60px}
+bottomtoolbarspace{margin-left:65px}
 .canvascredit,.canvascredituv{display:none}
 .weather34-open-menu button{position:relative;top:-2px;left:3px}
 .weather34-top-menu a{margin-left:10px}
@@ -706,7 +706,7 @@ smallhumidityunit2{position:absolute;font-size:.4rem;color:#fff;margin-top:-5px;
 .modulecaptionchart>blue,blue1,orange,red,yellow{filter:brightness(100%);text-shadow:none}
 .modulecaptionchart2>blue,blue1,orange,red,yellow{filter:brightness(100%);text-shadow:none}
 .modulecaptionchart3>blue,blue1,orange,red,yellow{filter:brightness(100%);text-shadow:none}
-.weather34switcher a,.weather34switchercharts a,.weather34switcherforecast a{border-radius:3px;background-color:var(--navicons);font-size:11px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding-bottom:0;padding-top:0;padding-left:3px;padding-right:3px;justify-content:center;align-items:center;top:24px;left:5px;height:max-content}
+.weather34switcher a,.weather34switchercharts a,.weather34switcherforecast a{border-radius:3px;background-color:var(--navicons);-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding-bottom:0;padding-top:0;padding-left:3px;padding-right:3px;justify-content:center;align-items:center;top:24px;left:5px;height:max-content;width:max-content}
 .weather34switcher [data-title]:after{top:-20px;height:12px;left:-5px}
 .weather34switchercharts [data-title]:after{top:-20px;height:12px;left:-5px}
 .weather34switcherforecast [data-title]:after{top:-20px;height:12px;left:-5px}
