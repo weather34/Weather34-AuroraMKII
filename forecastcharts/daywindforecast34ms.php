@@ -87,7 +87,7 @@ return thecolor;}
 	
 	function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer2", {
-		 backgroundColor: " hsla(228, 10%, 10%,.9)",
+		 backgroundColor: " hsla(228, 10%, 10%,0)",
 		 animationEnabled: false,
 		 margin: 0,
 		 
@@ -114,7 +114,7 @@ return thecolor;}
 	gridColor: "#555",	
 			gridDashType: "dot",
 		    labelFontSize: 8,
-			labelFontColor:' #fff',
+			labelFontColor:' #aaa',
 			lineThickness: 1,
 			gridThickness: 1,				
 			labelFontFamily: "Helvetica",	
@@ -126,7 +126,7 @@ return thecolor;}
 			lineDashType: "solid" ,
 			enabled: true,
 			snapToDataPoint: true,			
-			labelFontColor: "#fff",
+			labelFontColor: "#aaa",
 			labelFontSize:0,
 			labelBackgroundColor: "#cf5129",			
 			color:'hsla(185, 100%, 37%, .1)',

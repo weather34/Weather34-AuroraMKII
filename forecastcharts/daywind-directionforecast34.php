@@ -86,7 +86,7 @@ return thecolor;}
         var yLabels = ["N","NE","E","SE","S","SW","W","NW","N" ];
 var yLabelCounter=0;	
 		var chart = new CanvasJS.Chart("chartContainer2", {
-		 backgroundColor: " hsla(228, 10%, 10%,.9)",
+		 backgroundColor: " hsla(228, 10%, 10%,0)",
 		 animationEnabled: false,
 		 margin: 0,
 		 
@@ -112,7 +112,7 @@ var yLabelCounter=0;
 	gridColor: "#555",	
 			gridDashType: "dot",
 		    labelFontSize: 8,
-			labelFontColor:' #fff',
+			labelFontColor:' #aaa',
 			lineThickness: 1,
 			gridThickness: 1,				
 			labelFontFamily: "Helvetica",	
@@ -146,7 +146,7 @@ var yLabelCounter=0;
 		gridDashType: "dot",
 		gridColor: "#555",
 		labelFontSize: 8,
-		labelFontColor:' #fff',
+		labelFontColor:' #aaa',
 		labelFontFamily: "Helvetica",	
 		labelFontWeight: "bold",				
 		interval: 45,
