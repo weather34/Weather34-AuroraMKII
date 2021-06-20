@@ -233,6 +233,7 @@ valuebeaufort{font-size:.75em;margin-left:2px}
 .modulecaptionindoor{left:115px;top:-30px;width:50px}
 .modulecaptionchart,.modulecaptionchart2,.modulecaptionchart3{left:3%;top:197px;width:max-content;font-family:verb;font-size:8px;display:flex;position:relative;color:#333;background:#dee3f0;padding-left:4px;padding-right:4px;-webkit-border-top-right-radius:4px;-moz-border-radius-topright:4px;border-top-right-radius:4px;filter:brightness(--chartcontrast);-webkit-filter:brightness(--chartcontrast)}
 .charttempmodule{margin-top:6px}
+.charttempmodule2{margin-top:6px}
 .modulecaptiondirection{left:85px;top:-74px}
 .modulecaptionwind{left:70px;top:-10px}
 .online{position:absolute;font-size:.65em;color:var(--blue);margin-top:-25px;float:right;padding-left:10px;right:10px}
@@ -385,9 +386,9 @@ theword{position:absolute;margin-left:15%;font-size:36px;font-family:verb;line-h
 .almanacouterboxrain{display:flex;position:relative;width:auto;max-width:680px;height:270px;margin-left:10px;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;max-width:135vh;height:360px;margin-left:10px;margin-top:30px}
 .almanacx{top:10px;margin-left:-10px;width:100px}
-.almanacchartx,.almanacchartxx{top:25px;margin-left:285px}
-.almanacchartxuv{top:25px;margin-left:285px}
-.almanacchartxsol{margin-top:145px;margin-left:285px}
+.almanacchartx,.almanacchartxx{top:25px;margin-left:285px;filter:brightness(80%);-webkit-filter:brightness(80%)}
+.almanacchartxuv{top:25px;margin-left:285px;filter:brightness(80%);-webkit-filter:brightness(80%)}
+.almanacchartxsol{margin-top:145px;margin-left:285px;filter:brightness(80%);-webkit-filter:brightness(80%)}
 .almanac2x{margin-top:80px;width:2.5em}
 .almanac3x{margin-top:-80px;margin-left:140px;width:2em}
 .almanac4x{margin-top:80px;width:2em}
