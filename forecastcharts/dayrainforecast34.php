@@ -186,7 +186,7 @@ return rainlevel;}
 	   		indexLabelMaxWidth: 100,
 	   		indexLabelFontWeight: "bold",
        		indexLabelWrap: true,
-	   		indexLabelPlacement: "auto",     			
+	   		indexLabelPlacement: "inside",     			
 			markerSize:0,
 			showInLegend:false,
 			legendMarkerType: "circle",
