@@ -91,7 +91,7 @@ return thecolor;}
 		title: {
             text: " ",
 			fontSize: 0,
-			fontColor:' #555',
+			fontColor:' #aaa',
 			fontFamily: "arial",
         },
 		toolTip:{
@@ -108,7 +108,7 @@ return thecolor;}
                return "Accumulation " +  e.entries[0].dataPoint.y.toFixed(0) +" <?php echo $unit?>";  }
  },
  axisX: {
-			gridColor: "#333",	
+			gridColor: "#aaa",	
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -142,7 +142,7 @@ return thecolor;}
         tickColor: "rgba(40, 45, 52,0)",
 		tickLength: 0,			
         includeZero: true,
-		gridColor: "#333",	
+		gridColor: "#aaa",	
 		gridDashType: "dot",			
 		interval:2,
 		labelFontSize: 8,
@@ -167,7 +167,7 @@ return thecolor;}
 	  
 	  legend:{
       fontFamily: "arial",
-      fontColor:"#555",
+      fontColor:"#aaa",
   
  },
 		

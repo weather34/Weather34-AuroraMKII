@@ -115,7 +115,7 @@ return thecolor;}
                return "Wind Speed <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0) +" <?php echo $windunit?>";  }
  },
  axisX: {
-			gridColor: "#555",	
+			gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -149,7 +149,7 @@ return thecolor;}
         tickColor: "rgba(40, 45, 52,0)",
 		tickLength: 0,	
         includeZero: false,
-		gridColor: "#555",	
+		gridColor: "hsla(200, 7%, 45%, 0.4)",		
 		gridDashType: "dot",			
 		interval:20,
 		labelFontSize: 8,

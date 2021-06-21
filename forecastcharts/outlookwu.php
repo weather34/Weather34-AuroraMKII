@@ -109,7 +109,12 @@ $wuskydayTime3=str_replace("TM Night","Tomorrow Night",$wuskydayTime3);
 body,html{font-size:12px;font-family:verb,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,4fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:none;padding:3px;font-size:.8em;
--webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,1);}
+-webkit-border-radius:4px;border-radius:4px;background: hsla(228, 10%, 10%,1);
+	filter:brightness(100%);
+	-webkit-filter:brightness(100%);
+	-moz-filter:brightness(100%);
+	-o-filter:brightness(100%);
+	-ms-filter:brightness(100%);		}
 .grid>article img{max-width:20%}
 actualt{font-size:8px}
 a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
@@ -122,17 +127,23 @@ a{color:#777;text-transform:none;text-decoration:none;color:#f8f8f8}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));grid-gap:2px;align-items:stretch;color:#f5f7fc}
 .grid>article{border:1px solid rgba(245,247,252,.04);box-shadow:none;
 padding:3px;font-size:.8em;-webkit-border-radius:4px;border-radius:4px;
-	background: hsla(228, 10%, 10%,.9);height:38px}
+	background: hsla(228, 10%, 10%,.9);height:38px;
+	filter:brightness(100%);
+	-webkit-filter:brightness(100%);
+	-moz-filter:brightness(100%);
+	-o-filter:brightness(100%);
+	-ms-filter:brightness(100%);
+	}
 	.tempvalue{color:#fff;margin-left:100px;margin-top:-36px;position:absolute;font-size:15px;font-family:verb}	
 .rainvalue{color:#fff;margin-left:-12px;margin-top:12px;position:absolute;font-size:8px;font-family:verb;width:max-content}
 .greydesc{color:#fff;margin-left:40px;margin-top:-17px;position:absolute;font-size:8px;word-wrap:break-word;line-height:.9;max-width:100px;font-family:verb}
 	}
 img{
-	filter:contrast(180%);
-	-webkit-filter:contrast(180%);
-	-moz-filter:contrast(140%);
-	-o-filter:contrast(140%);
-	-ms-filter:contrast(140%);		
+	filter:contrast(120%);
+	-webkit-filter:contrast(120%);
+	-moz-filter:contrast(120%);
+	-o-filter:contrast(120%);
+	-ms-filter:contrast(120%);		
 }
 
 

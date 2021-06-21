@@ -107,7 +107,7 @@ return thecolor;}
 
  },
 		axisX: {
-			gridColor: "#555",	
+			gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -143,7 +143,7 @@ return thecolor;}
 		maximum:100,
 		minimum:0,
         includeZero: true,
-		gridColor: "#555",	
+		gridColor: "hsla(200, 7%, 45%, 0.4)",		
 		gridDashType: "dot",			
 		interval:20,
 		labelFontSize: 8,

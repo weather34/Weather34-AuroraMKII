@@ -106,7 +106,7 @@ return thecolor;}
 			  
  },
  axisX: {
-			gridColor: "#333",	
+			gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -140,7 +140,7 @@ return thecolor;}
         tickColor: "rgba(40, 45, 52,0)",
 		tickLength: 0,			
         includeZero: true,
-		gridColor: "#333",	
+		gridColor: "hsla(200, 7%, 45%, 0.4)",		
 		gridDashType: "dot",			
 		interval:2,
 		labelFontSize: 8,

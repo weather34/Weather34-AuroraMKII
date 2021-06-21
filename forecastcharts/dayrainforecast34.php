@@ -89,7 +89,7 @@ return rainlevel;}
 		title: {
             text: " ",
 			fontSize: 0,
-			fontColor:' #555',
+			fontColor:' #aaa',
 			fontFamily: "arial",
         },
 		
@@ -110,7 +110,7 @@ return rainlevel;}
 
  },
  axisX: {
-	gridColor: "#555",	
+			gridColor: "hsla(200, 7%, 45%, 0.4)",	
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -144,7 +144,7 @@ return rainlevel;}
 		tickColor: "rgba(40, 45, 52,0)",
 		tickLength: 0,	
         includeZero: false,
-		gridColor: "#555",	
+		gridColor: "hsla(200, 7%, 45%, 0.4)",	
 		gridDashType: "dot",
 		minimum:0,
 		interval:<?php echo $interval?>,		
@@ -169,7 +169,7 @@ return rainlevel;}
 	  
 	  legend:{
       fontFamily: "arial",
-      fontColor:"#555",
+      fontColor:"#aaa",
   
  },
 		

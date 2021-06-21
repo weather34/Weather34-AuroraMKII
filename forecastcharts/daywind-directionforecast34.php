@@ -109,7 +109,7 @@ var yLabelCounter=0;
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true,},
  axisX: {
-	gridColor: "#555",	
+	gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -144,7 +144,7 @@ var yLabelCounter=0;
         includeZero: true,		
 		gridThickness: 1,	
 		gridDashType: "dot",
-		gridColor: "#555",
+		gridColor: "hsla(200, 7%, 45%, 0.4)",	
 		labelFontSize: 8,
 		labelFontColor:' #aaa',
 		labelFontFamily: "Helvetica",	

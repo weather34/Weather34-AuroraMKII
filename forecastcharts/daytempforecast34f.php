@@ -94,7 +94,7 @@ return tempcolor;}
 		title: {
             text: " ",
 			fontSize: 0,
-			fontColor:' #555',
+			fontColor:' #aaa',
 			fontFamily: "arial",
         },
 		toolTip:{
@@ -111,7 +111,7 @@ return tempcolor;}
                return "Temperature <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0) +"°<?php echo $tempunit?>";  }
  },
 		axisX: {
-			gridColor: "#555",	
+			gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -144,7 +144,7 @@ return tempcolor;}
 		tickColor: "rgba(40, 45, 52,0)",
 		tickLength: 0,			
         includeZero: false,
-		gridColor: "#555",	
+		gridColor: "hsla(200, 7%, 45%, 0.4)",		
 		gridDashType: "dot",			
 		interval:10,
 		labelFontSize: 8,
@@ -171,7 +171,7 @@ return tempcolor;}
 	  
 	  legend:{
       fontFamily: "arial",
-      fontColor:"#555",
+      fontColor:"#aaa",
   
  },
 		

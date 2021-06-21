@@ -47,6 +47,15 @@ img{width:60px}}
 .online{padding-top:12px}
 img{width:60px}}
 
+
+iconpos{
+  filter:brightness(90%);
+	-webkit-filter:brightness(90%);
+	-moz-filter:brightness(90%);
+	-o-filter:brightness(90%);
+	-ms-filter:brightness(90%);
+}
+
 [data-title]{z-index:9999}
 </style>
 </head>

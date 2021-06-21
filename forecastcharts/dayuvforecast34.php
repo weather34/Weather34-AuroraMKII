@@ -105,7 +105,7 @@ return uvlevel;}
                return "UVINDEX <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0);  }
  },
  axisX: {
-	gridColor: "#555",	
+	gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
 		    labelFontSize: 8,
 			labelFontColor:' #aaa',
@@ -139,7 +139,7 @@ return uvlevel;}
 		tickColor: "rgba(40, 45, 52,0)",
 		tickLength: 0,			
         includeZero: true,
-		gridColor: "#555",	
+		gridColor: "hsla(200, 7%, 45%, 0.4)",		
 		gridDashType: "dot",			
 		interval:2,
 		labelFontSize: 8,
