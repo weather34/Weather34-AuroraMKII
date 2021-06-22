@@ -149,7 +149,7 @@ return theD;}
 		labelFontColor:'<?php echo $ccolor?>',
 		labelFontFamily: "verb",		
 		labelFormatter: function ( e ) {
-            return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '0';} else echo '0';?>) ;
+            return e.value .toFixed(0) ;
          },	
 			 
 		crosshair: {
