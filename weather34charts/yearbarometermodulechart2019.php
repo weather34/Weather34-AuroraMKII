@@ -16,15 +16,14 @@
 	include('preload.php');
 	date_default_timezone_set($TZ);
 	$conv = 1;		
+	$int = 5;	
 	if ($tempunit == 'F') {$conv= 0.02953 ;}	
 	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}
-	$int = 5;	
-	if ($tempunit == 'F') {$int= 0.75;}		
-
-	if ($weather["barometer_units"] == 'inHg') {$unit= 'inHg';}
-	else if ($weather["barometer_units"] == 'hPa') {$unit= 'hPa';}
-	else if ($weather["barometer_units"] == 'mb') {$unit= 'mb';}
-	else if ($weather["barometer_units"]=='mmHG') {$unit= 'mmHG';}
+	if ($tempunit == 'F') {$int= 1;}		
+	if ($pressureunit == 'inHg') {$pressureunit= 'inHg';}
+	else if ($pressureunit == 'hPa') {$pressureunit= 'hPa';}
+	else if ($pressureunit == 'mb') {$pressureunit='mb';}
+	if ($position8=='barometer-modmmHG.php') {$pressureunit= 'mmHG';}
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -139,7 +138,7 @@
 		labelFontFamily: "verb",
 		
 		labelFormatter: function ( e ) {
-			return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '1';} else echo '0';?>) ;
+			return e.value .toFixed(<?php if ($tempunit=='F'){echo '1';} else echo '0';?>) ;
          },		 
 		crosshair: {
 			enabled: true,

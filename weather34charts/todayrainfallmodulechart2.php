@@ -152,7 +152,7 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 		labelFontFamily: "verb",
 		
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(<?php if ($weather["rain_units"] == 'mm'){echo '0';} else echo '1';?>) + " <?php echo $weather["rain_units"] ;?> " ;  
+        return e.value .toFixed(<?php if ($unit == 'mm'){echo '0';} else echo '1';?>) + " <?php echo $unit ;?> " ;  
          },		 
 		 crosshair: {
 			enabled: true,
@@ -183,9 +183,9 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 			legendMarkerType: "circle",
 			lineThickness: 0,
 			markerType: "circle",
-			name:" Rainfall Accumulation <?php echo $weather["rain_units"] ;?>",
+			name:" Rainfall Accumulation <?php echo $unit ;?>",
 			dataPoints: dataPoints1,
-			yValueFormatString: "##.## <?php echo $weather["rain_units"] ;?>",
+			yValueFormatString: "##.## <?php echo $unit;?>",
 			
 		},
 		{
@@ -205,5 +205,5 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">Rainfall (<?php echo $rainunit ;?>)</div> 
+<div class="modulecaptionchart3">Rainfall (<?php echo $unit ;?>)</div> 
 </body></html>

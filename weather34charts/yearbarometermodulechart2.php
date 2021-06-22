@@ -16,15 +16,13 @@
 	include('preload.php');
 	date_default_timezone_set($TZ);
 	$conv = 1;		
+	$int = 5;	
 	if ($tempunit == 'F') {$conv= 0.02953 ;}	
 	else if ($tempunit == 'C' && $position8=='barometer-modmmHG.php') {$conv= 0.750062;}
-	$int = 10;	
-	if ($tempunit == 'F') {$int= 0.75;}		
-
-	
-	if ($weather["barometer_units"] == 'inHg') {$pressureunit= 'inHg';}
-	else if ($weather["barometer_units"] == 'hPa') {$pressureunit= 'hPa';}
-	else if ($weather["barometer_units"] == 'mb') {$pressureunit='mb';}
+	if ($tempunit == 'F') {$int= 1;}		
+	if ($pressureunit == 'inHg') {$pressureunit= 'inHg';}
+	else if ($pressureunit == 'hPa') {$pressureunit= 'hPa';}
+	else if ($pressureunit == 'mb') {$pressureunit='mb';}
 	if ($position8=='barometer-modmmHG.php') {$pressureunit= 'mmHG';}
 	
 	
@@ -156,7 +154,7 @@ return thecolor;}
 		labelFontFamily: "verb",
 		
 		labelFormatter: function ( e ) {
-			return e.value .toFixed(<?php if ($weather["temp_units"]=='F'){echo '1';} else echo '0';?>) ;
+			return e.value .toFixed(<?php if ($tempunit=='F'){echo '1';} else echo '0';?>) ;
          },		 
 		crosshair: {
 			enabled: true,
