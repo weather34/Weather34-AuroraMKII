@@ -19,15 +19,15 @@
 	
 	$conv = 1;
 	if ($tempunit == 'F') {$conv= '(1.8) +32';}	
-	$int = 5;
-	if ($tempunit=='F') {$int= 10;}	
+	$interval = 5;
+	if ($tempunit == 'F') {$interval= '10';}
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR Barometer CHART</title>
+		<title>OUTDOOR CHART</title>
 		
 	';	
 	?>
@@ -72,6 +72,7 @@
 			drawChart(dataPoints1,dataPoints2 );
 		}
 	}
+	
 
 	
 	function drawChart( dataPoints1) {
@@ -123,7 +124,7 @@
 			
 		axisY:{
 		margin: 0,
-		interval:<?php echo $int?>,				
+		interval:<?php echo $interval?>,				
 		lineThickness: 1,		
 		gridThickness: 1,	
 		gridDashType: "dot",	
