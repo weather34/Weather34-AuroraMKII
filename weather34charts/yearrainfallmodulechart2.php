@@ -16,10 +16,10 @@
 	include('preload.php');
 	$weatherfile = date('F');
 	$conv = 1;
-	if ($tempunit=='F') {$conv= 0.0393701;}	
-
+	if ($tempunit == 'F') {$conv= 0.0393701;}	
+	else if ($tempunit == 'C'){$conv= 1;}
 	$int = 10;
-	if ($tempunit=='F') {$int= 0.25;}	
+	if ($tempunit == 'F') {$int= 0.5;}	
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -134,7 +134,7 @@
 		labelFontFamily: "verb",
 		
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(<?php if ($weather["rain_units"] == 'mm'){echo '0';} else echo '1';?>);  
+        return e.value .toFixed(<?php if ($rainunit == 'mm'){echo '0';} else echo '1';?>);  
          },		 
 		crosshair: {
 			enabled: true,

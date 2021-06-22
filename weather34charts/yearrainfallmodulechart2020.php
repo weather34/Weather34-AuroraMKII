@@ -133,7 +133,7 @@
 		labelFontFamily: "verb",
 		
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(<?php if ($weather["rain_units"] == 'mm'){echo '0';} else echo '1';?>);  
+        return e.value .toFixed(<?php if ($rainunit == 'mm'){echo '0';} else echo '1';?>);  
          },		 
 		crosshair: {
 			enabled: true,
