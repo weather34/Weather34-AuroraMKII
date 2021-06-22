@@ -112,7 +112,7 @@ return theD;}
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
 			   fontFamily: "verb",
-			   fontFamily: "verb",
+			  
  },
 
 		axisX: {
@@ -151,15 +151,15 @@ return theD;}
 		labelFontColor:'<?php echo $ccolor?>',
 		labelFontFamily: "verb",			
 		interval: "auto",
-		labelFormatter: function ( e ) {
-        return e.value .toFixed(0);           },		 
+		labelFormatter: function (e) {
+        return e.value .toFixed(0);},		 
 		 crosshair: {
 			enabled: true,
 			snapToDataPoint: true,
 			color: "#aaa",
 			labelFontColor: "#F8F8F8",
 			labelFontSize:0,
-			labelBackgroundColor: "<?php echo $tempcolor?>",
+			labelBackgroundColor: "rgba(68, 166, 181, 1.000)",
 			labelMaxWidth: 60,
 			valueFormatString:"##.##",
 		}	

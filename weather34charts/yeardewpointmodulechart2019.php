@@ -18,7 +18,7 @@
 	$conv = 1;
 	if ($tempunit == 'F') {$conv= '(1.8) +32';}	
 	$int = 5;
-	if ($weather["temp_units"]=='F') {$int= 10;}	
+	if ($tempunit=='F') {$int= 10;}	
 	
 	
 	

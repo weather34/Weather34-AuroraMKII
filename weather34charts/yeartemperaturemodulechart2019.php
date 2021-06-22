@@ -14,11 +14,13 @@
 	####################################################################################################
 	
 	include('preload.php');
+
+	
 	
 	$conv = 1;
 	if ($tempunit == 'F') {$conv= '(1.8) +32';}	
 	$int = 5;
-	if ($weather["temp_units"]=='F') {$int= 10;}	
+	if ($tempunit=='F') {$int= 10;}	
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">

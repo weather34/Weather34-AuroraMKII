@@ -144,7 +144,7 @@ return AQIlevel;}
 			color: "#ff832f",
 			labelFontColor: "#F8F8F8",
 			labelFontSize:8,
-			labelBackgroundColor: "<?php echo $tempcolor?>",
+			labelBackgroundColor: "rgba(68, 166, 181, 1.000)",
 			labelMaxWidth: 60,
 			valueFormatString:"##.##",
 		}	

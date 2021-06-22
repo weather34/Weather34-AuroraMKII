@@ -137,7 +137,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 			color: "#ff832f",
 			labelFontColor: "#F8F8F8",
 			labelFontSize:8,
-			labelBackgroundColor: "<?php echo $tempcolor?>",
+			labelBackgroundColor: "rgba(68, 166, 181, 1.000)",
 			labelMaxWidth: 60,
 			valueFormatString:"##.##",
 		}	
@@ -153,7 +153,7 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 		data: [
 		{
 			type: "column",
-			color:'<?php echo $tempcolor?>',
+			color:'rgba(68, 166, 181, 1.000)',
 			markerSize:0,
 			showInLegend:false,
 			legendMarkerType: "circle",

@@ -188,7 +188,7 @@ return thecolor;}
 			legendMarkerType: "circle",
 			lineThickness: 0,
 			markerType: "none",
-			name:"Thunderstorm Expected <?php echo $alert ;?>",
+			name:"Thunderstorm Expected",
 			dataPoints: dataPoints1,
 			yValueFormatString: " ",
 		},
