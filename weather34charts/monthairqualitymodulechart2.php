@@ -214,6 +214,6 @@ return theD;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Air Quality (AQI)</div> 
+<div class="modulecaptionchart3">Air Quality (Davis)</div> 
 
 </body></html>
