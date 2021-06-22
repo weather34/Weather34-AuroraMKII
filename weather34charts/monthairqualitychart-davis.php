@@ -194,10 +194,14 @@ function processData1(allText) {
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 ;</script>
 <div id="chartContainer2" class="chartb"></div></div>
 
+
+<div class="modulecaptionchart3">Air Quality (Davis Airlink)</div> 
 
 </body></html>

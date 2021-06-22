@@ -205,6 +205,6 @@ return thecolor;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-
+<div class="modulecaptionchart3">Temperature (<?php echo $tempunit ;?>)</div> 
 
 </body></html>

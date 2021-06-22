@@ -191,7 +191,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>
@@ -200,5 +202,6 @@ return thecolor;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
+<div class="modulecaptionchart3">Average Wind Speed (<?php echo $windunit ;?>)</div> 
 
 </body></html>

@@ -228,9 +228,13 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });</script>
 <body>
 <div id="chartContainer2" class="chartb"></div></div>
+
+<div class="modulecaptionchart3">Wind Direction</div> 
 </body></html>

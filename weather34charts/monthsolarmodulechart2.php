@@ -206,7 +206,9 @@ return theWM;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>
@@ -215,5 +217,6 @@ return theWM;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
+<div class="modulecaptionchart3">Solar Radiation (W/m2)</div> 
 
 </body></html>

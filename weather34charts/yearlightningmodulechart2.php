@@ -201,7 +201,9 @@ return theD;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>
@@ -209,6 +211,6 @@ return theD;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-
+<div class="modulecaptionchart3"><?php echo date('Y')?> Lightning (Strikes)</div> 
 
 </body></html>

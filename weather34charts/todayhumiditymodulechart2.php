@@ -186,12 +186,15 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });</script>
 <body>
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
+<div class="modulecaptionchart3">Humidity (RH)</div> 
 
 </body></html>

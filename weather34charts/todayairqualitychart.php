@@ -205,10 +205,13 @@ return theD;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });</script>
 <div id="chartContainer2" class="chartb"></div></div>
 
 
+<div class="modulecaptionchart3">Air Qulaity (EPA)</div> 
 </body></html> 

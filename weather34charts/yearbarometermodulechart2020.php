@@ -202,6 +202,6 @@
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-
+<div class="modulecaptionchart3">Barometer (<?php echo $pressureunit ;?>)</div> 
 
 </body></html>

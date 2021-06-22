@@ -29,7 +29,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR Barometer CHART</title>
+		<title>OUTDOOR Temperature Year CHART</title>
 		
 	';	
 	?>
@@ -207,6 +207,6 @@ return thecolor;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-
+<div class="modulecaptionchart3">Temperature (°<?php echo $tempunit ;?>)</div> 
 
 </body></html>

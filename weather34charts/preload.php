@@ -1,17 +1,12 @@
-<?php include('../settings.php');date_default_timezone_set($TZ);
+<?php include('../console-settings.php');date_default_timezone_set($TZ);
 
 
 if ($theme=='light'){$ccolor="#333";}
-if ($theme=='dark'){$ccolor="#333";}
-//if ($theme=='dark'){$ccolor="#AFB7C0";}
-
-if ($theme=='light'){$bcolor="hsla(206, 33%, 96%,0)";}
-if ($theme=='dark'){$bcolor="hsla(206, 33%, 96%,0)";}
-//if ($theme=='dark'){$bcolor="#21232C";}
-
+if ($theme=='dark'){$ccolor="rgb(250,250,250)";}
+if ($theme=='light'){$bcolor="rgba(250,250,250,1)";}
+if ($theme=='dark'){$bcolor="#19191A";}
 if ($theme=='light'){$bordercolor="#DEE3F0";}
-if ($theme=='dark'){$bordercolor="#DEE3F0";}
-//if ($theme=='dark'){$bordercolor="#3D464D";}
+if ($theme=='dark'){$bordercolor="#3D464D";}
 ?>
 <script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
 <script rel="preload" src=../js/jquery.js></script>
@@ -22,18 +17,18 @@ if ($theme=='dark'){$bordercolor="#DEE3F0";}
 @font-face {font-family: verb;src: url(fonts/verbatim-bold.woff) format("woff");}
 .chartb{
     z-index:150;
-    height:149px;
-    margin-top:10px;
+    height:140px;
+    margin-top:5px;
     -webkit-border-radius:5px;
     border-radius:5px;
     border:4px solid <?php echo $bordercolor?>;
-    border-bottom:10px solid <?php echo $bordercolor?>;
+    border-bottom:20px solid <?php echo $bordercolor?>;
     font-family:verb;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    background: hsl(206, 33%, 96%);
+    background: <?php echo $bcolor?>;
     border-radius: 5px;
-    box-shadow: inset -3px -3px 7px #ffffffb0, inset 1px 1px 5px rgba(94, 104, 121, 0.671);
+    box-shadow: none;
     padding-top:0;   
 }
 
@@ -53,6 +48,24 @@ if ($theme=='dark'){$bordercolor="#DEE3F0";}
     padding-top:0
 }
 
-
-
+.modulecaptionchart,
+.modulecaptionchart2,
+.modulecaptionchart3 {
+    position:absolute;
+    left: 3%;
+    top: -15px;
+    width: max-content;
+    font-family: verb;
+    font-size: 8px;
+    display: flex;
+    position: relative;
+    color:<?php echo $ccolor?>;
+    background:0 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;    
+    z-index:9999
+}
 </style>

@@ -218,7 +218,9 @@ return thecolor;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });
 
@@ -226,4 +228,5 @@ return thecolor;}
   </script>
 <div id="chartContainer2" class="chartb" style="margin-top:-10px"></div></div>
 
+<div class="modulecaptionchart3">Temperature </div> 
 </body></html>

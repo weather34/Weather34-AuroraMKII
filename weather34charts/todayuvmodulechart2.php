@@ -208,9 +208,13 @@ return theD;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 	}
 });</script>
 <body>
 <div id="chartContainer2" class="chartb"></div></div>
+
+<div class="modulecaptionchart3">UVINDEX (UVI)</div> 
 </body></html>

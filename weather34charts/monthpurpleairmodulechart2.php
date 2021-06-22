@@ -209,7 +209,9 @@ return theD;}
 		]
 		});
 
+		setTimeout(function(){
 		chart.render();
+	},500);
 		
 	}
 });</script>
@@ -218,5 +220,6 @@ return theD;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
+<div class="modulecaptionchart3">Purple Air Quality</div> 
 
 </body></html>
