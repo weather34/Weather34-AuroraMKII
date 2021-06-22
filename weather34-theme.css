@@ -317,7 +317,7 @@ uvunits{opacity:1;color:#fff;font-size:7px}
 .lity-close:active{color:#565f67}
 .lity-image img{display:block;max-width:100%;border:0;line-height:0}
 .lity-iframe .lity-container{width:100%;max-width:820px;margin:0 auto}
-.lity-iframe-container{ display:-webkit-box; display:flex; width:98%; max-width:820px; height:600px; padding-top:56.25%; overflow:auto; -webkit-transform:translateZ(0); transform:translateZ(0); pointer-events:auto; margin-left:15px; -moz-transform:translateZ(0); -ms-transform:translateZ(0); -o-transform:translateZ(0); }
+.lity-iframe-container{display:-webkit-box;display:flex;width:98%;max-width:820px;height:600px;padding-top:56.25%;overflow:auto;-webkit-transform:translateZ(0);transform:translateZ(0);pointer-events:auto;margin-left:15px;-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0)}
 .lity-iframe-container iframe{display:-webkit-box;display:flex;position:absolute;top:0;left:0;width:98%;max-width:820px;height:600px;max-height:450px;margin:0 auto;background:var(--dark-popup);-webkit-box-shadow:0 0 8px hsla(0,0%,0%,.6);box-shadow:0 0 8px hsla(0,0%,0%,.6);text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px}
 .lity-hide{display:none}
 .info-1,.info-2{font-size:9px;color:var(--body-text-dark);position:absolute;left:85px;top:10px;width:13rem;line-height:1;font-family:weathertext2;text-transform:none;word-wrap:break-word}
@@ -431,8 +431,8 @@ bottomtoolbarspacecharts{margin-left:60px}
 theword{font-size:1.25em}
 .almanacouterboxrain{display:flex;position:relative;margin-left:0;margin-top:80px}
 .almanacouterboxuv{display:flex;position:relative;margin-left:0;margin-top:50px}
-.almanacchartxuv{top:-15px;margin-left:285px}
-.almanacchartxsol{margin-top:145px;margin-left:285px}
+.almanacchartxuv{top:-45px;margin-left:285px}
+.almanacchartxsol{margin-top:135px;margin-left:285px}
 .grid-container-forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,2fr));grid-template-rows:repeat(4,1fr);grid-column-gap:0;grid-row-gap:3px;width:100%;background:0}
 li555{min-width:630px;max-width:630px;padding:0;height:160px;margin-top:0;margin-bottom:5px}
 .wuaheadforetop{right:40%}
@@ -481,16 +481,16 @@ html{overflow-x:visible}
 .weather34switchercharts{top:33px;margin-left:60px}
 bottomtoolbarspace{margin-left:75px}
 bottomtoolbarspacecharts{margin-left:65px}
-.canvascredit,.canvascredituv{display:none}
+.canvascredit,.canvascredituv,.weather34credit{display:none}
 .weather34-open-menu button{position:relative;top:-2px;left:3px}
 .weather34-top-menu a{margin-left:10px}
 .weather-icon-identity-wind{margin-left:170px}
 li555{min-width:320px;max-width:320px;padding:0;height:310px;margin-top:0;margin-bottom:5px;margin-left:-2px}
 .almanac-word,.almanacchartxsol,.almanacchartxuv,.almanacouterboxrain,.almanacouterboxuv,.desktoplink4,.footericons,.sunriset-set,.wuaheadforetop,chartpage,extrainfoicon,extrainfoiconsolar,extrainfoiconuv,monthchart,theword,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2{display:none}
-.almanacouterboxrain{display:flex;position:relative;width:325px;max-width:350px;height:480px;margin-left:0;margin-top:80px}
+.almanacouterboxrain{display:flex;position:relative;width:325px;max-width:350px;height:480px;margin-left:0;margin-top:0}
 .almanacouterboxuv{display:flex;position:relative;width:325px;max-width:350px;height:450px;margin-left:0;margin-top:80px}
 .almanacx{top:25px;margin-left:-10px;width:100px}
-.almanacchartx{top:280px;margin-left:0}
+.almanacchartx{top:230px;margin-left:0}
 .almanacchartxx{margin-top:200px;margin-left:0}
 .almanac2x{margin-top:80px;width:2.5em}
 .almanac3x{margin-top:-80px;margin-left:140px;width:2em}
