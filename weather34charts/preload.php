@@ -1,12 +1,10 @@
-<?php include('../console-settings.php');date_default_timezone_set($TZ);
-
-
-if ($theme=='light'){$ccolor="#333";}
-if ($theme=='dark'){$ccolor="rgb(250,250,250)";}
-if ($theme=='light'){$bcolor="rgba(250,250,250,1)";}
-if ($theme=='dark'){$bcolor="#19191A";}
-if ($theme=='light'){$bordercolor="#DEE3F0";}
-if ($theme=='dark'){$bordercolor="#3D464D";}
+<?php include('../settings.php');date_default_timezone_set($TZ);
+if ($theme1=='light'){$ccolor="#333";}
+if ($theme1=='dark'){$ccolor="rgb(250,250,250)";}
+if ($theme1=='light'){$bcolor="rgba(250,250,250,1)";}
+if ($theme1=='dark'){$bcolor="#19191A";}
+if ($theme1=='light'){$bordercolor="#DEE3F0";}
+if ($theme1=='dark'){$bordercolor="#3D464D";}
 ?>
 <script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
 <script rel="preload" src=../js/jquery.js></script>

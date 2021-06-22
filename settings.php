@@ -1,6 +1,7 @@
 <?php //November 2020 // PHP8
-  include('console-settings.php');    
+  include('console-settings.php');
 //set the units 
+$theme1=$theme;
 $units = ""; 
 if (array_key_exists('units', $_COOKIE)) { $units = $_COOKIE['units']; } 
 if (array_key_exists('units', $_GET) && ($_GET['units'] == 'us' || $_GET['units'] == 'uk' || $_GET['units'] == 'metric' || $_GET['units'] == 'scandinavia' || $_GET['units'] == 'knots')) 
