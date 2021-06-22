@@ -11,12 +11,7 @@
     #   https://www.weather34.com 	                                                                   #
     ####################################################################################################
 
-	$aqiweather["aqindex"]      = number_format(pm25_to_aqi($weather["airquality-davispm25"]), 1);
-if ($aqiweather["aqindex"]>200){$tempcolor='#703232';}
-else if ($aqiweather["aqindex"]>150){$tempcolor='#d35f50';}
-else if ($aqiweather["aqindex"]>100){$tempcolor='rgb(236, 81, 19)';}
-else if ($aqiweather["aqindex"]>0){$tempcolor='#e6a241';}
-else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}	
+
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -174,5 +169,5 @@ else if ($aqiweather["aqindex"]>=0){$tempcolor='#90b22a';}
 });</script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">Air Quality </div> 
+<div class="modulecaptionchart3">Air Quality (Davis)</div> 
 </body></html>
