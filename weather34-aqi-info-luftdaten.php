@@ -123,7 +123,7 @@ background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscal
     -webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;
     margin-left:-43px;z-index:auto;position:absolute;margin-top:-65px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding:3px}
     .theaqiwarning>blue1{color:var(--blue);font-size:0.8em;position:absolute;top:5px}
-     .charttempmodule{margin-top:-45px}
+     .charttempmodule{margin-top:-40px}
 
 .gridfooter{display:grid;grid-template-columns:repeat(1,1fr);grid-column-gap:5px;grid-row-gap:5px;color:#aaa;overflow:hidden;margin-top:5px}
 .gridfooter>article{border:1px solid rgba(97,106,114,.3);padding:5px;font-size:.8em;border-radius:4px;-webkit-border-radius:4px;background:0;-webkit-font-smoothing:antialiased;

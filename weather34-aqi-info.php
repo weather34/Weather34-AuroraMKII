@@ -121,7 +121,7 @@ background:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscal
     margin-left:5px;z-index:auto;position:absolute;margin-top:-65px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;padding:3px;text-transform: none;}
     .theaqiwarning>blue1{color:var(--blue);font-size:0.8em;position:absolute;top:5px}
 
-.charttempmodule{margin-top:-45px}
+.charttempmodule{margin-top:-40px}
 
 a{color:#aaa;text-decoration:none;font-size:1em;color:#aaa;}
 .weather34darkbrowser{position:relative;background:0;width:97%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px}
