@@ -195,7 +195,7 @@ $eqalert6='<svg id="i-activity" viewBox="0 0 32 32" width="28" height="28" fill=
     --therainrategrad: -webkit-linear-gradient(left, #00adbd 0%, #00adbd 30%, #d35f50 90%)
 }
 body,html{font-size:13px;font-family:weathertext2,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,2fr));grid-gap:5px;align-items:stretch;color:#f5f7fc;
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,2fr));grid-gap:5px;align-items:stretch;color:#f5f7fc;
 }
 .grid>article{border:1px solid hsla(233, 12%, 13%,1);
 	border-bottom: 5px solid hsla(233, 12%, 13%,1) ;

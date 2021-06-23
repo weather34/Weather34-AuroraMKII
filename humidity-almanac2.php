@@ -10,7 +10,7 @@ Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Ve
 <div class="almanacouterboxrain">
 <br><br>
 <div class="almanacchartx">
-<monthchart>Current Day Humidity Chart</monthchart>
+
 <iframe  class="charttempmodule" src="weather34charts/todayhumiditymodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
 </div>
 <div class="almanacx"><div class="almanac-content">

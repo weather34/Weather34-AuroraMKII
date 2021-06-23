@@ -6,7 +6,7 @@
 Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>
 <div class="almanacouterboxrain">
 <div class="almanacchartxuv" ><br><br>
-<monthchart style="margin-top:40px">Current Day Solar Radiation Chart</monthchart>
+
 <iframe  class="charttempmodule" src="weather34charts/todaysolarmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
 </div>
 

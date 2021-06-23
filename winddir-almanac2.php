@@ -7,7 +7,7 @@ Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Ve
 
 <div class="almanacouterboxrain">
 <div class="almanacchartxx">
-<monthchart style="margin-bottom:-40px;position:absolute;font-size:.7em">Current Day Wind Direction Chart</monthchart>
+
 <iframe  class="charttempmodule" src="weather34charts/todaywinddirectionmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
 </div>
 <br><br>

@@ -1,5 +1,5 @@
 <?php include('settings.php');?>
-<script src="js/jquery.js"></script>
+<script src="js/jquery.js?ver='5'"></script>
 <script>
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:false,success:function(){a("#position1").show()}});var c=a("#position1");c.load("<?php echo $position1 ?>");var b=setInterval(function(){c.load("<?php echo $position1 ?>")},60000)})})(jQuery);
 (function(a){a(document).ready(function(){a.ajaxSetup({cache:true,success:function(){a("#position2").show()}});var c=a("#position2");c.load("<?php echo $position2 ?>");var b=setInterval(function(){c.load("<?php echo $position2 ?>")},73000)})})(jQuery);

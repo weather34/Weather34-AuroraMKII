@@ -91,7 +91,7 @@
 html,body{font-size:13px;font-family: "weathertext2", Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;	-moz-osx-font-smoothing: grayscale;}
 .grid { 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(155px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(165px, 2fr));
   grid-gap: 5px;
   align-items: stretch;
   color:#f5f7fc;  
