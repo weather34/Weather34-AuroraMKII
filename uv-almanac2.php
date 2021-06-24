@@ -1,61 +1,55 @@
-<?php include('livedata.php');?>
+<?php include('livedata.php');?> 
 <link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
-<theword>UVINDEX | Solar W/m&#178;</theword>
-<div class="almanacouterboxuv">
-<div class="almanacchartxuv" >
-<iframe  class="charttempmodule" src="weather34charts/todayuvmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
+<ul class="grid-containeralmcharts">
+<li><iframe  class="charttempmodule3"  src="weather34charts/todayuvmodulechart2.php" frameborder="0" scrolling="no" ></iframe></li>
+<li><iframe  class="charttempmodule3"  src="weather34charts/monthuvindexmodulechart2.php" frameborder="0" scrolling="no" ></iframe>  </li>
+<li><iframe  class="charttempmodule3"  src="weather34charts/yearuvindexmodulechart2.php" frameborder="0" scrolling="no" ></iframe>  </li>
+
+
+<li>
+<div style="margin-top:20px;">
+
+<alamanacword style="margin-left:30px;margin-top:-20px;">UVINDEX History Data</alamanacword>
+
+<div class="alamanacdata">
+<?php  //Today UV
+echo "Today <orange>Max</orange> ".$weather["uvdmaxtime"];
+echo " ".$weather["uvdmax"]." UVI ";
+?></div>
+
+<div class="alamanacdata">
+<?php  //Yesterday UV
+echo "Yesterday <orange>Max</orange> ".$weather["uvydmaxtime"];
+echo " ".$weather["uvydmax"]." UVI ";
+?></div>
+
+<div class="alamanacdata">
+<?php  //MONTH UV
+echo "".date('F')." <orange>Max</orange> ".$weather["uvmmaxtime"];
+echo " ".$weather["uvmmax"]." UVI ";
+?></div>
+
+<div class="alamanacdata">
+<?php  //YEAR UV
+echo "".date('Y')." <orange>Max</orange> ".$weather["uvymaxtime"];
+echo " ".$weather["uvymax"]." UVI ";
+?></div>
+
+<div class="alamanacdata">
+<?php  //ALL TIME UV
+echo "All Time <orange>Max</orange> 28th Jul 2019";
+echo " 10.4 UVI ";
+?></div>
+
+
+
+
+
+
 </div>
-
-<div class="almanacchartxsol">
-<iframe  class="charttempmodule" src="weather34charts/todaysolarmodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
-</div>
-
-<div class="almanacxuv"><div class="almanac-content">
-<?php  //month max
-echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["uvmmaxtime"]."</deepblue></valuetextheading1><br>";   
-echo "<div class=almanacareas>".$weather["uvmmax"]	."<smalltempunit2>UVI";
-?><smalltempunit2></div></div>
-
-<div class="almanac2xuv"><div class="almanac-content">
-<?php  //max year
-echo "<valuetextheading1>".date('Y')." Max <deepblue>".$weather["uvymaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["uvymax"]."<smalltempunit2>UVI";
- ?></smalltempunit2></div></div>
-
-<div class="almanac3xuv"><div class="almanac-content">
-<?php  //month min
-echo "<valuetextheading1>Yesterday Max <deepblue>".$weather["uvydmaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["uvydmax"]."<smalltempunit2>UVI";
-?><smalltempunit2></div></div>
-
-<div class="almanac4xuv"><div class="almanac-content">
-<?php  //min Year
-echo "<valuetextheading1>Record Max <deepblue>".$weather["uvamaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["uvamax"]."<smalltempunit2>UVI";
-?><smalltempunit2></div></div>
-
-<br><br>
-<div class="almanacxsol"><div class="almanac-content">
-<?php  //month max
-echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["solarmmaxtime"]."</deepblue></valuetextheading1><br>";   
-echo "<div class=almanacareas>".$weather["solarmmax"]	."<smalltempunit2>W/m&#178;";
-?><smalltempunit2></div></div>
-
-<div class="almanac2xsol"><div class="almanac-content">
-<?php  //max year
-echo "<valuetextheading1>".date('Y')." Max <deepblue>".$weather["solarymaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["solarymax"]."<smalltempunit2>W/m&#178;";
- ?></smalltempunit2></div></div></div>
-
-<div class="almanac3xsol"><div class="almanac-content">
-<?php  //yesterday
-echo "<valuetextheading1>Yesterday Max <deepblue>".$weather["solarydmaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["solarydmax"]."<smalltempunit2>W/m&#178;";
-?><smalltempunit2></div></div>
-
-<div class="almanac4xsol"><div class="almanac-content"> 
-<?php  //All time
-echo "<valuetextheading1>Record Max <deepblue>".$weather["solaramaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["solaramax"]."<smalltempunit2>W/m&#178;";
-?><smalltempunit2></div></div>
-</div>
+</li>
+</ul>
+</div></div>
+<weather34credit>
+<a href="https://canvasjs.com" target="_blank" data-title="https://canvasjs.com" >
+CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version</a></weather34credit>

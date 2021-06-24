@@ -195,6 +195,6 @@ return thecolor;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">Humidity (RH)</div> 
+<div class="modulecaptionchart3">Outdoor Humidity (RH) <?php echo date('l F jS')?></div> 
 
 </body></html>

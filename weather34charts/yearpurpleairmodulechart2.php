@@ -221,6 +221,7 @@ return theD;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">Purple Air Quality</div> 
+
+<div class="modulecaptionchart3">Air Quality (Purple Air)  <?php echo date('Y')?></div> 
 
 </body></html>

@@ -217,6 +217,6 @@ return theWM;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Solar Radiation (W/m2)</div> 
+<div class="modulecaptionchart3">Solar Radiation (W/m2) <?php echo date('F')?></div> 
 
 </body></html>

@@ -233,5 +233,5 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 });</script>
 <body>
 <div id="chartContainer2" class="chartb"></div></div>
-<div class="modulecaptionchart3">Wind Direction</div> 
+<div class="modulecaptionchart3">Wind Direction <?php echo date('l F jS')?></div> 
 </body></html>

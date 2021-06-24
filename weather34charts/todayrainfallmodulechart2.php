@@ -20,9 +20,12 @@
     //CONVERT
 	$conv = 1;if ($tempunit == 'F') {$conv= 0.0393701;}		
 	$conv = 1;if ($rainunit == "in") {$conv= 0.0393701;}else $conv = 1;	
-	if ($rainunit == "in") {$interval= 0.5;}else $interval= 5;
+	if ($rainunit == "in") {$interval= 0.5;}
+	else $interval= 5;
 	if ($rainunit == "in") {$unit='in';}
 	if ($rainunit == "mm") {$unit='mm';}	
+	
+	
 	
 //interval Y
 $raininterval= $weather["rain_today"];
@@ -205,5 +208,5 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">Rainfall (<?php echo $unit ;?>)</div> 
+<div class="modulecaptionchart3">Rainfall (<?php echo $unit ;?>) <?php echo date('l F jS')?></div> 
 </body></html>

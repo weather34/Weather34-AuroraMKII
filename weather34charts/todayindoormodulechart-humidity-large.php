@@ -218,5 +218,5 @@ return thecolor;}
   </script>
 <div id="chartContainer2" class="chartb" style="margin-top:-10px"></div></div>
 
-<div class="modulecaptionchart3">Humidity (RH)</div> 
+<div class="modulecaptionchart3">Indoor Humidity (RH) <?php echo date('l F jS')?></div> 
 </body></html>

@@ -1,58 +1,56 @@
 <?php include('livedata.php');?> 
 <link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
+<ul class="grid-containeralmcharts">
+<li><iframe  class="charttempmodule3"  src="weather34charts/todaytempmodulechart2.php" frameborder="0" scrolling="no" ></iframe></li>
+<li><iframe  class="charttempmodule3"  src="weather34charts/monthtemperaturemodulechart2.php" frameborder="0" scrolling="no" ></iframe>  </li>
+<li><iframe  class="charttempmodule3"  src="weather34charts/yeartemperaturemodulechart2.php" frameborder="0" scrolling="no" ></iframe>  </li>
 
 
-<theword>Temperature (<blue>&deg;<?php echo $weather["temp_units"];?></blue>)</theword>
-<div class="weather34credit">
-<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
-Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>
-<div class="almanacouterboxrain">
-<br><br>
-<div class="almanacchartx">
+<li>
+<div style="margin-top:10px;">
 
+<alamanacword>Temperature History Data</alamanacword>
 
-<iframe  class="charttempmodule" src="weather34charts/todaytempmodulechart2a.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
-</div>
-<div class="almanacx"><div class="almanac-content">
+<div class="alamanacdata">
 <?php  //month max
-echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["tempmmaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>";
-echo $weather["tempmmax"]."&deg;<smalltempunit2>".$weather["temp_units"];
-?><smalltempunit2></div></div>
-
-<div class="almanac2x"><div class="almanac-content">
-<?php  //max year
-echo "<valuetextheading1>".date('Y')." Max <deepblue>".$weather["tempymaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>";
-echo $weather["tempymax"]."&deg;<smalltempunit2>".$weather["temp_units"];
- ?></smalltempunit2></div></div>
- 
-<div class="almanac3x"><div class="almanac-content">
+echo "".date('F')." <orange>Max</orange> ".$weather["tempmmaxtime"];
+echo " ".$weather["tempmmax"]."&deg;".$weather["temp_units"];
+?></div>
+<div class="alamanacdata">
 <?php  //month min
-echo "<valuetextheading1>".date('F')." Min <deepblue>".$weather["tempmmintime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>";
-echo $weather["tempmmin"]."&deg;<smalltempunit2>".$weather["temp_units"];
-?><smalltempunit2></div></div>
+echo "".date('F')." <deepblue>Min</deepblue> ".$weather["tempmmintime"];
+echo " ".$weather["tempmmin"]."&deg;".$weather["temp_units"];
+?></div>
 
-<div class="almanac4x"><div class="almanac-content">
-<?php  //temp min Year
-echo "<valuetextheading1>".date('Y')." Min <deepblue>".$weather["tempymintime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>";
-echo $weather["tempymin"]."&deg;<smalltempunit2>".$weather["temp_units"];
-?><smalltempunit2></div></div>
+<div class="alamanacdata">
+<?php  //year max
+echo "".date('Y')." <orange>Max</orange> ".$weather["tempymaxtime"];
+echo " ".$weather["tempymax"]."&deg;".$weather["temp_units"];
+?></div>
+<div class="alamanacdata">
+<?php  //year min
+echo "".date('Y')."  <deepblue>Min</deepblue> ".$weather["tempymintime"];
+echo " ".$weather["tempymin"]."&deg;".$weather["temp_units"];
+?></div>
 
-<div class="almanac5x"><div class="almanac-content">
-<?php  //all time max
-echo "<valuetextheading1>Record Max <deepblue>".$weather["tempamaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>";
-echo $weather["tempamax"]."&deg;<smalltempunit2>".$weather["temp_units"];
-?><smalltempunit2></div></div>
+<div class="alamanacdata">
+<?php  //alltime max
+echo "Alltime <orange>Max</orange> ".$weather["tempamaxtime"];
+echo " ".$weather["tempamax"]."&deg;".$weather["temp_units"];
+?></div>
 
-<div class="almanac6x"><div class="almanac-content">
-<?php  //all time min
-echo "<valuetextheading1>Record Min <deepblue>".$weather["tempamintime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>";
-echo $weather["tempamin"]."&deg;<smalltempunit2>".$weather["temp_units"];
-?><smalltempunit2></div></div>
+<div class="alamanacdata">
+<?php  //alltime min
+echo "Alltime <deepblue>Min</deepblue> ".$weather["tempamintime"];
+echo " ".$weather["tempamin"]."&deg;".$weather["temp_units"];
+?></div>
+
+
 
 </div>
+</li>
+</ul>
+</div></div>
+<weather34credit>
+<a href="https://canvasjs.com" target="_blank" data-title="https://canvasjs.com" >
+CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version</a></weather34credit>

@@ -202,6 +202,6 @@ function processData1(allText) {
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Air Quality (Davis)</div> 
+<div class="modulecaptionchart3">Air Quality (Davis)  <?php echo date('F')?></div> 
 
 </body></html>

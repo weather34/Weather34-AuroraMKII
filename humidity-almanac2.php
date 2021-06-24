@@ -1,51 +1,60 @@
-<?php include('livedata.php');?>
+<?php include('livedata.php');?> 
 <link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
-<theword>Humidity (<blue>Relative Humidity</blue>)</theword>
+<ul class="grid-containeralmcharts">
+<li><iframe  class="charttempmodule3"  src="weather34charts/todayhumiditymodulechart2.php" frameborder="0" scrolling="no" ></iframe></li>
 
-<div class="weather34credit">
-<a class="canvascreditlink" href="https://canvasjs.com" target="_blank" data-title="CanvasJs.com" >
-Charts compiled with CanvasJs.com <br>v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version.</a></div></div>
+<li><iframe  class="charttempmodule3"  style="margin-top:100px" src="weather34charts/todayindoormodulechart-humidity-large.php" frameborder="0" scrolling="no" ></iframe></li>
 
 
-<div class="almanacouterboxrain">
-<br><br>
-<div class="almanacchartx">
 
-<iframe  class="charttempmodule" src="weather34charts/todayhumiditymodulechart2.php" frameborder="0" scrolling="no" width="320px" height="200px"></iframe>  
-</div>
-<div class="almanacx"><div class="almanac-content">
+<li>
+<div style="margin-top:10px;">
+
+<alamanacword>Humidity History Data</alamanacword>
+
+
+
+<div class="alamanacdata">
+<?php  //yesterday max
+echo "Yesterday <orange>Max</orange> ".$weather["humidity_ydmaxtime"];
+echo " ".$weather["humidity_ydmax"]."%";
+?></div>
+<div class="alamanacdata">
+<?php  //yesterday min
+echo "Yesterday <deepblue>Min</deepblue> ".$weather["humidity_ydmintime"];
+echo " ".$weather["humidity_ydmin"]."%";
+?></div>
+
+
+
+<div class="alamanacdata">
 <?php  //month max
-echo "<valuetextheading1>".date('F')." Max <deepblue>".$weather["humidity_mmaxtime"]."</deepblue></valuetextheading1><br>";   
-echo "<div class=almanacareas>".$weather["humidity_mmax"]."<smalltempunit2>%";
-?><smalltempunit2></div></div>
-
-<div class="almanac2x"><div class="almanac-content">
-<?php  //max year
-echo "<valuetextheading1>".date('Y')." Max <deepblue>".$weather["humidity_ymaxtime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["humidity_ymax"]."<smalltempunit2>%";
- ?></smalltempunit2></div></div>
-
-<div class="almanac3x"><div class="almanac-content">
+echo "".date('F')." <orange>Max</orange> ".$weather["humidity_mmaxtime"];
+echo " ".$weather["humidity_mmax"]."%";
+?></div>
+<div class="alamanacdata">
 <?php  //month min
-echo "<valuetextheading1>".date('F')." Min <deepblue>".$weather["humidity_mmintime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["humidity_mmin"]."<smalltempunit2>%";
-?><smalltempunit2></div></div>
+echo "".date('F')." <deepblue>Min</deepblue> ".$weather["humidity_mmintime"];
+echo " ".$weather["humidity_mmin"]."%";
+?></div>
 
-<div class="almanac4x"><div class="almanac-content">
-<?php  //min Year
-echo "<valuetextheading1>".date('Y')." Min <deepblue>".$weather["humidity_ymintime"]."</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>".$weather["humidity_ymin"]."<smalltempunit2>%";
-?><smalltempunit2></div></div>
+<div class="alamanacdata">
+<?php  //year max
+echo "".date('Y')." <orange>Max</orange> ".$weather["humidity_ymaxtime"];
+echo " ".$weather["humidity_ymax"]."%";
+?></div>
+<div class="alamanacdata">
+<?php  //year min
+echo "".date('Y')."  <deepblue>Min</deepblue> ".$weather["humidity_ymintime"];
+echo " ".$weather["humidity_ymin"]."%";
+?></div>
 
-<div class="almanac5x"><div class="almanac-content">
-<?php  //month min
-echo "<valuetextheading1>Record Max <deepblue>24th Oct 2018</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>100<smalltempunit2>%";
-?><smalltempunit2></div></div>
 
-<div class="almanac6x"><div class="almanac-content">
-<?php  //min Year
-echo "<valuetextheading1>Record Min <deepblue> 10th Apr 2020</deepblue></valuetextheading1><br>";
-echo "<div class=almanacareas>11<smalltempunit2>%";
-?><smalltempunit2></div></div>
+
 </div>
+</li>
+</ul>
+</div></div>
+<weather34credit>
+<a href="https://canvasjs.com" target="_blank" data-title="https://canvasjs.com" >
+CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version</a></weather34credit>

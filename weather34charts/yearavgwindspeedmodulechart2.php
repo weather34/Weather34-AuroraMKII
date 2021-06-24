@@ -208,6 +208,6 @@ return thecolor;}
 </script>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">Average Wind Speed (<?php echo $windunit ;?>)</div> 
+<div class="modulecaptionchart3">Average Wind Speed (<?php echo $windunit ;?>) <?php echo date('Y')?></div> 
 
 </body></html>

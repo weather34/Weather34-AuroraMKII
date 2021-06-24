@@ -233,8 +233,12 @@ valuebeaufort{font-size:.75em;margin-left:2px}
 .modulecaptionb{top:-20px}
 .modulecaptionindoor{left:115px;top:-30px;width:50px}
 .modulecaptionchart,.modulecaptionchart2,.modulecaptionchart3{left:3%;top:210px;width:max-content;font-family:verb;font-size:8px;display:flex;position:relative;color:var(--body-text-dark);background:0 0;padding-left:4px;padding-right:4px;-webkit-border-top-right-radius:4px;-moz-border-radius-topright:4px;border-top-right-radius:4px;filter:brightness(--chartcontrast);-webkit-filter:brightness(--chartcontrast)}
+.grid-containeralmcharts{margin-top:50px;display:flex;flex-direction:row;flex-wrap:wrap;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,2fr));gap:1px;grid-gap:1px;overflow:hidden}
 .charttempmodule{margin-top:23px}
-.charttempmodule2{margin-top:6px}
+.charttempmodule2{margin-top:5px;overflow:hidden;width:360px;height:300px}
+.charttempmodule3{margin-top:70px;width:360px;height:300px;filter:brightness(85%);-webkit-filter:brightness(85%)}
+.alamanacdata{margin-top:4px;margin-left:15px;font-size:12px;font-family:verb;display:inline-block;background:rgba(51,51,51,.4);border-radius:3px;padding:3px;width:max-content;height:15px}
+alamanacword{position:absolute;margin-left:0;font-size:12px;font-family:verb;line-height:1;background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;padding:3px;max-width:max-content;margin-top:-15px;margin-bottom:3px;color:#aec0d1}
 .modulecaptiondirection{left:85px;top:-74px}
 .modulecaptionwind{left:70px;top:-10px}
 .online{position:absolute;font-size:.65em;color:var(--blue);margin-top:-25px;float:right;padding-left:10px;right:10px}
@@ -380,29 +384,6 @@ aurora{position:absolute;width:max-content;font-size:.7em;font-family:verb;margi
 .weather-directionicon-identity,.weather-pressureicon-identity{font-family:verb;width:2rem;height:1.5rem;margin-left:120px;margin-top:42px;line-height:1.4;padding-bottom:4px;font-size:9px}
 .weather-directionicon-identity{margin-top:44px;margin-left:122px;color:#2d353b!important}
 .weather-pressureicon-identity{height:1.1rem;margin-top:2px;line-height:1;padding-bottom:2px;font-size:10px;margin-left:180px}
-.almanacareas{display:-webkit-box;display:flex;width:7.5rem;height:3rem;color:var(--body-text-dark);overflow:hidden;font-family:verb;line-height:1;border:1px solid hsla(206,12%,27%,.3);font-size:20px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:30px;background:var(--button-bg-color);border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-.almanacouterbox,.almanacouterboxrain,.almanacouterboxuv{display:none}
-theword{position:absolute;margin-left:15%;font-size:36px;font-family:verb;line-height:1;background-color:hsla(204,31%,21%,.229);border-radius:3px;z-index:100;padding:3px;background-image:var(--grid-lines);background-size:2px 2px;max-width:400px;margin-top:20px;color:#aeb6bf}
-.almanac2x,.almanac2xsol,.almanac2xuv,.almanac3x,.almanac3xsol,.almanac3xuv,.almanac4x,.almanac4xsol,.almanac4xuv,.almanac5x,.almanac6x,.almanacchartx,.almanacchartxsol,.almanacchartxuv,.almanacchartxx,.almanacx,.almanacxsol,.almanacxuv{position:absolute;width:180px;float:none;padding:0;margin-bottom:50px;color:#aeb6bf}
-.almanacouterboxrain{display:flex;position:relative;width:auto;max-width:680px;height:270px;margin-left:10px;margin-top:80px}
-.almanacouterboxuv{display:flex;position:relative;max-width:135vh;height:360px;margin-left:10px;margin-top:30px}
-.almanacx{top:10px;margin-left:-10px;width:100px}
-.almanacchartx,.almanacchartxx{top:0;margin-left:285px;filter:brightness(80%);-webkit-filter:brightness(80%)}
-.almanacchartxuv{top:25px;margin-left:285px;filter:brightness(80%);-webkit-filter:brightness(80%)}
-.almanacchartxsol{margin-top:145px;margin-left:285px;filter:brightness(80%);-webkit-filter:brightness(80%)}
-.almanac2x{margin-top:80px;width:2.5em}
-.almanac3x{margin-top:-80px;margin-left:140px;width:2em}
-.almanac4x{margin-top:80px;width:2em}
-.almanac5x{margin-top:81px;margin-left:-140px;width:2.5em}
-.almanac6x{margin-top:0;margin-left:140px;width:2.5em}
-.almanacxsol{margin-top:35px;margin-left:-135px;width:2.5em}
-.almanac2xsol{margin-top:80px;width:2.5em}
-.almanac3xsol{margin-top:0;margin-left:135px}
-.almanac4xsol{margin-top:80px}
-.almanacxuv{margin-top:25px;margin-left:-10px;width:100px}
-.almanac2xuv{margin-top:70px}
-.almanac3xuv{margin-top:-70px;margin-left:135px}
-.almanac4xuv{margin-top:70px}
 .weather34-warning-proof{position:fixed;top:10%;left:33%;margin:0 auto;z-index:9999999999999!important}
 .weather34-warning-proof .weather34-hardwarenotifications{width:320px;border:0;text-align:left;z-index:99999;box-sizing:border-box;font-weight:400;border-radius:6px;box-shadow:2px 2px 10px 2px rgba(11,10,10,.2);background:hsla(230,9%,13%,1);position:relative;cursor:pointer}
 .weather34-warning-proof .weather34-hardwarenotifications .weather34-hardwarenotifications-container{display:flex!important;align-items:center;height:80px;font-weight:400;text-shadow:none}
@@ -429,11 +410,6 @@ bottomtoolbarspace{margin-left:125px}
 bottomtoolbarspacecharts{margin-left:60px}
 .nav-bottom .weather34-acplug,.nav-bottom .weather34-battery,.showicon,.sunriset-set,.version,aurora,chartpage{display:none}
 .showicon3{position:absolute;margin-left:60px}
-theword{font-size:1.25em}
-.almanacouterboxrain{display:flex;position:relative;margin-left:0;margin-top:80px}
-.almanacouterboxuv{display:flex;position:relative;margin-left:0;margin-top:50px}
-.almanacchartxuv{top:-45px;margin-left:285px}
-.almanacchartxsol{margin-top:135px;margin-left:285px}
 .grid-container-forecast{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,2fr));grid-template-rows:repeat(4,1fr);grid-column-gap:0;grid-row-gap:3px;width:100%;background:0}
 li555{min-width:630px;max-width:630px;padding:0;height:160px;margin-top:0;margin-bottom:5px}
 .wuaheadforetop{right:40%}
@@ -453,25 +429,6 @@ li{align-items:center;display:flex;justify-content:center;min-width:310px;max-wi
 extrainfoiconuv{position:absolute;margin-top:12px;margin-left:40px;color:var(--orange)}
 }
 @media screen and (max-width:760px){
-.almanacouterboxrain{display:flex;position:relative;width:auto;max-width:680px;height:50vh;margin-left:10px;margin-top:80px}
-.almanacouterboxuv{display:flex;position:relative;max-width:120vh;height:370px;margin-left:10px;margin-top:80px}
-.almanacx{top:10px;margin-left:-10px;width:100px}
-.almanacchartx,.almanacchartxx{margin-top:-10px;margin-left:285px}
-.almanacchartxuv{margin-top:5px;margin-left:285px}
-.almanacchartxsol{margin-top:145px;margin-left:285px}
-.almanac2x{margin-top:80px;width:2.5em}
-.almanac3x{margin-top:-80px;margin-left:140px;width:2em}
-.almanac4x{margin-top:80px;width:2em}
-.almanac5x{margin-top:81px;margin-left:-140px;width:2.5em}
-.almanac6x{margin-top:0;margin-left:140px;width:2.5em}
-.almanacxsol{margin-top:35px;margin-left:-135px;width:2.5em}
-.almanac2xsol{margin-top:80px;width:2.5em}
-.almanac3xsol{margin-top:0;margin-left:135px}
-.almanac4xsol{margin-top:80px}
-.almanacxuv{margin-top:25px;margin-left:-10px;width:100px}
-.almanac2xuv{margin-top:70px}
-.almanac3xuv{margin-top:-70px;margin-left:135px}
-.almanac4xuv{margin-top:70px}
 extrainfoiconuv{position:absolute;margin-top:12px;margin-left:40px;color:var(--orange)}
 .lity-wrap{margin-left:-15px}
 }
@@ -486,25 +443,7 @@ bottomtoolbarspacecharts{margin-left:65px}
 .weather34-top-menu a{margin-left:10px}
 .weather-icon-identity-wind{margin-left:170px}
 li555{min-width:320px;max-width:320px;padding:0;height:310px;margin-top:0;margin-bottom:5px;margin-left:-2px}
-.almanac-word,.almanacchartxsol,.almanacchartxuv,.almanacouterboxrain,.almanacouterboxuv,.desktoplink4,.footericons,.sunriset-set,.wuaheadforetop,chartpage,extrainfoicon,extrainfoiconsolar,extrainfoiconuv,monthchart,theword,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2{display:none}
-.almanacouterboxrain{display:flex;position:relative;width:325px;max-width:350px;height:480px;margin-left:0;margin-top:0}
-.almanacouterboxuv{display:flex;position:relative;width:325px;max-width:350px;height:450px;margin-left:0;margin-top:80px}
-.almanacx{top:25px;margin-left:-10px;width:100px}
-.almanacchartx{top:230px;margin-left:0}
-.almanacchartxx{margin-top:200px;margin-left:0}
-.almanac2x{margin-top:80px;width:2.5em}
-.almanac3x{margin-top:-80px;margin-left:140px;width:2em}
-.almanac4x{margin-top:80px;width:2em}
-.almanac5x{margin-top:81px;margin-left:-140px;width:2.5em}
-.almanac6x{margin-top:0;margin-left:140px;width:2.5em}
-.almanacxsol{margin-top:35px;margin-left:-135px;width:2.5em}
-.almanac2xsol{margin-top:80px;width:2.5em}
-.almanac3xsol{margin-top:0;margin-left:135px}
-.almanac4xsol{margin-top:80px}
-.almanacxuv{margin-top:25px;margin-left:-10px;width:100px}
-.almanac2xuv{margin-top:70px}
-.almanac3xuv{margin-top:-70px;margin-left:135px}
-.almanac4xuv{margin-top:70px}
+.desktoplink4,.footericons,.sunriset-set,.wuaheadforetop,chartpage,extrainfoicon,extrainfoiconsolar,extrainfoiconuv,monthchart,weather34-rightfootericons,weather34-rightfootericonscharts,weather34-rightfootericonscharts2{display:none}
 .desktoplink5{margin-top:-12px}
 .showicon2{display:inline;margin-left:20px}
 .onlineupdated{position:relative;font-size:.65em;color:var(--blue);margin-top:-24px;float:none;padding-left:17px;margin-left:92%}

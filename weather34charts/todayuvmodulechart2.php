@@ -216,5 +216,5 @@ return theD;}
 <body>
 <div id="chartContainer2" class="chartb"></div></div>
 
-<div class="modulecaptionchart3">UVINDEX (UVI)</div> 
+<div class="modulecaptionchart3">UVINDEX (UVI) <?php echo date('l F jS')?></div> 
 </body></html>

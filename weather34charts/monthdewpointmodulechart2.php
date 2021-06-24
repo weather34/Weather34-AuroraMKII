@@ -208,6 +208,6 @@ return thecolor;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Dewpoint (°<?php echo $tempunit ;?>)</div> 
+<div class="modulecaptionchart3">Dewpoint (°<?php echo $tempunit ;?>) <?php echo date('F')?></div> 
 
 </body></html>

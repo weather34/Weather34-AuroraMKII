@@ -207,6 +207,6 @@ return thecolor;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Wind Speed (<?php echo $windunit ;?>)</div> 
+<div class="modulecaptionchart3">Wind Speed (<?php echo $windunit ;?>) <?php echo date('F')?></div> 
 
 </body></html>

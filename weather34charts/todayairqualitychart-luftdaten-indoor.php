@@ -194,6 +194,6 @@ return AQIlevel;}
 });</script>
 <div id="chartContainer2" class="chartb" style="margin-top:-10px"></div></div>
 
-<div class="modulecaptionchart3">Air Quality (Luftdaten Indoor)</div> 
+<div class="modulecaptionchart3">Air Quality (Luftdaten Indoor) <?php echo date('l F jS')?></div> 
 
 </body></html>

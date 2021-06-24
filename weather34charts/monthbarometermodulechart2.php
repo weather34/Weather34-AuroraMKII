@@ -212,6 +212,6 @@ return thecolor;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Barometer (<?php echo $pressureunit ;?>)</div> 
+<div class="modulecaptionchart3">Barometer (<?php echo $pressureunit ;?>) <?php echo date('F')?></div> 
 
 </body></html>

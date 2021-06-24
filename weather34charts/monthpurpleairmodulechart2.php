@@ -220,6 +220,6 @@ return theD;}
 <div id="chartContainer2" class="chartb"></div></div>
 
 
-<div class="modulecaptionchart3">Air Quality (Purple Air)</div> 
+<div class="modulecaptionchart3">Air Quality (Purple Air) <?php echo date('F')?></div> 
 
 </body></html>
