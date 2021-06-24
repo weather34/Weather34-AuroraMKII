@@ -309,6 +309,7 @@ uvunits{opacity:1;color:#fff;font-size:7px}
 .lity *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .lity-wrap{z-index:9990;position:fixed;top:0;right:0;bottom:0;left:0;text-align:center;outline:0!important}
 .lity-wrap:before{content:'';display:inline-block;height:100%;vertical-align:middle;margin-right:-.25em}
+.lity-wrap:after{content:"CSS/SVG/PHP by weather34.com";font-size:10px;font-family:verb;color:#fff;position:fixed;bottom:10;right:20;background:var(--alternative-blue);padding:3px;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
 .lity-loader{z-index:9991;color:#fff;position:absolute;top:50%;margin-top:-.8em;width:100%;text-align:center;font-size:14px;font-family:Arial,Helvetica,sans-serif;opacity:0;-webkit-transition:opacity .3s ease;-o-transition:opacity .3s ease;transition:opacity .3s ease}
 .lity-loading .lity-loader{opacity:1}
 .lity-container{z-index:9992;position:relative;text-align:left;vertical-align:middle;display:inline-block;white-space:normal;max-width:100%;max-height:100%;outline:0!important}
