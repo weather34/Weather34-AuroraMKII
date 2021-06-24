@@ -53,5 +53,5 @@ CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version</a></weather34credi
 
 
 <span style="position:absolute;margin-left:200px;">
-<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $solarpanelicon2?> Solar Radiation Data </a></span>
+<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $solarpanelicon2?> Solar Radiation</a></span>
 
