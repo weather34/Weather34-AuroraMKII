@@ -41,10 +41,7 @@ echo "All Time <orange>Max</orange> 28th Jul 2019";
 echo " 10.4 UVI ";
 ?></div>
 
-
-
-
-
+</weather34credit>
 
 </div>
 </li>
@@ -53,3 +50,8 @@ echo " 10.4 UVI ";
 <weather34credit>
 <a href="https://canvasjs.com" target="_blank" data-title="https://canvasjs.com" >
 CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version</a></weather34credit>
+
+
+<span style="position:absolute;margin-left:200px;">
+<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $solarpanelicon2?> Solar Radiation Data </a></span>
+
