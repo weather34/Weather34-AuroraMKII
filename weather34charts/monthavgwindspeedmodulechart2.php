@@ -18,15 +18,15 @@
 	date_default_timezone_set($TZ);
 	$weatherfile = date('F');
 	$conv = 1;
-	if ($weather["wind_units"] == 'mph') {$conv= '2.23694';}
-	else if ($weather["wind_units"] == 'm/s') {$conv= '1';}
-	else if ($weather["wind_units"] == 'kts') {$conv= '1.94384';}
-	else if ($weather["wind_units"] == 'km/h'){$conv= '3.6';}
+	if ($windunit == 'mph') {$conv= '2.23694';}
+	if ($windunit == 'm/s') {$conv= '1';}
+	if ($windunit =='kts') {$conv= '1.94384';}
+	if ($windunit =='km/h'){$conv= '3.5999916767997';}
 
-		if ($weather["wind_units"] == 'mph') { $unit= 'mph';}
-		if ($weather["wind_units"] == 'm/s') { $unit= 'm/s';}
-		if ($weather["wind_units"] == 'km/h'){$unit= 'kmh';}
-		if ($weather["wind_units"] == 'kts') {$unit= 'kts';}
+		if ($windunit == 'mph') { $unit= 'mph';}
+		if ($windunit =='m/s') { $unit= 'm/s';}
+		if ($windunit =='km/h'){$unit= 'kmh';}
+		if ($windunit =='kts') {$unit= 'kts';}
 	
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
