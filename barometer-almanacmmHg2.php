@@ -35,7 +35,7 @@ echo " ".$weather["thb0seapressmmin"]."".$weather["barometer_units"] ;
 
 <div class="alamanacdata">
 <?php  //year max
-echo "".date('F')." <orange>Max</orange> ".$weather["thb0seapressyearmaxtime"];
+echo "".date('Y')." <orange>Max</orange> ".$weather["thb0seapressyearmaxtime"];
 echo " ".$weather["thb0seapressymax"]."".$weather["barometer_units"] ;
 ?></div>
 <div class="alamanacdata">
