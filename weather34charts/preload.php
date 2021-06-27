@@ -1,6 +1,6 @@
 <?php include('../settings.php');date_default_timezone_set($TZ);
 if ($theme=='light'){$ccolor="#3D464D";}
-if ($theme=='dark'){$ccolor="#C3CED8";}
+if ($theme=='dark'){$ccolor="#aec0d1";}
 
 if ($theme=='light'){$bordertextcolor="#3D464D";}
 if ($theme=='dark'){$bordertextcolor="#3D464D";}
@@ -8,8 +8,8 @@ if ($theme=='dark'){$bordertextcolor="#3D464D";}
 if ($theme=='light'){$bcolor="#f8f8f8";}
 if ($theme=='dark'){$bcolor="#19191A";}
 
-if ($theme=='light'){$bordercolor="#C3CED8";}
-if ($theme=='dark'){$bordercolor="#C3CED8";}
+if ($theme=='light'){$bordercolor="#aec0d1";}
+if ($theme=='dark'){$bordercolor="#aec0d1";}
 ?>
 <script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
 <script rel="preload" src=../js/jquery.js></script>
