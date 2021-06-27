@@ -80,13 +80,7 @@ else $darkminutes=$darkminutes;$thehour=date('H');$theminute=date('i');
   <?php 
   //weather34 next lunar event..
   $lunar_nextevent="No Lunar Event<br>s";
-  //2021
-  $lunar_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 12, 14, 20),"event_title"=>"<br><large>Lunar Total <blue>Eclipse</large></blue>
-  <div class=date>Event Visible <br><blue> May 26th 2021<br>
-  </div></div>","event_end"=>mktime(23, 59, 59, 5, 26, 21),);
-  $lunar_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 5, 26, 21),"event_title"=>"<br><large>Annular Solar <blue>Eclipse</large></blue>
-  <div class=date>Event Visible <br><blue> June 10th 2021<br>
-  </div></div>","event_end"=>mktime(23, 59, 59, 6, 10, 21),);
+  //2021  
   $lunar_eventsnext[]=array("event_start"=>mktime(23, 59, 59, 6, 10, 21),"event_title"=>"<br><large>Partial Lunar <blue>Eclipse</large></blue>
   <div class=date>Event Visible <br><blue> Nov 18-19th 2021<br>
   </div></div>","event_end"=>mktime(23, 59, 59, 11, 19, 21),);
@@ -202,10 +196,23 @@ actualt34{display:none}
 .weather34-image{position:absolute;display:flex;right:70px;margin-top:20px;width:10rem;opacity:.9}
 .info2a{position:absolute;margin-top:40px;font-size:.8em;margin-left:5px;width:200px}
 li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
-black{color:#777}
+black{color:#888}
   
     
     </style>
+
+<?php
+//new moon
+$moon=new MoonPhase();$lum2=$moon->illumination();
+if($lum2<3){echo "<style>
+.weather34moonsvgmoon {fill:#3c454d;stroke-width: 0;}
+.weather34moonsvgmoonback {fill:#3c454d;stroke-width: 0;}</style>";}
+//full moon
+if($lum2>98){echo "<style>
+.weather34moonsvgmoon {fill:hsla(209, 28%, 75%,1);stroke-width: 0;}
+.weather34moonsvgmoonback {fill:hsla(209, 28%, 75%,1);stroke-width:0;}
+  </style>";}
+  ?>
   <div class="weather34darkbrowser" url="Moon Phase and Relative Information"></div>
   <main class="grida">
     
@@ -245,10 +252,17 @@ black{color:#777}
   <br>
   <?php 
   $lunayear=date('Y');		
-   if($lunayear==2020 || $lunayear==2021 || $lunayear==2022 ){  
+  if($lunayear==2021 ){  
     echo $info." Partial Lunar <blue>Eclipse </blue> 18-19 Nov 2021<br>	";
-    echo $info." Total <blue>Eclipse </blue> 4 Dec 2021<br>"; 
-    }	?>	
+    echo $info." Total <blue>Eclipse </blue> 4 Dec 2021<br>";     }	
+    
+  if($lunayear==2022 ){  
+      echo $info." Partial Lunar <blue>Eclipse </blue> April 30, 2022<br>	";
+      echo $info." Total <blue>Eclipse </blue> May 15, 2022<br>"; 
+      echo $info." Partial Lunar <blue>Eclipse </blue> October 25, 2022<br>	";
+      echo $info." Total <blue>Eclipse </blue> November 8, 2022<br>"; 
+      }	
+    ?>	
   
   
     <?php if ($lunar_nextevent)  {echo $lunarinfo3 ,$lunar_nextevent ;} ?>  

@@ -1,10 +1,15 @@
 <?php include('../settings.php');date_default_timezone_set($TZ);
-if ($theme1=='light'){$ccolor="#333";}
-if ($theme1=='dark'){$ccolor="rgb(250,250,250)";}
-if ($theme1=='light'){$bcolor="rgba(250,250,250,1)";}
-if ($theme1=='dark'){$bcolor="#19191A";}
-if ($theme1=='light'){$bordercolor="#DEE3F0";}
-if ($theme1=='dark'){$bordercolor="#3D464D";}
+if ($theme=='light'){$ccolor="#3D464D";}
+if ($theme=='dark'){$ccolor="#C3CED8";}
+
+if ($theme=='light'){$bordertextcolor="#3D464D";}
+if ($theme=='dark'){$bordertextcolor="#3D464D";}
+
+if ($theme=='light'){$bcolor="#f8f8f8";}
+if ($theme=='dark'){$bcolor="#19191A";}
+
+if ($theme=='light'){$bordercolor="#C3CED8";}
+if ($theme=='dark'){$bordercolor="#C3CED8";}
 ?>
 <script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
 <script rel="preload" src=../js/jquery.js></script>
@@ -16,11 +21,11 @@ if ($theme1=='dark'){$bordercolor="#3D464D";}
 .chartb{
     z-index:150;
     height:140px;
-    margin-top:5px;
+    margin-top:6px;
     -webkit-border-radius:5px;
     border-radius:5px;
     border:4px solid <?php echo $bordercolor?>;
-    border-bottom:20px solid <?php echo $bordercolor?>;
+    border-bottom:19px solid <?php echo $bordercolor?>;
     font-family:verb;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
@@ -57,13 +62,10 @@ if ($theme1=='dark'){$bordercolor="#3D464D";}
     font-size: 8px;
     display: flex;
     position: relative;
-    color:<?php echo $ccolor?>;
+    color:<?php echo $bordertextcolor?>;
     background:0 0;
     padding-left: 4px;
-    padding-right: 4px;
-    -webkit-border-top-right-radius: 4px;
-    -moz-border-radius-topright: 4px;
-    border-top-right-radius: 4px;    
-    z-index:9999
+    padding-right: 4px;    
+    
 }
 </style>

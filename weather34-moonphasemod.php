@@ -47,6 +47,22 @@ class Moon{ public static function calculateMoonTimes($month,$day,$year,$lat,$lo
   
 
 ?>
+<?php
+//new moon
+$moon=new MoonPhase();$lum2=$moon->illumination();
+if($lum2<3){echo "<style>
+.weather34moonsvgmoon {fill:#3c454d;stroke-width: 0;}
+.weather34moonsvgmoonback {fill:#3c454d;stroke-width: 0;}
+black{color:#777}
+.phase2 {color: #C3CED8;}</style>";}
+//full moon
+if($lum2>98){echo "<style>
+.weather34moonsvgmoon {fill:hsla(209, 28%, 75%,1);stroke-width: 0;}
+.weather34moonsvgmoonback {fill:hsla(209, 28%, 75%,1);stroke-width:0;}
+black{color:#777}
+.phase2 {color: #C3CED8;}
+  </style>";}
+  ?>
 <div class="moonblock">
 <div class="indoordesc">Moonphase</div>
 <div class="button button-dial-small-moon">
@@ -116,7 +132,7 @@ if(void 0===supportsVml.supported){
 var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:shape id="vml_flag1" adj="1" />';
 var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}Date.prototype.getJulian=function(){
   //return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
-  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440586.25)};
+  return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.25)};
   phase_junk(moon_day(new Date)); 
 </script>
 </div></div>

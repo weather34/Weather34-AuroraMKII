@@ -118,9 +118,25 @@ else $darkminutes=$darkminutes;$thehour=date('H');$theminute=date('i');?>
 	  left:23px;
 	  z-index:100
 	}
-	
+	black{color:#C3CED8}
 	</style>
-	
+	<?php
+//new moon
+$moon=new MoonPhase();$lum2=$moon->illumination();
+if($lum2<3){echo "<style>
+.weather34moonsvgmoon {fill:#3c454d;stroke-width: 0;}
+.weather34moonsvgmoonback {fill:#3c454d;stroke-width: 0;}
+black{color:#777}
+.phase2 {color: #C3CED8;}
+</style>";}
+//full moon
+if($lum2>98){echo "<style>
+.weather34moonsvgmoon {fill:hsla(209, 28%, 75%,1);stroke-width: 0;}
+.weather34moonsvgmoonback {fill:hsla(209, 28%, 75%,1);stroke-width:0;}
+black{color:#777}
+.phase2 {color: #C3CED8;}
+  </style>";}
+  ?>
 	<?php 
 	$fullday = 720;
 	function fullcircle ($integer){global $fullday ;$h= (int) date ('H',$integer);$m = (int) date ('i',$integer);
@@ -264,7 +280,7 @@ var e=document.body.appendChild(document.createElement("div"));e.innerHTML='<v:s
 var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t||"object"==typeof t.adj,e.parentNode.removeChild(e)}supportsVml.supported}()}
 Date.prototype.getJulian=function(){
 //return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.5)};
-return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440586.25)};
+return ((this / 86400000) - (this.getTimezoneOffset() / 1440) + 2440587.25)};
 phase_junk(moon_day(new Date)); 
 </script>
 </div></div>

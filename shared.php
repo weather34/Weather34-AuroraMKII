@@ -609,8 +609,6 @@ M189.27,170.697v51.325H80.979l14.246-51.325H189.27z M189.27,102.282v51.342H95.22
 M323.15,153.624v-51.342h71.253l14.221,51.342H323.15z M323.15,222.022v-51.325h85.474l17.193,51.325H323.15z" fill="transparent"/>
 <rect height="76.616" fill="#828A91" width="57.084" x="234.541" y="321.637"/><polygon points="291.625,398.253 234.541,398.253 137.686,398.253     
 137.686,441.041 374.278,441.041 374.278,398.253" fill="#6F757D"/></g></g><g id="Layer_1"/></svg>';
-
-
 $solaricon='<svg width="12pt" height="12pt" data-name="Layer 1" viewBox="0 0 64 64"><defs><style>.weather34solarcircle {fill:currentColor;}.solarword{fill:currentColor;}</style></defs><circle class="weather34solarcircle" cx="32" cy="32" r="17"/><path class="solarword" d="M24.79,27.75V33.7c0,1.78.67,2.68,1.87,2.68s1.9-.86,1.9-2.68V27.75h2.33v5.79c0,3.19-1.61,4.7-4.3,4.7s-4.14-1.44-4.14-4.73V27.75Z"/>
 <path class="solarword" d="M35.35,38.08,32,27.75H34.6l1.26,4.37c.35,1.23.67,2.41.92,3.69h0c.26-1.24.58-2.47.93-3.65l1.32-4.41h2.48L38.07,38.08Z"/></svg>';
 $strike='<svg width="10pt" height="10pt"  viewBox="0 0 1024 1024" version="1.1"><path d="M718.933333 106.666667L469.333333 362.666667l320 106.666666-334.933333 313.6 108.8 59.733334L256 917.333333l57.6-315.733333 61.866667 108.8L576 512l-320-106.666667L533.333333 106.666667h185.6z" fill="currentColor" /></svg>';
@@ -769,6 +767,6 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
 $weather34version='Aurora MKII (SE)';
-$weather34versiondate='24th June 2021';
+$weather34versiondate='27th June 2021';
 ?>
 

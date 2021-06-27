@@ -197,9 +197,21 @@ actualt34{display:none}
 .weather34-image{position:absolute;display:flex;right:70px;margin-top:20px;width:10rem;opacity:.9}
 .info2a{position:absolute;margin-top:40px;font-size:.8em;margin-left:5px;width:200px}
 li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
-black{color:#777}
+black{color:#888}
   
   </style>
+  <?php
+//new moon
+$moon=new MoonPhase();$lum2=$moon->illumination();
+if($lum2<3){echo "<style>
+.weather34moonsvgmoon {fill:#3c454d;stroke-width: 0;}
+.weather34moonsvgmoonback {fill:#3c454d;stroke-width: 0;}</style>";}
+//full moon
+if($lum2>98){echo "<style>
+.weather34moonsvgmoon {fill:hsla(209, 28%, 75%,1);stroke-width: 0;}
+.weather34moonsvgmoonback {fill:hsla(209, 28%, 75%,1);stroke-width:0;}
+  </style>";}
+  ?>
 <div class="weather34darkbrowser" url="Sun Position and Relative Information"></div>
 <main class="grida">
   
