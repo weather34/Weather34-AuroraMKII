@@ -14,7 +14,7 @@
 <div class="alamanacdata">
 <?php  //todays avg
 echo "Todays <blue>Average Direction</blue>";
-echo " ".$weather['wind_direction_avgday']."&deg; " ;
+echo " ".number_format($weather['wind_direction_avgday'],0)."&deg; " ;
 
 if( $weather["wind_direction_avgday"]<=11.25){echo "North";}else if( $weather["wind_direction_avgday"]<=33.75){echo "NNE";}else if( $weather["wind_direction_avgday"]<=56.25){echo "NE";}
 else if( $weather["wind_direction_avgday"]<=78.75){echo "ENE";}else if( $weather["wind_direction_avgday"]<=101.25){echo "East";}else if( $weather["wind_direction_avgday"]<=123.75){echo "ESE";}
@@ -27,7 +27,7 @@ else if( $weather["wind_direction_avgday"]<=348.75){echo "NNW";}else if( $weathe
 <div class="alamanacdata">
 <?php  //yesterdays avg
 echo "Yesterday <blue>Average Direction</blue>";
-echo " ".$weather['wind_direction_ydayavg']."&deg; " ;
+echo " ".number_format($weather['wind_direction_ydayavg'],0)."&deg; " ;
 
 if( $weather["wind_direction_ydayavg"]<=11.25){echo "North";}else if( $weather["wind_direction_ydayavg"]<=33.75){echo "NNE";}else if( $weather["wind_direction_ydayavg"]<=56.25){echo "NE";}
 else if( $weather["wind_direction_ydayavg"]<=78.75){echo "ENE";}else if( $weather["wind_direction_ydayavg"]<=101.25){echo "East";}else if( $weather["wind_direction_ydayavg"]<=123.75){echo "ESE";}
@@ -40,7 +40,7 @@ else if( $weather["wind_direction_ydayavg"]<=348.75){echo "NNW";}else if( $weath
 <div class="alamanacdata">
 <?php  //month avg
 echo date('F')." <blue>Average Direction</blue>";
-echo " ".$weather['wind_direction_avgmonth']."&deg; " ;
+echo " ".number_format($weather['wind_direction_avgmonth'],0)."&deg; " ;
 
 if( $weather["wind_direction_avgmonth"]<=11.25){echo "North";}else if( $weather["wind_direction_avgmonth"]<=33.75){echo "NNE";}else if( $weather["wind_direction_avgmonth"]<=56.25){echo "NE";}
 else if( $weather["wind_direction_avgmonth"]<=78.75){echo "ENE";}else if( $weather["wind_direction_avgmonth"]<=101.25){echo "East";}else if( $weather["wind_direction_avgmonth"]<=123.75){echo "ESE";}
@@ -53,7 +53,7 @@ else if( $weather["wind_direction_avgmonth"]<=348.75){echo "NNW";}else if( $weat
 <div class="alamanacdata">
 <?php  //month avg
 echo date('Y')." <blue>Average Direction</blue>";
-echo " ".$weather['wind_direction_avgyear']."&deg; " ;
+echo " ".number_format($weather['wind_direction_avgyear'],0)."&deg; " ;
 
 if( $weather["wind_direction_avgyear"]<=11.25){echo "North";}else if( $weather["wind_direction_avgyear"]<=33.75){echo "NNE";}else if( $weather["wind_direction_avgyear"]<=56.25){echo "NE";}
 else if( $weather["wind_direction_avgyear"]<=78.75){echo "ENE";}else if( $weather["wind_direction_avgyear"]<=101.25){echo "East";}else if( $weather["wind_direction_avgyear"]<=123.75){echo "ESE";}

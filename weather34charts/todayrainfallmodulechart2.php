@@ -69,7 +69,7 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 		var allLinesArray = allText.split('\n');
 		if(allLinesArray.length>0){
 			
-			for (var i = 0; i <= allLinesArray.length-1; i++) {
+			for (var i = 1; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');	
 				if ( rowData[2] >-150)				
 					dataPoints1.push({label: rowData[1],y:parseFloat(rowData[4]*<?php echo $conv ?>)});
@@ -81,7 +81,7 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 		var allLinesArray = allText.split('\n');
 		if(allLinesArray.length>0){
 			
-			for (var i = 0; i <= allLinesArray.length-1; i++) {
+			for (var i = 1; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');		
 				if ( rowData[2] >-150)		
 					dataPoints2.push({label: rowData[1],y:parseFloat(rowData[10]*<?php echo $conv ?>)});
@@ -121,12 +121,11 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:'<?php echo $ccolor?>',
-			labelFontFamily: "verb",
-			
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
-			minimum:0,
+			minimum:-0.5,
 			crosshair: {
 			enabled: true,
 			snapToDataPoint: true,				

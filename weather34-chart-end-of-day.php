@@ -33,20 +33,21 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);ini_set("display_errors","off
 if($purpleairhardware=='yes'){
 // Purple Air Sensor data revised November 2020
 $json  = file_get_contents("jsondata/purpleair.txt");
-$array = json_decode( $json, true );
+$array = json_decode( $json, true ); 
 for ( $i = 0; $i < sizeof( $array['results'] ); $i++ ) {$array['results'][ $i ]['Stats'] = json_decode( $array['results'][ $i ]['Stats'], true );}
 $sensor24h  = $array['results'][0]['Stats']['v5'];
 $aqiweather["aqi24h"]      = number_format(pm25_to_aqi(($sensor24h )),1);}
 $meteobridgeapi[184] = number_format(pm25_to_aqi(($meteobridgeapi[184])),1);
 
 //create the current month file example folder/file path = weather34charts/2021/July.csv
+
+// [DD][MM] , [th0temp-ydmax:--] , [th0temp-ydmin:--] , [th0dew-ydmax:--] , [th0dew-ydmin:--] , [rain0total-ydmax:--] , [wind0wind-ydmax:--] , [wind0wind-ydavg:—] , [position 8 not used] ,  [thb0seapress-ydmax:--] , [thb0seapress-ydmin:--] ,  [uv0index-ydmax:--] , [sol0rad-ydmax:--] , [air0pm-ydavg:—] , [air1pm-ydavg:—] , [wind0dir-ydavg:--]
 $weatherchartfilemonth ="weather34charts/".$year."/".date('F').".csv";
 $weather34chartdata = date('j M',strtotime("-1 day")).",".$meteobridgeapi[82].",".$meteobridgeapi[84].",".$meteobridgeapi[52].",".$meteobridgeapi[120].",".$meteobridgeapi[100].",".$meteobridgeapi[94].",".$meteobridgeapi[123].",".$meteobridgeapi[123].",".$meteobridgeapi[135].",".$meteobridgeapi[137].",".$meteobridgeapi[114].",".$meteobridgeapi[107].",".$aqiweather["aqi24h"].",".$meteobridgeapi[184].",".$meteobridgeapi[171].""."\r\n";
 //$output=$weatherchartfilemonth;
 $fp = fopen($weatherchartfilemonth, 'a+'); 
 fwrite($fp,$weather34chartdata); 
 fclose($fp);
-
 //create the year file example folder/file path = weather34charts/2021.csv
 $weatherchartfileyear = "weather34charts/".date('Y').".csv";
 $weather34chartdata1  = date('j M',strtotime("-1 day")).",".$meteobridgeapi[82].",".$meteobridgeapi[84].",".$meteobridgeapi[52].",".$meteobridgeapi[120].",".$meteobridgeapi[100].",".$meteobridgeapi[94].",".$meteobridgeapi[123].",".$meteobridgeapi[123].",".$meteobridgeapi[135].",".$meteobridgeapi[137].",".$meteobridgeapi[114].",".$meteobridgeapi[107].",".$aqiweather["aqi24h"].",".$meteobridgeapi[184].",".$meteobridgeapi[171].""."\r\n";

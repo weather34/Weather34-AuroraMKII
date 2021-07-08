@@ -193,7 +193,7 @@ return thecolor;}
 			markerSize:0,
 			showInLegend:false,
 			legendMarkerType: "circle",
-			lineThickness: 1,
+			lineThickness: 2,
 			markerType: "none",
 			name:"Average",
 			dataPoints: dataPoints2,

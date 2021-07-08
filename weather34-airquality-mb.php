@@ -1,7 +1,7 @@
 <?php  include('livedata.php');
 date_default_timezone_set($TZ);
     ####################################################################################################
-    #	CREATED FOR HOMEWEATHERSTATION MB SMART TEMPLATE 											   #
+    #	CREATED FOR WEATHER34 AURORA MKII TEMPLATE 											   #
     # https://weather34.com/homeweatherstation/index.html 											   #
     # 	                                                                                               #
     # 	Revised: October 2020       			  	                                                   #

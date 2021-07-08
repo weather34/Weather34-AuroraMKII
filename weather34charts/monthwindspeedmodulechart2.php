@@ -83,8 +83,9 @@ return thecolor;}
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
 				if ( rowData[1] >-100)				
-				//dataPoints2.push({label: rowData[0],y:parseFloat(rowData[7]*<?php echo $conv ?>)});
-				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[7]*<?php echo $conv ;?>),color:WEATHER34CHARTCOLORS(parseFloat(rowData[7]*<?php echo $conv ;?>))});
+				
+				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[7]*<?php echo $conv ?>)});
+			
 				
 				
 			}
@@ -186,7 +187,7 @@ return thecolor;}
 			markerSize:0,
 			showInLegend:false,
 			legendMarkerType: "circle",
-			lineThickness: 1,
+			lineThickness: 2,
 			markerType: "none",
 			name:"Avg",
 			dataPoints: dataPoints2,

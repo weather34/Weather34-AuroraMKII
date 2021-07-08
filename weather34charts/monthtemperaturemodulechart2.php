@@ -190,7 +190,7 @@ return thecolor;}
 			color:"hsla(185, 100%, 37%, 0.7)",				
 			showInLegend:false,		
 			markerSize:0,	
-			lineThickness: 1,	
+			lineThickness: 2,	
 			lineColor:"rgba(255, 255, 255,.5)",					
 			name:"Lo Temp",
 			markerType: "none",

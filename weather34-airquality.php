@@ -47,7 +47,7 @@ else if ($aqiweather["aqindex"] >=50){ echo "<yellow>".number_format($aqiweather
 else if ($aqiweather["aqindex"] >=0){ echo "<green>".number_format($aqiweather["aqindex"] ,1)."</green>";}  
 ?>  
 
-<?php //feels like man
+<?php //id index
 echo "<indoorpm2>AQI</indoorpm2>";?>
 </div>
 
