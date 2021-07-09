@@ -8,8 +8,8 @@ include('livedata.php');date_default_timezone_set($TZ);?>
 <div class="modulecaptionb">Precipitation (Rain)</div>
 
 <todaysrain>Today</todaysrain>
-<div class="button button-dialrain">               
- <div class="button-dial-toprain"></div>
+<div class="button button-dialrain">                
+ <div class="button-dial-toprain"></div> 
 <div class="button-dial-label"> 
 <?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.7;'>".number_format($weather["rain_today"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
 </div></div></div>
@@ -49,15 +49,11 @@ else echo $meteobridgeapi[9]/9.25;?>em;">
 $raintimeago=$originalDate124;$seconds_ago = (time() - strtotime($raintimeago));
 echo $min1." ";
 // weather34 sez lets get rainfall hours or minutes ago if within last 8 hours
-if ($seconds_ago >28800) {
-echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";}
-else if ($seconds_ago >= 7200) { echo 'Precipitation&nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
-else if ($seconds_ago >= 3600) {
-  echo 'Last Tip &nbsp;<blue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hour Ago'; }
-  else if ($seconds_ago <=119) { 
-  echo 'Last Tip&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minute Ago'; }
-else if ($seconds_ago >119) {
-  echo 'Last Tip&nbsp;<blue>'.intval($seconds_ago / 60) .'</blue>&nbsp;Minutes Ago'; } 
+  if ($weather["rain_lasthour"]<0.01) {echo date('F')." Total <deepblue>".$weather["rain_month"]."</deepblue><smalltrainunit3> ".$weather["rain_units"]."<smalltrainunit3>";}      
+  else if ($seconds_ago >= 7200) {echo 'Precipitation &nbsp;<deepblue>'.intval($seconds_ago / 3600) .'</blue>&nbsp;Hours Ago'; }
+  else if ($seconds_ago >= 3600) {echo 'Last Tip &nbsp;<deepblue>'.intval($seconds_ago / 3600) .'</deepblue>&nbsp;Hour Ago'; }
+  else if ($seconds_ago <=119) {echo 'Last Tip &nbsp;<deepblue>'.intval($seconds_ago / 60) .'</deepblue>&nbsp;Minute Ago'; }    
+  else if ($seconds_ago >119) {echo 'Last Tip &nbsp;<deepblue>'.intval($seconds_ago / 60) .'</deepblue>&nbsp;Minutes Ago'; }
 ?>
 </div>
 
