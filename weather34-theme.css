@@ -488,7 +488,7 @@ button:focus{border:none;outline:0!important;outline-style:none}
 .button-dial,.button-dialrain{display:flex;height:120px;margin:0;left:-80px;align-items:center;justify-content:center;width:120px;font-family:verb;margin-top:-10px;color:grey}
 .button-dialrain{border:0;box-shadow:none}
 .button-dial-top,.button-dial-toprain{box-shadow:var(--button-shadow);width:120px;height:85px;margin:0 auto;position:absolute;top:12%;left:0;text-align:center;z-index:5;border:5px solid var(--gaugeborders);border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;background-image:var(--grid-linescompass);background-size:5px 5px}
-.button-dial-label{font-size:24px;position:relative;z-index:10;left:5px;top:4px;color:var(--body-text-dark)}
+.button-dial-label{font-size:22px;position:relative;z-index:10;left:5px;top:4px;color:var(--body-text-dark)}
 .button-dial-small{border-radius:50%;display:flex;height:85px;margin:0;left:0;align-items:center;justify-content:center;width:85px;font-family:weathertext2;margin-top:-20px;color:grey}
 .button-dial-top-small{background:0 0;box-shadow:var(--button-shadow);border-radius:5px;width:72%;height:52%;margin:0 auto;position:absolute;top:24%;left:10%;text-align:center;z-index:1;background-image:var(--grid-linescompass);background-size:5px 5px;border:3px solid var(--gaugeborders)}
 .button-dial-label-small{font-size:15px;position:relative;z-index:10;color:var(--temp20-25);font-family:verb}
