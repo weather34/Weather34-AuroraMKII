@@ -54,9 +54,9 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');	
-				if ( rowData[1] >0)			
+				if ( rowData[16] >0)			
 				//dataPoints1.push({label:rowData[0],y:parseFloat(rowData[11])});				
-				dataPoints1.push({label: rowData[0],y:parseFloat(rowData[14]),color:WEATHER34CHARTCOLORS(parseFloat(rowData[14]))});
+				dataPoints1.push({label: rowData[0],y:parseFloat(rowData[16]),color:WEATHER34CHARTCOLORS(parseFloat(rowData[16]))});
 					
 					
 			}
@@ -69,9 +69,9 @@ return thecolor;}
 			
 			for (var i = 0; i <= allLinesArray.length-1; i++) {
 				var rowData = allLinesArray[i].split(',');
-				if ( rowData[1] >-100)
+				if ( rowData[17] >0)
 				//dataPoints2.push({label: rowData[0],y:parseFloat(rowData[10])});
-				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[13]),color:WEATHER34CHARTCOLORS(parseFloat(rowData[13]))});
+				dataPoints2.push({label: rowData[0],y:parseFloat(rowData[17]),color:WEATHER34CHARTCOLORS(parseFloat(rowData[17]))});
 				
 								
 			}
@@ -155,7 +155,7 @@ return thecolor;}
 			lineThickness: 1,
 			markerType: "none",
 			name:"Hi Humidity",
-			dataPoints: dataPoints2,
+			dataPoints: dataPoints1,
 			yValueFormatString: "# '%'",
 		},
 		{
@@ -166,11 +166,10 @@ return thecolor;}
 			markerSize:0,
 			fillOpacity:0.8,
 			showInLegend:false, 			
-			lineThickness: 2,
-			
+			lineThickness: 2,			
 			markerType: "none",	
 			name:"Lo Humidity",			
-			dataPoints: dataPoints1,
+			dataPoints: dataPoints2,
 			yValueFormatString: "# '%'",
 		}
 
