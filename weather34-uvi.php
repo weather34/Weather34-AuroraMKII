@@ -90,7 +90,7 @@ echo "<uvopacity>".number_format($weather["uv"],1)." <uvunits>UVI</uvunits></uvo
   <?php //relative scale
   echo "<volume>UVI <br>10 <br>8 <br>5 <br>3 <br>0 </volume>";  
   ?>
-<div id="weather34rainwater2" style="height:<?php echo $weather["uv"]*4.2;?>pt;
+<div id="weather34rainwater2" style="height:<?php echo $weather["uv"]*4;?>pt;
 opacity:0.7;background:
 <?php //uv color
 if ($weather['uv']>=10 ){echo 'var(--purple)';}
@@ -150,12 +150,13 @@ font-size:9px;
 padding-left:<?php 
 if ($weather["lux"]>70000){echo $weather["lux"]/1150;}else if ($weather["lux"]>=0){echo $weather["lux"]/1100;}?>px;
 top:0px;
-color:<?php if ($weather["lux"]>80000){echo "var(--orange);";}if ($weather["lux"]>0){echo "var(--yellow);";}else echo "var(--body);";?>;}	
+color:<?php if ($weather["lux"]>80000){echo "var(--orange);";}if ($weather["lux"]>0){echo "var(--temp15-20);";}else echo "var(--body);";?>;}	
 </style>
 </valuetextheading5>
 
 <div class=sunratebar>
-<div class="weather34sunratebar12" style="width:<?php echo $weather["lux"]/1000;?>px;background:<?php if ($weather["lux"]>80000){echo "var(--orange);";}else echo "var(--yellow);";?>">
+<div class="weather34sunratebar12" style="width:<?php echo $weather["lux"]/1000;?>px;background:<?php if ($weather["lux"]>80000){echo "var(--orange);";}
+else echo "var(--temp15-20);";?>">
 </div></div>
 
 

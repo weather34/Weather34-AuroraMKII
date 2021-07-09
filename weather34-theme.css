@@ -54,7 +54,7 @@ li5555{min-width:958px;max-width:958px;padding:0;height:195px;margin-bottom:-25p
 .sunrise2{display:block;background:0;color:var(--body-text-dark);font-size:.7rem;line-height:1;margin-top:-65px;position:absolute;margin-left:150px;font-family:headingtext;text-align:left}
 .sunrise2{margin-top:-45px;margin-left:0}
 .wudesc,.wudesc3day{display:block;font-size:10px;line-height:1.2;margin-top:-17px;position:absolute;margin-left:180px;font-family:headingtext;text-align:left;color:var(--body-text-dark);background-color:var(--modulecaptions);text-transform:none;padding:2px 3px 1px 3px;line-height:1.2;align-items:center;justify-content:center;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px}
-.wudesc3day{margin-top:52px}
+.wudesc3day{margin-top:56px}
 .wuicon{background:0;top:-62px;position:relative;left:240px;z-index:25;filter:var(--iconcontrast)}
 .wuicon3d img{background:0;top:-62px;position:relative;left:245px;z-index:25;filter:var(--iconcontrast)}
 .wuicondesc3d{color:var(--body-text-dark);display:flex;font-size:.6rem;line-height:1;width:100px;margin-top:-90px;position:absolute;margin-left:140px;font-family:headingtext;text-shadow:none;word-wrap:break-word}
