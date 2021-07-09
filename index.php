@@ -140,7 +140,7 @@ toggle.onclick = function() {var currentTheme = document.documentElement.getAttr
 <a class="footericons" href="weather34-almanac.php" data-title="Almanac"><?php echo $weather34alm?></a>
 <a href="index.php" data-title="Refresh" class="showicon2"><?php echo $weather34refr?></a>
 <weather34-rightfootericons>
-<aurora>Aurora MKII (SE) <?php echo $weather["stationtype"]?></aurora>
+<aurora>Aurora MKII (DX) <?php echo $weather["stationtype"]?></aurora>
 
 <a href="index.php" data-title="Refresh" class="showicon3" ><?php echo $weather34refr?></a>
 
