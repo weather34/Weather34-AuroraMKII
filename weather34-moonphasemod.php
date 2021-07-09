@@ -108,7 +108,7 @@ function moon_day(today) {
         phase++;
     }
     // 30 days per lunar month
-    return (thisJD - oldJ) / 29.530589;
+    return (thisJD - oldJ) / 30;
     function GetFrac(fr) {	return (fr - Math.floor(fr));}}
 function phase_junk(e){var t,n,a=[];e<=.25?(a=[1,0],t=20-20*e*4):e<=.5?(a=[0,0],t=20*(e-.25)*4):e<=.75?(a=[1,1],t=20-20*(e-.5)*4):e<=1?(a=[0,1],t=20*(e-.75)*4):exit;
 var o=document.getElementById("weather34moonsvg2");
