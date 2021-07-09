@@ -150,10 +150,15 @@ $meteorinfo3="<svg width='22px' height='22px' viewBox='0 0 16 16'><path fill='#a
   font-family: clock;
   src: url(fonts/clock3-webfont.woff2) format("woff2");
 }
+
+@font-face {
+  font-family: verb;
+  src: url(fonts/verbatim-bold.woff2) format("woff2");
+}
 html,
 body {
   font-size: 13px;
-  font-family: "weathertext2", Helvetica, Arial, sans-serif;
+  font-family: "verb", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -218,7 +223,7 @@ body {
 }
  
   a{color:#aaa;text-decoration:none} 
-.weather34darkbrowser{position:relative;background:0;width:96%;height:30px;margin:auto;margin-top:-5px;margin-left:0px;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;
+.weather34darkbrowser{position:relative;background:0;width:50%;height:30px;margin:auto;margin-top:-5px;margin-left:0px;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;
  }
 .weather34darkbrowser[url]:after{content:attr(url);color:#aaa;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;  
 height:20px;box-sizing:border-box;
@@ -227,7 +232,7 @@ background:hsla(233, 12%, 13%,.5);
  blue{color:#01a4b4}orange{color:#009bb4}grey{color:#ccc}
  orange1{position:relative;color:#009bb4;margin:0 auto;text-align:center;margin-left:5%;font-size:1.1rem}
  green{color:#aaa}red{color:#f37867}red6{color:#d65b4a}value{color:#fff}yellow{color:#CC0}purple{color:#916392}
- meteotextshowertext{font-size:1rem;color:#009bb4}
+ meteotextshowertext{font-size:.8rem;color:#009bb4}
  meteorsvgicon{color:#f5f7fc}  
 .moonphasetext{font-size:1rem;color:#f5f7fc;position:absolute;display:inline;left:140px;top:80px}
 moonphaseriseset{font-size:.9rem;}
@@ -577,6 +582,10 @@ actualt34 {
   width: 200px;
 }
 
+@media screen and (max-width:640px){
+  .grid,.grid2{display:grid;
+    grid-template-columns:repeat(2,1fr);}}
+
 </style>
 <script src="js/jquery.js"></script>
 
@@ -827,14 +836,6 @@ function displayDays(date, days) {
  
   
   </article2>
-  <article2>  
-  <img src="favicon/weather34-logo.svg" width="100px" class="weather34-image" alt="weather34 logo" title="weather34 logo">
-  <br>
-  <div class="info2a">
-  CSS/SVG/PHP scripts were developed by 
-  <a href="https://weather34.com/homeweatherstation" target="_blank" title="https://weather34.com" alt="https://weather34.com">weather34.com</a> © 2015-<?php echo date('Y');?>
-  <?php echo $weather34version ?>
-  </div>
-  </article2>
+  
 </main>
 

@@ -115,7 +115,7 @@ $supermoonevent=$supermooneventcheck["event_title"];}};
     <meta charset="UTF-8">
     <title>Weather34 Aurora MKII Sun Moon Position Information</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="console-dark.css?version=<?php echo filemtime('console-dark.css') ?>" rel="stylesheet prefetch">
+    <link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
     <style>
     
     .grida{display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:3px;grid-row-gap:3px;color:#afb7c0;margin-top:5px;font-family:verb}
@@ -129,11 +129,11 @@ $supermoonevent=$supermooneventcheck["event_title"];}};
   -moz-osx-font-smoothing:grayscale;height:160px;border:1px solid hsla(217,15%,17%,.5);
   border-bottom:10px solid hsla(217,15%,17%,.5);font-family:verb}
 .grid2>article2{padding:5px;font-size:8px;border-radius:4px;
-  -webkit-border-radius:4px;background:0;
-  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:15px;
+  -webkit-border-radius:4px;background:0;width:max-content;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:10px;
   border:1px solid hsla(217,15%,17%,.5);border-bottom:1px solid hsla(217,15%,17%,.5);font-family:verb;}
 a{color:var(--blue);text-decoration:none}
-.weather34darkbrowser{position:relative;background:0;width:96%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;font-family:verb}
+.weather34darkbrowser{position:relative;background:0;width:90%;height:30px;margin:auto;margin-top:-5px;margin-left:0;border-top-left-radius:5px;border-top-right-radius:5px;padding-top:10px;font-family:verb}
 .weather34darkbrowser[url]:after{content:attr(url);color:#afb7c0;font-size:10px;position:absolute;left:0;right:0;top:0;padding:4px 15px;margin:11px 10px 0 auto;border-radius:3px;background:hsla(233,12%,13%,.5);height:20px;box-sizing:border-box}
 credit{position:relative;font-size:.7em;top:10%}
 .actualt{position:relative;left:5px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;background:rgba(74,99,111,.1);padding:5px;font-family:verb,Arial,Helvetica,sans-serif;width:100px;height:.8em;font-size:.8rem;padding-top:2px;color:#afb7c0;align-items:center;justify-content:center;margin-bottom:10px;top:0}
@@ -197,8 +197,11 @@ actualt34{display:none}
 .info2a{position:absolute;margin-top:40px;font-size:.8em;margin-left:5px;width:200px}
 li{background:0 0;font-size:10px;margin-left:-150px;margin-top:-20px;border:0}
 black{color:#888}
-  
-    
+@media screen and (max-width:640px){
+  .grida,.grid2{display:grid;
+    grid-template-columns:repeat(1,1fr);}}
+
+
     </style>
 
 <?php
@@ -501,12 +504,6 @@ if($lum2>98){echo "<style>
   <div style="margin-top:15px;margin-left:200px;" id="weather34clock2"></div>
   
   </article> 
-  
-  <article2>  
-    CSS/SVG/PHP scripts were developed by 
-    <a href="https://weather34.com/homeweatherstation" target="_blank" title="https://weather34.com" alt="https://weather34.com">weather34.com</a> © 2015-<?php echo date('Y');?>
-    <?php echo $weather34version ?> 
-    </article2>
   
   
   </main>
