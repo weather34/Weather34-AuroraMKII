@@ -2,9 +2,8 @@
 <link href="weather34-theme.css?version=<?php echo filemtime('weather34-theme.css') ?>" rel="stylesheet prefetch">
 <ul class="grid-containeralmcharts">
 <li><iframe  class="charttempmodule3"  src="weather34charts/todayhumiditymodulechart2.php" frameborder="0" scrolling="no" ></iframe></li>
-
-<li><iframe  class="charttempmodule3"  style="margin-top:100px" src="weather34charts/todayindoormodulechart-humidity-large.php" frameborder="0" scrolling="no" ></iframe></li>
-
+<li><iframe  class="charttempmodule3"  src="weather34charts/monthhumiditymodulechart2.php" frameborder="0" scrolling="no" ></iframe></li>
+<li><iframe  class="charttempmodule3"  src="weather34charts/yearhumiditymodulechart2.php" frameborder="0" scrolling="no" ></iframe></li>
 
 
 <li>
