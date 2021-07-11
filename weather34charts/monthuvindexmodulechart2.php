@@ -130,15 +130,7 @@ return theD;}
 			interval:5,	
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			

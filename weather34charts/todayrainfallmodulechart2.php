@@ -126,13 +126,7 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 			interval: 18,
    			intervalType: "hour",
 			minimum:-0.5,
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,				
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-		}
+			
 			
 			},
 			
@@ -156,16 +150,7 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 		labelFormatter: function ( e ) {
         return e.value .toFixed(<?php if ($unit == 'mm'){echo '0';} else echo '1';?>) + " <?php echo $unit ;?> " ;  
          },		 
-		 crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString:"##.##",
-		}	
+		 	
       },
 	  
 	  legend:{
@@ -179,7 +164,7 @@ else if ($raininterval>=0 && $rainunit == 'in'){$raininterval=1;}
 		{
 			//type: "spline",
 			type: "column",
-			color:"RGBA(1, 164, 180, 1)",
+			color:"hsl(201, 79%, 47%)",
 			markerSize:0,
 			showInLegend:false,
 			legendMarkerType: "circle",

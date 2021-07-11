@@ -131,14 +131,7 @@ return theD;}
 			interval: 18,
    			intervalType:5,
 			minimum:-0.5,
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,				
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
 			
-		}
 			
 			},
 			
@@ -155,18 +148,7 @@ return theD;}
 		labelFontFamily: "verb",		
 		labelFormatter: function ( e ) {
             return e.value .toFixed(0) ;
-         },	
-			 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
+         },		 
       },
 	  
 	  legend:{

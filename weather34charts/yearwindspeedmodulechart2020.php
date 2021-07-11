@@ -129,15 +129,7 @@ return thecolor;}
 			interval:60	,
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -156,16 +148,7 @@ return thecolor;}
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0); 
          },		 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
+			 
       },
 	  
 	  legend:{
@@ -186,7 +169,7 @@ return thecolor;}
 			yValueFormatString:"##.# <?php echo $windunit;?>",
 		},
 		{
-			type: "area",			
+			type: "stackedColumn",			
 			color:"rgba(255, 255, 255, 0.5)",			
 			markerSize:0,
 			showInLegend:false, 

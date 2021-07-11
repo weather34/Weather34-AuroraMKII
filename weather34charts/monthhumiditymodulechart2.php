@@ -31,8 +31,8 @@ function WEATHER34CHARTCOLORS(weather34value) {
 if (weather34value>=0 && weather34value<=35) {thecolor='#d35f50';}
 else if (weather34value>35 && weather34value<=40) {thecolor='#ec5732';}
 else if (weather34value>40 && weather34value<70){thecolor=' #e6a141';} 
-else if (weather34value>=70 && weather34value<=90){thecolor='#00adbd';}  
-else if (weather34value>90 && weather34value<=100){thecolor=' hsla(185, 100%, 37%, .7)';}  
+else if (weather34value>=70 && weather34value<=90){thecolor='hsla(201, 79%, 47%,.8)';}  
+else if (weather34value>90 && weather34value<=100){thecolor=' hsl(201, 79%, 47%)';}  
 else {thecolor='hsl(35, 77%, 58%)';}
 return thecolor;}
 
@@ -158,8 +158,8 @@ return thecolor;}
 		},
 		{
 			
-			type: "area",			
-			color:"hsla(185, 100%, 37%, 0.7)",				
+			type: "stackedColumn",			
+			color:"hsl(201, 79%, 47%)",				
 			showInLegend:false,			
 			lineThickness: 2,	
 			lineColor:"rgba(255, 255, 255,.5)",	

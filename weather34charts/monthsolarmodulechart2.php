@@ -127,15 +127,7 @@ return theWM;}
 			interval:5,	
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -153,18 +145,7 @@ return theWM;}
 		
 		labelFormatter: function ( e ) {
             return e.value .toFixed(0) ;
-         },	
-			 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
+         },		 
       },
 	  
 	  legend:{

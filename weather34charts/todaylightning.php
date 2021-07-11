@@ -18,7 +18,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR AQI CHART</title>
+		<title>Lightning CHART</title>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -131,16 +131,7 @@
         return e.value .toFixed(0);  
          },		
 			 
-		 crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString:"##.##",
-		}	
+		 
       },
 	  
 	  legend:{

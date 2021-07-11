@@ -116,13 +116,7 @@ function processData1(allText) {
 			interval: 18,
    			intervalType:5,
 			minimum:-0.5,
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,				
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-		}
+			
 			},
 			
 		axisY:{

@@ -122,15 +122,7 @@ return thecolor;}
 			interval:5,		
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -147,18 +139,7 @@ return thecolor;}
 		labelFontFamily: "verb",		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) + "°" ;  
-         },	
-			 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
+         },		 
       },
 	  
 	  legend:{
@@ -182,8 +163,8 @@ return thecolor;}
 		{
 			
 			//lo 
-			type: "area",			
-			color:"hsla(185, 100%, 37%, 0.7)",				
+			type: "stackedColumn",			
+			color:"hsl(201, 79%, 47%)",				
 			showInLegend:false,			
 			lineThickness: 2,	
 			lineColor:"rgba(255, 255, 255,.5)",					

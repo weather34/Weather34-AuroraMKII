@@ -34,9 +34,9 @@
     <br>
     <script type="text/javascript">
 function WEATHER34CHARTCOLORS(rain) {
-if (rain>=0 && rain<=20) {rainlevel='hsla(185, 100%, 37%, .8)';}
-else if (rain>20){rainlevel='hsla(185, 100%, 37%, 1)';}                
-else {rainlevel='hsla(185, 100%, 37%, 1)';}
+if (rain>=0 && rain<=20) {rainlevel='hsl(201, 79%, 47%)';}
+else if (rain>20){rainlevel='hsla(201, 79%, 47%,.8)';}                
+else {rainlevel='hsl(201, 79%, 47%)';}
 return rainlevel;}
 
         $(document).ready(function () {
@@ -117,15 +117,7 @@ return rainlevel;}
 			interval:5,	
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -140,18 +132,7 @@ return rainlevel;}
 		labelFontSize: 8,
 		labelFontColor:'<?php echo $ccolor?>',
 		labelFontFamily: "verb",
-		
 			 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
       },
 	  
 	  legend:{
@@ -166,8 +147,7 @@ return rainlevel;}
 		{
 			//Barometer
 			type: "column",		
-			showInLegend:false,
-			fillOpacity: .8,
+			showInLegend:false,			
 			name:"Rainfall",
 			dataPoints: dataPoints1,
 			yValueFormatString:"##.## <?php echo $rainunit ;?>",

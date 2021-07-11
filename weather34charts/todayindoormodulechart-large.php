@@ -111,8 +111,7 @@ return thecolor;}
 			gridThickness: 1,
 			gridDashType: "dot",	
 			labelFontColor:'<?php echo $ccolor?>',
-			labelFontFamily: "verb",
-			
+			labelFontFamily: "verb",			
 			labelFontSize:8,
 			interval: 18,
    			intervalType: "hour",
@@ -144,16 +143,7 @@ return thecolor;}
 		labelFormatter: function ( e ) {
          return e.value .toFixed(0) + "<?php echo "°".$tempunit ;?>";
          },		 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#d05f2d",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#d05f2d",
-			labelMaxWidth: 60,
-			valueFormatString: "#0.#<?php echo "°";?>",
-		}	 
+		 
       },
 	  
 	  
@@ -177,15 +167,7 @@ return thecolor;}
 		labelFormatter: function ( e ) {
          return e.value .toFixed(0) + "%" ;  
 		},
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#3b9cac",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#3b9cac",
-			valueFormatString: "#'%'",
-		}	 
+		
       },
 	  
 	  legend:{

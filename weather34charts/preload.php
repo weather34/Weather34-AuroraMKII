@@ -1,4 +1,5 @@
 <?php include('../settings.php');date_default_timezone_set($TZ);
+$theme="dark";
 if ($theme=='light'){$ccolor="#3D464D";}
 if ($theme=='dark'){$ccolor="#aec0d1";}
 
@@ -6,18 +7,21 @@ if ($theme=='light'){$bordertextcolor="#3D464D";}
 if ($theme=='dark'){$bordertextcolor="#3D464D";}
 
 if ($theme=='light'){$bcolor="#f8f8f8";}
-if ($theme=='dark'){$bcolor="#19191A";}
+if ($theme=='dark'){$bcolor="#111";}
 
 if ($theme=='light'){$bordercolor="#aec0d1";}
 if ($theme=='dark'){$bordercolor="#aec0d1";}
 ?>
-<script rel="preload" src='canvasJs.js?ver=5' as="script"></script>
+<script rel="preload" src='canvas-231.js' as="script"></script>
 <script rel="preload" src=../js/jquery.js></script>
 <link rel="preload" href="fonts/verbatim-bold.woff" as="font" type="font/woff" crossorigin>
 <style>
 @font-face {font-family: weathertext3;src: url(fonts/verbatim-bold.woff) format("woff");}
 @font-face {font-family: weathertext2;src: url(fonts/verbatim-bold.woff) format("woff");}
 @font-face {font-family: verb;src: url(fonts/verbatim-bold.woff) format("woff");}
+body{filter: brightness(100%);
+    text-shadow: none;
+    -webkit-filter: brightness(100%);}
 .chartb{
     z-index:150;
     height:140px;
@@ -28,11 +32,15 @@ if ($theme=='dark'){$bordercolor="#aec0d1";}
     border-bottom:19px solid <?php echo $bordercolor?>;
     font-family:verb;
     text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-    background: <?php echo $bcolor?>;
+    -webkit-font-smoothing: antialiased !important;    
     border-radius: 5px;
     box-shadow: none;
-    padding-top:0;   
+    padding-top:0;      
+    background-color: #111;
+    filter: brightness(105%);
+    text-shadow: none;
+    -webkit-filter: brightness(105%);
+   
 }
 
 .chartc{
@@ -45,7 +53,7 @@ if ($theme=='dark'){$bordercolor="#aec0d1";}
     font-family:verb;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    background: transparent;
+    background: #111;
     border-radius: 5px;
     box-shadow: 0;
     padding-top:0

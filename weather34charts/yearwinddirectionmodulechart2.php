@@ -29,7 +29,7 @@
     <br>
 		<script type="text/javascript">
 		function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=0 && weather34value<=90) {thecolor='hsla(185, 100%, 37%, 1)';}
+if (weather34value>=0 && weather34value<=90) {thecolor='hsl(201, 79%, 47%)';}
 else if (weather34value>90 && weather34value<=180) {thecolor='hsla(19, 66%, 55%,1)';}
 else if (weather34value>180 && weather34value<=300) {thecolor='hsla(2, 56%, 55%,1)';}
 else if (weather34value>300 && weather34value<=360) {thecolor='hsla(185, 100%, 37%, 1)';}           
@@ -142,14 +142,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			interval:45	,
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
-		}			},
+						},
 			
 		axisY: {
 		title: "",
@@ -176,17 +169,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
       return yCats;
     } ,
 			 
-		 crosshair: {
-			 shared:true,
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#aaa",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:0,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString:theD,
-		}	
+		 	
       },
 	  
 	  legend:{

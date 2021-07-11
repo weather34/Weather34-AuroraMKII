@@ -45,7 +45,7 @@
 function WEATHER34CHARTCOLORS(weather34value) {
 if (weather34value>=-50 && weather34value<=-10) {thecolor='hsl(216, 88%, 61%)';}
 else if (weather34value>-10 && weather34value<=0) {thecolor='hsl(202, 86%, 60%)';}
-else if (weather34value>0 && weather34value<=5) {thecolor='hsla(185, 100%, 37%, 1)';}
+else if (weather34value>0 && weather34value<=5) {thecolor='hsl(201, 79%, 47%)';}
 else if (weather34value>5 && weather34value<=10) {thecolor='hsl(74, 60%, 46%)';}
 else if (weather34value>10 && weather34value<=15){thecolor=' hsl(35, 77%, 58%)';}  
 else if (weather34value>15 && weather34value<=18){thecolor=' hsla(34, 98%, 49%,.8)';}  
@@ -131,14 +131,7 @@ return thecolor;}
 			interval: 18,
    			intervalType: "hour",
 			minimum:-0.5,
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,				
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
 			
-		}
 			
 			},
 			
@@ -157,16 +150,7 @@ return thecolor;}
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) + "°" ;  
          },	
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#9aba2f",
-			labelFontColor: "#fff",
-			labelFontSize:9,
-			labelBackgroundColor: "RGBA(208,95,45,1.00)",
-			labelMaxWidth: 60,
-			valueFormatString: "#0.#",
-		}	 
+			 
       },
 	  
 	  legend:{

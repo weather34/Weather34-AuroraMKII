@@ -123,7 +123,6 @@ $mbplatform   = "' . $_POST["mbplatform"] . '";
 $brand  = "' . $_POST["brand"] . '";
 $model  = "' . $_POST["model"] . '";
 $installed  = "' . $_POST["installed"] . '";
-$ifttt  = "' . $_POST["ifttt"] . '";
 $wuapikey = "' . $_POST["wuapikey"] . '";
 $wuapiunit   = "' . $_POST["wuapiunit"] . '";
 $purpleairID = "' . $_POST["purpleair"] . '";
@@ -688,14 +687,13 @@ blue{color:#00adbd }
                                                     <select id="theme" name="theme" class="choose1">
                                                         <option><?php echo $theme; ?></option>
                                                         <option>dark</option>
-                                                        <option>light</option>
-
+                                                       
                                                     </select><br>
                                                     <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                                 <path d="M16 14 L16 23 M16 8 L16 10" />
                                                 <circle cx="16" cy="16" r="14" /></svg> 
                                         
-                                        this is a fixed solution for now , a new charts library will come later in 2021 
+                                        this is a fixed Dark theme solution for now , a new charts library will come later in 2021 
                                                  <br><br>
             </div>
 
@@ -1788,39 +1786,6 @@ Do you have a uv sensor </div>
 </div>
 
 <div class="weatheroptions"> 
-
-<div class="weathersectiontitle">
-                                                                <svg id="i-code" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-                                                                    <path d="M10 9 L3 17 10 25 M22 9 L29 17 22 25 M18 7 L14 27" />
-                                                                </svg>
-
-                                                                Do you have IFTTT installed on any device for notifications</div>
-
-                                                                <img src="images/IFTTT.svg" style="width:25%;float:right;margin-top:10px;margin-right:20px;">
-                                                            <p>
-                                                                <div class="stationvalue">
-                                                                    Yes or No</div>
-                                                                <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="#F05E40" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-                                                                    <path d="M12 30 L24 16 12 2" />
-                                                                </svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-                                                                    <path d="M30 12 L16 24 2 12" />
-                                                                </svg>
-
-                                                                <label name="ifttt"></label>
-                                                                <select id="ifttt" name="ifttt" class="chooseapi">
-                                                                    <option><?php echo $ifttt; ?></option>
-                                                                    <option>yes</option>    
-                                                                    <option>no</option>                                                                  
-                                                                    
-                                                                </select>
-                                                                <br><br>
-
-                                                                *IFTTT not in use at present full implementation in December 2020.
-
-
-                                                            </p>
-
-
 
 <div class="weathersectiontitle">
 <svg id="i-settings" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">

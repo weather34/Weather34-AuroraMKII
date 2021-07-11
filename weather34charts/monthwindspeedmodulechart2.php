@@ -43,7 +43,7 @@
     <script type="text/javascript">
 
 function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=0 && weather34value<=10) {thecolor='hsla(185, 100%, 37%, 1)';}
+if (weather34value>=0 && weather34value<=10) {thecolor='hsl(201, 79%, 47%)';}
 else if (weather34value>10 && weather34value<=20) {thecolor='hsl(75, 62%, 43%)';}
 else if (weather34value>20 && weather34value<=30) {thecolor='hsl(35, 77%, 58%)';}
 else if (weather34value>30 && weather34value<=40) {thecolor='hsl(19, 66%, 55%)';} 
@@ -129,15 +129,7 @@ return thecolor;}
 			interval:5,	
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -152,16 +144,7 @@ return thecolor;}
 		labelFontSize: 8,
 		labelFontColor:'<?php echo $ccolor?>',
 		labelFontFamily: "verb",		
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
+			 
       },
 	  
 	  legend:{
@@ -182,8 +165,8 @@ return thecolor;}
 			yValueFormatString:"## <?php echo $windunit;?>",
 		},{
 			// 
-			type: "area",			
-			color:"rgba(255, 255, 255, 0.5)",	
+			type: "stackedColumn",			
+			color:"hsl(201, 79%, 47%)",	
 			markerSize:0,
 			showInLegend:false,
 			legendMarkerType: "circle",

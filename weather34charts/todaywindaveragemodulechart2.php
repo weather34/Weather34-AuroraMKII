@@ -40,7 +40,7 @@
     <br>
 		<script type="text/javascript">
 		function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=0 && weather34value<=10) {thecolor='hsla(185, 100%, 37%, 1)';}
+if (weather34value>=0 && weather34value<=10) {thecolor='hsl(201, 79%, 47%)';}
 else if (weather34value>10 && weather34value<=20) {thecolor='hsl(75, 62%, 43%)';}
 else if (weather34value>20 && weather34value<=30) {thecolor='hsl(35, 77%, 58%)';}
 else if (weather34value>30 && weather34value<=40) {thecolor='hsl(19, 66%, 55%)';} 
@@ -128,14 +128,7 @@ return thecolor;}
 			interval: 18,
    			intervalType: "hour",
 			minimum:0,
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,				
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
 			
-		}
 			
 			},
 			
@@ -154,16 +147,7 @@ return thecolor;}
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0);  
          },	
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#9aba2f",
-			labelFontColor: "#fff",
-			labelFontSize:9,
-			labelBackgroundColor: "RGBA(208,95,45,1.00)",
-			labelMaxWidth: 60,
-			valueFormatString: "#0.#",
-		}	 
+			 
       },
 	  
 	  legend:{

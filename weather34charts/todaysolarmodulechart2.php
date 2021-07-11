@@ -125,13 +125,7 @@ return theWM;}
 			interval: 18,
    			intervalType: "hour",
 			minimum:-0.5,
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,				
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-		}
+			
 			},
 			
 		axisY:{
@@ -153,16 +147,7 @@ return theWM;}
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0);  
          },		 
-		 crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#ff832f",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:8,
-			labelBackgroundColor: "#ff832f",
-			labelMaxWidth: 60,
-			valueFormatString:"##.##",
-		}	
+		 	
       },
 	  
 	  legend:{

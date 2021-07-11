@@ -13,7 +13,7 @@
 
 <div class="alamanacdata">
 <?php  //month max
-echo "".date('F')." <orange>Max</orange> <almanacgrey> ".$weather["dewmmaxtime"];echo " ";
+echo "".date('F')." <orange>Max</orange>  ".$weather["dewmmaxtime"];echo " ";
 if(anytoC($weather["dewmmax"])<-10){ echo "<icon-minus10>".$weather["dewmmax"]."</icon-minus10 >";}
 else if(anytoC($weather["dewmmax"])<0){ echo "<icon-minus10>".$weather["dewmmax"]."</icon-minus10>";}
 else if(anytoC($weather["dewmmax"])<6){ echo "<icon-0-5>".$weather["dewmmax"]."</icon-0-5>";}
@@ -25,12 +25,12 @@ else if(anytoC($weather["dewmmax"])<30){ echo "<icon-26-30>".$weather["dewmmax"]
 else if(anytoC($weather["dewmmax"])<35){ echo "<icon-31-35>".$weather["dewmmax"]."</icon-31-35>";}
 else if(anytoC($weather["dewmmax"])<45){ echo "<icon-36-40>".$weather["dewmmax"]."</icon-36-40>";}
 else if(anytoC($weather["dewmmax"])<100){ echo "<icon-41-45>".$weather["dewmmax"]."</icon-41-45>";} 
-echo "</almanacgrey>&deg;".$weather["temp_units"];
+echo "&deg;".$weather["temp_units"];
 
 ?></div>
 <div class="alamanacdata">
 <?php  //month min
-echo "".date('F')." <deepblue>Min</deepblue><almanacgrey> ".$weather["dewmmintime"];
+echo "".date('F')." <deepblue>Min</deepblue> ".$weather["dewmmintime"];
 echo " ";
 if(anytoC($weather["dewmmin"])<-10){ echo "<icon-minus10>".$weather["dewmmin"]."</icon-minus10 >";}
 else if(anytoC($weather["dewmmin"])<0){ echo "<icon-minus10>".$weather["dewmmin"]."</icon-minus10>";}
@@ -43,14 +43,14 @@ else if(anytoC($weather["dewmmin"])<30){ echo "<icon-26-30>".$weather["dewmmin"]
 else if(anytoC($weather["dewmmin"])<35){ echo "<icon-31-35>".$weather["dewmmin"]."</icon-31-35>";}
 else if(anytoC($weather["dewmmin"])<45){ echo "<icon-36-40>".$weather["dewmmin"]."</icon-36-40>";}
 else if(anytoC($weather["dewmmin"])<100){ echo "<icon-41-45>".$weather["dewmmin"]."</icon-41-45>";} 
-echo "</almanacgrey>&deg;".$weather["temp_units"];
+echo "&deg;".$weather["temp_units"];
 
 
 ?></div>
 
 <div class="alamanacdata">
 <?php  //year max
-echo "".date('Y')." <orange>Max</orange><almanacgrey> ".$weather["dewymaxtime"]; 
+echo "".date('Y')." <orange>Max</orange> ".$weather["dewymaxtime"]; 
 echo " ";
 if(anytoC($weather["dewymax"])<-10){ echo "<icon-minus10>".$weather["dewymax"]."</icon-minus10 >";}
 else if(anytoC($weather["dewymax"])<0){ echo "<icon-minus10>".$weather["dewymax"]."</icon-minus10>";}
@@ -63,11 +63,11 @@ else if(anytoC($weather["dewymax"])<30){ echo "<icon-26-30>".$weather["dewymax"]
 else if(anytoC($weather["dewymax"])<35){ echo "<icon-31-35>".$weather["dewymax"]."</icon-31-35>";}
 else if(anytoC($weather["dewymax"])<45){ echo "<icon-36-40>".$weather["dewymax"]."</icon-36-40>";}
 else if(anytoC($weather["dewymax"])<100){ echo "<icon-41-45>".$weather["dewymax"]."</icon-41-45>";} 
-echo "</almanacgrey>&deg;".$weather["temp_units"];
+echo "&deg;".$weather["temp_units"];
 ?></div>
 <div class="alamanacdata">
 <?php  //year min
-echo "".date('Y')."  <deepblue>Min</deepblue><almanacgrey> ".$weather["dewymintime"];echo " ";
+echo "".date('Y')."  <deepblue>Min</deepblue> ".$weather["dewymintime"];echo " ";
 if(anytoC($weather["dewymin"])<-10){ echo "<icon-minus10>".$weather["dewymin"]."</icon-minus10 >";}
 else if(anytoC($weather["dewymin"])<0){ echo "<icon-minus10>".$weather["dewymin"]."</icon-minus10>";}
 else if(anytoC($weather["dewymin"])<6){ echo "<icon-0-5>".$weather["dewymin"]."</icon-0-5>";}
@@ -79,12 +79,12 @@ else if(anytoC($weather["dewymin"])<30){ echo "<icon-26-30>".$weather["dewymin"]
 else if(anytoC($weather["dewymin"])<35){ echo "<icon-31-35>".$weather["dewymin"]."</icon-31-35>";}
 else if(anytoC($weather["dewymin"])<45){ echo "<icon-36-40>".$weather["dewymin"]."</icon-36-40>";}
 else if(anytoC($weather["dewymin"])<100){ echo "<icon-41-45>".$weather["dewymin"]."</icon-41-45>";} 
-echo "</almanacgrey>&deg;".$weather["temp_units"];
+echo "&deg;".$weather["temp_units"];
 ?></div>
 
 <div class="alamanacdata">
 <?php  //alltime max
-echo "Alltime <orange>Max</orange><almanacgrey> ".$weather["dewamaxtime"];echo " ";
+echo "Alltime <orange>Max</orange> ".$weather["dewamaxtime"];echo " ";
 if(anytoC($weather["dewamax"])<-10){ echo "<icon-minus10>".$weather["dewamax"]."</icon-minus10 >";}
 else if(anytoC($weather["dewamax"])<0){ echo "<icon-minus10>".$weather["dewamax"]."</icon-minus10>";}
 else if(anytoC($weather["dewamax"])<6){ echo "<icon-0-5>".$weather["dewamax"]."</icon-0-5>";}
@@ -96,12 +96,12 @@ else if(anytoC($weather["dewamax"])<30){ echo "<icon-26-30>".$weather["dewamax"]
 else if(anytoC($weather["dewamax"])<35){ echo "<icon-31-35>".$weather["dewamax"]."</icon-31-35>";}
 else if(anytoC($weather["dewamax"])<45){ echo "<icon-36-40>".$weather["dewamax"]."</icon-36-40>";}
 else if(anytoC($weather["dewamax"])<100){ echo "<icon-41-45>".$weather["dewamax"]."</icon-41-45>";} 
-echo "</almanacgrey>&deg;".$weather["temp_units"];
+echo "&deg;".$weather["temp_units"];
 ?></div>
 
 <div class="alamanacdata">
 <?php  //alltime min
-echo "Alltime <deepblue>Min</deepblue><almanacgrey> ".$weather["dewamintime"];echo " ";
+echo "Alltime <deepblue>Min</deepblue> ".$weather["dewamintime"];echo " ";
 if(anytoC($weather["dewamin"])<-10){ echo "<icon-minus10>".$weather["dewamin"]."</icon-minus10 >";}
 else if(anytoC($weather["dewamin"])<0){ echo "<icon-minus10>".$weather["dewamin"]."</icon-minus10>";}
 else if(anytoC($weather["dewamin"])<6){ echo "<icon-0-5>".$weather["dewamin"]."</icon-0-5>";}
@@ -113,7 +113,7 @@ else if(anytoC($weather["dewamin"])<30){ echo "<icon-26-30>".$weather["dewamin"]
 else if(anytoC($weather["dewamin"])<35){ echo "<icon-31-35>".$weather["dewamin"]."</icon-31-35>";}
 else if(anytoC($weather["dewamin"])<45){ echo "<icon-36-40>".$weather["dewamin"]."</icon-36-40>";}
 else if(anytoC($weather["dewamin"])<100){ echo "<icon-41-45>".$weather["dewamin"]."</icon-41-45>";} 
-echo "</almanacgrey>&deg;".$weather["temp_units"];
+echo "&deg;".$weather["temp_units"];
 ?></div>
 
 

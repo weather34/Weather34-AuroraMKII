@@ -270,4 +270,4 @@ return thecolor;}
 <div class="unitscaption" >%</div>
 <div id="chartContainer2" style="height:110px;margin-top:-25px;-webkit-border-radius:10px;border-radius:10px;border:6px solid hsla(212, 12%, 72%,.2);"></div>
 </body>
-<script src='../weather34charts/canvasJs.js'></script>
+<script src='../weather34charts/canvas-231.js'></script>

@@ -40,7 +40,7 @@
 	<script type="text/javascript">
 
 function WEATHER34CHARTCOLORS(weather34value) {
-	if (weather34value>=900 && weather34value<=1000) {thecolor='hsla(185, 100%, 37%, 1)';}
+	if (weather34value>=900 && weather34value<=1000) {thecolor='hsl(201, 79%, 47%)';}
 else if (weather34value>1000 && weather34value<=1010) {thecolor='hsl(75, 62%, 43%)';}
 else if (weather34value>1010 && weather34value<=1020) {thecolor='hsl(35, 77%, 58%)';}
 else if (weather34value>1020 && weather34value<=1030) {thecolor='hsl(19, 66%, 55%)';} 
@@ -129,15 +129,7 @@ return thecolor;}
 			interval:45	,
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -156,16 +148,7 @@ return thecolor;}
 		labelFormatter: function ( e ) {
 			return e.value .toFixed(<?php if ($tempunit=='F'){echo '1';} else echo '0';?>) ;
          },		 
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#44a6b5",
-			labelFontColor: "#fff",
-			labelFontSize:8,
-			labelBackgroundColor: "#44a6b5",
-			labelMaxWidth: 60,
-			valueFormatString: "#",
-		}	 
+			 
       },
 	  
 	  legend:{
@@ -188,8 +171,8 @@ return thecolor;}
 		},
 		{
 			// lo Barometer
-			type: "splineArea",	
-			color:"rgba(255, 255, 255, 0.5)",	
+			type: "stackedColumn",	
+			color:"hsl(201, 79%, 47%)",	
 			lineColor:'rgba(255, 255, 255, 0.5)',
 			fillOpacity: .6,
 			markerSize:0,

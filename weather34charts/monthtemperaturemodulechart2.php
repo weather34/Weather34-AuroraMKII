@@ -125,15 +125,7 @@ return thecolor;}
 			interval:5,		
 			intervalType:"day",
 			xValueType: "dateTime",	
-			crosshair: {
-			enabled: true,
-			snapToDataPoint: true,
-			color: "#009bab",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:10,
-			labelBackgroundColor: "#009bab",
 			
-		}
 			
 			},
 			
@@ -186,8 +178,8 @@ return thecolor;}
 		},
 		{
 			//lo 
-			type: "area",			
-			color:"hsla(185, 100%, 37%, 0.7)",				
+			type: "stackedColumn",			
+			color:"hsl(201, 79%, 47%)",				
 			showInLegend:false,		
 			markerSize:0,	
 			lineThickness: 2,	
