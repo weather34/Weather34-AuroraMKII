@@ -9,7 +9,8 @@
 <li>
 <div style="margin-top:20px;">
 
-<alamanacword style="margin-left:30px;margin-top:-20px;">UVINDEX History Data</alamanacword>
+<alamanacword style="margin-left:30px;margin-top:-20px;">UVINDEX History Data  <span style="position:absolute;width:max-content;font-size: 12px;margin-left:40px;">
+<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $solarpanelicon2?> Solar Radiation</a></span></alamanacword> 
 
 <div class="alamanacdata">
 <?php  //Today UV
@@ -50,8 +51,3 @@ echo " 10.4 UVI ";
 <weather34credit>
 <a href="https://canvasjs.com" target="_blank" data-title="https://canvasjs.com" >
 CanvasJs.com v2.3.1 GA (CC BY-NC 3.0) Non-Commercial-Version</a></weather34credit>
-
-
-<span style="position:absolute;margin-left:200px;">
-<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $solarpanelicon2?> Solar Radiation</a></span>
-
