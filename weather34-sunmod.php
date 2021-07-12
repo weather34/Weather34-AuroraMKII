@@ -47,21 +47,12 @@ else $darkminutes=$darkminutes;$thehour=date('H');$theminute=date('i');?>
 <div class="button-dial-top-small-sun"></div>
 <div class="button-dial-label-small-sun1">hrs : min</div></div>
 
-
-
-
 <div class="sunrise-sun"> <?php echo $sunuphalf1;?> 
-<?php echo $nextrisetxt.' (<orange>'.$nextrise.'</orange>)<br>'.$sunuphalf.' Total Daylight (<deepblue>'.$light.'</deepblue> Hrs)';?>
-</div> 
-
-<div class="sunset-sun"><?php echo $sundownhalf1;?> 
-<?php echo $nextsettxt.' (<red>'.$nextset.'</red>)<br>'.$sundownhalf.' Total Darkness (<deepblue>'.$darkhours,":".$darkminutes.'</deepblue> Hrs)';?>
+<?php echo $nextrisetxt.' (<deepblue>'.$nextfirstlight.'</deepblue>-<orange>'.$nextrise.'</orange>)';
+echo '<br>'.$sundownhalf1;echo ' '.$nextsettxt.' (<red>'.$nextset.'</red>-<deepblue>'.$nextlastlight.'</deepblue>)';
+echo '<br>'.$sunuphalf.' Total Daylight (<deepblue>'.$light.'</deepblue> Hrs)';
+echo '<br>'.$sundownhalf.' Total Darkness (<deepblue>'.$darkhours,":".$darkminutes.'</deepblue> Hrs)';?>
 </div>
 
 <div class="mooninfo2">
  <a href="weather34-suninfo.php" data-lity data-title="Sun Information"> <?php echo $aqilinks?>&nbsp; Extra Info</a></div>
-
-
-
-
-
