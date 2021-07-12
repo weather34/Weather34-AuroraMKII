@@ -11,7 +11,9 @@ include('livedata.php');date_default_timezone_set($TZ);?>
 <div class="button button-dialrain">                
  <div class="button-dial-toprain"></div> 
 <div class="button-dial-label"> 
-<?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.9;'>".number_format($weather["rain_today"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
+<?php if ($meteobridgeapi[9]>=35){echo '<raintoday2 style="background:hsla(201, 79%, 47%,.8);color:#fff;">
+'.number_format($weather["rain_today"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";}
+else echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.9;'>".number_format($weather["rain_today"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
 </div></div></div>
 
 <div class="weather34i-rairate-bar2" >
@@ -23,7 +25,9 @@ include('livedata.php');date_default_timezone_set($TZ);?>
   ?>
 <div id="weather34rainwater2" style="height:<?php 
 if ($meteobridgeapi[9]>=15){echo $meteobridgeapi[9]/8.25;}
-else echo $meteobridgeapi[9]/9.25;?>em;">                 
+else echo $meteobridgeapi[9]/9.25;?>em;
+background:<?php if ($meteobridgeapi[9]>=35){echo 'hsla(201, 79%, 47%,.8)';}?>
+">                 
 </div></div></div>
 
 <div class="second24hourguage">
@@ -31,9 +35,13 @@ else echo $meteobridgeapi[9]/9.25;?>em;">
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.9;'>".number_format($weather["rain_24hrs"],2)."
+<?php 
+if ($meteobridgeapi[44]>=35){echo '<raintoday2 style="background:hsla(201, 79%, 47%,.8);color:#fff;">
+  '.number_format($weather["rain_24hrs"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";}
+  else echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.9;'>".number_format($weather["rain_24hrs"],2)."
  <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
 </div></div></div>
+
 <div class="weather34i-rairate-bar2">
 <div id="raincontainer2">
 <div id="weather34rainbeaker2">
@@ -41,7 +49,9 @@ else echo $meteobridgeapi[9]/9.25;?>em;">
   if ($weather["rain_units"]=='mm'){echo "<volumer>mm <br>35 <br>30 <br>25 <br>20 <br>15 <br>10 <br>5</volumer>";}
   if ($weather["rain_units"]=='in'){echo "<volumer>in <br>1.37 <br>1.18 <br>0.99 <br>0.80 <br>0.60 <br>0.30 <br>0.10</volumer>";}
   ?>
-<div id="weather34rainwater2" style="height:<?php echo $meteobridgeapi[44]/8.25;?>em;">        
+<div id="weather34rainwater2" style="height:<?php echo $meteobridgeapi[44]/8.25;?>em;
+background:<?php if ($meteobridgeapi[44]>=35){echo 'hsla(201, 79%, 47%,.8)';}?>
+">        
 </div></div></div></div></div></div>
 
 <div class="monthrain">
