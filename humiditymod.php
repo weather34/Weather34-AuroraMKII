@@ -159,7 +159,7 @@ elseif ($weather["humidity"]>=40 ){echo 'var(--temp5-10)';}
 elseif ($weather["humidity"]>=0 ){echo 'var(--red)';}?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='humidity-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo><a href='humidity-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 <div class="weather-tempicon-identity">    
 <?php //humidity id

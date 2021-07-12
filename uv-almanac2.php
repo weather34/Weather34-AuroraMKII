@@ -10,7 +10,7 @@
 <div style="margin-top:20px;">
 
 <alamanacword style="margin-left:30px;margin-top:-20px;">UVINDEX History Data  <span style="position:absolute;width:max-content;font-size: 12px;margin-left:40px;">
-<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $solarpanelicon2?> Solar Radiation</a></span></alamanacword> 
+<a href='solar-almanac2.php' data-lity data-title="Solar Almanac"> <?php echo $chartlinks?> Solar Radiation</a></span></alamanacword> 
 
 <div class="alamanacdata">
 <?php  //Today UV

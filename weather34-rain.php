@@ -11,7 +11,7 @@ include('livedata.php');date_default_timezone_set($TZ);?>
 <div class="button button-dialrain">                
  <div class="button-dial-toprain"></div> 
 <div class="button-dial-label"> 
-<?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.7;'>".number_format($weather["rain_today"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
+<?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.9;'>".number_format($weather["rain_today"],2)." <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
 </div></div></div>
 
 <div class="weather34i-rairate-bar2" >
@@ -31,7 +31,7 @@ else echo $meteobridgeapi[9]/9.25;?>em;">
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.7;'>".number_format($weather["rain_24hrs"],2)."
+<?php echo "<raintoday2 style='background:var(--blue);color:#fff;opacity:0.9;'>".number_format($weather["rain_24hrs"],2)."
  <smallrainunit34>".$weather["rain_units"]."</smallrainunit34></raintoday2";?>  
 </div></div></div>
 <div class="weather34i-rairate-bar2">
@@ -120,11 +120,12 @@ else echo 'background:var(--blue);'?>">
 
 
 
-<div class=extrainfo3><a href='rain-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo3><a href='rain-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 <div class="weather-tempicon-identity">
 <?php  //Rain icon
-if ($seconds_ago <=3600){echo $umbrella;}
+if ($weather["rain_lasthour"]<0.01) {echo "<rain>".$weather["rain_units"]."</rain>";}
+else if ($seconds_ago <=3600){echo $umbrella;}
 else echo "<rain>".$weather["rain_units"]."</rain>";?>
 </div></div>
 

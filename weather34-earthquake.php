@@ -179,6 +179,7 @@ elseif ($magnitude>=3 ){echo '#e6a241';}
 elseif ($magnitude>=0){echo '#9bbc2f';}
 ?>;"></div></div></div>
 
+
 <div class="indoortempa-mod3a"> 
 <valuetextheadingindoor> 
 <?php // weather34 simple css scale distance
@@ -194,11 +195,9 @@ if ($distanceunit=="mi"){echo $eqdist. "mi";}
 else if ($distanceunit=="km"){echo $eqdist. "km";}?>";
 
 padding-left:<?php 
-if ( $eqdist<100){echo $eqdist/8;}
-else if ( $eqdist<500){echo $eqdist/12;}
-else if ( $eqdist<1000){echo $eqdist/12;}
-else if ( $eqdist<1500){echo $eqdist/12;}
-else echo $eqdist/12;?>px;
+echo $eqdist/100;?>px;
+
+
 color:<?php if ($eqdist>=500 ){echo 'var(--green)';}
 else if ($eqdist>=400 ){echo 'var(--yellow)';}
 elseif ($eqdist>=200 ){echo 'var(--orange)';}
@@ -221,7 +220,10 @@ else if ($eqdist>=400 ){echo 'var(--yellow)';}
 elseif ($eqdist>=200 ){echo 'var(--orange)';}
 elseif ($eqdist>=0 ){echo 'var(--red)';}?>
 ;">
-</div></div></div>
+</div></div></div></div>
 
-<div class=mooninfo2><a href='eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+
+
+
+<div class=mooninfo2><a href='eqlist.php' data-lity data-title="Regional Data"><?php echo  $aqilinks?>&nbsp; Extra Info</a></div></div>
 </div></div>

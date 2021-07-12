@@ -165,7 +165,7 @@ else echo "var(--temp15-20);";?>">
 
 
 
-<div class=extrainfo2 style="margin-top:-5px"><a href='uv-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo2 style="margin-top:-5px"><a href='uv-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 <div class="weather-tempicon-identity">
 <?php if ($elev<0){echo $moonsetuv;}else echo "<icon-16-20>".$weather34_sun_icon."</icon-16-20>"; ?>

@@ -193,7 +193,7 @@ elseif (anytoC($weather["dewpoint"])>=-50 ){echo 'var(--temp-5-10)';}
 ?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='dewpoint-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo><a href='dewpoint-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 
 <div class="weather-tempicon-identity">    

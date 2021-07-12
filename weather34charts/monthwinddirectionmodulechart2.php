@@ -182,7 +182,7 @@ var chart = new CanvasJS.Chart("chartContainer2", {
 			//wind direction
 			type: "scatter",
 			//color:"rgba(68, 166, 181, 1.000)",
-			markerSize:4,
+			markerSize:6,
 			showInLegend:false,
 			legendMarkerType: "triangle",
 			lineThickness: 1,

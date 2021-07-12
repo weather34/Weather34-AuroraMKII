@@ -137,7 +137,7 @@ var t=e.firstChild;t.style.behavior="url(#default#VML)",supportsVml.supported=!t
 </script>
 </div></div>
 
-<div class="mooninfo2"><a href='weather34-mooninfo.php' data-lity data-title="Moon Info"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div>
+<div class="mooninfo2"><a href='weather34-mooninfo.php' data-lity data-title="Moon Info"><?php echo  $aqilinks?>&nbsp; Extra Info</a></div>
 </div> 
 
 <div class="date1"> &nbsp;<?php echo $sunuphalf." ".$risingsymbolxx?> Moonrise: <?php  echo $weather['moonrise'];?></div>

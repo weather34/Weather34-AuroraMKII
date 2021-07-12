@@ -219,7 +219,7 @@ elseif (anytoc($weather["temp"])>=-50 ){echo 'var(--deepcold)';}
 ?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='temperature-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo><a href='temperature-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 
 <div class="weather-tempicon-identity">    

@@ -109,7 +109,7 @@ $rainfallalert="<svg version='1.1' width='25px' height='25px' viewBox='0 0 284 2
 <path fill='#1194a0' opacity='1.00' d=' M 49.31 211.15 C 55.32 215.82 61.19 221.63 68.94 223.09 C 78.64 224.13 85.73 215.51 95.01 214.56 C 99.53 214.89 102.55 218.77 106.55 220.47 C 114.24 224.98 124.32 223.68 131.25 218.32 C 134.94 215.36 140.00 213.00 144.65 215.24 C 148.93 217.55 152.66 220.90 157.39 222.34 C 163.48 224.12 170.35 223.16 175.68 219.68 C 179.25 217.62 182.48 214.23 186.92 214.41 C 194.21 214.78 198.81 221.95 206.00 222.83 C 216.13 224.77 225.21 218.26 232.65 212.24 C 236.42 219.49 240.40 226.63 244.24 233.85 C 175.18 233.85 106.13 233.86 37.08 233.85 C 41.15 226.27 45.31 218.75 49.31 211.15 Z' />
 </g></svg>";
 $weather34mail='<svg version="1.1" width=24 height=22 x="0px" y="0px"  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;">
-   <path style="fill:#00a4b4;" d="M480,0.016H32c-17.632,0-32,14.368-32,32v352c0,17.952,14.048,32,32,32h64v79.968
+   <path style="fill:#1994D7;" d="M480,0.016H32c-17.632,0-32,14.368-32,32v352c0,17.952,14.048,32,32,32h64v79.968
       c0,6.048,3.424,11.584,8.832,14.304c2.272,1.12,4.704,1.696,7.168,1.696c3.392,0,6.784-1.088,9.6-3.2l123.744-92.768H480
       c17.952,0,32-14.048,32-32v-352C512,14.064,497.952,0.016,480,0.016z"/>
    <path style="fill:#FAFAFA;" d="M291.104,65.264c-47.072-5.952-93.952,11.104-125.664,45.888
@@ -426,21 +426,28 @@ $weather34KTS='<svg version="1.1" width="24" height="24" viewBox="0 0 24 24" str
  <g><path stroke-width="0" d="M0 0h24v24H0z"/></g><text x="0" y="18" font-size="14px" stroke-width="0" fill="currentColor">UK</text></svg>';
 
 $weather34eq='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="hsl(19, 66%, 55%)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="21 12 17 12 14 20 10 4 7 12 3 12" /></svg>';
-$weather34fore='<svg width="20" height="20"  viewBox="0 0 64 64" fill="hsla(185, 100%, 37%, 1)"><g transform="translate(5.796 8.927)"><path d="M58.204 40.073v-34c0-8.284-6.716-15-15-15h-34c-8.284 0-15 6.716-15 15v34c0 8.284 6.716 15 15 15h34c8.284 0 15-6.716 15-15z" fill="hsla(185, 100%, 37%, 1)"/><path d="M24.622 19.119a8.301 8.301 0 1 1-8.301-8.301 8.301 8.301 0 0 1 8.301 8.301z" fill="hsl(19, 66%, 55%)"/><g transform="matrix(.7906 0 0 .7906 -2.258 -780.06)"><path d="M35 1004.362c-6.628 0-12 5.372-12 12v.156c-3.418.699-6 3.719-6 7.345a7.5 7.5 0 0 0 7.5 7.499c.166 0 .337-.021.5-.031v.031h24v-.031c5.562-.266 9.999-4.841 9.999-10.47 0-5.798-4.7-10.5-10.499-10.5-.996 0-1.962.147-2.874.406A12.019 12.019 0 0 0 35 1004.362z" fill="white"/></g></g>
+$weather34fore='<svg width="20" height="20"  viewBox="0 0 64 64" fill="#1994D7">
+<g transform="translate(5.796 8.927)">
+<path d="M58.204 40.073v-34c0-8.284-6.716-15-15-15h-34c-8.284 0-15 6.716-15 15v34c0 8.284 6.716 15 15 15h34c8.284 0 15-6.716 15-15z" fill="#1994D7"/>
+<path d="M24.622 19.119a8.301 8.301 0 1 1-8.301-8.301 8.301 8.301 0 0 1 8.301 8.301z" fill="hsl(19, 66%, 55%)"/>
+<g transform="matrix(.7906 0 0 .7906 -2.258 -780.06)"><path d="M35 1004.362c-6.628 0-12 5.372-12 12v.156c-3.418.699-6 3.719-6 7.345a7.5 7.5 0 0 0 7.5 7.499c.166 0 .337-.021.5-.031v.031h24v-.031c5.562-.266 9.999-4.841 9.999-10.47 0-5.798-4.7-10.5-10.499-10.5-.996 0-1.962.147-2.874.406A12.019 12.019 0 0 0 35 1004.362z" fill="white"/></g></g>
 </svg>';
-$weather34chart2='<svg  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="12" width="6" height="8" rx="1" fill="hsla(185, 100%, 37%, 1)" stroke-width="0"/> <rect x="9" y="8" width="6" height="12" rx="1" fill="hsl(35, 77%, 58%)" stroke-width="0"/>
+$weather34chart2='<svg  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="12" width="6" height="8" rx="1" fill="#1994D7" stroke-width="0"/> 
+<rect x="9" y="8" width="6" height="12" rx="1" fill="hsl(35, 77%, 58%)" stroke-width="0"/>
 <rect x="15" y="4" width="6" height="16" rx="1" fill="hsl(19, 66%, 55%)" stroke-width="0"/></svg>';
 $weather34alm='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#e6a241" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path stroke="none" d="M0 0h24v24H0z"/><rect x="4" y="5" width="16" height="16" rx="2" stroke="#00a4b4"/><line x1="16" y1="3" x2="16" y2="7" stroke="#d87040" />
   <line x1="8" y1="3" x2="8" y2="7" stroke="#d87040" /><line x1="4" y1="11" x2="20" y2="11" stroke="#777" stroke-width="1" /> <rect x="8" y="15" width="2" height="2"/></svg>';
-
 $weather34smtv='<svg fill="currentColor" x="0px" y="0px" viewBox="0 0 1000 900" enable-background="new 0 0 1000 1000" width="24" height="24" style="margin-top:-5px;">  
   <g><path  d="M990,137.1H10v622.7h980V137.1z M939.8,709.6H60.2V187.3h879.5V709.6z"/> <path  fill="hsla(185, 100%, 37%, 1)" d="M810.6,837.8c0-13.9-11.3-25.1-25.1-25.1h-574c-13.9,0-25.1,11.3-25.1,25.1c0,13.9,11.2,25.1,25.1,25.1h574C799.4,
   862.9,810.6,851.7,810.6,837.8z"/><path d="M181.6,336.7h70.5c9.2,0,16.7,7.5,16.7,16.7v251.3c0,9.3,7.5,16.8,16.8,16.8h39.3c9.2,0,16.7-7.5,16.7-16.8V353.4c0-9.2,7.5-16.7,16.8-16.7h70.1c9.2,0,16.8-7.5,16.8-16.8v-27.8c0-9.2-7.5-16.7-16.8-16.7H181.6c-9.2,0-16.7,7.5-16.7,16.7v27.8C164.8,329.2,172.3,336.7,181.6,336.7z"/>  <path  d="M640.5,605.6c3,8.8,12.9,15.9,22.1,15.9h34.8c9.3,0,19.2-7.1,22.2-15.9l107.2-314.4c3-8.8-2.1-15.8-11.3-15.8h-41.6c-9.3,0-18.8,7.2-21.4,16.1L685.8,522c-2.5,8.9-6.7,8.9-9.2,0l-65.9-230.6c-2.6-8.9-12.1-16.1-21.3-16.1h-43.8c-9.3,0-14.4,7.1-11.4,15.9L640.5,605.6z"/>
   </g></svg>';
-  $weather34fullscreen='<svg  width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="16 4 20 4 20 8" /><line x1="14" y1="10" x2="20" y2="4" /><polyline points="8 20 4 20 4 16" /><line x1="4" y1="20" x2="10" y2="14" />
+$weather34hinfo='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#aaa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" stroke="#1994D7"/><circle cx="12" cy="12" r="9" stroke="#1994D7"/>
+<line x1="12" y1="8" x2="12.01" y2="8" stroke="#aaa)"/>
+<polyline points="11 12 12 12 12 16 13 16" stroke="#aaa"/>
 </svg>';
-$weather34hinfo='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#777" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" /><circle cx="12" cy="12" r="9" stroke="#aaa"/><line x1="12" y1="8" x2="12.01" y2="8" stroke="hsla(185, 100%, 37%, 1)"/><polyline points="11 12 12 12 12 16 13 16" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
 $weather34copyr=' <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#aaa" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9" fill="none" /><path d="M14.5 9a3.5 4 0 1 0 0 6" stroke="hsla(185, 100%, 37%, 1)"/></svg>';
 $weather34refr='<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px">
 <path stroke="none" d="M0 0h24v24H0z"/><path d="M12 4a8 8 0 0 1 3 15.45m0 -4.45v5h5" stroke="#90b22a"/><path d="M11 19.95a8 8 0 0 1 -2 -15.35" stroke-dasharray=".1 4" />
@@ -461,7 +468,7 @@ $maxclock='<svg version="1.1" width="5px" height="5px" viewBox="0 0 473.935 510.
 $tempman='<svg width="18pt" height="16pt" fill="currentColor" viewBox="0 0 1024 1024" version="1.1"> <path d="M528.8 95.68m-84.608 0a84.608 84.608 0 1 0 169.216 0 84.608 84.608 0 1 0-169.216 0Z" fill="" /><path d="M711.136 292.384s4.768-94.496-94.944-94.496h-172.896c-96.16 
    0-95.456 87.264-95.52 94.496l0.032 268.16c1.568 14.464 15.84 30.944 33.568 30.944 17.632 0 30.592-15.968 32.192-30.464l30.016 427.04c2.208 21.728 17.568 29.824 36.448 29.824 18.848 0 34.176-8.096 36.384-29.824h26.656c2.304 21.728 17.6 29.824 36.384 29.824 18.912 0 34.24-8.096 36.512-29.824l30.912-427.328c0 14.496 14.048 30.816 
    31.744 30.816 17.664 0 31.776-16.544 33.344-31.008l-0.832-268.16z" fill="" /></svg>';
-   $umbrella='<svg enable-background="new 0 0 64 64" height="14pt" version="1.1" fill="#00adbd" viewBox="0 0 64 64" width="14pt" style="margin-top:-1px"><g>
+   $umbrella='<svg enable-background="new 0 0 64 64" height="10pt" version="1.1" fill="#1994D7" viewBox="0 0 64 64" width="10pt" style="margin-top:2px"><g>
 <path d="M18.228,16.441c2.002,0,3.625-1.623,3.625-3.625c0-2.583-3.625-6.625-3.625-6.625s-3.625,4.042-3.625,6.625 C14.603,14.818,16.226,16.441,18.228,16.441z"/>
 <path d="M11.789,10.227c0-1.573-2.209-4.036-2.209-4.036s-2.208,2.463-2.208,4.036c0,1.22,0.989,2.209,2.208,2.209 C10.799,12.436,11.789,11.447,11.789,10.227z"/>
 <path d="M34.865,9.072V8.818c0-0.957-0.795-1.733-1.775-1.733c-0.981,0-1.776,0.776-1.776,1.733v0.256 c-2.749,0.207-5.354,0.907-7.758,1.977c0.185,0.599,0.298,1.195,0.298,1.764c0,3.102-2.523,5.625-5.625,5.625   
@@ -618,7 +625,10 @@ $chartcalendar='<svg width="12pt" height="12pt" viewBox="0 0 1024 1024" version=
 $weather34OK='<svg width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/> <circle cx="12" cy="12" r="9" /><path d="M9 12l2 2l4 -4" />';
 $aqalert='<svg width="30" height="30" fill="#ff552e" viewBox="0 0 20 20"><path d="M19.64 16.36L11.53 2.3A1.85 1.85 0 0 0 10 1.21 1.85 1.85 0 0 0 8.48 2.3L.36 16.36C-.48 17.81.21 19 1.88 19h16.24c1.67 0 2.36-1.19 1.52-2.64zM11 16H9v-2h2zm0-4H9V6h2z"/></svg>';
 $weather34meteoricon='<svg width="16pt" height="16pt" viewBox="0 0 16 18"  fill="#aaa"><path d="M0 0l14.527 13.615s.274.382-.081.764c-.355.382-.82.055-.82.055L0 0zm4.315 1.364l11.277 10.368s.274.382-.081.764c-.355.382-.82.055-.82.055L4.315 1.364zm-3.032 2.92l11.278 10.368s.273.382-.082.764c-.355.382-.819.054-.819.054L1.283 4.284zm6.679-1.747l7.88 7.244s.19.267-.058.534-.572.038-.572.038l-7.25-7.816zm-5.68 5.13l7.88 7.244s.19.266-.058.533-.572.038-.572.038l-7.25-7.815zm9.406-3.438l3.597 3.285s.094.125-.029.25c-.122.125-.283.018-.283.018L11.688 4.23zm-7.592 7.04l3.597 3.285s.095.125-.028.25-.283.018-.283.018l-3.286-3.553z"/></svg>';
-$weather34moonicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0 473.935 510.935" style="enable-background:new 0 0 473.935 473.935;"><circle style="fill:hsla(185, 100%, 37%, 1);" cx="236.967" cy="236.967" r="236.967"/><radialGradient id="SVGID_1_" cx="13.4697" cy="528.3893" r="31.929" gradientTransform="matrix(3.7418 0 0 -3.7418 186.5668 2214.0767)" gradientUnits="userSpaceOnUse"><stop  offset="0.818" style="stop-color:#D8D5DB"/><stop  offset="1" style="stop-color:#D8D5DB"/></radialGradient><path style="fill:url(#SVGID_1_);" d="M236.956,117.477c-0.004,0-0.007,0-0.007,0c22.679,34.26,35.917,75.318,35.917,119.475 c0,44.164-13.238,85.219-35.917,119.483c0,0,0.004,0,0.007,0c65.986,0,119.475-53.496,119.475-119.483	C356.431,170.974,302.939,117.477,236.956,117.477z"/><path style="fill:#555;" d="M236.945,117.477c-65.983,0.007-119.468,53.496-119.468,119.475	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
+$weather34moonicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0 473.935 510.935" style="enable-background:new 0 0 473.935 473.935;">
+<circle style="fill:#1994D7;" cx="236.967" cy="236.967" r="236.967"/>
+<radialGradient id="SVGID_1_" cx="13.4697" cy="528.3893" r="31.929" gradientTransform="matrix(3.7418 0 0 -3.7418 186.5668 2214.0767)" gradientUnits="userSpaceOnUse">
+<stop  offset="0.818" style="stop-color:#D8D5DB"/><stop  offset="1" style="stop-color:#D8D5DB"/></radialGradient><path style="fill:url(#SVGID_1_);" d="M236.956,117.477c-0.004,0-0.007,0-0.007,0c22.679,34.26,35.917,75.318,35.917,119.475 c0,44.164-13.238,85.219-35.917,119.483c0,0,0.004,0,0.007,0c65.986,0,119.475-53.496,119.475-119.483	C356.431,170.974,302.939,117.477,236.956,117.477z"/><path style="fill:#555;" d="M236.945,117.477c-65.983,0.007-119.468,53.496-119.468,119.475	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
 $weather34unlocked='<svg width="14" height="14" viewBox="0 0 24 24" stroke-width="1" stroke="#777" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="5" y="11" width="14" height="10" rx="2" /><circle stroke="hsl(7, 60%, 57%)" cx="12" cy="16" r="3" /><path d="M8 11v-5a4 4 0 0 1 8 0" /></svg>';
 $weather34locked='<svg width="14" height="14" viewBox="0 0 24 24" stroke-width="1" stroke="hsla(185, 100%, 37%, 1)" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="5" y="11" width="14" height="10" rx="2" />  <circle stroke="hsl(7, 60%, 57%)" cx="12" cy="16" r="3" /><path d="M8 11v-4a4 4 0 0 1 8 0v4" /></svg>';
@@ -766,7 +776,12 @@ $weather34sunicon='<svg x="0px" y="10px" width="16pt" height="16pt" viewBox="0 0
   <path style="fill:#DF9741;" d="M236.945,117.477c-65.983,0.007-119.468,53.496-119.468,119.475
 	c0,65.986,53.485,119.475,119.468,119.483c22.679-34.26,35.917-75.318,35.917-119.483	C272.862,192.796,259.624,151.737,236.945,117.477z"/>
 </svg>';
+$chartlinks='<svg  width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" style="padding-top:0;margin-top:-3px" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="12" width="6" height="8" rx="1" fill="#1994D7" stroke-width="0"/> 
+<rect x="9" y="8" width="6" height="12" rx="1" fill="hsl(35, 77%, 58%)" stroke-width="0"/>
+<rect x="15" y="4" width="6" height="16" rx="1" fill="hsl(19, 66%, 55%)" stroke-width="0"/></svg>';
+
 $weather34version='Aurora MKII (DX)';
-$weather34versiondate='11th July 2021';
+$weather34versiondate='12th July 2021';
 ?>
 

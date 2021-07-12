@@ -157,7 +157,7 @@ elseif ($weather['wind_speed_bft']>=0 ){echo 'var(--green)';}?>
 ;">
 </div></div></div>
 
-<div class=extrainfo><a href='wind-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo><a href='wind-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 
 <div class="weather-tempicon-identity" ><?php 

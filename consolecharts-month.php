@@ -109,7 +109,7 @@ toggle.onclick = function() {var currentTheme = document.documentElement.getAttr
         <?php };?>
 
        
-<chartpage><?php echo $maxclock ?> <?php 
+<chartpage>Last Updated <?php 
 $dayfile=date('Y');$forecastime=filemtime('weather34charts/'.$dayfile.'.csv');echo strftime("%A %d %B %Y %l:%M %p",$forecastime);?>     
 </chartpage>  
 

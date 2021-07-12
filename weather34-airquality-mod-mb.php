@@ -88,5 +88,5 @@ elseif ($aqiweather["aqindex25"]>0 ){echo 'var(--green)';}?>">
 </div></div></div></div></div></div></div>
 
 <div class="rainrateextra1">
-<div class=extrainfo2 style="margin-top:15px"><a href='weather34-aqi-info-davis.php' data-lity data-title="Air Quality Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo2 style="margin-top:15px"><a href='weather34-aqi-info-davis.php' data-lity data-title="Air Quality Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 <div class="weather-tempicon-identity"></div></div>

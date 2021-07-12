@@ -145,7 +145,7 @@ else if ($weather["lightningyear"]>=0 ){echo '#d87040';}
 <?php //weather34 Aurora MKII lightning time ago
 //if strike more than 23 hours ago
 if ($lightningseconds >=82800){?>
-<div class=mooninfo2 ><a href='weather34-lightning-charts.php' data-lity data-title="Lightning Almanac"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=mooninfo2 ><a href='weather34-lightning-charts.php' data-lity data-title="Lightning Almanac"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 <?php ;}?>
 <?php 
 //if strike less than 23 hours ago
@@ -153,7 +153,7 @@ if ($lightningseconds <82800){?>
 <a href="weather34-lightning-charts.php" data-lity data-title="Lightning Almanac">
 <?php  //weatherflow weather34 air lightning output
 if ($lightningseconds <120 ){ echo "<div class='thelaststrike'>Last Strike<br><orange>Just Now</orange>";}
-else if ($lightningseconds >=61 ){echo "<div class='thelaststrike'>Last Strike<br>".convert($lightningseconds);}
+else if ($lightningseconds >=61 ){echo "<div class='thelaststrike'>Strike<br>".convert($lightningseconds);}
 ?><?php ;}?>
 </a></div>
 

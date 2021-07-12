@@ -148,7 +148,7 @@ elseif ($meteobridgeapi[17]>=0){echo '#9bbc2f';}
 ?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='wind-avg-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $aqilinks?>&nbsp;Extra Info</a></div></div>
+<div class=extrainfo><a href='wind-avg-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
 
 
 <div class="weather-icon-identity-wind"><?php 
