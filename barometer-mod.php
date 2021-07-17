@@ -92,7 +92,7 @@ echo "</tempman>";?>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='color:#fff;opacity:0.7;background:";
+<?php echo "<uvreadings style='background:";
 if ($baromdiff>0 ){echo 'var(--orange)';}
 else if ($baromdiff==0 ){echo 'var(--green)';}
 else if ($baromdiff<0 ){echo 'var(--blue)';}
@@ -178,7 +178,7 @@ else if ( $meteobridgeapi[10]<1030){echo $meteobridgeapi[10]*0.075;}
 else if ( $meteobridgeapi[10]<1045){echo $meteobridgeapi[10]*0.095;}
 else echo $meteobridgeapi[10]*0.12;?>px;background:var(--barometerbar);">
 </div></div></div>
-<div class=extrainfo><a href='barometer-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo><a href='barometer-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 <div class="weather-pressureicon-identity">    
 <?php //id unit
 if ($weather["barometer_trend"]>0 ){echo "<orange>".$weather["barometer_units"]."</orange>";}

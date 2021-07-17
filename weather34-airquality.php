@@ -90,4 +90,4 @@ else if ($aqiweather["aqindex"] >=100){echo "Unhealthy For Some";}
 else if ($aqiweather["aqindex"] >=50){echo "Moderate Risk";}
 else if ($aqiweather["aqindex"] >0){echo "Good No Risk";}
 ?></div>
-<div class=aqiid-brand><a href='weather34-aqi-info.php' data-lity data-title="Purple Air Quality"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=aqiid-brand><a href='weather34-aqi-info.php' data-lity data-title="Purple Air Quality"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>

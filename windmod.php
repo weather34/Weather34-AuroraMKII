@@ -64,7 +64,7 @@ echo "<windindicator>Average</windindicator>";?>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($weather['wind_speed_bft']>=7 ){echo 'var(--red)';}
 elseif ($weather['wind_speed_bft']>=5 ){echo 'var(--orange)';}
 elseif ($weather['wind_speed_bft']>=3 ){echo 'var(--yellow)';}
@@ -148,7 +148,7 @@ elseif ($meteobridgeapi[17]>=0){echo '#9bbc2f';}
 ?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='wind-avg-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo><a href='wind-avg-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 
 
 <div class="weather-icon-identity-wind"><?php 

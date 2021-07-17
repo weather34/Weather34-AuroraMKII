@@ -94,15 +94,15 @@ return thecolor;}
 		toolTip:{
 			   fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
-			   fontColor: '#fff',	
+			   backgroundColor: "#393F4D",	
+			   fontColor:"#C3CED8",			
 			   fontSize: 11,
 			   borderThickness: 3,	 	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Precipitation Probability <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y +"%";  
+               return "Precipitation Probability <span style='font-weight:600'>" +  e.entries[0].dataPoint.y +"%";  
    }  
 
  },
@@ -227,7 +227,7 @@ return thecolor;}
 	font-family: Arial;
 	width:auto;
 	max-width:160px;
-	 background: hsl(225, 3%, 27%);
+	 background: #1994D7;
 	top:112px;
 	line-height:1.1;	
 	z-index: 9999;
@@ -244,7 +244,7 @@ return thecolor;}
 }
 .unitscaption
 {display: flex;position:absolute;width:30px;
-     background: hsl(225, 3%, 27%);
+     background: #FB631D;
 	margin-top:101px;
 	float:right;
     line-height:1.1;    

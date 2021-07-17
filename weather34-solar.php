@@ -73,7 +73,7 @@ if ($txt=='Sunrise'){echo $sunrisesicon2;}if ($txt=='Sunset'){echo $sunsetsicon2
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($weather['solar']>=1000 ){echo 'var(--red)';}
 elseif ($weather['solar']>=600 ){echo 'var(--orange)';}
 elseif ($weather['solar']>0 ){echo 'var(--yellow)';}
@@ -102,7 +102,7 @@ elseif ($weather['solar']>0 ){echo 'var(--yellow)';}
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($weather['lux']>=100000 ){echo 'var(--red)';}
 elseif ($weather['lux']>=40000 ){echo 'var(--orange)';}
 elseif ($weather['lux']>0 ){echo 'var(--yellow)';}
@@ -134,7 +134,7 @@ elseif ($weather['lux']>=0 ){echo 'var(--yellow)';}?>">
 
 
 
-<div class=extrainfo2 style="margin-top:-5px"><a href='solar-almanac2.php' data-lity data-title="Solar Almanac"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo2 style="margin-top:-5px"><a href='solar-almanac2.php' data-lity data-title="Solar Almanac"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 
 
 <div class="weather-tempicon-identity">

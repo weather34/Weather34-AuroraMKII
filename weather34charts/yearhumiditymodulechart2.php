@@ -22,17 +22,20 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>OUTDOOR Humidity Chart</title>';	
+		<title>OUTDOOR Humidity Chart</title>
+		<style>@font-face {font-family: verb;src: url(fonts/verbatim-bold.woff2) format("woff2"), url(fonts/verbatim-bold.woff) format("woff");font-display: swap}</style>
+		
+		';	
 	?>
     <br>
     <script type="text/javascript">
 
 function WEATHER34CHARTCOLORS(weather34value) {
-if (weather34value>=0 && weather34value<=35) {thecolor='#d35f50';}
-else if (weather34value>35 && weather34value<=40) {thecolor='#ec5732';}
-else if (weather34value>40 && weather34value<70){thecolor=' #e6a141';} 
-else if (weather34value>=70 && weather34value<=90){thecolor='hsla(201, 79%, 47%,.8)';}  
-else if (weather34value>90 && weather34value<=100){thecolor=' hsl(201, 79%, 47%)';}  
+if (weather34value>=0 && weather34value<40) {thecolor='#d35f50';}
+else if (weather34value>=40 && weather34value<=60) {thecolor='hsl(74, 60%, 46%)';}
+else if (weather34value>60 && weather34value<80){thecolor=' hsl(35, 77%, 58%)';} 
+else if (weather34value>=80 && weather34value<=90){thecolor='hsla(201, 79%, 47%,.8)';}  
+else if (weather34value>90 && weather34value<=100){thecolor='hsl(201, 79%, 47%)';}  
 else {thecolor='hsl(35, 77%, 58%)';}
 return thecolor;}
 
@@ -94,8 +97,8 @@ return thecolor;}
 		toolTip:{
 			fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
-			   fontColor: '#fff',	
+			   backgroundColor: "#393F4D",	
+			   fontColor:"#C3CED8",	
                borderThickness: 3,	
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",

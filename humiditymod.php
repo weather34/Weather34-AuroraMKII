@@ -3,7 +3,7 @@
 <div class="maxwindgauge">
 <?php  //Max
 echo "<red>".$weather34_humidity_iconwu."</red> ";
-if($weather["humidity_max"]>=70){ echo "<blue>".$weather["humidity_max"]."</blue>";}
+if($weather["humidity_max"]>=80){ echo "<blue>".$weather["humidity_max"]."</blue>";}
 else if($weather["humidity_max"]>=60){ echo "<icon-11-15>".$weather["humidity_max"]."</icon-11-15>";}
 else if($weather["humidity_max"]>=40){ echo "<icon-6-10>".$weather["humidity_max"]."</icon-6-10>";}
 else if($weather["humidity_max"]>=0){ echo "<icon-31-35>".$weather["humidity_max"]."</icon-31-35>";}
@@ -12,7 +12,7 @@ echo "% ";echo $maxclock." ".$weather["humidity_maxtime"];?></div>
 <div class="maxbftgauge">
 <?php //Min
 echo "<blue>".$weather34_humidity_iconwu."</blue> ";
-if($weather["humidity_min"]>=70){ echo "<blue>".$weather["humidity_min"]."</blue>";}
+if($weather["humidity_min"]>=80){ echo "<blue>".$weather["humidity_min"]."</blue>";}
 else if($weather["humidity_min"]>=60){ echo "<icon-11-15>".$weather["humidity_min"]."</icon-11-15>";}
 else if($weather["humidity_min"]>=40){ echo "<icon-6-10>".$weather["humidity_min"]."</icon-6-10>";}
 else if($weather["humidity_min"]>=0){ echo "<icon-31-35>".$weather["humidity_min"]."</icon-31-35>";}
@@ -42,7 +42,7 @@ else if ($weather['wetbulb']>=-58 ){echo '<icon-minus10>'. $weather['wetbulb']."
 ?>&deg;</realfeel>
 <div class="button-dial-label" >  
 <?php 
-if($weather["humidity"]>=70){ echo "<blue>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></blue>";}
+if($weather["humidity"]>=80){ echo "<blue>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></blue>";}
 else if($weather["humidity"]>=60){ echo "<icon-11-15>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-11-15>";}
 else if($weather["humidity"]>=40){ echo "<icon-6-10>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-6-10>";}
 else if($weather["humidity"]>=0){ echo "<icon-31-35>".$weather["humidity"]."<smallhumidityunit>%</smallhumidityunit></icon-26-30>";}
@@ -82,8 +82,8 @@ echo "</tempman>";?>
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
 <?php //day average humidity
-echo "<uvreadings style='opacity:0.8;background:";
-if ($weather["humidity_davg"]>=70 ){echo 'var(--temp0-5)';}
+echo "<uvreadings style='background:";
+if ($weather["humidity_davg"]>=80 ){echo 'var(--temp0-5)';}
 else if ($weather["humidity_davg"]>=60 ){echo 'var(--temp10-15)';}
 elseif ($weather["humidity_davg"]>=40 ){echo 'var(--temp5-10)';}
 elseif ($weather["humidity_davg"]>=0 ){echo 'var(--red)';}
@@ -110,7 +110,7 @@ else if (number_format($weather["humidity_davg"],0)<=90){echo $weather["humidity
 else if (number_format($weather["humidity_davg"],0)<=100){echo $weather["humidity_davg"]/19.9;}
 else echo $weather["humidity_davg"]/19;?>em;opacity:0.7;background:
 <?php //color
-if ($weather["humidity_davg"]>=70 ){echo 'var(--temp0-5)';}
+if ($weather["humidity_davg"]>=80 ){echo 'var(--temp0-5)';}
 else if ($weather["humidity_davg"]>=60 ){echo 'var(--temp10-15)';}
 elseif ($weather["humidity_davg"]>=40 ){echo 'var(--temp5-10)';}
 elseif ($weather["humidity_davg"]>=0 ){echo 'var(--red)';}
@@ -125,7 +125,7 @@ elseif ($weather["humidity_davg"]>=0 ){echo 'var(--red)';}
 if ($weather["humidity"]>=99 ){echo "0 10 20 40 60 70 80 90 <blue>".round($weather["humidity"],0)."</blue>";}
 else if ($weather["humidity"]>=90 ){echo "0 10 20 40 50 60 70 80 <blue>".round($weather["humidity"],0)."</blue>";}
 else if ($weather["humidity"]>=80 ){echo "0 10 20 40 50 60 70 <blue>".round($weather["humidity"],0)."</blue> 100";}
-else if ($weather["humidity"]>=70 ){echo "0 10 20 40 50 60 <blue>".round($weather["humidity"],0)."</blue> 80 100";}
+else if ($weather["humidity"]>=70 ){echo "0 10 20 40 50 60 <icon-11-15>".round($weather["humidity"],0)."</icon-11-15> 80 100";}
 else if ($weather["humidity"]>=60 ){echo "0 10 20 40 50 <icon-11-15>".round($weather["humidity"],0)."</icon-11-15> 70 80 100";}
 else if ($weather["humidity"]>=50 ){echo "0 10 20 30 40 <icon-6-10>".round($weather["humidity"],0)."</icon-6-10> 60 80 100";}
 else if ($weather["humidity"]>=40 ){echo "0 10 20 30 <icon-6-10>".round($weather["humidity"],0)."</icon-6-10> 50 60 80 100";}
@@ -153,17 +153,17 @@ else if ($weather["humidity"]>=0) {echo 5;}
 ?>px;
 background:
 <?php 
-if ($weather["humidity"]>=70 ){echo 'var(--temp0-5)';}
+if ($weather["humidity"]>=80 ){echo 'var(--temp0-5)';}
 else if ($weather["humidity"]>=60 ){echo 'var(--temp10-15)';}
 elseif ($weather["humidity"]>=40 ){echo 'var(--temp5-10)';}
 elseif ($weather["humidity"]>=0 ){echo 'var(--red)';}?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='humidity-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo><a href='humidity-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 
 <div class="weather-tempicon-identity">    
 <?php //humidity id
-if ($weather["humidity"]>=70){ echo "<blue>RH</blue>";}
+if ($weather["humidity"]>=80){ echo "<blue>RH</blue>";}
 else if ($weather["humidity"]>=60){ echo "<yellow>RH</yellow>";}
 else if ($weather["humidity"]>=40){ echo "<green>RH</green>";}
 else if ($weather["humidity"]>=0){ echo "<red>RH</red>";}

@@ -86,7 +86,7 @@ echo "</tempman>";?>
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
 <?php 
-echo "<uvreadings style='opacity:0.8;background:";
+echo "<uvreadings style='background:";
 if (anytoc($weather["dewpoint_avgtoday"])>=40 ){echo 'var(--purple)';}
 else if (anytoc($weather["dewpoint_avgtoday"])>=30 ){echo 'var(--red)';}
 else if (anytoc($weather["dewpoint_avgtoday"])>=25 ){echo 'var(--red)';}
@@ -193,7 +193,7 @@ elseif (anytoC($weather["dewpoint"])>=-50 ){echo 'var(--temp-5-10)';}
 ?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='dewpoint-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo><a href='dewpoint-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 
 
 <div class="weather-tempicon-identity">    

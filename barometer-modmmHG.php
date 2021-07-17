@@ -124,7 +124,7 @@ style=
 "width:<?php if ( $meteobridgeapi[10]<1010){echo $meteobridgeapi[10]*0.055;}else echo $meteobridgeapi[10]*0.075;?>px;background:var(--barometerbar);">
 </div></div></div>
 
-<div class=extrainfo><a href='barometer-almanacmmHg2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo><a href='barometer-almanacmmHg2.php' data-lity data-title="Almanac Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 <div class="weather-pressureicon-identity" style="font-size:8.5px">    
 <?php //id unit
 if ($weather["barometer_trend"]>0 ){echo "<orange>".$weather["barometer_units"]."</orange>";}

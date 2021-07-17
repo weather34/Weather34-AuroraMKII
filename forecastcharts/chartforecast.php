@@ -33,7 +33,7 @@ img{width:60px}
 .weather34-battery a {background:none;width:25px}
 .weather34-battery img {background:none;width:25px}
 .online{padding-top:5px}
-.desktoplink5{color:#99B1C9}
+.desktoplink5{color: var(--body-text-dark);font-size:10px}
 @media screen and (max-width:960px){
 actualt{position:relative;font-size:10px;left:20px;top:-55px;}
 greydesc{position:relative;top:15px;font-size:10px;margin-left:-35px;max-width:max-content;padding:5px}

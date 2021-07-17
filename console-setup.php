@@ -1915,10 +1915,12 @@ Check<b>WX</b> Metar API KEY you need to sign up here for free API key <br><a hr
     <div class="updater"><a href="weather34-updater.php" target="_blank">
         <?php echo $backupfile ?><br>
         Click here to update this template using the latest update file if one is available.
-        Please always perform a Backup using the backup one click option in the update screen.
-    
+        Please always perform a Backup using the backup one click option in the update screen.   
     
     </a></div></center>
+
+<P>
+
 
                                             <br><br>
                                                                 <a href="https://weather34.com/homeweatherstation/" title="https://weather34.com/homeweatherstation/" target="_blank">

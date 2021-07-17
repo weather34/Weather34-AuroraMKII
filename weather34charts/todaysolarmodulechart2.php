@@ -22,6 +22,7 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>OUTDOOR TEMPERATURE DATABASE CHART</title>
 		
+		<style>@font-face {font-family: verb;src: url(fonts/verbatim-bold.woff2) format("woff2"), url(fonts/verbatim-bold.woff) format("woff");font-display: swap}</style>
 		
 	';
 	date_default_timezone_set($TZ);
@@ -103,8 +104,8 @@ return theWM;}
 		toolTip:{
 			fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
-			   fontColor: '#fff',	
+			   backgroundColor: "#393F4D",	
+			   fontColor:"#C3CED8",	
                borderThickness: 3,	
 			   fontSize: 11,	
 			   content: "{label} {y}" ,     	   

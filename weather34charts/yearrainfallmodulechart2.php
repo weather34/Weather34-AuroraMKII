@@ -27,7 +27,8 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>OUTDOOR Barometer CHART</title>	 
-		<script src=../js/jquery.js></script>
+		<style>@font-face {font-family: verb;src: url(fonts/verbatim-bold.woff2) format("woff2"), url(fonts/verbatim-bold.woff) format("woff");font-display: swap}</style>
+		
 		
 	';	
 	?>
@@ -88,8 +89,8 @@
 		toolTip:{
 			   fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
-			   fontColor: '#fff',	
+			   backgroundColor: "#393F4D",	
+			   fontColor:"#C3CED8",	
                borderThickness: 3,	
 			   fontSize: 11,	   
 			   toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",

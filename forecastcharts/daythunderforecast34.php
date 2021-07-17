@@ -21,6 +21,7 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
+		<style>@font-face {font-family: verb;src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");font-display: swap}</style>
 	';	
 	?>
     <br>
@@ -101,31 +102,21 @@ return thecolor;}
 			   shared: false, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Thunder Storm <br>Risk Level <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0);  }
+               return "Thunder Storm <br>Risk Level <span style='font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0);  }
 			  
 			  
  },
  axisX: {
 			gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
-		    labelFontSize: 8,
+		    labelFontSize: 7,
 			labelFontColor:' #aaa',
 			lineThickness: 1,
 			gridThickness: 0,				
-			labelFontFamily: "Helvetica",	
-			labelFontWeight: "bold",			
+			labelFontFamily: "verb",						
 			interval:1,
-			labelAngle: 0,			
-			crosshair: {
-			thickness: 50,
-			lineDashType: "solid" ,
-			enabled: true,
-			snapToDataPoint: true,			
-			labelFontColor: "#aaa",
-			labelFontSize:0,
-			labelBackgroundColor: "#cf5129",			
-			color:'hsla(185, 100%, 37%, .1)',
-		}
+			labelAngle: 0,		
+			
 			
 			},
 			 
@@ -145,21 +136,11 @@ return thecolor;}
 		interval:2,
 		labelFontSize: 8,
 		labelFontColor:' #aaa',			
-		labelFontFamily: "Helvetica",	
-		labelFontWeight: "bold",
+		labelFontFamily: "verb",		
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) ;  
          },		
-		crosshair: {
-			enabled: true,
-			labelMaxWidth: 50,  
-			labelWrap: true,
-			snapToDataPoint: true,
-			color: "hsla(185, 100%, 37%, 0)",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:0,
-			labelBackgroundColor: "#ec5519",
-		}		 
+			 
 		 
       },
 	  
@@ -177,10 +158,10 @@ return thecolor;}
 			indexLabelLineThickness: 0, 
 			indexLabelLineThickness: 0,       
        		indexLabel: "{y}",
-	   		indexLabelFontSize: 9,
+	   		indexLabelFontSize: 8,
 	   		indexLabelFontColor: "#fff",	  
 	   		indexLabelMaxWidth: 30,
-	   		indexLabelFontWeight: "bold",
+	   		indexLabelFontFamily: "verb",
        		indexLabelWrap: true,
 	   		indexLabelPlacement: "auto",  
 			markerSize:0,
@@ -216,7 +197,7 @@ return thecolor;}
 	font-family: Arial;
 	width:auto;
 	max-width:130px;
-	background:hsl(225, 3%, 27%);
+	 background: #1994D7;
 	top:112px;
 	line-height:1.1;	
 	z-index: 9999;
@@ -233,7 +214,7 @@ return thecolor;}
 }
 .unitscaption
 {display: flex;position:absolute;width:30px;
-    background: hsl(225, 3%, 27%);
+    background: #FB631D;
 	margin-top:101px;
 	float:right;
     line-height:1.1;    

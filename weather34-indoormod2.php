@@ -32,7 +32,7 @@ echo '<yellow>'.$weather["temp_indoor_feel"].'</yellow>&deg;';}?></div>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if (anyToC($weather["temp_indoor"])>=30 ){echo '#703232';}
 elseif (anyToC($weather["temp_indoor"])>=25 ){echo '#d35f50';}
 elseif (anyToC($weather["temp_indoor"])>=20 ){echo '#d87040';}
@@ -69,7 +69,7 @@ elseif (anyToC($weather["temp_indoor"])>0 ){echo '#00adbd';}
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($weather["humidity_indoor"]>=70 ){echo 'var(--blue)';}
 elseif ($weather["humidity_indoor"]>=60 ){echo 'var(--yellow)';}
 elseif ($weather["humidity_indoor"]>=40 ){echo 'var(--green)';}

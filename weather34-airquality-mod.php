@@ -35,7 +35,7 @@ date_default_timezone_set($TZ);
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($aqiweather["aqi"]>=300 ){echo 'var(--purple)';}
 elseif ($aqiweather["aqi"]>=250 ){echo 'var(--red)';}
 elseif ($aqiweather["aqi"]>=150 ){echo 'var(--red)';}
@@ -75,7 +75,7 @@ elseif ($aqiweather["aqi"]>0 ){echo 'var(--green)';}
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($aqiweather["aqi24h"]>=300 ){echo 'var(--purple)';}
 elseif ($aqiweather["aqi24h"]>=250 ){echo 'var(--red)';}
 elseif ($aqiweather["aqi24h"]>=150 ){echo 'var(--red)';}
@@ -108,5 +108,5 @@ elseif ($aqiweather["aqi24h"]>0 ){echo 'var(--green)';}?>">
 </div></div></div></div></div></div></div>
 
 <div class="rainrateextra1">
-<div class=extrainfo2 style="margin-top:15px"><a href='weather34-aqi-info.php' data-lity data-title="Air Quality Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo2 style="margin-top:15px"><a href='weather34-aqi-info.php' data-lity data-title="Air Quality Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 <div class="weather-tempicon-identity"></div></div>

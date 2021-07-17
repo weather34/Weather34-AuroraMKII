@@ -23,13 +23,15 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
+		<style>@font-face {font-family: verb;src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");font-display: swap}</style>
+	
 	';	
 	?>
     <br>
     <script type="text/javascript">
 
 function WEATHER34CHARTCOLORS(weather34value) { 
-if (weather34value>=0 && weather34value<=90) {thecolor='hsla(185, 100%, 37%, 1)';}
+if (weather34value>=0 && weather34value<=90) {thecolor='#1994D7';}
 else if (weather34value>90 && weather34value<=180) {thecolor='hsl(35, 77%, 58%)';}
 else if (weather34value>180 && weather34value<=300) {thecolor='hsla(2, 56%, 55%,1)';}
 else if (weather34value>300 && weather34value<=360) {thecolor='hsla(185, 100%, 37%, 1)';}           
@@ -99,36 +101,26 @@ var yLabelCounter=0;
 		toolTip:{
 			   fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
-			   fontColor: '#fff',	
+			   backgroundColor: "#393F4D",	
+			   fontColor:"#C3CED8",			
                borderThickness: 3,	
 			   labelWidth: 150,  
 			   fontSize: 11,	
 			   //content: "<hr/> {y} {label}" ,   
-			   content: "{name} <span style='color:#fff;font-weight:600'>{y}" , 	   
+			   content: "{name} <span style='font-weight:600'>{y}" , 	   
 			   //toolTipContent: " x {x} y {y} <br/> name: {name}, label:{label} ",
 			   shared: true,},
  axisX: {
 	gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
-		    labelFontSize: 8,
+		    labelFontSize: 7,
 			labelFontColor:' #aaa',
 			lineThickness: 1,
 			gridThickness: 0,				
-			labelFontFamily: "Helvetica",	
-			labelFontWeight: "bold",			
+			labelFontFamily: "verb",						
 			interval:1,
 			labelAngle: 0,			
-			crosshair: {
-			thickness: 50,
-			lineDashType: "solid" ,
-			enabled: true,
-			snapToDataPoint: true,			
-			labelFontColor: "#fff",
-			labelFontSize:0,
-			labelBackgroundColor: "#cf5129",			
-			color:'hsla(185, 100%, 37%, .1)',
-		}
+			
 			
 			},
 			
@@ -147,8 +139,7 @@ var yLabelCounter=0;
 		gridColor: "hsla(200, 7%, 45%, 0.4)",	
 		labelFontSize: 8,
 		labelFontColor:' #aaa',
-		labelFontFamily: "Helvetica",	
-		labelFontWeight: "bold",				
+		labelFontFamily: "verb",							
 		interval: 45,
   	labelFormatter: function ( e ) {
       var yCats = yLabels[yLabelCounter++];
@@ -156,16 +147,7 @@ var yLabelCounter=0;
         yLabelCounter = 0;
       return yCats;
     } ,	
-		crosshair: {
-			enabled: true,
-			labelMaxWidth: 50,  
-			labelWrap: true,
-			snapToDataPoint: true,
-			color: "#ff832f",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:8,
-			labelBackgroundColor: "hsla(185, 100%, 37%, 1)",
-		}		 
+			 
 		 
       },
 	  
@@ -188,10 +170,10 @@ var yLabelCounter=0;
 			//wind Direction
 			indexLabelLineThickness:0,       
        		indexLabel: "{y}",
-	   		indexLabelFontSize: 9,
+	   		indexLabelFontSize: 8,
 	   		indexLabelFontColor: "#fff",	  
 	   		indexLabelMaxWidth: 50,
-	   		indexLabelFontWeight: "bold",
+	   		indexLabelFontFamily: "verb",
        		indexLabelWrap: true,
 	   		indexLabelPlacement: "auto",     
 			markerSize:23,
@@ -227,7 +209,7 @@ var yLabelCounter=0;
 	font-family: Arial;
 	width:auto;
 	max-width:120px;
-	 background: hsl(225, 3%, 27%);
+	 background: #1994D7;
 	top:112px;
 	line-height:1.1;	
 	z-index: 9999;
@@ -244,7 +226,7 @@ var yLabelCounter=0;
 }
 .unitscaption
 {display: flex;position:absolute;width:30px;
-     background: hsl(225, 3%, 27%);
+     background: #FB631D;
 	margin-top:101px;
 	width:90px;
 	float:right;

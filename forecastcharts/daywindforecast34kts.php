@@ -26,6 +26,8 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Forecast Chart Temp</title>
 		<script src=../js/jquery.js></script>
+		<style>@font-face {font-family: verb;src: url(../fonts/verbatim-bold.woff2) format("woff2"), url(../fonts/verbatim-bold.woff) format("woff");font-display: swap}</style>
+	
 	';	
 	?>
     <br>
@@ -100,37 +102,27 @@ return thecolor;}
 		toolTip:{
 			fontStyle: "normal",
 			   cornerRadius: 4,
-			   backgroundColor: "rgba(40, 45, 52,1)",	
-			   fontColor: '#fff',	
+			   backgroundColor: "#393F4D",	
+			   fontColor:"#C3CED8",			
 			   fontSize: 11,
 			   borderThickness: 3,	   
 			   //toolTipContent: " x: {x} y: {y} <br/> name: {name}, label:{label} ",
 			   shared: true, 
 			   valueFormatString: "#",
 			   contentFormatter: function ( e ) {
-               return "Wind Speed <span style='color:#fff;font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0) +" <?php echo $windunit?>";  }
+               return "Wind Speed <span style='font-weight:600'>" +  e.entries[0].dataPoint.y.toFixed(0) +" <?php echo $windunit?>";  }
  },
  axisX: {
 			gridColor: "hsla(200, 7%, 45%, 0.4)",		
 			gridDashType: "dot",
-		    labelFontSize: 8,
+		    labelFontSize: 7,
 			labelFontColor:' #aaa',
 			lineThickness: 1,
 			gridThickness: 0,				
-			labelFontFamily: "Helvetica",	
-			labelFontWeight: "bold",			
+			labelFontFamily: "verb",			
 			interval:1,
 			labelAngle: 0,			
-			crosshair: {
-			thickness: 50,
-			lineDashType: "solid" ,
-			enabled: true,
-			snapToDataPoint: true,			
-			labelFontColor: "#aaa",
-			labelFontSize:0,
-			labelBackgroundColor: "#cf5129",			
-			color:'hsla(185, 100%, 37%, .1)',
-		}
+			
 			
 			},
 			
@@ -151,22 +143,11 @@ return thecolor;}
 		interval:10,
 		labelFontSize: 8,
 		labelFontColor:' #aaa',			
-		labelFontFamily: "Helvetica",	
-		labelFontWeight: "bold",
+		labelFontFamily: "verb",
 		labelFormatter: function ( e ) {
         return e.value .toFixed(0) ;  
          },		
-		crosshair: {
-			enabled: false,
-			labelMaxWidth: 50,  
-			labelWrap: true,
-			snapToDataPoint: true,
-			color: "rgba(40, 45, 52,0)",
-			labelFontColor: "#F8F8F8",
-			labelFontSize:0,
-			labelBackgroundColor: "#ec5519",
-			valueFormatString: "#",
-		}		 
+		 
 		 
       },
 	  
@@ -183,10 +164,10 @@ return thecolor;}
 			//Wind Speed
 			indexLabelLineThickness:0, 			
        		indexLabel: "{y}",
-	   		indexLabelFontSize: 9,
+	   		indexLabelFontSize: 8,
 	   		indexLabelFontColor: "#aaa",	  
 	   		indexLabelMaxWidth: 50,
-	   		indexLabelFontWeight: "bold",
+	   		indexLabelFontFamily: "verb",	
        		indexLabelWrap: true,
 	   		indexLabelPlacement: "outside",     
 			markerSize:23,
@@ -224,14 +205,13 @@ return thecolor;}
     color: #fff;    
 	font-family: Arial;
 	width:auto;
-	max-width:130px;
-	background: hsla(200, 8%, 35%, 1);
+	max-width:120px;
+	 background: #1994D7;
 	top:112px;
-	line-height:1;
-	height: 10px;
+	line-height:1.1;	
 	z-index: 9999;
     font-size: 10px;
-    padding: 1px 3px 1px 3px;    
+    padding: 0px 3px 0px 3px;    
     align-items: center;
     justify-content: center;
     border-radius: 3px;
@@ -243,15 +223,14 @@ return thecolor;}
 }
 .unitscaption
 {display: flex;position:absolute;width:30px;
-    background: hsla(200, 8%, 35%, 1);
-	top:138px;
+     background: #FB631D;
+	margin-top:101px;
 	float:right;
-    line-height:1;    
+    line-height:1.1;    
 	color: #fff;
-    font-family: Arial;
-    height: 10px;
+    font-family: Arial;    
     font-size: 10px;
-    padding: 1px 3px 1px 3px;    
+    padding: 0px 3px 0px 3px; 
     align-items: center;
     justify-content: center;
     border-radius: 3px;
@@ -264,9 +243,10 @@ return thecolor;}
     flex-basis: auto
 }</style>
 
+
 <body>
 <div class="modulecaption">Wind Speed Forecast </div>
-<div class="unitscaption"><?php echo $unit;?></div>
+<div class="unitscaption"><?php echo $windunit;?></div>
 <div id="chartContainer2" style="height:110px;margin-top:-25px;-webkit-border-radius:10px;border-radius:10px;border:6px solid hsla(212, 12%, 72%,.2);"></div>
 
 </body>

@@ -109,7 +109,7 @@ echo "</tempman>";?>
 <div class="button button-dialrain">               
  <div class="button-dial-toprain"></div>
 <div class="button-dial-label"> 
-<?php echo "<uvreadings style='opacity:0.8;background:";
+<?php echo "<uvreadings style='background:";
 if ($meteobridgeapi[152]>=45 ){echo 'var(--purple)';}
 else if ($meteobridgeapi[152]>=35 ){echo 'var(--deepred)';}
 else if ($meteobridgeapi[152]>=25 ){echo 'var(--red)';}
@@ -219,7 +219,7 @@ elseif (anytoc($weather["temp"])>=-50 ){echo 'var(--deepcold)';}
 ?>;">
 </div></div></div>
 
-<div class=extrainfo><a href='temperature-almanac2.php' data-lity data-title="Almanac Data"><?php echo  "Extra Data&nbsp;".$chartlinks?></a></div></div>
+<div class=extrainfo><a href='temperature-almanac2.php' data-lity data-title="Almanac Data"><?php echo  $chartlinks."&nbsp;Extra Data"?></a></div></div>
 
 
 <div class="weather-tempicon-identity">    
